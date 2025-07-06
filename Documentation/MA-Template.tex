@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+%\usepackage{ngerman}
+\usepackage[german]{babel}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{tabularx}
+%\usepackage{subtextbf}
+\usepackage{pdfpages}
+\usepackage{url}
+%\usepackage{cite}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{biblatex}
+
+
+ 
+\bibliography{sample}
+\bibliographystyle{plain}
+\setlength{\textwidth}{15 true cm}
+\setlength{\textheight}{22 true cm}
+\oddsidemargin  0.5 cm
+\evensidemargin 0.5 cm
+\topmargin      0 cm
+
+\renewcommand{\textfraction}{.2}
+\renewcommand{\floatpagefraction}{.8}
+
+\begin{document}
+%\frontmatter
+\pagenumbering{roman}
+
+% Include titlepage
+\begin{titlepage}	
+	{\sffamily		
+		\begin{center}			
+			\includegraphics[width=30mm]{images/TU_Graz_Logo.png}
+			
+			\vfill\vfill\vfill
+			\vfill\vfill\vfill
+			
+			{Simon Prato}
+			% Author with existing titles
+			
+			\vfill\vfill\vfill
+			
+			{\LARGE\bfseries{Entwicklung und Simulation eines RF-Multiplexers}}
+			% Title of the thesis			
+			
+			\vfill\vfill\vfill
+			\vfill\vfill\vfill			
+			
+			{\bfseries\large{Bachelorarbeit}}
+			
+			{Studiengang: {Elektrotechnik}}
+						
+			\vfill\vfill\vfill			
+			
+			eingereicht bei
+			
+			\vfill
+			
+			{\bfseries\large{Technische Universität Graz}}			
+			
+			\vfill\vfill\vfill			
+			
+			Betreuer
+			
+			{Dr. Peter Söser}
+			
+			\vfill
+			
+			\vfill
+			
+			\includegraphics[width=30mm]{images/IFE_Logo.png}
+			
+			%% OPTIONAL: second supervisor/name of the faculty, etc.
+					
+			\vfill\vfill\vfill
+					
+			{Graz}, {August}~{2024}
+			
+		\end{center}
+	}%% end sffamily
+\end{titlepage}
+
+\newpage
+
+% Kurzfassung
+\iftrue
+\cleardoublepage
+\setcounter{page}{2}
+\vspace*{2.2 cm}
+{\Large
+\noindent
+{\bf Kurzfassung}} \\
+\vspace*{0.3 cm}
+
+\noindent
+
+% Abstract
+\cleardoublepage
+\fi
+
+\selectlanguage{german}
+% Inhaltsverzeichnis
+	\tableofcontents  
+
+% Tabellenverzeichnis
+% optional
+\newpage
+	\listoffigures 
+
+% Abbildungsverzeichnis
+% optinal
+\newpage
+	\listoftables
+	
+\cleardoublepage
+
+%\mainmatter
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\section{Einleitung}
+
+
+\newpage
+%Die Ansteuerung über das firmeninterne Netzwerk funktioniert fehlerlos. Die Maße der Leiterplatte passen. Der Multiplexer dient nun als Erweiterung eines Prüfsystems der Firma Infineon.
+\iffalse
+\subsection{Zusammenfassung}
+
+\fi
+\cleardoublepage
+\printbibliography
+
+\end{document}
