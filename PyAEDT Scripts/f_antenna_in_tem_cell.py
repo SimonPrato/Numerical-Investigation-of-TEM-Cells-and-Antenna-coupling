@@ -13,16 +13,19 @@ provided by Dominik Kreindl.
 if __name__ == '__main__':
     tem_cell_project_name = "..\TEM Cell\Ansys Simulation Files\TEM_Cell_Project.aedt"
     design_name = "TEM Cell with F Antenna"
-    file_path_f_antenna = r"..\Inverted F Antenna\Ansys Simulation Files\
-                            inverted_f_antenna_short_signal_conductor.a3dcomp"
+    file_path_f_antenna = r"C:\Users\Simon Prato\Documents\Persoenliches\Studium\Masterarbeit\Inverted F Antenna\
+                            Ansys Simulation Files\inverted_f_antenna_short_signal_conductor.a3dcomp"
 
     hfss = Hfss()
     hfss.load_project(file_name=tem_cell_project_name)
     hfss.duplicate_design(name=design_name, save_after_duplicate=True)
     modeler = hfss.modeler
     # tem_cell = modeler.insert_3d_component(file_path_tem_cell)
-    f_antenna = modeler.insert_3d_component(r"..\Inverted F Antenna\Ansys Simulation Files\short.a3dcomp")
-    f_antenna.rotate(axis="X", angle=270.0, units="deg")
-    f_antenna.move([0, 0, 11.886672])
-    hfss.save_project()
+    f_antenna = modeler.insert_3d_component(r"..\Inverted F Antenna\Ansys Simulation Files"
+                                            r"\inverted_f_antenna_short_signal_conductor.a3dcomp")
+    print(f_antenna)
+    if f_antenna:
+        f_antenna.rotate(axis="X", angle=270.0, units="deg")
+        f_antenna.move([0, 0, 11.886672])
+        hfss.save_project()
     hfss.release_desktop(close_projects=False, close_desktop=False)
