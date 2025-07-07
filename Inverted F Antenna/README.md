@@ -4,7 +4,7 @@ The inverted F-antenna is often used in mobile phones or other small electronic 
 ## Planar Inverted-F Antenna by Texas Instruments
 ![image](https://github.com/user-attachments/assets/fa152cc2-7715-4037-8684-aa634bd15ed0)
 
-Texas Instruments provides models for an inverted F-antenna on a PCB, which is well documenten in an [Application Report](https://www.ti.com/lit/an/swru120d/swru120d.pdf?ts=1751880090337). There are also Gerber and DXF files, which can be used to reconstruct this antenna as accurately as possible. The material of the PCB shall be FR4, and it shall only be 1 mm thick. An inverted F-antenna model in Ansys HFSS is quickly created by importing the DXF file and adding the FR4 material. Additionally, a lumped port is added to the feedpoint for excitation.
+Texas Instruments provides models for an inverted F-antenna on a PCB, which is well documentend in the [Application Report](https://www.ti.com/lit/an/swru120d/swru120d.pdf?ts=1751880090337). There are also Gerber and DXF files attached, which can be used to reconstruct this antenna as accurately as possible. The material of the PCB shall be FR4, and it shall only be 1 mm thick. An inverted F-antenna model in Ansys HFSS is quickly created by importing the DXF file and adding the FR4 material. Additionally, a lumped port is added to the feedpoint for excitation.
 
 
 ![image](https://github.com/user-attachments/assets/9169d4d8-a8c1-4f3b-923c-573b9318a482)
