@@ -5,5 +5,5 @@ They need access to the other files in this repository, especially the simulatio
 ---
 
 Python Version: Python 3.13
-Libraries used: ansys [https://docs.pyansys.com/](PyAEDT)
+Libraries used: ansys [PyAEDT](https://docs.pyansys.com/)
 
