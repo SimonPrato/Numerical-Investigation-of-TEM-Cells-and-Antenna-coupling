@@ -12,6 +12,7 @@ Texas Instruments provides models for an inverted F-antenna on a PCB, which is w
 Another model is created with a shorter signal path at the feedpoint. This is done so this model can be inserter into the TEM cell without overlapping with the TEM cell.
 
 ![image](https://github.com/user-attachments/assets/5569c738-9674-48de-81fe-a5052d38446b)
+
 *Comparison between the antenna models' feedpoints*
 
 The gerber and DXF file of the antenna by TI can be found in the *Gerber and DXF Files folder*. The work is based on the TI application report, which is here.
