@@ -21,7 +21,7 @@ if __name__ == '__main__':
     hfss.duplicate_design(name=design_name, save_after_duplicate=True)
     modeler = hfss.modeler
     # tem_cell = modeler.insert_3d_component(file_path_tem_cell)
-    f_antenna = modeler.insert_3d_component(file_path_f_antenna)
+    f_antenna = modeler.insert_3d_component(r"..\Inverted F Antenna\Ansys Simulation Files\short.a3dcomp")
     f_antenna.rotate(axis="X", angle=270.0, units="deg")
     f_antenna.move([0, 0, 11.886672])
     hfss.save_project()
