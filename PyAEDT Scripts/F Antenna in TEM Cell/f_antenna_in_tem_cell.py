@@ -26,7 +26,7 @@ from ansys.aedt.core.hfss import Hfss
 #  TODO: Enable the option of rotating the f_antenna in the TEM cell as desired
 
 if __name__ == '__main__':
-    tem_cell_project_name = "..\TEM Cell\Ansys Simulation Files\TEM_Cell_Project.aedt"
+    tem_cell_project_name = "..\..\TEM Cell\Ansys Simulation Files\TEM_Cell_Project.aedt"
     file_path_f_antenna = r"C:\Users\Simon Prato\Documents\Persoenliches\Studium\Masterarbeit\Inverted F Antenna\
                             Ansys Simulation Files\inverted_f_antenna_short_signal_conductor.a3dcomp"
 
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     hfss.duplicate_design(name=design_name, save_after_duplicate=True)
     # Duplicate the original TEM cell design. This includes boundaries and the solution setup.
     modeler = hfss.modeler
-    f_antenna = modeler.insert_3d_component(r"..\Inverted F Antenna\Ansys Simulation Files"
+    f_antenna = modeler.insert_3d_component(r"..\..\Inverted F Antenna\Ansys Simulation Files"
                                             r"\inverted_f_antenna_short_signal_conductor.a3dcomp")
     # Inserts the model of the inverted F-antenna
     # Next, check if the antenna has been loaded correctly. If yes, then position it in the TEM cell.
