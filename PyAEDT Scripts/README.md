@@ -1,6 +1,6 @@
 # Python Scripts
 The scripts in this folder serve to automate the simulations of antennas and shielding materials in TEM Cells. 
-They need access to the other files in this repository, especially the simulation files.
+They need access to the other files in this repository, specifically the simulation files.
 
 ---
 
