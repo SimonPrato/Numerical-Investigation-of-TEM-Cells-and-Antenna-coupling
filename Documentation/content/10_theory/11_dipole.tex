@@ -1,0 +1,87 @@
+\subsection{Dipoles}
+\subsubsection{Electric Dipoles}
+
+Modeling the electromagnetic radiation of antennas proves to be a challenging task. Using magnetic and electric dipoles is a way to do this, which is especially well applicable for electrically small antennas, which are used in this document. Electrically small antennas have dimensions which are less than one tenth of the wavelength ($<<\frac{\lambda}{10}$)\cite{Balanis_1997}. By calculating the respective dipole moments, the coupling of the antennas to the TEM cells is numerically estimated. Therefore, this section aims to provide a short introduction to the theory behind this concept.
+
+An electric dipole is often described as two tiny charged metal spheres, which are connected with a linear and thin wire\cite{Griffiths_2024} or simply as an T-antenna containing charged capacitor-plates at the end of the wire \cite{Balanis_1997}. The distance $d$ between those charges is very short compared to the wavelength ($d << \lambda$), therefore the dipole can be approximated as ideal\cite{Griffiths_2024}. The electric dipole moment $\mathbf{p}$ is defined by \autoref{eqn:elec_dipole_mom}\cite{Balanis_1997}\cite{Jackson}. %% Erklärung hier. Besser die Bücher zu referenzieren, als selbst etwas zu erfinden.
+
+\begin{equation}
+    \mathbf{p} = \int\mathbf{x'} \rho (\mathbf{x'})\mathrm{d}^3x'
+    \label{eqn:elec_dipole_mom}
+\end{equation}
+
+\autoref{fig:electric_dipole} demonstrates a simple example of a center-fed dipole with a narrow gap as a feedpoint, for which the electric dipole can be used to calculate its radiation\cite{Griffiths_2024}\cite{Jackson}. A current $I_0$ is injected at the feedpoint, which linearly drops to zero along the antenna arms, as described by \autoref{eqn:current_dipole}\cite{Jackson}.
+
+\begin{equation}
+    I(z)= I_0\left( 1-\frac{2|z|}{d} \right)
+    \label{eqn:current_dipole}
+\end{equation}
+
+%Hier das Ergebnis der Integration anschreiben. Die integration selbst auch anschreiben- 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Documentation//images/electric_dipole_drawing.png}
+    \caption{Electric dipole}
+    \label{fig:electric_dipole}
+\end{figure}
+
+The charge per unit length $\rho'$, approximated due to the thin wire, is then derived by the continuity equation in frequency domain by \autoref{eqn:charge_distribution_dipole}. It is constantly distributed along each antenna arm\cite{Griffiths_2024}\cite{Jackson}.
+
+\begin{equation}
+    \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}\frac{\mathrm{i}I(z)}{\omega} = \pm\frac{2\mathrm{i}I_0}{\omega d}
+    \label{eqn:charge_distribution_dipole}
+\end{equation}
+
+Using \autoref{eqn:elec_dipole_mom} leads to the resulting electric dipole moment in \autoref{eqn:dipole_mom_example} of this structure. It is parallel to the antenna's arms and points in z-direction\cite{Griffiths_2024}\cite{Jackson}. 
+
+\begin{equation}
+    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\mathrm{d}z\cdot\mathbf{e}_z = \frac{\mathrm{i}I_0d}{2\omega}
+    \label{eqn:dipole_mom_example}
+\end{equation}
+
+Next, the vector potential $\mathbf{A}$ is determined, to further derive any radiation. It is defined in \autoref{eqn:vector_pot}\cite{Balanis_1997}\cite{Jackson}. % Eventuell extra in einem anderen Kapitel diese Bascis anschreiben. 
+
+\begin{equation}
+    \mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{\mathrm{i}kr}}{r}\int \mathbf{J}(\mathbf{x'})\mathrm{d}^3x'
+    \label{eqn:vector_pot}
+\end{equation}
+
+The vector potential $\mathbf{A}$ of an electric dipole is calculated with \autoref{eqn:vector_pot_elec_dipole}\cite{Jackson}.
+
+\begin{equation}
+    \mathbf{A} (\mathbf{x})=-\frac{\mathrm{i\mu_0\omega}}{4\pi}\mathbf{p}\frac{\mathrm{e}^{\mathrm{i}kr}}{r}
+    \label{eqn:vector_pot_elec_dipole}
+\end{equation}
+Should the calculation of fields even be included? I don't need them for research. But the Field equations are important for explaining the frequency behavior of the electric dipole moment. This can be done by the radiation resistance in \autoref{eqn:elec_rad_res}. In our example, the radiation power depends on the frequency squared ($\mathbf{p}$\textasciitilde
+$\frac{1}{f}$ and $k$ \textasciitilde $f$, leading to $P_{rad}$ \textasciitilde $f^2$ overall)\cite{Jackson}. Therefore, it is to be expected that the small electric dipole leads to increased coupling with the TEM cell by frequency squared.
+
+\begin{equation}
+    P_{rad} = \frac{\mathrm{c}^2\mathrm{Z_0}\mathrm{k}^4}{12\pi}|\mathbf{p}|^2
+    \label{eqn:elec_rad_res}
+\end{equation}
+
+The electric dipole described in this section approximate the real behavior of electrically short antennas. However, special care must be taken of the excitation method and shape, as it influences the results heavily\cite{Jackson}. Additionally, any antenna investigated through this method must remain as small as possible compared to the wavelength $\lambda$, to reduce any analytical approximation errors. 
+
+The electric field increases quadratically with frequency.... Hence electric dipole moment increases over frequency... Write about that -> Griffiths
+
+% Next, the electric and magnetic fields, how the dipole moment is calculated with this and how ansys HFSS uses this. Look also in the other two ressources, the other two books. Ansys HFSS handles them as physical dipole antennas? Maybe add radiation pattern. Additionally, describe how the electric field odminates in electric dipoles. In Dominik's paper, the magnetic coupling dominates, because of the magnetic dipole.
+
+The behavior of the electric dipole may be divided into three categories\cite{Griffiths_2024}\cite{Jackson}:
+\begin{enumerate}
+    \item The near zone, 
+\end{enumerate}
+
+\subsubsection{Magnetic Dipoles}
+
+The magnetic dipole is represented by a current loop with a radius $b$. Its axis is perpendicular to the plane of the loop. Its field radiated are the same as in the electric dipole, but with the electric and magnetic fields reversed\cite{Balanis_1997}. The magnetic dipole moment is given by \autoref{}
+
+\begin{equation}
+    \mathbf{m}=\frac{1}{2}\int (\mathbf{x} \times \mathbf{J})\mathrm{d}^3x
+\end{equation}
+
+
+\subsubsection{Combination of Dipoles}
+% Read Bauernfeind's: Crossed Dipole Antennas
+
+When placing the magnetic dipole in the center of the upper or lower chamber of the TEM cell, and pointing in y-direction, it will generate a TEM-wave. Same goes for the electric dipole, pointing in z-direction. When combining two of these dipole moments, any excitation with the first order TEM mode is possible. This is the main idea for modeling antennas. The relation of the magnetic and electric fields is assumed to be roughly equal to the free space wave impedance. Also, magnetic dipoles create a difference in output voltage of the two ports, while electric dipoles create a increase of voltage in both ports. The power transmitted is the same. However: How are they modeled in HFSS? 
