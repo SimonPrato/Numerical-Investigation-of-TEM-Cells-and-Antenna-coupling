@@ -1,0 +1,14 @@
+$begin 'Header'
+	NumSources=4
+	BigEndian=false
+	ByteOrder=1094861636
+	DataFormat='BINARY'
+	DataPrecision='Float'
+	Frequency=5.5e+08
+	Source_1='Port_1__Mode_1'
+	Source_2='Port_2__Mode_1'
+	Source_3='CPWA_IncHDWave1'
+	Source_4='CPWA_IncHDWave2'
+	MixedOrder='false'
+	HighestOrder=2
+$end 'Header'
