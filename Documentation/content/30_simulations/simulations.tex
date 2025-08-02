@@ -1,6 +1,6 @@
-\subsection{Inverted F-antenna}
+\subsection{Inverted F-antenna}\label{sec:ifa_sim}
 
-The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. Its material is copper. It is positioned at the center of the TEM cell, mounted at the top surface. The excitation is a modal wave port.
+The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. Its material is copper. It is positioned at the center of the TEM cell, mounted at the top surface. The excitation is a modal wave port. With a maximum dimension of 2.7\,mm, the antenna is electrically small for a frequency of up to 11.1\,GHz, at which it will be a tenth of the wavelength. In this simulation, the antenna is investigated for a frequency of 550\,MHz, therefore, its size is by far small enough.
 
 \begin{figure}[h]
     \centering
@@ -43,3 +43,23 @@ Using \autoref{eqn:magn_current_curr_loop} the magnetic dipole moment can be exp
 Next, the antenna is replaced with those two dipole excitations in the center of the upper half of the TEM cell. The magnitude and phase of the fields is measured. The power going through each port is $\frac{1}{4}\,\mathrm{W}$. When doubling the excitations, the power reaches the desired $1\,\mathrm{W}$, but I could not find my error in my calculations yet. I suspect that somewhere there is a factor of two missing. The phase shift is determined by measuring the phase of the electric fields at the center of both output ports and comparing them. It is 165.32°, which is very close to the value with the real antenna.
 
 \subsection{Center Fed Monopole Antenna}
+
+The same simulation procedure is repeated with a center fed monopole antenna. The parameters are listed in \autoref{tab:center_fed_monopole_params} for the chosen frequency of 550\,MHz. Interestingly, the electric dipole moment increased proportionally to the antenna's height in z-direction compared to the IFA in \autoref{sec:ifa_sim}, while the magnetic dipole moment remained roughly equal due to the unchanged loop area.
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Variable Name & Value\\\hline\hline
+        $S_{1\mathrm{A}}$ & $3.51\cdot10^{-4}\cdot \mathrm{e}^{\mathrm{i}\cdot 48.86°}$\\\hline
+         $S_{2\mathrm{A}}$&$3.49\cdot10^{-4}\cdot\mathrm{e}^{-\mathrm{i}\cdot 159.80°}$ \\\hline
+         $E_{0,\mathrm{z}}$&$-189.652 -\mathrm{i}\cdot66.529\mathrm{\frac{V}{m}}$ \\\hline
+         $m_{\mathrm{ez}}$&$2.463\cdot10^{-3}\cdot\mathrm{e}^{-\mathrm{i}\cdot74.8°}\cdot\mathrm{A\cdot m}$ \\\hline
+         $m_{\mathrm{my}}$&$8.36\cdot10^{-4}\cdot\mathrm{e}^{-\mathrm{i}\cdot 74.8°}\cdot\mathrm{A\cdot m^2}$ \\\hline
+         $m_{\mathrm{my,mag}}$&$3.6323\cdot\mathrm{e}^{\mathrm{i}\cdot15.1994}\cdot\mathrm{V\cdot m}$ \\\hline
+    \end{tabular}
+    \caption{Determined parameters of the center fed monopole antenna}
+    \label{tab:center_fed_monopole_params}
+\end{table}
+
