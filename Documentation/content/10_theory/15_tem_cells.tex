@@ -48,6 +48,30 @@ A simple rectangular waveguide cannot be used for this application. Assuming tha
 
 If $E_z$ and $B_z$, the fields in direction of propagation, were both zero, then the change of the transverse fields would be constantly zero, and because of the boundary conditions, all transverse fields would be zero. \autoref{eqn:rect_waveguide_gauss} shows Gauss' law and \autoref{eqn:rect_waveguide_faraday} Faraday's law if $E_z=B_z=0$, from which the unchanging transverse electric field can be derived. A TEM cell solves this problem, by having a gap between the septum and the side walls. This makes it essentially to two rectangular waveguides with apertures on the sides, which enable perturbation between them. Since the boundary conditions of the Laplace equation now changed, due to the gaps, the electric and magnetic fields do not have to be constantly zero across the transverse plane. The Green's function may be calculated of the new construction, now considering the boundary conditions at the gaps, which must be the same for both waveguides (to prevent discontinuities) \cite{Tippet_Chang_Crawford_1976}.
 
+The TEM cell used in the simulation has a width of $a=200\,\mathrm{mm}$ and a height $b=100\,\mathrm{mm}$. The cutoff frequencies of TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes in a TEM cell may be approximated by \autoref{eqn:cutoff_frequency_rect_waveguide}, which is the same formula for rectangular waveguides. This works because a thin conducting layer, as the septum is, does not influence these modes \cite{Weil_Gruner_1984}. Consequently, the cutoff frequency of the first TE\textsubscript{01} mode must be around 750\,MHz. This proposition is checked with a modal simulation in Ansys HFSS, its resulting S-parameters are shown in \autoref{fig:te01_tem_modes_propagation}. The green line shows the S\textsubscript{12}-parameter over the frequency of the TEM mode, while the red line demonstrates S\textsubscript{12}-parameter of the TE\textsubscript{01} mode. At a frequency of 751\,MHz, the mode propagates without attenuation, hence there is the cutoff frequency. The simulated result comes very close to the analytically determined one.
+
+\begin{equation}
+    f_c = \frac{c}{2} \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}
+    \label{eqn:cutoff_frequency_rect_waveguide}
+\end{equation}
+
+\begin{itemize}
+  \item \( f_c \): cutoff frequency of the mode \(\text{T}_{mn}\)
+  \item \( c \): speed of light in the medium (approximately \(3 \times 10^8 \, \text{m/s}\) in air)
+  \item \( a \): wider dimension (broad wall) of the rectangular waveguide (meters)
+  \item \( b \): narrower dimension (narrow wall) of the rectangular waveguide (meters)
+  \item \( m \): mode index in the \(a\)-direction (integer, \(m \geq 0\))
+  \item \( n \): mode index in the \(b\)-direction (integer, \(n \geq 0\))
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//10_theory//img/te01_tem_modes_propagation.png}
+    \caption{Propagation of TEM and TE\textsubscript{01} modes in TEM cell}
+    \label{fig:te01_tem_modes_propagation}
+\end{figure}
+
+
 \begin{align}
     \frac{\mathrm{d}}{\mathrm{d}x}E_x+\frac{\mathrm{d}}{\mathrm{d}y}E_y&=0\quad\text{Gauss' law}\label{eqn:rect_waveguide_gauss}\\
     \frac{\mathrm{d}}{\mathrm{d}y}E_x-\frac{\mathrm{d}}{\mathrm{d}x}E_y&=0\quad\text{Faraday's law}\label{eqn:rect_waveguide_faraday}
