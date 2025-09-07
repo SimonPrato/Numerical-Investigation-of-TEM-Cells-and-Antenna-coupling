@@ -28,19 +28,19 @@ Suppose a current source $\mathbf{J_1}$ excites a waveguide (as is the case with
     \label{eqn:J1_propagating_waves}
 \end{equation}
 
-In case of the TEM cell, it is desirable that only the TEM mode is propagating, and that the source is represented by a dipole. Considering an electric dipole, therefore, the \autoref{eqn_dipole_tem_waves} arises. In this equation, the wave amplitudes $a$ and $b$ are given through the surface integral in the Lorentz Reciprocity theorem, with $a$ being the wave going to the left side, and $b$ to the other. The electric dipole moment $\mathbf{e_m}$ is given by the current $\mathbf{J}$ flowing through the infinitesimal wire. Note that only the electric field of TEM wave propagation is considered. In reality, more modes may propagate, for which the electric field must be replaced by the superposition of normal modes as in \autoref{eqn:modal_superposition1}. %Additionally, to calculate the exact value of the electric field, a series of image sources as a Green's function may be applied.
+In case of the TEM cell, it is desirable that only the TEM mode is propagating, and that the source is represented by a dipole. Considering an electric dipole, therefore, the \autoref{eqn:dipole_tem_waves} arises. In this equation, the wave amplitudes $a$ and $b$ are given through the surface integral in the Lorentz Reciprocity theorem, with $a$ being the wave going to the left side, and $b$ to the other. The electric dipole moment $\mathbf{e_m}$ is given by the current $\mathbf{J}$ flowing through the infinitesimal wire. Note that only the electric field of TEM wave propagation is considered. In reality, more modes may propagate, for which the electric field must be replaced by the superposition of normal modes as in \autoref{eqn:modal_superposition1}. %Additionally, to calculate the exact value of the electric field, a series of image sources as a Green's function may be applied.
 
 \begin{equation}
 \begin{pmatrix}a \\b\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{E}^\pm
-\label{eqn_dipole_tem_waves}
+\label{eqn:dipole_tem_waves}
 \end{equation}
 
 If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole. This leads to \autoref{eqn:mag_dipole_moment_tem}. The requirement for this formulation to work, is that the magnetic fields $\mathbf{H}^\pm$ does not change over the loop area, i.e. the loop is electrically small \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
 
 \begin{align}
-    \begin{pmatrix}a \\b\end{pmatrix} &= -\oint_C \mathbf{E}^\pm \mathrm{d}l \\
-    &= -\iint_{S_0} \nabla \times \mathbf{E}^\pm \mathrm{d}\mathbf{S}\\
-    &= \mathrm{i}\omega\mu_0\iint_{S_0} \mathbf{H}^\pm\cdot \mathrm{d}\mathbf{S}\\
+    \begin{pmatrix}a \\b\end{pmatrix} &= -\oint_C \mathbf{E}^\pm \mathrm{d}l \nonumber \\
+    &= -\iint_{S_0} \nabla \times \mathbf{E}^\pm \mathrm{d}\mathbf{S}\nonumber\\
+    &= \mathrm{i}\omega\mu_0\iint_{S_0} \mathbf{H}^\pm\cdot \mathrm{d}\mathbf{S}\nonumber\\
     &= \mathrm{i}\omega\mu_0\mathbf{m}_m\mathbf{H}^\pm 
     \label{eqn:mag_dipole_moment_tem}
 \end{align}
@@ -212,6 +212,7 @@ The first modes propagating after the TEM mode is the TE\textsubscript{10} and T
     \caption{Transversal electric fields in cross section of TEM cell}
     \label{fig:transversal_e_fields_tem_cell}
 \end{figure}
+\todo{Vector directions are wrong in the pictures}
 
 
 
