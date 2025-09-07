@@ -47,7 +47,7 @@ The coupling between the antenna and the two ports of the TEM cell are described
     \label{eqn:normalization of fields}
 \end{equation}
 
-\autoref{eqn:normalization of fields} shows that the electric field $\mathbf{e_0}$ and magnetic field $\mathbf{h_0}$ are normalized to $1\,\sqrt{\mathrm{W}}$. The surface area $A$, over which the fields are integrated, is that of the output ports of the TEM cell. The field can be linearly scaled by the coefficients $a$ and $b$, which has been described in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. Only one pair of such coefficients is needed, since only the TEM mode is considered. The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$.
+\autoref{eqn:normalization of fields} shows that the electric field $\mathbf{e_0}$ and magnetic field $\mathbf{h_0}$ are normalized to $1\,\sqrt{\mathrm{W}}$. The surface area $A$, over which the fields are integrated, is that of the output ports of the TEM cell. The field can be linearly scaled by the coefficients $a$ and $b$, which has been described in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. Only one pair of such coefficients is needed, since only the TEM mode is considered. The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ are not known over the whole area. However, the electric field $\mathbf{e_0}$ has only to be known at one specific point in order to determine the equivalent dipole moments, as will be shown here.
 
 \begin{subequations}
 \begin{equation}
@@ -61,7 +61,7 @@ The coupling between the antenna and the two ports of the TEM cell are described
 \end{subequations}
 \todo{linear relation Power to b, a}
 
-The output power of each port is then derived through \autoref{eqn:power_of_poynting1} and \autoref{eqn:power_of_poynting2}. Because it is assumed that the TEM cell contains only waves in the TEM mode, the normalization of the electric and magnetic fields can be used to simplify the calculations.
+The output power of each port is then derived through \autoref{eqn:power_of_poynting1} and \autoref{eqn:power_of_poynting2}. So if $a=b=1$, then the electric field $\mathbf{e_0}$ may be measured, when the output power at one port is $\frac{1}{2}\,\mathrm{W}$. Because it is assumed that the TEM cell contains only waves in the TEM mode, the normalization of the electric and magnetic fields can be used to simplify the calculations.
 
 \begin{equation}
     \mathbf{e_0}\times\mathbf{h_0}=\Re\{\mathbf{e_0}\times\mathbf{h_0}^*\} \quad\text{for TEM mode}
@@ -112,6 +112,20 @@ The antenna may then be replaced with those two dipole excitations in the center
 
 \autoref{fig:dipole_moments_over_freq_ifa} shows the dipole moments over frequency. The electric dipole moment $m_e$ has been normalized to the free-space wave impedance of $377\,\Omega$ to make the dipole moments comparable. The antenna input power has been set to 142588.47\,W, because this leads to an output power of 1\,W at a frequency of 1\,GHz. The magnetic dipole moment is much larger than the electric dipole moment, because the current loop of the antenna is aligned with the TEM cell's magnetic fields, but the line current is not with the TEM electric fields. The magnetic dipole moments rises linearly with the frequency, which is equal to a quadratic increase of power. Only the TEM modes has been considered in the simulation, as other modes disturb the calculations. 
 
+The electric field $\mathbf{e_0}$ is approximated with \autoref{eqn:ifa_e_field_approx} for the purpose of interpolation over frequencies and analytical analysis. \autoref{fig:output_power_e_fields_over_freq_ifa} shows the resulting plot. If any other output power over frequency curves are desired, the formula may easily be modified by considering the quadratic relationship between the electric field and the output power.
+
+\begin{equation}
+    a\cdot\mathbf{e_0}=\frac{\sqrt{P_\mathrm{Out}}}{0.0012194}\,\mathrm{\frac{V}{m\sqrt{W}}}
+    \label{eqn:ifa_e_field_approx}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/output_power_e_fields_over_freq_ifa.png}
+    \caption{Output power and electric field over frequency}
+    \label{fig:output_power_e_fields_over_freq_ifa}
+\end{figure}
+
 \subsection{Center Fed Monopole Antenna}
 
 \begin{figure}[h]
@@ -121,24 +135,9 @@ The antenna may then be replaced with those two dipole excitations in the center
     \label{fig:center_fed_monopole}
 \end{figure}
 
-The same simulation procedure is repeated with a center fed monopole antenna. The parameters are listed in \autoref{tab:center_fed_monopole_params} for the chosen frequency of 550\,MHz. Interestingly, the electric dipole moment increased proportionally to the antenna's height in z-direction compared to the IFA in \autoref{sec:ifa_sim}, while the magnetic dipole moment remained roughly equal due to the unchanged loop area.
-\todo{Next: Investigate how to set these dipoles over the frequency. They should be representable, independent of modes, when only looking at TEM mode. How does this change when several modes are able to propagate? Do I need to consider all 6 dipole moments, in order to represent such an antenna with dipole moments?}
 
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        Variable Name & Value\\\hline\hline
-        $S_{1\mathrm{A}}$ & $3.51\cdot10^{-4}\cdot \mathrm{e}^{\mathrm{i}\cdot 48.86°}$\\\hline
-         $S_{2\mathrm{A}}$&$3.49\cdot10^{-4}\cdot\mathrm{e}^{-\mathrm{i}\cdot 159.80°}$ \\\hline
-         $E_{0,\mathrm{z}}$&$-189.652 -\mathrm{i}\cdot66.529\mathrm{\frac{V}{m}}$ \\\hline
-         $m_{\mathrm{ez}}$&$4.926\cdot10^{-3}\cdot\mathrm{e}^{-\mathrm{i}\cdot74.8°}\cdot\mathrm{A\cdot m}$ \\\hline
-         $m_{\mathrm{my}}$&$1.672\cdot10^{-3}\cdot\mathrm{e}^{-\mathrm{i}\cdot 74.8°}\cdot\mathrm{A\cdot m^2}$ \\\hline
-         $m_{\mathrm{my,mag}}$&$7.264\cdot\mathrm{e}^{\mathrm{i}\cdot15.1994}\cdot\mathrm{V\cdot m}$ \\\hline
-    \end{tabular}
-    \caption{Determined parameters of the center fed monopole antenna}
-    \label{tab:center_fed_monopole_params} 
-\end{table}
+
+
 
 \subsection{Offset of source antennas and eddy currents}
