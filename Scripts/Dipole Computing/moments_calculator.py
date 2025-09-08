@@ -5,6 +5,9 @@ def calculate_moment(e_field, phase_shift, output_power, frequency):
 
     a = output_power * 2
     b = output_power * 2 * np.exp(1j*phase_shift)
+    print(np.abs(a[-1]+b[-1]))
+    print(np.abs(a[-1]-b[-1]))
+    print(np.rad2deg(phase_shift[-1]))
 
     c = 299792458
     l = c / frequency
