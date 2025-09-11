@@ -58,6 +58,8 @@ The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mat
 
 The phase shifts of $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$ differ, which is shown in \autoref{fig:phase_shift_waveports_ifa}. The difference of these phase shifts influences the quantity of magnetic dipole moment and electric dipole moments. A large phase shift indicated a large magnetic dipole moments compared to the electric dipole moment, and vice versa. The large difference in phase shifts in \autoref{fig:phase_shift_waveports_ifa} lets one expect the first case. However, the phase shift does not influence the overall output power. It is incorporated into the coefficients $a$ and $b$, by multiplying the term $e^{\mathrm{i}\varphi_{a}}$ or $e^{\mathrm{i}\varphi_{b}}$ to their magnitude. The phase shift of each port is then implemented by $\varphi_{a}$ at the port of the coefficient $a$, and by $\varphi_{b}$ at the port of the coefficient $b$. 
 
+The Poynting vector is periodic from $-\pi/2$ to $\pi/2$, hence any phase difference above that value must be corrected by adding $\pi$ to it. 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/Phase Shift Waveports.png}
@@ -139,7 +141,7 @@ The electric field can also be approximated by \autoref{eqn:e_field_at_one_point
 
 \subsection{Center Fed Monopole Antenna}
 
-The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which again leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both ports. 
+The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The electric wire with the length of 5 mm points towards the septum. The 1.1 x 1.6 mm loop is again aligned with the magnetic field lines of the TEM mode. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which once more leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both output ports. 
 
 \begin{figure}[h]
     \centering
@@ -148,14 +150,29 @@ The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. T
     \label{fig:center_fed_monopole}
 \end{figure}
 
+The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff_cfm} shows stronger coupling. As will be seen below, this is because of an increased electric dipole moment, while the magnetic dipole moment remained the same. Therefore, the center fed monopole antenna couples well electrically with the TEM cell.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/forward_coeff_cfm.png}
     \caption{S-parameter describing coupling of antenna to waveport 1}
-    \label{fig:orward_coeff_cfm}
+    \label{fig:forward_coeff_cfm}
 \end{figure}
 
-The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulation with the inverted F antenna. This hints to a more influential electric dipole moment than before. 
+The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulation with the inverted F antenna. This hints to a more influential electric dipole moment than before. This is because of the term $a+b$... When using superposition of each dipole moment...
+
+\begin{subequations}
+    \begin{equation}
+        c_1 = \sqrt{a^2+b^2+2ab\cos{\left[ (\varphi_a + \varphi_b) / 2 \right]}}
+    \end{equation}
+        \begin{equation}
+        c_2 = \sqrt{a^2+b^2-2ab\sin{\left[ (\varphi_a - \varphi_b) / 2 \right]}}
+    \end{equation}
+    \begin{equation}
+        c_1^2+c_2^2= a^2+b^2
+    \end{equation}
+\end{subequations}
+    
 
 \begin{figure}[h]
     \centering
@@ -174,12 +191,10 @@ The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulati
 \end{figure}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/e_field_power_cfd.png}
-    \caption{Output power and electric field over frequency}
-    \label{fig:e_field_power_cfd}
-\end{figure}
-
+The output power has been scaled as in the simulation before. This leads to the same electric field magnitude. Therefore, the electric field and output power over frequency plot are the same as in the case for the inverted F antenna, visible in \autoref{fig:output_power_e_fields_over_freq_ifa}.
 
 \subsection{Offset of source antennas and eddy currents}
+
+Eddy currents occur on the septum. They increase with frequency. When they get too large, the next-order mode starts propagating.
+
+\todo{How does offset influence the eddy currents and the result?}
