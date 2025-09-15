@@ -53,7 +53,7 @@ The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mat
     \label{eqn:power_of_poynting2}
 \end{equation}
 \end{subequations}
-\todo{linear relation Power to b, a}
+
 
 
 The phase shifts of $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$ differ, which is shown in \autoref{fig:phase_shift_waveports_ifa}. The difference of these phase shifts influences the quantity of magnetic dipole moment and electric dipole moments. A large phase shift indicated a large magnetic dipole moments compared to the electric dipole moment, and vice versa. The large difference in phase shifts in \autoref{fig:phase_shift_waveports_ifa} lets one expect the first case. However, the phase shift does not influence the overall output power. It is incorporated into the coefficients $a$ and $b$, by multiplying the term $e^{\mathrm{i}\varphi_{a}}$ or $e^{\mathrm{i}\varphi_{b}}$ to their magnitude. The phase shift of each port is then implemented by $\varphi_{a}$ at the port of the coefficient $a$, and by $\varphi_{b}$ at the port of the coefficient $b$. 
@@ -91,7 +91,7 @@ By using \autoref{eqn:mag_dipole_moment_tem} and \autoref{eqn:dipole_tem_waves},
     \label{eqn:ifa_mm}
 \end{equation}
 
-By adding or subtracting the coefficients $a$ and $b$, the dipole moments are expressed into the handy \autoref{eqn:ifa_me} and \autoref{eqn:ifa_mm}. There, $k_0=\frac{2\pi}{\lambda}$ is the free space wave number and $e_{0,z}$ is the normed electric field in z-direction at middle height between septum and the upper wall of the TEM cell. However, the exact height of the measurement point is not important, as the electric field is uniformly distributed. Additionally, the x- and y-components of the electric field $\mathbf{e_{0}}$ are defined to be zero, which leads to these equations. The dipole moments $m_{\mathrm{e}}$ and $m_{\mathrm{m}}$ are defined to be in the center of the TEM cell, at middle height. If they are shifted in any direction, their approximation would not hold true anymore.
+By adding or subtracting the coefficients $a$ and $b$, the dipole moments are expressed into the handy \autoref{eqn:ifa_me} and \autoref{eqn:ifa_mm}. There, $k_0=\frac{2\pi}{\lambda}$ is the free space wave number and $e_{0,z}$ is the normed electric field in z-direction at middle height between septum and the upper wall of the TEM cell. However, the height of the measurement point is not important, as the electric field is uniformly distributed along the z-axis. Additionally, the x- and y-components of the electric field $\mathbf{e_{0}}$ are zero, which leads to these equations. The dipole moments $m_{\mathrm{e}}$ and $m_{\mathrm{m}}$ are defined to be in the center of the TEM cell, at middle height. If they are shifted in any direction, their approximation would not hold true anymore.
 
 \begin{figure}[h]
     \centering
@@ -99,6 +99,10 @@ By adding or subtracting the coefficients $a$ and $b$, the dipole moments are ex
     \caption{Dipole moments and measurement point of $e_{0,z}$ in TEM cell}
     \label{fig:sketch_dipoles_tem_cell}
 \end{figure}
+
+\autoref{fig:sketch_dipoles_tem_cell} shows the measurement point of $e_\mathrm{0,z}$. This wouldn't work if the magnetic and electric dipole wasn't defined to be exactly at a height of $b/4$, at dead center. The Lorentz Reciprocity theorem used to derive the formulas take the cross product of the electric field traveling to one output port with the magnetic field caused by the dipole, minus the magnetic field traveling to the same output port minus the electric field caused by the dipole. Since the dipoles are in dead center, the electric field caused by the dipole does only have a z-component, and the magnetic field caused by the dipole only a y-component. If this was not the case, the other components would have to be taken into account of the fields at the test point. They would already have disappeared at the output ports due to the long travel, and the Lorentz Reciprocity theorem becomes more cumbersome to use. By placing the dipoles in dead center, it is possible to measure the electric field at the output port and normalize it to $\frac{1}{2}\,\mathrm{W}$.
+
+\todo{Write clearer. And put into theoretical part.}
 
 Using \autoref{eqn:magn_current_curr_loop} the magnetic dipole moment can be expressed as a magnetic current. The resulting $m_{m,mag}$ is shown in \autoref{eqn:m_mymag_ifa}. The phase shift between the magnetic and electric dipole moments $m_{\mathrm{ez}}$ and $m_{\mathrm{my,mag}}$ is always $\frac{\pi}{2}$, which generates the desired TEM wave pattern.
 
@@ -121,7 +125,7 @@ The antenna may then be replaced with those two dipole excitations in the center
 The electric field $\mathbf{e_0}$ is approximated with \autoref{eqn:ifa_e_field_approx} for the purpose of interpolation over frequencies and analytical analysis. The constant $u$ is a scaling factor, which must be adjusted to fit the real electric field values. In this case, this constant equals $u=820.34$. The left-hand side term $|a|\cdot e_{0,z}$ is the overall electric field at the measurement point according to \autoref{eqn:modal_superposition1}. \autoref{fig:output_power_e_fields_over_freq_ifa} shows the resulting plot. 
 
 \begin{equation}
-    |a|\cdot e_{0,z}=2P_\mathrm{Out}\cdot e_{0,z}=u\sqrt{P_\mathrm{Out}}\,\mathrm{\frac{V}{m\cdot\sqrt{W}}}
+    |a|\cdot e_{0,z}=\sqrt{2P_\mathrm{Out}}\cdot e_{0,z}=u\sqrt{P_\mathrm{Out}}\,\mathrm{\frac{V}{m\cdot\sqrt{W}}}
     \label{eqn:ifa_e_field_approx}
 \end{equation}
 
@@ -198,3 +202,25 @@ The output power has been scaled as in the simulation before. This leads to the 
 Eddy currents occur on the septum. They increase with frequency. When they get too large, the next-order mode starts propagating.
 
 \todo{How does offset influence the eddy currents and the result?}
+
+\subsection{Shielding effectiveness of graphite}
+
+The reference power $P_\mathrm{ref}$ has been set to 1\,W. Using \autoref{eqn:load_power} and the S-parameters from the simulation results, $P_\mathrm{load}$ may be determined. \autoref{fig:se_graphite} demonstrates the shielding effectiveness of graphite in dB $SE_\mathrm{dB}$ over the shielding material thickness. The solution frequency is 500\,MHz. A frequency sweep shows that the reflection coefficient $S_{11}$ does not depend much on the frequency. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/se_graphite.png}
+    \caption{Shielding effectiveness of graphite}
+    \label{fig:se_graphite}
+\end{figure}
+
+\todo{I think the low SE in the low shield thicknesses has to do with the false modelling of it in Ansys HFSS.}
+
+The components of $SE_\mathrm{dB}$ are determined according to \autoref{eqn:se_rereflections}. 
+
+\subsection{Shield effectiveness of FR4}
+
+The FR4 has a relative permittivity of $\epsilon_r=4.4$. According to \autoref{eqn:rel_wave_imp}, the relative wave impedance is $Z=0.476$. This leads to a reflection coefficient of $R=-0.355$ by \autoref{eqn:reflection_coefficient_plane_dielectric}.
+
+
+The reflection coefficient $|S_{11}|=0.045$.
