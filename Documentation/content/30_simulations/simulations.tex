@@ -143,6 +143,27 @@ The electric field can also be approximated by \autoref{eqn:e_field_at_one_point
     \label{eqn:e_field_at_one_point}
 \end{equation}
 
+\todo{Repeat for different orientations? Change variable name: TEM cell height.}
+
+The magnetic coupling with the septum happens due to the alignment of the current loop with the magnetic field of the dominant TEM mode. The antenna is now rotated by 90° around the z-axis, such that the magnetic current loop stands perpendicular to the magnetic TEM fields. \autoref{fig:phase_shift_90_ifa} demonstrates the phase of the S-parameters, describing the coupling of antenna to waveport 1 and 2. Since the magnetic dipole moment is responsible for a phase between the ports, \autoref{fig:phase_shift_90_ifa} strongly hints to an absence of it.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/phase_shift_90_ifa.png}
+    \caption{Phase of S-parameters from rotated antenna to waveport 1 and 2}
+    \label{fig:phase_shift_90_ifa}
+\end{figure}
+
+\autoref{dipole_moments_ifa_90} shows that the electric dipole moment $m_\mathrm{e}$ has stayed the same, while the magnetic dipole moment became zero. Consequently, the overall power transfer between the antenna and the waveports is also much lower. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/dipole_moments_ifa_90.png}
+    \caption{Dipole moments of rotated antenna}
+    \label{fig:dipole_moments_ifa_90}
+\end{figure}
+
+
 \subsection{Center Fed Monopole Antenna}
 
 The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The electric wire with the length of 5 mm points towards the septum. The 1.1 x 1.6 mm loop is again aligned with the magnetic field lines of the TEM mode. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which once more leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both output ports. 
@@ -199,7 +220,7 @@ The output power has been scaled as in the simulation before. This leads to the 
 
 \subsection{Offset of source antennas and eddy currents}
 
-Eddy currents occur on the septum. They increase with frequency. When they get too large, the next-order mode starts propagating.
+Eddy currents occur on the septum. They increase with frequency. When they get too large, the next-order mode starts propagating. Offsetting the antenna / dipole moment in y-direction reduces the amount of influence of the eddy current on the power carrying current in the septum. 
 
 \todo{How does offset influence the eddy currents and the result?}
 
