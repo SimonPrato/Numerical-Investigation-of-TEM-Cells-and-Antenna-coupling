@@ -137,3 +137,24 @@ Then, the S-parameters derived in the simulations are used to get to the output 
 
 
 \todo{Describe Method. Then follows dual TEM cells}
+
+\subsubsection{Dual TEM cell}
+
+The shielding effectiveness of a material may also be determined using two TEM cells, which are stacked upon each other. They are connected through an aperture, which is filled with the shielding material. One TEM cell is excited, and therefore acts as a driving cell. It transmits power through the aperture. It is measured at the second TEM cell, which acts as a receiver. The dual TEM cell simulates near-field conditions, opposed to the far-field conditions simulated by the simple TEM cell \cite{MORARI_BĂLAN_2015}. This is important when using the shielding material to shield an antenna's radiation by placing the material directly next to it.
+
+The small aperture acts like a electric and magnetic dipole moment. Their magnitude is related to the electric and magnetic coupling between the TEM cells over the aperture. Therefore, the electric and magnetic coupling can be determined separately by adding or subtracting the output powers of the receiving TEM cell \cite{MORARI_BĂLAN_2015, 4091811}. Consequently, a electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$ can be calculated with \autoref{eqn:se_dual_cell_e}, and a magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$ with \autoref{eqn:se_dual_cell_m}.
+
+
+\begin{subequations}
+    \begin{equation}
+        SE_\mathrm{dB}^\mathrm{e}=10\log{\left( \frac{P_\mathrm{ref, sum}}{P_\mathrm{load,sum}} \right)}
+        \label{eqn:se_dual_cell_e}
+    \end{equation}
+    \begin{equation}
+        SE_\mathrm{dB}^\mathrm{m}=10\log{\left( \frac{P_\mathrm{ref, diff}}{P_\mathrm{load,diff}} \right)}
+        \label{eqn:se_dual_cell_m}
+    \end{equation}
+\end{subequations}
+
+
+

@@ -41,7 +41,7 @@ The coupling between the antenna and the two ports of the TEM cell are described
 
 \autoref{eqn:normalization of fields} shows that the electric field $\mathbf{e_0}$ and magnetic field $\mathbf{h_0}$ are normalized to $1\,\sqrt{\mathrm{W}}$. The surface area $A$, over which the fields are integrated, is that of the output ports of the TEM cell. The field can be linearly scaled by the complex coefficients $a$ and $b$, which has been described in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. Only one pair of such coefficients is needed, since only the TEM mode is considered.
 
-The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ are not known over the whole area. However, the electric field $\mathbf{e_0}$ has only to be known at one specific point in order to determine the equivalent dipole moments, as will be shown here.
+The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ are not known over the whole area. However, the electric field $\mathbf{e_0}$ has only to be known at one specific point in order to determine the equivalent dipole moments, as will be shown here. The normalization condition therefore leads to an output power equal to $|a|^2/2$ or $|b|^2/2$, respectively, which was also found in \cite{4091811}.
 
 \begin{subequations}
 \begin{equation}
@@ -156,6 +156,8 @@ The magnetic coupling with the septum happens due to the alignment of the curren
 
 \autoref{dipole_moments_ifa_90} shows that the electric dipole moment $m_\mathrm{e}$ has stayed the same, while the magnetic dipole moment became zero. Consequently, the overall power transfer between the antenna and the waveports is also much lower. 
 
+\todo{The same procedure was repeated with different dipole moments positions, for which \autoref{eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/dipole_moments_ifa_90.png}
@@ -197,6 +199,7 @@ The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulati
         c_1^2+c_2^2= a^2+b^2
     \end{equation}
 \end{subequations}
+\todo{not done yet, make it correct}
     
 
 \begin{figure}[h]
