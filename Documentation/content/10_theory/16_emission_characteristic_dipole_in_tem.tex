@@ -45,12 +45,28 @@ However, in a TEM cell, the normalized electric field strength is not necessaril
 \end{equation}
 \end{subequations}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\linewidth]{DELETE.png}
-    \caption{Normalized E field formula \cite{Wilson_Ma_1986}}
-    \label{fig:placeholder}
-\end{figure}
+The normalized electric field of the TEM mode is then given by \autoref{eqn:eox_normalized} in x-direction and by \autoref{eqn:eoz_normalized} in z-direction \cite{Wilson_Ma_1986}. The equations follow from the singular integral-equation approach in \cite{Wilson_1981}. The formula is not valid for the gap regions. However, since there isn't any dipole moment to expected there, it should still suffice. 
+
+\begin{subequations}
+
+\begin{equation}
+    e_{ox} = \frac{2}{a} Z_c^{1/2} \sum_{m_0=1}^{\infty} 
+    \frac{\sinh M(b - pz)}{\sinh M b} 
+    \cdot \sin Mx \sin Ma \; J_0(Mg)
+    \label{eqn:eox_normalized}
+\end{equation}
+
+
+\begin{equation}
+    e_{oz} = p\,\frac{2}{a}\, Z_c^{1/2} \sum_{m_0=1}^{\infty}
+    \frac{\cosh M(b - pz)}{\sinh M b}
+    \cdot \cos Mx\, \sin Ma\, J_0(Mg)
+    \label{eqn:eoz_normalized}
+\end{equation}
+    
+\end{subequations}
+
+$Z_\mathrm{c}$ is the characteristic wave impedance, $a$ is half the width of the TEM cell, $b$ is half its height. The sign-function $p=1$ above the septum, and $p=-1$ below it. $M=m\pi / 2a$ and $g$ is the length of the gap between the septum and the conducting wall. The index $m=1,3,5, ...$ is iterated over odd integers. 
 
 \begin{figure}[h]
     \centering
@@ -59,7 +75,7 @@ However, in a TEM cell, the normalized electric field strength is not necessaril
     \label{fig:placeholder}
 \end{figure}
 
-\todo{The electric field / magnetic field distribution of the TEM mode must be known ($e_0$). Other mode distributions are neither available, nor necessary. Calculations to find these field distributions can be found in \cite{4091811}. This would also solve the problem with not being able to shift the location of the electric dipole moment. In \cite{Sreenivasiah_Chang_Ma_1981}, the normalized electric field was also determined analytically, just with output power. IMPORTANT!!! Additionally, the electric field at the output port and the dipole location must be equal (in tem mode) for the formula to work. If they are not, then the formulas derived in \cite{4091811} must be used. That's why the formula does not work for offset shift of the dipole moment anymore. The electric field at the incident port must then be found out. How to use this in case of a shielding material?}
+\todo{The electric field / magnetic field distribution of the TEM mode must be known ($e_0$). Other mode distributions are neither available, nor necessary. Calculations to find these field distributions can be found in \cite{4091811}. This would also solve the problem with not being able to shift the location of the electric dipole moment. In \cite{Sreenivasiah_Chang_Ma_1981}, the normalized electric field was also determined analytically, just with output power. IMPORTANT!!! Additionally, the electric field at the output port and the dipole location must be equal (in tem mode) for the formula to work. If they are not, then the formulas derived in \cite{4091811} must be used. That's why the formula does not work for offset shift of the dipole moment anymore. The electric field at the incident port must then be found out. How to use this in case of a shielding material? Not valid for only ez dipole}
 
 % The paper goes on to talk about the total power radiated by the EUT in free space. I don't think I need that, but this comment is here as a reminder that it exists.
 
