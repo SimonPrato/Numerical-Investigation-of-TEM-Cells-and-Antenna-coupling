@@ -1,0 +1,43 @@
+\subsection{Green's Function}
+
+Green's function describes the response of a linear differential operator L to a point source, described with a delta-function $\delta$. The general form is shown in \autoref{eqn:general_greens_funct}. 
+
+\begin{equation}
+    \mathrm{L}G(\mathbf{x},\mathbf{x'}) = \delta(\mathbf{x}-\mathbf{x'})
+    \label{eqn:general_greens_funct}
+\end{equation}
+
+Once \autoref{eqn:general_greens_funct} is solved and the Green's function $G$ of this specific operator is known, it can be used to solve any function, like $u(\mathbf{x})$ in \autoref{eqn:examplary_function_with_operator}, on which this operator is used on, by superposition. The resulting \autoref{eqn:examplary_function_solved} solves for $u(\mathbf{x})$ by using a convolution integral with the Green's function and the source function $f(\mathbf{x})$.
+
+\begin{subequations}
+\begin{equation}
+    Lu(\mathbf{x}) = f(\mathbf{x})
+    \label{eqn:examplary_function_with_operator}
+\end{equation}
+
+\begin{equation}
+    u(\mathbf{x})=\int G(\mathbf{x},\mathbf{x'})f(\mathbf{x'})\mathrm{d}\mathbf{x'}
+    \label{eqn:examplary_function_solved}
+\end{equation}
+\end{subequations}
+
+For example, it is commonly used to solve equations containing the Nabla operator $\nabla$ in electrostatics. \autoref{eqn:greens_function_scalar_pot_1} and \autoref{eqn:greens_function_scalar_pot_2} demonstrate how the scalar potential $\phi$ can be calculated with point sources in space $\rho$ just by knowing the Green's function of the Nabla operator, which is $G(\mathbf{x},\mathbf{x'}) = \frac{1}{4\pi |\mathbf{x}-\mathbf{x'|}}$.
+
+\begin{subequations}
+\begin{equation}
+    \nabla \phi = -\frac{\rho}{\epsilon_0}
+    \label{eqn:greens_function_scalar_pot_1}
+\end{equation}
+\begin{equation}
+    \phi(\mathbf{x}) = \frac{1}{4\pi\epsilon_0}\iiint_V\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\mathrm{d}V'
+    \label{eqn:greens_function_scalar_pot_2}
+\end{equation}
+\end{subequations}
+
+When boundary conditions are present, the Green's function may be modified to make the boundary condition vanish. Same goes for the dyadic Green's function, where the boundary condition are considered to create a taylored Green's function. This enables an expansion of the fields in a waveguide excited by an internal source. The perfectly conducting surfaces of the waveguides mirror the source infinitely often. Therefore, the Green's function may be represented by a series of these mirror sources. In practice, these calculations are cumbersome, and only the most significant parts of the series are computed \cite{Collin_2015}. %Should I show mathematical calculations?
+
+\todo{write about dyadic green's function, which just maps the coordinates to each other. More about that in Collin and Balanis}
+
+% Read more about Green's function with the Collin book. Then, solve one Green's function for a dipole in a waveguide with normal modes and Lorentz Reciprocity Theorem.
+
+

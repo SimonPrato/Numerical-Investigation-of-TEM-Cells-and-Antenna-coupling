@@ -1,0 +1,32 @@
+\subsection{Lorentz Reciprocity Theorem}
+
+The Lorentz reciprocity theorem proves to be very useful, hence it is summarized here. It states that any two fields $\mathbf{E_1}$, $\mathbf{H_1}$ and $\mathbf{E_2}$, $\mathbf{H_2}$, which are of the same frequency and in linear and isotropic media, can be expressed by its differential form in \autoref{eqn:lorentz_rec_theorem} \cite{Balanis_1997,Collin_2015}. Here, $\mathbf{J}$ describes the electric current density with the unit $\frac{\mathrm{A}}{\mathrm{m^2}}$ and $\mathbf{M}$ the magnetic current density with the unit $\frac{\mathrm{V}}{\mathrm{m^2}}$. They act as sources, exciting the electric and magnetic fields $\mathbf{E}$ and $\mathbf{H}$. The theorem says, that under the previously described conditions, any source and response can be locally interchanged, and the results would remain the same.
+
+\begin{equation}
+    -\nabla \cdot (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})=\mathbf{E_1}\cdot \mathbf{J_2}+\mathbf{H_2}\cdot \mathbf{M_1}-\mathbf{E_2}\cdot \mathbf{J_1}-\mathbf{H_1}\cdot \mathbf{M_2}
+    \label{eqn:lorentz_rec_theorem}
+\end{equation}
+
+By taking a volume integral of both sides of \autoref{eqn:lorentz_rec_theorem} and using the divergence theorem, \autoref{eqn:lorentz_rec_theorem_int} emerges \cite{Balanis_1997,Collin_2015}.
+
+\begin{equation}
+    \oiint (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})\cdot \mathrm{d}S\mathbf{n}=\iiint
+\mathbf{E_1}\cdot \mathbf{J_2}+\mathbf{H_2}\cdot \mathbf{M_1}-\mathbf{E_2}\cdot \mathbf{J_1}-\mathbf{H_1}\cdot \mathbf{M_2}\cdot \mathrm{d}V
+    \label{eqn:lorentz_rec_theorem_int}
+\end{equation}
+
+If there aren't any sources present, meaning that $\mathbf{J_1}=\mathbf{J_2}=\mathbf{M_1}=\mathbf{M_2}=0$, the Lorentz reciprocity theorem simplifies to \autoref{eqn:lorentz_rec_theorem_wo_sources} \cite{Balanis_1997,Lorrain_Corson_1970}. This is especially useful for free wave propagation of antennas.
+
+\begin{equation}
+    -\nabla \cdot (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})=0
+    \label{eqn:lorentz_rec_theorem_wo_sources}
+\end{equation}
+
+Another application arises when investigating a volume $V$ confined by a perfectly conducting surface $S$, through which to linear current densities $\mathbf{J_1}$ and $\mathbf{J_2}$ flow. Because $\mathbf{n}\times\mathbf{E_1}=\mathbf{n}\times\mathbf{E_2}=0$ along the surface $S$, the surface integral in \autoref{eqn:lorentz_rec_theorem_int} equals zero, and \autoref{eqn:rayleigh_carson} arises. This is the Rayleigh-Carson from of the Lorentz reciprocity theorem and is particularly useful for deriving waveguide modes and constructing the respective fields \cite{Collin_2015}.
+
+\begin{equation}
+    \mathbf{E_1}\cdot\mathbf{J_2}=\mathbf{E_2}\cdot\mathbf{J_1}
+    \label{eqn:rayleigh_carson}
+\end{equation}
+
+% This will be used to model dipoles with Green's Theorem in waveguides.
