@@ -41,7 +41,7 @@ The coupling between the antenna and the two ports of the TEM cell are described
 
 \autoref{eqn:normalization of fields} shows that the electric field $\mathbf{e_0}$ and magnetic field $\mathbf{h_0}$ are normalized to $1\,\sqrt{\mathrm{W}}$. The surface area $A$, over which the fields are integrated, is that of the output ports of the TEM cell. The field can be linearly scaled by the complex coefficients $a$ and $b$, which has been described in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. Only one pair of such coefficients is needed, since only the TEM mode is considered.
 
-The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ are not known over the whole area. However, the electric field $\mathbf{e_0}$ has only to be known at one specific point in order to determine the equivalent dipole moments, as will be shown here.
+The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ are not known over the whole area. However, the electric field $\mathbf{e_0}$ has only to be known at one specific point in order to determine the equivalent dipole moments, as will be shown here. The normalization condition therefore leads to an output power equal to $|a|^2/2$ or $|b|^2/2$, respectively, which was also found in \cite{4091811}.
 
 \begin{subequations}
 \begin{equation}
@@ -53,10 +53,12 @@ The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mat
     \label{eqn:power_of_poynting2}
 \end{equation}
 \end{subequations}
-\todo{linear relation Power to b, a}
+
 
 
 The phase shifts of $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$ differ, which is shown in \autoref{fig:phase_shift_waveports_ifa}. The difference of these phase shifts influences the quantity of magnetic dipole moment and electric dipole moments. A large phase shift indicated a large magnetic dipole moments compared to the electric dipole moment, and vice versa. The large difference in phase shifts in \autoref{fig:phase_shift_waveports_ifa} lets one expect the first case. However, the phase shift does not influence the overall output power. It is incorporated into the coefficients $a$ and $b$, by multiplying the term $e^{\mathrm{i}\varphi_{a}}$ or $e^{\mathrm{i}\varphi_{b}}$ to their magnitude. The phase shift of each port is then implemented by $\varphi_{a}$ at the port of the coefficient $a$, and by $\varphi_{b}$ at the port of the coefficient $b$. 
+
+The Poynting vector is periodic from $-\pi/2$ to $\pi/2$, hence any phase difference above that value must be corrected by adding $\pi$ to it. 
 
 \begin{figure}[h]
     \centering
@@ -89,7 +91,7 @@ By using \autoref{eqn:mag_dipole_moment_tem} and \autoref{eqn:dipole_tem_waves},
     \label{eqn:ifa_mm}
 \end{equation}
 
-By adding or subtracting the coefficients $a$ and $b$, the dipole moments are expressed into the handy \autoref{eqn:ifa_me} and \autoref{eqn:ifa_mm}. There, $k_0=\frac{2\pi}{\lambda}$ is the free space wave number and $e_{0,z}$ is the normed electric field in z-direction at middle height between septum and the upper wall of the TEM cell. However, the exact height of the measurement point is not important, as the electric field is uniformly distributed. Additionally, the x- and y-components of the electric field $\mathbf{e_{0}}$ are defined to be zero, which leads to these equations. The dipole moments $m_{\mathrm{e}}$ and $m_{\mathrm{m}}$ are defined to be in the center of the TEM cell, at middle height. If they are shifted in any direction, their approximation would not hold true anymore.
+By adding or subtracting the coefficients $a$ and $b$, the dipole moments are expressed into the handy \autoref{eqn:ifa_me} and \autoref{eqn:ifa_mm}. There, $k_0=\frac{2\pi}{\lambda}$ is the free space wave number and $e_{0,z}$ is the normed electric field in z-direction at middle height between septum and the upper wall of the TEM cell. However, the height of the measurement point is not important, as the electric field is uniformly distributed along the z-axis. Additionally, the x- and y-components of the electric field $\mathbf{e_{0}}$ are zero, which leads to these equations. The dipole moments $m_{\mathrm{e}}$ and $m_{\mathrm{m}}$ are defined to be in the center of the TEM cell, at middle height. If they are shifted in any direction, their approximation would not hold true anymore.
 
 \begin{figure}[h]
     \centering
@@ -97,6 +99,10 @@ By adding or subtracting the coefficients $a$ and $b$, the dipole moments are ex
     \caption{Dipole moments and measurement point of $e_{0,z}$ in TEM cell}
     \label{fig:sketch_dipoles_tem_cell}
 \end{figure}
+
+\autoref{fig:sketch_dipoles_tem_cell} shows the measurement point of $e_\mathrm{0,z}$. This wouldn't work if the magnetic and electric dipole wasn't defined to be exactly at a height of $b/4$, at dead center. The Lorentz Reciprocity theorem used to derive the formulas take the cross product of the electric field traveling to one output port with the magnetic field caused by the dipole, minus the magnetic field traveling to the same output port minus the electric field caused by the dipole. Since the dipoles are in dead center, the electric field caused by the dipole does only have a z-component, and the magnetic field caused by the dipole only a y-component. If this was not the case, the other components would have to be taken into account of the fields at the test point. They would already have disappeared at the output ports due to the long travel, and the Lorentz Reciprocity theorem becomes more cumbersome to use. By placing the dipoles in dead center, it is possible to measure the electric field at the output port and normalize it to $\frac{1}{2}\,\mathrm{W}$.
+
+\todo{Write clearer. And put into theoretical part.}
 
 Using \autoref{eqn:magn_current_curr_loop} the magnetic dipole moment can be expressed as a magnetic current. The resulting $m_{m,mag}$ is shown in \autoref{eqn:m_mymag_ifa}. The phase shift between the magnetic and electric dipole moments $m_{\mathrm{ez}}$ and $m_{\mathrm{my,mag}}$ is always $\frac{\pi}{2}$, which generates the desired TEM wave pattern.
 
@@ -119,7 +125,7 @@ The antenna may then be replaced with those two dipole excitations in the center
 The electric field $\mathbf{e_0}$ is approximated with \autoref{eqn:ifa_e_field_approx} for the purpose of interpolation over frequencies and analytical analysis. The constant $u$ is a scaling factor, which must be adjusted to fit the real electric field values. In this case, this constant equals $u=820.34$. The left-hand side term $|a|\cdot e_{0,z}$ is the overall electric field at the measurement point according to \autoref{eqn:modal_superposition1}. \autoref{fig:output_power_e_fields_over_freq_ifa} shows the resulting plot. 
 
 \begin{equation}
-    |a|\cdot e_{0,z}=2P_\mathrm{Out}\cdot e_{0,z}=u\sqrt{P_\mathrm{Out}}\,\mathrm{\frac{V}{m\cdot\sqrt{W}}}
+    |a|\cdot e_{0,z}=\sqrt{2P_\mathrm{Out}}\cdot e_{0,z}=u\sqrt{P_\mathrm{Out}}\,\mathrm{\frac{V}{m\cdot\sqrt{W}}}
     \label{eqn:ifa_e_field_approx}
 \end{equation}
 
@@ -137,9 +143,32 @@ The electric field can also be approximated by \autoref{eqn:e_field_at_one_point
     \label{eqn:e_field_at_one_point}
 \end{equation}
 
+\todo{Repeat for different orientations? Change variable name: TEM cell height.}
+
+The magnetic coupling with the septum happens due to the alignment of the current loop with the magnetic field of the dominant TEM mode. The antenna is now rotated by 90° around the z-axis, such that the magnetic current loop stands perpendicular to the magnetic TEM fields. \autoref{fig:phase_shift_90_ifa} demonstrates the phase of the S-parameters, describing the coupling of antenna to waveport 1 and 2. Since the magnetic dipole moment is responsible for a phase between the ports, \autoref{fig:phase_shift_90_ifa} strongly hints to an absence of it.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/phase_shift_90_ifa.png}
+    \caption{Phase of S-parameters from rotated antenna to waveport 1 and 2}
+    \label{fig:phase_shift_90_ifa}
+\end{figure}
+
+\autoref{dipole_moments_ifa_90} shows that the electric dipole moment $m_\mathrm{e}$ has stayed the same, while the magnetic dipole moment became zero. Consequently, the overall power transfer between the antenna and the waveports is also much lower. 
+
+\todo{The same procedure was repeated with different dipole moments positions, for which \autoref{eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/dipole_moments_ifa_90.png}
+    \caption{Dipole moments of rotated antenna}
+    \label{fig:dipole_moments_ifa_90}
+\end{figure}
+
+
 \subsection{Center Fed Monopole Antenna}
 
-The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which again leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both ports. 
+The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The electric wire with the length of 5 mm points towards the septum. The 1.1 x 1.6 mm loop is again aligned with the magnetic field lines of the TEM mode. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which once more leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both output ports. 
 
 \begin{figure}[h]
     \centering
@@ -148,14 +177,30 @@ The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. T
     \label{fig:center_fed_monopole}
 \end{figure}
 
+The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff_cfm} shows stronger coupling. As will be seen below, this is because of an increased electric dipole moment, while the magnetic dipole moment remained the same. Therefore, the center fed monopole antenna couples well electrically with the TEM cell.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/forward_coeff_cfm.png}
     \caption{S-parameter describing coupling of antenna to waveport 1}
-    \label{fig:orward_coeff_cfm}
+    \label{fig:forward_coeff_cfm}
 \end{figure}
 
-The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulation with the inverted F antenna. This hints to a more influential electric dipole moment than before. 
+The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulation with the inverted F antenna. This hints to a more influential electric dipole moment than before. This is because of the term $a+b$... When using superposition of each dipole moment...
+
+\begin{subequations}
+    \begin{equation}
+        c_1 = \sqrt{a^2+b^2+2ab\cos{\left[ (\varphi_a + \varphi_b) / 2 \right]}}
+    \end{equation}
+        \begin{equation}
+        c_2 = \sqrt{a^2+b^2-2ab\sin{\left[ (\varphi_a - \varphi_b) / 2 \right]}}
+    \end{equation}
+    \begin{equation}
+        c_1^2+c_2^2= a^2+b^2
+    \end{equation}
+\end{subequations}
+\todo{not done yet, make it correct}
+    
 
 \begin{figure}[h]
     \centering
@@ -174,12 +219,54 @@ The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulati
 \end{figure}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/e_field_power_cfd.png}
-    \caption{Output power and electric field over frequency}
-    \label{fig:e_field_power_cfd}
-\end{figure}
-
+The output power has been scaled as in the simulation before. This leads to the same electric field magnitude. Therefore, the electric field and output power over frequency plot are the same as in the case for the inverted F antenna, visible in \autoref{fig:output_power_e_fields_over_freq_ifa}.
 
 \subsection{Offset of source antennas and eddy currents}
+
+Eddy currents occur on the septum. They increase with frequency. When they get too large, the next-order mode starts propagating. Offsetting the antenna / dipole moment in y-direction reduces the amount of influence of the eddy current on the power carrying current in the septum. 
+
+\todo{How does offset influence the eddy currents and the result?}
+
+\subsection{Shielding effectiveness of graphite}
+
+The reference power $P_\mathrm{ref}$ has been set to 1\,W. Using \autoref{eqn:load_power} and the S-parameters from the simulation results, $P_\mathrm{load}$ may be determined. \autoref{fig:se_graphite} demonstrates the shielding effectiveness of graphite in dB $SE_\mathrm{dB}$ over the shielding material thickness. The solution frequency is 500\,MHz. A frequency sweep shows that the reflection coefficient $S_{11}$ does not depend much on the frequency. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{Documentation//content//30_simulations//img/se_graphite.png}
+    \caption{Shielding effectiveness of graphite}
+    \label{fig:se_graphite}
+\end{figure}
+
+\todo{I think the low SE in the low shield thicknesses has to do with the false modelling of it in Ansys HFSS.}
+
+The components of $SE_\mathrm{dB}$ are determined according to \autoref{eqn:se_rereflections}. 
+
+\subsection{Shield effectiveness of FR4}
+
+The FR4 has a relative permittivity of $\epsilon_r=4.4$. According to \autoref{eqn:rel_wave_imp}, the relative wave impedance is $Z=0.476$. This leads to a reflection coefficient of $R=-0.355$ by \autoref{eqn:reflection_coefficient_plane_dielectric}.
+
+
+The reflection coefficient $|S_{11}|=0.045$.
+
+\subsection{Dual TEM Cell}
+
+A simulation setup of a dual TEM cell is created. A rectangular aperture with a side length of $l=5\,\mathrm{cm}$, inspired by \cite{Wilson_1981}, connects both TEM cells. One waveport 1, as in \autoref{fig:dual_tem_cell}, is excited with a power of $P=1\,\mathrm{W}$. The simulation is conducted, leaving the aperture open. A second one determines the coupling of the waveports, when the aperture is filled with a graphite sheet with a thickeness of $t=50$\,µm.
+
+At a frequency of $f=500\,\mathrm{MHz}$, the coupling between waveport 1 to the waveports 3 and 4 of the receiving TEM cell is shown in \autoref{tab:dual_tem_fwd_trans}. Only one frequency point is investigated, as the results stay roughly constant over the inspected frequency range from 100\,MHz to 1\,GHz. 
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Forward transmission coefficient & Empty aperture & aperture filled with FR408\\\hline\hline
+        Waveport 1 to 3 $S_{13}$ & -83.80\,dB, -144.96° & -85.27\,dB, -155.79°\\\hline
+        Waveport 1 to 4 $S_{14}$ & -90.31\,dB, -144.96° & -87.14\,dB, 25.00°\\\hline
+    \end{tabular}
+    \caption{Forward transmission coefficients}
+    \label{tab:dual_tem_fwd_trans}
+\end{table}
+\todo{Why -8dB difference in empty aperture? Explained in \cite{Wilson_1981}}
+
+Using \autoref{eqn:se_dual_cell_e} and \autoref{eqn:se_dual_cell_m} leads to the shielding effectiveness for electric coupling $SE_\mathrm{dB}^\mathrm{e}=19.07\,\mathrm{dB}$ and magnetic coupling $SE_\mathrm{dB}^\mathrm{m}=-9.22\,\mathrm{dB}$. \todo{negative SE possible?} Indicated by the phase shift of roughly 180°, the coupling between the TEM cells occur mainly due to magnetic dipoles. Due to the relative permittivity of $\epsilon _r=3.66$ and the relative permeability of $\mu_r\approx 1$ of the shielding material, the magnetic fields dominate. This leads to a energy transfer mainly due to magnetic dipole moments.
