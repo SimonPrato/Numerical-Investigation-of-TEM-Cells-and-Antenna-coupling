@@ -343,6 +343,8 @@ Note that the surface current density in \autoref{fig:current_loop_surface_curre
 	\label{fig:currentloopnearhfield}
 \end{figure}
 
+\todo{H-field from other perspective?}
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/30_simulations/img/current_loop_voltage_drop}
@@ -376,9 +378,46 @@ Note that the surface current density in \autoref{fig:current_loop_surface_curre
 	\draw[line width=1.4pt, -latex] (1.375, 5.75) -| (1.375, 6.5) -- (2.375, 6.5);
 	\node[shape=rectangle, minimum width=2.215cm, minimum height=0.715cm] at (2.125, 6.875){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (1, 7.25){$P_\mathrm{Ant}$};
 \end{tikzpicture}
-\caption{Equivalent circuit of current loop antenna}
+\caption{Equivalent circuit of current loop antenna, modeling radiation resistances}
 \label{fig:current_loop_circuit}
 \end{figure}
+
+
+\begin{figure}[h]
+	\centering
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (6.995, 4.995) to[american inductor] (6.995, 1.995);
+	\draw (7.995, 4.995) to[capacitor] (7.995, 1.995);
+	\draw (6.995, 1.995) to[american inductor] (3.995, 1.995);
+	\draw (3.995, 4.995) to[american inductor] (3.995, 1.995);
+	\draw (7.995, 1.995) -- (6.995, 1.995);
+	\draw (2.995, 1.995) to[capacitor] (2.995, 4.995);
+	\draw (3.995, 1.995) |- (2.995, 1.995);
+	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (7.683, 1.558){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (6.995, 1.995){A};
+	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (3.995, 1.558){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (3.308, 1.995){B};
+	\draw (7.995, 4.995) -- (6.995, 4.995);
+	\draw (3.995, 4.995) |- (2.995, 4.995);
+	\draw (3.995, 4.995) -- (3.995, 5.995);
+	\draw (6.995, 4.995) -- (6.995, 5.995);
+	\node[ocirc, rotate=-90] at (6.995, 5.995){};
+	\node[ocirc, rotate=-90] at (3.995, 5.995){};
+	\draw (3.995, 0.995) to[capacitor] (6.995, 0.995);
+	\draw (6.995, 1.995) -- (6.995, 0.995);
+	\draw (3.995, 1.995) -- (3.995, 0.995);
+	\node[circ, rotate=-90] at (6.995, 1.995){};
+	\node[circ, rotate=-90] at (3.995, 1.995){};
+	\node[circ, rotate=-90] at (3.995, 4.995){};
+	\node[circ, rotate=-90] at (6.995, 4.995){};
+	\draw[-latex] (2.25, 2.5) -- (2.25, 4.5);
+	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (2.188, 3.438){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (1.5, 3.875){$V_\mathrm{B}$};
+	\draw[-latex] (8.75, 2.5) -- (8.75, 4.5);
+	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (9.312, 3.438){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (8.625, 3.875){$V_\mathrm{A}$};
+\end{tikzpicture}
+\caption{Equivalent circuit of current loop antenna, modeling specific nodes}
+\label{fig:current_loop_ua_ub}
+\end{figure}
+
 \todo{Do not model only radiation resistance, but also loss resistance, which is dependent by square-root on the frequency, opposed to the relation of the radiation resistance to the square of frequency.}
 
 \autoref{fig:currentlooppowerconsumption} shows the power consumption of the antenna, which is influenced by two factors. The radiation resistance rises quadratically with the frequency. At the same time, the impedance matching increases, leading to a higher power transfer.
@@ -390,7 +429,7 @@ Note that the surface current density in \autoref{fig:current_loop_surface_curre
 	\label{fig:currentlooppowerconsumption}
 \end{figure}
 
-\autoref{fig:deleteafter} shows the total power maintained in the system, meaning $S_{11}^2+S_{12}^2+S_{13}^2$. It does not add up to one, meaning that some energy is lost due to finite conductivity of the septum and antenna. This energy dispersion increases with frequency, most likely due to a decrease of the conductivity due to high-frequency effects like the Skin-effect. At 1\,GHz, the dispersed power already equals to 0.46\,\%, which is much higher than the power transfer of the antenna to one waveport of 1.26e-5 at that frequency. Because this dispersed power is proportional to the square-root of the frequency $P_\mathrm{disp}\propto 1/f$, the overall transferred power to the antenna shows the same characteristic. However, the power transfer to the waveports has a quadratic dependency on the frequency. This, in turn, also leads to the unusual relation of the electric dipole moment to the frequency. \todo{explain better.}
+\autoref{fig:deleteafter} shows the total power maintained in the system, meaning $S_{11}^2+S_{12}^2+S_{13}^2$. It does not add up to one, meaning that some energy is lost due to finite conductivity of the septum and antenna. This energy dispersion increases with frequency, most likely due to a decrease of the conductivity due to high-frequency effects like the Skin-effect. 
 
 \begin{figure}[h]
 	\centering
@@ -398,6 +437,34 @@ Note that the surface current density in \autoref{fig:current_loop_surface_curre
 	\caption{Total power distribution in the system.}
 	\label{fig:deleteafter}
 \end{figure}
+
+The Skin-effect reduces the area in which the current flows, therefore increasing resistance. This appears due to the reduction of the depth, in which the electromagnetic waves enter. It is also called Skin depth and mathematically described by \autoref{eqn:skin_depth}. It depends on the imaginary part of the wave number $\kappa$, which is described in \autoref{eqn:kappa}. For high conducting materials $\left(\sigma >> \epsilon\omega\right)$, the dependency of the skin depth $d$ on the frequency can be described therefore as $d \propto 1/\sqrt{\omega}$. Since the power dispersion is linearly proportional to the area of the conductor and therefore Skin-depth, it shows the same dependency on the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$ \cite{Griffiths_2024}.  
+\todo{Own little chapter for skin effect?}
+
+\begin{subequations}
+	\begin{equation}
+		\kappa = \omega \sqrt{\frac{\epsilon \mu}{2}}\left[\sqrt{ 1+\left(\frac{\sigma}{\epsilon\omega}\right) ^2 } -1\right]^{1/2}
+	\label{eqn:kappa}
+	\end{equation}
+	\begin{equation}
+		d = 1/\kappa
+	\label{eqn:skin_depth}
+	\end{equation}
+\end{subequations}
+
+At 1\,GHz, the dispersed power already equals to 0.46\,\%, which is much higher than the power transfer of the antenna to one waveport of 1.26e-5 at that frequency. Because this dispersed power is proportional to the square-root of the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$, the overall transferred power to the antenna shows the same characteristic. However, the power transfer to the waveports has a quadratic dependency on the frequency. %This, in turn, also leads to the unusual relation of the electric dipole moment to the frequency. 
+\todo{explain better.}
+
+This dispersed power may be ignored in the simulations by changing the antenna's material (main source of power dissipation) and the septum from copper to a perfect electric conductor. The overall power in the system then remains at a constant one over the whole frequency range. Additionally, the transferred power to the antenna now has a quadratic relationship with the frequency, indicating increased radiation efficiency, previously described by \autoref{eqn:elec_rad_res}. 
+\todo{Show plots?}
+
+
+The current-loop antenna contains two electric dipoles, shifted in phase by 180°. They therefore oppose each other in the power transfer to the waveports. However, as visible in the electric near field plot in \autoref{fig:currentloopvoltagedrop}, the electric dipole moment from node A to the feedpoint is much larger than the one from node B to ground. The reasoncan be demonstrated by representing the antenna with its nodes in \autoref{fig:current_loop_ua_ub}. The partial inductances in this schematic are much larger than the capacitances. This leads to a large voltage drop between node A and B, and therefore a weaker electric dipole moment at node B.
+
+Additionally, this voltage difference $V_\mathrm{A}-V_\mathrm{B}$ rises linearly over the frequency, due to the linearly increasing impedance of the inductance $\mathrm{i}\omega L$. This means, that the over electric dipole moment a quadratic relationship to the frequency has.
+\todo{Magnetic moment equivalent antenna. Explain with current and H-field, too}
+
+\todo{Prove square frequency dependency}
 
 
 \subsection{Offset of source antennas and eddy currents}
