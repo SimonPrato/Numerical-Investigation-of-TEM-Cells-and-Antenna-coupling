@@ -129,7 +129,7 @@ A TEM cell solves this problem, by having a gap between the septum and the side 
 % \end{equation}
 
 
-The TEM cell used in the simulation has a width of $a=200\,\mathrm{mm}$ and a height of $b=100\,\mathrm{mm}$. A cross section of the TEM cell with the important dimensions is shown in \autoref{fig:tem_cell_crosssection}. The cutoff frequencies of the higher order TE and TM modes can be approximated by the same formula, shown in \autoref{eqn:cutoff_frequency_rect_waveguide} for rectangular waveguides. However, this is only true, if the septum is very thin ($t/b << 0.1$), and for modes with n-even subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes.
+The TEM cell used in the simulation has a width of $a=40\,\mathrm{mm}$ and a height of $b=24\,\mathrm{mm}$. A cross section of the TEM cell with the important dimensions is shown in \autoref{fig:tem_cell_crosssection}. The cutoff frequencies of the higher order TE and TM modes can be approximated by the same formula, shown in \autoref{eqn:cutoff_frequency_rect_waveguide} for rectangular waveguides. However, this is only true, if the septum is very thin ($t/b << 0.1$), and for modes with n-even subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes.
 
 \begin{figure}[h]
     \centering
@@ -152,7 +152,7 @@ The TEM cell used in the simulation has a width of $a=200\,\mathrm{mm}$ and a he
   \item \( n \): mode index in the \(b\)-direction (integer, \(n \geq 0\))
 \end{itemize}
 
-The cutoff frequency of the TE\textsubscript{10} mode is around 750\,MHz. To verify this, a modal analysis was performed in Ansys HFSS, where an empty TEM cell was modeled with two waveports defined at its output. The resulting S\textsubscript{12}-parameters are presented in\autoref{fig:te01_te10_tem_propagation}. The red line shows the S\textsubscript{12}-parameter over the frequency of the TEM mode, while the blue line demonstrates S\textsubscript{12}-parameter of the TE\textsubscript{10} mode. At a frequency of 750.2\,MHz, the mode propagates without attenuation, hence there is the cutoff frequency. The simulated result comes very close to the analytically determined one. The green line shows a cutoff frequency of 679.1\,MHz for the TE\textsubscript{01} mode. \autoref{eqn:cutoff_frequency_rect_waveguide} would predict a cutoff frequency of 1.5\,GHz, however, the septum influences n-odd modes like this one. Their cutoff frequencies are shifted to a lower value \cite{Weil_Gruner_1984}. 
+The cutoff frequency of the TE\textsubscript{10} mode is around 3.75\,GHz, according to \autoref{eqn:cutoff_frequency_rect_waveguide}. To verify this, a modal analysis was performed in Ansys HFSS, where an empty TEM cell was modeled with two waveports defined at its output. The resulting S\textsubscript{12}-parameters are presented in\autoref{fig:te01_te10_tem_propagation}. The black line shows the S\textsubscript{12}-parameter over the frequency of the TEM mode, while the blue line demonstrates S\textsubscript{12}-parameter of the TE\textsubscript{10} mode. At a frequency of 3.75\,GHz, the mode propagates without attenuation, where the cutoff frequency $f_\mathrm{c,10}$ is defined. The simulated result comes very close to the analytically determined one. The red line shows a cutoff frequency of $f_\mathrm{c,10}=3.12\,\mathrm{GHz}$ for the TE\textsubscript{01} mode. \autoref{eqn:cutoff_frequency_rect_waveguide} would predict a cutoff frequency of 6.25\,GHz, however, the septum influences n-odd modes like this one. Their cutoff frequencies are shifted to a lower value \cite{Weil_Gruner_1984}. 
 
 %The first TM mode would be the TM\textsubscript{11} mode, since TM\textsubscript{01} and TM\textsubscript{10} do not exist.
 
@@ -177,7 +177,7 @@ In a real TEM cell, a tapered section transform the TEM waveguide to a coaxial t
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\linewidth]{content//10_theory//img/te01_te10_tem_propagation.png}
+    \includegraphics[width=1\linewidth]{content//10_theory//img/tem_cell_modes.png}
     \caption{Propagation of TEM, TE\textsubscript{01} and TE\textsubscript{10} modes in TEM cell}
     \label{fig:te01_te10_tem_propagation}
 \end{figure}

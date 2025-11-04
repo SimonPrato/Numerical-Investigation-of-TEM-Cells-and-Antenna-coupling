@@ -17,20 +17,20 @@
 \contentsline {subsubsection}{\numberline {2.5.1}Mathematical derivation}{10}{subsubsection.2.5.1}%
 \contentsline {subsubsection}{\numberline {2.5.2}Modes in TEM cell}{11}{subsubsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.6}Electrically Small Radiating Sources in TEM Cells}{14}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Shielding}{17}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.7}Shielding}{16}{subsection.2.7}%
 \contentsline {subsubsection}{\numberline {2.7.1}ASTM ES7-83 Method}{19}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Dual TEM cell}{19}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.2}Dual TEM cell}{20}{subsubsection.2.7.2}%
 \contentsline {section}{\numberline {3}Antennas}{21}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Antennas to Investigate}{21}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}IFA}{21}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Center fed monopole antenna}{21}{subsubsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.2}Crossed dipole antenna}{21}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Simulations}{21}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Inverted F-antenna}{21}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Center Fed Monopole Antenna}{27}{subsection.4.2}%
+\contentsline {section}{\numberline {4}Simulations}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Inverted F-antenna}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Center Fed Monopole Antenna}{26}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Monopole Antenna}{28}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Loop antenna}{29}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Offset of source antennas and eddy currents}{32}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Shielding effectiveness of graphite}{34}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Shield effectiveness of FR4}{34}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Dual TEM Cell}{35}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.4}Loop antenna}{28}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Offset of source antennas and eddy currents}{31}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Shielding effectiveness of graphite}{33}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Shield effectiveness of FR4}{33}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Dual TEM Cell}{34}{subsection.4.8}%
