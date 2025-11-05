@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  4 NOV 2025 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  5 NOV 2025 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -193,6 +193,9 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \TX@delta=\dimen159
 \TX@cols=\count277
 \TX@ftn=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/esint/esint.sty
 Package: esint 
@@ -1041,24 +1044,24 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./Documentation.aux)
 \openout1 = `Documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1094,7 +1097,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 39.
 
 (./Documentation.out) (./Documentation.out)
 \@outlinefile=\write5
@@ -1161,19 +1164,19 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 38.
-Package biblatex Info: Reference segment=0 on input line 38.
+Package biblatex Info: Reference section=0 on input line 39.
+Package biblatex Info: Reference segment=0 on input line 39.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<images/TU_Graz_Logo.png, id=143, 113.223pt x 41.6757pt>
+<images/TU_Graz_Logo.png, id=163, 113.223pt x 41.6757pt>
 File: images/TU_Graz_Logo.png Graphic file (type png)
 <use images/TU_Graz_Logo.png>
-Package pdftex.def Info: images/TU_Graz_Logo.png  used on input line 46.
+Package pdftex.def Info: images/TU_Graz_Logo.png  used on input line 47.
 (pdftex.def)             Requested size: 85.35826pt x 31.4201pt.
-<images/igte_logo.png, id=145, 127.0123pt x 44.96236pt>
+<images/igte_logo.png, id=165, 127.0123pt x 44.96236pt>
 File: images/igte_logo.png Graphic file (type png)
 <use images/igte_logo.png>
-Package pdftex.def Info: images/igte_logo.png  used on input line 84.
+Package pdftex.def Info: images/igte_logo.png  used on input line 85.
 (pdftex.def)             Requested size: 85.35826pt x 30.21722pt.
  [1
 
@@ -1213,7 +1216,7 @@ File: uesint.fd
 
  [5]
 (./content/10_theory/11_dipole.tex
-<images/electric_dipole_drawing.png, id=313, 399.4925pt x 362.35374pt>
+<images/electric_dipole_drawing.png, id=335, 399.4925pt x 362.35374pt>
 File: images/electric_dipole_drawing.png Graphic file (type png)
 <use images/electric_dipole_drawing.png>
 Package pdftex.def Info: images/electric_dipole_drawing.png  used on input line
@@ -1238,7 +1241,7 @@ Overfull \hbox (11.28926pt too wide) in paragraph at lines 90--90
 []\OT1/cmr/m/n/10.95 Additionally, 
  []
 
-<content//10_theory//img/magnetic_dipole_drawing.png, id=365, 399.4925pt x 362.
+<content//10_theory//img/magnetic_dipole_drawing.png, id=387, 399.4925pt x 362.
 35374pt>
 File: content//10_theory//img/magnetic_dipole_drawing.png Graphic file (type pn
 g)
@@ -1252,14 +1255,14 @@ LaTeX Warning: Marginpar on page 4 moved.
 
 ) (./content/10_theory/12_hfss.tex [4{/usr/share/texmf/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}]
-<content/10_theory/img/tetrahedral_mesh.png, id=401, 223.83624pt x 222.8325pt>
+<content/10_theory/img/tetrahedral_mesh.png, id=423, 223.83624pt x 222.8325pt>
 File: content/10_theory/img/tetrahedral_mesh.png Graphic file (type png)
 <use content/10_theory/img/tetrahedral_mesh.png>
 Package pdftex.def Info: content/10_theory/img/tetrahedral_mesh.png  used on in
 put line 25.
 (pdftex.def)             Requested size: 106.69783pt x 106.22055pt.
  [5 <./content/10_theory/img/tetrahedral_mesh.png>]
-<content//10_theory/img/tetrahedra_w_unknowns.png, id=415, 241.90375pt x 239.89
+<content//10_theory/img/tetrahedra_w_unknowns.png, id=437, 241.90375pt x 239.89
 626pt>
 File: content//10_theory/img/tetrahedra_w_unknowns.png Graphic file (type png)
 <use content//10_theory/img/tetrahedra_w_unknowns.png>
@@ -1267,7 +1270,7 @@ Package pdftex.def Info: content//10_theory/img/tetrahedra_w_unknowns.png  used
  on input line 55.
 (pdftex.def)             Requested size: 106.69783pt x 105.8109pt.
  [6 <./content//10_theory/img/tetrahedra_w_unknowns.png>] [7]
-<content//20_antennas//img/workflow_fem.png, id=448, 603.25375pt x 161.60374pt>
+<content//20_antennas//img/workflow_fem.png, id=471, 603.25375pt x 161.60374pt>
 
 File: content//20_antennas//img/workflow_fem.png Graphic file (type png)
 <use content//20_antennas//img/workflow_fem.png>
@@ -1278,7 +1281,7 @@ put line 107.
 (./content/10_theory/13_lorentz_reciprocity.tex [8 <./content//20_antennas//img
 /workflow_fem.png>]) (./content/10_theory/14_greens_function.tex [9])
 (./content/10_theory/15_tem_cells.tex [10] [11]
-<content//10_theory//img/tem_cell_crosssection.png, id=552, 740.7675pt x 499.86
+<content//10_theory//img/tem_cell_crosssection.png, id=574, 740.7675pt x 499.86
 75pt>
 File: content//10_theory//img/tem_cell_crosssection.png Graphic file (type png)
 
@@ -1291,41 +1294,41 @@ d on input line 136.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12]
-<content//10_theory//img/tem_cell_modes.png, id=575, 320.1561pt x 206.6922pt>
+<content//10_theory//img/tem_cell_modes.png, id=598, 320.1561pt x 206.6922pt>
 File: content//10_theory//img/tem_cell_modes.png Graphic file (type png)
 <use content//10_theory//img/tem_cell_modes.png>
 Package pdftex.def Info: content//10_theory//img/tem_cell_modes.png  used on in
-put line 180.
+put line 184.
 (pdftex.def)             Requested size: 426.79134pt x 275.55946pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13 <./content//10_theory//img/tem_cell_crosssection.png>]
-<content/10_theory/img/tem_cell_mode.png, id=591, 736.7525pt x 495.8525pt>
+<content/10_theory/img/tem_cell_mode.png, id=612, 736.7525pt x 495.8525pt>
 File: content/10_theory/img/tem_cell_mode.png Graphic file (type png)
 <use content/10_theory/img/tem_cell_mode.png>
 Package pdftex.def Info: content/10_theory/img/tem_cell_mode.png  used on input
- line 197.
+ line 201.
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
-<content/10_theory/img/te01_mode.png, id=592, 736.7525pt x 495.8525pt>
+<content/10_theory/img/te01_mode.png, id=613, 736.7525pt x 495.8525pt>
 File: content/10_theory/img/te01_mode.png Graphic file (type png)
 <use content/10_theory/img/te01_mode.png>
 Package pdftex.def Info: content/10_theory/img/te01_mode.png  used on input lin
-e 203.
+e 207.
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
-<content/10_theory/img/te10_mode.png, id=593, 736.7525pt x 495.8525pt>
+<content/10_theory/img/te10_mode.png, id=614, 736.7525pt x 495.8525pt>
 File: content/10_theory/img/te10_mode.png Graphic file (type png)
 <use content/10_theory/img/te10_mode.png>
 Package pdftex.def Info: content/10_theory/img/te10_mode.png  used on input lin
-e 209.
+e 213.
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
 )
 (./content/10_theory/16_emission_characteristic_dipole_in_tem.tex [14 <./conten
 t//10_theory//img/tem_cell_modes.png> <./content/10_theory/img/tem_cell_mode.pn
 g> <./content/10_theory/img/te01_mode.png> <./content/10_theory/img/te10_mode.p
 ng>] [15]
-<DELETE2.png, id=637, 626.34pt x 381.425pt>
+<DELETE2.png, id=658, 626.34pt x 381.425pt>
 File: DELETE2.png Graphic file (type png)
 <use DELETE2.png>
 Package pdftex.def Info: DELETE2.png  used on input line 73.
@@ -1335,7 +1338,7 @@ Package pdftex.def Info: DELETE2.png  used on input line 73.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./content/10_theory/17_shielding.tex [16]
-<images/shielding_material_diagram.png, id=659, 334.24875pt x 195.73125pt>
+<images/shielding_material_diagram.png, id=681, 334.24875pt x 195.73125pt>
 File: images/shielding_material_diagram.png Graphic file (type png)
 <use images/shielding_material_diagram.png>
 Package pdftex.def Info: images/shielding_material_diagram.png  used on input l
@@ -1374,13 +1377,14 @@ LaTeX Warning: Marginpar on page 18 moved.
 
 LaTeX Warning: Marginpar on page 19 moved.
 
-<content//10_theory//img/ASTM ES7-83.png, id=706, 525.965pt x 359.3425pt>
+[19]
+<content//10_theory//img/ASTM ES7-83.png, id=739, 525.965pt x 359.3425pt>
 File: content//10_theory//img/ASTM ES7-83.png Graphic file (type png)
 <use content//10_theory//img/ASTM ES7-83.png>
 Package pdftex.def Info: content//10_theory//img/ASTM ES7-83.png  used on input
  line 117.
 (pdftex.def)             Requested size: 209.1301pt x 142.87907pt.
-<content//10_theory/img/form_of_shielding_material.png, id=707, 505.89pt x 352.
+<content//10_theory/img/form_of_shielding_material.png, id=740, 505.89pt x 352.
 31625pt>
 File: content//10_theory/img/form_of_shielding_material.png Graphic file (type 
 png)
@@ -1388,11 +1392,8 @@ png)
 Package pdftex.def Info: content//10_theory/img/form_of_shielding_material.png 
  used on input line 124.
 (pdftex.def)             Requested size: 209.1301pt x 145.64404pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19] [20 <./content//10_theory//img/ASTM ES7-83.png> <./content//10_theory/img/
-form_of_shielding_material.png>]
+ [20 <./content//10_theory//img/ASTM ES7-83.png> <./content//10_theory/img/form
+_of_shielding_material.png>]
 Overfull \hbox (7.2134pt too wide) in paragraph at lines 161--161
 [][][]\OT1/cmr/m/n/10.95 Polarization 
  []
@@ -1402,464 +1403,425 @@ Overfull \hbox (7.2134pt too wide) in paragraph at lines 161--161
 [][][]\OT1/cmr/m/n/10.95 Polarization 
  []
 
-<content//10_theory//img/dual_tem_cell.png, id=741, 571.13374pt x 243.91125pt>
+<content//10_theory//img/dual_tem_cell.png, id=763, 571.13374pt x 243.91125pt>
 File: content//10_theory//img/dual_tem_cell.png Graphic file (type png)
 <use content//10_theory//img/dual_tem_cell.png>
 Package pdftex.def Info: content//10_theory//img/dual_tem_cell.png  used on inp
 ut line 165.
 (pdftex.def)             Requested size: 320.09349pt x 136.701pt.
 ) (./content/20_antennas/21_antennas_to_investigate.tex)
-(./content/30_simulations/simulations.tex [21 <./content//10_theory//img/dual_t
+(./content/30_simulations/31_antennas.tex [21 <./content//10_theory//img/dual_t
 em_cell.png>]
-<content//30_simulations//img/inverted_f_antenna.png, id=749, 638.385pt x 196.7
+<content//30_simulations//img/inverted_f_antenna.png, id=771, 638.385pt x 196.7
 35pt>
 File: content//30_simulations//img/inverted_f_antenna.png Graphic file (type pn
 g)
 <use content//30_simulations//img/inverted_f_antenna.png>
 Package pdftex.def Info: content//30_simulations//img/inverted_f_antenna.png  u
-sed on input line 14.
+sed on input line 9.
 (pdftex.def)             Requested size: 320.09349pt x 98.64642pt.
-<content//30_simulations//img/antenna_waveport1_sparams.png, id=751, 1566.85374
+<content//30_simulations//img/antenna_waveport1_sparams.png, id=773, 1566.85374
 pt x 546.04pt>
 File: content//30_simulations//img/antenna_waveport1_sparams.png Graphic file (
 type png)
 <use content//30_simulations//img/antenna_waveport1_sparams.png>
 Package pdftex.def Info: content//30_simulations//img/antenna_waveport1_sparams
-.png  used on input line 24.
+.png  used on input line 19.
 (pdftex.def)             Requested size: 426.79134pt x 148.73254pt.
  [22 <./content//30_simulations//img/inverted_f_antenna.png> <./content//30_sim
 ulations//img/antenna_waveport1_sparams.png>]
-<content//30_simulations//img/Phase Shift Waveports.png, id=766, 867.24pt x 433
+<content//30_simulations//img/Phase Shift Waveports.png, id=788, 867.24pt x 433
 .62pt>
 File: content//30_simulations//img/Phase Shift Waveports.png Graphic file (type
  png)
 <use content//30_simulations//img/Phase Shift Waveports.png>
 Package pdftex.def Info: content//30_simulations//img/Phase Shift Waveports.png
-  used on input line 65.
+  used on input line 60.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (10.28548pt too wide) in paragraph at lines 80--80
+Overfull \hbox (10.28548pt too wide) in paragraph at lines 75--75
 [][][]\OT1/cmr/m/n/10.95 Einheitliches 
  []
 
 
-Overfull \hbox (10.28548pt too wide) in paragraph at lines 80--80
+Overfull \hbox (10.28548pt too wide) in paragraph at lines 75--75
 [][][]\OT1/cmr/m/n/10.95 Einheitliches 
  []
-
-
-LaTeX Warning: Marginpar on page 23 moved.
 
 [23]
-<content//30_simulations//img/sketch_dipoles_tem_cell.png, id=784, 1129.21875pt
+<content//30_simulations//img/sketch_dipoles_tem_cell.png, id=805, 1129.21875pt
  x 359.3425pt>
 File: content//30_simulations//img/sketch_dipoles_tem_cell.png Graphic file (ty
 pe png)
 <use content//30_simulations//img/sketch_dipoles_tem_cell.png>
 Package pdftex.def Info: content//30_simulations//img/sketch_dipoles_tem_cell.p
-ng  used on input line 98.
+ng  used on input line 93.
 (pdftex.def)             Requested size: 426.79134pt x 135.81682pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24 <./content//30_simulations//img/Phase Shift Waveports.png>]
-<content/30_simulations/img/dipole_moments_over_freq_ifa.png, id=796, 867.24pt 
+<content/30_simulations/img/dipole_moments_over_freq_ifa.png, id=818, 867.24pt 
 x 433.62pt>
 File: content/30_simulations/img/dipole_moments_over_freq_ifa.png Graphic file 
 (type png)
 <use content/30_simulations/img/dipole_moments_over_freq_ifa.png>
 Package pdftex.def Info: content/30_simulations/img/dipole_moments_over_freq_if
-a.png  used on input line 118.
+a.png  used on input line 113.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./content//30_simulations//img/sketch_dipoles_tem_cell.png>]
-<content//30_simulations//img/output_power_e_fields_over_freq_ifa.png, id=810, 
+<content//30_simulations//img/output_power_e_fields_over_freq_ifa.png, id=833, 
 867.24pt x 433.62pt>
 File: content//30_simulations//img/output_power_e_fields_over_freq_ifa.png Grap
 hic file (type png)
 <use content//30_simulations//img/output_power_e_fields_over_freq_ifa.png>
 Package pdftex.def Info: content//30_simulations//img/output_power_e_fields_ove
-r_freq_ifa.png  used on input line 140.
+r_freq_ifa.png  used on input line 135.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content//30_simulations//img/phase_shift_90_ifa.png, id=814, 867.24pt x 433.62
+<content//30_simulations//img/phase_shift_90_ifa.png, id=837, 867.24pt x 433.62
 pt>
 File: content//30_simulations//img/phase_shift_90_ifa.png Graphic file (type pn
 g)
 <use content//30_simulations//img/phase_shift_90_ifa.png>
 Package pdftex.def Info: content//30_simulations//img/phase_shift_90_ifa.png  u
-sed on input line 158.
+sed on input line 153.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: Reference `dipole_moments_ifa_90' on page 26 undefined on input 
-line 163.
+line 158.
 
-<content//30_simulations//img/dipole_moments_ifa_90.png, id=817, 867.24pt x 433
+<content//30_simulations//img/dipole_moments_ifa_90.png, id=840, 867.24pt x 433
 .62pt>
 File: content//30_simulations//img/dipole_moments_ifa_90.png Graphic file (type
  png)
 <use content//30_simulations//img/dipole_moments_ifa_90.png>
 Package pdftex.def Info: content//30_simulations//img/dipole_moments_ifa_90.png
-  used on input line 169.
+  used on input line 164.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26 <./content/30_simulations/img/dipole_moments_over_freq_ifa.png>]
-<content//30_simulations//img/center_fed_monopole.png, id=831, 831.105pt x 184.
+[26 <./content/30_simulations/img/dipole_moments_over_freq_ifa.png>] [27 <./con
+tent//30_simulations//img/output_power_e_fields_over_freq_ifa.png> <./content//
+30_simulations//img/phase_shift_90_ifa.png>] [28 <./content//30_simulations//im
+g/dipole_moments_ifa_90.png>]
+<content//30_simulations//img/center_fed_monopole.png, id=864, 831.105pt x 184.
 69pt>
 File: content//30_simulations//img/center_fed_monopole.png Graphic file (type p
 ng)
 <use content//30_simulations//img/center_fed_monopole.png>
 Package pdftex.def Info: content//30_simulations//img/center_fed_monopole.png  
-used on input line 181.
+used on input line 177.
 (pdftex.def)             Requested size: 320.09349pt x 71.13263pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content//30_simulations//img/forward_coeff_cfm.png, id=833, 1513.655pt x 760.8
+<content//30_simulations//img/forward_coeff_cfm.png, id=866, 1513.655pt x 760.8
 425pt>
 File: content//30_simulations//img/forward_coeff_cfm.png Graphic file (type png
 )
 <use content//30_simulations//img/forward_coeff_cfm.png>
 Package pdftex.def Info: content//30_simulations//img/forward_coeff_cfm.png  us
-ed on input line 190.
+ed on input line 186.
 (pdftex.def)             Requested size: 426.79134pt x 214.52046pt.
+ [29
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content//30_simulations//img/phase_shift_cfm.png, id=835, 867.24pt x 433.62pt>
+ <./content//30_simulations//img/center_fed_monopole.png> <./content//30_simula
+tions//img/forward_coeff_cfm.png>]
+<content//30_simulations//img/phase_shift_cfm.png, id=877, 867.24pt x 433.62pt>
 
 File: content//30_simulations//img/phase_shift_cfm.png Graphic file (type png)
 <use content//30_simulations//img/phase_shift_cfm.png>
 Package pdftex.def Info: content//30_simulations//img/phase_shift_cfm.png  used
- on input line 213.
+ on input line 209.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content//30_simulations//img/dipole_moment_cfm.png, id=837, 867.24pt x 433.62p
+<content//30_simulations//img/dipole_moment_cfm.png, id=879, 867.24pt x 433.62p
 t>
 File: content//30_simulations//img/dipole_moment_cfm.png Graphic file (type png
 )
 <use content//30_simulations//img/dipole_moment_cfm.png>
 Package pdftex.def Info: content//30_simulations//img/dipole_moment_cfm.png  us
-ed on input line 222.
+ed on input line 218.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content//30_simulations//img/dipole_moments_monopole.png, id=839, 867.24pt x 4
+[30 <./content//30_simulations//img/phase_shift_cfm.png>]
+<content//30_simulations//img/dipole_moments_monopole.png, id=888, 867.24pt x 4
 33.62pt>
 File: content//30_simulations//img/dipole_moments_monopole.png Graphic file (ty
 pe png)
 <use content//30_simulations//img/dipole_moments_monopole.png>
 Package pdftex.def Info: content//30_simulations//img/dipole_moments_monopole.p
-ng  used on input line 235.
+ng  used on input line 232.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
-[27 <./content//30_simulations//img/output_power_e_fields_over_freq_ifa.png>]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content//30_simulations//img/monopole_surface_currents.png, id=851, 4501.81876
+<content//30_simulations//img/monopole_surface_currents.png, id=890, 4501.81876
 pt x 1452.17531pt>
 File: content//30_simulations//img/monopole_surface_currents.png Graphic file (
 type png)
 <use content//30_simulations//img/monopole_surface_currents.png>
 Package pdftex.def Info: content//30_simulations//img/monopole_surface_currents
-.png  used on input line 247.
+.png  used on input line 244.
 (pdftex.def)             Requested size: 426.79134pt x 137.67003pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `monopole_surface_current_offset' on page 28 undefined
- on input line 252.
+LaTeX Warning: Reference `monopole_surface_current_offset' on page 31 undefined
+ on input line 249.
 
-<content//30_simulations//img/monopole_surface_current_offset.png, id=852, 4594
+<content//30_simulations//img/monopole_surface_current_offset.png, id=891, 4594
 .41469pt x 1513.15312pt>
 File: content//30_simulations//img/monopole_surface_current_offset.png Graphic 
 file (type png)
 <use content//30_simulations//img/monopole_surface_current_offset.png>
 Package pdftex.def Info: content//30_simulations//img/monopole_surface_current_
-offset.png  used on input line 256.
+offset.png  used on input line 253.
 (pdftex.def)             Requested size: 426.79134pt x 140.54169pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Marginpar on page 28 moved.
-
-<content//30_simulations//img/dipole_moments_loop_antenna.png, id=853, 867.24pt
+[31 <./content//30_simulations//img/dipole_moment_cfm.png>] [32 <./content//30_
+simulations//img/dipole_moments_monopole.png> <./content//30_simulations//img/m
+onopole_surface_currents.png> <./content//30_simulations//img/monopole_surface_
+current_offset.png>]
+<content//30_simulations//img/dipole_moments_loop_antenna.png, id=906, 867.24pt
  x 433.62pt>
 File: content//30_simulations//img/dipole_moments_loop_antenna.png Graphic file
  (type png)
 <use content//30_simulations//img/dipole_moments_loop_antenna.png>
 Package pdftex.def Info: content//30_simulations//img/dipole_moments_loop_anten
-na.png  used on input line 267.
+na.png  used on input line 265.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Marginpar on page 28 moved.
-
-<content//30_simulations//img/current_loop_surface_current.png, id=855, 4461.16
+<content//30_simulations//img/current_loop_surface_current.png, id=908, 4461.16
 687pt x 1467.23157pt>
 File: content//30_simulations//img/current_loop_surface_current.png Graphic fil
 e (type png)
 <use content//30_simulations//img/current_loop_surface_current.png>
 Package pdftex.def Info: content//30_simulations//img/current_loop_surface_curr
-ent.png  used on input line 276.
+ent.png  used on input line 274.
 (pdftex.def)             Requested size: 426.79134pt x 140.35114pt.
+ [33
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ <./content//30_simulations//img/dipole_moments_loop_antenna.png> <./content//3
+0_simulations//img/current_loop_surface_current.png>]
 
+LaTeX Warning: Marginpar on page 34 moved.
 
-LaTeX Warning: Marginpar on page 28 moved.
-
-[28 <./content//30_simulations//img/phase_shift_90_ifa.png>]
-<content//30_simulations//img/current_loop_surface_current_offset.png, id=867, 
+<content//30_simulations//img/current_loop_surface_current_offset.png, id=919, 
 4486.7625pt x 1479.27657pt>
 File: content//30_simulations//img/current_loop_surface_current_offset.png Grap
 hic file (type png)
 <use content//30_simulations//img/current_loop_surface_current_offset.png>
 Package pdftex.def Info: content//30_simulations//img/current_loop_surface_curr
-ent_offset.png  used on input line 290.
+ent_offset.png  used on input line 288.
 (pdftex.def)             Requested size: 426.79134pt x 140.69073pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content//30_simulations//img/current_loop_surface_current_rotated.png, id=869,
+<content//30_simulations//img/current_loop_surface_current_rotated.png, id=921,
  631.60968pt x 198.7425pt>
 File: content//30_simulations//img/current_loop_surface_current_rotated.png Gra
 phic file (type png)
 <use content//30_simulations//img/current_loop_surface_current_rotated.png>
 Package pdftex.def Info: content//30_simulations//img/current_loop_surface_curr
-ent_rotated.png  used on input line 299.
+ent_rotated.png  used on input line 297.
 (pdftex.def)             Requested size: 426.79134pt x 134.29701pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <content//30_simulations//img/current_loop_surface_current_offset_rotated.png, 
-id=871, 4495.04344pt x 1413.02907pt>
+id=923, 4495.04344pt x 1413.02907pt>
 File: content//30_simulations//img/current_loop_surface_current_offset_rotated.
 png Graphic file (type png)
 <use content//30_simulations//img/current_loop_surface_current_offset_rotated.p
 ng>
 Package pdftex.def Info: content//30_simulations//img/current_loop_surface_curr
-ent_offset_rotated.png  used on input line 308.
+ent_offset_rotated.png  used on input line 306.
 (pdftex.def)             Requested size: 426.79134pt x 134.15291pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/30_simulations/img/current_loop_charge_distribution.png, id=872, 178.8
+<content/30_simulations/img/current_loop_charge_distribution.png, id=925, 178.8
 6826pt x 166.221pt>
 File: content/30_simulations/img/current_loop_charge_distribution.png Graphic f
 ile (type png)
 <use content/30_simulations/img/current_loop_charge_distribution.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_charge_distrib
-ution.png  used on input line 318.
-(pdftex.def)             Requested size: 213.39566pt x 198.31522pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content/30_simulations/img/current_loop_current_distribution.png, id=874, 206.
+ution.png  used on input line 321.
+(pdftex.def)             Requested size: 96.02739pt x 89.2355pt.
+<content/30_simulations/img/current_loop_current_distribution.png, id=926, 206.
 57175pt x 204.765pt>
 File: content/30_simulations/img/current_loop_current_distribution.png Graphic 
 file (type png)
 <use content/30_simulations/img/current_loop_current_distribution.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_current_distri
-bution.png  used on input line 327.
-(pdftex.def)             Requested size: 213.39566pt x 211.53517pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content/30_simulations/img/current_loop_near_e_field.png, id=875, 243.309pt x 
+bution.png  used on input line 328.
+(pdftex.def)             Requested size: 96.02739pt x 95.1866pt.
+<content/30_simulations/img/current_loop_near_e_field.png, id=927, 243.309pt x 
 192.72pt>
 File: content/30_simulations/img/current_loop_near_e_field.png Graphic file (ty
 pe png)
 <use content/30_simulations/img/current_loop_near_e_field.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_near_e_field.p
-ng  used on input line 334.
-(pdftex.def)             Requested size: 298.75262pt x 236.66188pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content/30_simulations/img/current_loop_near_h_field.png, id=876, 230.66174pt 
+ng  used on input line 340.
+(pdftex.def)             Requested size: 134.43776pt x 106.49034pt.
+<content/30_simulations/img/current_loop_near_h_field.png, id=928, 230.66174pt 
 x 178.86826pt>
 File: content/30_simulations/img/current_loop_near_h_field.png Graphic file (ty
 pe png)
 <use content/30_simulations/img/current_loop_near_h_field.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_near_h_field.p
-ng  used on input line 341.
-(pdftex.def)             Requested size: 298.75262pt x 231.67442pt.
+ng  used on input line 347.
+(pdftex.def)             Requested size: 134.43776pt x 104.2513pt.
+
+LaTeX Warning: Marginpar on page 34 moved.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Marginpar on page 29 moved.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/30_simulations/img/current_loop_voltage_drop.png, id=877, 683.55376pt 
+<content/30_simulations/img/current_loop_voltage_drop.png, id=929, 683.55376pt 
 x 516.42938pt>
 File: content/30_simulations/img/current_loop_voltage_drop.png Graphic file (ty
 pe png)
 <use content/30_simulations/img/current_loop_voltage_drop.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_voltage_drop.p
-ng  used on input line 350.
-(pdftex.def)             Requested size: 213.39566pt x 161.21829pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content/30_simulations/img/current_loop_feed_current.png, id=878, 689.57625pt 
+ng  used on input line 368.
+(pdftex.def)             Requested size: 192.0548pt x 145.09567pt.
+<content/30_simulations/img/current_loop_feed_current.png, id=930, 689.57625pt 
 x 515.67656pt>
 File: content/30_simulations/img/current_loop_feed_current.png Graphic file (ty
 pe png)
 <use content/30_simulations/img/current_loop_feed_current.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_feed_current.p
-ng  used on input line 357.
-(pdftex.def)             Requested size: 213.39566pt x 159.58267pt.
+ng  used on input line 375.
+(pdftex.def)             Requested size: 192.0548pt x 143.61732pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 362.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 381.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 362.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 381.
 
 Missing character: There is no ° in font cmr10!
 
-LaTeX Warning: Reference `fig:current_loop_circuit' on page 29 undefined on inp
-ut line 362.
+LaTeX Warning: Reference `fig:current_loop_circuit' on page 34 undefined on inp
+ut line 381.
 
-[29 <./content//30_simulations//img/dipole_moments_ifa_90.png> <./content//30_s
-imulations//img/center_fed_monopole.png>]
-<content/30_simulations/img/current_loop_power_consumption.png, id=890, 660.216
+[34 <./content//30_simulations//img/current_loop_surface_current_offset.png> <.
+/content//30_simulations//img/current_loop_surface_current_rotated.png>]
+<content/30_simulations/img/current_loop_power_consumption.png, id=943, 660.216
 57pt x 505.13719pt>
 File: content/30_simulations/img/current_loop_power_consumption.png Graphic fil
 e (type png)
 <use content/30_simulations/img/current_loop_power_consumption.png>
 Package pdftex.def Info: content/30_simulations/img/current_loop_power_consumpt
-ion.png  used on input line 427.
+ion.png  used on input line 446.
 (pdftex.def)             Requested size: 213.39566pt x 163.27353pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/30_simulations/img/delete_after.png, id=892, 896.148pt x 373.99725pt>
+[35 <./content//30_simulations//img/current_loop_surface_current_offset_rotated
+.png> <./content/30_simulations/img/current_loop_charge_distribution.png> <./co
+ntent/30_simulations/img/current_loop_current_distribution.png> <./content/30_s
+imulations/img/current_loop_near_e_field.png> <./content/30_simulations/img/cur
+rent_loop_near_h_field.png>]
+<content/30_simulations/img/delete_after.png, id=955, 896.148pt x 373.99725pt>
 File: content/30_simulations/img/delete_after.png Graphic file (type png)
 <use content/30_simulations/img/delete_after.png>
 Package pdftex.def Info: content/30_simulations/img/delete_after.png  used on i
-nput line 436.
+nput line 455.
 (pdftex.def)             Requested size: 298.75262pt x 124.68065pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30 <./content//30_simulations//img/forward_coeff_cfm.png>]
+[36 <./content/30_simulations/img/current_loop_voltage_drop.png> <./content/30_
+simulations/img/current_loop_feed_current.png>]
 
-LaTeX Warning: Reference `fig:current_loop_ua_ub' on page 31 undefined on input
- line 462.
-
-
-LaTeX Warning: Marginpar on page 31 moved.
-
-[31 <./content//30_simulations//img/phase_shift_cfm.png>]
-
-LaTeX Warning: Marginpar on page 32 moved.
+LaTeX Warning: Reference `fig:current_loop_ua_ub' on page 37 undefined on input
+ line 481.
 
 
-LaTeX Warning: Marginpar on page 32 moved.
+LaTeX Warning: Marginpar on page 37 moved.
 
-<content//30_simulations//img/cfm_rotation_sweep.png, id=917, 1439.3775pt x 641
+[37 <./content/30_simulations/img/current_loop_power_consumption.png> <./conten
+t/30_simulations/img/delete_after.png>]
+
+LaTeX Warning: Marginpar on page 38 moved.
+
+
+LaTeX Warning: Marginpar on page 38 moved.
+
+<content//30_simulations//img/cfm_rotation_sweep.png, id=985, 1439.3775pt x 641
 .39626pt>
 File: content//30_simulations//img/cfm_rotation_sweep.png Graphic file (type pn
 g)
 <use content//30_simulations//img/cfm_rotation_sweep.png>
 Package pdftex.def Info: content//30_simulations//img/cfm_rotation_sweep.png  u
-sed on input line 478.
+sed on input line 499.
 (pdftex.def)             Requested size: 426.79134pt x 190.17915pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Marginpar on page 32 moved.
-
-
-LaTeX Warning: Marginpar on page 32 moved.
-
-<DELETE_AFTER.png, id=919, 1430.34375pt x 645.41125pt>
+[38 <./content//30_simulations//img/cfm_rotation_sweep.png>]
+<DELETE_AFTER.png, id=998, 1430.34375pt x 645.41125pt>
 File: DELETE_AFTER.png Graphic file (type png)
 <use DELETE_AFTER.png>
-Package pdftex.def Info: DELETE_AFTER.png  used on input line 495.
+Package pdftex.def Info: DELETE_AFTER.png  used on input line 516.
 (pdftex.def)             Requested size: 426.79134pt x 192.58096pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[32 <./content//30_simulations//img/dipole_moment_cfm.png>]
-<content//30_simulations//img/se_graphite.png, id=934, 867.24pt x 433.62pt>
+)
+(./content/30_simulations/32_dipole_moments.tex)
+(./content/30_simulations/33_shielding.tex
+<content//30_simulations//img/se_graphite.png, id=1001, 867.24pt x 433.62pt>
 File: content//30_simulations//img/se_graphite.png Graphic file (type png)
 <use content//30_simulations//img/se_graphite.png>
 Package pdftex.def Info: content//30_simulations//img/se_graphite.png  used on 
-input line 506.
+input line 8.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33 <./content//30_simulations//img/dipole_moments_monopole.png> <./content//30
-_simulations//img/monopole_surface_currents.png>] [34 <./content//30_simulation
-s//img/monopole_surface_current_offset.png> <./content//30_simulations//img/dip
-ole_moments_loop_antenna.png>]
-Overfull \hbox (12.23216pt too wide) in paragraph at lines 555--555
+[39 <./DELETE_AFTER.png>]
+
+LaTeX Warning: Marginpar on page 40 moved.
+
+
+Overfull \hbox (12.23216pt too wide) in paragraph at lines 57--57
 \OT1/cmr/m/n/10.95 netic/electric 
  []
 
 
-Overfull \hbox (12.23216pt too wide) in paragraph at lines 555--555
+Overfull \hbox (12.23216pt too wide) in paragraph at lines 57--57
 \OT1/cmr/m/n/10.95 netic/electric 
  []
 
-[35 <./content//30_simulations//img/current_loop_surface_current.png> <./conten
-t//30_simulations//img/current_loop_surface_current_offset.png>]
+[40 <./content//30_simulations//img/se_graphite.png>]
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 41 moved.
 
 )
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 41 moved.
 
-[36 <./content//30_simulations//img/current_loop_surface_current_rotated.png> <
-./content//30_simulations//img/current_loop_surface_current_offset_rotated.png>
-] [37 <./content/30_simulations/img/current_loop_charge_distribution.png> <./co
-ntent/30_simulations/img/current_loop_current_distribution.png>] [38 <./content
-/30_simulations/img/current_loop_near_e_field.png> <./content/30_simulations/im
-g/current_loop_near_h_field.png>] [39 <./content/30_simulations/img/current_loo
-p_voltage_drop.png> <./content/30_simulations/img/current_loop_feed_current.png
-> <./content/30_simulations/img/current_loop_power_consumption.png>] [40 <./con
-tent/30_simulations/img/delete_after.png> <./content//30_simulations//img/cfm_r
-otation_sweep.png> <./DELETE_AFTER.png>] [41 <./content//30_simulations//img/se
-_graphite.png>]
+[41]
 ! Misplaced alignment tab character &.
 <argument> John Wiley &
                         Sons
-l.161 \end
+l.164 \end
           {document}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1871,7 +1833,7 @@ might try typing `S' now just to see what is salvageable.
 [42
 
 ]
-Overfull \hbox (25.86183pt too wide) in paragraph at lines 161--161
+Overfull \hbox (25.86183pt too wide) in paragraph at lines 164--164
 []\OT1/cmr/m/n/10.95 GILBERT STRANG. \OT1/cmr/m/it/10.95 Anal-y-sis of the fi-n
 ite el-e-ment method\OT1/cmr/m/n/10.95 . WELLESLEY-CAMBRIDGE
  []
@@ -1886,16 +1848,16 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Documentation.out' has not changed.
-(rerunfilecheck)             Checksum: EBAB1270BCA01652A6335E4657D2934F;5949.
+(rerunfilecheck)             Checksum: 8FA922795ACDE53CA8267B00469CAAB2;6957.
 Package logreq Info: Writing requests to 'Documentation.run.xml'.
 \openout1 = `Documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49953 strings out of 474222
- 1157440 string characters out of 5748733
- 2136920 words of memory out of 5000000
- 71311 multiletter control sequences out of 15000+600000
+ 50008 strings out of 474222
+ 1159096 string characters out of 5748733
+ 2136094 words of memory out of 5000000
+ 71352 multiletter control sequences out of 15000+600000
  572727 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,131p,1881b,2001s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1921,10 +1883,10 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 ic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esi
 nt-type1/esint10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb
 >
-Output written on Documentation.pdf (48 pages, 5963092 bytes).
+Output written on Documentation.pdf (48 pages, 5965747 bytes).
 PDF statistics:
- 1220 PDF objects out of 1440 (max. 8388607)
- 1010 compressed objects within 11 object streams
- 306 named destinations out of 1000 (max. 500000)
- 525 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1246 PDF objects out of 1440 (max. 8388607)
+ 1036 compressed objects within 11 object streams
+ 310 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
 
