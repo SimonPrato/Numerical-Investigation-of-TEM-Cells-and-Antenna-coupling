@@ -224,6 +224,18 @@ The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulati
 
 The output power has been scaled as in the simulation before. This leads to the same electric field magnitude. Therefore, the electric field and output power over frequency plot are the same as in the case for the inverted F antenna, visible in \autoref{fig:output_power_e_fields_over_freq_ifa}.
 
+
+When rotating this antenna by 79°, the electric and magnetic dipole moment influence the output power by roughly the same amount, as visible in \autoref{fig:79cfm}. This makes itself manifest by a phase shift of around 45°  between the output powers of the waveports. Interestingly, both the electric and the magnetic dipole moment demonstrate a non-linear behavior. \todo{Why does the magnetic moment sink?}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{content/30_simulations/img/79cfm}
+	\caption{Dipole moments of CFM antenna rotated by 79°}
+	\label{fig:79cfm}
+\end{figure}
+
+\todo{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}
+
 \FloatBarrier
 \subsubsection{Monopole Antenna}
 
@@ -330,6 +342,11 @@ Note that the surface current density in \autoref{fig:current_loop_surface_curre
 		\label{fig:currentloopcurrentdistribution}
 	\end{minipage}
 \end{figure}
+
+
+The current and voltage drops along the wire are not constant. From the feedpoint to the first corner, there is a much larger voltage drop and current, than from the second corner to the ground plane. Consequently, the power consumed by the first part is much higher than by the latter \todo{Insert power consumption plots of each antenna section}. Additionally, this difference in power consumption increases slightly over frequency. 
+
+The electric current reduces over the wire because of the displacement current to the septum and the ground plane. As visible in the charge density plot in \autoref{fig:currentloopcurrentdistribution} and the electric field plot in \autoref{fig:currentloopnearefield}, much of the displacement current occurs near the feedpoint and at the wire parallel to the septum. Consequently, this is where the current drops by the most amount. \todo{Insert current distribution plots}
 
 
 
