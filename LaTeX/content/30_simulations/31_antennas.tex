@@ -1,7 +1,11 @@
 \subsection{Antennas}
+
+In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,MW. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed.
+
+
 \subsubsection{Inverted F-antenna}\label{sec:ifa_sim}
 
-The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. Its material is copper. It is positioned at the center of the TEM cell, mounted at the top surface. The 5\,mm long wire points towards waveport 2. The excitation is a modal wave port. With a maximum dimension of 5\,mm, the antenna is electrically small for a frequency of up to 6\,GHz, at which it will be a tenth of the wavelength. In this simulation, the antenna is investigated for the frequency of 100\,MHz to 1\,GHz. The TEM cell has a width of 40\,mm and a height of 24\,mm and an impedance of $\sim50\,\Omega$. The goal is to find equivalent dipole moments of the antenna. 
+The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. It is positioned at the center of the TEM cell, mounted at the top surface. The 5\,mm long wire points towards waveport 2. The excitation is a modal wave port. With a maximum dimension of 5\,mm, the antenna is electrically small for a frequency of up to 6\,GHz, at which it will be a tenth of the wavelength. In this simulation, the antenna is investigated for the frequency of 100\,MHz to 1\,GHz. The TEM cell has a width of 40\,mm and a height of 24\,mm and an impedance of $\sim50\,\Omega$. The goal is to find equivalent dipole moments of the antenna. 
 
 
 \begin{figure}[h]
@@ -188,37 +192,46 @@ The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff
 	\label{fig:forward_coeff_cfm}
 \end{figure}
 
-The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulation with the inverted F antenna. This hints to a more influential electric dipole moment than before. This is because of the term $a+b$... When using superposition of each dipole moment...
+%The phase shift in \autoref{fig:phase_shift_cfm} is smaller than in the simulation with the inverted F antenna. This hints to a more influential electric dipole moment than before. This is because of the term $a+b$... When using superposition of each dipole moment...
+%
+%\begin{subequations}
+%	\begin{equation}
+%		c_1 = \sqrt{a^2+b^2+2ab\cos{\left[ (\varphi_a + \varphi_b) / 2 \right]}}
+%	\end{equation}
+%	\begin{equation}
+%		c_2 = \sqrt{a^2+b^2-2ab\sin{\left[ (\varphi_a - \varphi_b) / 2 \right]}}
+%	\end{equation}
+%	\begin{equation}
+%		c_1^2+c_2^2= a^2+b^2
+%	\end{equation}
+%\end{subequations}
+%\todo{not done yet, make it correct}
 
-\begin{subequations}
-	\begin{equation}
-		c_1 = \sqrt{a^2+b^2+2ab\cos{\left[ (\varphi_a + \varphi_b) / 2 \right]}}
-	\end{equation}
-	\begin{equation}
-		c_2 = \sqrt{a^2+b^2-2ab\sin{\left[ (\varphi_a - \varphi_b) / 2 \right]}}
-	\end{equation}
-	\begin{equation}
-		c_1^2+c_2^2= a^2+b^2
-	\end{equation}
-\end{subequations}
-\todo{not done yet, make it correct}
 
 
-\begin{figure}[h]
+
+
+
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1\linewidth]{content//30_simulations//img/phase_shift_cfm.png}
-	\caption{Phase of S-parameters from antenna to waveport 1 and 2}
-	\label{fig:phase_shift_cfm}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content//30_simulations//img/phase_shift_cfm.png}
+		\caption{Phase shift}
+		\label{fig:phase_shift_cfm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content//30_simulations//img/dipole_moment_cfm.png}
+		\caption{Dipole moments}
+		\label{fig:dipole_moment_cfm}
+	\end{minipage}
 \end{figure}
+
 
 \autoref{fig:dipole_moment_cfm} shows that the magnetic dipole moments of the inverted F and center fed monopole antennas are equal. This is due to the same size of the current loops. However, the electric dipole moments increased for the center fed monopole antenna. The alignment of the line current with the TEM cell's electric field causes this. (antenna power = 126549.7191667088\,W)
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content//30_simulations//img/dipole_moment_cfm.png}
-	\caption{Dipole moments over frequency}
-	\label{fig:dipole_moment_cfm}
-\end{figure}
 
 
 
@@ -227,28 +240,37 @@ The output power has been scaled as in the simulation before. This leads to the 
 
 When rotating this antenna by 79°, the electric and magnetic dipole moment influence the output power by roughly the same amount, as visible in \autoref{fig:79cfm}. This makes itself manifest by a phase shift of around 45°  between the output powers of the waveports. Interestingly, both the electric and the magnetic dipole moment demonstrate a non-linear behavior. \todo{Why does the magnetic moment sink?}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/30_simulations/img/79cfm}
-	\caption{Dipole moments of CFM antenna rotated by 79°}
-	\label{fig:79cfm}
-\end{figure}
-
 \todo{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}
 
 \FloatBarrier
 \subsubsection{Monopole Antenna}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1\linewidth]{content//30_simulations//img/dipole_moments_monopole.png}
-	\caption{Dipole moments of the monopole antenna}
-	\label{fig:dipole_moments_monopole}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content//30_simulations//img/dipole_moments_monopole.png}
+		\caption{Dipole moments}
+		\label{fig:dipole_moments_monopole}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/30_simulations/img/phase_shift_monopole}
+		\caption{Phase shift}
+		\label{fig:phaseshiftmonopole}
+	\end{minipage}
 \end{figure}
 
-\autoref{fig:dipole_moments_monopole} shows the dipole moments of the monopole antenna. Note the linear relation of the electric dipole moment $m_\mathrm{e}$ to the frequency, which is not given in the center fed monopole and inverted-F antenna. The magnetic dipole moment equals zero, as expected, due to very weak coupling of the magnetic fields. The length of the monopole antenna is 5\,mm.
 
-\todo{Maybe do a simple current loop too, to demonstrate the magnetic dipole moment?}
+\autoref{fig:dipole_moments_monopole} shows the dipole moments of the monopole antenna. Note the linear relation of the electric dipole moment $m_\mathrm{e}$ to the frequency, which is not given in the center fed monopole and inverted-F antenna. The magnetic dipole moment equals zero, which is explainable by the very weak coupling of the magnetic fields. The length of the monopole antenna is 5\,mm.
+
+The wave impedance in the near field region is very high in the low frequencies, but sharply drops off with frequency\todo{insert plot}. The relation is approximately given by \autoref{eqn:wave_impedance_monopole}, where $r$ describes the distance to the antenna.\todo{Source: \href{https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO} Generally, the near-field is electric, which is explaining by the capacitive behavior of the monopole antenna. The decrease of the wave impedance over the frequency also leads to better impedance matching, as the source impedance is set to 50\,$\Omega$. This leads to better power transfer, and more efficient radiation. \todo{Explain how much of the power transfer is due to the quadratic rise of the radiation resistance, and how much of it is due to better matching. As visible, in the current / voltage plots, the quadratic rise of the resistance influences the power transfer much more than the increased matching.} 
+
+\begin{equation}
+	\left|Z_\mathrm{w}\right| \approx 60\, \Omega \frac{c}{r\cdot f}
+	\label{eqn:wave_impedance_monopole}
+\end{equation}
 
 
 \begin{figure}[h]
@@ -258,7 +280,7 @@ When rotating this antenna by 79°, the electric and magnetic dipole moment infl
 	\label{fig:monopole_surface_currents}
 \end{figure}
 
-\autoref{monopole_surface_current_offset} shows the induced surface currents on the septum, when giving the monopole antenna an offset of 7.5\,mm. The energy transfer decreases (-1\,dB).  
+\autoref{monopole_surface_current_offset} shows the induced surface currents on the septum, when giving the monopole antenna an offset of 7.5\,mm. The energy transfer decreases by 1\,dB.  
 
 \begin{figure}[h]
 	\centering
@@ -267,13 +289,24 @@ When rotating this antenna by 79°, the electric and magnetic dipole moment infl
 	\label{fig:monopole_surface_current_offset}
 \end{figure}
 
-\autoref{fig:monopolefeedcurrent} demonstrates the feed current over the frequency. Because the monopole antenna has a high impedance, the it rises linearly with the frequency. Meanwhile, the voltage falls quadratically with the frequency \todo{show plot and show mathematically}. This all fits together with the quadratic rise of the radiation resistance \todo{show mathematically?}. This evaluation has been done automatically through a script, integrating the magnetic field around the wire \todo{How big is the radius of the closed circle around the antenna. Sketch?}.
+\autoref{fig:monopolefeedcurrent} demonstrates the feed current over the frequency. Because the monopole antenna has a high impedance, the it rises linearly with the frequency. Meanwhile, the voltage falls quadratically with the frequency \todo{show plot and show mathematically}. This all fits together with the quadratic rise of the radiation resistance \todo{show mathematically?}. This evaluation has been done automatically through a script, integrating the magnetic field around the wire \todo{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{content/30_simulations/img/monopole_feed_current}
 	\caption{Feed current over frequency of monopole antenna}
 	\label{fig:monopolefeedcurrent}
+\end{figure}
+
+
+An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. 
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{content/30_simulations/img/chu_circuit}
+	\caption{Chu equivalent circuit of short dipole}
+	\label{fig:chucircuit}
 \end{figure}
 
 
@@ -381,14 +414,6 @@ The electric current reduces over the wire because of the displacement current t
 
 \todo{H-field from other perspective?}
 
-\begin{figure}[h]
-
-\end{figure}
-
-\begin{figure}[h]
-
-\end{figure}
-
 \begin{figure}[htbp]
 	\centering
 	\begin{minipage}[b]{0.45\textwidth}
@@ -406,7 +431,20 @@ The electric current reduces over the wire because of the displacement current t
 	\end{minipage}
 \end{figure}
 
-\autoref{fig:currentloopfeedcurrent} and \autoref{fig:currentloopvoltagedrop} show the current and voltage consumption of the antenna. The phase shift equals $\phi\approx89.80°$, which hints to a strong inductive behavior. An equivalent circuit is therefore derived in \autoref{fig:current_loop_circuit}, ignoring potential capacitive effects. The inductance is determined to be $L\approx2.15\,\mathrm{nH}$. 
+\autoref{fig:currentloopfeedcurrent} and \autoref{fig:currentloopvoltagedrop} show the current and voltage consumption of the antenna. The phase shift equals $\phi\approx89.80\circ$, which hints to a strong inductive behavior. The inductance is determined to be $L\approx2.15\,\mathrm{nH}$. The capacitance is very low, but does lead so some displacement current.
+
+
+Next, the electric and magnetic near field is investigated. The wave impedance $Z=E/H$ shown in \autoref{fig:waveimpedanceloop} in the center of the loop rises linearly over frequency. At low frequencies, the wave impedance is very low, which confirms the inductive behavior of the antenna. However, as the frequency increases, so does the voltage drop. This may be analogous to a inductor in an electrical circuit, across which the voltage drop also increases with frequency $U = \mathrm{i}L\omega I$. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{content/30_simulations/img/wave_impedance_loop}
+	\caption{Wave impedance in the center of the loop}
+	\label{fig:waveimpedanceloop}
+\end{figure}
+
+\autoref{eqn:a_b_moments_simp} relates the dipole moments to the output power. The influence of the dipole moments is determined by the electric field at the electric dipole moment and the magnetic field at the magnetic dipole moment. In this formula, the electric and magnetic field are simply related through the free-space wave impedance. However, as visible in \autoref{fig:waveimpedanceloop}, the wave impedance at the location of the dipole moments (i.e. at the antenna) is much lower. Additionally, it rises linearly with the frequency. This influence of the antenna itself on the fields around the dipoles could explain the non-linear relation of the dipole moments to the frequency.
+
 
 %\begin{figure}[h]
 %	\centering
@@ -506,17 +544,61 @@ This dispersed power may be ignored in the simulations by changing the antenna's
 \todo{Show plots?}
 
 
-The current-loop antenna contains two electric dipoles, shifted in phase by 180°. They therefore oppose each other in the power transfer to the waveports. However, as visible in the electric near field plot in \autoref{fig:currentloopvoltagedrop}, the electric dipole moment from node A to the feedpoint is much larger than the one from node B to ground. The reasoncan be demonstrated by representing the antenna with its nodes in \autoref{fig:current_loop_ua_ub}. The partial inductances in this schematic are much larger than the capacitances. This leads to a large voltage drop between node A and B, and therefore a weaker electric dipole moment at node B.
+The current-loop antenna contains two electric dipoles, shifted in phase by 180°. They therefore oppose each other in the power transfer to the waveports. However, as visible in the electric near field plot in \autoref{fig:currentloopvoltagedrop}, the electric dipole moment from node A to the feedpoint is much larger than the one from node B to ground. The reason can be demonstrated by representing the antenna with its nodes in \autoref{fig:current_loop_ua_ub}. The partial inductances in this schematic are much larger than the capacitances. This leads to a large voltage drop between node A and B, and therefore a weaker electric dipole moment at node B.
 
 Additionally, this voltage difference $V_\mathrm{A}-V_\mathrm{B}$ rises linearly over the frequency, due to the linearly increasing impedance of the inductance $\mathrm{i}\omega L$. This means, that the over electric dipole moment a quadratic relationship to the frequency has.
 \todo{Magnetic moment equivalent antenna. Explain with current and H-field, too}
 
 \todo{Prove square frequency dependency}
 
+Further, \autoref{fig:loopwaveimp} shows the wave impedance of the near-fields at the loop antenna. The \autoref{eqn:a_b_moments_simp} shows, that the influence of the dipoles depends on the electric and magnetic fields at the dipoles position. The electric and magnetic fields are related through the wave impedance $Z = E/H$. If the wave impedance rises linearly over frequency, the electric field increases over the magnetic fields, giving more influence to the electric dipole moments. As previously discussed, there are two electric dipole moments in this antenna, benefiting from that. \todo{Monopole antenna: Also change in wave impedance, but there is not really a magnetic dipole moment} 
+
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/30_simulations/img/loop_wave_imp}
+	\caption{Wave impedance in near field of loop antenna over frequency}
+	\label{fig:loopwaveimp}
+\end{figure}
+
+The wave impedance $Z_\mathrm{w}$ in the near field of the electrically small loop antenna is approximated by \autoref{eqn:wave_impedance_loop}. It confirms the linear relationship of the near-field wave impedance to the frequency. \todo{Source: \href{https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}
+	
+
+\begin{equation}
+	\left|Z_\mathrm{w}\right|\approx 2 \pi^2 \cdot 240\,\Omega \cdot\frac{r\cdot f}{c}
+	\label{eqn:wave_impedance_loop}
+\end{equation}
+
+
+
 \FloatBarrier
+
+\subsubsection{Serial Loop Antenna}
+
+This section will discuss the antenna displayed in \autoref{fig:serialloopantenna}. The idea of that antenna is to create two magnetic dipole moments, which are in phase. As the frequency increases, the displacement current between the loops becomes larger, thus reducing the current through and weakening the second loop. The dipole moments in \autoref{fig:serialloopantennadipolemoments} demonstrate a non-linear behavior of the magnetic dipole moment (only very weakly recognizable, but with a geometry sweep this becomes clearer \todo{Find a geometry where this effect is much stronger}). Also, it would be interesting to measure the wave impedances in both loops over the frequency. Also, find the current distributions, add current plots and electric fields, charge distributions.  
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{content/30_simulations/img/serial_loop_antenna}
+	\caption{Serial loop antenna}
+	\label{fig:serialloopantenna}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{content/30_simulations/img/serial_loop_antenna_dipole_moments}
+	\caption{Dipole moments }
+	\label{fig:serialloopantennadipolemoments}
+\end{figure}
+
+
+
 \subsubsection{Offset of source antennas and eddy currents}
 
-Next, the CFM is rotated by an angle. This angle is swept from 0° to 90°, iteratively increased by 1° [deg]. At 90°, it is already known that the magnetic dipole moment is zero, while it is the largest at 0°. The idea is now to find a balance between the electric and magnetic dipole moment, such that the antenna operates in a way of resonance. In this operation, the S11 parameter shall be the lowest, even though the coupling of the magnetic field only becomes weaker with increasing angle \todo{Is it possible to proof this by mathematics?}. The reason for this approach by increasing angle is that it is otherwise very hard to achieve such a balance between the dipole moments by purely scaling the antenna. The electric dipole moment is very weak, and when increasing the antenna height (thus only the electric dipole moment), it soon becomes very large and even touches the septum. Rotating the angle instead becomes a very efficient alkternative. This has been determined just by looking at the phase shifts from the antenna to the waveports: If electric and magnetic dipole moments are roughly equally influential, then the phase shift between the ports shall be 90°\todo{Show mathematically?}. Very important for these simulation is the renormalization of the waveports \todo{Describe this in HFSS section, under excitations}. This enables the port exciting the antenna to have an impedance of 50 Ohm, independent of size. This will make a geometry sweep of the antenna able, without influencing the impedance of the port exciting the antenna (Imagine a coax cable attached to the antenna. It is hinted by the round waveport in the model. When it gets shifted around, its wave impedance changes, and so does the reflection, and the results are distorted) 
+\colorbox{red}{This section is probably wrong.}
+
+Next, the CFM is rotated by an angle. This angle is swept from 0° to 90°, iteratively increased by 1° [deg]. At 90° the magnetic dipole moment is at a minimum, while it is the largest at 0°. The idea is now to find a balance between the electric and magnetic dipole moment, such that the antenna operates in a way of resonance. In this operation, the S11 parameter shall be the lowest, even though the coupling of the magnetic field only becomes weaker with increasing angle \todo{Is it possible to proof this by mathematics?}. The reason for this approach by increasing angle is that it is otherwise very hard to achieve such a balance between the dipole moments by purely scaling the antenna. The electric dipole moment is very weak, and when increasing the antenna height (thus only the electric dipole moment), it soon becomes very large and even touches the septum. Rotating the angle instead becomes a very efficient alkternative. This has been determined just by looking at the phase shifts from the antenna to the waveports: If electric and magnetic dipole moments are roughly equally influential, then the phase shift between the ports shall be 90°\todo{Show mathematically?}. Very important for these simulation is the renormalization of the waveports \todo{Describe this in HFSS section, under excitations}. This enables the port exciting the antenna to have an impedance of 50 Ohm, independent of size. This will make a geometry sweep of the antenna able, without influencing the impedance of the port exciting the antenna (Imagine a coax cable attached to the antenna. It is hinted by the round waveport in the model. When it gets shifted around, its wave impedance changes, and so does the reflection, and the results are distorted) 
+
+
+
 
 \FloatBarrier
 

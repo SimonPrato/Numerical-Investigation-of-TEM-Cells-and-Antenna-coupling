@@ -1,0 +1,62 @@
+\contentsline {todo}{Balanis Book chapter: image theory of dipoles. Additionally, describe electric field which increases quadratically with frequency, leading to an increase in dipole moment. Griffiths. }{3}{section*.6}%
+\contentsline {todo}{Add fields and radiation power formulas, if it is needed later}{4}{section*.8}%
+\contentsline {todo}{Write}{4}{section*.9}%
+\contentsline {todo}{Dipoles next to conducting planes (balanis, collin)}{4}{section*.10}%
+\contentsline {todo}{Short HFSS introduction with boundary conditions, ports and modal and terminal solutions?}{8}{section*.14}%
+\contentsline {todo}{write about dyadic green's function, which just maps the coordinates to each other. More about that in Collin and Balanis}{10}{section*.15}%
+\contentsline {todo}{$E_n^\pm $?}{11}{section*.16}%
+\contentsline {todo}{Maybe calculate with Green's function as in \blx@tocontentsinit {0}\cite {4091747}. The resulting radiation resistance might also be helpful later to interpret simulation results.}{12}{section*.17}%
+\contentsline {todo}{Maybe do simulations with such a tapered section. See \blx@tocontentsinit {0}\cite {990711}}{13}{section*.19}%
+\contentsline {todo}{Vector directions are wrong in the pictures. Additionally, update cutoff frequencies.}{14}{section*.22}%
+\contentsline {todo}{peak power, not average. Explain better.}{15}{section*.23}%
+\contentsline {todo}{The electric field / magnetic field distribution of the TEM mode must be known ($e_0$). Other mode distributions are neither available, nor necessary. Calculations to find these field distributions can be found in \blx@tocontentsinit {0}\cite {4091811}. This would also solve the problem with not being able to shift the location of the electric dipole moment. In \blx@tocontentsinit {0}\cite {Sreenivasiah_Chang_Ma_1981}, the normalized electric field was also determined analytically, just with output power. IMPORTANT!!! Additionally, the electric field at the output port and the dipole location must be equal (in tem mode) for the formula to work. If they are not, then the formulas derived in \blx@tocontentsinit {0}\cite {4091811} must be used. That's why the formula does not work for offset shift of the dipole moment anymore. The electric field at the incident port must then be found out. How to use this in case of a shielding material? Not valid for only ez dipole}{16}{section*.25}%
+\contentsline {todo}{p. 309 Classical Electrodynamics (John David Jackson) describe shielding material by dipole moments}{18}{section*.27}%
+\contentsline {todo}{Formula $\alpha $? Needed?}{18}{section*.28}%
+\contentsline {todo}{S-parameters should enable derivation of $\alpha $. Due to normal incident wave of TEM, no angle needed to consider.}{18}{section*.29}%
+\contentsline {todo}{Basics: Balanis 2012 page 68?}{18}{section*.30}%
+\contentsline {todo}{Some way to describe coupling of shielding material to TEM cell?}{18}{section*.31}%
+\contentsline {todo}{describe $\alpha $ and $\delta $ for absorption. Then reflections with $\epsilon $ and $\mu $}{19}{section*.32}%
+\contentsline {todo}{source}{19}{section*.33}%
+\contentsline {todo}{Describe Method. Then follows dual TEM cells}{20}{section*.35}%
+\contentsline {todo}{must it be electrically small?}{20}{section*.36}%
+\contentsline {todo}{Polarization of the material. Small aperture theory.}{21}{section*.37}%
+\contentsline {todo}{Problem with large TEM cell: Formula does not work for large frequencies. The field distributes around the port. Describe this. Error grows with frequency}{24}{section*.42}%
+\contentsline {todo}{Einheitliches Koordinatensystem definieren}{24}{section*.43}%
+\contentsline {todo}{Write clearer. And put into theoretical part.}{25}{section*.45}%
+\contentsline {todo}{Is this CFM or IFA simulation?}{25}{section*.47}%
+\contentsline {todo}{Repeat for different orientations? Change variable name: TEM cell height.}{26}{section*.49}%
+\contentsline {todo}{The same procedure was repeated with different dipole moments positions, for which \autoref {eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}{27}{section*.51}%
+\contentsline {todo}{Why does the magnetic moment sink?}{30}{section*.56}%
+\contentsline {todo}{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}{30}{section*.57}%
+\contentsline {todo}{insert plot}{30}{section*.59}%
+\contentsline {todo}{Source: \href {https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}{30}{section*.60}%
+\contentsline {todo}{show plot and show mathematically}{31}{section*.63}%
+\contentsline {todo}{show mathematically?}{31}{section*.64}%
+\contentsline {todo}{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}{31}{section*.65}%
+\contentsline {todo}{Maybe describe this in the HFSS theory part? Modeling of round surfaces.}{32}{section*.68}%
+\contentsline {todo}{why?}{32}{section*.70}%
+\contentsline {todo}{Find reasons for the eddy current to exist. Maybe there is a nice formula that describes this by maxwell?}{33}{section*.72}%
+\contentsline {todo}{annotate maximum and minimum current densities}{33}{section*.76}%
+\contentsline {todo}{Insert power consumption plots of each antenna section}{34}{section*.78}%
+\contentsline {todo}{Insert current distribution plots}{34}{section*.79}%
+\contentsline {todo}{H-field from other perspective?}{34}{section*.81}%
+\contentsline {todo}{Own little chapter for skin effect?}{37}{section*.86}%
+\contentsline {todo}{explain better.}{37}{section*.87}%
+\contentsline {todo}{Show plots?}{38}{section*.88}%
+\contentsline {todo}{Magnetic moment equivalent antenna. Explain with current and H-field, too}{38}{section*.89}%
+\contentsline {todo}{Prove square frequency dependency}{38}{section*.90}%
+\contentsline {todo}{Monopole antenna: Also change in wave impedance, but there is not really a magnetic dipole moment}{38}{section*.91}%
+\contentsline {todo}{Source: \href {https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}{38}{section*.93}%
+\contentsline {todo}{Find a geometry where this effect is much stronger}{39}{section*.94}%
+\contentsline {todo}{Is it possible to proof this by mathematics?}{39}{section*.97}%
+\contentsline {todo}{Show mathematically?}{40}{section*.98}%
+\contentsline {todo}{Describe this in HFSS section, under excitations}{40}{section*.99}%
+\contentsline {todo}{Why, how do the dipole moments look like there? Anf is this just a numerical error?}{40}{section*.100}%
+\contentsline {todo}{How does offset influence the eddy currents and the result?}{40}{section*.102}%
+\contentsline {todo}{Better investigation of offset: Show coupling and eddy currents}{40}{section*.103}%
+\contentsline {todo}{Repeat Simulation for several other dipole moment positions and orientations?}{42}{section*.106}%
+\contentsline {todo}{I think the low SE in the low shield thicknesses has to do with the false modelling of it in Ansys HFSS.}{43}{section*.108}%
+\contentsline {todo}{Why -8dB difference in empty aperture? Explained in \blx@tocontentsinit {0}\cite {Wilson_1981}}{44}{section*.110}%
+\contentsline {todo}{negative SE possible?}{44}{section*.111}%
+\contentsline {todo}{One port receives overall more power due to the material. Is it because of the magnetic/electric dipoles in it?}{44}{section*.112}%
+\contentsline {todo}{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}{44}{section*.113}%
