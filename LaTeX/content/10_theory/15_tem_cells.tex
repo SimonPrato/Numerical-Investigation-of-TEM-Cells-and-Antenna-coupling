@@ -1,4 +1,4 @@
-\subsection{Numerical Investigation of Propagating Modes in TEM Cells}\label{sec:modes_tem_cell}
+\subsection{Propagating Modes in TEM Cells}\label{sec:modes_tem_cell}
 \subsubsection{Mathematical derivation}
 % Goal is to describe the modes in a TEM cell, including their cut-off frequencies. \cite{Kreindl_Bauernfeind_Weiss_Stockreitner_Kaltenbacher_2024} shows that these investigations are important. There are also modes propagating perpendicular to the intended propagation direction. Why are no waveguides used? Explain.
 
@@ -36,7 +36,7 @@ In case of the TEM cell, it is desirable that only the TEM mode is propagating, 
 \end{equation}
 \todo{$E_n^\pm$?}
 
-If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole. This leads to \autoref{eqn:mag_dipole_moment_tem}. The requirement for this formulation to work, is that the magnetic fields $\mathbf{H}^\pm$ does not change over the loop area, i.e. the loop is electrically small \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
+If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m_m}$. It is defined by the product $\mathbf{m_m}=\mathbf{A}\cdot I$, an infinitesimal current loop with area $A$ carrying a current $I$. This leads to \autoref{eqn:mag_dipole_moment_tem}. This formulation assumes, that the magnetic field strength $\mathbf{H}^\pm$ does not change over the loop area, i.e. the loop is electrically small. Otherwise, the magnetic field strength $\mathbf{H}^\pm$ must be considered in the integration \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
 
 \begin{align}
     \begin{pmatrix}a \\b\end{pmatrix} &= -\oint_C \mathbf{E}^\pm \mathrm{d}l \nonumber \\

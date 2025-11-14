@@ -20,43 +20,46 @@
 \contentsline {todo}{Describe Method. Then follows dual TEM cells}{20}{section*.35}%
 \contentsline {todo}{must it be electrically small?}{20}{section*.36}%
 \contentsline {todo}{Polarization of the material. Small aperture theory.}{21}{section*.37}%
-\contentsline {todo}{Problem with large TEM cell: Formula does not work for large frequencies. The field distributes around the port. Describe this. Error grows with frequency}{24}{section*.42}%
-\contentsline {todo}{Einheitliches Koordinatensystem definieren}{24}{section*.43}%
-\contentsline {todo}{Write clearer. And put into theoretical part.}{25}{section*.45}%
-\contentsline {todo}{Is this CFM or IFA simulation?}{25}{section*.47}%
-\contentsline {todo}{Repeat for different orientations? Change variable name: TEM cell height.}{26}{section*.49}%
-\contentsline {todo}{The same procedure was repeated with different dipole moments positions, for which \autoref {eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}{27}{section*.51}%
-\contentsline {todo}{Why does the magnetic moment sink?}{30}{section*.56}%
-\contentsline {todo}{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}{30}{section*.57}%
-\contentsline {todo}{insert plot}{30}{section*.59}%
-\contentsline {todo}{Source: \href {https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}{30}{section*.60}%
-\contentsline {todo}{show plot and show mathematically}{31}{section*.63}%
-\contentsline {todo}{show mathematically?}{31}{section*.64}%
-\contentsline {todo}{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}{31}{section*.65}%
-\contentsline {todo}{Maybe describe this in the HFSS theory part? Modeling of round surfaces.}{32}{section*.68}%
-\contentsline {todo}{why?}{32}{section*.70}%
-\contentsline {todo}{Find reasons for the eddy current to exist. Maybe there is a nice formula that describes this by maxwell?}{33}{section*.72}%
-\contentsline {todo}{annotate maximum and minimum current densities}{33}{section*.76}%
-\contentsline {todo}{Insert power consumption plots of each antenna section}{34}{section*.78}%
-\contentsline {todo}{Insert current distribution plots}{34}{section*.79}%
-\contentsline {todo}{H-field from other perspective?}{34}{section*.81}%
-\contentsline {todo}{Own little chapter for skin effect?}{37}{section*.86}%
-\contentsline {todo}{explain better.}{37}{section*.87}%
-\contentsline {todo}{Show plots?}{38}{section*.88}%
-\contentsline {todo}{Magnetic moment equivalent antenna. Explain with current and H-field, too}{38}{section*.89}%
-\contentsline {todo}{Prove square frequency dependency}{38}{section*.90}%
-\contentsline {todo}{Monopole antenna: Also change in wave impedance, but there is not really a magnetic dipole moment}{38}{section*.91}%
-\contentsline {todo}{Source: \href {https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}{38}{section*.93}%
-\contentsline {todo}{Find a geometry where this effect is much stronger}{39}{section*.94}%
-\contentsline {todo}{Is it possible to proof this by mathematics?}{39}{section*.97}%
-\contentsline {todo}{Show mathematically?}{40}{section*.98}%
-\contentsline {todo}{Describe this in HFSS section, under excitations}{40}{section*.99}%
-\contentsline {todo}{Why, how do the dipole moments look like there? Anf is this just a numerical error?}{40}{section*.100}%
-\contentsline {todo}{How does offset influence the eddy currents and the result?}{40}{section*.102}%
-\contentsline {todo}{Better investigation of offset: Show coupling and eddy currents}{40}{section*.103}%
-\contentsline {todo}{Repeat Simulation for several other dipole moment positions and orientations?}{42}{section*.106}%
-\contentsline {todo}{I think the low SE in the low shield thicknesses has to do with the false modelling of it in Ansys HFSS.}{43}{section*.108}%
-\contentsline {todo}{Why -8dB difference in empty aperture? Explained in \blx@tocontentsinit {0}\cite {Wilson_1981}}{44}{section*.110}%
-\contentsline {todo}{negative SE possible?}{44}{section*.111}%
-\contentsline {todo}{One port receives overall more power due to the material. Is it because of the magnetic/electric dipoles in it?}{44}{section*.112}%
-\contentsline {todo}{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}{44}{section*.113}%
+\contentsline {todo}{Is this even possible without reaching other modes behavior? And demonstrate the fields over frequency and distance, which changes differently in different regions}{22}{section*.40}%
+\contentsline {todo}{Problem with large TEM cell: Formula does not work for large frequencies. The field distributes around the port. Describe this. Error grows with frequency}{25}{section*.44}%
+\contentsline {todo}{Einheitliches Koordinatensystem definieren}{26}{section*.45}%
+\contentsline {todo}{Write clearer. And put into theoretical part.}{26}{section*.47}%
+\contentsline {todo}{Is this CFM or IFA simulation?}{27}{section*.49}%
+\contentsline {todo}{Repeat for different orientations? Change variable name: TEM cell height.}{28}{section*.51}%
+\contentsline {todo}{The same procedure was repeated with different dipole moments positions, for which \autoref {eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}{28}{section*.53}%
+\contentsline {todo}{Why does the magnetic moment sink?}{31}{section*.58}%
+\contentsline {todo}{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}{31}{section*.59}%
+\contentsline {todo}{insert plot}{31}{section*.61}%
+\contentsline {todo}{Source: \href {https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}{31}{section*.62}%
+\contentsline {todo}{Explain how much of the power transfer is due to the quadratic rise of the radiation resistance, and how much of it is due to better matching. As visible, in the current / voltage plots, the quadratic rise of the resistance influences the power transfer much more than the increased matching.}{32}{section*.63}%
+\contentsline {todo}{show plot and show mathematically}{32}{section*.66}%
+\contentsline {todo}{show mathematically?}{32}{section*.67}%
+\contentsline {todo}{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}{32}{section*.68}%
+\contentsline {todo}{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}{32}{section*.70}%
+\contentsline {todo}{Maybe describe this in the HFSS theory part? Modeling of round surfaces.}{33}{section*.72}%
+\contentsline {todo}{why?}{33}{section*.74}%
+\contentsline {todo}{Find reasons for the eddy current to exist. Maybe there is a nice formula that describes this by maxwell?}{34}{section*.76}%
+\contentsline {todo}{annotate maximum and minimum current densities}{34}{section*.80}%
+\contentsline {todo}{Insert power consumption plots of each antenna section}{35}{section*.82}%
+\contentsline {todo}{Insert current distribution plots}{35}{section*.83}%
+\contentsline {todo}{H-field from other perspective?}{35}{section*.85}%
+\contentsline {todo}{Own little chapter for skin effect?}{38}{section*.90}%
+\contentsline {todo}{explain better.}{38}{section*.91}%
+\contentsline {todo}{Show plots?}{39}{section*.92}%
+\contentsline {todo}{Magnetic moment equivalent antenna. Explain with current and H-field, too}{39}{section*.93}%
+\contentsline {todo}{Prove square frequency dependency}{39}{section*.94}%
+\contentsline {todo}{Monopole antenna: Also change in wave impedance, but there is not really a magnetic dipole moment}{39}{section*.95}%
+\contentsline {todo}{Source: \href {https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}{39}{section*.97}%
+\contentsline {todo}{Find a geometry where this effect is much stronger}{40}{section*.98}%
+\contentsline {todo}{Is it possible to proof this by mathematics?}{40}{section*.101}%
+\contentsline {todo}{Show mathematically?}{41}{section*.102}%
+\contentsline {todo}{Describe this in HFSS section, under excitations}{41}{section*.103}%
+\contentsline {todo}{Why, how do the dipole moments look like there? Anf is this just a numerical error?}{41}{section*.104}%
+\contentsline {todo}{How does offset influence the eddy currents and the result?}{41}{section*.106}%
+\contentsline {todo}{Better investigation of offset: Show coupling and eddy currents}{41}{section*.107}%
+\contentsline {todo}{Repeat Simulation for several other dipole moment positions and orientations?}{43}{section*.110}%
+\contentsline {todo}{I think the low SE in the low shield thicknesses has to do with the false modelling of it in Ansys HFSS.}{44}{section*.112}%
+\contentsline {todo}{Why -8dB difference in empty aperture? Explained in \blx@tocontentsinit {0}\cite {Wilson_1981}}{45}{section*.114}%
+\contentsline {todo}{negative SE possible?}{45}{section*.115}%
+\contentsline {todo}{One port receives overall more power due to the material. Is it because of the magnetic/electric dipoles in it?}{45}{section*.116}%
+\contentsline {todo}{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}{45}{section*.117}%

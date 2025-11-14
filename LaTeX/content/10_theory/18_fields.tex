@@ -1,0 +1,42 @@
+\subsection{Radiated Field}
+
+%
+\subsection{Antenna Terminology}
+Is this chapter necessary?
+\subsection{Field regions}
+Field regions, energy storage in each region, field distribution and auxiliary functions.
+
+The region around an antenna may be divided into three sub-regions:
+\begin{itemize}
+	\item Reactive near-field region
+	\item Radiating near-field or Fresnel region
+	\item Far-field or Fraunhofer region
+\end{itemize}
+
+They are shown in \autoref{fig:fieldregionsantenna}. These regions are distinguished for most antennas using the wavelength $\lambda$ and the largest dimension of the antenna $D$. The nearest region to the antenna, the reactive near-field region, is a sphere with radius $R_1$, which is calculated with \autoref{eqn:region_r1}. It is characterized by the predominantly reactive fields in it. The next region, the radiating near-field region, is located around the first, within a sphere of radius $R_2$ calculated in \autoref{eqn:region_r2}. In there, the radiating fields dominate and the angular field distribution is dependent on the distance to the antenna. In the largest and last region, the far-field region, the angular field distribution is independent of the distance to the antenna \cite{Balanis_1997}.
+
+\begin{subequations}
+	\begin{equation}
+		R_1=0.62\sqrt{D^3/\lambda}
+		\label{eqn:region_r1}
+	\end{equation}
+	\begin{equation}
+	R_2=2D^2/\lambda
+	\label{eqn:region_r2}
+	\end{equation}
+\end{subequations}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/10_theory/img/field_regions_antenna}
+	\caption{Field regions of an antenna \cite{Balanis_1997}}
+	\label{fig:fieldregionsantenna}
+\end{figure}
+
+The electrically short antennas located in the TEM cell interact with it mostly through the reactive near-field region. However, if the TEM cell is large and frequencies are high, the coupling occurs over the radiating near-field. There, the field distributions are different, hence the dipole moments couple differently over frequency to the cell. \todo[inline]{Is this even possible without reaching other modes behavior? And demonstrate the fields over frequency and distance, which changes differently in different regions}.
+
+
+
+\subsection{Radiated Power}
+Important for the Lorentz Reciprocity Part.
+
