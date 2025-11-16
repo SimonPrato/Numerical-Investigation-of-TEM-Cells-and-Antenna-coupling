@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  14 NOV 2025 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  16 NOV 2025 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1168,20 +1168,23 @@ Package biblatex Info: Reference section=0 on input line 39.
 Package biblatex Info: Reference segment=0 on input line 39.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<images/TU_Graz_Logo.png, id=187, 113.223pt x 41.6757pt>
-File: images/TU_Graz_Logo.png Graphic file (type png)
-<use images/TU_Graz_Logo.png>
-Package pdftex.def Info: images/TU_Graz_Logo.png  used on input line 47.
+<content/00_introduction/img/TU_Graz_Logo.png, id=187, 113.223pt x 41.6757pt>
+File: content/00_introduction/img/TU_Graz_Logo.png Graphic file (type png)
+<use content/00_introduction/img/TU_Graz_Logo.png>
+Package pdftex.def Info: content/00_introduction/img/TU_Graz_Logo.png  used on 
+input line 47.
 (pdftex.def)             Requested size: 85.35826pt x 31.4201pt.
-<images/igte_logo.png, id=189, 127.0123pt x 44.96236pt>
-File: images/igte_logo.png Graphic file (type png)
-<use images/igte_logo.png>
-Package pdftex.def Info: images/igte_logo.png  used on input line 85.
+<content/00_introduction/img/igte_logo.png, id=189, 127.0123pt x 44.96236pt>
+File: content/00_introduction/img/igte_logo.png Graphic file (type png)
+<use content/00_introduction/img/igte_logo.png>
+Package pdftex.def Info: content/00_introduction/img/igte_logo.png  used on inp
+ut line 85.
 (pdftex.def)             Requested size: 85.35826pt x 30.21722pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/TU_Graz_Logo.png>
- <./images/igte_logo.png>] [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./content/00_introduction/
+img/TU_Graz_Logo.png> <./content/00_introduction/img/igte_logo.png>]
+[2
 
 ] (./Documentation.tdo
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
@@ -1220,11 +1223,13 @@ File: uesint.fd
 
  [9]
 (./content/10_theory/11_dipole.tex
-<images/electric_dipole_drawing.png, id=581, 399.4925pt x 362.35374pt>
-File: images/electric_dipole_drawing.png Graphic file (type png)
-<use images/electric_dipole_drawing.png>
-Package pdftex.def Info: images/electric_dipole_drawing.png  used on input line
- 24.
+<content/10_theory/img/electric_dipole_drawing.png, id=581, 399.4925pt x 362.35
+374pt>
+File: content/10_theory/img/electric_dipole_drawing.png Graphic file (type png)
+
+<use content/10_theory/img/electric_dipole_drawing.png>
+Package pdftex.def Info: content/10_theory/img/electric_dipole_drawing.png  use
+d on input line 24.
 (pdftex.def)             Requested size: 213.39566pt x 193.556pt.
 
 
@@ -1232,7 +1237,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
-] [2 <./images/electric_dipole_drawing.png>]
+] [2 <./content/10_theory/img/electric_dipole_drawing.png>]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 88.
 <content//10_theory//img/magnetic_dipole_drawing.png, id=630, 399.4925pt x 362.
@@ -1321,21 +1326,24 @@ e 213.
 t//10_theory//img/tem_cell_modes.png> <./content/10_theory/img/tem_cell_mode.pn
 g> <./content/10_theory/img/te01_mode.png> <./content/10_theory/img/te10_mode.p
 ng>] [15]
-<DELETE2.png, id=884, 626.34pt x 381.425pt>
-File: DELETE2.png Graphic file (type png)
-<use DELETE2.png>
-Package pdftex.def Info: DELETE2.png  used on input line 73.
+<content/00_introduction/img/DELETE2.png, id=884, 626.34pt x 381.425pt>
+File: content/00_introduction/img/DELETE2.png Graphic file (type png)
+<use content/00_introduction/img/DELETE2.png>
+Package pdftex.def Info: content/00_introduction/img/DELETE2.png  used on input
+ line 73.
 (pdftex.def)             Requested size: 213.39566pt x 129.9505pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./content/10_theory/17_shielding.tex [16]
-<images/shielding_material_diagram.png, id=906, 334.24875pt x 195.73125pt>
-File: images/shielding_material_diagram.png Graphic file (type png)
-<use images/shielding_material_diagram.png>
-Package pdftex.def Info: images/shielding_material_diagram.png  used on input l
-ine 14.
+<content/10_theory/img/shielding_material_diagram.png, id=906, 334.24875pt x 19
+5.73125pt>
+File: content/10_theory/img/shielding_material_diagram.png Graphic file (type p
+ng)
+<use content/10_theory/img/shielding_material_diagram.png>
+Package pdftex.def Info: content/10_theory/img/shielding_material_diagram.png  
+used on input line 14.
 (pdftex.def)             Requested size: 149.37956pt x 87.47792pt.
 
 Overfull \hbox (17.06505pt too wide) in paragraph at lines 30--32
@@ -1343,7 +1351,8 @@ Overfull \hbox (17.06505pt too wide) in paragraph at lines 30--32
 e . li / pdf / viewgraphs / fundamentals _ electromagnetic _
  []
 
-[17 <./DELETE2.png> <./images/shielding_material_diagram.png>]
+[17 <./content/00_introduction/img/DELETE2.png> <./content/10_theory/img/shield
+ing_material_diagram.png>]
 
 LaTeX Warning: Marginpar on page 18 moved.
 
@@ -1404,13 +1413,13 @@ ut line 165.
 (pdftex.def)             Requested size: 320.09349pt x 136.701pt.
 ) (./content/10_theory/18_fields.tex [21 <./content//10_theory//img/dual_tem_ce
 ll.png>]
-<content/10_theory/img/field_regions_antenna.png, id=990, 350.30875pt x 376.406
-25pt>
+<content/10_theory/img/field_regions_antenna.png, id=990, 747.79375pt x 751.808
+75pt>
 File: content/10_theory/img/field_regions_antenna.png Graphic file (type png)
 <use content/10_theory/img/field_regions_antenna.png>
 Package pdftex.def Info: content/10_theory/img/field_regions_antenna.png  used 
 on input line 31.
-(pdftex.def)             Requested size: 298.75262pt x 321.03233pt.
+(pdftex.def)             Requested size: 213.39566pt x 214.54303pt.
 ) (./content/20_antennas/21_antennas_to_investigate.tex [22 <./content/10_theor
 y/img/field_regions_antenna.png>])
 (./content/30_simulations/31_antennas.tex
@@ -1896,17 +1905,20 @@ LaTeX Warning: Marginpar on page 41 moved.
 
 LaTeX Warning: Marginpar on page 41 moved.
 
-<DELETE_AFTER.png, id=1230, 1430.34375pt x 645.41125pt>
-File: DELETE_AFTER.png Graphic file (type png)
-<use DELETE_AFTER.png>
-Package pdftex.def Info: DELETE_AFTER.png  used on input line 626.
+<content/00_introduction/img/DELETE_AFTER.png, id=1230, 1430.34375pt x 645.4112
+5pt>
+File: content/00_introduction/img/DELETE_AFTER.png Graphic file (type png)
+<use content/00_introduction/img/DELETE_AFTER.png>
+Package pdftex.def Info: content/00_introduction/img/DELETE_AFTER.png  used on 
+input line 626.
 (pdftex.def)             Requested size: 426.79134pt x 192.58096pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./content/30_simulations/32_dipole_moments.tex [41 <./content/30_simulations
 /img/serial_loop_antenna_dipole_moments.png (PNG copy)>] [42 <./content//30_sim
-ulations//img/cfm_rotation_sweep.png> <./DELETE_AFTER.png>]
+ulations//img/cfm_rotation_sweep.png> <./content/00_introduction/img/DELETE_AFT
+ER.png>]
 <content/30_simulations/img/ey_ez_coupling_comparison.png, id=1242, 764.8575pt 
 x 501.875pt>
 File: content/30_simulations/img/ey_ez_coupling_comparison.png Graphic file (ty
@@ -1968,8 +1980,8 @@ Package logreq Info: Writing requests to 'Documentation.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  50300 strings out of 474222
- 1169284 string characters out of 5748733
- 2141818 words of memory out of 5000000
+ 1170180 string characters out of 5748733
+ 2141820 words of memory out of 5000000
  71601 multiletter control sequences out of 15000+600000
  572727 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1996,7 +2008,7 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 ic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esi
 nt-type1/esint10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb
 >
-Output written on Documentation.pdf (56 pages, 6934814 bytes).
+Output written on Documentation.pdf (56 pages, 6946259 bytes).
 PDF statistics:
  1494 PDF objects out of 1728 (max. 8388607)
  1260 compressed objects within 13 object streams
