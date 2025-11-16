@@ -3,6 +3,8 @@
 In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,MW. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed.
 
 
+\todo[inline]{Describe how the use of normalization of ports influences results.}
+
 \subsubsection{Inverted F-antenna}\label{sec:ifa_sim}
 
 The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. It is positioned at the center of the TEM cell, mounted at the top surface. The 5\,mm long wire points towards waveport 2. The excitation is a modal wave port. With a maximum dimension of 5\,mm, the antenna is electrically small for a frequency of up to 6\,GHz, at which it will be a tenth of the wavelength. In this simulation, the antenna is investigated for the frequency of 100\,MHz to 1\,GHz. The TEM cell has a width of 40\,mm and a height of 24\,mm and an impedance of $\sim50\,\Omega$. The goal is to find equivalent dipole moments of the antenna. 
@@ -431,7 +433,7 @@ The electric current reduces over the wire because of the displacement current t
 	\end{minipage}
 \end{figure}
 
-\autoref{fig:currentloopfeedcurrent} and \autoref{fig:currentloopvoltagedrop} show the current and voltage consumption of the antenna. The phase shift equals $\phi\approx89.80\circ$, which hints to a strong inductive behavior. The inductance is determined to be $L\approx2.15\,\mathrm{nH}$. The capacitance is very low, but does lead so some displacement current.
+\autoref{fig:currentloopfeedcurrent} and \autoref{fig:currentloopvoltagedrop} show the current and voltage consumption of the antenna. The phase shift equals $\phi\approx89.80\circ$, which hints to a strong inductive behavior. The inductance is determined to be $L\approx2.15\,\mathrm{nH}$. The capacitance is very low, but does lead so some displacement current. The frequency behavior of the voltage and current interchange if the antenna is strongly capacitive, as it the case in a monopole antenna.
 
 
 Next, the electric and magnetic near field is investigated. The wave impedance $Z=E/H$ shown in \autoref{fig:waveimpedanceloop} in the center of the loop rises linearly over frequency. At low frequencies, the wave impedance is very low, which confirms the inductive behavior of the antenna. However, as the frequency increases, so does the voltage drop. This may be analogous to a inductor in an electrical circuit, across which the voltage drop also increases with frequency $U = \mathrm{i}L\omega I$. 
@@ -589,7 +591,7 @@ This section will discuss the antenna displayed in \autoref{fig:serialloopantenn
 	\label{fig:serialloopantennadipolemoments}
 \end{figure}
 
-
+\FloatBarrier
 
 \subsubsection{Offset of source antennas and eddy currents}
 
