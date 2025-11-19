@@ -293,13 +293,6 @@ The wave impedance in the near field region is very high in the low frequencies,
 
 \autoref{fig:monopolefeedcurrent} demonstrates the feed current over the frequency. Because the monopole antenna has a high impedance, the it rises linearly with the frequency. Meanwhile, the voltage falls quadratically with the frequency \todo{show plot and show mathematically}. This all fits together with the quadratic rise of the radiation resistance \todo{show mathematically?}. This evaluation has been done automatically through a script, integrating the magnetic field around the wire \todo{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/30_simulations/img/monopole_feed_current}
-	\caption{Feed current over frequency of monopole antenna}
-	\label{fig:monopolefeedcurrent}
-\end{figure}
-
 
 An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. \todo{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}
 
@@ -312,7 +305,26 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 \end{figure}
 
 
-The distribution of the current along the monopole antenna is numerically derived by integrating the magnetic field strength in a closed loop around the antenna. \todo{Insert antenna current distribution plot}
+The distribution of the current along the monopole antenna is numerically derived by integrating the magnetic field strength in a closed loop around the antenna. \autoref{fig:currentdistributionmonopole} shows approximately a linear decrease of the current along the antenna, as assumed in \autoref{sec:dipoles}. \todo{Maybe increase resolution by adding more steps} A stronger decrease is visible near the feedpoint, which might occur due to the large displacement current density. An option to improve upon this simulation is increasing the feedpoint size, such that it has 50$\,\Omega$ impedance without needing port normalization.
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/30_simulations/img/current_distribution_monopole}
+		\caption{Current distribution}
+		\label{fig:currentdistributionmonopole}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/30_simulations/img/monopole_feed_current}
+		\caption{Feed current}
+		\label{fig:monopolefeedcurrent}
+	\end{minipage}
+\end{figure}
+
 
 
 \FloatBarrier

@@ -37,13 +37,13 @@
 \contentsline {todo}{show plot and show mathematically}{37}{section*.70}%
 \contentsline {todo}{show mathematically?}{37}{section*.71}%
 \contentsline {todo}{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}{37}{section*.72}%
-\contentsline {todo}{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}{37}{section*.74}%
-\contentsline {todo}{Insert antenna current distribution plot}{37}{section*.76}%
+\contentsline {todo}{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}{37}{section*.73}%
+\contentsline {todo}{Maybe increase resolution by adding more steps}{38}{section*.75}%
 \contentsline {todo}{Maybe describe this in the HFSS theory part? Modeling of round surfaces.}{38}{section*.77}%
 \contentsline {todo}{why?}{38}{section*.79}%
-\contentsline {todo}{Find reasons for the eddy current to exist. Maybe there is a nice formula that describes this by maxwell?}{39}{section*.81}%
+\contentsline {todo}{Find reasons for the eddy current to exist. Maybe there is a nice formula that describes this by maxwell?}{38}{section*.81}%
 \contentsline {todo}{annotate maximum and minimum current densities}{39}{section*.85}%
-\contentsline {todo}{Insert power consumption plots of each antenna section}{40}{section*.87}%
+\contentsline {todo}{Insert power consumption plots of each antenna section}{39}{section*.87}%
 \contentsline {todo}{Insert current distribution plots}{40}{section*.88}%
 \contentsline {todo}{H-field from other perspective?}{40}{section*.90}%
 \contentsline {todo}{Own little chapter for skin effect?}{43}{section*.95}%
