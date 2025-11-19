@@ -320,5 +320,26 @@ The first modes propagating after the TEM mode is the TE\textsubscript{10} and T
 \end{figure}
 \todo{Vector directions are wrong in the pictures. Additionally, update cutoff frequencies.}
 
+The cut-off frequencies are dependent on the dimensions of the TEM cell, as previously shown. \autoref{tab:modes_tem_cell} shows some cut-off frequencies of these modes for different TEM cell dimensions. The TE\textsubscript{10}-mode is independent of the height $b$ of the TEM cell, as would be the case in a rectangular waveguide. Both the TE\textsubscript{10}-mode and the TE\textsubscript{01}-mode are dependent on the width $a$. This information is important when varying the TEM cell dimension, as is done when investigating near-field ($k\cdot r < 1$) and intermediate-field ($k\cdot r = 1$) coupling. 
+
+\begin{table}[h]
+\centering
+\caption{Cut-off frequencies of higher order modes depending on TEM cell dimensions}
+\label{tab:modes_tem_cell}
+\begin{tabular}{|c|c||c|c|}
+	\hline
+	a [mm]& b [mm]&TE\textsubscript{01} $f_c$ [GHz] &TE\textsubscript{10} $f_c$ [GHz]\\
+	\hline\hline
+	80 & 24 & 1.89 & 2.05 \\
+	\hline\hline
+	40 & 24 & 3.17 & 3.76 \\
+	\hline\hline
+	40 & 48 & 2.10 & 3.76 \\
+	\hline
+\end{tabular}
+\end{table}
+
+
+
 
 
