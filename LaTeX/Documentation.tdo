@@ -24,7 +24,7 @@
 \contentsline {todo}{Is this even possible without reaching other modes behavior? And demonstrate the fields over frequency and distance, which changes differently in different regions}{26}{section*.43}%
 \contentsline {todo}{Describe how the use of normalization of ports influences results.}{27}{section*.45}%
 \contentsline {todo}{Problem with large TEM cell: Formula does not work for large frequencies. The field distributes around the port. Describe this. Error grows with frequency}{29}{section*.49}%
-\contentsline {todo}{Einheitliches Koordinatensystem definieren}{29}{section*.50}%
+\contentsline {todo}{Einheitliches Koordinatensystem definieren}{30}{section*.50}%
 \contentsline {todo}{Write clearer. And put into theoretical part.}{31}{section*.52}%
 \contentsline {todo}{Is this CFM or IFA simulation?}{31}{section*.54}%
 \contentsline {todo}{Repeat for different orientations? Change variable name: TEM cell height.}{32}{section*.56}%
@@ -66,4 +66,7 @@
 \contentsline {todo}{Why -8dB difference in empty aperture? Explained in \blx@tocontentsinit {0}\cite {Wilson_1981}}{50}{section*.121}%
 \contentsline {todo}{negative SE possible?}{50}{section*.122}%
 \contentsline {todo}{One port receives overall more power due to the material. Is it because of the magnetic/electric dipoles in it?}{50}{section*.123}%
-\contentsline {todo}{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}{50}{section*.124}%
+\contentsline {todo}{The e field approx. in the python code is based on the large TEM cell. Therefore, the magnitude of the dipole moments of the small TEM cell are probably off}{51}{section*.124}%
+\contentsline {todo}{Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts}{51}{section*.126}%
+\contentsline {todo}{Fix figures: Titles and Legends}{51}{section*.128}%
+\contentsline {todo}{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}{51}{section*.129}%
