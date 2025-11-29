@@ -1,5 +1,15 @@
+\FloatBarrier
+
 \subsection{Investigation of field regions}
-In this section, the influence of the field region described in \autoref{sec:rad_fields} on the dipole moments are investigated. Making the TEM cell larger, such that $k\cdot r > 1$, is hardly possible without enabling higher-order modes to propagate. On the other hand, making the TEM cell smaller such that $k\cdot r \ll 1$, proves to be feasible. The following simulations are conducted with a TEM cell of dimensions $a=10\,\mathrm{mm}$ and $b=6\,\mathrm{mm}$. 
+In this section, the influence of the field region described in \autoref{sec:rad_fields} on the dipole moments are investigated. Making the TEM cell larger, such that $k\cdot r > 1$, is hardly possible without enabling higher-order modes to propagate. On the other hand, making the TEM cell smaller such that $k\cdot r \ll 1$, proves to be feasible. The following simulations are conducted with a TEM cell of dimensions $a=10\,\mathrm{mm}$ and $b=6\,\mathrm{mm}$, visible in \autoref{fig:krtemcell}.  
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/30_simulations/img/kr_tem_cell}
+	\caption{TEM cell containing dipole moments}
+	\label{fig:krtemcell}
+\end{figure}
+
 
 First, the current loop antenna used in \autoref{sec:loop_sim} is placed in the dead center of the TEM cell. The equivalent dipole moments are shown in \autoref{fig:loop_small_tem_moments}. In the \autoref{fig:dipole_moments_loop_antenna_copy} next to it, the dipole moments of the same antenna in the larger TEM cell used before ($a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$) are presented. 
 
@@ -23,7 +33,7 @@ First, the current loop antenna used in \autoref{sec:loop_sim} is placed in the 
 
 This is done to compare the dipole moments in both cases. While they clearly increased by magnitude in case of the small TEM cell due to better coupling, their non-linear frequency relation still remains. This means that the change of field regions is not the reason for this behavior.
 
-\todo{Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts. Insert small current loop simulation}
+\todo{Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts. Insert small current loop simulation. Insert Dipole Moment Simulations}
 
 The $k\cdot r$ factor is determined in \autoref{fig:kranalysissmalltem} in the frequency range from 1\,MHz to 3\,GHz for the small TEM cell. This factor does not surpass 0.1, thus fulfilling the requirement $k\cdot r \ll 1$ for this investigation. For comparison, the $k\cdot r$ factor over a wider frequency range are shown in \autoref{fig:kranalysissmalltem} for the normal sized TEM cell ($a = 40\,\mathrm{mm}$ and $b = 24\,\mathrm{mm}$) and a degenerately high TEM cell ($a = 10\,\mathrm{mm}$ and $b=44\,\mathrm{mm}$). The high TEM does not have a port impedance of $50\,\Omega$, and is an attempt to achieve a large $k\cdot r$ factor without higher-order modes propagating. The markers in \autoref{fig:kranalysis} indicate the cut-off frequency, in which the next higher-order mode propagates. They demonstrate, that even in the high TEM cell a $k\cdot r = 1$ is not achieved.
 
