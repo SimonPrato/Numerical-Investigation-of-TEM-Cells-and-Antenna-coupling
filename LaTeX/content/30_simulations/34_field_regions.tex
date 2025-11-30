@@ -56,15 +56,33 @@ The $k\cdot r$ factor is determined in \autoref{fig:kranalysissmalltem} in the f
 \end{figure}
 \todo{Fix figures: Titles and Legends}
 
-The power transferred to the output is shown in \autoref{fig:outputpowerdipoleloopsmalltem}. One trace shows the output power of the current loop, the other one of equivalent dipole moments imitating the traces in \autoref{fig:loop_small_tem_moments}. The magnitude of the maximum power is normalized to 1\,W to compare the plots qualitatively. Both quantities behave exactly the same. This indicates, that the non-linear dipole moment behavior over frequency is not the product of the coupling behavior to the TEM cell, but truly caused by the antenna's geometry. \todo{compare phases}
+Now, three simulations are conducted with different excitation sources in the small TEM cell:
 
-\begin{figure}[h]
+\begin{itemize}
+	\item The current loop 
+	\item The equivalent dipole sources $e_z$ and $m_m$ of the current loop
+	\item The equivalent magnetic dipole source $m_m$, neglecting $e_z$
+\end{itemize}
+
+\autoref{fig:outputpowercomparisonsmalltem} shows the output power over frequency normalized to 1\,W for all three constellations. The normalization is done to qualitatively discuss the frequency-dependent coupling behavior. \autoref{fig:phaseshiftcomparisonsmalltem} demonstrates the phase shift between the powers at the two waveports over frequency.
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/30_simulations/img/output_power_dipole_loop_small_tem}
-	\caption{Output power of the loop antenna in the small TEM cell and of the equivalent dipole moments}
-	\label{fig:outputpowerdipoleloopsmalltem}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/30_simulations/img/output_power_comparison_small_tem}
+		\caption{Output powers}
+		\label{fig:outputpowercomparisonsmalltem}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/30_simulations/img/phase_shift_comparison_small_tem}
+		\caption{Phase shifts}
+		\label{fig:phaseshiftcomparisonsmalltem}
+	\end{minipage}
 \end{figure}
 
-
+The frequency dependent behavior of the output power does not change depending on the type of dipole moment used. This is significant, because this shows that the dipole moments do not exhibit different coupling behaviors in the TEM cells. This is further proven in the phase shift plots. The magnetic dipole moment causes a constant phase shift of $-\pi$. If this was not the case, this would mean that the coupling behavior of the magnetic dipole moment in the TEM cell would change. Since the opposite is the case, this poses as good evidence against arguments of change in field regions causing the non-linear dipole moment behavior. Instead, it is very likely to be caused by the geometry of the antenna.
 
 
