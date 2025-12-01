@@ -2,15 +2,15 @@
 Magnetic and electric dipoles are an effective approach for modeling the radiation of electrically small antennas. They are defined as antennas with dimensions much less than one-tenth of the wavelength ($l\ll\lambda$)\cite[p. 151]{Balanis_1997}. By calculating the respective dipole moments, the coupling between antennas and TEM cells can be numerically estimated. This section provides a brief introduction to the underlying theory of this concept.
 
 \subsubsection{Electric Dipoles}
-An electric dipole is often described as two tiny charged metal spheres, which are connected with a linear and thin wire \cite{Griffiths_2024} or simply as an T-antenna containing charged capacitor-plates at the ends of the wire \cite{Balanis_1997}. The distance $d$ between those charges is very short compared to the wavelength ($d << \lambda$).%, therefore the dipole can be approximated as ideal\cite{Griffiths_2024}. 
-The electric dipole moment $\mathbf{p}$ is defined by the product of charges and their separation distance, as expressed in \autoref{eqn:elec_dipole_mom}\cite{Balanis_1997,Jackson}. %% Erklärung hier. Besser die Bücher zu referenzieren, als selbst etwas zu erfinden.
+An electric dipole is often described as two tiny charged metal spheres, which are connected with a linear and thin wire \cite[p. 467]{Griffiths_2024} or simply as an T-antenna containing charged capacitor-plates at the ends of the wire \cite[p. 151]{Balanis_1997}. The distance $d$ between those charges is very short compared to the wavelength ($d \ll \lambda$).%, therefore the dipole can be approximated as ideal\cite{Griffiths_2024}. 
+In the following, all time dependencies $\mathrm{e}^{-j\omega t}$ are omitted. The electric dipole moment $\mathbf{p}$ is defined by the product of charges and their separation distance, as expressed in \autoref{eqn:elec_dipole_mom}\cites[p.]{Balanis_1997}[p.410]{Jackson}. %% Erklärung hier. Besser die Bücher zu referenzieren, als selbst etwas zu erfinden.
 
 \begin{equation}
     \mathbf{p} = \iiint\mathbf{x'} \rho (\mathbf{x'})\mathrm{d}^3x'
     \label{eqn:elec_dipole_mom}
 \end{equation}
 
-\autoref{fig:electric_dipole} demonstrates a simple center-fed wire antenna with a narrow gap as the feedpoint. Since the wire is electrically small and very thin, it can be accurately modeled as an electric dipole \cite{Griffiths_2024,Jackson}. A current $I_0$ is injected at the feedpoint, which linearly drops to zero along the antenna arms, as described by \autoref{eqn:current_dipole}\cite{Jackson}.
+\autoref{fig:electric_dipole} demonstrates a simple center-fed wire antenna with a narrow gap as the feedpoint. Since the wire is electrically small and very thin, it can be accurately modeled as an electric dipole \cites[p. 468]{Griffiths_2024}[p. 412]{Jackson}. A current $I_0$ is injected at the feedpoint, which linearly drops to zero along the antenna arms, as described by \autoref{eqn:current_dipole}\cite[p. 412]{Jackson}.
 
 \begin{equation}
     I(z)= I_0\left( 1-\frac{2|z|}{d} \right)
@@ -26,14 +26,14 @@ The electric dipole moment $\mathbf{p}$ is defined by the product of charges and
     \label{fig:electric_dipole}
 \end{figure}
 
-Charge accumulates along the antenna's arms and is expressed as a charge per unit length $\rho'$. The charge distribution $\rho'$ is derived by the continuity equation in frequency domain, as shown in \autoref{eqn:charge_distribution_dipole}. It is uniformly distributed along each antenna arm \cite{Griffiths_2024,Jackson}.
+Charge accumulates along the antenna's arms and is expressed as a charge per unit length $\rho'$. The charge distribution $\rho'$ is derived by the continuity equation in frequency domain, as shown in \autoref{eqn:charge_distribution_dipole}. It is uniformly distributed along each antenna arm \cite[p. 412]{Jackson}.
 
 \begin{equation}
     \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}\frac{\mathrm{i}I(z)}{\omega} = \pm\frac{2\mathrm{i}I_0}{\omega d}
     \label{eqn:charge_distribution_dipole}
 \end{equation}
 
-Knowing the charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$ using \autoref{eqn:elec_dipole_mom}. This results in \autoref{eqn:dipole_mom_example}. The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite{Griffiths_2024}\cite{Jackson}. 
+Knowing the charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$ using \autoref{eqn:elec_dipole_mom}. This results in \autoref{eqn:dipole_mom_example}. The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite[p. 412]{Jackson}. 
 
 \begin{equation}
     \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\mathrm{d}z\cdot\mathbf{e}_z = \frac{\mathrm{i}I_0d}{2\omega}

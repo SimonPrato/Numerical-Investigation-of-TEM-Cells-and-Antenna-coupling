@@ -45,7 +45,7 @@ However, in a TEM cell, the normalized electric field strength is not necessaril
 \end{equation}
 \end{subequations}
 
-The normalized electric field of the TEM mode is then given by \autoref{eqn:eox_normalized} in x-direction and by \autoref{eqn:eoz_normalized} in z-direction \cite{Wilson_Ma_1986}. The equations follow from the singular integral-equation approach in \cite{Wilson_1981}. The formula is not valid for the gap regions. However, since there won't be any dipole moment placed there, it should still suffice. 
+The normalized electric field of the TEM mode is then given by \autoref{eqn:eox_normalized} in x-direction and by \autoref{eqn:eoz_normalized} in z-direction \cite{Wilson_Ma_1986}. The equations follow from the singular integral-equation approach in \cite{Wilson_1981}. The formula is not valid for the gap regions. However, since there won't be any dipole moment placed there, this approximation will suffice. These equations are to understand the influence of electrically small structures, which do not align with the TEM modes, but still couple with the TEM cell and influence the results. \todo{Is the series for several sine-waves fitting into the TEM cell, derived due to the nature of the Green's Function? If yes, then only the first-order must be used, since only the TEM mode is propagating. Now higher-order modes here.}
 
 \begin{subequations}
 
@@ -84,6 +84,27 @@ $Z_\mathrm{c}$ is the characteristic wave impedance, $a$ is half the width of th
 	\label{fig:delete}
 \end{figure}
 
+\todo{Electric normalized field intensity describes the amount of field strength necessary at a point in the TEM cell to achieve $1\,\sqrt{\mathrm{W}}$ power at the output}The normalized electric field intensity may be derived by the numerically resulting output power when placing dipole moments in the TEM cell. For example, \autoref{fig:outputpowereyoveroffset} demonstrates the output power of an electric dipole moment in the y-direction. It is shifted in the y-direction at center height between septum and upper TEM cell wall. Applying \autoref{eqn:e0x_mse} to the output power leads to the normalized magnitude of the field intensity in y-direction $e_y$. The distribution follows that of the magnitude of a sine wave, according to \autoref{eqn:eox_normalized}. There, at $y=0\,\mathrm{mm}$, the normalized electric field strength equals zero, and approaches a maximum at $y=\pm20\,\mathrm{mm}$. However, since this equation is valid outside the gap region, and the gap region is not relevant for further research, the is limited at an offset of $y=\pm15\,\mathrm{mm}$.
+
+Furthermore, \autoref{fig:} demonstrates the output power and the normalized $e_y$-field across the height from the septum to the upper TEM cell wall. The dipole moment is subject to an offset of $y=7.5\,\mathrm{mm}$ from the center. That is because the output power and normalized electric field strength is constantly zero at $y=0\,\mathrm{mm}$, independent of the height.
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/10_theory/img/output_power_ey_over_offset}
+		\caption{Output power and norm. E-field over offset}
+		\label{fig:outputpowereyoveroffset}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/10_theory/img/output_power_ey_over_height_w_offset}
+		\caption{Output power and norm. E-field over height}
+		\label{fig:outputpowereyoverheightwoffset}
+	\end{minipage}
+\end{figure}
 
 \todo{The electric field / magnetic field distribution of the TEM mode must be known ($e_0$). Other mode distributions are neither available, nor necessary. Calculations to find these field distributions can be found in \cite{4091811}. This would also solve the problem with not being able to shift the location of the electric dipole moment. In \cite{Sreenivasiah_Chang_Ma_1981}, the normalized electric field was also determined analytically, just with output power. IMPORTANT!!! Additionally, the electric field at the output port and the dipole location must be equal (in tem mode) for the formula to work. If they are not, then the formulas derived in \cite{4091811} must be used. That's why the formula does not work for offset shift of the dipole moment anymore. The electric field at the incident port must then be found out. How to use this in case of a shielding material? Not valid for only ez dipole. Additionally, field distributions of the TEM mode in a TEM cell is also derived in \cite{Wilson_1981}}
 
