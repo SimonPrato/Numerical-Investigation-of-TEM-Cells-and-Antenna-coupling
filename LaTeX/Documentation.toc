@@ -1,0 +1,51 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Dipole Theory}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Electric Dipoles}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Magnetic Dipoles}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Crossed Dipoles}{6}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Finite Element Method}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}General Idea}{6}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Dividing a computational domain into finite elements}{6}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Solving the differential equation}{8}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Adaptive solution process}{9}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Lorentz Reciprocity Theorem}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Green's Function}{11}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Scalar Green's Function}{11}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Dyadic Green's Function}{12}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Modes in TEM Cells}{12}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Power transfer of modes}{12}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Modes in rectangular waveguides}{14}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}TEM Mode in TEM Cells}{15}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Higher order modes in TEM cells}{17}{subsubsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.7}Electrically Small Radiating Sources in TEM Cells}{20}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Shielding}{24}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}ASTM ES7-83 Method}{26}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.2}Dual TEM cell}{26}{subsubsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.9}Radiated Field}{28}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Antenna Terminology}{28}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Field regions}{28}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Radiated Power}{30}{subsection.2.12}%
+\contentsline {section}{\numberline {3}Antennas}{30}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Antennas to Investigate}{30}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}IFA}{30}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Center fed monopole antenna}{30}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Crossed dipole antenna}{30}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Simulations}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Antennas}{31}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Inverted F-antenna}{31}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Center Fed Monopole Antenna}{38}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Monopole Antenna}{39}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Loop antenna}{41}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Serial Loop Antenna}{48}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}Offset of source antennas and eddy currents}{49}{subsubsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.2}Dipole Moments}{50}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Orientation and position in TEM Cell}{50}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Combining dipole moments with antennas}{52}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Application of dipole moments}{52}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Shielding Simulations}{52}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Shielding effectiveness of graphite}{52}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Shield effectiveness of FR4}{52}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Dual TEM Cell}{53}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Investigation of field regions}{53}{subsection.4.4}%
