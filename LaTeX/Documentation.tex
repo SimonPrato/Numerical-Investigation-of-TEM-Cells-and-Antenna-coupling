@@ -7,6 +7,7 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{amsmath}
+\numberwithin{figure}{section}
 \usepackage{placeins}
 \usepackage{esint}
 %\usepackage{subtextbf}
@@ -15,13 +16,21 @@
 %\usepackage{cite}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{hyperref}
+\usepackage[
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=black
+]{hyperref}
 \usepackage[style=numeric, backend=bibtex]{biblatex}
 \usepackage{todonotes}
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{upgreek}
 \usepackage{circuitikz}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\DeclareCaptionLabelSeparator{tab}{\hspace{1em}} % adjust 1em as needed
+\captionsetup[figure]{labelfont=bf,labelsep=tab}
 
 
 
@@ -136,7 +145,7 @@
 
 \section{Introduction}
 
-\section{Theoretical Basics}
+\section{Dipole Theory}
 \input{content/10_theory/11_dipole}
 \input{content/10_theory/12_hfss}
 \input{content/10_theory/13_lorentz_reciprocity}

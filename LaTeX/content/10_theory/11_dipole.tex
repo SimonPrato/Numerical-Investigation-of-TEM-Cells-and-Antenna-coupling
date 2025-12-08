@@ -1,102 +1,168 @@
-\subsection{Dipoles}\label{sec:dipoles}
+
 Magnetic and electric dipoles are an effective approach for modeling the radiation of electrically small antennas. They are defined as antennas with dimensions much less than one-tenth of the wavelength ($l\ll\lambda$)\cite[p. 151]{Balanis_1997}. By calculating the respective dipole moments, the coupling between antennas and TEM cells can be numerically estimated. This section provides a brief introduction to the underlying theory of this concept.
 
-\subsubsection{Electric Dipoles}
-An electric dipole is often described as two tiny charged metal spheres, which are connected with a linear and thin wire \cite[p. 467]{Griffiths_2024} or simply as an T-antenna containing charged capacitor-plates at the ends of the wire \cite[p. 151]{Balanis_1997}. The distance $d$ between those charges is very short compared to the wavelength ($d \ll \lambda$).%, therefore the dipole can be approximated as ideal\cite{Griffiths_2024}. 
-In the following, all time dependencies $\mathrm{e}^{-j\omega t}$ are omitted. The electric dipole moment $\mathbf{p}$ is defined by the product of charges and their separation distance, as expressed in \autoref{eqn:elec_dipole_mom}\cites[p.]{Balanis_1997}[p.410]{Jackson}. %% Erklärung hier. Besser die Bücher zu referenzieren, als selbst etwas zu erfinden.
+\subsection{Electric Dipoles}
+
+An electric dipole is described as two tiny charged metal spheres or two capacitor-plates, which are connected with a linear wire of length $d$ and diameter $a$ \cite[p. 467]{Griffiths_2024}, \cite[p. 151]{Balanis_1997}. The charges move and accelerate along the wire, creating radiation. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cite[p. 151]{Balanis_1997}, \cite[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length usually must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries. The current is spatially uniform throughout the wire.
+
+Wires that are too long to be modeled as an infinitesimal dipole, but short enough to be considered electrically small ($\lambda / 50 < l \leq \lambda/10$), are classified as short physical dipoles \cite[pp. 162-163]{Balanis_1997}. They are a more accurate and useful representation of a linear wire antenna, and investigated further. In the remainder of this thesis, the term electric dipole refers specifically to short physical electric dipoles. Furthermore, time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted.
+
+A current $I_0$ is fed into the short, center-fed, linear antenna shown in \autoref{fig:electric_dipole}. The current along the antenna arms $I(z)$ linearly drops to zero \cite[p. 412]{Jackson}, as visualized in \autoref{fig:electricdipolecurrent}. Mathematically, it is described by, 
 
 \begin{equation}
-    \mathbf{p} = \iiint\mathbf{x'} \rho (\mathbf{x'})\mathrm{d}^3x'
-    \label{eqn:elec_dipole_mom}
-\end{equation}
-
-\autoref{fig:electric_dipole} demonstrates a simple center-fed wire antenna with a narrow gap as the feedpoint. Since the wire is electrically small and very thin, it can be accurately modeled as an electric dipole \cites[p. 468]{Griffiths_2024}[p. 412]{Jackson}. A current $I_0$ is injected at the feedpoint, which linearly drops to zero along the antenna arms, as described by \autoref{eqn:current_dipole}\cite[p. 412]{Jackson}.
-
-\begin{equation}
-    I(z)= I_0\left( 1-\frac{2|z|}{d} \right)
+    I(z)= I_0\left( 1-\frac{2|z|}{d} \right).
     \label{eqn:current_dipole}
 \end{equation}
 
-%Hier das Ergebnis der Integration anschreiben. Die integration selbst auch anschreiben- 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\linewidth]{content/10_theory/img/electric_dipole_drawing.png}
-    \caption{Electric dipole}
+    \caption{Geometrical arrangement of a linear center-fed wire antenna.}
     \label{fig:electric_dipole}
 \end{figure}
 
-Charge accumulates along the antenna's arms and is expressed as a charge per unit length $\rho'$. The charge distribution $\rho'$ is derived by the continuity equation in frequency domain, as shown in \autoref{eqn:charge_distribution_dipole}. It is uniformly distributed along each antenna arm \cite[p. 412]{Jackson}.
+Charge accumulates along the antenna's arms. It is expressed as a charge per unit length $\rho'$ due to the thin wire. It is derived by the continuity equation,
 
 \begin{equation}
-    \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}\frac{\mathrm{i}I(z)}{\omega} = \pm\frac{2\mathrm{i}I_0}{\omega d}
+    \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}j\frac{ I(z)}{\omega} = \pm j\frac{2  I_0}{\omega d}.
     \label{eqn:charge_distribution_dipole}
 \end{equation}
 
-Knowing the charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$ using \autoref{eqn:elec_dipole_mom}. This results in \autoref{eqn:dipole_mom_example}. The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite[p. 412]{Jackson}. 
+$\rho'$ is uniformly distributed along each antenna arm \cite[p. 412]{Jackson}.
+
+
+
+
+An important metric is the electric dipole moment $\mathbf{p}$. It is defined as the product of charge density $\rho$ along the antenna and their source point $\mathbf{x'}$ \cite[p.410]{Jackson}, and generally expressed as 
 
 \begin{equation}
-    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\mathrm{d}z\cdot\mathbf{e}_z = \frac{\mathrm{i}I_0d}{2\omega}
+	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\mathrm{d}\mathbf{x'}.
+	\label{eqn:elec_dipole_mom}
+\end{equation}
+
+The vector $\mathbf{x}=\mathbf{\hat{a}}_x x + \mathbf{\hat{a}}_y y + \mathbf{\hat{a}}_z z$ represents the observation point coordinates, while $\mathbf{x'}=\mathbf{\hat{a}}_x x' + \mathbf{\hat{a}}_y y' + \mathbf{\hat{a}}_z z'$ represents the source point coordinates. The vectors $\mathbf{\hat{a}}_x$, $\mathbf{\hat{a}}_y$, and $\mathbf{\hat{a}}_z$ are unit vectors along the x-, y-, and z-directions, respectively. The integration is performed over the volume $V$ of the antenna.
+
+Knowing the charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$ through \autoref{eqn:elec_dipole_mom}. This results in, 
+
+\begin{equation}
+    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\,\mathrm{d}z\cdot\mathbf{\hat{a}}_z = j\frac{I_0d}{2\omega}\cdot\mathbf{\hat{a}}_z.
     \label{eqn:dipole_mom_example}
 \end{equation}
 
-Next, the vector potential $\mathbf{A}$ is determined. It is generally defined in \autoref{eqn:vector_pot}\cite{Balanis_1997}\cite{Jackson}. % Eventuell extra in einem anderen Kapitel diese Bascis anschreiben. 
-
+The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite[p. 412]{Jackson}, \cite[p. 155]{Griffiths_2024}. Next, the vector potential $\mathbf{A}$ is determined. It is generally defined as  \cites[p. 152]{Balanis_1997}[p. 410]{Jackson},
+ 
 \begin{equation}
-    \mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{\mathrm{i}kr}}{r}\iiint \mathbf{J}(\mathbf{x'})\mathrm{d}^3x'
+    \mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\mathrm{d}\mathbf{x'}.
     \label{eqn:vector_pot}
 \end{equation}
 
-In the case of an electric dipole, the calculations of the vector potential $\mathbf{A}$ simplifies to \autoref{eqn:vector_pot_elec_dipole}\cite{Jackson}.
+
+The variable $r$ is the distance from any source point to the observation point $\left| \mathbf{x}-\mathbf{x'} \right|$. The permeability is described by $\mu$ and the term $\mathrm{e}^{jkr}$ the propagation of the wave, where $k=2\pi/\lambda$ is the propagation factor, or often called wavenumber \cite[p. 704]{Balanis_1997}. $\mathbf{J}$ is the current density in the source region. The calculations of $\mathbf{A}$ simplify to \cite[p. 410]{Jackson},
 
 \begin{equation}
-    \mathbf{A} (\mathbf{x})=-\frac{\mathrm{i\mu_0\omega}}{4\pi}\mathbf{p}\frac{\mathrm{e}^{\mathrm{i}kr}}{r}
+    \mathbf{A} (\mathbf{x})=-j\frac{\mathrm{\mu\omega}}{4\pi}\mathbf{p}\frac{\mathrm{e}^{-jkr}}{r}
     \label{eqn:vector_pot_elec_dipole}
 \end{equation}
 %Should the calculation of fields even be included? I don't need them for research. But the Field equations are important for explaining the frequency behavior of the electric dipole moment. This can be done by the radiation resistance in \autoref{eqn:elec_rad_res}. In our example, the radiation power depends on the frequency squared ($\mathbf{p}$\textasciitilde
 
-Any other field quantities can be derived out of the vector potential $\mathbf{A}$, such as the electric field strength $\mathbf{E}$ and magnetic field strength $\mathbf{H}$. \autoref{eqn:elec_and_mag_field_dipole} expresses their relation \cite{Balanis_1997}. 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.3\linewidth]{content/10_theory/img/electric_dipole_current}
+	\caption{Current distribution across linear wire antenna. It has a maximum at the feedpoint, and drops to zero at points $d/2$ and $-d/2$.}
+	\label{fig:electricdipolecurrent}
+\end{figure}
+
+
+Any other field quantities can be derived out of the vector potential $\mathbf{A}$, such as the electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$. This is achieved in a simpler way, when first transforming the Cartesian components of $\mathbf{A}$ into spherical ones, as demonstrated by \cite[p. 153]{Balanis_1997},
+
+\begin{equation}
+	\begin{bmatrix}
+		A_r  \\
+		A_\theta \\
+		A_\phi
+	\end{bmatrix} = 	
+	\begin{bmatrix}
+	\sin \theta \cos \phi & \sin \theta \sin \phi & \cos \theta\\
+	\cos \theta \cos \phi &  \cos \theta \sin \phi & - \sin\theta\\
+	- \sin\phi  & \cos\phi  & 0
+	\end{bmatrix}
+		\begin{bmatrix}
+		A_x  \\
+		A_y \\
+		A_z
+	\end{bmatrix}
+\end{equation}
+
+$\mathbf{E}$ and $\mathbf{H}$ are then expressed by \cite[p. 153]{Balanis_1997},
 
 \begin{subequations}\label{eqn:elec_and_mag_field_dipole}
     \begin{equation}
-    \mathbf{H} = \hat{a}_{\phi} \frac{1}{\mu r} \left[ \frac{\partial}{\partial r} (r A_{\theta}) - \frac{\partial A_{r}}{\partial \theta} \right]
-    \end{equation}
+    \mathbf{H} =\frac{1}{\mu r} \left[ \frac{\partial}{\partial r} (r A_{\theta}) - \frac{\partial A_{r}}{\partial \theta} \right]  \mathbf{\hat{\mathbf{a}}_\phi},
+    \end{equation}\label{eqn:h_dipole}
     
     \begin{equation}
-    \mathbf{E}=-\mathrm{i}\omega\mathbf{A}-\mathrm{i}\frac{1}{\omega\mu\epsilon}\nabla\left(\nabla\cdot\mathbf{A}\right)
-    \end{equation}
+    \mathbf{E}=-j\omega\mathbf{A}-j\frac{1}{\omega\mu\epsilon}\nabla\left(\nabla\cdot\mathbf{A}\right).
+    \end{equation}\label{eqn:e_dipole}
     
 \end{subequations}
 
-The power radiated by an antenna is determined from the time-averaged Poynting vector $ \langle \mathbf{S} \rangle$. \autoref{eqn:time_averaged_poynting} defines this quantity, where only the real part is relevant, since it represents the actual radiated power \cite{Balanis_1997}.
+Substituting $\mathbf{A}$ into \autoref{eqn:h_dipole} and \autoref{eqn:e_dipole} reduces them to 
+
+\begin{subequations}
+	\begin{equation}
+		H_r=H_\theta=0,
+	\end{equation}
+	\begin{equation}
+		H_\phi = j\frac{k I_0 l \sin\theta}{4\pi r}\left[1 + \frac{1}{jkr}\right]\mathrm{e}^{-jkr},
+	\end{equation}
+\end{subequations}
+
+and,
+
+\begin{subequations}
+	\begin{equation}
+		E_r = \eta \frac{I_0 l \cos \theta}{2\pi r^2}\left[ 1 + \frac{1}{jkr} \right] \mathrm{e}^{-jkr},
+	\end{equation}
+	\begin{equation}
+		E_\theta = j\eta \frac{kI_0 l \sin \theta }{4\pi r}\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] \mathrm{e}^{-jkr},
+	\end{equation}
+	\begin{equation}
+		E_\phi = 0.
+	\end{equation}
+\end{subequations}
+
+
+The total radiated power of the antenna is obtained by integrating the complex Poynting vector $\mathbf{W}$ over a closed surface surrounding the antenna \cite[p. 154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{W}$ is defined by 
 
 \begin{equation}
-    \langle \mathbf{S} \rangle = \frac{1}{2} \, \Re \{ \mathbf{E} \times \mathbf{H}^* \}
+	\mathbf{W}=\frac{1}{2}\left(\mathbf{E}\times\mathbf{H}^*\right) .
+\end{equation}
+
+The real power transfer is derived through the time-averaged Poynting vector $\mathbf{W}_\mathrm{av}$ \cite[p. 160]{Balanis_1997}, which is calculated by
+
+\begin{equation}
+    \mathbf{W}_\mathrm{av} = \frac{1}{2} \, \Re \{ \mathbf{E} \times \mathbf{H}^* \}.
     \label{eqn:time_averaged_poynting}
 \end{equation}
 
-By integrating the time-averaged Poynting vector $ \langle \mathbf{S} \rangle$ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, and in case of an electric dipole is expressed as \autoref{eqn:elec_rad_res}. The radiated power increases with the frequency squared, as the antenna becomes more efficient. This relation holds, as long as the antenna is electrically small.
+By integrating the time-averaged real Poynting vector $ \mathbf{W}_\mathrm{av} $ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, opposed to the imaginary part. In case of an electric dipole $P_{\mathrm{rad}}$ is expressed as
 
 \begin{equation}
-    P_{\mathrm{rad}} = \frac{\mathrm{c}^2\mathrm{Z_0}\mathrm{k}^4}{12\pi}|\mathbf{p}|^2
+    P_{\mathrm{rad}} = \frac{\mathrm{c}^2\mathrm{Z_0}\mathrm{k}^4}{12\pi}|\mathbf{p}|^2.
     \label{eqn:elec_rad_res}
 \end{equation}
 
-The electric dipole described in this section approximate the real behavior of electrically short antennas. However, special care must be taken of the excitation method and shape, as it influences the results heavily \cite{Jackson}. Additionally, any antenna investigated through this method must remain as small as possible compared to the wavelength $\lambda$, to reduce any analytical approximation errors. 
+The radiated power increases with the frequency squared, as the antenna becomes more efficient. This relation holds over the whole frequency range, as long as the antenna is electrically small.
 
-\todo{Balanis Book chapter: image theory of dipoles. Additionally, describe electric field which increases quadratically with frequency, leading to an increase in dipole moment. Griffiths.
-}
+The short physical electric dipole described in this section approximate the behavior of electrically short antennas. Special care must be taken of the excitation method and shape, as it influences the behavior \cite[p. 413]{Jackson}. Additionally, any antenna investigated through this method must remain as small as possible compared to the wavelength $\lambda$, to reduce any analytical approximation errors. 
 
-% Next, the electric and magnetic fields, how the dipole moment is calculated with this and how ansys HFSS uses this. Look also in the other two ressources, the other two books. Ansys HFSS handles them as physical dipole antennas? Maybe add radiation pattern. Additionally, describe how the electric field odminates in electric dipoles. In Dominik's paper, the magnetic coupling dominates, because of the magnetic dipole.
+\todo[inline]{Image theory may be added for TEM cell explanations \cite[p. 184]{Balanis}}
 
-% The behavior of the electric dipole may be divided into three categories\cite{Griffiths_2024,Jackson}:
-% \begin{enumerate}
-%     \item The near zone, 
-% \end{enumerate}
 
-\subsubsection{Magnetic Dipoles}
+\subsection{Magnetic Dipoles}
 
-The magnetic dipole is modeled as a current loop with radius $b$, whose axis is perpendicular to the plane of the loop. Its radiated fields are analogous to those of an electric dipole, with the electric and magnetic fields interchanged \cite{Balanis_1997}. \autoref{fig:magnetic_dipole_drawing} shows a magnetic dipole.
+The magnetic dipole is modeled as a current loop with radius $b$, whose axis is perpendicular to the plane of the loop. Its radiated fields are analogous to those of an electric dipole, with the electric and magnetic fields interchanged \cite[p. ]{Balanis_1997}. \autoref{fig:magnetic_dipole_drawing} shows a magnetic dipole.
 
 \begin{figure}[h]
     \centering
