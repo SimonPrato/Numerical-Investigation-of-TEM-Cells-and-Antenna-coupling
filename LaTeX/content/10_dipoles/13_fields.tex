@@ -2,7 +2,20 @@
 \subsection{Antenna Terminology}
 Is this chapter necessary?
 \subsection{Field regions}
-Field regions, energy storage in each region, field distribution and auxiliary functions.
+
+The field quantities $\mathbf{E}$ and $\mathbf{H}$ have been derived for an infinitesimal electric dipole in \cref{eqn:e_er,eqn:e_et,eqn:e_ep} and \cref{eqn:e_hr,eqn:e_hpt}. They are valid everywhere except for the source region \cite[p. 156]{Balanis_1997}. Depending on the distance $r$ to the dipole, the behavior of the fields changes. This becomes apparent when investigating $E_\theta$ in \autoref{eqn:e_et}, specifically expressions 1 and 2 in
+
+\begin{equation}
+	E_\theta = j\eta \frac{kI_0 d \sin \theta }{4\pi r}\left[ 1 + \underbrace{\frac{1}{jkr}}_{\text{expression 1}} - \underbrace{\frac{1}{(kr)^2}}_{\text{expression 2}} \right] \mathrm{e}^{-jkr}.
+	\label{eqn:e_et_2}
+\end{equation}
+
+If the distance $r < \lambda/2\pi$ $(kr < 1)$, then expression 2 dominates the value in the brackets. Consequently, the energy stored in this region is mostly imaginary. It is referred to as the near-field region.
+
+At $r = \lambda/2\pi$ $(kr = 1)$, expression 1 and 2 are of equal magnitude. This leads to the energy stored \todo{Continue}
+
+\todo[inline]{In case of a short dipole, the field regions change as shown below.}
+
 
 The region around an antenna may be divided into three sub-regions:
 \begin{itemize}
@@ -69,7 +82,7 @@ At distances beyond the radian distance (kr > 1), in the intermediate-field regi
 
 The wave-number $k$ is dependent on the frequency. Therefore, when placing an infinitesimal dipole into a TEM cell, its coupling behavior depends on the distance and the field regions, that couple. For that reason, the $kr$ number shall be investigated over the whole frequency range for different distances.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/energy_fields_regions}
 	\caption{Magnitude of the terms $1/(kr)$ and $1/(kr)^2$ depending on distance $r$ \cite{Balanis_1997}}

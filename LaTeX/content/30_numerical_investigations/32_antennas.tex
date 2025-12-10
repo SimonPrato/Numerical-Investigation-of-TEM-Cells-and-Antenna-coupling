@@ -127,7 +127,7 @@ The antenna may then be replaced with those two dipole excitations in the center
 
 
 
-\autoref{fig:dipole_moments_over_freq_ifa} shows the dipole moments over frequency. The electric dipole moment $m_e$ has been normalized to the free-space wave impedance of $377\,\Omega$ to make the dipole moments comparable. The antenna input power has been set to 142588.47\,W, because this leads to an output power of 1\,W at a frequency of 1\,GHz. The magnetic dipole moment is much larger than the electric dipole moment, because the current loop of the antenna is aligned with the TEM cell's magnetic fields, but the line current is not with the TEM electric fields. The magnetic dipole moments rises linearly with the frequency, which is equal to a quadratic increase of power. Only the TEM modes has been considered in the simulation, as other modes disturb the calculations. 
+\autoref{fig:dipole_moments_over_freq_ifa} shows the dipole moments over frequency. The electric dipole moment $m_e$ has been normalized to the free-space wave impedance of $377\,\Omega$ to make the dipole moments comparable. This is possible because the dipole moments are interchangeable through the wave impedance \cite[p. 414]{Jackson}. The antenna input power has been set to 142588.47\,W, because this leads to an output power of 1\,W at a frequency of 1\,GHz. The magnetic dipole moment is much larger than the electric dipole moment, because the current loop of the antenna is aligned with the TEM cell's magnetic fields, but the line current is not with the TEM electric fields. The magnetic dipole moments rises linearly with the frequency, which is equal to a quadratic increase of power. Only the TEM modes has been considered in the simulation, as other modes disturb the calculations. 
 
 The electric field $\mathbf{e_0}$ is approximated with \autoref{eqn:ifa_e_field_approx} for the purpose of interpolation over frequencies and analytical analysis. The constant $u$ is a scaling factor, which must be adjusted to fit the real electric field values. In this case, this constant equals $u=820.34$. The left-hand side term $|a|\cdot e_{0,z}$ is the overall electric field at the measurement point according to \autoref{eqn:modal_superposition1}. \autoref{fig:output_power_e_fields_over_freq_ifa} shows the resulting plot. 
 
@@ -544,7 +544,7 @@ Next, the electric and magnetic near field is investigated. The wave impedance $
 \end{figure}
 
 The Skin-effect reduces the area in which the current flows, therefore increasing resistance. This appears due to the reduction of the depth, in which the electromagnetic waves enter. It is also called Skin depth and mathematically described by \autoref{eqn:skin_depth}. It depends on the imaginary part of the wave number $\kappa$, which is described in \autoref{eqn:kappa}. For high conducting materials $\left(\sigma >> \epsilon\omega\right)$, the dependency of the skin depth $d$ on the frequency can be described therefore as $d \propto 1/\sqrt{\omega}$. Since the power dispersion is linearly proportional to the area of the conductor and therefore Skin-depth, it shows the same dependency on the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$ \cite{Griffiths_2024}.  
-\todo{Own little chapter for skin effect?}
+\todo{Own little chapter for skin effect? Loop antennas are known for higher conductor losses than radiation Balanis page 231}
 
 \begin{subequations}
 	\begin{equation}
