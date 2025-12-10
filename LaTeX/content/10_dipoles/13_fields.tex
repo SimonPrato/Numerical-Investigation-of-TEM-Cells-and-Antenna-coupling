@@ -1,0 +1,85 @@
+\subsection{Radiated Field}\label{sec:rad_fields}
+\subsection{Antenna Terminology}
+Is this chapter necessary?
+\subsection{Field regions}
+Field regions, energy storage in each region, field distribution and auxiliary functions.
+
+The region around an antenna may be divided into three sub-regions:
+\begin{itemize}
+	\item Reactive near-field region
+	\item Radiating near-field or Fresnel region
+	\item Far-field or Fraunhofer region
+\end{itemize}
+
+They are shown in \autoref{fig:fieldregionsantenna}. These regions are distinguished for most antennas using the wavelength $\lambda$ and the largest dimension of the antenna $D$. The nearest region to the antenna, the reactive near-field region, is a sphere with radius $R_1$, which is calculated with \autoref{eqn:region_r1}. It is characterized by the predominantly reactive fields in it. The next region, the radiating near-field region, is located around the first, within a sphere of radius $R_2$ calculated in \autoref{eqn:region_r2}. In there, the radiating fields dominate and the angular field distribution is dependent on the distance to the antenna. In the largest and last region, the far-field region, the angular field distribution is independent of the distance to the antenna \cite{Balanis_1997}.
+
+\begin{subequations}
+	\begin{equation}
+		R_1=0.62\sqrt{D^3/\lambda}
+		\label{eqn:region_r1}
+	\end{equation}
+	\begin{equation}
+	R_2=2D^2/\lambda
+	\label{eqn:region_r2}
+	\end{equation}
+\end{subequations}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\linewidth]{content/img/field_regions_antenna}
+	\caption{Field regions of an antenna \cite{Balanis_1997}}
+	\label{fig:fieldregionsantenna}
+\end{figure}
+
+The electrically short antennas located in the TEM cell interact with it mostly through the reactive near-field region. However, if the TEM cell is large and frequencies are high, the coupling occurs over the radiating near-field. There, the field distributions are different, hence the dipole moments couple differently over frequency to the cell. \todo[inline]{Is this even possible without reaching other modes behavior? And demonstrate the fields over frequency and distance, which changes differently in different regions}.
+
+An infinitesimal dipole is taken as an antenna. The fields are calculated through the auxiliary fields, as described earlier by \autoref{eqn:elec_and_mag_field_dipole}, which leads to \autoref{eqn:inf_dipole_h_field} for the magnetic field strength and \autoref{eqn:inf_dipole_e_field} for the electric field strength. Those equations are valid everywhere, except for the source point \cite{Balanis_1997}.
+
+\begin{subequations}\label{eqn:inf_dipole_h_field}
+	\begin{equation}\label{eqn:hr_htheta}
+		H_r = H_\theta = 0
+	\end{equation}
+	\begin{equation}\label{eqn:hphi}
+		H_\phi = j \frac{k I_0 l \sin \theta}{4 \pi r}
+		\left[ 1 + \frac{1}{j k r} \right] e^{-j k r}
+	\end{equation}
+\end{subequations}
+
+
+\begin{subequations}\label{eqn:inf_dipole_e_field}
+	\begin{equation}\label{eqn:er}
+		E_r = \eta \frac{I_0 l \cos \theta}{2 \pi r^2} 
+		\left[ 1 + \frac{1}{jkr} \right] e^{-jkr}
+	\end{equation}
+	
+	\begin{equation}\label{eqn:etheta}
+		E_\theta = j \eta \frac{k I_0 l \sin \theta}{4 \pi r} 
+		\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] e^{-jkr}
+	\end{equation}
+
+	\begin{equation}\label{eqn:ephi}
+		E_\phi = 0
+	\end{equation}
+\end{subequations}
+
+The distance of $\lambda / 2\pi$, leading to $kr = 1$, is called radian distance, where $r$ is the distance to the antenna and $k$ is the free-space wave number. There, the real and imaginary part for both $H_\phi$ and $E_r$ is equal. Furthermore in $E_\theta$, only the $1/(jkr)$ term contributes to the field, because the other terms cancel each other out. The radian distance essentially marks a point of equal imaginary and stored power \cite{Balanis_1997}.
+
+In distances smaller than the radian distance $kr<1$, the fields are largely reactive and located in a reactive near-field region. There, the field strength decreases with the cube of the distance ($\propto 1/r^3$).  
+At distances beyond the radian distance (kr > 1), in the intermediate-field region, the field strength decreases with the square of the distance ($\propto 1/r^2$) \cite{Balanis_1997}. This behavior is visualized in \autoref{fig:energyfieldsregions}.
+
+The wave-number $k$ is dependent on the frequency. Therefore, when placing an infinitesimal dipole into a TEM cell, its coupling behavior depends on the distance and the field regions, that couple. For that reason, the $kr$ number shall be investigated over the whole frequency range for different distances.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{content/img/energy_fields_regions}
+	\caption{Magnitude of the terms $1/(kr)$ and $1/(kr)^2$ depending on distance $r$ \cite{Balanis_1997}}
+	\label{fig:energyfieldsregions}
+\end{figure}
+
+
+
+
+
+\subsection{Radiated Power}
+Important for the Lorentz Reciprocity Part.
+
