@@ -125,14 +125,14 @@ The real power transfer is derived through the time-averaged Poynting vector $\m
 	\label{eqn:time_averaged_poynting}
 \end{equation}
 
-By integrating the time-averaged real Poynting vector $ \mathbf{W}_\mathrm{av} $ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, opposed to the imaginary part. $P_{\mathrm{rad}}$ is expressed as \cite[p. 155]{Balanis_1997}
-
-\begin{equation}
-	P_{\mathrm{rad}} = \eta \left(\frac{\pi}{3}\right) \left|\frac{I_0l}{\lambda}\right|^2 
-	\label{eqn:elec_rad_res}
-\end{equation}
-
-The radiated power increases, at least in the near-field region, with the frequency squared \cite[p. 412]{Jackson}. This relation holds until the frequency is too large to consider the antenna as electrically small.
+%By integrating the time-averaged real Poynting vector $ \mathbf{W}_\mathrm{av} $ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, opposed to the imaginary part. $P_{\mathrm{rad}}$ is expressed as \cite[p. 155]{Balanis_1997}
+%
+%\begin{equation}
+%	P_{\mathrm{rad}} = \eta \left(\frac{\pi}{3}\right) \left|\frac{I_0l}{\lambda}\right|^2 
+%	\label{eqn:elec_rad_res}
+%\end{equation}
+%
+%The radiated power increases, at least in the near-field region, with the frequency squared \cite[p. 412]{Jackson}. This relation holds until the frequency is too large to consider the antenna as electrically small.
 
 
 
@@ -193,13 +193,13 @@ The formulation of $\mathbf{A}$ now contains an additional factor of $1/2$, comp
 	\label{fig:electricdipolecurrent}
 \end{figure}
 
-The electric field intensity $\mathbf{E}$, the magnetic field intensity $\mathbf{H}$ and the radiated power $P_\mathrm{rad}$ can be derived analogous to the infinitesimal dipole. $P_\mathrm{rad}$ is expressed as \cite[p. 165]{Balanis_1997}
-
-\begin{equation}
-	P_{\mathrm{rad}} = \eta \left(\frac{\pi}{12}\right) \left|\frac{I_0l}{\lambda}\right|^2 
-\end{equation}
-
-and is also smaller by a factor of $1/4$ compared to $P_\mathrm{rad}$ of the infinitesimal dipole in \autoref{eqn:elec_rad_res}.
+%The electric field intensity $\mathbf{E}$, the magnetic field intensity $\mathbf{H}$ and the radiated power $P_\mathrm{rad}$ can be derived analogous to the infinitesimal dipole. $P_\mathrm{rad}$ is expressed as \cite[p. 165]{Balanis_1997}
+%
+%\begin{equation}
+%	P_{\mathrm{rad}} = \eta \left(\frac{\pi}{12}\right) \left|\frac{I_0l}{\lambda}\right|^2 
+%\end{equation}
+%
+%and is also smaller by a factor of $1/4$ compared to $P_\mathrm{rad}$ of the infinitesimal dipole in \autoref{eqn:elec_rad_res}.
 
 The short physical electric dipole described in this section approximate the behavior of electrically short antennas. Special care must be taken of the excitation method and shape, as it influences the behavior \cite[p. 413]{Jackson}. Additionally, any antenna investigated through this method must remain as small as possible compared to the wavelength $\lambda$, to reduce any analytical approximation errors. 
 
@@ -261,7 +261,6 @@ and,
 
 The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole \cite[p. 238]{Balanis_1997}. 
 
-The radiated power $P_\mathrm{rad}$ of the small current loop is given by \cite[p. 238]{Balanis_1997}
 
 
 \begin{figure}[t]
@@ -271,9 +270,14 @@ The radiated power $P_\mathrm{rad}$ of the small current loop is given by \cite[
 	\label{fig:magnetic_dipole_drawing}
 \end{figure}
 
-\begin{equation}
-	P_\mathrm{rad}=\eta\left( \frac{\pi}{12} \right) (kb)^4 \left|I_0\right|.
-\end{equation}
+%The radiated power $P_\mathrm{rad}$ of the small current loop is given by \cite[p. 238]{Balanis_1997}
+%
+%
+%\begin{equation}
+%	P_\mathrm{rad}=\eta\left( \frac{\pi}{12} \right) (kb)^4 \left|I_0\right|^2.	
+%\end{equation}
+%
+%\todo{The radiation resistance might not be the driving force regarding the coupling...}
 
 %\autoref{fig:currentloopequcirc} shows an equivalent circuit of the small current loop. The voltage across the load is given by
 %
