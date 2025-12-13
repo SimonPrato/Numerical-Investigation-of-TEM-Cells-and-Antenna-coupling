@@ -7,6 +7,7 @@
 \usepackage{float}
 \usepackage{tabularx}
 \usepackage{amsmath}
+\numberwithin{figure}{section}
 \usepackage{placeins}
 \usepackage{esint}
 %\usepackage{subtextbf}
@@ -15,13 +16,25 @@
 %\usepackage{cite}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{hyperref}
+\usepackage[
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=black
+]{hyperref}
 \usepackage[style=numeric, backend=bibtex]{biblatex}
 \usepackage{todonotes}
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{upgreek}
 \usepackage{circuitikz}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\DeclareCaptionLabelSeparator{tab}{\hspace{1em}} % adjust 1em as needed
+\captionsetup[figure]{labelfont=bf,labelsep=tab}
+
+\usepackage{cleveref}
+\crefname{equation}{Equation}{Equations}
+\Crefname{equation}{Equation}{Equations}
 
 
 
@@ -45,7 +58,7 @@
 \begin{titlepage}	
 	{\sffamily		
 		\begin{center}			
-			\includegraphics[width=30mm]{content/00_introduction/img/TU_Graz_Logo.png}
+			\includegraphics[width=30mm]{content/img/TU_Graz_Logo.png}
 			
 			\vfill\vfill\vfill
 			\vfill\vfill\vfill
@@ -83,7 +96,7 @@
 			
 			\vfill
 			
-			\includegraphics[width=30mm]{content/00_introduction/img/igte_logo.png}
+			\includegraphics[width=30mm]{content/img/igte_logo.png}
 			
 			%% OPTIONAL: second supervisor/name of the faculty, etc.
 					
@@ -114,7 +127,7 @@
 \fi
 
 \selectlanguage{english}
-\listoftodos
+%\listoftodos
 % Inhaltsverzeichnis
 	\tableofcontents  
 
@@ -135,24 +148,26 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
+\input{content/00_introduction/01_introduction}
 
-\section{Theoretical Basics}
-\input{content/10_theory/11_dipole}
-\input{content/10_theory/12_hfss}
-\input{content/10_theory/13_lorentz_reciprocity}
-\input{content/10_theory/14_greens_function}
-\input{content/10_theory/15_tem_cells}
-\input{content/10_theory/16_emission_characteristic_dipole_in_tem}
-\input{content/10_theory/17_shielding}
-\input{content/10_theory/18_fields}
+\section{Dipole Theory}
+\input{content/10_dipoles/11_dipole}
+\input{content/10_dipoles/12_antennas_to_investigate}
+\input{content/10_dipoles/13_fields}
 
-\section{Antennas}
-\input{content/20_antennas/21_antennas_to_investigate}
+\section{Guided Waves}
+\input{content/20_guided_waves/21_lorentz_reciprocity}
+\input{content/20_guided_waves/22_greens_function}
+\input{content/20_guided_waves/23_tem_cells}
+\input{content/20_guided_waves/24_dipole_tem}
+\input{content/20_guided_waves/25_shielding}
 
-\section{Simulations}\label{sec:simulations}
-\input{content/30_simulations/31_antennas}
-\input{content/30_simulations/32_dipole_moments}
-\input{content/30_simulations/33_shielding}
+\section{Numerical Investigations}\label{sec:simulations}
+\input{content/30_numerical_investigations/31_hfss}
+\input{content/30_numerical_investigations/32_antennas}
+\input{content/30_numerical_investigations/33_dipole_moments}
+\input{content/30_numerical_investigations/34_field_regions}
+\input{content/30_numerical_investigations/35_shielding}
 \todo{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}
 
 

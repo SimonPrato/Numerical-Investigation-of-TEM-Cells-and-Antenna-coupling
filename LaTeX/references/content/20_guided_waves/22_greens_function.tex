@@ -1,0 +1,77 @@
+\subsection{Green's Function}
+
+\subsubsection{Scalar Green's Function}\label{sec:scal_green}
+
+Green's function describes the response of a linear differential operator $L$ to a point source as an input, which is modeled by delta-function $\delta$. Its general form is 
+
+\begin{equation}
+    \mathrm{L}G(\mathbf{x},\mathbf{x'}) = \delta(\mathbf{x}-\mathbf{x'}).
+    \label{eqn:general_greens_funct}
+\end{equation}
+
+Once \autoref{eqn:general_greens_funct} is solved and the Green's function $G$ of this specific operator is known, it can be used to solve any input function, such as $u(\mathbf{x})$ in 
+
+\begin{equation}
+    Lu(\mathbf{x}) = f(\mathbf{x}).
+    \label{eqn:examplary_function_with_operator}
+\end{equation}
+
+\todo{What is f(x)?}
+
+This is done by a convoluting 
+
+\begin{equation}
+    u(\mathbf{x})=\iiint_V G(\mathbf{x},\mathbf{x'})f(\mathbf{x'})\mathrm{d}\mathbf{x'}
+    \label{eqn:examplary_function_solved}
+\end{equation}
+
+The Green's function can be used to solve equations involving the Nabla operator $\nabla$ in electrostatics. \autoref{eqn:greens_function_scalar_pot_1} and \autoref{eqn:greens_function_scalar_pot_2} demonstrate how the scalar potential $\phi$ can be calculated from point charge distributions in space $\rho$ by using the Green's function of the Nabla operator. There, the Green's function $G(\mathbf{x},\mathbf{x'}) = \frac{1}{4\pi |\mathbf{x}-\mathbf{x'|}}$ represents the potential at position $\mathbf{x}$ created by an unit point charge at point $\mathbf{x'}$.
+
+\begin{subequations}
+\begin{equation}
+    \nabla \phi = -\frac{\rho}{\epsilon_0}
+    \label{eqn:greens_function_scalar_pot_1}
+\end{equation}
+\begin{equation}
+    \phi(\mathbf{x}) = \frac{1}{4\pi\epsilon_0}\iiint_V\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\mathrm{d}V'
+    \label{eqn:greens_function_scalar_pot_2}
+\end{equation}
+\end{subequations}
+
+When boundary conditions are present, the Green's Function may be modified to make the boundary condition vanish. The resulting function is called tailored Green's Function. This proves especially useful in the analysis of guided waves. Another possibility is to construct the Green's Function by a series of reflections on boundaries, applying image theory on perfectly conducting surfaces \cite{Collin_2015}.
+
+
+%This enables an expansion of the fields in a waveguide excited by an internal source. The perfectly conducting surfaces of the waveguides mirror the source infinitely often. Therefore, the Green's function may be represented by a series of these mirror sources. In practice, these calculations are cumbersome, and only the most significant parts of the series are computed \cite{Collin_2015}. %Should I show mathematical calculations?
+
+
+\subsubsection{Dyadic Green's Function}\label{sec:dyad_green}
+
+The scalar Green's Function demonstrated in \autoref{sec:scal_green} is useful to solve for one-dimensional functions. However, for the analysis of waveguides, the calculation of the three-dimensional vector potential $\mathbf{A}$ as in \autoref{eqn:helmholtz} is necessary.  
+
+\begin{equation}\label{eqn:helmholtz}
+	\nabla^2\mathbf{A}+k^2\mathbf{A}=-\upmu \mathbf{J}
+\end{equation}
+
+
+When replacing $\upmu \mathbf{J}$ by an unit vector source, the solution of the differential equation is shown in \autoref{eqn:sol_dyadic_green}. This is a vector Green's Function by definition.
+
+\begin{equation}\label{eqn:sol_dyadic_green}
+	(\mathbf{a}_x + \mathbf{a}_y + \mathbf{a}_z) \frac{e^{-j k |\mathbf{r} - \mathbf{r}_0|}}{4\pi |\mathbf{r} - \mathbf{r}_0|}
+\end{equation}
+
+The solution of any current distribution $\mathbf{J}$ can be obtained by superposition, analogous to the scalar Green's Function. A prerequisite is that each component of the current vector $\mathbf{J}$ is each associated with one unit vector of the Green's function, i.e. $J_x$ with $\mathbf{a_x}$, $J_y$ with $\mathbf{a_y}$ and $J_z$ with $\mathbf{a_z}$. This is implemented by using a dyadic Green's Function $\mathbf{\hat{G}}$. The dyadic has a mapping function, rather than an operational one. The dyadic Green's Function is defined as the solution of \autoref{eqn:helmholtz_green}.
+
+\begin{equation}\label{eqn:helmholtz_green}
+	\nabla^2 \mathbf{\hat G}(\mathbf{r}, \mathbf{r}_0) + k^2 \mathbf{\hat G} = -\mathbf{\hat I} \delta(\mathbf{r} - \mathbf{r}_0)
+\end{equation}
+
+Analogous to the scalar Green's Function, multiplying the unit input function by $\mathbf{\hat{I}}$ leads to the same multiplication of the Green's function, as shown in \autoref{eqn:dyadic_final}.
+
+\begin{equation}\label{eqn:dyadic_final}
+	\mathbf{\hat G}(\mathbf{r}, \mathbf{r}_0) = \mathbf{\hat I} \frac{e^{-jk|\mathbf{r} - \mathbf{r}_0|}}{4\pi |\mathbf{r} - \mathbf{r}_0|}
+\end{equation}
+
+The dyadic Green's Function is commonly applied to calculate field distributions in waveguides. In \cite{Wilson_1981} it is used to derive the fields in a TEM cell caused by a vertical current conducting wire with help of the small-gap approximation.
+
+
+
