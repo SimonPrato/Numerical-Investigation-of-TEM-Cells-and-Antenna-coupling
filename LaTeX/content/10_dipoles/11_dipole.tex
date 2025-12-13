@@ -17,7 +17,7 @@ An electric dipole is shown in \autoref{fig:electric_dipole} and will now be ana
 The capacitances modeled at the end of the wire enable the constant current flow, which would otherwise be physically impossible. Next, the vector potential $\mathbf{A}$ is determined through the general expression
 
 \begin{equation}
-	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,\mathrm{d}\mathbf{x'}.
+	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,d\mathbf{x'}.
 	\label{eqn:vector_pot}
 \end{equation}
 
@@ -26,7 +26,7 @@ The vector $\mathbf{x}=\mathbf{\hat{a}}_x x + \mathbf{\hat{a}}_y y + \mathbf{\ha
 The integration is performed over the volume $V$ of the antenna. This leads to \cite[p. 153]{Balanis_1997}
 
 \begin{equation}
-	\mathbf{A}(\mathbf{x}) = \mathbf{\hat{a}}_z\frac{\mu I_0}{4\pi r}\mathrm{e}^{-jkr}\int_{-d/2}^{+d/2}\,\mathrm{d}z'= \mathbf{\hat{a}}_z \frac{\mu I_0 d}{4\pi r}\mathrm{e}^{-jkr}.
+	\mathbf{A}(\mathbf{x}) = \mathbf{\hat{a}}_z\frac{\mu I_0}{4\pi r}\mathrm{e}^{-jkr}\int_{-d/2}^{+d/2}\,dz'= \mathbf{\hat{a}}_z \frac{\mu I_0 d}{4\pi r}\mathrm{e}^{-jkr}.
 	\label{eqn:a_e_inf}
 \end{equation}
 
@@ -159,7 +159,7 @@ $\rho'$ is uniformly distributed along each antenna arm.
 An important metric is the electric dipole moment $\mathbf{p}$. It is defined as the product of charge density $\rho$ along the antenna and their source point $\mathbf{x'}$ \cite[p.410]{Jackson}, and generally expressed as 
 
 \begin{equation}
-	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,\mathrm{d}\mathbf{x'}.
+	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,d\mathbf{x'}.
 	\label{eqn:elec_dipole_mom}
 \end{equation}
 
@@ -173,7 +173,7 @@ An important metric is the electric dipole moment $\mathbf{p}$. It is defined as
 The charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$, which results in
 
 \begin{equation}
-    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\,\mathrm{d}z\cdot\mathbf{\hat{a}}_z = j\frac{I_0d}{2\omega}\cdot\mathbf{\hat{a}}_z.
+    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\,dz\cdot\mathbf{\hat{a}}_z = j\frac{I_0d}{2\omega}\cdot\mathbf{\hat{a}}_z.
     \label{eqn:dipole_mom_example}
 \end{equation}
 
@@ -214,7 +214,7 @@ The magnetic dipole moment characterizes the strength of a magnetic source. A sm
 The magnetic dipole moment $\mathbf{m}$ is given by \cite[p. 413]{Jackson}
 
 \begin{equation}
-    \mathbf{m}=\frac{1}{2}\iiint_V (\mathbf{x'} \times \mathbf{J})\,\mathrm{d}\mathbf{x'}.
+    \mathbf{m}=\frac{1}{2}\iiint_V (\mathbf{x'} \times \mathbf{J})\,d\mathbf{x'}.
     \label{eqn:mag_dipole_moment}
 \end{equation}
 
@@ -225,6 +225,15 @@ Furthermore, the magnetic current $I_m$ and the electric current $I_0$ in the lo
 	I_m L = jA\omega\mu_0 I_0
 	\label{eqn:magn_current_curr_loop}
 \end{equation}
+
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
+	\caption{Geometrical arrangement of a current loop fed by a current $I_0$, producing a magnetic dipole moment. Alternatively, a magnetic current $I_\mathrm{m}$ flows perpendicular to the loop's area along the distance $L$, which produces an equivalent magnetic dipole moment.}
+	\label{fig:magnetic_dipole_drawing}
+\end{figure}
 
 with $A=b^2\pi$ being the area of the current loop. Analogous to the separation distance $d$ in the electric dipole, $L$ is the length of the magnetic dipole. $I_m$ and $L$ may be used to model the magnetic dipole moment instead of the current loop. The fields $\mathbf{E}$ and $\mathbf{H}$ generated are the same in both cases. This means, that the infinitesimal magnetic dipole can be replaced with an electrically small loop \cite[p. 237]{Balanis_1997}. This was not the case for the infinitesimal and electrically small electric dipoles. $\mathbf{E}$ and $\mathbf{H}$ of the magnetic dipole moment or electrically small current loop are then determined with \cite[p. 237]{Balanis_1997}
 
@@ -262,13 +271,6 @@ and,
 The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole \cite[p. 238]{Balanis_1997}. 
 
 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
-	\caption{Geometrical arrangement of a current loop fed by a current $I_0$, producing a magnetic dipole moment. Alternatively, a magnetic current $I_\mathrm{m}$ flows perpendicular to the loop's area along the distance $L$, which produces an equivalent magnetic dipole moment.}
-	\label{fig:magnetic_dipole_drawing}
-\end{figure}
 
 %The radiated power $P_\mathrm{rad}$ of the small current loop is given by \cite[p. 238]{Balanis_1997}
 %

@@ -1,32 +1,40 @@
 \subsection{Lorentz Reciprocity Theorem}
 
-The Lorentz reciprocity theorem proves to be very useful, hence it is summarized here. It states that any two fields $\mathbf{E_1}$, $\mathbf{H_1}$ and $\mathbf{E_2}$, $\mathbf{H_2}$, which are of the same frequency and in linear and isotropic media, can be expressed by its differential form in \autoref{eqn:lorentz_rec_theorem} \cite{Balanis_1997,Collin_2015}. Here, $\mathbf{J}$ describes the electric current density with the unit $\frac{\mathrm{A}}{\mathrm{m^2}}$ and $\mathbf{M}$ the magnetic current density with the unit $\frac{\mathrm{V}}{\mathrm{m^2}}$. They act as sources, exciting the electric and magnetic fields $\mathbf{E}$ and $\mathbf{H}$. The theorem says, that under the previously described conditions, any source and response can be locally interchanged, and the results would remain the same.
+The Lorentz reciprocity theorem proves to be very useful for further analysis. Let two source pairs $\mathbf{J_1}$, $\mathbf{M_1}$ and $\mathbf{J_2}$, $\mathbf{M_2}$ exist in a volume $V$, bounded by the closed surface $S$. The medium in $V$ is linear and isotropic. The source pairs generate fields $\mathbf{E_1}$, $\mathbf{H_1}$ and $\mathbf{E_2}$, $\mathbf{H_2}$, respectively, with the same frequency. The fields and source pairs can then be related with \cite[p. 145]{Balanis_1997}, \cite[p. 49]{Collin_2015}
 
 \begin{equation}
-    -\nabla \cdot (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})=\mathbf{E_1}\cdot \mathbf{J_2}+\mathbf{H_2}\cdot \mathbf{M_1}-\mathbf{E_2}\cdot \mathbf{J_1}-\mathbf{H_1}\cdot \mathbf{M_2}
-    \label{eqn:lorentz_rec_theorem}
+	-\nabla \cdot (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})=\mathbf{E_1}\cdot \mathbf{J_2}+\mathbf{H_2}\cdot \mathbf{M_1}-\mathbf{E_2}\cdot \mathbf{J_1}-\mathbf{H_1}\cdot \mathbf{M_2}.
+	\label{eqn:lorentz_rec_theorem}
 \end{equation}
 
-By taking a volume integral of both sides of \autoref{eqn:lorentz_rec_theorem} and using the divergence theorem, \autoref{eqn:lorentz_rec_theorem_int} emerges \cite{Balanis_1997,Collin_2015}.
+Integrating \autoref{eqn:lorentz_rec_theorem} over $V$, and converting the volume integral to a surface integral with the divergence theorem, leads to \cite[p. 145]{Balanis_1997}, \cite[p. 50]{Collin_2015}
 
-\begin{equation}
-    \oiint (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})\cdot \mathrm{d}S\mathbf{n}=\iiint
-\mathbf{E_1}\cdot \mathbf{J_2}+\mathbf{H_2}\cdot \mathbf{M_1}-\mathbf{E_2}\cdot \mathbf{J_1}-\mathbf{H_1}\cdot \mathbf{M_2}\cdot \mathrm{d}V
+\begin{align}
+    -\oiint_S &(\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})\cdot d\mathbf{S}'\nonumber\\&=\iiint_V
+\left(\mathbf{E_1}\cdot \mathbf{J_2}+\mathbf{H_2}\cdot \mathbf{M_1}-\mathbf{E_2}\cdot \mathbf{J_1}-\mathbf{H_1}\cdot \mathbf{M_2}\right)\cdot dV'.
     \label{eqn:lorentz_rec_theorem_int}
-\end{equation}
+\end{align}
 
-If there aren't any sources present, meaning that $\mathbf{J_1}=\mathbf{J_2}=\mathbf{M_1}=\mathbf{M_2}=0$, the Lorentz reciprocity theorem simplifies to \autoref{eqn:lorentz_rec_theorem_wo_sources} \cite{Balanis_1997,Lorrain_Corson_1970}. This is especially useful for free wave propagation of antennas.
-
-\begin{equation}
-    -\nabla \cdot (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})=0
-    \label{eqn:lorentz_rec_theorem_wo_sources}
-\end{equation}
-
-Another application arises when investigating a volume $V$ confined by a perfectly conducting surface $S$, through which to linear current densities $\mathbf{J_1}$ and $\mathbf{J_2}$ flow. Because $\mathbf{n}\times\mathbf{E_1}=\mathbf{n}\times\mathbf{E_2}=0$ along the surface $S$, the surface integral in \autoref{eqn:lorentz_rec_theorem_int} equals zero, and \autoref{eqn:rayleigh_carson} arises. This is the Rayleigh-Carson from of the Lorentz reciprocity theorem and is particularly useful for deriving waveguide modes and constructing the respective fields \cite{Collin_2015}.
+This is a very useful integral equation, which relates the coupling of different source points. If one of these sources is set to zero, they may also be used as observation points. This can be done to investigate, for example, modes and their coupling in a waveguide. Suppose the volume $V$ does not contain sources $\mathbf{J_1} = \mathbf{M_1} = \mathbf{J_2} = \mathbf{M_2}$. Then, the Lorentz Reciprocity theorem would take the form \cite[pp. 145-146]{Balanis_1997}
 
 \begin{equation}
-    \mathbf{E_1}\cdot\mathbf{J_2}=\mathbf{E_2}\cdot\mathbf{J_1}
-    \label{eqn:rayleigh_carson}
+	\oiint_S (\mathbf{E_1}\times \mathbf{H_2}-\mathbf{E_2}\times \mathbf{H_1})\cdot d\mathbf{S}'=0,
+	\label{eqn:modes_waveguide}
 \end{equation}
+
+which the modes in the waveguide must fulfill. \todo{There could be a sketch made with such a waveguide an H1, E1, H2, E2} 
+
+Another application arises when investigating a volume $V$ confined by a perfectly conducting surface $S$, in which the linear current densities $\mathbf{J_1}$ and $\mathbf{J_2}$ flow. Because $\mathbf{n}\times\mathbf{E_1}=\mathbf{n}\times\mathbf{E_2}=0$ along the surface $S$, the surface integral in \autoref{eqn:lorentz_rec_theorem_int} vanishes, and 
+
+\begin{equation}
+	\mathbf{E_1}\cdot\mathbf{J_2}=\mathbf{E_2}\cdot\mathbf{J_1}
+	\label{eqn:rayleigh_carson}
+\end{equation}
+
+arises. This is the Rayleigh-Carson form of the Lorentz reciprocity theorem. It states that $\mathbf{J_1}$ generates $\mathbf{E_1}$, which has a component along $\mathbf{J_2}$ and vice versa \cite[p. 50]{Collin_2015}. 
+
+Concluding, the Lorentz Reciprocity theorem is useful to derive reciprocal aspects of waveguides, finding orthogonal properties of modes, investigating fields generated by currents and dipole moments in waveguides \cite[p. 50]{Collin_2015}, and much more. It will serve in the remainder of this thesis.
+
+\todo{It is used in this thesis in A. The formula with (a, b) in the TEM cell with the dipole moments and B. with the dipole moment in the TEM cell which gets shifted around. There, the question is only, how large the electric field at the position of the dipole moment is.}
 
 % This will be used to model dipoles with Green's Theorem in waveguides.

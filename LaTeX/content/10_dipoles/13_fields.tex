@@ -2,7 +2,7 @@
 \FloatBarrier
 \subsection{Field regions}
 
-\begin{figure}[b!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/kr_over_distance}
 	\caption{Behavior of Expression 1 and Expression 2 in \autoref{eqn:e_et_2} over distance $r$. The distance $r$ is normalized to the radian distance $\lambda / 2\pi$. The magnitude of both expressions is normed to 1 at radian distance for better comparison.}
@@ -18,16 +18,18 @@ Depending on the distance $r$ to the dipole, the behavior of the fields changes.
 	\label{eqn:e_et_2}
 \end{equation}
 
-\begin{figure}[b!]
-	\centering
-	\includegraphics[width=0.4\linewidth]{content/img/field_regions_antenna}
-	\caption{Field regions of an antenna \cite{Balanis_1997}}
-	\label{fig:fieldregionsantenna}
-\end{figure}
+
 
 If the distance $r < \lambda/2\pi$ $(kr < 1)$, then Expression 2 delivers the largest value in the brackets. Consequently, the energy stored in this region is mostly imaginary, especially if $r \ll \lambda/\pi$ ($kr\ll 1$). It is referred to as the near-field region.
 
 At distances $r > \lambda / 2\pi$ $(kr > 1)$, Expression 1 exceeds Expression 2 in value. The real part of the energy is larger than the imaginary part. This region is referred to as the intermediate-field region. For $r \gg \lambda / 2\pi$ ($kr \gg 1$) the energy is primarily real, indicating radiation. This region is called the far-field region.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.4\linewidth]{content/img/field_regions_antenna}
+	\caption{Field regions of an antenna, here specifically a linear wire antenna. However, they are applicable for any antenna, as long as their largest dimension $d$ is known.}
+	\label{fig:fieldregionsantenna}
+\end{figure}
 
 At $r = \lambda/2\pi$ $(kr = 1)$, Expression 1 and Expression 2 are of equal magnitude. This is marked as the radian distance \cite[pp. 156-160]{Balanis_1997}. The radian distance therefore represents an important transition point between field regions, where the behavior of the fields shifts. \autoref{fig:kroverdistance} visualizes Expression 1 and Expression 2 over $r$. The same analysis of the field region is also valid for the infinitesimal magnetic dipole.
 

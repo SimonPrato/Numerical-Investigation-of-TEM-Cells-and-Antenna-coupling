@@ -2,23 +2,25 @@
 
 \subsubsection{Scalar Green's Function}\label{sec:scal_green}
 
-Green's function describes the response of a linear differential operator $L$ to a point source as an input, which is modeled by delta-function $\delta$. Its general form is shown in \autoref{eqn:general_greens_funct}. 
+Green's function describes the response of a linear differential operator $L$ to a point source as an input, which is modeled by delta-function $\delta$. Its general form is 
 
 \begin{equation}
-    \mathrm{L}G(\mathbf{x},\mathbf{x'}) = \delta(\mathbf{x}-\mathbf{x'})
+    \mathrm{L}G(\mathbf{x},\mathbf{x'}) = \delta(\mathbf{x}-\mathbf{x'}).
     \label{eqn:general_greens_funct}
 \end{equation}
 
-Once \autoref{eqn:general_greens_funct} is solved and the Green's function $G$ of this specific operator is known, it can be used to solve any input function, such as $u(\mathbf{x})$ in \autoref{eqn:examplary_function_with_operator}. This is done by a convolution integral, shown in \autoref{eqn:examplary_function_solved}.
+Once \autoref{eqn:general_greens_funct} is solved and the Green's function $G$ of this specific operator is known, it can be used to solve any input function, such as $u(\mathbf{x})$ in 
 
 \begin{subequations}
 \begin{equation}
-    Lu(\mathbf{x}) = f(\mathbf{x})
+    Lu(\mathbf{x}) = f(\mathbf{x}).
     \label{eqn:examplary_function_with_operator}
 \end{equation}
 
+This is done by a convolution integral, shown in \autoref{eqn:examplary_function_solved}.
+
 \begin{equation}
-    u(\mathbf{x})=\int G(\mathbf{x},\mathbf{x'})f(\mathbf{x'})\mathrm{d}\mathbf{x'}
+    u(\mathbf{x})=\iiint_V G(\mathbf{x},\mathbf{x'})f(\mathbf{x'})\mathrm{d}\mathbf{x'}
     \label{eqn:examplary_function_solved}
 \end{equation}
 \end{subequations}
