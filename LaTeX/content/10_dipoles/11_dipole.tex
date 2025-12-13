@@ -17,7 +17,7 @@ An electric dipole is shown in \autoref{fig:electric_dipole} and will now be ana
 The capacitances modeled at the end of the wire enable the constant current flow, which would otherwise be physically impossible. Next, the vector potential $\mathbf{A}$ is determined through the general expression
 
 \begin{equation}
-	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,d\mathbf{x'}.
+	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,dv'.
 	\label{eqn:vector_pot}
 \end{equation}
 
@@ -159,7 +159,7 @@ $\rho'$ is uniformly distributed along each antenna arm.
 An important metric is the electric dipole moment $\mathbf{p}$. It is defined as the product of charge density $\rho$ along the antenna and their source point $\mathbf{x'}$ \cite[p.410]{Jackson}, and generally expressed as 
 
 \begin{equation}
-	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,d\mathbf{x'}.
+	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,dv'.
 	\label{eqn:elec_dipole_mom}
 \end{equation}
 
@@ -214,7 +214,7 @@ The magnetic dipole moment characterizes the strength of a magnetic source. A sm
 The magnetic dipole moment $\mathbf{m}$ is given by \cite[p. 413]{Jackson}
 
 \begin{equation}
-    \mathbf{m}=\frac{1}{2}\iiint_V (\mathbf{x'} \times \mathbf{J})\,d\mathbf{x'}.
+    \mathbf{m}=\frac{1}{2}\iiint_V (\mathbf{x'} \times \mathbf{J})\,dv'.
     \label{eqn:mag_dipole_moment}
 \end{equation}
 
@@ -309,7 +309,7 @@ The infinitesimal electric and magnetic dipoles discussed in \autoref{sec:ele_di
 \end{equation}
 
 \begin{equation}
-	\oint_C \mathbf{H} \cdot d\mathbf{C}' = I_f + \epsilon \frac{\partial \phi}{\partial t} 
+	\oint_C \mathbf{H} \cdot d\mathbf{s}' = I_f + \epsilon \frac{\partial \phi}{\partial t} 
 \end{equation}
 
 \begin{equation}
