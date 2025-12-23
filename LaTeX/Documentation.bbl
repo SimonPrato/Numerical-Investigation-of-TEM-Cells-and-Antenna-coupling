@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,8 +16,8 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global/global}
-  \entry{Balanis_2012}{book}{}{}
+\datalist[entry]{nty/global//global/global}
+  \entry{Balanis_2012}{book}{}
     \name{author}{1}{}{%
       {{hash=BCA}{%
          family={Balanis},
@@ -39,7 +39,7 @@
     \field{year}{2012}
   \endentry
 
-  \entry{Balanis_1997}{book}{}{}
+  \entry{Balanis_1997}{book}{}
     \name{author}{1}{}{%
       {{hash=BCA}{%
          family={Balanis},
@@ -63,7 +63,7 @@
     \field{year}{1997}
   \endentry
 
-  \entry{1063929}{article}{}{}
+  \entry{1063929}{article}{}
     \name{author}{2}{}{%
       {{hash=CZ}{%
          family={Cendes},
@@ -99,7 +99,7 @@
     \field{year}{1985}
   \endentry
 
-  \entry{Cendes_1991}{article}{}{}
+  \entry{Cendes_1991}{article}{}
     \name{author}{1}{}{%
       {{hash=CZ}{%
          family={Cendes},
@@ -126,7 +126,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{Cendes_Lee_1988}{article}{}{}
+  \entry{Cendes_Lee_1988}{article}{}
     \name{author}{2}{}{%
       {{hash=CZ}{%
          family={Cendes},
@@ -157,7 +157,7 @@
     \field{year}{1988}
   \endentry
 
-  \entry{Collin_2015}{book}{}{}
+  \entry{Collin_2015}{book}{}
     \name{author}{1}{}{%
       {{hash=CRE}{%
          family={Collin},
@@ -179,7 +179,7 @@
     \field{year}{2015}
   \endentry
 
-  \entry{10518640}{inbook}{}{}
+  \entry{10518640}{inbook}{}
     \name{author}{2}{}{%
       {{hash=DS}{%
          family={Daniel},
@@ -212,7 +212,7 @@
     \field{year}{2019}
   \endentry
 
-  \entry{Griffiths_2024}{book}{}{}
+  \entry{Griffiths_2024}{book}{}
     \name{author}{1}{}{%
       {{hash=GDJ}{%
          family={Griffiths},
@@ -234,7 +234,7 @@
     \field{year}{2024}
   \endentry
 
-  \entry{809846}{article}{}{}
+  \entry{809846}{article}{}
     \name{author}{4}{}{%
       {{hash=GC}{%
          family={Groh},
@@ -279,7 +279,7 @@
     \field{year}{1999}
   \endentry
 
-  \entry{Hansen_Collin_2013}{book}{}{}
+  \entry{Hansen_Collin_2013}{book}{}
     \name{author}{2}{}{%
       {{hash=HRC}{%
          family={Hansen},
@@ -307,7 +307,7 @@
     \field{year}{2013}
   \endentry
 
-  \entry{huebner2001finite}{book}{}{}
+  \entry{huebner2001finite}{book}{}
     \name{author}{4}{}{%
       {{hash=HK}{%
          family={Huebner},
@@ -352,7 +352,7 @@
     \field{year}{2001}
   \endentry
 
-  \entry{Jackson}{book}{}{}
+  \entry{Jackson}{book}{}
     \name{author}{1}{}{%
       {{hash=JJD}{%
          family={Jackson},
@@ -374,7 +374,7 @@
     \field{title}{Classical Electromagnetics}
   \endentry
 
-  \entry{990711}{article}{}{}
+  \entry{990711}{article}{}
     \name{author}{3}{}{%
       {{hash=KJ}{%
          family={Karst},
@@ -414,7 +414,7 @@
     \field{year}{2002}
   \endentry
 
-  \entry{10791592}{inproceedings}{}{}
+  \entry{10791592}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=KM}{%
          family={Koch},
@@ -454,7 +454,7 @@
     \field{year}{1999}
   \endentry
 
-  \entry{Koepke_1989}{article}{}{}
+  \entry{Koepke_1989}{article}{}
     \name{author}{1}{}{%
       {{hash=KGH}{%
          family={Koepke},
@@ -476,7 +476,7 @@
     \field{year}{1989}
   \endentry
 
-  \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}{article}{}{}
+  \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}{article}{}
     \name{author}{5}{}{%
       {{hash=KD}{%
          family={Kreindl},
@@ -528,7 +528,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}{article}{}{}
+  \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}{article}{}
     \name{author}{7}{}{%
       {{hash=KD}{%
          family={Kreindl},
@@ -592,7 +592,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{10274360}{inproceedings}{}{}
+  \entry{10274360}{inproceedings}{}
     \name{author}{6}{}{%
       {{hash=KD}{%
          family={Kreindl},
@@ -652,7 +652,7 @@
     \field{year}{2023}
   \endentry
 
-  \entry{85399}{article}{}{}
+  \entry{85399}{article}{}
     \name{author}{3}{}{%
       {{hash=LJF}{%
          family={Lee},
@@ -694,7 +694,7 @@
     \field{year}{1991}
   \endentry
 
-  \entry{104986}{article}{}{}
+  \entry{104986}{article}{}
     \name{author}{3}{}{%
       {{hash=LJ}{%
          family={Lee},
@@ -736,7 +736,35 @@
     \field{year}{1991}
   \endentry
 
-  \entry{Mohsen_1982}{article}{}{}
+  \entry{Lorrain_Corson_1970}{book}{}
+    \name{author}{2}{}{%
+      {{hash=LP}{%
+         family={Lorrain},
+         familyi={L\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CDR}{%
+         family={Corson},
+         familyi={C\bibinitperiod},
+         given={Dale\bibnamedelima R.},
+         giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {W.H. Freeman}%
+    }
+    \strng{namehash}{LPCDR1}
+    \strng{fullhash}{LPCDR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Electromagnetic fields and waves}
+    \field{year}{1970}
+  \endentry
+
+  \entry{Mohsen_1982}{article}{}
     \name{author}{1}{}{%
       {{hash=MM}{%
          family={Mohsen},
@@ -763,7 +791,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{MORARI_BĂLAN_2015}{article}{}{}
+  \entry{MORARI_BĂLAN_2015}{article}{}
     \name{author}{2}{}{%
       {{hash=MC}{%
          family={MORARI},
@@ -788,7 +816,7 @@
     \field{year}{2015}
   \endentry
 
-  \entry{Shenton_Cendes_1985}{article}{}{}
+  \entry{Shenton_Cendes_1985}{article}{}
     \name{author}{2}{}{%
       {{hash=SD}{%
          family={Shenton},
@@ -822,7 +850,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{Sreenivasiah_Chang_Ma_1981}{article}{}{}
+  \entry{Sreenivasiah_Chang_Ma_1981}{article}{}
     \name{author}{3}{}{%
       {{hash=SI}{%
          family={Sreenivasiah},
@@ -862,7 +890,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{STRANG_2018}{book}{}{}
+  \entry{STRANG_2018}{book}{}
     \name{author}{1}{}{%
       {{hash=SG}{%
          family={STRANG},
@@ -884,7 +912,7 @@
     \field{year}{2018}
   \endentry
 
-  \entry{7293591}{article}{}{}
+  \entry{7293591}{article}{}
     \name{author}{3}{}{%
       {{hash=TSX}{%
          family={Ta},
@@ -924,7 +952,7 @@
     \field{year}{2015}
   \endentry
 
-  \entry{Tippet_Chang_Crawford_1976}{article}{}{}
+  \entry{Tippet_Chang_Crawford_1976}{article}{}
     \name{author}{3}{}{%
       {{hash=TJC}{%
          family={Tippet},
@@ -958,7 +986,7 @@
     \field{year}{1976}
   \endentry
 
-  \entry{Weil_Gruner_1984}{article}{}{}
+  \entry{Weil_Gruner_1984}{article}{}
     \name{author}{2}{}{%
       {{hash=WC}{%
          family={Weil},
@@ -992,7 +1020,7 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{Wilson_1981}{article}{}{}
+  \entry{Wilson_1981}{article}{}
     \name{author}{1}{}{%
       {{hash=WPF}{%
          family={Wilson},
@@ -1014,7 +1042,7 @@
     \field{year}{1981}
   \endentry
 
-  \entry{4091747}{article}{}{}
+  \entry{4091747}{article}{}
     \name{author}{3}{}{%
       {{hash=WPF}{%
          family={Wilson},
@@ -1055,7 +1083,7 @@
     \field{year}{1984}
   \endentry
 
-  \entry{4091811}{article}{}{}
+  \entry{4091811}{article}{}
     \name{author}{2}{}{%
       {{hash=WPF}{%
          family={Wilson},
@@ -1091,7 +1119,7 @@
     \field{year}{1985}
   \endentry
 
-  \entry{Wilson_Ma_1986}{article}{}{}
+  \entry{Wilson_Ma_1986}{article}{}
     \name{author}{2}{}{%
       {{hash=WPF}{%
          family={Wilson},

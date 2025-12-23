@@ -1,55 +1,54 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.23)  23 DEC 2025 15:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  23 DEC 2025 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Documentation.tex
 (./Documentation.tex
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count196
-\c@section=\count197
-\c@subsection=\count198
-\c@subsubsection=\count199
-\c@paragraph=\count266
-\c@subparagraph=\count267
-\c@figure=\count268
-\c@table=\count269
-\abovecaptionskip=\skip49
-\belowcaptionskip=\skip50
-\bibindent=\dimen141
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
-eX and XeLaTeX
-\babel@savecnt=\count270
-\U@D=\dimen142
-\l@unhyphenated=\language90
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count195
+\U@D=\dimen141
+\l@unhyphenated=\language89
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count271
+\bbl@dirlevel=\count196
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language68). Reported on input line 105.
+(babel)             (\language23). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language68). Reported on input line 108.
+(babel)             (\language23). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2024/11/05 v2.17t AMS math features
-\@mathmargin=\skip51
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -58,59 +57,59 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen143
+\ex@=\dimen142
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen144
+\pmbraise@=\dimen143
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count272
-LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count273
-\leftroot@=\count274
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count275
-\DOTSCASE@=\count276
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen145
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count277
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count278
-\dotsspace@=\muskip17
-\c@parentequation=\count279
-\dspbrk@lvl=\count280
+\inf@bad=\count197
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count198
+\leftroot@=\count199
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count266
+\DOTSCASE@=\count267
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count268
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count269
+\dotsspace@=\muskip16
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
 \tag@help=\toks18
-\row@=\count281
-\column@=\count282
-\maxfields@=\count283
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
 \andhelp@=\toks19
-\eqnshift@=\dimen146
-\alignsep@=\dimen147
-\tagshift@=\dimen148
-\tagwidth@=\dimen149
-\totwidth@=\dimen150
-\lineht@=\dimen151
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
 \@envbody=\toks20
-\multlinegap=\skip52
-\multlinetaggap=\skip53
+\multlinegap=\skip51
+\multlinetaggap=\skip52
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
@@ -134,21 +133,21 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 106.
+Package graphics Info: Driver file: pdftex.def on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen152
-\Gin@req@width=\dimen153
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
 (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
@@ -163,36 +162,36 @@ Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count284
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count275
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count285
+\c@float@type=\count276
 \float@exts=\toks23
-\float@box=\box54
+\float@box=\box53
 \@float@everytoks=\toks24
-\@floatcapt=\box55
+\@floatcapt=\box54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
-\col@sep=\dimen154
-\ar@mcellbox=\box56
-\extrarowheight=\dimen155
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen153
+\ar@mcellbox=\box55
+\extrarowheight=\dimen154
 \NC@list=\toks25
-\extratabsurround=\skip54
-\backup@length=\skip55
-\ar@cellbox=\box57
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box56
 )
-\TX@col@width=\dimen156
-\TX@old@table=\dimen157
-\TX@old@col=\dimen158
-\TX@target=\dimen159
-\TX@delta=\dimen160
-\TX@cols=\count286
+\TX@col@width=\dimen155
+\TX@old@table=\dimen156
+\TX@old@col=\dimen157
+\TX@target=\dimen158
+\TX@delta=\dimen159
+\TX@cols=\count277
 \TX@ftn=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
@@ -203,31 +202,31 @@ Package: esint
 \symlargesymbolsA=\mathgroup6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2025/01/30 v0.6e Insert pages of external PDF documents (AM)
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count287
-\calc@Bcount=\count288
-\calc@Adimen=\dimen161
-\calc@Bdimen=\dimen162
-\calc@Askip=\skip56
-\calc@Bskip=\skip57
+\calc@Acount=\count278
+\calc@Bcount=\count279
+\calc@Adimen=\dimen160
+\calc@Bdimen=\dimen161
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count289
-\calc@Cskip=\skip58
+\calc@Ccount=\count280
+\calc@Cskip=\skip57
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen163
-\ESO@tempdimb=\dimen164
+\ESO@tempdima=\dimen162
+\ESO@tempdimb=\dimen163
 
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -235,48 +234,48 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ))
-\AM@pagewidth=\dimen165
-\AM@pageheight=\dimen166
-\AM@fboxrule=\dimen167
+\AM@pagewidth=\dimen164
+\AM@pageheight=\dimen165
+\AM@fboxrule=\dimen166
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count290
-\AM@pagebox=\box58
+\pdfpages@includegraphics@status=\count281
+\AM@pagebox=\box57
 \AM@global@opts=\toks27
-\AM@pagecnt=\count291
+\AM@pagecnt=\count282
 \AM@toc@title=\toks28
 \AM@lof@heading=\toks29
-\c@AM@survey=\count292
-\AM@templatesizebox=\box59
+\c@AM@survey=\count283
+\AM@templatesizebox=\box58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip18
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip59
-\multirow@cntb=\count293
-\multirow@dima=\skip60
-\bigstrutjot=\dimen168
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count284
+\multirow@dima=\skip59
+\bigstrutjot=\dimen167
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -298,6 +297,9 @@ Package pdftexcmds Info: \pdfdraftmode found.
 (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 
@@ -307,42 +309,38 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count294
+\c@section@level=\count285
 )
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
-)
-\@linkdim=\dimen169
-\Hy@linkcounter=\count295
-\Hy@pagecounter=\count296
+\@linkdim=\dimen168
+\Hy@linkcounter=\count286
+\Hy@pagecounter=\count287
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count297
+\Hy@SavedSpaceFactor=\count288
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4040.
-Package hyperref Info: Hyper figures OFF on input line 4157.
-Package hyperref Info: Link nesting OFF on input line 4162.
-Package hyperref Info: Hyper index ON on input line 4165.
-Package hyperref Info: Plain pages OFF on input line 4172.
-Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4062.
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count298
-LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen170
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count289
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen169
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -351,37 +349,37 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count299
-\Field@Width=\dimen171
-\Fld@charsize=\dimen172
-Package hyperref Info: Hyper figures OFF on input line 6042.
-Package hyperref Info: Link nesting OFF on input line 6047.
-Package hyperref Info: Hyper index ON on input line 6050.
-Package hyperref Info: backreferencing OFF on input line 6057.
-Package hyperref Info: Link coloring ON on input line 6060.
-Package hyperref Info: Link coloring with OCG OFF on input line 6067.
-Package hyperref Info: PDF/A mode OFF on input line 6072.
+\Fld@menulength=\count290
+\Field@Width=\dimen170
+\Fld@charsize=\dimen171
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring ON on input line 6081.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count300
-\c@Item=\count301
-\c@Hfootnote=\count302
+\Hy@abspage=\count291
+\c@Item=\count292
+\c@Hfootnote=\count293
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count303
-\c@bookmark@seq@number=\count304
+\Fld@listcount=\count294
+\c@bookmark@seq@number=\count295
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -392,178 +390,178 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip61
+\Hy@SectionHShift=\skip60
 )
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count305
+\lrq@indent=\count296
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count306
-\c@listtotal=\count307
-\c@listcount=\count308
-\c@liststart=\count309
-\c@liststop=\count310
-\c@citecount=\count311
-\c@citetotal=\count312
-\c@multicitecount=\count313
-\c@multicitetotal=\count314
-\c@instcount=\count315
-\c@maxnames=\count316
-\c@minnames=\count317
-\c@maxitems=\count318
-\c@minitems=\count319
-\c@citecounter=\count320
-\c@maxcitecounter=\count321
-\c@savedcitecounter=\count322
-\c@uniquelist=\count323
-\c@uniquename=\count324
-\c@refsection=\count325
-\c@refsegment=\count326
-\c@maxextratitle=\count327
-\c@maxextratitleyear=\count328
-\c@maxextraname=\count329
-\c@maxextradate=\count330
-\c@maxextraalpha=\count331
-\c@abbrvpenalty=\count332
-\c@highnamepenalty=\count333
-\c@lownamepenalty=\count334
-\c@maxparens=\count335
-\c@parenlevel=\count336
-\blx@tempcnta=\count337
-\blx@tempcntb=\count338
-\blx@tempcntc=\count339
-\c@blx@maxsection=\count340
-\blx@maxsegment@0=\count341
-\blx@notetype=\count342
-\blx@parenlevel@text=\count343
-\blx@parenlevel@foot=\count344
-\blx@sectionciteorder@0=\count345
-\blx@sectionciteorderinternal@0=\count346
-\blx@entrysetcounter=\count347
-\blx@biblioinstance=\count348
-\labelnumberwidth=\skip62
-\labelalphawidth=\skip63
-\biblabelsep=\skip64
-\bibitemsep=\skip65
-\bibnamesep=\skip66
-\bibinitsep=\skip67
-\bibparsep=\skip68
-\bibhang=\skip69
+\c@tabx@nest=\count297
+\c@listtotal=\count298
+\c@listcount=\count299
+\c@liststart=\count300
+\c@liststop=\count301
+\c@citecount=\count302
+\c@citetotal=\count303
+\c@multicitecount=\count304
+\c@multicitetotal=\count305
+\c@instcount=\count306
+\c@maxnames=\count307
+\c@minnames=\count308
+\c@maxitems=\count309
+\c@minitems=\count310
+\c@citecounter=\count311
+\c@maxcitecounter=\count312
+\c@savedcitecounter=\count313
+\c@uniquelist=\count314
+\c@uniquename=\count315
+\c@refsection=\count316
+\c@refsegment=\count317
+\c@maxextratitle=\count318
+\c@maxextratitleyear=\count319
+\c@maxextraname=\count320
+\c@maxextradate=\count321
+\c@maxextraalpha=\count322
+\c@abbrvpenalty=\count323
+\c@highnamepenalty=\count324
+\c@lownamepenalty=\count325
+\c@maxparens=\count326
+\c@parenlevel=\count327
+\blx@tempcnta=\count328
+\blx@tempcntb=\count329
+\blx@tempcntc=\count330
+\c@blx@maxsection=\count331
+\blx@maxsegment@0=\count332
+\blx@notetype=\count333
+\blx@parenlevel@text=\count334
+\blx@parenlevel@foot=\count335
+\blx@sectionciteorder@0=\count336
+\blx@sectionciteorderinternal@0=\count337
+\blx@entrysetcounter=\count338
+\blx@biblioinstance=\count339
+\labelnumberwidth=\skip61
+\labelalphawidth=\skip62
+\biblabelsep=\skip63
+\bibitemsep=\skip64
+\bibnamesep=\skip65
+\bibinitsep=\skip66
+\bibparsep=\skip67
+\bibhang=\skip68
 \blx@bcfin=\read3
 \blx@bcfout=\write3
-\blx@langwohyphens=\language91
-\c@mincomprange=\count349
-\c@maxcomprange=\count350
-\c@mincompwidth=\count351
+\blx@langwohyphens=\language90
+\c@mincomprange=\count340
+\c@maxcomprange=\count341
+\c@mincompwidth=\count342
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count352
-\c@savedafterword=\count353
-\c@annotator=\count354
-\c@savedannotator=\count355
-\c@author=\count356
-\c@savedauthor=\count357
-\c@bookauthor=\count358
-\c@savedbookauthor=\count359
-\c@commentator=\count360
-\c@savedcommentator=\count361
-\c@editor=\count362
-\c@savededitor=\count363
-\c@editora=\count364
-\c@savededitora=\count365
-\c@editorb=\count366
-\c@savededitorb=\count367
-\c@editorc=\count368
-\c@savededitorc=\count369
-\c@foreword=\count370
-\c@savedforeword=\count371
-\c@holder=\count372
-\c@savedholder=\count373
-\c@introduction=\count374
-\c@savedintroduction=\count375
-\c@namea=\count376
-\c@savednamea=\count377
-\c@nameb=\count378
-\c@savednameb=\count379
-\c@namec=\count380
-\c@savednamec=\count381
-\c@translator=\count382
-\c@savedtranslator=\count383
-\c@shortauthor=\count384
-\c@savedshortauthor=\count385
-\c@shorteditor=\count386
-\c@savedshorteditor=\count387
-\c@labelname=\count388
-\c@savedlabelname=\count389
-\c@institution=\count390
-\c@savedinstitution=\count391
-\c@lista=\count392
-\c@savedlista=\count393
-\c@listb=\count394
-\c@savedlistb=\count395
-\c@listc=\count396
-\c@savedlistc=\count397
-\c@listd=\count398
-\c@savedlistd=\count399
-\c@liste=\count400
-\c@savedliste=\count401
-\c@listf=\count402
-\c@savedlistf=\count403
-\c@location=\count404
-\c@savedlocation=\count405
-\c@organization=\count406
-\c@savedorganization=\count407
-\c@origlocation=\count408
-\c@savedoriglocation=\count409
-\c@origpublisher=\count410
-\c@savedorigpublisher=\count411
-\c@publisher=\count412
-\c@savedpublisher=\count413
-\c@language=\count414
-\c@savedlanguage=\count415
-\c@origlanguage=\count416
-\c@savedoriglanguage=\count417
-\c@pageref=\count418
-\c@savedpageref=\count419
-\shorthandwidth=\skip70
-\shortjournalwidth=\skip71
-\shortserieswidth=\skip72
-\shorttitlewidth=\skip73
-\shortauthorwidth=\skip74
-\shorteditorwidth=\skip75
-\locallabelnumberwidth=\skip76
-\locallabelalphawidth=\skip77
-\localshorthandwidth=\skip78
-\localshortjournalwidth=\skip79
-\localshortserieswidth=\skip80
-\localshorttitlewidth=\skip81
-\localshortauthorwidth=\skip82
-\localshorteditorwidth=\skip83
+\c@afterword=\count343
+\c@savedafterword=\count344
+\c@annotator=\count345
+\c@savedannotator=\count346
+\c@author=\count347
+\c@savedauthor=\count348
+\c@bookauthor=\count349
+\c@savedbookauthor=\count350
+\c@commentator=\count351
+\c@savedcommentator=\count352
+\c@editor=\count353
+\c@savededitor=\count354
+\c@editora=\count355
+\c@savededitora=\count356
+\c@editorb=\count357
+\c@savededitorb=\count358
+\c@editorc=\count359
+\c@savededitorc=\count360
+\c@foreword=\count361
+\c@savedforeword=\count362
+\c@holder=\count363
+\c@savedholder=\count364
+\c@introduction=\count365
+\c@savedintroduction=\count366
+\c@namea=\count367
+\c@savednamea=\count368
+\c@nameb=\count369
+\c@savednameb=\count370
+\c@namec=\count371
+\c@savednamec=\count372
+\c@translator=\count373
+\c@savedtranslator=\count374
+\c@shortauthor=\count375
+\c@savedshortauthor=\count376
+\c@shorteditor=\count377
+\c@savedshorteditor=\count378
+\c@labelname=\count379
+\c@savedlabelname=\count380
+\c@institution=\count381
+\c@savedinstitution=\count382
+\c@lista=\count383
+\c@savedlista=\count384
+\c@listb=\count385
+\c@savedlistb=\count386
+\c@listc=\count387
+\c@savedlistc=\count388
+\c@listd=\count389
+\c@savedlistd=\count390
+\c@liste=\count391
+\c@savedliste=\count392
+\c@listf=\count393
+\c@savedlistf=\count394
+\c@location=\count395
+\c@savedlocation=\count396
+\c@organization=\count397
+\c@savedorganization=\count398
+\c@origlocation=\count399
+\c@savedoriglocation=\count400
+\c@origpublisher=\count401
+\c@savedorigpublisher=\count402
+\c@publisher=\count403
+\c@savedpublisher=\count404
+\c@language=\count405
+\c@savedlanguage=\count406
+\c@origlanguage=\count407
+\c@savedoriglanguage=\count408
+\c@pageref=\count409
+\c@savedpageref=\count410
+\shorthandwidth=\skip69
+\shortjournalwidth=\skip70
+\shortserieswidth=\skip71
+\shorttitlewidth=\skip72
+\shortauthorwidth=\skip73
+\shorteditorwidth=\skip74
+\locallabelnumberwidth=\skip75
+\locallabelalphawidth=\skip76
+\localshorthandwidth=\skip77
+\localshortjournalwidth=\skip78
+\localshortserieswidth=\skip79
+\localshorttitlewidth=\skip80
+\localshortauthorwidth=\skip81
+\localshorteditorwidth=\skip82
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load BibTeX backend compatibility...
 Package biblatex Info: ... file 'blx-bibtex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+File: blx-bibtex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 
 
 Package biblatex Warning: Using fall-back bibtex backend:
@@ -573,39 +571,39 @@ Package biblatex Warning: Using fall-back bibtex backend:
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count420
-\c@textcitetotal=\count421
-\c@textcitemaxnames=\count422
-\c@biburlbigbreakpenalty=\count423
-\c@biburlbreakpenalty=\count424
-\c@biburlnumpenalty=\count425
-\c@biburlucpenalty=\count426
-\c@biburllcpenalty=\count427
-\biburlbigskip=\muskip19
-\biburlnumskip=\muskip20
-\biburlucskip=\muskip21
-\biburllcskip=\muskip22
-\c@smartand=\count428
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count411
+\c@textcitetotal=\count412
+\c@textcitemaxnames=\count413
+\c@biburlbigbreakpenalty=\count414
+\c@biburlbreakpenalty=\count415
+\c@biburlnumpenalty=\count416
+\c@biburlucpenalty=\count417
+\c@biburllcpenalty=\count418
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count419
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count429
-\c@bbx:relatedtotal=\count430
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count420
+\c@bbx:relatedtotal=\count421
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -628,23 +626,23 @@ Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-01-18 L3 programming layer (loader) 
+Package: expl3 2024-01-22 L3 programming layer (loader) 
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count431
-\l__pdf_internal_box=\box60
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count422
+\l__pdf_internal_box=\box59
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             2024-01-22 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2024-08-16 L3 Experimental document command parser
+Package: xparse 2023-10-10 L3 Experimental document command parser
 )
-Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
@@ -658,7 +656,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks30
 \XKV@tempa@toks=\toks31
 )
-\XKV@depth=\count432
+\XKV@depth=\count423
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -666,11 +664,11 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen173
-\pgfutil@tempdimb=\dimen174
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box61
+\pgfutil@abb=\box60
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -691,26 +689,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 .code.tex
 \pgfkeys@tmptoks=\toks35
 ))
-\pgf@x=\dimen175
-\pgf@y=\dimen176
-\pgf@xa=\dimen177
-\pgf@ya=\dimen178
-\pgf@xb=\dimen179
-\pgf@yb=\dimen180
-\pgf@xc=\dimen181
-\pgf@yc=\dimen182
-\pgf@xd=\dimen183
-\pgf@yd=\dimen184
+\pgf@x=\dimen174
+\pgf@y=\dimen175
+\pgf@xa=\dimen176
+\pgf@ya=\dimen177
+\pgf@xb=\dimen178
+\pgf@yb=\dimen179
+\pgf@xc=\dimen180
+\pgf@yc=\dimen181
+\pgf@xd=\dimen182
+\pgf@yd=\dimen183
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count433
-\c@pgf@countb=\count434
-\c@pgf@countc=\count435
-\c@pgf@countd=\count436
+\c@pgf@counta=\count424
+\c@pgf@countb=\count425
+\c@pgf@countc=\count426
+\c@pgf@countd=\count427
 \t@pgf@toka=\toks36
 \t@pgf@tokb=\toks37
 \t@pgf@tokc=\toks38
-\pgf@sys@id@count=\count437
+\pgf@sys@id@count=\count428
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -725,8 +723,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count438
-\pgfsyssoftpath@bigbuffer@items=\count439
+\pgfsyssoftpath@smallbuffer@items=\count429
+\pgfsyssoftpath@bigbuffer@items=\count430
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -738,9 +736,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen185
-\pgfmath@count=\count440
-\pgfmath@box=\box62
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count431
+\pgfmath@box=\box61
 \pgfmath@toks=\toks39
 \pgfmath@stack@operand=\toks40
 \pgfmath@stack@operation=\toks41
@@ -764,58 +762,58 @@ tex)
 thmetics.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count441
+\c@pgfmathroundto@lastzeros=\count432
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen186
-\pgf@picmaxx=\dimen187
-\pgf@picminy=\dimen188
-\pgf@picmaxy=\dimen189
-\pgf@pathminx=\dimen190
-\pgf@pathmaxx=\dimen191
-\pgf@pathminy=\dimen192
-\pgf@pathmaxy=\dimen193
-\pgf@xx=\dimen194
-\pgf@xy=\dimen195
-\pgf@yx=\dimen196
-\pgf@yy=\dimen197
-\pgf@zx=\dimen198
-\pgf@zy=\dimen199
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen256
-\pgf@path@lasty=\dimen257
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen256
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen258
-\pgf@shorten@start@additional=\dimen259
+\pgf@shorten@end@additional=\dimen257
+\pgf@shorten@start@additional=\dimen258
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box63
-\pgf@hbox=\box64
-\pgf@layerbox@main=\box65
-\pgf@picture@serial@count=\count442
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count433
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen260
+\pgflinewidth=\dimen259
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen261
-\pgf@pt@y=\dimen262
-\pgf@pt@temp=\dimen263
+\pgf@pt@x=\dimen260
+\pgf@pt@y=\dimen261
+\pgf@pt@temp=\dimen262
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -831,13 +829,13 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen264
+\pgfarrowsep=\dimen263
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen265
-\pgf@sys@shading@range@num=\count443
-\pgf@shadingcount=\count444
+\pgf@max=\dimen264
+\pgf@sys@shading@range@num=\count434
+\pgf@shadingcount=\count435
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -845,7 +843,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box66
+\pgfexternal@startupbox=\box65
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -864,15 +862,15 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box67
+\pgfnodeparttextbox=\box66
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen266
-\pgf@nodesepend=\dimen267
+\pgf@nodesepstart=\dimen265
+\pgf@nodesepend=\dimen266
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -884,8 +882,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen268
-\pgffor@skip=\dimen269
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
 \pgffor@stack=\toks42
 \pgffor@toks=\toks43
 ))
@@ -895,33 +893,33 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count445
-\pgfplotmarksize=\dimen270
+\pgf@plot@mark@count=\count436
+\pgfplotmarksize=\dimen269
 )
-\tikz@lastx=\dimen271
-\tikz@lasty=\dimen272
-\tikz@lastxsaved=\dimen273
-\tikz@lastysaved=\dimen274
-\tikz@lastmovetox=\dimen275
-\tikz@lastmovetoy=\dimen276
-\tikzleveldistance=\dimen277
-\tikzsiblingdistance=\dimen278
-\tikz@figbox=\box68
-\tikz@figbox@bg=\box69
-\tikz@tempbox=\box70
-\tikz@tempbox@bg=\box71
-\tikztreelevel=\count446
-\tikznumberofchildren=\count447
-\tikznumberofcurrentchild=\count448
-\tikz@fig@count=\count449
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikz@lastmovetox=\dimen274
+\tikz@lastmovetoy=\dimen275
+\tikzleveldistance=\dimen276
+\tikzsiblingdistance=\dimen277
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count437
+\tikznumberofchildren=\count438
+\tikznumberofcurrentchild=\count439
+\tikz@fig@count=\count440
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count450
-\pgfmatrixcurrentcolumn=\count451
-\pgf@matrix@numberofcolumns=\count452
+\pgfmatrixcurrentrow=\count441
+\pgfmatrixcurrentcolumn=\count442
+\pgf@matrix@numberofcolumns=\count443
 )
-\tikz@expandcount=\count453
+\tikz@expandcount=\count444
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -931,7 +929,7 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\c@@todonotes@numberoftodonotes=\count454
+\c@@todonotes@numberoftodonotes=\count445
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
@@ -941,25 +939,25 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen279
-\captionmargin=\dimen280
-\caption@leftmargin=\dimen281
-\caption@rightmargin=\dimen282
-\caption@width=\dimen283
-\caption@indent=\dimen284
-\caption@parindent=\dimen285
-\caption@hangindent=\dimen286
+\caption@tempdima=\dimen278
+\captionmargin=\dimen279
+\caption@leftmargin=\dimen280
+\caption@rightmargin=\dimen281
+\caption@width=\dimen282
+\caption@indent=\dimen283
+\caption@parindent=\dimen284
+\caption@hangindent=\dimen285
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count455
-\c@continuedfloat=\count456
+\c@caption@flags=\count446
+\c@continuedfloat=\count447
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count457
+\c@subfigure=\count448
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count458
+\c@subtable=\count449
 )
 (/usr/share/texlive/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
@@ -969,8 +967,8 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.sty
-Package: circuitikz 2025/01/10{} The CircuiTikz circuit drawing package version
- 1.7.1
+Package: circuitikz 2023/12/09{} The CircuiTikz circuit drawing package version
+ 1.6.6
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarycalc.code.tex
@@ -979,10 +977,10 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
 code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen287
-\pgfarrowlength=\dimen288
-\pgfarrowwidth=\dimen289
-\pgfarrowlinewidth=\dimen290
+\pgfarrowinset=\dimen286
+\pgfarrowlength=\dimen287
+\pgfarrowwidth=\dimen288
+\pgfarrowlinewidth=\dimen289
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybending.code.tex
@@ -995,53 +993,53 @@ File: pgfmodulebending.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransf
 ormations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgftransformnonlinearflatness=\dimen291
+\pgftransformnonlinearflatness=\dimen290
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.
 code.tex
 File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@curvilinear@time@a=\dimen292
-\pgf@curvilinear@length@a=\dimen293
-\pgf@curvilinear@length@b=\dimen294
-\pgf@curvilinear@length@c=\dimen295
-\pgf@curvilinear@length@d=\dimen296
+\pgf@curvilinear@time@a=\dimen291
+\pgf@curvilinear@length@a=\dimen292
+\pgf@curvilinear@length@b=\dimen293
+\pgf@curvilinear@length@c=\dimen294
+\pgf@curvilinear@length@d=\dimen295
 )
-\pgf@arrows@the@rigidity=\dimen297
+\pgf@arrows@the@rigidity=\dimen296
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryfpu.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 )) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count459
-\pgf@circ@count@b=\count460
-\pgf@circ@count@c=\count461
-\pgf@circ@res@up=\dimen298
-\pgf@circ@res@down=\dimen299
-\pgf@circ@res@zero=\dimen300
-\pgf@circ@res@left=\dimen301
-\pgf@circ@res@right=\dimen302
-\pgf@circ@res@other=\dimen303
-\pgf@circ@res@step=\dimen304
-\pgf@circ@res@temp=\dimen305
-\pgf@circ@Rlen=\dimen306
-\pgf@circ@scaled@Rlen=\dimen307
-\pgfstartlinewidth=\dimen308
+\pgf@circ@count@a=\count450
+\pgf@circ@count@b=\count451
+\pgf@circ@count@c=\count452
+\pgf@circ@res@up=\dimen297
+\pgf@circ@res@down=\dimen298
+\pgf@circ@res@zero=\dimen299
+\pgf@circ@res@left=\dimen300
+\pgf@circ@res@right=\dimen301
+\pgf@circ@res@other=\dimen302
+\pgf@circ@res@step=\dimen303
+\pgf@circ@res@temp=\dimen304
+\pgf@circ@Rlen=\dimen305
+\pgf@circ@scaled@Rlen=\dimen306
+\pgfstartlinewidth=\dimen307
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
-\ctikz@scratchbox=\box72
+\ctikz@scratchbox=\box71
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count462
+\pgf@circ@res@count=\count453
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
-\pgfcirc@labelshift=\dimen309
+\pgfcirc@labelshift=\dimen308
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
@@ -1063,8 +1061,8 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count463
-\@quotereset=\count464
+\@quotelevel=\count454
+\@quotereset=\count455
 (./Documentation.aux)
 \openout1 = `Documentation.aux'.
 
@@ -1089,16 +1087,16 @@ LaTeX Font Info:    ... okay on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count465
-\scratchdimen=\dimen310
-\scratchbox=\box73
-\nofMPsegments=\count466
-\nofMParguments=\count467
+\scratchcounter=\count456
+\scratchdimen=\dimen309
+\scratchbox=\box72
+\nofMPsegments=\count457
+\nofMParguments=\count458
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count468
-\MPscratchDim=\dimen311
-\MPnumerator=\count469
-\makeMPintoPDFobject=\count470
+\MPscratchCnt=\count459
+\MPscratchDim=\dimen310
+\MPnumerator=\count460
+\makeMPintoPDFobject=\count461
 \everyMPtoPDFconversion=\toks45
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1131,7 +1129,7 @@ Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1202,14 +1200,10 @@ File: content/img/igte_logo.png Graphic file (type png)
 <use content/img/igte_logo.png>
 Package pdftex.def Info: content/img/igte_logo.png  used on input line 99.
 (pdftex.def)             Requested size: 85.35826pt x 30.21722pt.
-
-
-[1
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./content/img/TU_Graz_Logo
-.png> <./content/img/igte_logo.png>]
-
-[2
+.png> <./content/img/igte_logo.png>] [2
 
 ] (./Documentation.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
@@ -1227,31 +1221,23 @@ LaTeX Font Info:    Trying to load font information for U+esint on input line 5
 
 (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
-)
-
-[3
+) [3
 
 ])
 \tf@toc=\write6
 \openout6 = `Documentation.toc'.
 
-
-
-[4] (./Documentation.lof
-
-[5])
+ [4]
+(./Documentation.lof [5])
 \tf@lof=\write7
 \openout7 = `Documentation.lof'.
 
-
-
-[6] (./Documentation.lot)
+ [6] (./Documentation.lot)
 \tf@lot=\write8
 \openout8 = `Documentation.lot'.
 
-
-
-[7] (./content/00_introduction/01_introduction.tex)
+ [7]
+(./content/00_introduction/01_introduction.tex)
 (./content/10_dipoles/11_dipole.tex
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 4.
@@ -1265,32 +1251,24 @@ Overfull \hbox (7.79135pt too wide) in paragraph at lines 4--4
 [][][]\OT1/cmr/m/n/10.95 Explanation 
  []
 
-
-
 [1
 
 ]
-<content/img/electric_dipole.png, id=483, 303.38344pt x 277.78781pt>
+<content/img/electric_dipole.png, id=486, 303.38344pt x 277.78781pt>
 File: content/img/electric_dipole.png Graphic file (type png)
 <use content/img/electric_dipole.png>
 Package pdftex.def Info: content/img/electric_dipole.png  used on input line 37
 .
 (pdftex.def)             Requested size: 213.39566pt x 195.39536pt.
-
-
-[2 <./content/img/electric_dipole.png>]
-
-[3]
-<content/img/linear_wire_antenna.png, id=522, 303.38344pt x 277.78781pt>
+ [2 <./content/img/electric_dipole.png>] [3]
+<content/img/linear_wire_antenna.png, id=525, 303.38344pt x 277.78781pt>
 File: content/img/linear_wire_antenna.png Graphic file (type png)
 <use content/img/linear_wire_antenna.png>
 Package pdftex.def Info: content/img/linear_wire_antenna.png  used on input lin
 e 168.
 (pdftex.def)             Requested size: 213.39566pt x 195.39536pt.
-
-
-[4 <./content/img/linear_wire_antenna.png>]
-<content/img/electric_dipole_current.png, id=541, 250.9375pt x 269.005pt>
+ [4 <./content/img/linear_wire_antenna.png>]
+<content/img/electric_dipole_current.png, id=544, 250.9375pt x 269.005pt>
 File: content/img/electric_dipole_current.png Graphic file (type png)
 <use content/img/electric_dipole_current.png>
 Package pdftex.def Info: content/img/electric_dipole_current.png  used on input
@@ -1300,128 +1278,111 @@ Package pdftex.def Info: content/img/electric_dipole_current.png  used on input
 
 LaTeX Warning: Citation 'Balanis' on page 5 undefined on input line 207.
 
-
-
 [5 <./content/img/electric_dipole_current.png>]
-<content/img/magnetic_dipole_drawing.png, id=555, 319.1925pt x 290.58563pt>
+<content/img/magnetic_dipole_drawing.png, id=558, 319.1925pt x 290.58563pt>
 File: content/img/magnetic_dipole_drawing.png Graphic file (type png)
 <use content/img/magnetic_dipole_drawing.png>
 Package pdftex.def Info: content/img/magnetic_dipole_drawing.png  used on input
  line 233.
 (pdftex.def)             Requested size: 213.39566pt x 194.27013pt.
-
-
-[6 <./content/img/magnetic_dipole_drawing.png>]
+ [6 <./content/img/magnetic_dipole_drawing.png>]
 
 LaTeX Warning: Marginpar on page 7 moved.
 
-) (./content/10_dipoles/12_antennas_to_investigate.tex
-
-[7{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
-(./content/10_dipoles/13_fields.tex
-<content/img/kr_over_distance.png, id=593, 1552.77257pt x 1031.74028pt>
+) (./content/10_dipoles/12_antennas_to_investigate.tex [7{/usr/share/texmf/font
+s/enc/dvips/cm-super/cm-super-ts1.enc}]) (./content/10_dipoles/13_fields.tex
+<content/img/kr_over_distance.png, id=596, 1552.77257pt x 1031.74028pt>
 File: content/img/kr_over_distance.png Graphic file (type png)
 <use content/img/kr_over_distance.png>
 Package pdftex.def Info: content/img/kr_over_distance.png  used on input line 7
 .
 (pdftex.def)             Requested size: 298.75262pt x 198.50435pt.
-<content/img/field_regions_antenna.png, id=609, 389.455pt x 406.51875pt>
+<content/img/field_regions_antenna.png, id=612, 389.455pt x 406.51875pt>
 File: content/img/field_regions_antenna.png Graphic file (type png)
 <use content/img/field_regions_antenna.png>
 Package pdftex.def Info: content/img/field_regions_antenna.png  used on input l
 ine 29.
 (pdftex.def)             Requested size: 170.71393pt x 178.19267pt.
 
-
-[8]
-
-[9 <./content/img/kr_over_distance.png>])
-(./content/20_guided_waves/21_lorentz_reciprocity.tex
-
-[10 <./content/img/field_regions_antenna.png>])
-(./content/20_guided_waves/22_greens_function.tex
-
-[11]
-
-[12]) (./content/20_guided_waves/23_tem_cells.tex
-
-[13]
-<content/img/reciprocity_tem_cell.png, id=698, 569.12625pt x 284.56313pt>
-File: content/img/reciprocity_tem_cell.png Graphic file (type png)
-<use content/img/reciprocity_tem_cell.png>
-Package pdftex.def Info: content/img/reciprocity_tem_cell.png  used on input li
-ne 33.
-(pdftex.def)             Requested size: 298.75262pt x 149.38051pt.
-
-
-[14]
-
-[15 <./content/img/reciprocity_tem_cell.png>]
-
-[16]
-<content/img/vertical_antenna_tem_cell.png, id=757, 382.42876pt x 216.81pt>
+[8] [9 <./content/img/kr_over_distance.png>])
+(./content/20_guided_waves/21_lorentz_reciprocity.tex [10 <./content/img/field_
+regions_antenna.png>]) (./content/20_guided_waves/22_greens_function.tex
+[11] [12]) (./content/20_guided_waves/23_tem_cells.tex
+<content/img/rect_waveguide_tm.png, id=684, 450.18187pt x 365.11406pt>
+File: content/img/rect_waveguide_tm.png Graphic file (type png)
+<use content/img/rect_waveguide_tm.png>
+Package pdftex.def Info: content/img/rect_waveguide_tm.png  used on input line 
+6.
+(pdftex.def)             Requested size: 170.71393pt x 138.45508pt.
+ [13] [14 <./content/img/rect_waveguide_tm.png>]
+<content/img/vertical_antenna_tem_cell.png, id=714, 382.42876pt x 216.81pt>
 File: content/img/vertical_antenna_tem_cell.png Graphic file (type png)
 <use content/img/vertical_antenna_tem_cell.png>
 Package pdftex.def Info: content/img/vertical_antenna_tem_cell.png  used on inp
-ut line 94.
+ut line 36.
 (pdftex.def)             Requested size: 298.75262pt x 169.37907pt.
+ [15 <./content/img/vertical_antenna_tem_cell.png>]
+[16]
 
+LaTeX Warning: Reference `sec:dipoles' on page 17 undefined on input line 114.
 
-[17 <./content/img/vertical_antenna_tem_cell.png>]
-
-LaTeX Warning: Reference `sec:dipoles' on page 18 undefined on input line 172.
-
-
-
-[18]
-<content/img/tem_cell_crosssection.png, id=797, 740.7675pt x 499.8675pt>
+<content/img/tem_cell_crosssection.png, id=754, 740.7675pt x 499.8675pt>
 File: content/img/tem_cell_crosssection.png Graphic file (type png)
 <use content/img/tem_cell_crosssection.png>
 Package pdftex.def Info: content/img/tem_cell_crosssection.png  used on input l
-ine 246.
+ine 138.
 (pdftex.def)             Requested size: 213.39566pt x 143.99681pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19 <./content/img/tem_cell_crosssection.png>]
-<content/img/tem_cell_modes.png, id=812, 320.1561pt x 206.6922pt>
+[17]
+<content/img/tem_cell_modes.png, id=770, 320.1561pt x 206.6922pt>
 File: content/img/tem_cell_modes.png Graphic file (type png)
 <use content/img/tem_cell_modes.png>
-Package pdftex.def Info: content/img/tem_cell_modes.png  used on input line 294
+Package pdftex.def Info: content/img/tem_cell_modes.png  used on input line 168
 .
 (pdftex.def)             Requested size: 426.79134pt x 275.55946pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/tem_cell_mode.png, id=818, 736.7525pt x 495.8525pt>
+[18 <./content/img/tem_cell_crosssection.png>]
+<content/img/tem_cell_mode.png, id=786, 736.7525pt x 495.8525pt>
 File: content/img/tem_cell_mode.png Graphic file (type png)
 <use content/img/tem_cell_mode.png>
-Package pdftex.def Info: content/img/tem_cell_mode.png  used on input line 311.
+Package pdftex.def Info: content/img/tem_cell_mode.png  used on input line 182.
 
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
-<content/img/te01_mode.png, id=819, 736.7525pt x 495.8525pt>
+<content/img/te01_mode.png, id=787, 736.7525pt x 495.8525pt>
 File: content/img/te01_mode.png Graphic file (type png)
 <use content/img/te01_mode.png>
-Package pdftex.def Info: content/img/te01_mode.png  used on input line 317.
+Package pdftex.def Info: content/img/te01_mode.png  used on input line 188.
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
-<content/img/te10_mode.png, id=820, 736.7525pt x 495.8525pt>
+<content/img/te10_mode.png, id=788, 736.7525pt x 495.8525pt>
 File: content/img/te10_mode.png Graphic file (type png)
 <use content/img/te10_mode.png>
-Package pdftex.def Info: content/img/te10_mode.png  used on input line 323.
+Package pdftex.def Info: content/img/te10_mode.png  used on input line 194.
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
+ [19 <./content/img/tem_cell_modes.png> <./content/img/tem_cell_mode.png> <./co
+ntent/img/te01_mode.png> <./content/img/te10_mode.png>]
+Overfull \hbox (4.59758pt too wide) in paragraph at lines 223--223
+\OT1/cmr/m/n/10.95 hinzuf^^?ugen. 
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
+Overfull \hbox (4.59758pt too wide) in paragraph at lines 223--223
+\OT1/cmr/m/n/10.95 hinzuf^^?ugen. 
+ []
 
-
-[20]) (./content/20_guided_waves/24_dipole_tem.tex
-
-[21 <./content/img/tem_cell_modes.png>]
-
-[22 <./content/img/tem_cell_mode.png> <./content/img/te01_mode.png> <./content/
-img/te10_mode.png>]
-
-[23]
+[20]
+<content/img/reciprocity_tem_cell.png, id=818, 569.12625pt x 284.56313pt>
+File: content/img/reciprocity_tem_cell.png Graphic file (type png)
+<use content/img/reciprocity_tem_cell.png>
+Package pdftex.def Info: content/img/reciprocity_tem_cell.png  used on input li
+ne 249.
+(pdftex.def)             Requested size: 298.75262pt x 149.38051pt.
+ [21 <./content/img/reciprocity_tem_cell.png>])
+(./content/20_guided_waves/24_dipole_tem.tex [22] [23]
 Overfull \hbox (4.01965pt too wide) in paragraph at lines 71--71
 [][][]\OT1/cmr/m/n/10.95 Normalized 
  []
@@ -1434,32 +1395,36 @@ Overfull \hbox (4.01965pt too wide) in paragraph at lines 71--71
 
 LaTeX Warning: Marginpar on page 24 moved.
 
-<content/img/DELETE2.png, id=886, 626.34pt x 381.425pt>
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+<content/img/DELETE2.png, id=888, 626.34pt x 381.425pt>
 File: content/img/DELETE2.png Graphic file (type png)
 <use content/img/DELETE2.png>
 Package pdftex.def Info: content/img/DELETE2.png  used on input line 77.
 (pdftex.def)             Requested size: 213.39566pt x 129.9505pt.
-<content/img/DELETE.png, id=887, 375.4025pt x 231.86626pt>
+<content/img/DELETE.png, id=889, 375.4025pt x 231.86626pt>
 File: content/img/DELETE.png Graphic file (type png)
 <use content/img/DELETE.png>
 Package pdftex.def Info: content/img/DELETE.png  used on input line 84.
 (pdftex.def)             Requested size: 213.39566pt x 131.80424pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 LaTeX Warning: Marginpar on page 24 moved.
 
-
-
-[24 <./content/img/DELETE2.png> <./content/img/DELETE.png>]
+[24 <./content/img/DELETE2.png>]
 
 LaTeX Warning: Reference `fig:' on page 25 undefined on input line 91.
 
-<content/img/output_power_ey_over_offset.png, id=904, 271.7352pt x 180.675pt>
+<content/img/output_power_ey_over_offset.png, id=909, 271.7352pt x 180.675pt>
 File: content/img/output_power_ey_over_offset.png Graphic file (type png)
 <use content/img/output_power_ey_over_offset.png>
 Package pdftex.def Info: content/img/output_power_ey_over_offset.png  used on i
 nput line 98.
 (pdftex.def)             Requested size: 204.85802pt x 136.20615pt.
-<content/img/output_power_ey_over_height_w_offset.png, id=905, 1552.77257pt x 1
+<content/img/output_power_ey_over_height_w_offset.png, id=910, 1552.77257pt x 1
 032.42857pt>
 File: content/img/output_power_ey_over_height_w_offset.png Graphic file (type p
 ng)
@@ -1467,8 +1432,10 @@ ng)
 Package pdftex.def Info: content/img/output_power_ey_over_height_w_offset.png  
 used on input line 105.
 (pdftex.def)             Requested size: 204.85802pt x 136.20537pt.
-) (./content/20_guided_waves/25_shielding.tex
-<content/img/shielding_material_diagram.png, id=917, 334.24875pt x 195.73125pt>
+) (./content/20_guided_waves/25_shielding.tex [25 <./content/img/DELETE.png> <.
+/content/img/output_power_ey_over_offset.png> <./content/img/output_power_ey_ov
+er_height_w_offset.png>]
+<content/img/shielding_material_diagram.png, id=933, 334.24875pt x 195.73125pt>
 
 File: content/img/shielding_material_diagram.png Graphic file (type png)
 <use content/img/shielding_material_diagram.png>
@@ -1476,18 +1443,12 @@ Package pdftex.def Info: content/img/shielding_material_diagram.png  used on in
 put line 14.
 (pdftex.def)             Requested size: 149.37956pt x 87.47792pt.
 
-
-[25 <./content/img/output_power_ey_over_offset.png> <./content/img/output_power
-_ey_over_height_w_offset.png> <./content/img/shielding_material_diagram.png>]
 Overfull \hbox (17.06505pt too wide) in paragraph at lines 30--32
 \OT1/cmr/m/n/10.95 by Schelkunoff. [][]$\OT1/cmtt/m/n/10.95 https : / / www . i
 eee . li / pdf / viewgraphs / fundamentals _ electromagnetic _
  []
 
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
+[26 <./content/img/shielding_material_diagram.png>]
 Overfull \hbox (2.59007pt too wide) in paragraph at lines 61--61
 \OT1/cmr/m/n/10.95 parameters 
  []
@@ -1497,36 +1458,26 @@ Overfull \hbox (2.59007pt too wide) in paragraph at lines 61--61
 \OT1/cmr/m/n/10.95 parameters 
  []
 
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-
-[26]
 
 LaTeX Warning: Marginpar on page 27 moved.
 
 
+LaTeX Warning: Marginpar on page 27 moved.
 
 [27]
-<content/img/ASTM ES7-83.png, id=977, 525.965pt x 359.3425pt>
+<content/img/ASTM ES7-83.png, id=980, 525.965pt x 359.3425pt>
 File: content/img/ASTM ES7-83.png Graphic file (type png)
 <use content/img/ASTM ES7-83.png>
 Package pdftex.def Info: content/img/ASTM ES7-83.png  used on input line 117.
 (pdftex.def)             Requested size: 209.1301pt x 142.87907pt.
-<content/img/form_of_shielding_material.png, id=978, 505.89pt x 352.31625pt>
+<content/img/form_of_shielding_material.png, id=981, 505.89pt x 352.31625pt>
 File: content/img/form_of_shielding_material.png Graphic file (type png)
 <use content/img/form_of_shielding_material.png>
 Package pdftex.def Info: content/img/form_of_shielding_material.png  used on in
 put line 124.
 (pdftex.def)             Requested size: 209.1301pt x 145.64404pt.
-
-
-[28 <./content/img/ASTM ES7-83.png> <./content/img/form_of_shielding_material.p
-ng>]
+ [28 <./content/img/ASTM ES7-83.png> <./content/img/form_of_shielding_material.
+png>]
 Overfull \hbox (7.2134pt too wide) in paragraph at lines 161--161
 [][][]\OT1/cmr/m/n/10.95 Polarization 
  []
@@ -1536,75 +1487,58 @@ Overfull \hbox (7.2134pt too wide) in paragraph at lines 161--161
 [][][]\OT1/cmr/m/n/10.95 Polarization 
  []
 
-<content/img/dual_tem_cell.png, id=997, 571.13374pt x 243.91125pt>
+<content/img/dual_tem_cell.png, id=1002, 571.13374pt x 243.91125pt>
 File: content/img/dual_tem_cell.png Graphic file (type png)
 <use content/img/dual_tem_cell.png>
 Package pdftex.def Info: content/img/dual_tem_cell.png  used on input line 165.
 
 (pdftex.def)             Requested size: 320.09349pt x 136.701pt.
-) (./content/30_numerical_investigations/31_hfss.tex
 
-[29 <./content/img/dual_tem_cell.png>]
-<content/img/tetrahedral_mesh.png, id=1016, 223.83624pt x 222.8325pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./content/30_numerical_investigations/31_hfss.tex [29] [30 <./content/img/du
+al_tem_cell.png>]
+<content/img/tetrahedral_mesh.png, id=1033, 223.83624pt x 222.8325pt>
 File: content/img/tetrahedral_mesh.png Graphic file (type png)
 <use content/img/tetrahedral_mesh.png>
 Package pdftex.def Info: content/img/tetrahedral_mesh.png  used on input line 2
 5.
 (pdftex.def)             Requested size: 106.69783pt x 106.22055pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[30]
-<content/img/tetrahedra_w_unknowns.png, id=1033, 241.90375pt x 239.89626pt>
+ [31 <./content/img/tetrahedral_mesh.png>]
+<content/img/tetrahedra_w_unknowns.png, id=1046, 241.90375pt x 239.89626pt>
 File: content/img/tetrahedra_w_unknowns.png Graphic file (type png)
 <use content/img/tetrahedra_w_unknowns.png>
 Package pdftex.def Info: content/img/tetrahedra_w_unknowns.png  used on input l
 ine 55.
 (pdftex.def)             Requested size: 106.69783pt x 105.8109pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[31 <./content/img/tetrahedral_mesh.png>]
-
-[32 <./content/img/tetrahedra_w_unknowns.png>]
-<content/img/workflow_fem.png, id=1068, 603.25375pt x 161.60374pt>
+ [32 <./content/img/tetrahedra_w_unknowns.png>] [33]
+<content/img/workflow_fem.png, id=1082, 603.25375pt x 161.60374pt>
 File: content/img/workflow_fem.png Graphic file (type png)
 <use content/img/workflow_fem.png>
 Package pdftex.def Info: content/img/workflow_fem.png  used on input line 107.
 (pdftex.def)             Requested size: 320.09349pt x 85.7482pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./content/30_numerical_investigations/32_antennas.tex
-
-[33]
-<content/img/monopole_antenna.png, id=1078, 593.21625pt x 742.27313pt>
+)
+(./content/30_numerical_investigations/32_antennas.tex
+<content/img/monopole_antenna.png, id=1083, 593.21625pt x 742.27313pt>
 File: content/img/monopole_antenna.png Graphic file (type png)
 <use content/img/monopole_antenna.png>
 Package pdftex.def Info: content/img/monopole_antenna.png  used on input line 1
 2.
 (pdftex.def)             Requested size: 128.0387pt x 160.20854pt.
-<content/img/dipole_moments_monopole.png, id=1079, 1610.58858pt x 1090.24457pt>
+<content/img/dipole_moments_monopole.png, id=1084, 1610.58858pt x 1090.24457pt>
 
 File: content/img/dipole_moments_monopole.png Graphic file (type png)
 <use content/img/dipole_moments_monopole.png>
 Package pdftex.def Info: content/img/dipole_moments_monopole.png  used on input
  line 22.
 (pdftex.def)             Requested size: 204.85802pt x 138.65915pt.
-<content/img/phase_shift_monopole.png, id=1080, 1610.58858pt x 1090.24457pt>
+<content/img/phase_shift_monopole.png, id=1085, 1610.58858pt x 1090.24457pt>
 File: content/img/phase_shift_monopole.png Graphic file (type png)
 <use content/img/phase_shift_monopole.png>
 Package pdftex.def Info: content/img/phase_shift_monopole.png  used on input li
 ne 29.
 (pdftex.def)             Requested size: 213.39566pt x 144.4484pt.
-
+ [34 <./content/img/workflow_fem.png> <./content/img/monopole_antenna.png>]
 Overfull \hbox (1.55592pt too wide) in paragraph at lines 40--40
 [][]\OT1/cmr/m/n/10.95 Wikipedia[][]. 
  []
@@ -1614,16 +1548,13 @@ Overfull \hbox (1.55592pt too wide) in paragraph at lines 40--40
 [][]\OT1/cmr/m/n/10.95 Wikipedia[][]. 
  []
 
-
-LaTeX Warning: Marginpar on page 34 moved.
-
-
-
-[34 <./content/img/workflow_fem.png> <./content/img/monopole_antenna.png>]
 
 LaTeX Warning: Marginpar on page 35 moved.
 
-<content/img/monopole_surface_currents.png, id=1096, 4501.81876pt x 1452.17531p
+
+LaTeX Warning: Marginpar on page 35 moved.
+
+<content/img/monopole_surface_currents.png, id=1099, 4501.81876pt x 1452.17531p
 t>
 File: content/img/monopole_surface_currents.png Graphic file (type png)
 <use content/img/monopole_surface_currents.png>
@@ -1634,7 +1565,7 @@ ut line 50.
 LaTeX Warning: Reference `monopole_surface_current_offset' on page 35 undefined
  on input line 55.
 
-<content/img/monopole_surface_current_offset.png, id=1097, 4594.41469pt x 1513.
+<content/img/monopole_surface_current_offset.png, id=1100, 4594.41469pt x 1513.
 15312pt>
 File: content/img/monopole_surface_current_offset.png Graphic file (type png)
 <use content/img/monopole_surface_current_offset.png>
@@ -1644,36 +1575,28 @@ on input line 59.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[35 <./content/img/dipole_moments_monopole.png> <./content/img/phase_shift_mono
+pole.png> <./content/img/monopole_surface_currents.png>]
 
-LaTeX Warning: Marginpar on page 35 moved.
-
-
-LaTeX Warning: Marginpar on page 35 moved.
-
-
-LaTeX Warning: Marginpar on page 35 moved.
+LaTeX Warning: Marginpar on page 36 moved.
 
 
-LaTeX Warning: Marginpar on page 35 moved.
+LaTeX Warning: Marginpar on page 36 moved.
 
-<content/img/chu_circuit.png, id=1101, 252.60086pt x 136.96886pt>
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+<content/img/chu_circuit.png, id=1115, 252.60086pt x 136.96886pt>
 File: content/img/chu_circuit.png Graphic file (type png)
 <use content/img/chu_circuit.png>
 Package pdftex.def Info: content/img/chu_circuit.png  used on input line 72.
 (pdftex.def)             Requested size: 128.0387pt x 69.42682pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `sec:dipoles' on page 36 undefined on input line 78.
 
 
-LaTeX Warning: Reference `sec:dipoles' on page 35 undefined on input line 78.
+LaTeX Warning: Marginpar on page 36 moved.
 
-
-LaTeX Warning: Marginpar on page 35 moved.
-
-
-
-[35 <./content/img/dipole_moments_monopole.png> <./content/img/phase_shift_mono
-pole.png> <./content/img/monopole_surface_currents.png>]
 <content/img/current_distribution_monopole.png, id=1117, 1552.77257pt x 1032.42
 857pt>
 File: content/img/current_distribution_monopole.png Graphic file (type png)
@@ -1687,16 +1610,14 @@ File: content/img/monopole_feed_current.png Graphic file (type png)
 Package pdftex.def Info: content/img/monopole_feed_current.png  used on input l
 ine 92.
 (pdftex.def)             Requested size: 204.85802pt x 134.42673pt.
-<content/img/loop_antenna.png, id=1119, 1132.98282pt x 784.43062pt>
+[36 <./content/img/monopole_surface_current_offset.png> <./content/img/chu_circ
+uit.png (PNG copy)>]
+<content/img/loop_antenna.png, id=1131, 1132.98282pt x 784.43062pt>
 File: content/img/loop_antenna.png Graphic file (type png)
 <use content/img/loop_antenna.png>
 Package pdftex.def Info: content/img/loop_antenna.png  used on input line 106.
 (pdftex.def)             Requested size: 170.71393pt x 118.18616pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<content/img/dipole_moments_loop_antenna.png, id=1120, 306.54526pt x 211.0284pt
+<content/img/dipole_moments_loop_antenna.png, id=1132, 306.54526pt x 211.0284pt
 >
 File: content/img/dipole_moments_loop_antenna.png Graphic file (type png)
 <use content/img/dipole_moments_loop_antenna.png>
@@ -1705,13 +1626,12 @@ nput line 119.
 (pdftex.def)             Requested size: 426.79134pt x 293.81805pt.
 
 
-[36 <./content/img/monopole_surface_current_offset.png> <./content/img/chu_circ
-uit.png (PNG copy)> <./content/img/current_distribution_monopole.png> <./conten
-t/img/monopole_feed_current.png>]
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/current_loop_surface_current.png, id=1133, 4461.16687pt x 1467.231
+
+LaTeX Warning: Marginpar on page 37 moved.
+
+<content/img/current_loop_surface_current.png, id=1134, 4461.16687pt x 1467.231
 57pt>
 File: content/img/current_loop_surface_current.png Graphic file (type png)
 <use content/img/current_loop_surface_current.png>
@@ -1721,7 +1641,9 @@ input line 128.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/current_loop_surface_current_offset.png, id=1136, 4486.7625pt x 14
+[37 <./content/img/current_distribution_monopole.png> <./content/img/monopole_f
+eed_current.png> <./content/img/loop_antenna.png>]
+<content/img/current_loop_surface_current_offset.png, id=1149, 4486.7625pt x 14
 79.27657pt>
 File: content/img/current_loop_surface_current_offset.png Graphic file (type pn
 g)
@@ -1730,9 +1652,10 @@ Package pdftex.def Info: content/img/current_loop_surface_current_offset.png  u
 sed on input line 142.
 (pdftex.def)             Requested size: 426.79134pt x 140.69073pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/current_loop_surface_current_rotated.png, id=1138, 631.60968pt x 1
+<content/img/current_loop_surface_current_rotated.png, id=1151, 631.60968pt x 1
 98.7425pt>
 File: content/img/current_loop_surface_current_rotated.png Graphic file (type p
 ng)
@@ -1743,7 +1666,7 @@ used on input line 151.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/current_loop_surface_current_offset_rotated.png, id=1140, 4495.043
+<content/img/current_loop_surface_current_offset_rotated.png, id=1153, 4495.043
 44pt x 1413.02907pt>
 File: content/img/current_loop_surface_current_offset_rotated.png Graphic file 
 (type png)
@@ -1754,14 +1677,14 @@ d.png  used on input line 160.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/current_loop_charge_distribution.png, id=1142, 178.86826pt x 166.2
+<content/img/current_loop_charge_distribution.png, id=1155, 178.86826pt x 166.2
 21pt>
 File: content/img/current_loop_charge_distribution.png Graphic file (type png)
 <use content/img/current_loop_charge_distribution.png>
 Package pdftex.def Info: content/img/current_loop_charge_distribution.png  used
  on input line 175.
 (pdftex.def)             Requested size: 96.02739pt x 89.2355pt.
-<content/img/current_loop_current_distribution.png, id=1143, 206.57175pt x 204.
+<content/img/current_loop_current_distribution.png, id=1156, 206.57175pt x 204.
 765pt>
 File: content/img/current_loop_current_distribution.png Graphic file (type png)
 
@@ -1769,16 +1692,20 @@ File: content/img/current_loop_current_distribution.png Graphic file (type png)
 Package pdftex.def Info: content/img/current_loop_current_distribution.png  use
 d on input line 182.
 (pdftex.def)             Requested size: 96.02739pt x 95.1866pt.
+[38 <./content/img/dipole_moments_loop_antenna.png>]
+
+LaTeX Warning: Marginpar on page 39 moved.
 
 
-[37 <./content/img/loop_antenna.png>]
-<content/img/current_loop_near_e_field.png, id=1155, 243.309pt x 192.72pt>
+LaTeX Warning: Marginpar on page 39 moved.
+
+<content/img/current_loop_near_e_field.png, id=1165, 243.309pt x 192.72pt>
 File: content/img/current_loop_near_e_field.png Graphic file (type png)
 <use content/img/current_loop_near_e_field.png>
 Package pdftex.def Info: content/img/current_loop_near_e_field.png  used on inp
 ut line 199.
 (pdftex.def)             Requested size: 134.43776pt x 106.49034pt.
-<content/img/current_loop_near_h_field.png, id=1156, 230.66174pt x 178.86826pt>
+<content/img/current_loop_near_h_field.png, id=1166, 230.66174pt x 178.86826pt>
 
 File: content/img/current_loop_near_h_field.png Graphic file (type png)
 <use content/img/current_loop_near_h_field.png>
@@ -1786,10 +1713,9 @@ Package pdftex.def Info: content/img/current_loop_near_h_field.png  used on inp
 ut line 206.
 (pdftex.def)             Requested size: 134.43776pt x 104.2513pt.
 
+LaTeX Warning: Marginpar on page 39 moved.
 
-LaTeX Warning: Marginpar on page 38 moved.
-
-<content/img/current_loop_voltage_drop.png, id=1157, 683.55376pt x 516.42938pt>
+<content/img/current_loop_voltage_drop.png, id=1167, 683.55376pt x 516.42938pt>
 
 File: content/img/current_loop_voltage_drop.png Graphic file (type png)
 <use content/img/current_loop_voltage_drop.png>
@@ -1801,17 +1727,16 @@ Underfull \hbox (badness 1715) in paragraph at lines 220--220
 []\OT1/cmr/bx/n/10.95 Figure 4.22 |\OT1/cmr/m/n/10.95 Volt-age drop at feed
  []
 
-<content/img/current_loop_feed_current.png, id=1158, 689.57625pt x 515.67656pt>
+<content/img/current_loop_feed_current.png, id=1168, 689.57625pt x 515.67656pt>
 
 File: content/img/current_loop_feed_current.png Graphic file (type png)
 <use content/img/current_loop_feed_current.png>
 Package pdftex.def Info: content/img/current_loop_feed_current.png  used on inp
 ut line 226.
 (pdftex.def)             Requested size: 192.0548pt x 143.61732pt.
-
-
-[38 <./content/img/dipole_moments_loop_antenna.png>]
-<content/img/wave_impedance_loop.png, id=1171, 523.09714pt x 300.78085pt>
+[39 <./content/img/current_loop_surface_current.png> <./content/img/current_loo
+p_surface_current_offset.png>]
+<content/img/wave_impedance_loop.png, id=1183, 523.09714pt x 300.78085pt>
 File: content/img/wave_impedance_loop.png Graphic file (type png)
 <use content/img/wave_impedance_loop.png>
 Package pdftex.def Info: content/img/wave_impedance_loop.png  used on input lin
@@ -1821,11 +1746,10 @@ e 247.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-[39 <./content/img/current_loop_surface_current.png> <./content/img/current_loo
-p_surface_current_offset.png>]
-<content/img/current_loop_power_consumption.png, id=1181, 660.21657pt x 505.137
+[40 <./content/img/current_loop_surface_current_rotated.png> <./content/img/cur
+rent_loop_surface_current_offset_rotated.png> <./content/img/current_loop_charg
+e_distribution.png> <./content/img/current_loop_current_distribution.png>]
+<content/img/current_loop_power_consumption.png, id=1195, 660.21657pt x 505.137
 19pt>
 File: content/img/current_loop_power_consumption.png Graphic file (type png)
 <use content/img/current_loop_power_consumption.png>
@@ -1836,12 +1760,10 @@ n input line 318.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-[40 <./content/img/current_loop_surface_current_rotated.png> <./content/img/cur
-rent_loop_surface_current_offset_rotated.png> <./content/img/current_loop_charg
-e_distribution.png> <./content/img/current_loop_current_distribution.png>]
-<content/img/delete_after.png, id=1192, 896.148pt x 373.99725pt>
+[41 <./content/img/current_loop_near_e_field.png> <./content/img/current_loop_n
+ear_h_field.png> <./content/img/current_loop_voltage_drop.png> <./content/img/c
+urrent_loop_feed_current.png>]
+<content/img/delete_after.png, id=1206, 896.148pt x 373.99725pt>
 File: content/img/delete_after.png Graphic file (type png)
 <use content/img/delete_after.png>
 Package pdftex.def Info: content/img/delete_after.png  used on input line 327.
@@ -1850,24 +1772,17 @@ Package pdftex.def Info: content/img/delete_after.png  used on input line 327.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-[41 <./content/img/current_loop_near_e_field.png> <./content/img/current_loop_n
-ear_h_field.png> <./content/img/current_loop_voltage_drop.png> <./content/img/c
-urrent_loop_feed_current.png>]
-
-LaTeX Warning: Reference `eqn:elec_rad_res' on page 42 undefined on input line 
-349.
-
-
-LaTeX Warning: Reference `fig:current_loop_ua_ub' on page 42 undefined on input
- line 353.
-
-
-
 [42 <./content/img/wave_impedance_loop.png (PNG copy)> <./content/img/current_l
 oop_power_consumption.png>]
 
+LaTeX Warning: Reference `eqn:elec_rad_res' on page 43 undefined on input line 
+349.
+
+
+LaTeX Warning: Reference `fig:current_loop_ua_ub' on page 43 undefined on input
+ line 353.
+
+
 LaTeX Warning: Marginpar on page 43 moved.
 
 
@@ -1883,16 +1798,14 @@ Overfull \hbox (3.3809pt too wide) in paragraph at lines 360--360
 
 LaTeX Warning: Marginpar on page 43 moved.
 
-<content/img/loop_wave_imp.png, id=1220, 374.42743pt x 213.36858pt>
+<content/img/loop_wave_imp.png, id=1224, 374.42743pt x 213.36858pt>
 File: content/img/loop_wave_imp.png Graphic file (type png)
 <use content/img/loop_wave_imp.png>
 Package pdftex.def Info: content/img/loop_wave_imp.png  used on input line 364.
 
 (pdftex.def)             Requested size: 298.75262pt x 170.2523pt.
 
-Overfull \hbox (1.55592pt too wide) in paragraph at lines 369--369
-[][]\OT1/cmr/m/n/10.95 Wikipedia[][]. 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Overfull \hbox (1.55592pt too wide) in paragraph at lines 369--369
@@ -1900,19 +1813,18 @@ Overfull \hbox (1.55592pt too wide) in paragraph at lines 369--369
  []
 
 
-LaTeX Warning: Marginpar on page 43 moved.
+Overfull \hbox (1.55592pt too wide) in paragraph at lines 369--369
+[][]\OT1/cmr/m/n/10.95 Wikipedia[][]. 
+ []
 
-
-
-[43 <./content/img/delete_after.png> <./content/img/loop_wave_imp.png (PNG copy
-)>]
-<content/img/inverted_f_antenna.png, id=1235, 638.385pt x 196.735pt>
+[43 <./content/img/delete_after.png>]
+<content/img/inverted_f_antenna.png, id=1239, 638.385pt x 196.735pt>
 File: content/img/inverted_f_antenna.png Graphic file (type png)
 <use content/img/inverted_f_antenna.png>
 Package pdftex.def Info: content/img/inverted_f_antenna.png  used on input line
  388.
 (pdftex.def)             Requested size: 320.09349pt x 98.64642pt.
-<content/img/antenna_waveport1_sparams.png, id=1237, 1566.85374pt x 546.04pt>
+<content/img/antenna_waveport1_sparams.png, id=1241, 1566.85374pt x 546.04pt>
 File: content/img/antenna_waveport1_sparams.png Graphic file (type png)
 <use content/img/antenna_waveport1_sparams.png>
 Package pdftex.def Info: content/img/antenna_waveport1_sparams.png  used on inp
@@ -1920,19 +1832,17 @@ ut line 398.
 (pdftex.def)             Requested size: 426.79134pt x 148.73254pt.
 
 
-[44 <./content/img/inverted_f_antenna.png> <./content/img/antenna_waveport1_spa
-rams.png>]
-<content/img/Phase Shift Waveports.png, id=1252, 867.24pt x 433.62pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[44 <./content/img/loop_wave_imp.png (PNG copy)> <./content/img/inverted_f_ante
+nna.png>] [45 <./content/img/antenna_waveport1_sparams.png>]
+<content/img/Phase Shift Waveports.png, id=1266, 867.24pt x 433.62pt>
 File: content/img/Phase Shift Waveports.png Graphic file (type png)
 <use content/img/Phase Shift Waveports.png>
 Package pdftex.def Info: content/img/Phase Shift Waveports.png  used on input l
 ine 439.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Overfull \hbox (10.28548pt too wide) in paragraph at lines 454--454
 [][][]\OT1/cmr/m/n/10.95 Einheitliches 
  []
@@ -1943,38 +1853,23 @@ Overfull \hbox (10.28548pt too wide) in paragraph at lines 454--454
  []
 
 
-LaTeX Warning: Marginpar on page 45 moved.
+LaTeX Warning: Marginpar on page 46 moved.
 
-
-
-[45]
-<content/img/sketch_dipoles_tem_cell.png, id=1270, 1129.21875pt x 359.3425pt>
+[46 <./content/img/Phase Shift Waveports.png>]
+<content/img/sketch_dipoles_tem_cell.png, id=1283, 1129.21875pt x 359.3425pt>
 File: content/img/sketch_dipoles_tem_cell.png Graphic file (type png)
 <use content/img/sketch_dipoles_tem_cell.png>
 Package pdftex.def Info: content/img/sketch_dipoles_tem_cell.png  used on input
  line 472.
 (pdftex.def)             Requested size: 426.79134pt x 135.81682pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[46 <./content/img/Phase Shift Waveports.png>]
-<content/img/dipole_moments_over_freq_ifa.png, id=1282, 867.24pt x 433.62pt>
+ [47 <./content/img/sketch_dipoles_tem_cell.png>]
+<content/img/dipole_moments_over_freq_ifa.png, id=1295, 867.24pt x 433.62pt>
 File: content/img/dipole_moments_over_freq_ifa.png Graphic file (type png)
 <use content/img/dipole_moments_over_freq_ifa.png>
 Package pdftex.def Info: content/img/dipole_moments_over_freq_ifa.png  used on 
 input line 492.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[47 <./content/img/sketch_dipoles_tem_cell.png>]
-<content/img/output_power_e_fields_over_freq_ifa.png, id=1297, 867.24pt x 433.6
+<content/img/output_power_e_fields_over_freq_ifa.png, id=1301, 867.24pt x 433.6
 2pt>
 File: content/img/output_power_e_fields_over_freq_ifa.png Graphic file (type pn
 g)
@@ -1986,20 +1881,22 @@ sed on input line 514.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<content/img/phase_shift_90_ifa.png, id=1301, 867.24pt x 433.62pt>
+[48 <./content/img/dipole_moments_over_freq_ifa.png>]
+<content/img/phase_shift_90_ifa.png, id=1314, 867.24pt x 433.62pt>
 File: content/img/phase_shift_90_ifa.png Graphic file (type png)
 <use content/img/phase_shift_90_ifa.png>
 Package pdftex.def Info: content/img/phase_shift_90_ifa.png  used on input line
  532.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `dipole_moments_ifa_90' on page 48 undefined on input 
+LaTeX Warning: Reference `dipole_moments_ifa_90' on page 49 undefined on input 
 line 537.
 
-<content/img/dipole_moments_ifa_90.png, id=1304, 867.24pt x 433.62pt>
+<content/img/dipole_moments_ifa_90.png, id=1317, 867.24pt x 433.62pt>
 File: content/img/dipole_moments_ifa_90.png Graphic file (type png)
 <use content/img/dipole_moments_ifa_90.png>
 Package pdftex.def Info: content/img/dipole_moments_ifa_90.png  used on input l
@@ -2008,41 +1905,33 @@ ine 543.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
-[48 <./content/img/dipole_moments_over_freq_ifa.png>]
-
-[49 <./content/img/output_power_e_fields_over_freq_ifa.png> <./content/img/phas
-e_shift_90_ifa.png>]
-
-[50 <./content/img/dipole_moments_ifa_90.png>]
-<content/img/center_fed_monopole.png, id=1328, 831.105pt x 184.69pt>
+[49 <./content/img/output_power_e_fields_over_freq_ifa.png>] [50 <./content/img
+/phase_shift_90_ifa.png> <./content/img/dipole_moments_ifa_90.png>]
+<content/img/center_fed_monopole.png, id=1334, 831.105pt x 184.69pt>
 File: content/img/center_fed_monopole.png Graphic file (type png)
 <use content/img/center_fed_monopole.png>
 Package pdftex.def Info: content/img/center_fed_monopole.png  used on input lin
 e 556.
 (pdftex.def)             Requested size: 320.09349pt x 71.13263pt.
-<content/img/forward_coeff_cfm.png, id=1330, 1513.655pt x 760.8425pt>
+<content/img/forward_coeff_cfm.png, id=1336, 1513.655pt x 760.8425pt>
 File: content/img/forward_coeff_cfm.png Graphic file (type png)
 <use content/img/forward_coeff_cfm.png>
 Package pdftex.def Info: content/img/forward_coeff_cfm.png  used on input line 
 565.
 (pdftex.def)             Requested size: 426.79134pt x 214.52046pt.
-<content/img/phase_shift_cfm.png, id=1331, 1610.58858pt x 1090.24457pt>
+<content/img/phase_shift_cfm.png, id=1337, 1610.58858pt x 1090.24457pt>
 File: content/img/phase_shift_cfm.png Graphic file (type png)
 <use content/img/phase_shift_cfm.png>
 Package pdftex.def Info: content/img/phase_shift_cfm.png  used on input line 59
 5.
 (pdftex.def)             Requested size: 204.85802pt x 138.65915pt.
-<content/img/dipole_moment_cfm.png, id=1332, 1610.58858pt x 1090.24457pt>
+<content/img/dipole_moment_cfm.png, id=1338, 1610.58858pt x 1090.24457pt>
 File: content/img/dipole_moment_cfm.png Graphic file (type png)
 <use content/img/dipole_moment_cfm.png>
 Package pdftex.def Info: content/img/dipole_moment_cfm.png  used on input line 
 602.
 (pdftex.def)             Requested size: 204.85802pt x 138.65915pt.
-
-
-[51
+ [51
 
  <./content/img/center_fed_monopole.png> <./content/img/forward_coeff_cfm.png>]
 
@@ -2055,13 +1944,13 @@ LaTeX Warning: Marginpar on page 52 moved.
 
 LaTeX Warning: Marginpar on page 52 moved.
 
-<content/img/serial_loop_antenna.png, id=1344, 370.29771pt x 265.67828pt>
+<content/img/serial_loop_antenna.png, id=1350, 370.29771pt x 265.67828pt>
 File: content/img/serial_loop_antenna.png Graphic file (type png)
 <use content/img/serial_loop_antenna.png>
 Package pdftex.def Info: content/img/serial_loop_antenna.png  used on input lin
 e 630.
 (pdftex.def)             Requested size: 128.0387pt x 91.86584pt.
-<content/img/serial_loop_antenna_dipole_moments.png, id=1345, 523.78543pt x 256
+<content/img/serial_loop_antenna_dipole_moments.png, id=1351, 523.78543pt x 256
 .73058pt>
 File: content/img/serial_loop_antenna_dipole_moments.png Graphic file (type png
 )
@@ -2071,8 +1960,6 @@ ed on input line 636.
 (pdftex.def)             Requested size: 426.79134pt x 209.18852pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [52 <./content/img/phase_shift_cfm.png> <./content/img/dipole_moment_cfm.png> <
 ./content/img/serial_loop_antenna.png (PNG copy)>]
@@ -2104,7 +1991,7 @@ LaTeX Warning: Marginpar on page 53 moved.
 
 LaTeX Warning: Marginpar on page 53 moved.
 
-<content/img/cfm_rotation_sweep.png, id=1356, 1439.3775pt x 641.39626pt>
+<content/img/cfm_rotation_sweep.png, id=1362, 1439.3775pt x 641.39626pt>
 File: content/img/cfm_rotation_sweep.png Graphic file (type png)
 <use content/img/cfm_rotation_sweep.png>
 Package pdftex.def Info: content/img/cfm_rotation_sweep.png  used on input line
@@ -2113,36 +2000,31 @@ Package pdftex.def Info: content/img/cfm_rotation_sweep.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-
 [53 <./content/img/serial_loop_antenna_dipole_moments.png (PNG copy)>]
 
 LaTeX Warning: Marginpar on page 54 moved.
 
-<content/img/DELETE_AFTER.png, id=1368, 1430.34375pt x 645.41125pt>
+<content/img/DELETE_AFTER.png, id=1374, 1430.34375pt x 645.41125pt>
 File: content/img/DELETE_AFTER.png Graphic file (type png)
 <use content/img/DELETE_AFTER.png>
 Package pdftex.def Info: content/img/DELETE_AFTER.png  used on input line 679.
 (pdftex.def)             Requested size: 426.79134pt x 192.58096pt.
-) (./content/30_numerical_investigations/33_dipole_moments.tex
-
-[54 <./content/img/cfm_rotation_sweep.png> <./content/img/DELETE_AFTER.png>]
-<content/img/ey_ez_coupling_comparison.png, id=1379, 764.8575pt x 501.875pt>
+) (./content/30_numerical_investigations/33_dipole_moments.tex [54 <./content/i
+mg/cfm_rotation_sweep.png> <./content/img/DELETE_AFTER.png>]
+<content/img/ey_ez_coupling_comparison.png, id=1385, 764.8575pt x 501.875pt>
 File: content/img/ey_ez_coupling_comparison.png Graphic file (type png)
 <use content/img/ey_ez_coupling_comparison.png>
 Package pdftex.def Info: content/img/ey_ez_coupling_comparison.png  used on inp
 ut line 11.
 (pdftex.def)             Requested size: 426.79134pt x 280.04488pt.
-
-
-[55 <./content/img/ey_ez_coupling_comparison.png>])
+ [55 <./content/img/ey_ez_coupling_comparison.png>])
 (./content/30_numerical_investigations/34_field_regions.tex
-<content/img/kr_tem_cell.png, id=1388, 374.14781pt x 191.9672pt>
+<content/img/kr_tem_cell.png, id=1394, 374.14781pt x 191.9672pt>
 File: content/img/kr_tem_cell.png Graphic file (type png)
 <use content/img/kr_tem_cell.png>
 Package pdftex.def Info: content/img/kr_tem_cell.png  used on input line 8.
 (pdftex.def)             Requested size: 298.75262pt x 153.28983pt.
-<content/img/loop_small_tem_moments.png, id=1392, 264.86955pt x 185.493pt>
+<content/img/loop_small_tem_moments.png, id=1398, 264.86955pt x 185.493pt>
 File: content/img/loop_small_tem_moments.png Graphic file (type png)
 <use content/img/loop_small_tem_moments.png>
 Package pdftex.def Info: content/img/loop_small_tem_moments.png  used on input 
@@ -2157,21 +2039,19 @@ nput line 28.
 
 LaTeX Warning: Marginpar on page 56 moved.
 
-
-
 [56 <./content/img/kr_tem_cell.png>]
-<content/img/kr_analysis_small_TEM.png, id=1404, 271.7352pt x 180.675pt>
+<content/img/kr_analysis_small_TEM.png, id=1410, 271.7352pt x 180.675pt>
 File: content/img/kr_analysis_small_TEM.png Graphic file (type png)
 <use content/img/kr_analysis_small_TEM.png>
 Package pdftex.def Info: content/img/kr_analysis_small_TEM.png  used on input l
 ine 45.
 (pdftex.def)             Requested size: 204.85802pt x 136.20615pt.
-<content/img/kr_analysis.png, id=1405, 275.71005pt x 180.675pt>
+<content/img/kr_analysis.png, id=1411, 275.71005pt x 180.675pt>
 File: content/img/kr_analysis.png Graphic file (type png)
 <use content/img/kr_analysis.png>
 Package pdftex.def Info: content/img/kr_analysis.png  used on input line 52.
 (pdftex.def)             Requested size: 204.85802pt x 134.246pt.
-<content/img/output_power_comparison_small_tem.png, id=1408, 271.7352pt x 180.6
+<content/img/output_power_comparison_small_tem.png, id=1414, 271.7352pt x 180.6
 75pt>
 File: content/img/output_power_comparison_small_tem.png Graphic file (type png)
 
@@ -2179,27 +2059,23 @@ File: content/img/output_power_comparison_small_tem.png Graphic file (type png)
 Package pdftex.def Info: content/img/output_power_comparison_small_tem.png  use
 d on input line 73.
 (pdftex.def)             Requested size: 204.85802pt x 136.20615pt.
-<content/img/phase_shift_comparison_small_tem.png, id=1409, 271.76532pt x 180.6
+<content/img/phase_shift_comparison_small_tem.png, id=1415, 271.76532pt x 180.6
 75pt>
 File: content/img/phase_shift_comparison_small_tem.png Graphic file (type png)
 <use content/img/phase_shift_comparison_small_tem.png>
 Package pdftex.def Info: content/img/phase_shift_comparison_small_tem.png  used
  on input line 80.
 (pdftex.def)             Requested size: 204.85802pt x 136.20064pt.
-
-
-[57 <./content/img/loop_small_tem_moments.png> <./content/img/kr_analysis_small
-_TEM.png> <./content/img/kr_analysis.png>])
-(./content/30_numerical_investigations/35_shielding.tex
-<content/img/se_graphite.png, id=1420, 867.24pt x 433.62pt>
+ [57 <./content/img/loop_small_tem_moments.png> <./content/img/kr_analysis_smal
+l_TEM.png> <./content/img/kr_analysis.png>]) (./content/30_numerical_investigat
+ions/35_shielding.tex
+<content/img/se_graphite.png, id=1426, 867.24pt x 433.62pt>
 File: content/img/se_graphite.png Graphic file (type png)
 <use content/img/se_graphite.png>
 Package pdftex.def Info: content/img/se_graphite.png  used on input line 8.
 (pdftex.def)             Requested size: 426.79134pt x 213.39536pt.
-
-
-[58 <./content/img/output_power_comparison_small_tem.png> <./content/img/phase_
-shift_comparison_small_tem.png> <./content/img/se_graphite.png>]
+ [58 <./content/img/output_power_comparison_small_tem.png> <./content/img/phase
+_shift_comparison_small_tem.png> <./content/img/se_graphite.png>]
 
 LaTeX Warning: Marginpar on page 59 moved.
 
@@ -2220,11 +2096,7 @@ LaTeX Warning: Marginpar on page 59 moved.
 
 LaTeX Warning: Marginpar on page 59 moved.
 
-
-
-[59]
-
-[60
+[59] [60
 
 ]
 Overfull \hbox (25.86183pt too wide) in paragraph at lines 182--182
@@ -2232,19 +2104,17 @@ Overfull \hbox (25.86183pt too wide) in paragraph at lines 182--182
 ite el-e-ment method\OT1/cmr/m/n/10.95 . WELLESLEY-CAMBRIDGE
  []
 
-
-
 [61] (./Documentation.aux)
  ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
  ***********
 
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 9C37C834374A0DD9D08D92797B7B7653;9042.
+(rerunfilecheck)             Checksum: 08CE106AC3EED88239EB3D5BD2D76C4D;9145.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Documentation
@@ -2255,13 +2125,13 @@ Package logreq Info: Writing requests to 'Documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54100 strings out of 473197
- 1259318 string characters out of 5718604
- 2253233 words of memory out of 5000000
- 76291 multiletter control sequences out of 15000+600000
- 576027 words of font info for 103 fonts, out of 8000000 for 9000
+ 52774 strings out of 474222
+ 1223477 string characters out of 5748733
+ 2189889 words of memory out of 5000000
+ 73964 multiletter control sequences out of 15000+600000
+ 575259 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,131p,1881b,2995s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,15n,131p,1881b,2966s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -2284,10 +2154,10 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
 ic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esi
 nt-type1/esint10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb
 >
-Output written on Documentation.pdf (68 pages, 8298097 bytes).
+Output written on Documentation.pdf (68 pages, 8333642 bytes).
 PDF statistics:
- 1689 PDF objects out of 1728 (max. 8388607)
- 1407 compressed objects within 15 object streams
- 437 named destinations out of 1000 (max. 500000)
- 783 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1697 PDF objects out of 1728 (max. 8388607)
+ 1413 compressed objects within 15 object streams
+ 441 named destinations out of 1000 (max. 500000)
+ 788 words of extra memory for PDF output out of 10000 (max. 10000000)
 
