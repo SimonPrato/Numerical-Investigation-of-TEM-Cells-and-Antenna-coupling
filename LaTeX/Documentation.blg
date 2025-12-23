@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Documentation.aux
 The style file: biblatex.bst
@@ -19,47 +19,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Documentation-blx.bib
 Database file #2: references/references.bib
-Biblatex version: 3.19
+Warning--I didn't find a database entry for "Balanis"
+Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 34 entries,
-            6399 wiz_defined-function locations,
-            1436 strings with 16444 characters,
-and the built_in function-call counts, 258091 in all, are:
-= -- 20463
-> -- 3795
-< -- 1009
-+ -- 7256
-- -- 1475
-* -- 19001
-:= -- 29305
+You've used 33 entries,
+            6402 wiz_defined-function locations,
+            1432 strings with 16346 characters,
+and the built_in function-call counts, 250827 in all, are:
+= -- 19876
+> -- 3675
+< -- 970
++ -- 7063
+- -- 1432
+* -- 18498
+:= -- 28511
 add.period$ -- 0
-call.type$ -- 34
-change.case$ -- 423
+call.type$ -- 33
+change.case$ -- 403
 chr.to.int$ -- 50
-cite$ -- 66
-duplicate$ -- 26861
-empty$ -- 22632
-format.name$ -- 2331
-if$ -- 52175
+cite$ -- 64
+duplicate$ -- 26150
+empty$ -- 22008
+format.name$ -- 2263
+if$ -- 50667
 int.to.chr$ -- 0
-int.to.str$ -- 81
+int.to.str$ -- 78
 missing$ -- 0
-newline$ -- 1118
-num.names$ -- 1504
-pop$ -- 11955
+newline$ -- 1090
+num.names$ -- 1450
+pop$ -- 11632
 preamble$ -- 1
-purify$ -- 609
+purify$ -- 584
 quote$ -- 0
-skip$ -- 6124
+skip$ -- 5916
 stack$ -- 0
-substring$ -- 38014
-swap$ -- 5035
-text.length$ -- 961
-text.prefix$ -- 33
+substring$ -- 36926
+swap$ -- 4894
+text.length$ -- 931
+text.prefix$ -- 32
 top$ -- 1
-type$ -- 1144
+type$ -- 1110
 warning$ -- 0
-while$ -- 3550
+while$ -- 3461
 width$ -- 0
-write$ -- 1085
+write$ -- 1058
+(There was 1 warning)
