@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+%\usepackage{ngerman}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage{esint}
+%\usepackage{subtextbf}
+\usepackage{pdfpages}
+\usepackage{url}
+%\usepackage{cite}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[style=numeric, backend=bibtex]{biblatex}
+\usepackage{todonotes}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{upgreek}
+\usepackage{circuitikz}
+
+
+
+
+
+\addbibresource{references/references.bib}
+\setlength{\textwidth}{15 true cm}
+\setlength{\textheight}{22 true cm}
+\oddsidemargin  0.5 cm
+\evensidemargin 0.5 cm
+\topmargin      0 cm
+
+\renewcommand{\textfraction}{.2}
+\renewcommand{\floatpagefraction}{.8}
+
+\begin{document}
+%\frontmatter
+\pagenumbering{roman}
+
+% Include titlepage
+\begin{titlepage}	
+	{\sffamily		
+		\begin{center}			
+			\includegraphics[width=30mm]{content/00_introduction/img/TU_Graz_Logo.png}
+			
+			\vfill\vfill\vfill
+			\vfill\vfill\vfill
+			
+			{Simon Prato}
+			% Author with existing titles
+			
+			\vfill\vfill\vfill
+			
+			{\LARGE\bfseries{Numerical Investigation of TEM Cells and Antenna Coupling}}
+			% Title of the thesis			
+			
+			\vfill\vfill\vfill
+			\vfill\vfill\vfill			
+			
+			{\bfseries\large{Master Thesis}}
+			
+			{Studies: {Electrical Engineering}}
+						
+			\vfill\vfill\vfill			
+			
+			submitted to
+			
+			\vfill
+			
+			{\bfseries\large{Technical University of Graz}}			
+			
+			\vfill\vfill\vfill			
+			
+			Supervisor
+			
+			{Dr. Thomas Bauernfeind}
+			
+			\vfill
+			
+			\vfill
+			
+			\includegraphics[width=30mm]{content/00_introduction/img/igte_logo.png}
+			
+			%% OPTIONAL: second supervisor/name of the faculty, etc.
+					
+			\vfill\vfill\vfill
+					
+			{Graz}, {August}~{2024}
+			
+		\end{center}
+	}%% end sffamily
+\end{titlepage}
+
+\newpage
+
+% Kurzfassung
+\iftrue
+\cleardoublepage
+\setcounter{page}{2}
+\vspace*{2.2 cm}
+{\Large
+\noindent
+{\bf Abstract}} \\
+\vspace*{0.3 cm}
+
+\noindent
+
+% Abstract
+\cleardoublepage
+\fi
+
+\selectlanguage{english}
+\listoftodos
+% Inhaltsverzeichnis
+	\tableofcontents  
+
+% Tabellenverzeichnis
+% optional
+\newpage
+	\listoffigures 
+
+% Abbildungsverzeichnis
+% optinal
+\newpage
+	\listoftables
+	
+\cleardoublepage
+
+%\mainmatter
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+\section{Theoretical Basics}
+\input{content/10_theory/11_dipole}
+\input{content/10_theory/12_hfss}
+\input{content/10_theory/13_lorentz_reciprocity}
+\input{content/10_theory/14_greens_function}
+\input{content/10_theory/15_tem_cells}
+\input{content/10_theory/16_emission_characteristic_dipole_in_tem}
+\input{content/10_theory/17_shielding}
+\input{content/10_theory/18_fields}
+
+\section{Antennas}
+\input{content/20_antennas/21_antennas_to_investigate}
+
+\section{Simulations}\label{sec:simulations}
+\input{content/30_simulations/31_antennas}
+\input{content/30_simulations/32_dipole_moments}
+\input{content/30_simulations/33_shielding}
+\todo{Const antenna power definieren, damit dipolmomente einzelner antennen vergleichbar wird}
+
+
+\newpage
+
+\iffalse
+\subsection{Summary}
+
+\fi
+\cleardoublepage
+\printbibliography
+\end{document}
