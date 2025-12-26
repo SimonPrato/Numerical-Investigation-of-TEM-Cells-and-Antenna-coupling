@@ -24,49 +24,54 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Geometry of monopole antenna inserted into the TEM cell.}}{34}{figure.caption.63}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Dipole moments}}{35}{figure.caption.64}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Phase shift}}{35}{figure.caption.64}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Current surface density at 550\,MHz}}{35}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Current surface density at 550\,MHz}}{36}{figure.caption.69}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Current surface density at 550\,MHz with offset}}{36}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Chu equivalent circuit of short dipole}}{36}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Chu equivalent circuit of short dipole}}{37}{figure.caption.75}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Current distribution}}{37}{figure.caption.77}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Feed current}}{37}{figure.caption.77}%
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Geometry of loop antenna inserted into the TEM cell. The return path leads into the conducting surface of the cell.}}{37}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Dipole moments of loop antenna}}{38}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Surface current density at 550\,MHz}}{39}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Surface current density at 550\,MHz with offset}}{39}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Surface current density at 550\,MHz with rotated antenna}}{40}{figure.caption.87}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Surface current density at 550\,MHz with offset and rotated antenna}}{40}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Charge density distribution in current loop antenna}}{40}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Current density distribution in current loop antenna}}{40}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Electric near field in current loop antenna}}{41}{figure.caption.93}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Magnetic near field in current loop antenna}}{41}{figure.caption.93}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Voltage drop at feed point of current loop antenna}}{41}{figure.caption.95}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Current consumption at feed point of current loop antenna}}{41}{figure.caption.95}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Wave impedance in the center of the loop}}{42}{figure.caption.96}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Power consumption of the current loop antenna}}{42}{figure.caption.97}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Total power distribution in the system}}{43}{figure.caption.98}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Wave impedance in near field of loop antenna over frequency}}{44}{figure.caption.105}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Inverted F-antenna used in the simulation}}{44}{figure.caption.107}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces S-parameter describing coupling of antenna to waveport 1}}{45}{figure.caption.108}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Phase of S-parameters from antenna to waveport 1 and 2}}{46}{figure.caption.109}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Dipole moments and measurement point of $e_{0,z}$ in TEM cell}}{47}{figure.caption.112}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Dipole moments over frequency}}{48}{figure.caption.114}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces Output power and electric field over frequency}}{49}{figure.caption.116}%
-\contentsline {figure}{\numberline {4.34}{\ignorespaces Phase of S-parameters from rotated antenna to waveport 1 and 2}}{50}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.35}{\ignorespaces Dipole moments of rotated antenna}}{50}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces Center fed monopole antenna used in simulation}}{51}{figure.caption.121}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces S-parameter describing coupling of antenna to waveport 1}}{51}{figure.caption.122}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces Phase shift}}{52}{figure.caption.123}%
-\contentsline {figure}{\numberline {4.39}{\ignorespaces Dipole moments}}{52}{figure.caption.123}%
-\contentsline {figure}{\numberline {4.40}{\ignorespaces Serial loop antenna}}{52}{figure.caption.127}%
-\contentsline {figure}{\numberline {4.41}{\ignorespaces Dipole moments }}{53}{figure.caption.128}%
-\contentsline {figure}{\numberline {4.42}{\ignorespaces CFM S11 sweep with rotation angle stepping}}{54}{figure.caption.135}%
-\contentsline {figure}{\numberline {4.43}{\ignorespaces Center fed monopole antenna coupling dependence on offset (Delete after)}}{54}{figure.caption.138}%
-\contentsline {figure}{\numberline {4.44}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{55}{figure.caption.139}%
-\contentsline {figure}{\numberline {4.45}{\ignorespaces TEM cell containing dipole moments}}{56}{figure.caption.141}%
-\contentsline {figure}{\numberline {4.46}{\ignorespaces Moments in small TEM cell}}{57}{figure.caption.143}%
-\contentsline {figure}{\numberline {4.47}{\ignorespaces Moments in normal TEM cell}}{57}{figure.caption.143}%
-\contentsline {figure}{\numberline {4.48}{\ignorespaces $k\cdot r$ in small TEM cell}}{57}{figure.caption.145}%
-\contentsline {figure}{\numberline {4.49}{\ignorespaces $k\cdot r$ for other TEM cells}}{57}{figure.caption.145}%
-\contentsline {figure}{\numberline {4.50}{\ignorespaces Output powers}}{58}{figure.caption.147}%
-\contentsline {figure}{\numberline {4.51}{\ignorespaces Phase shifts}}{58}{figure.caption.147}%
-\contentsline {figure}{\numberline {4.52}{\ignorespaces Shielding effectiveness of graphite}}{58}{figure.caption.148}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \relax }}{38}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces \relax }}{39}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces \relax }}{40}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces \relax }}{41}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Dipole moments of loop antenna}}{42}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Surface current density at 550\,MHz}}{43}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Surface current density at 550\,MHz with offset}}{43}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Surface current density at 550\,MHz with rotated antenna}}{43}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Surface current density at 550\,MHz with offset and rotated antenna}}{44}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Charge density distribution in current loop antenna}}{44}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Current density distribution in current loop antenna}}{44}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Electric near field in current loop antenna}}{44}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Magnetic near field in current loop antenna}}{44}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Voltage drop at feed point of current loop antenna}}{45}{figure.caption.99}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Current consumption at feed point of current loop antenna}}{45}{figure.caption.99}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Wave impedance in the center of the loop}}{45}{figure.caption.100}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Power consumption of the current loop antenna}}{45}{figure.caption.101}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Total power distribution in the system}}{46}{figure.caption.102}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Power and electric field at output port}}{46}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Wave impedance in near field of loop antenna over frequency}}{46}{figure.caption.110}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Inverted F-antenna used in the simulation}}{47}{figure.caption.112}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces S-parameter describing coupling of antenna to waveport 1}}{47}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Phase of S-parameters from antenna to waveport 1 and 2}}{49}{figure.caption.114}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Dipole moments and measurement point of $e_{0,z}$ in TEM cell}}{50}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Dipole moments over frequency}}{51}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Output power and electric field over frequency}}{52}{figure.caption.121}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces Phase of S-parameters from rotated antenna to waveport 1 and 2}}{52}{figure.caption.123}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces Dipole moments of rotated antenna}}{53}{figure.caption.125}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces Center fed monopole antenna used in simulation}}{54}{figure.caption.126}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces S-parameter describing coupling of antenna to waveport 1}}{54}{figure.caption.127}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces Phase shift}}{55}{figure.caption.128}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces Dipole moments}}{55}{figure.caption.128}%
+\contentsline {figure}{\numberline {4.45}{\ignorespaces Serial loop antenna}}{55}{figure.caption.132}%
+\contentsline {figure}{\numberline {4.46}{\ignorespaces Dipole moments }}{56}{figure.caption.133}%
+\contentsline {figure}{\numberline {4.47}{\ignorespaces CFM S11 sweep with rotation angle stepping}}{57}{figure.caption.140}%
+\contentsline {figure}{\numberline {4.48}{\ignorespaces Center fed monopole antenna coupling dependence on offset (Delete after)}}{57}{figure.caption.143}%
+\contentsline {figure}{\numberline {4.49}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{58}{figure.caption.144}%
+\contentsline {figure}{\numberline {4.50}{\ignorespaces TEM cell containing dipole moments}}{59}{figure.caption.146}%
+\contentsline {figure}{\numberline {4.51}{\ignorespaces Moments in small TEM cell}}{60}{figure.caption.148}%
+\contentsline {figure}{\numberline {4.52}{\ignorespaces Moments in normal TEM cell}}{60}{figure.caption.148}%
+\contentsline {figure}{\numberline {4.53}{\ignorespaces $k\cdot r$ in small TEM cell}}{60}{figure.caption.150}%
+\contentsline {figure}{\numberline {4.54}{\ignorespaces $k\cdot r$ for other TEM cells}}{60}{figure.caption.150}%
+\contentsline {figure}{\numberline {4.55}{\ignorespaces Output powers}}{61}{figure.caption.152}%
+\contentsline {figure}{\numberline {4.56}{\ignorespaces Phase shifts}}{61}{figure.caption.152}%
+\contentsline {figure}{\numberline {4.57}{\ignorespaces Shielding effectiveness of graphite}}{61}{figure.caption.153}%

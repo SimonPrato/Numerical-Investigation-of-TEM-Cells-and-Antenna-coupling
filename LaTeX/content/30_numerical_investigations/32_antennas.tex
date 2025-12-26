@@ -1,6 +1,6 @@
 \subsection{Antennas}
 
-In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,MW. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.4\,mm. Its impedance has been normalized to 50\,$\Omega$.
+In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,W. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.46\,mm, and their wire has a diameter of 0.2\,mm and free-space permittivity. This results in a port impedance of 49.95\,$\Omega$. The TEM cell used has a width of $a=40$\,mm and a height of $b=24$\,mm, and its cells walls and septum consist of a perfect electric conductor, too. 
 
 
 \todo[inline]{Describe how the use of normalization of ports influences results.}
@@ -113,6 +113,35 @@ The distribution of the current along the monopole antenna is numerically derive
 \todo[inline]{inductance of square loop given in Balanis page245}
 
 A loop antenna of dimensions in form of a square is constructed, with each size having a length of 1.6\,mm. This is preferable to a really round antenna, because the adaptive meshing models it much more accurate. \todo{Maybe describe this in the HFSS theory part? Modeling of round surfaces.} The antenna is oriented such that the highest amount of magnetic fields enters it.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/loop_elec_energy}
+	\caption{}
+	\label{fig:loopelecenergy}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/loop_mag_energy}
+	\caption{}
+	\label{fig:loopmagenergy}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/loop_feed_current}
+	\caption{}
+	\label{fig:loopfeedcurrent}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/loop_feed_voltage}
+	\caption{}
+	\label{fig:loopfeedvoltage}
+\end{figure}
+
+
+
+
 
 \begin{figure}[h]
 	\centering
@@ -252,64 +281,6 @@ Next, the electric and magnetic near field is investigated. The wave impedance $
 \autoref{eqn:a_b_moments_simp} relates the dipole moments to the output power. The influence of the dipole moments is determined by the electric field at the electric dipole moment and the magnetic field at the magnetic dipole moment. In this formula, the electric and magnetic field are simply related through the free-space wave impedance. However, as visible in \autoref{fig:waveimpedanceloop}, the wave impedance at the location of the dipole moments (i.e. at the antenna) is much lower. Additionally, it rises linearly with the frequency. This influence of the antenna itself on the fields around the dipoles could explain the non-linear relation of the dipole moments to the frequency.
 
 
-%\begin{figure}[h]
-%	\centering
-%\begin{tikzpicture}
-%	% Paths, nodes and wires:
-%	\draw (3, 8) to[american resistor, l={$R_\mathrm{rad}$}] (6, 8);
-%	\draw (7, 8) to[american inductor, l={$L_\mathrm{eq}$}] (7, 5);
-%	\draw (6, 8) -- (7, 8);
-%	\draw (-1, 8) to[american resistor, l={$R_\mathrm{S}=50\,\Omega$}] (1, 8);
-%	\draw (1, 8) -- (3, 8);
-%	\draw (7, 5) |- (-1, 5);
-%	\node[shape=rectangle, draw, line width=0.7pt, dash pattern={on 2.8pt off 2.8pt}, minimum width=5.975cm, minimum height=4.975cm] at (5, 6.5){};
-%	\node[shape=rectangle, minimum width=6.34cm, minimum height=0.715cm] at (5.812, 9.5){} node[anchor=north west, align=left, text width=5.952cm, inner sep=6pt] at (2.625, 9.875){Current Loop Antenna};
-%	\draw[line width=1.4pt, -latex] (-1.5, 5.75) -| (-1.5, 6.5) -- (-0.5, 6.5);
-%	\node[shape=rectangle, minimum width=2.215cm, minimum height=0.715cm] at (-0.75, 6.875){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (-1.875, 7.25){$P_\mathrm{S}$};
-%	\draw[line width=1.4pt, -latex] (1.375, 5.75) -| (1.375, 6.5) -- (2.375, 6.5);
-%	\node[shape=rectangle, minimum width=2.215cm, minimum height=0.715cm] at (2.125, 6.875){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (1, 7.25){$P_\mathrm{Ant}$};
-%\end{tikzpicture}
-%\caption{Equivalent circuit of current loop antenna, modeling radiation resistances}
-%\label{fig:current_loop_circuit}
-%\end{figure}
-%
-%
-%\begin{figure}[h]
-%	\centering
-%\begin{tikzpicture}
-%	% Paths, nodes and wires:
-%	\draw (6.995, 4.995) to[american inductor] (6.995, 1.995);
-%	\draw (7.995, 4.995) to[capacitor] (7.995, 1.995);
-%	\draw (6.995, 1.995) to[american inductor] (3.995, 1.995);
-%	\draw (3.995, 4.995) to[american inductor] (3.995, 1.995);
-%	\draw (7.995, 1.995) -- (6.995, 1.995);
-%	\draw (2.995, 1.995) to[capacitor] (2.995, 4.995);
-%	\draw (3.995, 1.995) |- (2.995, 1.995);
-%	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (7.683, 1.558){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (6.995, 1.995){A};
-%	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (3.995, 1.558){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (3.308, 1.995){B};
-%	\draw (7.995, 4.995) -- (6.995, 4.995);
-%	\draw (3.995, 4.995) |- (2.995, 4.995);
-%	\draw (3.995, 4.995) -- (3.995, 5.995);
-%	\draw (6.995, 4.995) -- (6.995, 5.995);
-%	\node[ocirc, rotate=-90] at (6.995, 5.995){};
-%	\node[ocirc, rotate=-90] at (3.995, 5.995){};
-%	\draw (3.995, 0.995) to[capacitor] (6.995, 0.995);
-%	\draw (6.995, 1.995) -- (6.995, 0.995);
-%	\draw (3.995, 1.995) -- (3.995, 0.995);
-%	\node[circ, rotate=-90] at (6.995, 1.995){};
-%	\node[circ, rotate=-90] at (3.995, 1.995){};
-%	\node[circ, rotate=-90] at (3.995, 4.995){};
-%	\node[circ, rotate=-90] at (6.995, 4.995){};
-%	\draw[-latex] (2.25, 2.5) -- (2.25, 4.5);
-%	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (2.188, 3.438){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (1.5, 3.875){$V_\mathrm{B}$};
-%	\draw[-latex] (8.75, 2.5) -- (8.75, 4.5);
-%	\node[shape=rectangle, minimum width=1.34cm, minimum height=0.84cm] at (9.312, 3.438){} node[anchor=north west, align=left, text width=0.952cm, inner sep=6pt] at (8.625, 3.875){$V_\mathrm{A}$};
-%\end{tikzpicture}
-%\caption{Equivalent circuit of current loop antenna, modeling specific nodes}
-%\label{fig:current_loop_ua_ub}
-%\end{figure}
-%
-%\todo{Do not model only radiation resistance, but also loss resistance, which is dependent by square-root on the frequency, opposed to the relation of the radiation resistance to the square of frequency.}
 
 \autoref{fig:currentlooppowerconsumption} shows the power consumption of the antenna, which is influenced by two factors. The radiation resistance rises quadratically with the frequency. At the same time, the impedance increases, leading to higher matching and therefore to a higher power transfer. This is contrary to the monopole antenna, where the impedance is decreases over the frequency, again leading to better impedance matching, because the impedance was high to begin with. The source impedance is 50\,$\Omega$.
 
@@ -328,6 +299,16 @@ Next, the electric and magnetic near field is investigated. The wave impedance $
 	\caption{Total power distribution in the system}
 	\label{fig:deleteafter}
 \end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/curr_loop_opower}
+	\caption{Power and electric field at output port}
+	\label{fig:currloopopower}
+\end{figure}
+
+
+
 
 The Skin-effect reduces the area in which the current flows, therefore increasing resistance. This appears due to the reduction of the depth, in which the electromagnetic waves enter. It is also called Skin depth and mathematically described by \autoref{eqn:skin_depth}. It depends on the imaginary part of the wave number $\kappa$, which is described in \autoref{eqn:kappa}. For high conducting materials $\left(\sigma >> \epsilon\omega\right)$, the dependency of the skin depth $d$ on the frequency can be described therefore as $d \propto 1/\sqrt{\omega}$. Since the power dispersion is linearly proportional to the area of the conductor and therefore Skin-depth, it shows the same dependency on the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$ \cite{Griffiths_2024}.  
 \todo{Own little chapter for skin effect? Loop antennas are known for higher conductor losses than radiation Balanis page 231}

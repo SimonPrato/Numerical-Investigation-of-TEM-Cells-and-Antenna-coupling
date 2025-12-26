@@ -37,16 +37,16 @@
 \contentsline {subsection}{\numberline {4.2}Antennas}{34}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Monopole Antenna}{34}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Loop antenna}{37}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Inverted F-antenna}{44}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Center Fed Monopole Antenna}{51}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Serial Loop Antenna}{52}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Offset of source antennas and eddy currents}{53}{subsubsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.3}Dipole Moments}{54}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Orientation and position in TEM Cell}{54}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Combining dipole moments with antennas}{56}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Application of dipole moments}{56}{subsubsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.4}Investigation of field regions}{56}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Shielding Simulations}{58}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Shielding effectiveness of graphite}{58}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Shield effectiveness of FR4}{59}{subsubsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.3}Dual TEM Cell}{59}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.2.3}Inverted F-antenna}{47}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Center Fed Monopole Antenna}{54}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Serial Loop Antenna}{55}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Offset of source antennas and eddy currents}{56}{subsubsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.3}Dipole Moments}{57}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Orientation and position in TEM Cell}{57}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Combining dipole moments with antennas}{59}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Application of dipole moments}{59}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Investigation of field regions}{59}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Shielding Simulations}{61}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Shielding effectiveness of graphite}{61}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Shield effectiveness of FR4}{62}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Dual TEM Cell}{62}{subsubsection.4.5.3}%
