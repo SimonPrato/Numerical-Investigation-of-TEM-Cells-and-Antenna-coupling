@@ -1,10 +1,39 @@
 \subsection{Antennas}
 
-In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,W. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.46\,mm, and their wire has a diameter of 0.2\,mm and free-space permittivity. This results in a port impedance of 49.95\,$\Omega$. The TEM cell used has a width of $a=40$\,mm and a height of $b=24$\,mm, and its cells walls and septum consist of a perfect electric conductor, too. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{content/img/antenna_port}
+	\caption{Geometry of an antenna's feedpoint. The inner conductor is a PEC wire of the antenna. The outer conductor is the TEM cells PEC confinement. In between, vacuum with free-space permittivity $\epsilon_0$ is located.}
+	\label{fig:antennaport}
+\end{figure}
+
+
+In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,W. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.46\,mm, and their wire has a diameter of 0.2\,mm and free-space permittivity. This results in a port impedance of $\approx 50$\,$\Omega$. The TEM cell used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, and its cells walls and septum consist of a perfect electric conductor, too. 
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+	\centering
+\includegraphics[width=1\linewidth]{content/img/tem_cell_front}
+\caption{xy-plane}
+\label{fig:temcellfront}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}
+	\centering
+\includegraphics[width=1\linewidth]{content/img/tem_cell_side}
+\caption{yz-plane}
+\label{fig:temcellside}
+	\end{subfigure}
+	
+	\caption{Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}
+	\label{fig:example}
+\end{figure}
 
 
 \todo[inline]{Describe how the use of normalization of ports influences results.}
-
+\FloatBarrier
 \subsubsection{Monopole Antenna}
 
 \begin{figure}[h]
@@ -17,21 +46,25 @@ In this sections, different antennas are placed in the TEM cell. Their electric 
 
 \begin{figure}[htbp]
 	\centering
-	\begin{minipage}[t]{0.48\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/dipole_moments_monopole.png}
-		\caption{Dipole moments}
-		\label{fig:dipole_moments_monopole}
-	\end{minipage}
+\includegraphics[width=1\linewidth]{content/img/dipole_moments_monopole.png}
+\caption{Dipole moments}
+\label{fig:dipole_moments_monopole}
+	\end{subfigure}
 	\hfill
-	\begin{minipage}[t]{0.5\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/phase_shift_monopole}
-		\caption{Phase shift}
-		\label{fig:phaseshiftmonopole}
-	\end{minipage}
+\includegraphics[width=1\linewidth]{content/img/phase_shift_monopole}
+\caption{Phase shift}
+\label{fig:phaseshiftmonopole}
+	\end{subfigure}
+	
+	\caption{Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}
+	\label{fig:example}
 \end{figure}
-\todo{the length goes to 2mm}
+
+
 
 The formula for dipole moments is used to calculate the dipole moments. The normalized electric field is constant over the frequency. But since the radiation resistance is expected to increase quadratically, we expect the dipole moments to rise linearly.
 
@@ -43,6 +76,8 @@ The wave impedance in the near field region is very high in the low frequencies,
 	\left|Z_\mathrm{w}\right| \approx 60\, \Omega \frac{c}{r\cdot f}
 	\label{eqn:wave_impedance_monopole}
 \end{equation}
+
+
 
 
 \begin{figure}[h]
@@ -74,26 +109,45 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 	\label{fig:chucircuit}
 \end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/monopole_output_power}
+	\caption{Output electric field and power of monopole antenna.}
+	\label{fig:monopoleoutputpower}
+\end{figure}
+
 
 The distribution of the current along the monopole antenna is numerically derived by integrating the magnetic field strength in a closed loop around the antenna. \autoref{fig:currentdistributionmonopole} shows approximately a linear decrease of the current along the antenna, as assumed in \autoref{sec:dipoles}. \todo{Maybe increase resolution by adding more steps} A stronger decrease is visible near the feedpoint, which might occur due to the large displacement current density. An option to improve upon this simulation is increasing the feedpoint size, such that it has 50$\,\Omega$ impedance without needing port normalization.
 
 
+
 \begin{figure}[htbp]
 	\centering
-	\begin{minipage}[t]{0.48\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/current_distribution_monopole}
-		\caption{Current distribution}
-		\label{fig:currentdistributionmonopole}
-	\end{minipage}
+\includegraphics[width=1\linewidth]{content/img/monopole_current_dist}
+\caption{Current distribution}
+\label{fig:currentdistributionmonopole}
+	\end{subfigure}
 	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/monopole_feed_current}
-		\caption{Feed current}
-		\label{fig:monopolefeedcurrent}
-	\end{minipage}
+\includegraphics[width=1\linewidth]{content/img/monopole_feed_current}
+\caption{Feed current}
+\label{fig:monopolefeedcurrent}
+	\end{subfigure}
+	
+	\caption{Current distribution over monopole antenna arm at a frequency of 3\,GHz, and the behavior of the current at the feedpoint over frequency.}
+	\label{fig:example}
 \end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/monopole_imp}
+	\caption{}
+	\label{fig:monopoleimp}
+\end{figure}
+
 
 
 
@@ -113,33 +167,52 @@ The distribution of the current along the monopole antenna is numerically derive
 \todo[inline]{inductance of square loop given in Balanis page245}
 
 A loop antenna of dimensions in form of a square is constructed, with each size having a length of 1.6\,mm. This is preferable to a really round antenna, because the adaptive meshing models it much more accurate. \todo{Maybe describe this in the HFSS theory part? Modeling of round surfaces.} The antenna is oriented such that the highest amount of magnetic fields enters it.
-
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/loop_elec_energy}
-	\caption{}
-	\label{fig:loopelecenergy}
-\end{figure}
-\begin{figure}[h]
+	\begin{subfigure}[b]{0.45\textwidth}
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/loop_mag_energy}
-	\caption{}
-	\label{fig:loopmagenergy}
-\end{figure}
-\begin{figure}[h]
+\includegraphics[width=1\linewidth]{content/img/loop_elec_energy}
+\caption{Electric}
+\label{fig:loopelecenergy}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/loop_feed_current}
-	\caption{}
-	\label{fig:loopfeedcurrent}
-\end{figure}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/loop_feed_voltage}
-	\caption{}
-	\label{fig:loopfeedvoltage}
+\includegraphics[width=1\linewidth]{content/img/loop_mag_energy}
+\caption{Magnetic}
+\label{fig:loopmagenergy}
+	\end{subfigure}
+	
+	\caption{Electric and magnetic energy in the TEM cell, produced by the loop antenna.}
+	\label{fig:example}
 \end{figure}
 
+The total energy density is given by \cite[p.]{Griffiths_2024}
 
+\begin{equation}
+	W = \frac{1}{2}\left(\underbrace{\epsilon E^2}_{\text{Electric energy}} + \underbrace{\frac{1}{\mu} B ^ 2}_{\text{Magnetic energy}}\right)
+\end{equation}
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+	\centering
+\includegraphics[width=1\linewidth]{content/img/loop_feed_current}
+\caption{}
+\label{fig:loopfeedcurrent}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+	\centering
+\includegraphics[width=1\linewidth]{content/img/loop_feed_voltage}
+\caption{}
+\label{fig:loopfeedvoltage}
+	\end{subfigure}
+	
+	\caption{Voltage and current at feedpoint of the loop antenna.}
+	\label{fig:example}
+\end{figure}
 
 
 
@@ -151,6 +224,14 @@ A loop antenna of dimensions in form of a square is constructed, with each size 
 \end{figure}
 
 \autoref{fig:dipole_moments_loop_antenna} shows the dipole moments of the loop antenna over frequency. As expected, the magnetic dipole moment $_\mathrm{m}$ contributed the largest amount to the antenna coupling. A small amount of electric dipole moment is also present, which naturally occurs due to the current wire aligned with the TEM electric fields. The electric dipole moment $m_\mathrm{e}$ increases non-linearly with frequency. \todo{why?}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/curr_imp}
+	\caption{Magnitude and phase of the impedance of the current loop antenna.}
+	\label{fig:currimp}
+\end{figure}
+
 
 \begin{figure}[h]
 	\centering
@@ -241,22 +322,7 @@ The electric current reduces over the wire because of the displacement current t
 
 \todo{H-field from other perspective?}
 
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/current_loop_voltage_drop}
-		\caption{Voltage drop at feed point of current loop antenna}
-		\label{fig:currentloopvoltagedrop}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/current_loop_feed_current}
-		\caption{Current consumption at feed point of current loop antenna}
-		\label{fig:currentloopfeedcurrent}
-	\end{minipage}
-\end{figure}
+
 
 \autoref{fig:currentloopfeedcurrent} and \autoref{fig:currentloopvoltagedrop} show the current and voltage consumption of the antenna. The phase shift equals $\phi\approx89.80\circ$, which hints to a strong inductive behavior. The inductance is determined to be $L\approx2.15\,\mathrm{nH}$. The capacitance is very low, but does lead so some displacement current. The frequency behavior of the voltage and current interchange if the antenna is strongly capacitive, as it the case in a monopole antenna.
 
@@ -271,12 +337,6 @@ which yields $L=2.56\,\mathrm{nH}$. However, this does not consider the coupling
 
 Next, the electric and magnetic near field is investigated. The wave impedance $Z=E/H$ shown in \autoref{fig:waveimpedanceloop} in the center of the loop rises linearly over frequency. At low frequencies, the wave impedance is very low, which confirms the inductive behavior of the antenna. However, as the frequency increases, so does the voltage drop. This may be analogous to a inductor in an electrical circuit, across which the voltage drop also increases with frequency $U = \mathrm{i}L\omega I$. 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/wave_impedance_loop}
-	\caption{Wave impedance in the center of the loop}
-	\label{fig:waveimpedanceloop}
-\end{figure}
 
 \autoref{eqn:a_b_moments_simp} relates the dipole moments to the output power. The influence of the dipole moments is determined by the electric field at the electric dipole moment and the magnetic field at the magnetic dipole moment. In this formula, the electric and magnetic field are simply related through the free-space wave impedance. However, as visible in \autoref{fig:waveimpedanceloop}, the wave impedance at the location of the dipole moments (i.e. at the antenna) is much lower. Additionally, it rises linearly with the frequency. This influence of the antenna itself on the fields around the dipoles could explain the non-linear relation of the dipole moments to the frequency.
 
@@ -284,30 +344,7 @@ Next, the electric and magnetic near field is investigated. The wave impedance $
 
 \autoref{fig:currentlooppowerconsumption} shows the power consumption of the antenna, which is influenced by two factors. The radiation resistance rises quadratically with the frequency. At the same time, the impedance increases, leading to higher matching and therefore to a higher power transfer. This is contrary to the monopole antenna, where the impedance is decreases over the frequency, again leading to better impedance matching, because the impedance was high to begin with. The source impedance is 50\,$\Omega$.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/current_loop_power_consumption}
-	\caption{Power consumption of the current loop antenna}
-	\label{fig:currentlooppowerconsumption}
-\end{figure}
-
 \autoref{fig:deleteafter} shows the total power maintained in the system, meaning $S_{11}^2+S_{12}^2+S_{13}^2$. It does not add up to one, meaning that some energy is lost due to finite conductivity of the septum and antenna. This energy dispersion increases with frequency, most likely due to a decrease of the conductivity due to high-frequency effects like the Skin-effect. Consequently, the power consumption in \autoref{fig:currentlooppowerconsumption} shows a square root relation to the frequency, because the power dispersion is so high. When changing the material of the antenna and septum to a perfect electric conductor, the total power in a system remains one (no power is dispersed) and the power consumption over frequency of the antenna shows a quadratic relation to the frequency, due to the quadratic increase of the radiation resistance.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/delete_after}
-	\caption{Total power distribution in the system}
-	\label{fig:deleteafter}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/curr_loop_opower}
-	\caption{Power and electric field at output port}
-	\label{fig:currloopopower}
-\end{figure}
-
-
 
 
 The Skin-effect reduces the area in which the current flows, therefore increasing resistance. This appears due to the reduction of the depth, in which the electromagnetic waves enter. It is also called Skin depth and mathematically described by \autoref{eqn:skin_depth}. It depends on the imaginary part of the wave number $\kappa$, which is described in \autoref{eqn:kappa}. For high conducting materials $\left(\sigma >> \epsilon\omega\right)$, the dependency of the skin depth $d$ on the frequency can be described therefore as $d \propto 1/\sqrt{\omega}$. Since the power dispersion is linearly proportional to the area of the conductor and therefore Skin-depth, it shows the same dependency on the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$ \cite{Griffiths_2024}.  
@@ -340,12 +377,7 @@ Additionally, this voltage difference $V_\mathrm{A}-V_\mathrm{B}$ rises linearly
 
 Further, \autoref{fig:loopwaveimp} shows the wave impedance of the near-fields at the loop antenna. The \autoref{eqn:a_b_moments_simp} shows, that the influence of the dipoles depends on the electric and magnetic fields at the dipoles position. The electric and magnetic fields are related through the wave impedance $Z = E/H$. If the wave impedance rises linearly over frequency, the electric field increases over the magnetic fields, giving more influence to the electric dipole moments. As previously discussed, there are two electric dipole moments in this antenna, benefiting from that. \todo{Monopole antenna: Also change in wave impedance, but there is not really a magnetic dipole moment} 
 
-\begin{figure}[h] 
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/loop_wave_imp}
-	\caption{Wave impedance in near field of loop antenna over frequency}
-	\label{fig:loopwaveimp}
-\end{figure}
+
 
 The wave impedance $Z_\mathrm{w}$ in the near field of the electrically small loop antenna is approximated by \autoref{eqn:wave_impedance_loop}. It confirms the linear relationship of the near-field wave impedance to the frequency. \todo{Source: \href{https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}
 
