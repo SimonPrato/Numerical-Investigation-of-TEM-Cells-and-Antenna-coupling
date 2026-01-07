@@ -1,0 +1,62 @@
+\subsection{Shielding Simulations}
+\subsubsection{Shielding effectiveness of graphite}
+
+The reference power $P_\mathrm{ref}$ has been set to 1\,W. Using \autoref{eqn:load_power} and the S-parameters from the simulation results, $P_\mathrm{load}$ may be determined. \autoref{fig:se_graphite} demonstrates the shielding effectiveness of graphite in dB $SE_\mathrm{dB}$ over the shielding material thickness. The solution frequency is 500\,MHz. A frequency sweep shows that the reflection coefficient $S_{11}$ does not depend much on the frequency. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{content//30_simulations//img/se_graphite.png}
+	\caption{Shielding effectiveness of graphite}
+	\label{fig:se_graphite}
+\end{figure}
+
+\todo{I think the low SE in the low shield thicknesses has to do with the false modelling of it in Ansys HFSS.}
+
+The components of $SE_\mathrm{dB}$ are determined according to \autoref{eqn:se_rereflections}. 
+
+\subsubsection{Shield effectiveness of FR4}
+
+The FR4 has a relative permittivity of $\epsilon_r=4.4$. According to \autoref{eqn:rel_wave_imp}, the relative wave impedance is $Z=0.476$. This leads to a reflection coefficient of $R=-0.355$ by \autoref{eqn:reflection_coefficient_plane_dielectric}.
+
+
+The reflection coefficient $|S_{11}|=0.045$.
+
+\subsubsection{Dual TEM Cell}
+
+A simulation setup of a dual TEM cell is created. A rectangular aperture with a side length of $l=5\,\mathrm{cm}$, inspired by \cite{Wilson_1981}, connects both TEM cells. One waveport 1, as in \autoref{fig:dual_tem_cell}, is excited with a power of $P=1\,\mathrm{W}$. The simulation is conducted, leaving the aperture open. A second one determines the coupling of the waveports, when the aperture is filled with a graphite sheet with a thickeness of $t=50$\,µm.
+
+At a frequency of $f=500\,\mathrm{MHz}$, the coupling between waveport 1 to the waveports 3 and 4 of the receiving TEM cell is shown in \autoref{tab:dual_tem_fwd_trans}. Only one frequency point is investigated, as the results stay roughly constant over the inspected frequency range from 100\,MHz to 1\,GHz. 
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Forward transmission coefficient & Empty aperture & aperture filled with FR408\\\hline\hline
+		Waveport 1 to 3 $S_{13}$ & -83.80\,dB, -144.96° & -85.27\,dB, -155.79°\\\hline
+		Waveport 1 to 4 $S_{14}$ & -90.31\,dB, -144.96° & -87.14\,dB, 25.00°\\\hline
+	\end{tabular}
+	\caption{Forward transmission coefficients}
+	\label{tab:dual_tem_fwd_trans}
+\end{table}
+\todo{Why -8dB difference in empty aperture? Explained in \cite{Wilson_1981}}
+
+Using \autoref{eqn:se_dual_cell_e} and \autoref{eqn:se_dual_cell_m} leads to the shielding effectiveness for electric coupling $SE_\mathrm{dB}^\mathrm{e}=19.07\,\mathrm{dB}$ and magnetic coupling $SE_\mathrm{dB}^\mathrm{m}=-9.22\,\mathrm{dB}$. \todo{negative SE possible? Redo Simulations with finer Mesh around aperture} To get the sum $P_\mathrm{sum}$ and difference $P_\mathrm{diff}$ of powers, the phase of the signals have to be considered. With unit input power at the transmitting TEM cell, \autoref{eqn:s_param_to_power_sum} and \autoref{eqn:s_param_to_power_diff} are used for this purpose \cite{Sreenivasiah_Chang_Ma_1981}. 
+
+\begin{subequations}
+	\begin{equation}
+		P_\mathrm{sum} = (S_{13} + S_{14})(S_{13} + S_{14})^*
+		\label{eqn:s_param_to_power_sum}
+	\end{equation}
+	\begin{equation}
+		P_\mathrm{diff}= (S_{13} - S_{14})(S_{13} - S_{14})^*
+		\label{eqn:s_param_to_power_diff}
+	\end{equation}
+\end{subequations}
+
+Indicated by the phase shift of roughly 180°, the coupling between the TEM cells occur mainly due to magnetic dipoles. Due to the relative permittivity of $\epsilon _\mathrm{r}=3.66$ and the relative permeability of $\mu_r\approx 1$ of the shielding material, the magnetic fields dominate. This leads to a energy transfer mainly due to magnetic dipole moments\todo{One port receives overall more power due to the material. Is it because of the magnetic/electric dipoles in it? Check mesh around the small aperture.} The overall shielding effectiveness $SE_\mathrm{dB}=$ \autoref{eqn:dual_tem_cell_tot_power}.
+
+\begin{equation}
+	P_\mathrm{total}=|S_{13}|^2+|S_{14}|^2
+	\label{eqn:dual_tem_cell_tot_power}
+\end{equation}
