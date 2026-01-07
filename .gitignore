@@ -1,0 +1,6 @@
+scripts/evaluate-moments/outputs/*
+scripts/evaluate-moments/data/*
+scripts/generic-plotting/output/*
+scripts/generic-plotting/data/*
+scripts/eqc-ind-antenna/data/*
+scripts/eqc-ind-antenna/output/*
