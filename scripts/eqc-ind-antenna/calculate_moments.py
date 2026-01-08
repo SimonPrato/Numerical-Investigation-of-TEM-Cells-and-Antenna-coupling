@@ -49,11 +49,9 @@ def calc(output_power, output_voltage_phase_1, output_voltage_phase_2,
     i_ck = i_lt1 + i_lt2
     i_la = i - i_ca - i_ck
     r_c_parallel = 1/(1/50+1j*2*np.pi*frequency*ct)
-    induced_voltage = input_voltage - 1j * 2 * np.pi * frequency * la * i_la 
     induced_voltage = np.sqrt((((u_1 - u_2) - (-1j * 2 * np.pi * frequency * lt * i_lt1 + 1j * 2 * np.pi * frequency * lt * i_lt2)) / 2 * r_c_parallel/(1j * 2*np.pi*frequency*lt+r_c_parallel))**2/50)
     m = (input_voltage - 1j * 2 * np.pi * frequency * la * i_la) / (1j * 2 * np.pi * frequency * (i_lt1 - i_lt2))
     inductive_power = np.conj(i_la) * input_voltage * np.cos(np.angle(i_la))
-    a_minus_b = np.sqrt(inductive_power) / 2
     a_minus_b = induced_voltage
     equ_mag_dipole_moment = 1j * a_minus_b / (183.1858* 2 * np.pi * frequency) * 299792458 * 2 * np.pi * frequency * 1.256637 * pow(10.0,-6)
     a_plus_b = np.sqrt((i_ck / 2 * 1/50 / (1/50 + 1j * 2 * np.pi * frequency * ct))**2 * 50) 
