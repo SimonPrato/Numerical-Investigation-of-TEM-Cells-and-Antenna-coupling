@@ -18,13 +18,13 @@ def read_antenna_data(antenna_type: str) -> Tuple[List[np.ndarray], List[np.ndar
     data_dir = Path("data") / antenna_type
     
     # Read phase shift data
-    phase_data = _read_csv_columns(data_dir / "Phase.csv")
+    phase_data = _read_csv_columns(data_dir / "phase.csv")
     
     # Read magnitude data  
-    magnitude_data = _read_csv_columns(data_dir / "Magnitude.csv")
+    magnitude_data = _read_csv_columns(data_dir / "magnitude.csv")
     
     # Read E-field data
-    efield_data = _read_csv_columns(data_dir / "EField.csv")
+    efield_data = _read_csv_columns(data_dir / "efield.csv")
     
     return phase_data, magnitude_data, efield_data
 

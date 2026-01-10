@@ -38,7 +38,7 @@ m_e, m_m = calculate_moments(e_field_interp, phase_shift, output_power, frequenc
 plot_moments(m_e, m_m, frequencies, antenna_type)
 
 # Optional: visualize power and E-field relationship
-plot_output_power_e_field(frequencies, output_power, e_field_interp)
+plot_output_power_e_field(frequencies, output_power, e_field_interp, antenna_type)
 
 def model_func(x, a, b, c, d):
     return a * x**3 + b * x**2 + c * x + d
