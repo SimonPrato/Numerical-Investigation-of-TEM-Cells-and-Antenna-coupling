@@ -101,7 +101,6 @@ def main():
     wp1_voltage_phase = load_csv_column('data/loop-tem-cell/phase.csv', 2) 
     wp2_voltage_phase = load_csv_column('data/loop-tem-cell/phase.csv', 3) 
     antenna_voltage_phase = load_csv_column('data/loop-tem-cell/phase.csv', 4) 
-    print(wp1_voltage_phase, wp2_voltage_phase, antenna_voltage_phase)
     phase_shift_1 = wp1_voltage_phase - antenna_voltage_phase
     phase_shift_2 = wp2_voltage_phase - antenna_voltage_phase
 
