@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
-antenna_type = "gapped loop"
+antenna_type = "monopole" # same name as data folder to be read
 
 # === Data Loading ===
 columns_phase_shift, columns_magnitude, columns_efield = read_antenna_data(antenna_type=antenna_type)
