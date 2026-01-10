@@ -5,3 +5,4 @@ scripts/generic-plotting/data/*
 scripts/eqc-ind-antenna/data/*
 scripts/eqc-ind-antenna/output/*
 scripts/eqc-ind-antenna/.venv
+scripts/evaluate-moments/.venv
