@@ -64,4 +64,10 @@ print(f"Electric Dipole Moments fitted parameters: {a_e} * Freq * Freq * Freq + 
 print(f"Magnetic Dipole Moments fitted parameters: {a_m} * Freq * Freq * Freq + {b_m} * Freq * Freq + {c_m} * Freq + {d_m}")
 print(f"===================================================================================================================")
 
-
+print(f"\n===================================================================================================================")
+print(f"Output Power Data (CSV Format)")
+print(f"-------------------")
+print(f"Frequency,Output_Power")
+for freq, power in zip(frequencies, output_power):
+    print(f"{freq/1e9},{power}")
+print(f"===================================================================================================================")
