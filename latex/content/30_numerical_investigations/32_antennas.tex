@@ -1,14 +1,17 @@
-\subsection{Antennas}
+\subsection{Investigation of antennas}
+\subsubsection{Conceptual framework and modeling}
+
+\todo[inline]{Einige Themen hier sollten zum Theorieteil voriger Kapitel verschoben werden.}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.3\linewidth]{content/img/antenna_port}
-	\caption{Geometry of an antenna's feedpoint. The inner conductor is a PEC wire of the antenna. The outer conductor is the TEM cells PEC confinement. In between, vacuum with free-space permittivity $\epsilon_0$ is located.}
+	\includegraphics[width=0.7\linewidth]{content/img/antenna_port}
+	\caption{Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a waveport. This geometry leads to a port impedance of $50\,\Omega$.}
 	\label{fig:antennaport}
 \end{figure}
 
 
-In this sections, different antennas are placed in the TEM cell. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,W. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.46\,mm, and their wire has a diameter of 0.2\,mm and free-space permittivity. This results in a port impedance of $\approx 50$\,$\Omega$. The TEM cell used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, and its cells walls and septum consist of a perfect electric conductor, too. The TEM cell model does not contain the tapered sections at the ports. The ports have an impedance of $50\,\Omega$ due to the TEM cell's geometry.
+The coupling of various electrically small antennas placed in a TEM cell is investigated. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,W. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.46\,mm, and their wire has a diameter of 0.2\,mm and free-space permittivity. This results in a port impedance of $\approx 50$\,$\Omega$. The TEM cell used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, and its cells walls and septum consist of a perfect electric conductor, too. The TEM cell model does not contain the tapered sections at the ports. The ports have an impedance of $50\,\Omega$ due to the TEM cell's geometry.
 
 
 \begin{figure}[htbp]
@@ -31,6 +34,8 @@ In this sections, different antennas are placed in the TEM cell. Their electric 
 	\label{fig:example}
 \end{figure}
 
+The capacitance and inductance of the TEM cell is derived by calculating the feed current and voltage out of the S-parameters. The capacitance and inductance are then derived through the electric and magnetic peak energy. The values fluctuate slightly over frequency by $\pm1\,\%$, which is likely due to numerical inaccuracies. The average capacitance and inductance values over the frequency range are chosen. It is therefore assumed that the TEM cell has a constant capacitance and inductance. $C_T = 6.74\,\mathrm{pF}$, $L_T = 16.25\,\mathrm{nH}$. 
+
 The coupling between the antenna and the two ports of the TEM cell are described by S-parameters, specifically the forward transmission coefficients $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$. The magnitude of this coefficient is the same for the antenna to both ports ($|S_{\mathrm{A1}}|=|S_{\mathrm{A2}}|$). The power transferred from the antenna $P_{\mathrm{Antenna}}$ to the output ports $P_{\mathrm{Out1}}$ and $P_{\mathrm{Out2}}$ is then derived through
 
 \begin{equation}
@@ -41,23 +46,134 @@ The coupling between the antenna and the two ports of the TEM cell are described
 The fields are normalized such that 
 
 \begin{equation}
-	\iint_S \mathbf{e_0} \times \mathbf{h_0} \cdot d\mathbf{s}' = 1,
+	\iint_S \mathbf{E}^\pm \times \mathbf{H	_0}\pm \cdot d\mathbf{s}' = 1,
 	\label{eqn:normalization of fields}
 \end{equation}
 
-where the surface $S$ spans over one of the output ports. The fields are linearly scaled by the complex coefficients $a$ and $b$. Only the TEM mode is considered, therefore only one such pair is needed. \todo{Write preparations. Near field plots missing.}
+where the surface $S$ spans over one of the output ports. The fields are linearly scaled by the complex coefficients $a$ and $b$. If only the TEM mode is considered, only one such pair of coefficients is needed to describe the fields at the output ports. Some investigations explicitly include the propagation of higher order modes. In this case, each mode is assigned a separate pair of coefficients $a_n$, $b_n$. The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$.
 
-\todo[inline]{Describe how the use of normalization of ports influences results.}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\linewidth]{content/img/sketch_dipoles_tem_cell.png}
+%	\caption{Dipole moments and measurement point of $e_{0,z}$ in TEM cell}
+%	\label{fig:sketch_dipoles_tem_cell2}
+%\end{figure}
+
+The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ for a TEM cell is known \todo{Some plot or table for explanation}.The normalization condition leads to an output power equal to $P_\mathrm{out,1} = |a|^2/2$ and $P_\mathrm{out,2}=|b|^2/2$, which is also found in \cite{4091811}. This is derived by
+
+\begin{subequations}
+	\begin{equation}
+		P_{\mathrm{out1}}=\iint_S \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{s'}= \iint_S \frac{1}{2} \, \Re \{ \left(a\cdot \mathbf{E}^\pm\right) \times \left(a\cdot \mathbf{H}^\pm\right)^* \}\cdot \mathrm{d}\mathbf{s'} = \frac{|a|^2}{2},
+		\label{eqn:power_of_poynting1}
+	\end{equation}
+	\begin{equation}
+		P_{\mathrm{out2}}=\iint_S \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{s'}= \iint_S \frac{1}{2} \, \Re \{ \left(b\cdot \mathbf{E}^\pm\right) \times \left(b\cdot \mathbf{H}^\pm\right)^* \}\cdot \mathrm{d}\mathbf{s'} = \frac{|b|^2}{2}.
+		\label{eqn:power_of_poynting2}
+	\end{equation}
+\end{subequations}
+
+Because ideal TEM fields are assumed at the output ports, the Poynting vector has no imaginary component,
+
+
+\begin{equation}
+	\mathbf{E}^\pm\times\mathbf{H}^\pm=\Re\{\mathbf{E^\pm}\times\left(\mathbf{H}^\pm\right)^*\} \quad\text{for TEM mode}.
+	\label{eqn:equivalent_tem}
+\end{equation}
+
+Consequently, if the normalized electric field distribution of the TEM mode $\mathbf{E^\pm}$ is unknown, it may be derived by setting the output power of a waveport to $P_{\mathrm{out}}=1/2\,\mathrm{W}$, where $|a|=|b|=1\,\sqrt{\mathrm{W}}$. For example, the uniformly distributed, normalized electric field along the y-axis in the center of the TEM cell ($z=0$, $x=0$) is derived by
+
+\begin{equation}
+	|a|\cdot\mathbf{E}^\pm(0,y,0)=1\sqrt{\mathrm{W}}\cdot\mathbf{E}^\pm = \frac{\sqrt{P_\mathrm{out}R_\mathrm{waveport}}}{b/2}
+\end{equation}
+ 
+ The difference in phase of $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$ influence the quantity of magnetic dipole moments and electric dipole moments.  If the dipole moments are placed in the center of the TEM cell half-way between both output ports, they will contain the same power, therefore $|a| = |b|$. In this case, a phase shift of $\pi$ indicates the presence of a magnetic dipole moment and the absence of electric dipole moments. This is shown by
+
+\begin{subequations}
+	\begin{equation}
+		\mathbf{m}_\mathrm{e} = \frac{a+b}{\mathbf{E}^\pm} = \frac{a+a\cdot e^{j\pi}}{\mathbf{E}^\pm} = 0,
+	\end{equation}
+	\begin{equation}
+		\mathbf{m}_\mathrm{m} = j\frac{a-b}{\mathbf{E}^\pm\cdot k_0} = j\frac{a-a\cdot e^{j\pi}}{\mathbf{E}^\pm\cdot k_0} = j\frac{2a}{\mathbf{E}^\pm\cdot k_0}.
+	\end{equation}
+\end{subequations}
+
+ A phase shift of zero indicates the opposite case. The influence of the electric and magnetic dipole moment is equal, if the phase shift equals $\pi/2$. 
+
+If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{H}^\pm = H_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{E}^\pm = E_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
+An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{H}^\pm$ and $\mathbf{E}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.
+
+A magnetic dipole moment can be expressed equivalently as either an electric current loop or a magnetic line current, as described in \autoref{eqn:magn_current_curr_loop}. For infinitesimal magnetic dipoles, this duality simplifies to
+\begin{equation}
+	m_{\mathrm{m}}=j\omega\mu_0 m_{\mathrm{0}},
+	\label{eqn:m_mymag_ifa}
+\end{equation}
+where $m_{\mathrm{m}}$ (in V$\cdot$m) denotes the magnetic dipole moment in the magnetic current representation, and $m_{\mathrm{0}}$ (in A$\cdot$m$^2$) denotes the moment in the electric current representation.
+
+If the output power and phase shifts of the waveports are known, any antenna in the TEM cell may be replaced by an electric and a magnetic dipole moment. Using numeric simulation, the phase shift is determined by measuring the phase shifts of the electric fields at both output ports. When applying this described method in a measurement with a real TEM cell, the phase shift is found by adding and subtracting the output powers of both ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
+
+The energy density is given by \cite[p. 330]{Griffiths_2024}
+
+\begin{equation}
+	w_\mathrm{EM} = \frac{1}{2}\left(\underbrace{\epsilon E^2}_{\text{Electric energy} w_E} + \underbrace{\frac{1}{\mu} B ^ 2}_{\text{Magnetic energy} w_M}\right).
+	\label{eqn:em_energy}
+\end{equation}
+
+Integrating $w_\mathrm{EM}$ over a volume yields the total electromagnetic energy in this volume. Similarly, integrating $w_E$ gives the electric energy in said volume, and $w_M$ the magnetic energy.
+
+If all of the energy is provided by an electrically short antenna, its equivalent reactances can be derived through \cite[pp 107, 328]{Griffiths_2024}
+
+\begin{subequations}
+	\begin{equation}
+		L = 2\frac{W_m}{I^2}
+		\label{eqn:m_energy}
+	\end{equation}
+	\begin{equation}
+		C = 2 \frac{W_e}{V^2}
+		\label{eqn:e_energy}
+	\end{equation}
+\end{subequations}
+
+
+All simulations are counterchecked by inserting frequency-dependent dipole moments and checking the power and phase of the output ports.
+
 \FloatBarrier
 \subsubsection{Monopole Antenna}
+\subsubsection{Setup}
+\FloatBarrier
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.3\linewidth]{content/img/monopole_antenna}
-	\caption{Geometry of monopole antenna inserted into the TEM cell.}
-	\label{fig:monopoleantenna}
+	\hspace*{-0.0cm}
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[height=8cm]{content/img/monopole_near_field}
+		\label{fig:monopolenearfield}		
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}
+		
+		\centering
+		\raisebox{0.12cm}{\includegraphics[height=8cm]{content/img/monopole_antenna}}
+		\label{fig:monopoleantenna}
+	\end{subfigure}
+	
+	\caption{Geometry of monopole antenna inserted into TEM cell with its electric near-field.}
+	\label{fig:field_monopole_antenna}
 \end{figure}
 
+
+The monopole antenna, shown in \autoref{fig:monopoleantenna}, is installed at the center of the TEM cell and connected to the feedpoint located on the top wall. It has a length of 5\,mm, which makes it electrically short at frequencies up to 6\,GHz. It may be approximated as an infinitesimal electric dipole for frequencies up to 1.25\,GHz. The equivalent dipole moments $\mathbf{m}_e$ and $\mathbf{m}_m$ are derived through \cref{eqn:ifa_me, eqn:ifa_mm}. 
+
+When considering only the , only 
+
+The frequency range investigated reaches from 1\,MHz to 3\,GHz. \autoref{fig:te01_te10_tem_propagation} demonstrates the cut-off frequencies of higher-order modes of the TEM cell in use for the simulation, where the cut-off frequency of TE\textsubscript{01} equals $f_{\mathrm{c,01}}=3.12\,\mathrm{GHz}$. The output power is influenced by the propagation of this evanescent mode, which must be considered in the simulation results in the upper frequency range. 
+
+However, the dominant present mode is the TEM mode. Only the the electric dipole moment in y-direction and the magnetic dipole moment in x-direction are needed to model the antenna, because they align with the fields of the TEM mode.
+
+
+\FloatBarrier
+\subsubsection{Equivalent dipole moments}
+\FloatBarrier
 
 \begin{figure}[htbp]
 	\centering
@@ -75,25 +191,144 @@ where the surface $S$ spans over one of the output ports. The fields are linearl
 \label{fig:phaseshiftmonopole}
 	\end{subfigure}
 	
-	\caption{Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}
+	\caption{The equivalent dipole moments of the monopole antenna and the corresponding induced phase shift between the wave ports are presented in separate figures.}
 	\label{fig:example}
+\end{figure}
+
+The electric dipole moment is normalized to the free-space wave impedance to enable comparison with the magnetic dipole moment \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}. The electric dipole moment shown in \autoref{fig:dipole_moments_monopole} increases approximately linearly over frequency, while the magnetic dipole moment is negligible over the whole frequency range. Consequently, the phase difference between the powers $\Delta = \varphi_2 - \varphi_1=0$ over the whole frequency range. 
+
+
+\FloatBarrier
+\subsubsection{Electrical characteristics}
+\FloatBarrier
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_feed_voltage}
+		\caption{Voltage at feedpoint}
+		\label{fig:monopolefeedvoltage}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_feed_current}
+		\caption{Current at feedpoint}
+		\label{fig:monopolefeedcurrent}
+	\end{subfigure}
+	
+	\caption{Current and voltage at feedpoint of monopole antenna over frequency.}
+	\label{fig:example}
+\end{figure}
+
+\todo{axis typo}
+
+
+The electric current flowing through the monopole antenna is aligned with the electric field $\mathbf{e}_n^\pm$ of the TEM mode. Therefore, according to \autoref{eqn:J1_propagating_waves}, this will lead to a coupling with the output ports.  \autoref{eqn:J1_propagating_waves} also requires $\mathbf{e}_n^\pm$ and the part of $I$ contributing to the output power to be in phase at the position of the monopole antenna, due to $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ being in-phase at the output ports. Integrating the current $I$ in \autoref{fig:monopolefeedcurrent} over the antenna length and multiplying it with $\mathbf{e}_\mathrm{TEM}^\pm$ yields
+
+\begin{equation}
+	\int_C \mathbf{e}^\pm_{\mathrm{TEM}}\boldsymbol{\tau} I(l)\,dl = 82.00\,\mu\mathrm{Am},
+\end{equation}
+
+which is equivalent to $\mathbf{m_e}=3.09\cdot 10^{-2}$, if normalized to the free-space wave impedance $Z_0\approx 376.73\,\Omega$.  
+
+%For example, measuring the y-component of the electric field at the center of output port 1 yields $E_y^+(x=0, y, z=l/2)=15.35\,\mathrm{V/m}$, which is constant over $y$. \todo{differentiate somehow between normalized and normal electric field}. Using the Lorentz Reciprocity theorem \autoref{eqn:J1_propagating_waves}, and integrating $E_y^+(x=0, y, z=l/2)$ and $I(x=0, y, z=l/2)$ over the length of the monopole antenna yields \todo{all values must be peak values}
+
+%\begin{equation}
+%	\int_C E_y^+(x=0, y, z=l/2)\cdot I(x=0, y, z=l/2)\,dy=521.9\,\mathrm{\mu W}=2a^2.
+%\end{equation}
+%
+%Applying \autoref{eqn:ifa_me} to then derive the electric dipole moment leads to 
+%
+%\begin{equation}
+%	\mathbf{m}_e = \sqrt{2}\frac{521.9\,\mathrm{W}}{\mathbf{E^\pm}}=
+%\end{equation}
+
+
+
+
+The voltage $V$ at the feedpoint in \autoref{fig:monopolefeedvoltage} remains largely constant over the frequency range. This agrees with the absence of magnetic dipole moment $\mathbf{m}_m$, which is directly related to induced voltage according to \autoref{eqn:m_v}. The current $I$ at the feedpoint in \autoref{fig:monopolefeedcurrent} rises linearly. According to \autoref{eqn:me_i}, the frequency behavior of $\mathbf{m}_\mathrm{e}$ is proportional to $I$. \autoref{eqn:me_i} cannot directly be applied using $I$, because some of this current returns as displacement current to the feedpoint (see \autoref{fig:monopolenearfield}), not contributing to the electric coupling. Furthermore, this agrees with the quadratically increasing output power in \autoref{fig:monopoleoutputpower} and the quadratically increasing radiation resistance determined.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[height=5cm]{content/img/monopole_output_power}
+		\caption{Output electric field and power of monopole antenna.}
+		\label{fig:monopoleoutputpower}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[height=5cm]{content/img/monopole_moment_comp}
+		\caption{Comparison of output power produced by monopole antenna and equivalent dipole moments.}
+		\label{fig:monopolemomentcomp}
+	\end{subfigure}
+	
+	\caption{Output power and electric field data of antenna and equivalent dipole moments}
+	\label{fig:monopole_power_comp}
+\end{figure}
+
+The derived equivalent dipole moments $\mathbf{m}_e$, $\mathbf{m}_m$ positioned in the center of the TEM cell produce output power shown in \autoref{fig:monopolemomentcomp}, where they are compared with the monopole antenna. The approximation with the dipole moments worsens, when approaching the cut-off frequency of the first higher-order mode. The coefficients $a_{01}$ and $b_{01}$ of the TE\textsubscript{01} have to be considered, which would provide the difference in power to increase accuracy.
+
+The output power rises quadratically over the frequency, which fits the linearly rising electric dipole moment and the quadratically rising radiation resistance determined in section \todo{Fill in}.
+
+An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. \todo{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{content/img/chu_circuit}
+	\caption{Chu equivalent circuit of short dipole}
+	\label{fig:chucircuit}
 \end{figure}
 
 
 
-The formula for dipole moments is used to calculate the dipole moments. The normalized electric field is constant over the frequency. But since the radiation resistance is expected to increase quadratically, we expect the dipole moments to rise linearly.
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_current_dist}
+		\caption{At $3\,\mathrm{GHz}$}
+		\label{fig:currentdistributionmonopole}
+		\hfill
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/current_loop_charge_distribution_1MHz}
+		\caption{At $1\,\mathrm{MHz}$}
+		\label{fig:currentloopchargedistribution1mhz}
+	\end{minipage}
+	\caption{Current distribution along the monopole antenna at frequencies $1\,\mathrm{MHz}$ and $3\,\mathrm{GHz}$}
+	\label{fig:monopole_current_dist}
+\end{figure}
 
-\autoref{fig:dipole_moments_monopole} shows the dipole moments of the monopole antenna. Note the linear relation of the electric dipole moment $m_\mathrm{e}$ to the frequency, which is not given in the center fed monopole and inverted-F antenna. The magnetic dipole moment equals zero, which is explainable by the very weak coupling of the magnetic fields. The length of the monopole antenna is 5\,mm.
+The distribution of the current along the monopole antenna shown in \autoref{fig:monopole_current_dist} is numerically derived by integrating the magnetic field intensity in a closed loop around the antenna at each position. 
 
-The wave impedance in the near field region is very high in the low frequencies, but sharply drops off with frequency\todo{insert plot}. The relation is approximately given by \autoref{eqn:wave_impedance_monopole}, where $r$ describes the distance to the antenna.\todo{Source: \href{https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO} Generally, the near-field is electric, which is explaining by the capacitive behavior of the monopole antenna. The decrease of the wave impedance over the frequency also leads to better impedance matching, as the source impedance is set to 50\,$\Omega$. This leads to better power transfer, and more efficient radiation. \todo{Explain how much of the power transfer is due to the quadratic rise of the radiation resistance, and how much of it is due to better matching. As visible, in the current / voltage plots, the quadratic rise of the resistance influences the power transfer much more than the increased matching.} 
+Near the feedpoint at $0\,\mathrm{mm}$ non-linearities become apparent, due to significant displacement current in this region, as \autoref{fig:monopolenearfield} makes clear. This causes the current in the antenna to rapidly decreases in this section. 
 
-\begin{equation}
-	\left|Z_\mathrm{w}\right| \approx 60\, \Omega \frac{c}{r\cdot f}
-	\label{eqn:wave_impedance_monopole}
-\end{equation}
+The current distribution at $3\,\mathrm{GHz}$ (see \autoref{fig:currentdistributionmonopole}) approximates that of a small electric dipole as described in \autoref{sec:small_electric_dipole}. It shows an approximately linear decrease. Any current observed beyond the antenna length of $5\,\mathrm{mm}$ is attributed to displacement current to the septum, as is visible by the increased electric field there in \autoref{fig:monopolenearfield}.
+
+The current distribution at $1\,\mathrm{MHz}$ demonstrated in \autoref{fig:currentloopchargedistribution1mhz} approximately follows the behavior of an infinitesimal electric dipole discussed in \autoref{sec:infinitesimal_electric_dipoles}. There, the current remains nearly constant over some sections of antenna length, decreasing towards the end. Additionally, the magnitude of the current is significantly lower at this frequency. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/monopole_imp}
+	\caption{Magnitude and phase of monopole antenna's impedance.}
+	\label{fig:monopoleimp}
+\end{figure}
 
 
+This frequency-dependent behavior is explained by the impedance of the monopole antenna shown in \autoref{fig:monopoleimp}. At low frequencies, the antenna impedance demonstrates a high magnitude, which rapidly decreases as frequency increases. Over the whole frequency range, it exhibits highly capacitive behavior, which is consistent with \autoref{eqn:compl_power_inf_elec_dipole}.
 
+\FloatBarrier
+\subsubsection{Current distribution on septum}
+\FloatBarrier
 
 \begin{figure}[h]
 	\centering
@@ -102,7 +337,7 @@ The wave impedance in the near field region is very high in the low frequencies,
 	\label{fig:monopole_surface_currents}
 \end{figure}
 
-\autoref{monopole_surface_current_offset} shows the induced surface currents on the septum, when giving the monopole antenna an offset of 7.5\,mm. The energy transfer decreases by 1\,dB.  
+\autoref{fig:monopole_surface_currents} shows the surface current density on the septum caused by the monopole antenna. The current flows towards output ports in-phase, which causes the output power to be in-phase, too. This is a characteristic of the dominant electric dipole moment, predicted by .\todo{show for higher order modes, reference section where this is discussed} The current density is largest at the edge of the septum, where the TEM cell's wall is closest and charges accumulate. 
 
 \begin{figure}[h]
 	\centering
@@ -111,72 +346,25 @@ The wave impedance in the near field region is very high in the low frequencies,
 	\label{fig:monopole_surface_current_offset}
 \end{figure}
 
-\autoref{fig:monopolefeedcurrent} demonstrates the feed current over the frequency. Because the monopole antenna has a high impedance, the it rises linearly with the frequency. Meanwhile, the voltage falls quadratically with the frequency \todo{show plot and show mathematically}. This all fits together with the quadratic rise of the radiation resistance \todo{show mathematically?}. This evaluation has been done automatically through a script, integrating the magnetic field around the wire \todo{How big is the radius of the closed circle around the antenna. Sketch? What does the script look like}.
 
+\autoref{monopole_surface_current_offset} shows the induced surface currents on the septum by the monopole antenna with an offset $x=7.5\,\mathrm{mm}$. 
 
-An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. \todo{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}
+\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}.
 
+\FloatBarrier
+\subsubsection{Electromagnetic energy in the TEM cell}
+\FloatBarrier
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.3\linewidth]{content/img/chu_circuit}
-	\caption{Chu equivalent circuit of short dipole}
-	\label{fig:chucircuit}
-\end{figure}
+The antenna produces electromagnetic energy in the TEM cell, which is derived by \autoref{eqn:em_energy}. This gives information about the real and imaginary power consumed by the antenna. Furthermore, it is possible to derive the inductance and capacitance of the monopole antenna in the TEM cell through \cref{eqn:m_energy, eqn:e_energy}. With help of the electrical energy shown in \autoref{fig:monopole_em_energy}, the reactances turn out to be
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/monopole_output_power}
-	\caption{Output electric field and power of monopole antenna.}
-	\label{fig:monopoleoutputpower}
-\end{figure}
-
-
-The distribution of the current along the monopole antenna is numerically derived by integrating the magnetic field strength in a closed loop around the antenna. \autoref{fig:currentdistributionmonopole} shows approximately a linear decrease of the current along the antenna, as assumed in \autoref{sec:dipoles}. \todo{Maybe increase resolution by adding more steps} A stronger decrease is visible near the feedpoint, which might occur due to the large displacement current density. An option to improve upon this simulation is increasing the feedpoint size, such that it has 50$\,\Omega$ impedance without needing port normalization.
-
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-	\centering
-\includegraphics[width=1\linewidth]{content/img/monopole_feed_voltage}
-\caption{}
-\label{fig:monopolefeedvoltage}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
-	\centering
-\includegraphics[width=1\linewidth]{content/img/monopole_feed_current}
-\caption{}
-\label{fig:monopolefeedcurrent}
-	\end{subfigure}
-	
-	\caption{Current and voltage at feedpoint of monopole antenna over frequency. }
-	\label{fig:example}
-\end{figure}
-
-
-
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[t]{0.48\textwidth}
-	\centering
-\centering
-\includegraphics[width=0.9\linewidth]{content/img/monopole_current_dist}
-\caption{Current distribution along monopole antenna arm}
-\label{fig:currentdistributionmonopole}
-\hfill
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-	\centering
-\includegraphics[width=1\linewidth]{content/img/monopole_imp}
-\caption{Magnitude and phase of monopole antenna's impedance.}
-\label{fig:monopoleimp}
-	\end{minipage}
-\end{figure}
-
-
+\begin{subequations}
+	\begin{equation}
+		L = todo
+	\end{equation}
+	\begin{equation}
+		C = todo
+	\end{equation}
+\end{subequations}
 
 \begin{figure}[htbp]
 	\centering
@@ -195,7 +383,7 @@ The distribution of the current along the monopole antenna is numerically derive
 	\end{subfigure}
 	
 	\caption{Peak magnetic and electric energy in the TEM cell generated by the monopole antenna}
-	\label{fig:example}
+	\label{fig:monopole_em_energy}
 \end{figure}
 
 \FloatBarrier
@@ -209,36 +397,33 @@ The distribution of the current along the monopole antenna is numerically derive
 	\label{fig:loopantenna}
 \end{figure}
 
+A square loop antenna is placed in the TEM cell, with each side having a length of 1.6\,mm. This is preferable to a round antenna in numerical simulation, due to more accurate mesh modeling. \todo{Maybe describe this in the HFSS theory part? Modeling of round surfaces.} The antenna is aligned with the z-axis.
 
-\todo[inline]{equivalent circuit in Balanis page 244}
-\todo[inline]{inductance of square loop given in Balanis page245}
-
-A loop antenna of dimensions in form of a square is constructed, with each size having a length of 1.6\,mm. This is preferable to a really round antenna, because the adaptive meshing models it much more accurate. \todo{Maybe describe this in the HFSS theory part? Modeling of round surfaces.} The antenna is oriented such that the highest amount of magnetic fields enters it.
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/loop_elec_energy}
-\caption{Electric}
+\caption{Electric energy}
 \label{fig:loopelecenergy}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/loop_mag_energy}
-\caption{Magnetic}
+\caption{Magnetic energy}
 \label{fig:loopmagenergy}
 	\end{subfigure}
 	
-	\caption{Electric and magnetic energy in the TEM cell, produced by the loop antenna.}
+	\caption{Equivalent circuit of small loop antenna according to \cite[p. 244] {Balanis_1997}}
 	\label{fig:example}
 \end{figure}
 
-The total energy density is given by \cite[p.]{Griffiths_2024}
 
-\begin{equation}
-	W = \frac{1}{2}\left(\underbrace{\epsilon E^2}_{\text{Electric energy}} + \underbrace{\frac{1}{\mu} B ^ 2}_{\text{Magnetic energy}}\right)
-\end{equation}
+The inductance consists of the antenna's inductance and the mutual inductance with the TEM cell. Similarly, the capacitance consists of the antenna's capacitance and the coupling capacitance with the TEM cell. 
+%
+%The output power is calculated through the S-parameters. The impedance too. The voltage and current at the antenna port follow from the impedance and input power. The magnetic and electric energy in the TEM cell is calculated through integrating the electric and magnetic field intensities. By dividing them with the voltage and current, the inductance and capacitance of the antenna is calculated.  \todo{Passt so vermutlich nicht: die port s parameter lügen diesbezüglich ein wenig, da sehr viel strom bereits nähe des ports als displacement current zurückfließt.}
+
 
 
 \begin{figure}[htbp]
@@ -262,6 +447,133 @@ The total energy density is given by \cite[p.]{Griffiths_2024}
 \end{figure}
 
 
+If the current $I$ in the loop antenna was constant, the electric field integral in \autoref{eqn:ind_volt} would equal zero. However, this current varies along the loop as shown in \autoref{fig:loopfeedcurrent}, and much of it escapes as displacement current and leads to electric coupling. 
+
+\autoref{fig:loopfeedvoltage} demonstrates the voltage at the feedpoint of the antenna, and it does resemble therefore the magnetic dipole moment in \autoref{fig:dipole_moments_loop_antenna} strongly. 
+
+
+Using a similar line of argument, the electric dipole moment is derived by $j\omega C U$
+
+\begin{figure}[htbp]
+	\centering
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (6, 8) to[european resistor, l={$R$}] (6, 5);
+	\draw (8, 8) to[european inductor, l={$L$}] (8, 5);
+	\draw (10, 8) to[capacitor, l={$C$}] (10, 5);
+	\draw (6, 8) -| (6, 9) -- (4, 9);
+	\draw (6, 9) -- (8, 9) -| (8, 8);
+	\draw (8, 9) -- (10, 9) -| (10, 8);
+	\draw (10, 5) -| (10, 4) -- (4, 4);
+	\draw (6, 5) -| (6, 4);
+	\draw (8, 5) -| (8, 4);
+	\draw[line width=0.7pt, -stealth] (4, 8) -- (4, 5);
+	\node[shape=rectangle, minimum width=0.965cm, minimum height=0.715cm] at (3.75, 6.375){} node[anchor=north west, align=left, text width=0.577cm, inner sep=6pt] at (3.25, 6.75){$V$};
+	\draw[line width=1.1pt, -latex] (6, 8) -- (6, 7.75);
+	\node[shape=rectangle, minimum width=1.465cm, minimum height=0.965cm] at (6.75, 7.75){} node[anchor=north west, align=left, text width=1.077cm, inner sep=6pt] at (6, 8.25){$I_R$};
+	\node[shape=rectangle, minimum width=1.465cm, minimum height=0.965cm] at (8.75, 7.75){} node[anchor=north west, align=left, text width=1.077cm, inner sep=6pt] at (8, 8.25){$I_L$};
+	\draw[line width=1.1pt, -latex] (8, 8) -- (8, 7.75);
+	\draw[line width=1.1pt, -latex] (10, 8) -- (10, 7.75);
+	\node[shape=rectangle, minimum width=1.465cm, minimum height=0.965cm] at (10.75, 7.75){} node[anchor=north west, align=left, text width=1.077cm, inner sep=6pt] at (10, 8.25){$I_C$};
+\end{tikzpicture}
+\caption{Circuit with voltage source, resistor, and capacitor.}
+\label{fig:simple-circuit}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\node[shape=circle, draw, line width=1pt, minimum width=0.965cm](N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$VI$};
+	\node[ground] at (2.5, 8){};
+	\draw (2.5, 9) -| (2.5, 8);
+	\draw (4, 11) to[european resistor, l={$R_s$}] (6, 11);
+	\draw (7.5, 11) to[capacitor, l={$C_A$}] (7.5, 8);
+	\draw (10, 11) to[european inductor, l={$L_A$}] (10, 8);
+	\node[ground] at (7.5, 8){};
+	\node[ground] at (10, 8){};
+	\draw (2.5, 10) -| (2.5, 11) -- (4, 11);
+	\draw (6, 11) -- (7.5, 11) -- (10, 11);
+	\node[circ] at (7.5, 11){};
+	\node[circ] at (10.5, 10){};
+	\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=4.965cm, minimum height=4.465cm] at (8.5, 9.25){};
+	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (8.375, 11.5){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (5.75, 12.25){Antenna};
+	\draw (10, 11) to[capacitor, l={$C_k$}] (14.5, 11);
+	\node[circ] at (10, 11){};
+	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
+	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
+	\draw (14.5, 10) -| (14.5, 12);
+	\node[circ] at (14.5, 11){};
+	\draw (18, 10) to[capacitor, l={$C_{T2}$}] (18, 8);
+	\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
+	\node[ground] at (18, 8){};
+	\node[ground] at (20.5, 8){};
+	\node[circ] at (18, 10){};
+	\draw (18, 12) -- (22, 12);
+	\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
+	\node[ground] at (23, 8){};
+	\draw (25.5, 10) to[european resistor, l={$R_1$}] (25.5, 8);
+	\node[ground] at (25.5, 8){};
+	\draw (22, 12) -- (24.5, 12);
+	\draw (20.5, 10) -- (20.5, 12);
+	\node[jump crossing] at (20.5, 10){};
+	\draw (18, 10) -- (20.36, 10);
+	\draw (20.64, 10) -- (23, 10);
+	\draw (24.5, 12) -| (25.5, 10);
+	\node[circ] at (20.5, 12){};
+	\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=7.965cm, minimum height=5.715cm] at (18, 9.875){};
+	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (16.375, 12.75){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
+	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (23.375, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (22, 10.5){waveport 2};
+	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (26.875, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (25.5, 10.5){waveport 1};
+	\node[circ] at (15.75, 12.5){};
+	\node[circ] at (16.75, 10.5){};
+\end{tikzpicture}
+}
+\caption{Circuit with voltage source, resistor, and capacitor.}
+\label{fig:simple-circuit}
+\end{figure}
+
+The inductance and reactance is derived out of the parallel replacement circuit through 
+
+\begin{subequations}
+	\begin{equation}
+	L = \frac{V^2}{2\omega^2W_m},
+	\end{equation}
+ 	\begin{equation}
+ 	C = \frac{2W_c}{V^2}.
+ 	\end{equation}
+\end{subequations}
+
+Inserting the reactance values yield a good approximation of the real dipole moments. The behavior of the dipole moments can therefore be explained by the dominating inductance, which generates a large voltage, thus increasing the electric coupling. 
+
+A fine mesh is important due to the near-fields of the antenna. Coarse meshes lead to bad modeling the the fields near the antenna, leading to bad current and voltage calculations in the antenna. A large part of this happens due to bad modeling of the displacement current near the port. Especially small values which are important, such as the capicitance responsible for electric coupling of the antenna, heavily suffer from the numerical error.
+
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+%	\centering
+%\includegraphics[width=1\linewidth]{content/img/loop_inductance}
+%\caption{}
+%\label{fig:loopinductance}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+%	\centering
+%	\includegraphics[width=1\linewidth]{content/img/loop_capacitance}
+%	\caption{}
+%	\label{fig:loopcapacitance}
+%	\end{subfigure}
+%	
+%	\caption{Dipole moments and phase shift of loop antenna}
+%	\label{fig:example}
+%\end{figure}
+
+The capacitance of the antenna in the TEM cell is $C_{AT}=6.74\,\mathrm{pF}$ and the inductance $L_{AT}=16.51\,\mathrm{nH}$, approximately constant over frequency. In free space, the antenna has much lower inductance and capacitance values, which vary with frequency. \todo{plot free space capacitance and inductance values}
+
+\todo{Replace all plots here. Use this ansys hfss solution setup as standard for all antennas and simulations}
+
+
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
@@ -283,7 +595,7 @@ The total energy density is given by \cite[p.]{Griffiths_2024}
 \end{figure}
 
 
-\autoref{fig:dipole_moments_loop_antenna} shows the dipole moments of the loop antenna over frequency. As expected, the magnetic dipole moment $m_\mathrm{m}$ contributed the largest amount to the antenna coupling. A small amount of electric dipole moment is also present, which naturally occurs due to the current wire aligned with the TEM electric fields. The electric dipole moment $m_\mathrm{e}$ increases non-linearly with frequency. \todo{why?}
+\autoref{fig:dipole_moments_loop_antenna} shows the dipole moments of the loop antenna over frequency. As expected, the magnetic dipole moment $m_\mathrm{m}$ contributed the largest amount to the antenna coupling. A small amount of electric dipole moment is also present, which naturally occurs due to the current wire aligned with the TEM electric fields. The electric dipole moment $m_\mathrm{e}$ increases non-linearly with frequency. The calculations with the S-parameters proved to have lower numerical deviations than other methods, such as integrating fields in the antenna region. Those results showed to fluctuate heavily, likely due to low resolution around the small antenna region, leading to larger errors. Calculating with S-parameters bypasses this problem.
 
 \begin{figure}[h]
 	\centering
@@ -291,6 +603,14 @@ The total energy density is given by \cite[p.]{Griffiths_2024}
 	\caption{Magnitude and phase of the impedance of the current loop antenna.}
 	\label{fig:currimp}
 \end{figure}
+
+The impedance was calculated by dividing the voltage and current at the feedpoint. However, due to the phase being small in value and prone to numerical errors, it has been determined by evaluating the complex power $S$ and then the imaginary power $Q$ through
+
+\begin{equation}
+	Q = \sqrt{S^2 - P^2}
+\end{equation}
+
+The real power consumed at the antenna input is roughly equal to the real power at one waveport. This is due to the almost 180° phase shift between the power at output ports, which does not require the antenna to provide the real power for both ports at once.
 
 
 \begin{figure}[h]
@@ -303,7 +623,7 @@ The total energy density is given by \cite[p.]{Griffiths_2024}
 
 
 
-Note that the surface current density in \autoref{fig:current_loop_surface_current} is much more concentrated in the center. In the case of the monopole antenna, the current density distributed almost equally around the septum. In the case of the loop antenna, the current below the antenna seems to be cut off by the rotational eddy currents next to them. \todo{Find reasons for the eddy current to exist. Maybe there is a nice formula that describes this by maxwell?} Furthermore, the phase shift between the currents at the output ports is 180°, leading to the perceived phase shift of magnetic dipole moments.
+Note that the surface current density in \autoref{fig:current_loop_surface_current} is much more concentrated in the center. In the case of the monopole antenna, the current density distributed almost equally around the septum. In the case of the loop antenna, the current below the antenna seems to be cut off by the rotational eddy currents next to them. Furthermore, the phase shift between the currents at the output ports is 180°, leading to the perceived phase shift of magnetic dipole moments.
 
 \autoref{fig:current_loop_surface_current_offset} demonstrates the surface current density when shifting the loop antenna 7.5\,cm (quarter of the septum width) in y-direction. The coupling and transferred energy remains roughly the same.
 
@@ -392,7 +712,7 @@ A theoretical approach to approximate the inductance of a current loop in free-s
 	L_A = \frac{2\mu_0 a}{\pi} \left[ \ln\!\left(\frac{a}{b}\right) - 0.774 \right],
 \end{equation}
 
-which yields $L=2.56\,\mathrm{nH}$. However, this does not consider the coupling effects of the TEM cell.
+which yields $L=2.32\,\mathrm{nH}$. However, this does not consider the coupling effects of the TEM cell.
 
 
 Next, the electric and magnetic near field is investigated. The wave impedance $Z=E/H$ shown in \autoref{fig:waveimpedanceloop} in the center of the loop rises linearly over frequency. At low frequencies, the wave impedance is very low, which confirms the inductive behavior of the antenna. However, as the frequency increases, so does the voltage drop. This may be analogous to a inductor in an electrical circuit, across which the voltage drop also increases with frequency $U = \mathrm{i}L\omega I$. 
@@ -464,6 +784,8 @@ The wave impedance $Z_\mathrm{w}$ in the near field of the electrically small lo
 	\caption{Geometry of loop antenna with a gap in the return path inserted into the TEM cell.}
 	\label{fig:gappedloopantenna}
 \end{figure}
+
+The loop is not closed, therefore, a simple calculation of the magnetic flux is not possible. Instead, the closed field integral of the electric field can be evaluated, where the integral of the gap region is set to zero. An equivalent electric field can be found, with which a magnetic field is easy to find. 
 
 \begin{figure}[htbp]
 	\centering
@@ -544,31 +866,7 @@ The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:i
 	\label{fig:ifa}
 \end{figure}
 
-The coupling between the antenna and the two ports of the TEM cell are described by S-parameters, specifically the forward transmission coefficients $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$. \autoref{fig:antenna_waveport1_sparams} shows the magnitude of this coefficient, which is the same for the antenna to both ports ($|S_{\mathrm{A1}}|=|S_{\mathrm{A2}}|$). 
 
-\todo{Electrically short antennas have to be either inductive or capactive. Therefore, they all behave as monopole and current loop antenna. Find sources. Two questions arise: Can an antenna be built, which has a dominant electric dipole moment AND some significant magnetic dipole moment? And how does the antenna impedance relate to the moments in case of 90° turned center-fed monopole antenna?}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/antenna_waveport1_sparams.png}
-	\caption{S-parameter describing coupling of antenna to waveport 1}
-	\label{fig:antenna_waveport1_sparams}
-\end{figure}
-
-\begin{equation}
-	P_{\mathrm{Antenna}}=\frac{P_{\mathrm{Out1}}}{10^{|S_{\mathrm{A1}}|/10}}=\frac{P_{\mathrm{Out2}}}{10^{|S_{\mathrm{A2}}|/10}}
-	\label{eqn:power_antenna}
-\end{equation}
-
-
-\autoref{eqn:power_antenna} describes the relation between the input power at the antenna and the measured output power of the TEM cell. It is defined by the magnitude of the forward transmission coefficients.
-
-\begin{equation}
-	\iint_A \mathbf{e_0} \times \mathbf{h_0} \cdot\mathrm{d}\mathbf{A} = 1
-	\label{eqn:normalization of fields}
-\end{equation}
-
-\autoref{eqn:normalization of fields} shows that the electric field $\mathbf{e_0}$ and magnetic field $\mathbf{h_0}$ are normalized to $1\,\sqrt{\mathrm{W}}$. The surface area $A$, over which the fields are integrated, is that of the output ports of the TEM cell. The field can be linearly scaled by the complex coefficients $a$ and $b$, which has been described in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. Only one pair of such coefficients is needed, since only the TEM mode is considered.
 
 
 \begin{figure}[htbp]
@@ -629,135 +927,18 @@ The coupling between the antenna and the two ports of the TEM cell are described
 
 
 
-The coefficients $a$ and $b$ have the unit $\sqrt{\mathrm{W}}$. The fields $\mathbf{e_0}$ and $\mathbf{h_0}$ are not known over the whole area. However, the electric field $\mathbf{e_0}$ has only to be known at one specific point in order to determine the equivalent dipole moments, as will be shown here. The normalization condition therefore leads to an output power equal to $|a|^2/2$ or $|b|^2/2$, respectively, which was also found in \cite{4091811}.
-
-\begin{subequations}
-	\begin{equation}
-		P_{\mathrm{out1}}=\iint_A \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{A}= \iint_A \frac{1}{2} \, \Re \{ \left(a\cdot \mathbf{e_0}\right) \times \left(a\cdot \mathbf{h_0}^*\right) \}\cdot \mathrm{d}\mathbf{A} = \frac{|a|^2}{2}
-		\label{eqn:power_of_poynting1}
-	\end{equation}
-	\begin{equation}
-		P_{\mathrm{out2}}=\iint_A \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{A}= \iint_A \frac{1}{2} \, \Re \{ \left(b\cdot \mathbf{e_0}\right) \times \left(b\cdot \mathbf{h_0}\right)^* \}\cdot \mathrm{d}\mathbf{A} = \frac{|b|^2}{2}
-		\label{eqn:power_of_poynting2}
-	\end{equation}
-\end{subequations}
-
-
-
-The phase shifts of $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$ differ, which is shown in \autoref{fig:phase_shift_waveports_ifa}. The difference of these phase shifts influences the quantity of magnetic dipole moment and electric dipole moments. A large phase shift indicated a large magnetic dipole moments compared to the electric dipole moment, and vice versa. The large difference in phase shifts in \autoref{fig:phase_shift_waveports_ifa} lets one expect the first case. However, the phase shift does not influence the overall output power. It is incorporated into the coefficients $a$ and $b$, by multiplying the term $e^{\mathrm{i}\varphi_{a}}$ or $e^{\mathrm{i}\varphi_{b}}$ to their magnitude. The phase shift of each port is then implemented by $\varphi_{a}$ at the port of the coefficient $a$, and by $\varphi_{b}$ at the port of the coefficient $b$. 
-
-The Poynting vector is periodic from $-\pi/2$ to $\pi/2$, hence any phase difference above that value must be corrected by adding $\pi$ to it. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/Phase Shift Waveports.png}
-	\caption{Phase of S-parameters from antenna to waveport 1 and 2}
-	\label{fig:phase_shift_waveports_ifa}
-\end{figure}
-
-The output power of each port is then derived through \autoref{eqn:power_of_poynting1} and \autoref{eqn:power_of_poynting2}. So if $|a|=|b|=1$, then the electric field $\mathbf{e_0}$ may be measured, when the output power at one port is $\frac{1}{2}\,\mathrm{W}$. Because it is assumed that the TEM cell contains only waves in the TEM mode, the normalization of the electric and magnetic fields can be used to simplify the calculations.
-
-\begin{equation}
-	\mathbf{e_0}\times\mathbf{h_0}=\Re\{\mathbf{e_0}\times\mathbf{h_0}^*\} \quad\text{for TEM mode}
-	\label{eqn:equivalent_tem}
-\end{equation}
-
-\todo{Problem with large TEM cell: Formula does not work for large frequencies. The field distributes around the port. Describe this. Error grows with frequency}
-
-By using \autoref{eqn:mag_dipole_moment_tem} and \autoref{eqn:dipole_tem_waves}, the equivalent dipole moments are derived. Because of Lorentz reciprocity theorem, only fields aligned with the dipole moments get to the output ports. Since only the TEM mode propagates, only the electric dipole moment in z-direction and the magnetic dipole moment in y-direction influence the fields. If higher order modes can propagate, the other dipole moments become relevant, too.
-\todo{Einheitliches Koordinatensystem definieren}
-
-
-
-\begin{equation}
-	m_{\mathrm{e}}=\frac{a+b}{e_{0,z}}
-	\label{eqn:ifa_me}
-\end{equation}
-
-\begin{equation}
-	m_{\mathrm{m}}=\mathrm{i}\frac{a-b}{k_0  e_{0,z}}
-	\label{eqn:ifa_mm}
-\end{equation}
-
-By adding or subtracting the coefficients $a$ and $b$, the dipole moments are expressed into the handy \autoref{eqn:ifa_me} and \autoref{eqn:ifa_mm}. There, $k_0=\frac{2\pi}{\lambda}$ is the free space wave number and $e_{0,z}$ is the normed electric field in z-direction at middle height between septum and the upper wall of the TEM cell. However, the height of the measurement point is not important, as the electric field is uniformly distributed along the z-axis. Additionally, the x- and y-components of the electric field $\mathbf{e_{0}}$ are zero, which leads to these equations. The dipole moments $m_{\mathrm{e}}$ and $m_{\mathrm{m}}$ are defined to be in the center of the TEM cell, at middle height. If they are shifted in any direction, their approximation would not hold true anymore.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/sketch_dipoles_tem_cell.png}
-	\caption{Dipole moments and measurement point of $e_{0,z}$ in TEM cell}
-	\label{fig:sketch_dipoles_tem_cell}
-\end{figure}
-
-\autoref{fig:sketch_dipoles_tem_cell} shows the measurement point of $e_\mathrm{0,z}$. This wouldn't work if the magnetic and electric dipole wasn't defined to be exactly at a height of $b/4$, at dead center. The Lorentz Reciprocity theorem used to derive the formulas take the cross product of the electric field traveling to one output port with the magnetic field caused by the dipole, minus the magnetic field traveling to the same output port minus the electric field caused by the dipole. Since the dipoles are in dead center, the electric field caused by the dipole does only have a z-component, and the magnetic field caused by the dipole only a y-component. If this was not the case, the other components would have to be taken into account of the fields at the test point. They would already have disappeared at the output ports due to the long travel, and the Lorentz Reciprocity theorem becomes more cumbersome to use. By placing the dipoles in dead center, it is possible to measure the electric field at the output port and normalize it to $\frac{1}{2}\,\mathrm{W}$.
-
-\todo{Write clearer. And put into theoretical part.}
-
-Using \autoref{eqn:magn_current_curr_loop} the magnetic dipole moment can be expressed as a magnetic current. The resulting $m_{m,mag}$ is shown in \autoref{eqn:m_mymag_ifa}. The phase shift between the magnetic and electric dipole moments $m_{\mathrm{ez}}$ and $m_{\mathrm{my,mag}}$ is always $\frac{\pi}{2}$, which generates the desired TEM wave pattern.
-
-\begin{equation}
-	m_{\mathrm{m,mag}}=\mathrm{i}m_{\mathrm{m}}\omega\mu_0
-	\label{eqn:m_mymag_ifa}
-\end{equation}
-
-The antenna may then be replaced with those two dipole excitations in the center of the upper half of the TEM cell. The magnitude and phase of the fields, as well as the output powers, should remain the same as in the case with the antenna. The phase shift may be determined by measuring the phase shifts of the electric fields at both output ports. When applying this described method in a measurement with a real TEM cell, the phase shift may be found by adding and subtracting the output powers of both ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/dipole_moments_over_freq_ifa.png}
-	\caption{Dipole moments over frequency}
-	\label{fig:dipole_moments_over_freq_ifa}
-\end{figure}
-
-
-\todo{Is this CFM or IFA simulation?}
-
-
-
-
 \autoref{fig:dipole_moments_over_freq_ifa} shows the dipole moments over frequency. The electric dipole moment $m_e$ has been normalized to the free-space wave impedance of $377\,\Omega$ to make the dipole moments comparable. This is possible because the dipole moments are interchangeable through the wave impedance \cite[p. 414]{Jackson}. The antenna input power has been set to 142588.47\,W, because this leads to an output power of 1\,W at a frequency of 1\,GHz. The magnetic dipole moment is much larger than the electric dipole moment, because the current loop of the antenna is aligned with the TEM cell's magnetic fields, but the line current is not with the TEM electric fields. The magnetic dipole moments rises linearly with the frequency, which is equal to a quadratic increase of power. Only the TEM modes has been considered in the simulation, as other modes disturb the calculations. 
 
-The electric field $\mathbf{e_0}$ is approximated with \autoref{eqn:ifa_e_field_approx} for the purpose of interpolation over frequencies and analytical analysis. The constant $u$ is a scaling factor, which must be adjusted to fit the real electric field values. In this case, this constant equals $u=820.34$. The left-hand side term $|a|\cdot e_{0,z}$ is the overall electric field at the measurement point according to \autoref{eqn:modal_superposition1}. \autoref{fig:output_power_e_fields_over_freq_ifa} shows the resulting plot. 
 
-\begin{equation}
-	|a|\cdot e_{0,z}=\sqrt{2P_\mathrm{Out}}\cdot e_{0,z}=u\sqrt{P_\mathrm{Out}}\,\mathrm{\frac{V}{m\cdot\sqrt{W}}}
-	\label{eqn:ifa_e_field_approx}
-\end{equation}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/output_power_e_fields_over_freq_ifa.png}
-	\caption{Output power and electric field over frequency}
-	\label{fig:output_power_e_fields_over_freq_ifa}
-\end{figure}
-
-The electric field can also be approximated by \autoref{eqn:e_field_at_one_point}, where $b/2=12\,\mathrm{mm}$ is half the height and $Z_\mathrm{W}\approx50\,\Omega$ is the impedance of the TEM cell. This works for TEM cells with thin septum. The constant $u$ can be adjusted to fit this equation. The term $\sqrt{2}$ is needed to convert the effective value of the electric field into its magnitude.
-
-\begin{equation}
-	|a|\cdot e_{\mathrm{0,z}}=\frac{\sqrt{2\cdot P_\mathrm{Out}\cdot Z_\mathrm{W}}}{b/2}
-	\label{eqn:e_field_at_one_point}
-\end{equation}
 
 \todo{Repeat for different orientations? Change variable name: TEM cell height.}
 
 The magnetic coupling with the septum happens due to the alignment of the current loop with the magnetic field of the dominant TEM mode. The antenna is now rotated by 90° around the z-axis, such that the magnetic current loop stands perpendicular to the magnetic TEM fields. \autoref{fig:phase_shift_90_ifa} demonstrates the phase of the S-parameters, describing the coupling of antenna to waveport 1 and 2. Since the magnetic dipole moment is responsible for a phase between the ports, \autoref{fig:phase_shift_90_ifa} strongly hints to an absence of it.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/phase_shift_90_ifa.png}
-	\caption{Phase of S-parameters from rotated antenna to waveport 1 and 2}
-	\label{fig:phase_shift_90_ifa}
-\end{figure}
 
 \autoref{dipole_moments_ifa_90} shows that the electric dipole moment $m_\mathrm{e}$ has stayed the same, while the magnetic dipole moment became zero. Consequently, the overall power transfer between the antenna and the waveports is also much lower. 
 
 \todo{The same procedure was repeated with different dipole moments positions, for which \autoref{eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/dipole_moments_ifa_90.png}
-	\caption{Dipole moments of rotated antenna}
-	\label{fig:dipole_moments_ifa_90}
-\end{figure}
 
 
 \FloatBarrier

@@ -42,6 +42,7 @@ If $E_z$ and $B_z$, the fields in direction of propagation, were both zero, then
 \end{align}
 
 \subsubsection{TEM mode in the TEM cell}
+\todo[inline]{Unfinished section. Described radiation resistance of antenna, not yet TEM mode.}
 A TEM cell is used for EMC test specifications. It makes the conduction of TEM waves possible, which resemble planar free-space waves. Additionally, it shields the waves from radiating to the sides, for which it has a clear advantage to a stripline \cite{809846,990711}. 
 
 
@@ -146,6 +147,8 @@ and,
 \end{equation*}
 
 \todo{Insert Green's Functions calculations, which show that TEM mode} propagates.
+
+
 \subsubsection{Higher-order modes}
 The TEM cell used in the simulation has a width of $a=40\,\mathrm{mm}$ and a height of $b=24\,\mathrm{mm}$. A cross section of the TEM cell with the important dimensions is shown in \autoref{fig:tem_cell_crosssection}. The cutoff frequencies of the higher order TE and TM modes can be approximated by the same formula, shown in \autoref{eqn:cutoff_frequency_rect_waveguide} for rectangular waveguides. However, this is only true, if the septum is very thin ($t/b \ll 0.1$), and for modes with n-even subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes.
 
@@ -185,6 +188,7 @@ In a real TEM cell, a tapered section transform the TEM waveguide to a coaxial t
 	\caption{Propagation of TEM, TE\textsubscript{01} and TE\textsubscript{10} modes in TEM cell}
 	\label{fig:te01_te10_tem_propagation}
 \end{figure}
+\todo{plot title: $|S_{12}|$}
 
 The TEM cell does not only support TEM modes, above their cut-off frequency TE and TM modes begin to propagate. Because the TEM cell is a high-Q cavity, those cut-off frequencies are sharply defined frequencies. Due to imperfections, change in materials or finite conductivity of the conducting plates, wave propagating in the TEM mode may excite higher order TE and TM modes, too \cite{10791592}. A change in material, for example, demands the electric and magnetic field to have a component in the direction of propagation at the discontinuity. A paper by Wilson and Ma present analytical approximations to determine these frequencies \cite{Wilson_Ma_1986}.  There is a long list for the several first few corner frequencies of the first modes. Additionally, a paper by Koch, Groh and Garbe determines the resonance frequencies of the first TE modes analytically \cite{10791592}. The TEM mode is necessarily excited by the geometry of the TEM cell, hence this mode is called essential. The higher order TE and TM modes, which are only excited due to non-uniformity of the TEM cell, are called non-essential modes \cite{990711}.
 
@@ -224,7 +228,7 @@ The cut-off frequencies are dependent on the dimensions of the TEM cell, as prev
 	\label{tab:modes_tem_cell}
 	\begin{tabular}{|c|c||c|c|}
 		\hline
-		a [mm]& b [mm]&TE\textsubscript{01} $f_c$ [GHz] &TE\textsubscript{10} $f_c$ [GHz]\\
+		a [mm]& b [mm]&TE\textsubscript{01} $f_\mathrm{c}$ [GHz] &TE\textsubscript{10} $f_\mathrm{c}$ [GHz]\\
 		\hline\hline
 		80 & 24 & 1.89 & 2.05 \\
 		\hline\hline
@@ -237,52 +241,88 @@ The cut-off frequencies are dependent on the dimensions of the TEM cell, as prev
 
 \subsubsection{Excitation of modes with dipole moments}
 \todo{Eventuell: Paper mit vertikalem Dipolmoment hinzufügen. Zeigen, dass Felder berechnet wurden. Dann sagen, dass man das mit horizontalem Dipolmoment ebenfalls machen könnte, und dann das Verhalten von Strukturen in der TEM Zelle gut vorhersagen kann}
-Any electromagnetic field distribution in a waveguide can be represented by an infinite series of normal modes. \autoref{eqn:norm_power} shows that each mode is orthogonal to each other, with $\mathbf{e_n}^\pm$ and $\mathbf{h_n^\pm}$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. A coupling between the modes only occurs due to geometric changes of the waveguide. Additionally, each mode is normalized to $\sqrt{\mathrm{W}}$, shown by \autoref{eqn:unit_power}. Only the transverse fields are investigated in these Equations, because they carry power along the waveguide, opposed to the fields in the propagation direction.
+Any electromagnetic field distribution in a waveguide can be represented by an infinite series of normal modes. \autoref{eqn:norm_power} shows that each mode is orthogonal to each other, with $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are normalized to $\sqrt{\mathrm{W}}$. A coupling between the modes only occurs due to geometric changes of the waveguide. Additionally, each mode is normalized to $\sqrt{\mathrm{W}}$, shown by \autoref{eqn:unit_power}. Only the transverse fields are investigated in these Equations, because they carry power along the waveguide, opposed to the fields in the propagation direction.
+
+\begin{subequations}
 
 \begin{align}
-	\iint \mathbf{e_n^\pm}\times \mathbf{h_m^\pm}\mathrm{d}S\mathbf{n}&=0 \quad\text{if}\quad n\neq m
+	\iint \mathbf{e}_n^\pm\times \mathbf{h}_m^\pm\mathrm{d}\mathbf{s'}&=0 \quad\text{if}\quad n\neq m
 	\label{eqn:norm_power}\\
-	\iint \mathbf{e_n^\pm}\times \mathbf{h_n^\pm}\mathrm{d}S\mathbf{n}&=1
+	\iint \mathbf{e}_n^\pm\times \mathbf{h}_n^\pm\mathrm{d}\mathbf{s'}&=1
 	\label{eqn:unit_power}
 \end{align}
 
-The radiated fields can be described by a summation of normal modes, as in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. The coefficients of these modes are straightforward to calculate, due to Lorentz Reciprocity Theorem, if the waveguide's walls are perfectly conducting. Ideally, any higher order mode than the first TEM mode will be suppressed, and the calculation simplifies to $n=0$. Additionally, it is assumed that the source is electrically small, which makes it possible to represent it with dipoles, further simplifying the equations \cite{Koepke_1989}. 
+\end{subequations}
 
+The radiated fields can be described by a summation of normal modes, as in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. The coefficients of these modes are straightforward to calculate, due to Lorentz Reciprocity Theorem, if the waveguide's walls are perfectly conducting. Ideally, any higher order mode than the first TEM mode will be suppressed, and the calculation simplifies to $n=0$. Additionally, it is assumed that the source is electrically small, which makes it possible to represent it with dipoles, further simplifying the equations \cite{Koepke_1989}. The fields radiated in the positive z-direction are
+
+\begin{subequations}
 \begin{align}
-	\mathbf{E^\pm}&=\sum_na_n\mathbf{E_n^\pm}    \label{eqn:modal_superposition1}\\
-	\mathbf{H^\pm}&=\sum_na_n\mathbf{H_n^\pm}    \label{eqn:modal_superposition2}
+	\mathbf{E^+}&=\sum_na_n\mathbf{e}_n^+    \label{eqn:a_modal_superposition1}\\
+	\mathbf{H^+}&=\sum_na_n\mathbf{h}_n^+    \label{eqn:a_modal_superposition2}.
 \end{align}
+\end{subequations}
 
-Suppose a current source $\mathbf{J_1}$ excites a waveguide (as is the case with the dipoles in the TEM cell). Normally, such a current source would be driven with external fields, but for the sake of the argument, they are ignored. Only $\mathbf{E}$ and $\mathbf{H}$ are considered, which are the fields radiated by $\mathbf{J_1}$. Additionally, $\mathbf{E}_n^\pm$ and $\mathbf{H}_n^\pm$ are the resulting waveguide fields, with the signs indicating the direction of propagation. Take \autoref{eqn:lorentz_rec_theorem_int} and set $\mathbf{J_2}=\mathbf{M_1}=\mathbf{M_2}=0$. Now, only the current source $\mathbf{J_1}$ remains, and the \autoref{eqn:J1_propagating_waves} emerges. % Explain how certain surfaces do not to have be integrated, therefore rendering this equation very useful. Also, the expansion coefficients can be determined. Maybe do this calculation with a rectangular waveguide.
+And the fields radiated in the negative z-direction are \cite[p. 360]{Collin_2015}
+
+\begin{subequations}
+	\begin{align}
+		\mathbf{E^-}&=\sum_na_n\mathbf{e}_n^-    \label{eqn:b_modal_superposition1}\\
+		\mathbf{H^-}&=\sum_na_n\mathbf{h}_n^-    \label{eqn:b_modal_superposition2}
+	\end{align}
+\end{subequations}
+
+$a_n$ and $b_n$ are coefficents with unit $\sqrt{\mathrm{W}}$, which scale the normalized electric fields of each mode $\mathbf{e}_n^\pm$. The fields at the outputs $\mathbf{E^\pm}$ are decomposed therefore of several propagating modes, each weighted with the coefficients.
+
+Suppose a current source $\mathbf{J}_1$ excites a waveguide (as is the case with the dipoles in the TEM cell). Normally, such a current source requires external fields to drive it, but for they are neglect for now. Only $\mathbf{E}$ and $\mathbf{H}$ are considered, which are the fields radiated by $\mathbf{J}_1$. $\mathbf{E}$ and $\mathbf{H}$ are solved according to $\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H}$ and $\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}$ \cite[p. 360]{Collin_2015}. Additionally, $\mathbf{E}_n^\pm$ and $\mathbf{H}_n^\pm$ are the resulting waveguide fields, with the signs indicating the direction of propagation. Take \autoref{eqn:lorentz_rec_theorem_int} and set $\mathbf{J}_2=\mathbf{M}_1=\mathbf{M}_2=0$. Now, only the current source $\mathbf{J}_1$ remains, and the \autoref{eqn:J1_propagating_waves} emerges. % Explain how certain surfaces do not to have be integrated, therefore rendering this equation very useful. Also, the expansion coefficients can be determined. Maybe do this calculation with a rectangular waveguide.
 
 \begin{equation}
-	\oiint _S (\mathbf{E_n^\pm}\times \mathbf{H}-\mathbf{E}\times \mathbf{H}_n^\pm)\cdot\mathrm{d}\mathbf{S}=\iiint \mathbf{J_1}\cdot\mathbf{E_n^\pm}\mathrm{d}V
+	\oiint _S (\mathbf{e}_n^\pm\times \mathbf{H}-\mathbf{E}\times \mathbf{h}_n^\pm)\cdot\mathrm{d}\mathbf{s'}=\iiint \mathbf{J_1}\cdot\mathbf{e}_n^\pm\mathrm{d}v'
 	\label{eqn:J1_propagating_waves}
 \end{equation}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/reciprocity_tem_cell}
-	\caption{TEM cell with an arbitrary current source $\mathbf{J}$ along the curve $\boldsymbol{\tau}$. $\mathbf{E}$ and $\mathbf{H}$ are the field intensities induced by the current. $\mathbf{E}^+$ and $\mathbf{E}^-$ are outgoing fields towards both output ports of the TEM cell. $\mathbf{S}$ indicates the surface, and $V$ the volume of the domain in question.}
+	\caption{TEM cell with an arbitrary current source $\mathbf{J}_1$ along the curve $\boldsymbol{\tau}$. $\mathbf{E}$ and $\mathbf{H}$ are the field intensities induced by the current. $\mathbf{e}^+_n$ and $\mathbf{e}^-_n$ are outgoing fields towards both output ports of the TEM cell of arbitrary form. $\mathbf{S}$ indicates the surface, and $V$ the volume of the domain in question.}
 	\label{fig:reciprocitytemcell}
 \end{figure}
 
 
-In case of the TEM cell, it is desirable that only the TEM mode is propagating, and that the source is represented by a dipole. When the expansions \autoref{eqn:modal_superposition1}, \autoref{eqn:modal_superposition2} and the orthogonal property \autoref{eqn:norm_power} are used, and when considering an electric dipole, the \autoref{eqn:dipole_tem_waves} arises. In this equation, the wave amplitudes $a$ and $b$ are given through the surface integral in the Lorentz Reciprocity theorem, with $a$ being the wave going to the left side, and $b$ to the other. The electric dipole moment $\mathbf{m_e}$ is given by the current $\mathbf{J}$ flowing through the infinitesimal wire. Note that only the electric field of TEM wave propagation is considered. In reality, more modes may propagate, for which the electric field must be replaced by the superposition of normal modes as in \autoref{eqn:modal_superposition1}. %Additionally, to calculate the exact value of the electric field, a series of image sources as a Green's function may be applied.
+%In case of the TEM cell, it is desirable that only the TEM mode is propagating, and that the source is represented by a dipole. 
+
+The fields $\mathbf{E}$ and $\mathbf{H}$ radiated by $\mathbf{J}_1$ equal a combination of normals modes. Using the expansions \cref{eqn:a_modal_superposition1,eqn:a_modal_superposition2}, \cref{eqn:b_modal_superposition1,eqn:b_modal_superposition2} lead to
+
+\begin{align}
+	\oiint _S (\mathbf{e}_n^+\times \mathbf{H}-&\mathbf{E}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=\nonumber\\ \nonumber
+	&=\oiint _S (\mathbf{e}_n^+\times \sum_m a_m\mathbf{h}_m^+-\sum_m a_m\mathbf{e}_m^+\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}\\
+	&=\sum_m a_m \oiint _S (\mathbf{e}_n^+\times \mathbf{h}_m^+-\mathbf{e}_m^+\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}.
+\end{align}
+
+Due to the orthogonal property of \autoref{eqn:norm_power} and the normalization in \autoref{eqn:unit_power}, the coefficients of each mode can be evaluated separately through
+
+\begin{align}
+	\oiint _S (\mathbf{e_n^+}\times \mathbf{H}&-\mathbf{E}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=\nonumber\\
+	&=a_n \oiint _S (\mathbf{e_n^+}\times \mathbf{h_n^+}-\mathbf{e_n^+}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=-2a_n.
+\end{align}
+
+The coefficient $b_n$ of the fields $\mathbf{e}_n^-$ and $\mathbf{h}_n^-$ are evaluated in the same manner.
+
+ In this equation, the wave amplitudes $a$ and $b$ are given through the surface integral in the Lorentz Reciprocity theorem, with $a$ being the wave going to the left side, and $b$ to the other. The electric dipole moment $\mathbf{m_e}$ is given by the current $\mathbf{J}_1$ flowing through the infinitesimal wire. Note that only the electric field of TEM wave propagation is considered. In reality, more modes may propagate, for which the electric field must be replaced by the superposition of normal modes as in \autoref{eqn:modal_superposition1}. %Additionally, to calculate the exact value of the electric field, a series of image sources as a Green's function may be applied.
 
 \begin{equation}
-	\begin{pmatrix}a \\b\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{E}^\pm
+	\begin{pmatrix}a_n \\b_n\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{e}_n^\pm
 	\label{eqn:dipole_tem_waves}
 \end{equation}
 \todo{$E_n^\pm$? And this works only under the condition that E = aEn, which is not the case for the TEM cell, only for circ. waveguide!}
 
-If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m_m}$. It is defined by the product $\mathbf{m_m}=\mathbf{A}\cdot I$, an infinitesimal current loop with area $A$ carrying a current $I$. This leads to \autoref{eqn:mag_dipole_moment_tem}. This formulation assumes, that the magnetic field strength $\mathbf{H}^\pm$ does not change over the loop area, i.e. the loop is electrically small. Otherwise, the magnetic field strength $\mathbf{H}^\pm$ must be considered in the integration \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
+If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m_m}$. It is defined by the product $\mathbf{m_m}=\mathbf{A}\cdot I$, an infinitesimal current loop with area $A$ carrying a current $I$. This leads to \autoref{eqn:mag_dipole_moment_tem}. This formulation assumes, that the magnetic field strength $\mathbf{h}^\pm$ does not change over the loop area, i.e. the loop is electrically small. Otherwise, the magnetic field strength $\mathbf{h}^\pm$ must be considered in the integration \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
 
 \begin{align}
-	\begin{pmatrix}a \\b\end{pmatrix} &= -\oint_C \mathbf{E}^\pm \mathrm{d}l \nonumber \\
-	&= -\iint_{S_0} \nabla \times \mathbf{E}^\pm \mathrm{d}\mathbf{S}\nonumber\\
-	&= \mathrm{i}\omega\mu_0\iint_{S_0} \mathbf{H}^\pm\cdot \mathrm{d}\mathbf{S}\nonumber\\
-	&= \mathrm{i}\omega\mu_0\mathbf{m}_m\mathbf{H}^\pm 
+	\begin{pmatrix}a_n \\b_n\end{pmatrix} &= -\oint_C \mathbf{e}_n^\pm \mathrm{d}l \nonumber \\
+	&= -\iint_{S_0} \nabla \times \mathbf{e}_n^\pm \mathrm{d}\mathbf{S}\nonumber\\
+	&= \mathrm{i}\omega\mu_0\iint_{S_0} \mathbf{h}_n^\pm\cdot \mathrm{d}\mathbf{S}\nonumber\\
+	&= \mathrm{i}\omega\mu_0\mathbf{m}_m\mathbf{h}_n^\pm 
 	\label{eqn:mag_dipole_moment_tem}
 \end{align}
 
@@ -291,14 +331,16 @@ If there are several modes propagating, it is useful to find the coefficients of
 
 \begin{subequations}
 	\begin{equation}
-		2a_n = -\int_C \boldsymbol{\tau}\cdot\mathbf{E}_n^-\mathrm{d}l
+		2a_n = -\int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^-\mathrm{d}l
 		\label{eqn:an}
 	\end{equation}
 	\begin{equation}
-		2b_n = \int_C \boldsymbol{\tau}\cdot\mathbf{E}_n^+\mathrm{d}l
+		2b_n = \int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^+\mathrm{d}l
 		\label{eqn:bn}
 	\end{equation}
 \end{subequations}
+
+
 
 
 
