@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
-antenna_type = "monopole" # same name as data folder to be read
+antenna_type = "loop" # same name as data folder to be read
 
 # === Data Loading ===
 columns_phase_shift, columns_magnitude, columns_efield = read_antenna_data(antenna_type=antenna_type)
@@ -64,10 +64,3 @@ print(f"Electric Dipole Moments fitted parameters: {a_e} * Freq * Freq * Freq + 
 print(f"Magnetic Dipole Moments fitted parameters: {a_m} * Freq * Freq * Freq + {b_m} * Freq * Freq + {c_m} * Freq + {d_m}")
 print(f"===================================================================================================================")
 
-print(f"\n===================================================================================================================")
-print(f"Output Power Data (CSV Format)")
-print(f"-------------------")
-print(f"Frequency,Output_Power")
-for freq, power in zip(frequencies, output_power):
-    print(f"{freq/1e9},{power}")
-print(f"===================================================================================================================")

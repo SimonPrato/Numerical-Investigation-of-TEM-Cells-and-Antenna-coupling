@@ -41,7 +41,7 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna_type):
             marker='.', markersize=5, color='C0')
     ax.plot(columns_phase_shift[0][idx_first], marker2_y_first, 
             marker='.', markersize=5, color='C1')
-    ax.text(columns_phase_shift[0][idx_first] + 0.1, 
+    ax.text(columns_phase_shift[0][idx_first] + 0.01, 
             (marker1_y_first + marker2_y_first) / 2, 
             f'$\Delta$ = {delta_first:.2f} rad',
             fontsize=8, ha='left')
@@ -60,7 +60,7 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna_type):
             marker='.', markersize=5, color='C0')
     ax.plot(columns_phase_shift[0][idx_second], marker2_y_second, 
             marker='.', markersize=5, color='C1')
-    ax.text(columns_phase_shift[0][idx_second] - 1.0, 
+    ax.text(columns_phase_shift[0][idx_second] - 0.0, 
             (marker1_y_second + marker2_y_second) / 2, 
             f'$\Delta$ = {delta_second:.2f} rad',
             fontsize=8, ha='left')
@@ -142,17 +142,17 @@ def plot_moments(m_e, m_m, frequencies, antenna_type):
     # Configure title
     ax1.set_title(f'Dipole moments of {antenna_name} antenna in TEM cell over frequency')
     
-    # Configure legend
+    # Configure legend - positioned in top left
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
-    legend = ax1.legend(lines1 + lines2, labels1 + labels2, frameon=True)
+    legend = ax1.legend(lines1 + lines2, labels1 + labels2, 
+                       loc='upper left', frameon=True)
     legend.get_frame().set_facecolor('white')
     
     # Finalize plot
     fig.tight_layout()
     fig.savefig(f"output/{antenna_type}-moments.png", dpi=600)
     plt.show()
-
 
 def plot_output_power_e_field(frequencies, output_power, e_field, antenna_type):
     """
