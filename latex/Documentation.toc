@@ -28,36 +28,37 @@
 \contentsline {subsection}{\numberline {3.5}Shielding}{28}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}ASTM ES7-83 Method}{30}{subsubsection.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.2}Dual TEM cell}{31}{subsubsection.3.5.2}%
-\contentsline {section}{\numberline {4}Numerical Investigations}{32}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Finite Element Method}{32}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}General Idea}{32}{subsubsection.4.1.1}%
+\contentsline {section}{\numberline {4}Numerical Investigations}{33}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Finite Element Method}{33}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}General Idea}{33}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Dividing a computational domain into finite elements}{33}{subsubsection.4.1.2}%
 \contentsline {subsubsection}{\numberline {4.1.3}Solving the differential equation}{35}{subsubsection.4.1.3}%
 \contentsline {subsubsection}{\numberline {4.1.4}Adaptive solution process}{36}{subsubsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.2}Investigation of antennas}{36}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Conceptual framework and modeling}{36}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Monopole Antenna}{40}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Setup}{40}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Equivalent dipole moments}{41}{subsubsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.5}Electrical characteristics}{42}{subsubsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.6}Current distribution on septum}{45}{subsubsection.4.2.6}%
-\contentsline {subsubsection}{\numberline {4.2.7}Electromagnetic energy in the TEM cell}{46}{subsubsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.3}Loop antenna}{47}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Setup}{47}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Equivalent dipole moments}{47}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Electrical characteristics}{47}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Current distribution on septum}{50}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Loop antenna with gap}{55}{subsubsection.4.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.6}Inverted F-antenna}{57}{subsubsection.4.3.6}%
-\contentsline {subsubsection}{\numberline {4.3.7}Center Fed Monopole Antenna}{59}{subsubsection.4.3.7}%
-\contentsline {subsubsection}{\numberline {4.3.8}Serial Loop Antenna}{61}{subsubsection.4.3.8}%
-\contentsline {subsubsection}{\numberline {4.3.9}Offset of source antennas and eddy currents}{62}{subsubsection.4.3.9}%
-\contentsline {subsection}{\numberline {4.4}Dipole Moments}{63}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Orientation and position in TEM Cell}{64}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Combining dipole moments with antennas}{65}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Application of dipole moments}{65}{subsubsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.5}Investigation of field regions}{65}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Shielding Simulations}{68}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Shielding effectiveness of graphite}{68}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Shield effectiveness of FR4}{68}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Dual TEM Cell}{68}{subsubsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.2}Investigation of antennas}{37}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Conceptual framework and modeling}{37}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Monopole Antenna}{42}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Setup}{42}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Equivalent dipole moments}{42}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Electrical characteristics}{43}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Current distribution on septum}{46}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Electromagnetic energy in the TEM cell}{47}{subsubsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.3}Loop antenna}{48}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Setup}{48}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Equivalent dipole moments}{49}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Electrical characteristics}{49}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Equivalent circuit model}{50}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Current distribution on septum and higher order modes}{52}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Loop antenna with gap}{56}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}Inverted F-antenna}{57}{subsubsection.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.3.8}Center Fed Monopole Antenna}{61}{subsubsection.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.3.9}Serial Loop Antenna}{64}{subsubsection.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.3.10}Offset of source antennas and eddy currents}{64}{subsubsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.4}Dipole Moments}{65}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Orientation and position in TEM Cell}{66}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Combining dipole moments with antennas}{67}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Application of dipole moments}{67}{subsubsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.5}Investigation of field regions}{67}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Shielding Simulations}{70}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Shielding effectiveness of graphite}{70}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Shield effectiveness of FR4}{70}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Dual TEM Cell}{70}{subsubsection.4.6.3}%
