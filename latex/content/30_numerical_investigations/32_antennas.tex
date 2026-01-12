@@ -173,16 +173,18 @@ In the measurement configuration, the TEM cell with an inserted antenna can be m
 	\end{bmatrix}.
 \end{equation}
 
- The current through the feedpoint of the antennas are calculated with those S-parameters,
+ The RMS-value of the current through the feedpoint of the antennas are calculated with those S-parameters,
  
  \begin{equation}
- 	I_{in} = \sqrt{P_{in}}\frac{(1-S_{AA})}{\sqrt{Z_0}},
+ 	I_{RMS,in} = \sqrt{P_{in}}\frac{(1-S_{AA})}{\sqrt{Z_0}},
+ 	\label{eqn:iin}
  \end{equation}
  
   $P_{in}$ is the power applied to the port, not considering reflections. The voltage at the feedpoint is calculated in a similar fashion as 
  
  \begin{equation}
- 	V_{in} = \sqrt{P_{in}}(1-S_{AA})\sqrt{Z_0}.
+ 	V_{RMS,in} = \sqrt{P_{in}}(1-S_{AA})\sqrt{Z_0}.
+ 	\label{eqn:vin}
  \end{equation}
  
  Another method to derive voltages and currents is by integration of field intensities. Special care has to be taken at mesh refinement in the area of integration to reduce numerical errors. The impedance seen from the feedpoint is 
@@ -565,15 +567,23 @@ The dipole moments are plotted in \autoref{fig:dipole_moments_loop_antenna}. The
 \end{figure}
 
 
-The current $I$ in the loop antenna reduces along the antenna wire, indicating displacement current coupling back to the septum and back to the feedpoint, also seen in the reducing magnetic field intensity in \autoref{fig:loopnearfield}. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. 
+The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling back to the septum and back to the feedpoint, also seen in the slightly changing magnetic field intensity in \autoref{fig:loopnearfield}. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is measured at the same height above the PEC surface. The results vary with position due of the displacement currents in the antenna's near-field.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/loop_feed_return_current}
+	\caption{Peak currents of loop antenna at feedpoint and return path.}
+	\label{fig:loopfeedreturncurrent}
+\end{figure}
+
+
+\todo[inline]{Insert free-space PEC loop simulations.}
+
+\autoref{fig:loopfeedvoltage} demonstrates the voltage at the feedpoint of the antenna, which significantly rises over the frequency. Because the increase in voltage leads to larger displacement current according to \autoref{eqn:me_i}, $\mathbf{m}_e$ follows its frequency-behavior. Similarly, the reduction in current over frequency, shown in \autoref{fig:loopfeedcurrent}, leads a lower induced voltage, and according to \autoref{eqn:m_v} a smaller magnitude of $\mathbf{m}_m$. The current and the voltage are determined with \cref{eqn:vin,eqn:iin}.
 
 
 
-\todo[inline]{insert current return plot. Insert free-space PEC loop simulations.}
-
-\autoref{fig:loopfeedvoltage} demonstrates the voltage at the feedpoint of the antenna, which significantly rises over the frequency. Because the increase in voltage leads to larger displacement current according to \autoref{eqn:me_i}, $\mathbf{m}_e$ follows its frequency-behavior. Similarly, the reduction in current over frequency, shown in \autoref{fig:loopfeedcurrent}, leads a lower induced voltage, and according to \autoref{eqn:m_v} a smaller magnitude of $\mathbf{m}_m$.
-
-The increases in voltage and decrease in current follows from the impedance, depicted in \autoref{fig:currimp}. The strongly inductive impedance increases linearly over frequency, and keeping the input power constant leads to the observed behavior. 
+The increases in voltage and decrease in current follows from the impedance, depicted in \autoref{fig:currimp}. The strongly inductive impedance increases linearly over frequency, keeping the input power constant leads to the observed behavior. 
 
 \begin{figure}[htbp]
 	\hspace*{4cm}
@@ -785,8 +795,8 @@ The loop antenna generates a current on the septum of the TEM cell, as shown in 
 	
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation}
-		\caption{Surface current density of loop antenna with offset of $x=7\,\mathrm{mm}$ and a 90$\textdegree$ rotation angle at 3\,GHz}
+		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation_100MHz}
+		\caption{Surface current density of loop antenna with offset of $x=7\,\mathrm{mm}$ and a 90$\textdegree$ rotation angle at 100\,MHz}
 		\label{fig:loopsurfacecurrentsoffsetrotation}
 	\end{subfigure}
 		
@@ -810,13 +820,15 @@ The loop antenna generates a current on the septum of the TEM cell, as shown in 
 	\label{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}
 \end{figure}
 
-The TE01 mode transmits power in phase. It starts transmitting at the cut-off frequency, for which the rotated loop antenna with the offset is very susceptible, because its magnetic dipole moment aligns with the magnetic fields of this mode.
+When the position of the current loop antenna is rotated by 90\textdegree and contains an offset of $x=7\,\mathrm{mm}$, the transmission of power is not possible. As visible in the current distribution \autoref{fig:loopsurfacecurrentsoffsetrotation}, there is no wave propagation and the surface current remains reactive, forming circles around magnetic fields. 
+
+At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode start to propagate, visible in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}. A large proportion of the current now reaches the output ports, providing output power, which is in-phase as opposed to the previous case. The propagation occurs due to the alignment of the current loop with the magnetic field lines in longitudinal direction, which leads to power transfer according to \cref{eqn:e_a_closed_int,eqn:e_b_closed_int}. The output power increases sharply, as demonstrated in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.
 
 \todo[inline]{change jsurf name in legend to surface current}
 
 
-\autoref{fig:current_loop_surface_current_offset_rotated} shows the current distribution of the current loop antenna, when it is rotated and contains an offset. Again, the eddy currents dominate. However, some of those currents propagate towards the output ports, increasing the energy transfer minimally (0.5\,dB). Additionally, the energy transferred is in phase, which makes it indistinguishable from an electric dipole.
 
+ 
 %\autoref{fig:currentloopchargedistribution} shows the charge density distribution in the current loop antenna. Charges collect, among other locations, at the bottom wire. This leads to electric coupling with the septum. 
 %
 %\begin{figure}[htbp]

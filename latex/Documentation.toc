@@ -46,8 +46,8 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Setup}{48}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Equivalent dipole moments}{49}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Electrical characteristics}{49}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Equivalent circuit model}{50}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Current distribution on septum and higher order modes}{52}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.4}Equivalent circuit model}{51}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Current distribution on septum and higher order modes}{53}{subsubsection.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.3.6}Loop antenna with gap}{56}{subsubsection.4.3.6}%
 \contentsline {subsubsection}{\numberline {4.3.7}Inverted F-antenna}{57}{subsubsection.4.3.7}%
 \contentsline {subsubsection}{\numberline {4.3.8}Center Fed Monopole Antenna}{61}{subsubsection.4.3.8}%

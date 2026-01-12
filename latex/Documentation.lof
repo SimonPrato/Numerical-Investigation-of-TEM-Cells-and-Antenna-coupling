@@ -38,39 +38,40 @@
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Dipole moments and phase shift of loop antenna.}}{49}{figure.caption.91}%
 \contentsline {figure}{\numberline {4.19}{\ignorespaces \relax }}{49}{figure.caption.92}%
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Voltage and current at feedpoint of the loop antenna.}}{50}{figure.caption.93}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Magnitude and phase of the impedance of the current loop antenna.}}{50}{figure.caption.95}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Equivalent circuits of the small loop antenna.}}{51}{figure.caption.96}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Circuit representing the TEM cell, small loop antenna and their coupling.}}{52}{figure.caption.99}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Equivalent dipole moments derived by the equivalent circuit compared to the dipole moments of the loop antenna in \autoref {fig:dipole_moments_loop_antenna}.}}{52}{figure.caption.100}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{54}{figure.caption.101}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript {01} separately over frequency.}}{55}{figure.caption.102}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Dipole moments and phase shift of loop antenna}}{55}{figure.caption.104}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Geometry of loop antenna with a gap in the return path inserted into the TEM cell.}}{56}{figure.caption.105}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Dipole moments and phase shift of loop antenna}}{56}{figure.caption.106}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Dipole moments and phase shift of loop antenna}}{57}{figure.caption.107}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Peak currents of loop antenna at feedpoint and return path.}}{50}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Magnitude and phase of the impedance of the current loop antenna.}}{51}{figure.caption.96}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Equivalent circuits of the small loop antenna.}}{51}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Circuit representing the TEM cell, small loop antenna and their coupling.}}{52}{figure.caption.100}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Equivalent dipole moments derived by the equivalent circuit compared to the dipole moments of the loop antenna in \autoref {fig:dipole_moments_loop_antenna}.}}{53}{figure.caption.101}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{54}{figure.caption.102}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript {01} separately over frequency.}}{55}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Output power of the loop antenna compared with the output power produced by the dipole moments}}{55}{figure.caption.105}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Geometry of loop antenna with a gap in the return path inserted into the TEM cell.}}{56}{figure.caption.106}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Dipole moments and phase shift of loop antenna}}{56}{figure.caption.107}%
 \contentsline {figure}{\numberline {4.31}{\ignorespaces Dipole moments and phase shift of loop antenna}}{57}{figure.caption.108}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Inverted F-antenna used in the simulation}}{58}{figure.caption.109}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces Dipole moments and phase shift of loop antenna}}{58}{figure.caption.110}%
-\contentsline {figure}{\numberline {4.34}{\ignorespaces Output power and electric field at output.}}{59}{figure.caption.111}%
-\contentsline {figure}{\numberline {4.35}{\ignorespaces Voltage and current at feedpoint of inverted-F antenna.}}{59}{figure.caption.112}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces Phase and magnitude of the inverted-F antenna's impedance over frequency.}}{60}{figure.caption.113}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces Center fed monopole antenna used in simulation}}{61}{figure.caption.116}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces S-parameter describing coupling of antenna to waveport 1}}{62}{figure.caption.117}%
-\contentsline {figure}{\numberline {4.39}{\ignorespaces Phase shift}}{62}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.40}{\ignorespaces Dipole moments}}{62}{figure.caption.118}%
-\contentsline {figure}{\numberline {4.41}{\ignorespaces Output power and electric field of center-fed monopole antenna}}{62}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.42}{\ignorespaces Magnitude and phase of center-fed monopole antenna's impedance.}}{62}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.43}{\ignorespaces Voltage and current at feedpoint of center-fed monopole antenna.}}{63}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.44}{\ignorespaces Serial loop antenna}}{64}{figure.caption.124}%
-\contentsline {figure}{\numberline {4.45}{\ignorespaces Dipole moments }}{64}{figure.caption.125}%
-\contentsline {figure}{\numberline {4.46}{\ignorespaces CFM S11 sweep with rotation angle stepping}}{65}{figure.caption.132}%
-\contentsline {figure}{\numberline {4.47}{\ignorespaces Center fed monopole antenna coupling dependence on offset (Delete after)}}{66}{figure.caption.135}%
-\contentsline {figure}{\numberline {4.48}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{67}{figure.caption.136}%
-\contentsline {figure}{\numberline {4.49}{\ignorespaces TEM cell containing dipole moments}}{68}{figure.caption.138}%
-\contentsline {figure}{\numberline {4.50}{\ignorespaces Moments in small TEM cell}}{68}{figure.caption.140}%
-\contentsline {figure}{\numberline {4.51}{\ignorespaces Moments in normal TEM cell}}{68}{figure.caption.140}%
-\contentsline {figure}{\numberline {4.52}{\ignorespaces $k\cdot r$ in small TEM cell}}{69}{figure.caption.142}%
-\contentsline {figure}{\numberline {4.53}{\ignorespaces $k\cdot r$ for other TEM cells}}{69}{figure.caption.142}%
-\contentsline {figure}{\numberline {4.54}{\ignorespaces Output powers}}{69}{figure.caption.144}%
-\contentsline {figure}{\numberline {4.55}{\ignorespaces Phase shifts}}{69}{figure.caption.144}%
-\contentsline {figure}{\numberline {4.56}{\ignorespaces Shielding effectiveness of graphite}}{70}{figure.caption.145}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Dipole moments and phase shift of loop antenna}}{57}{figure.caption.109}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Inverted F-antenna used in the simulation}}{58}{figure.caption.110}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Dipole moments and phase shift of loop antenna}}{58}{figure.caption.111}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Output power and electric field at output.}}{59}{figure.caption.112}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Voltage and current at feedpoint of inverted-F antenna.}}{59}{figure.caption.113}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Phase and magnitude of the inverted-F antenna's impedance over frequency.}}{60}{figure.caption.114}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Center fed monopole antenna used in simulation}}{61}{figure.caption.117}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces S-parameter describing coupling of antenna to waveport 1}}{62}{figure.caption.118}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces Phase shift}}{62}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces Dipole moments}}{62}{figure.caption.119}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces Output power and electric field of center-fed monopole antenna}}{62}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces Magnitude and phase of center-fed monopole antenna's impedance.}}{62}{figure.caption.120}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces Voltage and current at feedpoint of center-fed monopole antenna.}}{63}{figure.caption.121}%
+\contentsline {figure}{\numberline {4.45}{\ignorespaces Serial loop antenna}}{64}{figure.caption.125}%
+\contentsline {figure}{\numberline {4.46}{\ignorespaces Dipole moments }}{64}{figure.caption.126}%
+\contentsline {figure}{\numberline {4.47}{\ignorespaces CFM S11 sweep with rotation angle stepping}}{65}{figure.caption.133}%
+\contentsline {figure}{\numberline {4.48}{\ignorespaces Center fed monopole antenna coupling dependence on offset (Delete after)}}{66}{figure.caption.136}%
+\contentsline {figure}{\numberline {4.49}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{67}{figure.caption.137}%
+\contentsline {figure}{\numberline {4.50}{\ignorespaces TEM cell containing dipole moments}}{68}{figure.caption.139}%
+\contentsline {figure}{\numberline {4.51}{\ignorespaces Moments in small TEM cell}}{68}{figure.caption.141}%
+\contentsline {figure}{\numberline {4.52}{\ignorespaces Moments in normal TEM cell}}{68}{figure.caption.141}%
+\contentsline {figure}{\numberline {4.53}{\ignorespaces $k\cdot r$ in small TEM cell}}{69}{figure.caption.143}%
+\contentsline {figure}{\numberline {4.54}{\ignorespaces $k\cdot r$ for other TEM cells}}{69}{figure.caption.143}%
+\contentsline {figure}{\numberline {4.55}{\ignorespaces Output powers}}{69}{figure.caption.145}%
+\contentsline {figure}{\numberline {4.56}{\ignorespaces Phase shifts}}{69}{figure.caption.145}%
+\contentsline {figure}{\numberline {4.57}{\ignorespaces Shielding effectiveness of graphite}}{70}{figure.caption.146}%
