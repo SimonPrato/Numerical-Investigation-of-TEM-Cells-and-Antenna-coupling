@@ -9,6 +9,327 @@ def setup_plot_style():
     plt.style.use(['science', 'ieee'])
     plt.rcParams.update({'figure.dpi': '100'})
 
+def create_ieee_plot(
+    data_source,
+    x_column,
+    y_columns,
+    x_label='X axis',
+    y_label='Y axis',
+    title='Plot',
+    output_path='output/plot.png',
+    figsize=(4, 3),
+    legend_labels=None,
+    x_limits=None,
+    y_limits=None,
+    show_grid=True,
+    skiprows=0
+):
+    """
+    Create an IEEE-style publication-quality plot from CSV data.
+
+    Parameters
+    ----------
+    data_source : str or dict
+        Path to CSV file or dictionary with x and y data arrays
+    x_column : str or int
+        Column name (if header exists) or column index for x-axis
+    y_columns : str, int, list of str, or list of int
+        Column name(s) or index(es) for y-axis
+    x_label : str, optional
+        Label for x-axis
+    y_label : str, optional
+        Label for y-axis
+    title : str, optional
+        Plot title
+    output_path : str, optional
+        Path to save the figure
+    figsize : tuple, optional
+        Figure size (width, height) in inches
+    legend_labels : list of str, optional
+        Custom labels for legend. If None, uses column names
+    x_limits : tuple, optional
+        Tuple of (min, max) for x-axis limits
+    y_limits : tuple, optional
+        Tuple of (min, max) for y-axis limits
+    show_grid : bool, optional
+        Whether to show grid lines
+    skiprows : int, optional
+        Number of rows to skip at the beginning (e.g., 1 for header row)
+
+    Returns
+    -------
+    fig, ax : matplotlib figure and axes objects
+    """
+    setup_plot_style()
+
+    # Load data from CSV or use provided dictionary/arrays
+    if isinstance(data_source, str):
+        # Try to read CSV with header first
+        try:
+            df = pd.read_csv(data_source, skiprows=skiprows)
+
+            # Convert to numeric, coercing errors
+            if isinstance(x_column, str):
+                x_data = pd.to_numeric(df[x_column], errors='coerce').values
+            else:
+                x_data = pd.to_numeric(df.iloc[:, x_column], errors='coerce').values
+
+            if isinstance(y_columns, (str, int)):
+                y_columns = [y_columns]
+
+            y_data_list = []
+            for col in y_columns:
+                if isinstance(col, str):
+                    y_data_list.append(pd.to_numeric(df[col], errors='coerce').values)
+                else:
+                    y_data_list.append(pd.to_numeric(df.iloc[:, col], errors='coerce').values)
+
+            if legend_labels is None:
+                legend_labels = [str(col) for col in y_columns]
+
+        except Exception as e:
+            raise ValueError(f"Error reading CSV file: {e}")
+
+    elif isinstance(data_source, dict):
+        # Ensure data is numeric numpy arrays
+        x_data = np.asarray(data_source[x_column], dtype=float)
+
+        if isinstance(y_columns, str):
+            y_columns = [y_columns]
+
+        y_data_list = [np.asarray(data_source[col], dtype=float) for col in y_columns]
+
+        if legend_labels is None:
+            legend_labels = y_columns
+    else:
+        raise ValueError("data_source must be a CSV path or dictionary")
+
+    # Remove NaN values
+    valid_mask = ~np.isnan(x_data)
+    x_data = x_data[valid_mask]
+    y_data_list = [y[valid_mask] for y in y_data_list]
+
+    # Create figure and axis
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Plot each y column
+    for y_data, label in zip(y_data_list, legend_labels):
+        ax.plot(x_data, y_data, label=label)
+
+    # Set labels and title
+    ax.set_xlabel(x_label)
+    ax.set_ylabel(y_label)
+    ax.set_title(title)
+
+    # Set axis limits
+    if x_limits is not None:
+        ax.set_xlim(x_limits)
+    else:
+        ax.set_xlim(np.min(x_data), np.max(x_data))
+
+    if y_limits is not None:
+        ax.set_ylim(y_limits)
+
+    # Use scientific notation for y-axis
+    ax.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
+
+    # Configure grid
+    if show_grid:
+        ax.grid(which='major', linestyle='-')
+        ax.grid(which='minor', linestyle='--', alpha=0.5)
+        ax.minorticks_on()
+
+    # Tight layout
+    fig.tight_layout()
+
+    # Save figure
+    fig.savefig(output_path, dpi=600)
+
+    return fig, ax
+
+
+def create_ieee_plot_multifile(
+    data_sources,
+    x_columns,
+    y_columns,
+    x_label='X axis',
+    y_label='Y axis',
+    title='Plot',
+    output_path='output/plot.png',
+    figsize=(4, 3),
+    legend_labels=None,
+    x_limits=None,
+    y_limits=None,
+    show_grid=True,
+    skiprows=None
+):
+    """
+    Create an IEEE-style plot from multiple CSV files.
+
+    Parameters
+    ----------
+    data_sources : list of str
+        List of paths to CSV files
+    x_columns : int, str, or list
+        Column for x-axis. Can be:
+        - Single int/str: use same x column for all files
+        - List of int/str: specific x column for each file
+    y_columns : list of int/str or list of lists
+        Y columns to plot. Can be:
+        - List of int/str: one y column per file
+        - List of lists: multiple y columns from each file
+    x_label : str, optional
+        Label for x-axis
+    y_label : str, optional
+        Label for y-axis
+    title : str, optional
+        Plot title
+    output_path : str, optional
+        Path to save the figure
+    figsize : tuple, optional
+        Figure size (width, height) in inches
+    legend_labels : list of str, optional
+        Custom labels for each series. If None, auto-generates labels
+    x_limits : tuple, optional
+        Tuple of (min, max) for x-axis limits
+    y_limits : tuple, optional
+        Tuple of (min, max) for y-axis limits
+    show_grid : bool, optional
+        Whether to show grid lines
+    skiprows : int or list of int, optional
+        Number of rows to skip. Can be single value or list (one per file)
+
+    Returns
+    -------
+    fig, ax : matplotlib figure and axes objects
+
+    Examples
+    --------
+    # Plot column 1 from file1 and column 2 from file2, both using column 0 as x
+    create_ieee_plot_multifile(
+        data_sources=['file1.csv', 'file2.csv'],
+        x_columns=0,
+        y_columns=[1, 2],
+        legend_labels=['File1 Data', 'File2 Data']
+    )
+
+    # Plot multiple columns from multiple files with different x columns
+    create_ieee_plot_multifile(
+        data_sources=['file1.csv', 'file2.csv'],
+        x_columns=[0, 1],  # x from column 0 in file1, column 1 in file2
+        y_columns=[[1, 2], [3]],  # columns 1,2 from file1, column 3 from file2
+        legend_labels=['F1-C1', 'F1-C2', 'F2-C3']
+    )
+    """
+    setup_plot_style()
+
+    # Normalize inputs
+    if not isinstance(data_sources, list):
+        data_sources = [data_sources]
+
+    # Handle x_columns
+    if isinstance(x_columns, (int, str)):
+        x_columns = [x_columns] * len(data_sources)
+
+    # Handle y_columns
+    if not isinstance(y_columns[0], list):
+        # Single column per file
+        y_columns = [[col] for col in y_columns]
+
+    # Handle skiprows
+    if skiprows is None:
+        skiprows = [0] * len(data_sources)
+    elif isinstance(skiprows, int):
+        skiprows = [skiprows] * len(data_sources)
+
+    # Collect all data
+    all_x_data = []
+    all_y_data = []
+    all_labels = []
+
+    for idx, (file_path, x_col, y_cols, skip) in enumerate(
+        zip(data_sources, x_columns, y_columns, skiprows)
+    ):
+        try:
+            df = pd.read_csv(file_path, skiprows=skip)
+
+            # Get x data
+            if isinstance(x_col, str):
+                x_data = pd.to_numeric(df[x_col], errors='coerce').values
+            else:
+                x_data = pd.to_numeric(df.iloc[:, x_col], errors='coerce').values
+
+            # Get y data for each column
+            for y_col in y_cols:
+                if isinstance(y_col, str):
+                    y_data = pd.to_numeric(df[y_col], errors='coerce').values
+                    label = f"{file_path.split('/')[-1]}:{y_col}"
+                else:
+                    y_data = pd.to_numeric(df.iloc[:, y_col], errors='coerce').values
+                    label = f"{file_path.split('/')[-1]}:col{y_col}"
+
+                # Remove NaN values
+                valid_mask = ~(np.isnan(x_data) | np.isnan(y_data))
+
+                all_x_data.append(x_data[valid_mask])
+                all_y_data.append(y_data[valid_mask])
+                all_labels.append(label)
+
+        except Exception as e:
+            raise ValueError(f"Error reading file {file_path}: {e}")
+
+    y_data[0] = y_data[0]**2
+    # Use custom labels if provided
+    if legend_labels is not None:
+        if len(legend_labels) != len(all_labels):
+            raise ValueError(
+                f"Number of legend_labels ({len(legend_labels)}) must match "
+                f"number of series ({len(all_labels)})"
+            )
+        all_labels = legend_labels
+
+    # Create figure and axis
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Plot all series
+    for x_data, y_data, label in zip(all_x_data, all_y_data, all_labels):
+        ax.plot(x_data, y_data, label=label)
+
+    # Set labels and title
+    ax.set_xlabel(x_label)
+    ax.set_ylabel(y_label)
+    ax.set_title(title)
+
+    # Configure legend
+    if all_labels:
+        legend = ax.legend(frameon=True)
+        legend.get_frame().set_facecolor('white')
+
+    # Set axis limits
+    if x_limits is not None:
+        ax.set_xlim(x_limits)
+
+    if y_limits is not None:
+        ax.set_ylim(y_limits)
+
+    # Use scientific notation for y-axis
+    ax.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
+
+    # Configure grid
+    if show_grid:
+        ax.grid(which='major', linestyle='-')
+        ax.grid(which='minor', linestyle='--', alpha=0.5)
+        ax.minorticks_on()
+
+    # Tight layout
+    fig.tight_layout()
+
+    # Save figure
+    fig.savefig(output_path, dpi=600)
+
+    return fig, ax
+
+
 
 def create_ieee_plot_dual_yaxis(
     data_source,
@@ -415,20 +736,32 @@ def create_ieee_plot_dual_yaxis_multifile(
 
 # Example usage
 if __name__ == '__main__':
-    create_ieee_plot_dual_yaxis(
-        data_source='data/monopole/impedance.csv',
-        x_column=0,
-        y1_columns=1,  # Plot column 1
-        y2_columns=2,        # Plot column 3 on right axis
-        x_label='Frequency (GHz)',
-        y1_label=r'Magnitude ($\Omega$)',
-        y2_label='Phase (deg)',
-        title='Impedance of the monopole antenna',
-        y1_legend_labels=['Magnitude'],
-        y2_legend_labels=['Phase'],
-        output_path='output/monopole_impedance.png',
-        y1_limits=(0, 0.2e5)
-    )
+    #create_ieee_plot(
+        #data_source="data/monopole/magnetic-energy.csv",
+        #x_column=1,
+        #y_columns=2,  
+        #x_label='Frequency (GHz)',
+        #y_label='Magnetic energy (J)',
+        #title=r'Magnetic energy in the TEM cell',
+        #legend_labels='magnetic energy',
+        #output_path='output/monopole_magnetic_energy.png',
+        #x_limits=(0, 3),
+        #y_limits=(0, 1.75e-6)
+    #)
+    #create_ieee_plot_dual_yaxis(
+        #data_source='data/monopole/impedance.csv',
+        #x_column=0,
+        #y1_columns=1,  # Plot column 1
+        #y2_columns=2,        # Plot column 3 on right axis
+        #x_label='Frequency (GHz)',
+        #y1_label=r'Magnitude ($\Omega$)',
+        #y2_label='Phase (deg)',
+        #title='Impedance of the monopole antenna',
+        #y1_legend_labels=['Magnitude'],
+        #y2_legend_labels=['Phase'],
+        #output_path='output/monopole_impedance.png',
+        #y1_limits=(0, 0.2e5)
+    #)
 
     # Example 2: Multiple files with dual y-axis
     # create_ieee_plot_dual_yaxis_multifile(
@@ -457,39 +790,30 @@ if __name__ == '__main__':
     #    x_limits=(0, 5),
     #    y_limits=(0, 3.8e-2)
     #)
-    #create_ieee_plot_multifile(
-    #    data_sources=['data/monopole/equ-moment-power.csv', 'data/monopole/output_power.csv'],
-    #    x_columns=0,  # Use column 0 as x-axis for both files
-    #    y_columns=[1, 1],  # Plot column 1 from file1, column 1 from file2
-    #    x_label='Frequency (GHz)',
-    #    y_label='Power (W)',
-    #    title='Comparison $P_\mathrm{out}$ monopole antenna and $\mathbf{m}_e$, $\mathbf{m}_m$',
-    #    legend_labels=['Equivalent dipole moments', 'Monopole antenna'],
-    #    output_path='output/comparison-monopole.png',
-    #    x_limits=(0.001, 3)
-    #)
-    #create_ieee_plot(
-    ##    data_source=['data/monopole/equ-moment-power.csv', 'data/monopole/magnitude.csv'],
-    #    x_column=0,
-    #    y_columns=[1, 1],
-    #    x_label='Frequency (GHz)',
-    ##    y_label='Power (W)',
-    #    title='Comparison $P_\mathrm{out}$ monopole antenna and $\mathbf{m}_e$, $\mathbf{m}_m$',
-    #    legend_labels=['a', 'b'],
-    #    output_path='output/equivalent-dipole-moments.png'
-    #)
+    create_ieee_plot_multifile(
+        data_sources=['data/loop/equ-moment-power.csv', 'data/loop/magnitude.csv'],
+        x_columns=0,  # Use column 0 as x-axis for both files
+        y_columns=[1, 1],  # Plot column 1 from file1, column 1 from file2
+        x_label='Frequency (GHz)',
+        y_label='Power (W)',
+        title='Comparison $P_\mathrm{out}$ loop antenna and $\mathbf{m}_e$, $\mathbf{m}_m$',
+        legend_labels=['Equivalent dipole moments', 'Loop antenna'],
+        output_path='output/comparison-loop.png',
+        y_limits=(0, 1e-4),
+        x_limits=(0.001, 3)
+    )
     
     # Example 2: Multiple files - simple case
     # Plot column 1 from file1.csv and column 2 from file2.csv
     #create_ieee_plot_multifile(
-        #data_sources=['data/file1.csv', 'data/file2.csv'],
-        #x_columns=0,  # Use column 0 as x-axis for both files
-        #y_columns=[1, 2],  # Plot column 1 from file1, column 2 from file2
-        #x_label='Frequency (GHz)',
-        #y_label='Power (W)',
-        #title='Multi-file comparison',
-        #legend_labels=['Dataset 1', 'Dataset 2'],
-        #output_path='output/multifile_simple.png'
+    #    data_sources=['data/loop/equ-moment-power.csv', 'data/loop/magnitude.csv'],
+    #    x_columns=[1, 0],  # Use column 0 as x-axis for both files
+    #    y_columns=[1, 2],  # Plot column 1 from file1, column 2 from file2
+    #    x_label='Frequency (GHz)',
+    #    y_label='Power (W)',
+    #    title='Comparison $P_\mathrm{out}$ loop antenna and $\mathbf{m}_e$, $\mathbf{m}_m$',
+    #    legend_labels=['Equivalent dipole moments', 'Monopole antenna'],
+    #    output_path='output/comparison-loop.png'
     #)
     
     # Example 3: Multiple files - complex case
