@@ -128,7 +128,7 @@ The real power transfer is derived through the time-averaged Poynting vector $\m
 The complex power $P$ is derived by integrating $\mathbf{W}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
 
 \begin{equation}
-	P = \eta \frac{\pi}{3} \frac{|\omega|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
+	P_r = \eta \frac{\pi}{3} \frac{|I_0l|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
 	\label{eqn:compl_power_inf_elec_dipole}
 \end{equation}
 
@@ -277,7 +277,13 @@ and,
 
  
 
-The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole \cite[p. 238]{Balanis_1997}. 
+The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals to 
+
+\begin{equation}
+P_r = \eta \left(\frac{\pi}{12}\right) (ka)^4 |I_0|^2 \left[1 + j\frac{1}{(kr)^3}\right],
+\end{equation}
+
+and its imaginary part is inductive \cite[p. 238]{Balanis_1997}.
 
 
 
