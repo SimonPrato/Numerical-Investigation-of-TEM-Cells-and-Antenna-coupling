@@ -218,7 +218,6 @@ The first modes propagating after the TEM mode is the TE\textsubscript{10} and T
 	\caption{Transversal electric fields in cross section of TEM cell}
 	\label{fig:transversal_e_fields_tem_cell}
 \end{figure}
-\todo{Vector directions are wrong in the pictures. Additionally, update cutoff frequencies.}
 
 The cut-off frequencies are dependent on the dimensions of the TEM cell, as previously shown. \autoref{tab:modes_tem_cell} shows some cut-off frequencies of these modes for different TEM cell dimensions. The TE\textsubscript{10}-mode is independent of the height $b$ of the TEM cell, as would be the case in a rectangular waveguide. Both the TE\textsubscript{10}-mode and the TE\textsubscript{01}-mode are dependent on the width $a$. Note that a port impedance of $50\,\Omega$ is only kept in the case $a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$. This information is important when varying the TEM cell dimension, as is done when investigating near-field ($k\cdot r < 1$) and intermediate-field ($k\cdot r = 1$) coupling. 
 
@@ -240,7 +239,6 @@ The cut-off frequencies are dependent on the dimensions of the TEM cell, as prev
 \end{table}
 
 \subsubsection{Excitation of modes with dipole moments}
-\todo{Eventuell: Paper mit vertikalem Dipolmoment hinzufügen. Zeigen, dass Felder berechnet wurden. Dann sagen, dass man das mit horizontalem Dipolmoment ebenfalls machen könnte, und dann das Verhalten von Strukturen in der TEM Zelle gut vorhersagen kann}
 Any electromagnetic field distribution in a waveguide can be represented by an infinite series of normal modes. \autoref{eqn:norm_power} shows that each mode is orthogonal to each other, with $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are normalized to $\sqrt{\mathrm{W}}$. A coupling between the modes only occurs due to geometric changes of the waveguide. Additionally, each mode is normalized to $\sqrt{\mathrm{W}}$, shown by \autoref{eqn:unit_power}. Only the transverse fields are investigated in these Equations, because they carry power along the waveguide, opposed to the fields in the propagation direction.
 
 \begin{subequations}
@@ -274,7 +272,7 @@ And the fields radiated in the negative z-direction are \cite[p. 360]{Collin_201
 
 $a_n$ and $b_n$ are coefficents with unit $\sqrt{\mathrm{W}}$, which scale the normalized electric fields of each mode $\mathbf{e}_n^\pm$. The fields at the outputs $\mathbf{E^\pm}$ are decomposed therefore of several propagating modes, each weighted with the coefficients.
 
-Suppose a current source $\mathbf{J}_1$ excites a waveguide (as is the case with the dipoles in the TEM cell). Normally, such a current source requires external fields to drive it, but for they are neglect for now. Only $\mathbf{E}$ and $\mathbf{H}$ are considered, which are the fields radiated by $\mathbf{J}_1$. $\mathbf{E}$ and $\mathbf{H}$ are solved according to $\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H}$ and $\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}$ \cite[p. 360]{Collin_2015}. Additionally, $\mathbf{E}_n^\pm$ and $\mathbf{H}_n^\pm$ are the resulting waveguide fields, with the signs indicating the direction of propagation. Take \autoref{eqn:lorentz_rec_theorem_int} and set $\mathbf{J}_2=\mathbf{M}_1=\mathbf{M}_2=0$. Now, only the current source $\mathbf{J}_1$ remains, and the \autoref{eqn:J1_propagating_waves} emerges. % Explain how certain surfaces do not to have be integrated, therefore rendering this equation very useful. Also, the expansion coefficients can be determined. Maybe do this calculation with a rectangular waveguide.
+Suppose a current source $\mathbf{J}_1$ excites a waveguide (as is the case with the dipoles in the TEM cell). Normally, such a current source requires external fields to drive it, but for they are neglect for now. Only $\mathbf{E}$ and $\mathbf{H}$ are considered, which are the fields radiated by $\mathbf{J}_1$. $\mathbf{E}$ and $\mathbf{H}$ are solved according to $\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H}$ and $\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}$ \cite[p. 360]{Collin_2015}. Additionally, $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are the resulting waveguide fields, with the signs indicating the direction of propagation. Take \autoref{eqn:lorentz_rec_theorem_int} and set $\mathbf{J}_2=\mathbf{M}_1=\mathbf{M}_2=0$. Now, only the current source $\mathbf{J}_1$ remains, and the \autoref{eqn:J1_propagating_waves} emerges. % Explain how certain surfaces do not to have be integrated, therefore rendering this equation very useful. Also, the expansion coefficients can be determined. Maybe do this calculation with a rectangular waveguide.
 
 \begin{equation}
 	\oiint _S (\mathbf{e}_n^\pm\times \mathbf{H}-\mathbf{E}\times \mathbf{h}_n^\pm)\cdot\mathrm{d}\mathbf{s'}=\iiint \mathbf{J_1}\cdot\mathbf{e}_n^\pm\mathrm{d}v'
@@ -314,7 +312,6 @@ The coefficient $b_n$ of the fields $\mathbf{e}_n^-$ and $\mathbf{h}_n^-$ are ev
 	\begin{pmatrix}a_n \\b_n\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{e}_n^\pm
 	\label{eqn:dipole_tem_waves}
 \end{equation}
-\todo{$E_n^\pm$? And this works only under the condition that E = aEn, which is not the case for the TEM cell, only for circ. waveguide!}
 
 If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m_m}$. It is defined by the product $\mathbf{m_m}=\mathbf{A}\cdot I$, an infinitesimal current loop with area $A$ carrying a current $I$. This leads to \autoref{eqn:mag_dipole_moment_tem}. This formulation assumes, that the magnetic field strength $\mathbf{h}^\pm$ does not change over the loop area, i.e. the loop is electrically small. Otherwise, the magnetic field strength $\mathbf{h}^\pm$ must be considered in the integration \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
 

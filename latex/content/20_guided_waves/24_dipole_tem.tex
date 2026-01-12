@@ -17,22 +17,22 @@ The magnetic field $\mathbf{h}_n$ and electric field $\mathbf{e}_n$ are both nor
 This leads to the final form in \autoref{eqn:a_b_moments_simp} \cite{Sreenivasiah_Chang_Ma_1981}.
 
 \begin{equation}
-    \begin{pmatrix}a_n \\b_n\end{pmatrix} =-\frac{1}{2}(\mathbf{m_e\pm jk\mathbf{m_m}\times \mathbf{z})\cdot \mathbf{e}_n^\pm}
+    \begin{pmatrix}a_n \\b_n\end{pmatrix} =-\frac{1}{2}(\mathbf{m_e\pm jk\mathbf{m_m}\times \mathbf{z})\cdot \mathbf{e}_n^\pm}.
     \label{eqn:a_b_moments_simp}
 \end{equation}
 
-\todo[inline]{Move the following to equations to a better position with a nice explanation.}
+$\mathbf{m}_{\mathrm{e}}$ and $\mathbf{m}_{\mathrm{e}}$ are separately derived by 
 
 \begin{equation}
-	\mathbf{m}_{\mathrm{e}}=\frac{a_n+b_n}{\mathbf{e}_n^\pm}
+	\mathbf{m}_{\mathrm{e}}=\frac{a_n+b_n}{\mathbf{e}_n^\pm},
 	\label{eqn:ifa_me}
 \end{equation}
 
 \begin{equation}
-	\mathbf{m}_{\mathrm{m}}=j\frac{a_n-b_n}{k_0  \mathbf{e}_n^\pm}	\label{eqn:ifa_mm}
+	\mathbf{m}_{\mathrm{m}}=j\frac{a_n-b_n}{k_0  \mathbf{e}_n^\pm}.	\label{eqn:ifa_mm}
 \end{equation}
 
-The unity vector $\mathbf{z}$ points in direction of propagation. The function vector $\mathbf{e}_n^\pm$ describes the normalized electric field amplitude in traverse direction, i.e. x and y-directions, of the excited fundamental mode. Due to the normalization of the electric and magnetic fields to $1\,\sqrt{\mathrm{W}}$, the total power at one port is 1/2\,W. This defines $\mathbf{e}_n^\pm$ as the electric field of the TEM cell, excited with a peak unit power (1\,W).
+The unity vector $\mathbf{\hat{a}}_z$ points in direction of propagation. The function vector $\mathbf{e}_n^\pm$ describes the normalized electric field amplitude in traverse direction, i.e. x and y-directions, of the excited fundamental mode. Due to the normalization of the electric and magnetic fields to $1\,\sqrt{\mathrm{W}}$, the total power at one port is 1/2\,W. This defines $\mathbf{e}_n^\pm$ as the electric field of the TEM cell, excited with a peak unit power (1\,W).
 
 Note, that an electric dipole in the TEM cell leads to a increase in power with the same phase in both ports, and a magnetic dipole leads to the same increase, but with a phase shift of 180°. This also explains why the EUT shall be place halfway on the septum in x-direction. Any shift from this position changes this phase shift from 180°. It is therefore required to measure the power of the ports with phase information, like using a complex Poynting vector, which is easy to implement in a simulation software. When measuring a device with a real TEM cell, the phase information may be found by summing and subtracting the output powers of the ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
 
