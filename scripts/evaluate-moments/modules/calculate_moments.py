@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def calculate_electromagnetic_moments(e_field: complex, phase_shift: float, 
+def calculate_moments(e_field: complex, phase_shift: float, 
                                    output_power: float, frequency: float) -> tuple[np.ndarray, np.ndarray]:
     """
     Calculate electric (m_ez) and magnetic (m_hfss) moments for antenna analysis.
