@@ -6,34 +6,144 @@ An electrically small radiating source may be represented by six dipoles. This n
 
 % Citing: "If the waveguide walls are perfectly conducting, the coefficients of such an expansion may be obtained in a straightforward manner, by an application of Lorentz's reciprocity principle." - This should be treated in the section about TEM cells. A reference to the Lorentz Reciprocity Theorem shall be made, and how it is used to determine the coefficients of the orthonormal modes.
 
-The idea is to place the EUT in the TEM cell and measure the power of both output ports. The amplitudes of the TEM fields are expressed by \autoref{eqn:a_b_moments} \cite{Sreenivasiah_Chang_Ma_1981}. \todo{pm missing?}% maybe cut out this equation.
+The idea is to place the EUT in the TEM cell and measure the power of both output ports. The amplitudes of the TEM fields are expressed by \autoref{eqn:a_b_moments} \cite{Sreenivasiah_Chang_Ma_1981}.
 
 \begin{equation}
-    \begin{pmatrix}a \\b\end{pmatrix} = \frac{1}{2}(-\mathbf{m_e}\cdot \mathbf{E_0}^\pm+\mathrm{i}\omega\mu_0\mathbf{m_m}\cdot\mathbf{H_0}^\pm)
+    \begin{pmatrix}a_n \\b_n\end{pmatrix} = \frac{1}{2}(-\mathbf{m_e}\cdot \mathbf{e}_n^\pm+\mathrm{i}\omega\mu_0\mathbf{m_m}\cdot\mathbf{h}_n^\pm)
     \label{eqn:a_b_moments}
 \end{equation}
 
-The magnetic field $\mathbf{H_0}$ and electric field $\mathbf{E_0}$ are both normalized to $1\,\sqrt{\mathrm{Hz}}$ \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024} and correspond to the TEM mode in free space \cite{Sreenivasiah_Chang_Ma_1981}. The electric dipole moment $\mathbf{m_e}$ and the magnetic dipole moment $\mathbf{m_m}$ are complex vectors, containing an amplitude and phase for every one of the three directions in the coordinate system (x, y, z), and have the units $\mathrm{A\cdot m}$ and $\mathrm{V\cdot m}$. The variables $a$ and $b$ correspond to the amplitudes of the waves in both possible directions in the TEM cell with the unit $\sqrt{\mathrm{W}}$.
+The magnetic field $\mathbf{h}_n$ and electric field $\mathbf{e}_n$ are both normalized to $1\,\sqrt{\mathrm{Hz}}$ \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024} and correspond to the TEM mode in free space \cite{Sreenivasiah_Chang_Ma_1981}. The electric dipole moment $\mathbf{m_e}$ and the magnetic dipole moment $\mathbf{m_m}$ are complex vectors, containing an amplitude and phase for every one of the three directions in the coordinate system (x, y, z), and have the units $\mathrm{A\cdot m}$ and $\mathrm{V\cdot m}$. The variables $a$ and $b$ correspond to the amplitudes of the waves in both possible directions in the TEM cell with the unit $\sqrt{\mathrm{W}}$.
 This leads to the final form in \autoref{eqn:a_b_moments_simp} \cite{Sreenivasiah_Chang_Ma_1981}.
 
 \begin{equation}
-    \begin{pmatrix}a \\b\end{pmatrix} =-\frac{1}{2}(\mathbf{m_e\pm \mathrm{i}k\mathbf{m_m}\times \mathbf{z})\cdot \mathbf{e_0}}
+    \begin{pmatrix}a_n \\b_n\end{pmatrix} =-\frac{1}{2}(\mathbf{m_e\pm jk\mathbf{m_m}\times \mathbf{z})\cdot \mathbf{e}_n^\pm}.
     \label{eqn:a_b_moments_simp}
 \end{equation}
 
-The unity vector $\mathbf{z}$ points in direction of propagation. The function vector $\mathbf{e_0}$ describes the normalized electric field amplitude in traverse direction, i.e. x and y-directions, of the excited fundamental mode. Due to the normalization of the electric and magnetic fields to $1\,\sqrt{\mathrm{W}}$, the total power at one port is 1\,W. This defines $\mathbf{e_0}$ as the electric field when the TEM cell is excited with a peak unit power, since the amplitude of the electric field is considered, not the RMS value.
-\todo{peak power, not average. Explain better.}
+$\mathbf{m}_{\mathrm{e}}$ and $\mathbf{m}_{\mathrm{e}}$ are separately derived by 
+
+\begin{equation}
+	\mathbf{m}_{\mathrm{e}}=\frac{a_n+b_n}{\mathbf{e}_n^\pm},
+	\label{eqn:ifa_me}
+\end{equation}
+
+\begin{equation}
+	\mathbf{m}_{\mathrm{m}}=j\frac{a_n-b_n}{k_0  \mathbf{e}_n^\pm}.	\label{eqn:ifa_mm}
+\end{equation}
+
+The unity vector $\mathbf{\hat{a}}_z$ points in direction of propagation. The function vector $\mathbf{e}_n^\pm$ describes the normalized electric field amplitude in traverse direction, i.e. x and y-directions, of the excited fundamental mode. Due to the normalization of the electric and magnetic fields to $1\,\sqrt{\mathrm{W}}$, the total power at one port is 1/2\,W. This defines $\mathbf{e}_n^\pm$ as the electric field of the TEM cell, excited with a peak unit power (1\,W).
 
 Note, that an electric dipole in the TEM cell leads to a increase in power with the same phase in both ports, and a magnetic dipole leads to the same increase, but with a phase shift of 180°. This also explains why the EUT shall be place halfway on the septum in x-direction. Any shift from this position changes this phase shift from 180°. It is therefore required to measure the power of the ports with phase information, like using a complex Poynting vector, which is easy to implement in a simulation software. When measuring a device with a real TEM cell, the phase information may be found by summing and subtracting the output powers of the ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
 
-Additionally, only the electric or magnetic dipole moment, that is aligned with the electric or magnetic field in the TEM cell, influences the output power, ideally. 
-% In reality, at frequencies over cut-off frequencies of TE and TM modes, the dipoles not aligned with the TEM mode will generate some TE/TM modes, which enable them to transmit power and disturb the results, as in \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}. 
-Furthermore, in the optimal case, the EUT is placed in the dead center of the TEM cell, where the x- and z-component of $\mathbf{e_0}$ in the y=0 plane becomes zero due to symmetry \cite{Sreenivasiah_Chang_Ma_1981}. If this is not the case, the measurements may vary significantly \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}.
+The electric field coupling with the antenna can be simply put as \cite[p. 361]{Collin_2015}
 
-The formula has originally been derived for cylindrical waveguides \cite{Collin_2015}. There, the position of the electric and magnetic dipole moments do not matter, as long as the matching electric and magnetic fields at the surfaces are chosen. This is because the field components do not change direction when propagating from the dipoles to the surfaces, due to the symmetrical property of the cylindrical waveguide. This is not the case for a TEM cell. There, an offset into the x- and y-direction from the center leads to field components, which change direction while traveling to the surfaces. Then, the vector product used in the derivation by Lorentz Reciprocity theorem is not valid anymore. Instead, the fields at the test points have to be considered, and because they don't have a singular x,y or z-component anymore, several more dipole moments become relevant.
+\begin{subequations}
+	
+	\begin{equation}
+		2a_n=-\int_C \boldsymbol{\tau} I(l)\cdot \mathbf{e}_n^+\,dl.
+		\label{eqn:e_int_a}
+	\end{equation}
+	\begin{equation}
+		2b_n=-\int_C \boldsymbol{\tau} I(l)\cdot \mathbf{e}_n^-\,dl.
+		\label{eqn:e_int_b}
+	\end{equation}
+	
+\end{subequations}
 
-\todo[inline]{This analysis might be wrong. The normalized E-Field is something different here than previously - I mixed it up. What could work: Simulate electric dipole moment in y-direction with geometry sweep. Adjust $y_0$ in \cite{Sreenivasiah_Chang_Ma_1981}. Find norm. E-Field for that. Simulate output power. Compare with calculations.}
+If it the wire is electrically small, the electric field $\mathbf{e}_n^\pm$ is assumed to be constant in $C$. Furthermore, if the current $I$ is constant along $C$, it does not have to be considered in the integration. Integrating over the closed loop simplifies to \cite[p. 361]{Collin_2015}
 
+\begin{subequations}
+	\begin{equation}
+		2a_n=-\oint_C \mathbf{e}_n^+\cdot \boldsymbol{\tau}\,dl = j\omega\mu_0 \iint_S \mathbf{h}_n^+\,d\mathbf{s}'=V_n^+,
+		\label{eqn:e_a_closed_int}
+	\end{equation}
+	\begin{equation}
+		2b_n=-\oint_C \mathbf{e}_n^-\cdot \boldsymbol{\tau}\,dl = j\omega\mu_0 \iint_S \mathbf{h}_n^-\,d\mathbf{s}'=V_n^-.
+		\label{eqn:e_b_closed_int}
+	\end{equation}
+\end{subequations}
+
+The induced voltage $V_n^+$ causes or is caused by the fields at one port $\mathbf{e}_n^+$, $\mathbf{h}_n^+$, and the induced voltage $V_n^-$ by the fields at the other port $\mathbf{e}_n^-$, $\mathbf{h}_n^-$. The induced voltages $V_n^+$ and $V_n^-$ relate to the magnetic dipole moment $\mathbf{m_m}$ and the coefficients $a$ and $b$. Defining a total induced voltage as $V_n=V_n^--V_n^+$ leads to 
+
+\begin{equation}
+	\mathbf{m}_m=\frac{a_n-b_n}{\mathbf{e}_n^\pm\cdot k_0}=\frac{V_n}{\mathbf{e}_n^\pm\cdot k_0}.
+	\label{eqn:m_v}
+\end{equation}
+
+In a similar manner to \cref{eqn:e_int_a,eqn:e_int_b}, a constant magnetic field $\mathbf{h}_n^\pm$ along $C$, where a magnetic current is present, leads to
+
+\begin{subequations}
+	
+	\begin{equation}
+		2a_n=-\int_C \boldsymbol{\tau} I_m(l)\cdot \mathbf{h}_n^+\,dl,
+		\label{eqn:h_int_a}
+	\end{equation}
+	\begin{equation}
+		2b_n=-\int_C \boldsymbol{\tau} I_m(l)\cdot \mathbf{h}_n^-\,dl.
+		\label{eqn:h_int_b}
+	\end{equation}
+	
+\end{subequations}
+
+Analogous to \cref{eqn:e_a_closed_int,eqn:e_b_closed_int}, $I_m$ is assumed to be constant and $C$ to form a closed loop, leading to 
+
+\begin{subequations}
+	\begin{equation}
+		2a_n=-\oint_C \mathbf{h}_n^- \cdot \boldsymbol{\tau}\,dl = -j\omega\epsilon_0 \iint_{S_0} \mathbf{e}_n^+\,d\mathbf{s}',
+		\label{eqn:h_a_closed_int}
+	\end{equation}
+	\begin{equation}
+		2b_n=-\oint_C \mathbf{h}_n^+ \cdot \boldsymbol{\tau}\,dl = -j\omega\epsilon_0 \iint_{S_0} \mathbf{e}_n^-\,d\mathbf{s}'.
+		\label{eqn:h_b_closed_int}
+	\end{equation}
+\end{subequations}
+
+Now, further surfaces $S_1$ and $S_2$ are defined. Surface $S_1$ leads, starting from $S_0$, parallel to the electric field $\mathbf{e}_n^\pm$ to infinity. Of course, this step only works for the TEM and TE modes, as $\mathbf{e}_n^\pm$ of TM modes contain components normal to $S_1$ \todo{Is this true? Maybe field components cancel, since they are assumed to be constant.}. A total surface is defined $S=S_0+S_1+S_2$, where $S_2$ closes the total surface around $S_1$ in infinity\todo{sketch}. Therefore, the total surface covered is closed, and \cref{eqn:h_a_closed_int,eqn:h_b_closed_int} can be written as 
+
+
+\begin{equation}
+	j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}=j \omega \epsilon_0 \iint_{S_0} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}+\underbrace{j \omega \epsilon_0 \iint_{S_1} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}+\underbrace{j \omega \epsilon_0 \iint_{S_2} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}.
+\end{equation}
+
+Inserting Gauss' law $\nabla\cdot \mathbf{E}=\frac{\rho}{\epsilon_0}$ leads to
+
+\begin{equation}
+	-j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'} = -j \omega \epsilon_0 \iiint_{V} \nabla \cdot\mathbf{e}_n^{\pm} \cdot dv' = -j \omega \iiint_{V} {\rho}_n^\pm \cdot dv'.
+\end{equation}
+
+With the continuity equation $j\omega\rho = -\nabla\cdot \mathbf{J}$ this leads to
+
+\begin{subequations}
+	\begin{equation}
+		2a_n = -j \omega \iiint_{V} {\rho}_n^+ \cdot dv' = \iiint_{V} \nabla \cdot \mathbf{J}_n^+ \cdot dv' = \oiint_{S} \mathbf{J}_n^+ \cdot d\mathbf{s'} =I_n^+,
+	\end{equation}
+	\begin{equation}
+		2b_n = -j \omega \iiint_{V} {\rho}_n^- \cdot dv' = \iiint_{V} \nabla \cdot \mathbf{J}_n^- \cdot dv' = \oiint_{S} \mathbf{J}_n^- \cdot d\mathbf{s'} = I_n^-.
+	\end{equation}
+\end{subequations}
+
+Relating the obtained expression to the electric dipole moment from \autoref{eqn:ifa_me} with a total current $I_n=I_n^+ + I_n^-$ delivers
+
+\begin{equation}
+	\mathbf{m}_e=\frac{a_n+b_n}{\mathbf{e}_n^\pm}=\frac{I_n}{\mathbf{e}_n^\pm}.
+	\label{eqn:me_i}
+\end{equation}
+
+The physical meaning of $I_n$ is electrical current passing between the septum and the dipole through capacitive coupling with a certain mode, i.e. displacement current. Concluding, the magnetic dipole moment occurs due to induced voltage, while the electric dipole moment due to coupling electric current.
+
+
+% In reality, at frequencies over cut-off frequencies of TE and TM modes, the dipoles not aligned with the TEM mode will generate some TE/TM modes, which enable them to transmit power and disturb the results, as in \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}.
+ 
+%Furthermore, in the optimal case, the EUT is placed in the dead center of the TEM cell, where the x- and z-component of $\mathbf{e_0}$ in the y=0 plane becomes zero due to symmetry \cite{Sreenivasiah_Chang_Ma_1981}. If this is not the case, the measurements may vary significantly \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}.
+
+%The formula has originally been derived for cylindrical waveguides \cite{Collin_2015}. There, the position of the electric and magnetic dipole moments do not matter, as long as the matching electric and magnetic fields at the surfaces are chosen. This is because the field components do not change direction when propagating from the dipoles to the surfaces, due to the symmetrical property of the cylindrical waveguide. This is not the case for a TEM cell. There, an offset into the x- and y-direction from the center leads to field components, which change direction while traveling to the surfaces. Then, the vector product used in the derivation by Lorentz Reciprocity theorem is not valid anymore. Instead, the fields at the test points have to be considered, and because they don't have a singular x,y or z-component anymore, several more dipole moments become relevant.
+
+
+
+%\todo[inline]{This analysis might be wrong. The normalized E-Field is something different here than previously - I mixed it up. What could work: Simulate electric dipole moment in y-direction with geometry sweep. Adjust $y_0$ in \cite{Sreenivasiah_Chang_Ma_1981}. Find norm. E-Field for that. Simulate output power. Compare with calculations.}
+\todo[inline]{Explain why output power rises quadratically and moments linearly over f if U and I are kept constant}
+\todo[inline]{Chaotic rest of section to sort out}
 However, in a TEM cell, the normalized electric field strength is not necessarily symmetrical. Therefore, it must be found out, depending on the position of the dipole moment. In dead center, the normalized electric field only has a z-component. However, with an offset towards z- or y-direction, it will have a y-component, too. Then, the normalized electric field $\mathbf{e_0}$ can be found with through \autoref{eqn:e0x_mse} for  and \autoref{eqn:e0z_mse}. For these equations, a known electric dipole moment $m_{\mathrm{se}}$ is used for both the x- and z-direction. $P_\mathrm{x}$ and $P_\mathrm{z}$ describe the output powers at one port, depending on the electric dipole's orientation \cite{Sreenivasiah_Chang_Ma_1981}. When knowing the normalized electric field $\mathbf{e_0}$ at this point, any magnitude of electric dipole moments may be derived by scaling the coefficients $a$ and $b$. When only considering dipole moments in z-direction, then only \autoref{eqn:e0z_mse} is needed.
 
 \begin{subequations}

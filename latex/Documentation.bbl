@@ -528,70 +528,6 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022}{article}{}
-    \name{author}{7}{}{%
-      {{hash=KD}{%
-         family={Kreindl},
-         familyi={K\bibinitperiod},
-         given={Dominik},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=BT}{%
-         family={Bauernfeind},
-         familyi={B\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=WB}{%
-         family={Weiss},
-         familyi={W\bibinitperiod},
-         given={Bernhard},
-         giveni={B\bibinitperiod},
-      }}%
-      {{hash=SC}{%
-         family={Stockreiter},
-         familyi={S\bibinitperiod},
-         given={Christian},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=YSK}{%
-         family={Yenumula},
-         familyi={Y\bibinitperiod},
-         given={Suresh\bibnamedelima Kumar},
-         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=NB}{%
-         family={Narayanan},
-         familyi={N\bibinitperiod},
-         given={Bhuvnesh},
-         giveni={B\bibinitperiod},
-      }}%
-      {{hash=KM}{%
-         family={Kaltenbacher},
-         familyi={K\bibinitperiod},
-         given={Manfred},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KD+1}
-    \strng{fullhash}{KDBTWBSCYSKNBKM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \verb{doi}
-    \verb 10.3390/electronics11162488
-    \endverb
-    \field{number}{16}
-    \field{pages}{2488}
-    \field{title}{Fundamental investigation of wave propagation inside
-  IC-striplines upon excitation with Hertzian dipole moments}
-    \field{volume}{11}
-    \field{journaltitle}{Electronics}
-    \field{year}{2022}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
   \entry{10274360}{inproceedings}{}
     \name{author}{6}{}{%
       {{hash=KD}{%
@@ -734,34 +670,6 @@
     \field{volume}{27}
     \field{journaltitle}{IEEE Transactions on Magnetics}
     \field{year}{1991}
-  \endentry
-
-  \entry{Lorrain_Corson_1970}{book}{}
-    \name{author}{2}{}{%
-      {{hash=LP}{%
-         family={Lorrain},
-         familyi={L\bibinitperiod},
-         given={Paul},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=CDR}{%
-         family={Corson},
-         familyi={C\bibinitperiod},
-         given={Dale\bibnamedelima R.},
-         giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {W.H. Freeman}%
-    }
-    \strng{namehash}{LPCDR1}
-    \strng{fullhash}{LPCDR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{title}{Electromagnetic fields and waves}
-    \field{year}{1970}
   \endentry
 
   \entry{Mohsen_1982}{article}{}

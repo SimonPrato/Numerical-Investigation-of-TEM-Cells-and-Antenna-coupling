@@ -1,3 +1,4 @@
+from scipy.optimize import curve_fit
 from modules.read_csv import *
 from modules.calculate_moments import *
 from modules.plot_moments import *
@@ -8,7 +9,11 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
+<<<<<<< HEAD
 antenna_type = "gapped loop"
+=======
+antenna_type = "loop" # same name as data folder to be read
+>>>>>>> a8d5b1bb020a1b0506edc40bd0db5d3175691f28
 
 # === Data Loading ===
 columns_phase_shift, columns_magnitude, columns_efield = read_antenna_data(antenna_type=antenna_type)
@@ -16,11 +21,15 @@ columns_phase_shift, columns_magnitude, columns_efield = read_antenna_data(anten
 # Convert frequencies from GHz to Hz
 frequencies = columns_phase_shift[0] * 1e9
 
-# Adjust positive phase values by subtracting 2π
-columns_phase_shift[1][columns_phase_shift[1] > 0] -= 2 * np.pi
+# Adjust positive phase values by subtracting 2π, if desired
+#columns_phase_shift[1][columns_phase_shift[1] > 0] -= 2 * np.pi
 
 # === Phase, Magnitude, and E-Field Processing ===
+<<<<<<< HEAD
 phase_shift = columns_phase_shift[1] - columns_phase_shift[2] - np.pi
+=======
+phase_shift = columns_phase_shift[1] - columns_phase_shift[2] #- np.pi # Subtract np.pi if necessary
+>>>>>>> a8d5b1bb020a1b0506edc40bd0db5d3175691f28
 e_field = columns_efield[2]
 e_field_freq = columns_efield[1] * 1e9
 
@@ -38,7 +47,30 @@ m_e, m_m = calculate_moments(e_field_interp, phase_shift, output_power, frequenc
 plot_moments(m_e, m_m, frequencies, antenna_type)
 
 # Optional: visualize power and E-field relationship
-plot_output_power_e_field(frequencies, output_power, e_field_interp)
+plot_output_power_e_field(frequencies, output_power, e_field_interp, antenna_type)
+
+def model_func(x, a, b, c, d):
+    return a * x**3 + b * x**2 + c * x + d
+
+# Fit curve
+popt, pcov = curve_fit(model_func, frequencies, m_e)
+
+# Parameters fitted
+a_e, b_e, c_e , d_e = popt
+
+# Fit curve
+popt, pcov = curve_fit(model_func, frequencies, m_m)
+
+# Parameters fitted
+a_m, b_m, c_m, d_m = popt
+
+print(f"===================================================================================================================")
+print(f"The dipole moments are expressed as a function of frequency below.")
+print(f"This terminal output can be copied and inserted in the magnitude expression of each dipole moment.")
+print(f"-------------------")
+print(f"Electric Dipole Moments fitted parameters: {a_e} * Freq * Freq * Freq + {b_e} * Freq * Freq + {c_e} * Freq + {d_e}")
+print(f"Magnetic Dipole Moments fitted parameters: {a_m} * Freq * Freq * Freq + {b_m} * Freq * Freq + {c_m} * Freq + {d_m}")
+print(f"===================================================================================================================")
 
 def model_func(x, a, b, c, d):
     return a * x**3 + b * x**2 + c * x + d

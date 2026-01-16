@@ -4,7 +4,7 @@ Magnetic and electric dipoles are an effective approach for modeling the radiati
 \todo{Explanation Dipole Moments modeling, antennas and fields}
 
 \subsection{Electric Dipoles}\label{sec:ele_dip}
-\subsubsection{Infinitesimal Electric Dipoles}
+\subsubsection{Infinitesimal Electric Dipoles}\label{sec:infinitesimal_electric_dipoles}
 
 An electric dipole can be modeled as two tiny charged metal spheres or two capacitor-plates connected by a linear wire of length $d$ and diameter $a$ \cite[p. 467]{Griffiths_2024}, \cite[p. 151]{Balanis_1997}. The charges accelerate along the wire and radiate. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cite[p. 151]{Balanis_1997}, \cite[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length usually must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries or as a useful excitation method in numerical investigations. 
 
@@ -125,6 +125,15 @@ The real power transfer is derived through the time-averaged Poynting vector $\m
 	\label{eqn:time_averaged_poynting}
 \end{equation}
 
+The complex power $P$ is derived by integrating $\mathbf{W}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
+
+\begin{equation}
+	P_r = \eta \frac{\pi}{3} \frac{|I_0l|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
+	\label{eqn:compl_power_inf_elec_dipole}
+\end{equation}
+
+\autoref{eqn:compl_power_inf_elec_dipole} demonstrates, that the imaginary part of the power radiated by the infinitesimal electric dipole shows capacitive behavior.
+
 %By integrating the time-averaged real Poynting vector $ \mathbf{W}_\mathrm{av} $ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, opposed to the imaginary part. $P_{\mathrm{rad}}$ is expressed as \cite[p. 155]{Balanis_1997}
 %
 %\begin{equation}
@@ -136,7 +145,7 @@ The real power transfer is derived through the time-averaged Poynting vector $\m
 
 
 
-\subsubsection{Small Electric Dipoles}
+\subsubsection{Small Electric Dipoles}\label{sec:small_electric_dipole}
 
 Wires that are too long to be modeled as an infinitesimal dipole, but short enough to be considered electrically small ($\lambda / 50 < l \leq \lambda/10$), are classified as small physical dipoles \cite[pp. 162-163]{Balanis_1997}. They are a more accurate and useful representation of a linear wire antenna, and now investigated further. 
 
@@ -268,7 +277,13 @@ and,
 
  
 
-The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole \cite[p. 238]{Balanis_1997}. 
+The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals to 
+
+\begin{equation}
+P_r = \eta \left(\frac{\pi}{12}\right) (ka)^4 |I_0|^2 \left[1 + j\frac{1}{(kr)^3}\right],
+\end{equation}
+
+and its imaginary part is inductive \cite[p. 238]{Balanis_1997}.
 
 
 
