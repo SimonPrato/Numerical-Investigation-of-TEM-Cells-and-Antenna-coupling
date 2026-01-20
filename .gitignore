@@ -6,5 +6,8 @@ scripts/eqc-ind-antenna/data/*
 scripts/eqc-ind-antenna/output/*
 scripts/eqc-ind-antenna/.venv
 scripts/evaluate-moments/.venv
+<<<<<<< HEAD
+=======
 literature-references/
 vnc-commands.txt
+>>>>>>> a8d5b1bb020a1b0506edc40bd0db5d3175691f28
