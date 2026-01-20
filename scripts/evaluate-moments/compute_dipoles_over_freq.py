@@ -18,7 +18,8 @@ columns_phase_shift, columns_magnitude, columns_efield = read_antenna_data(anten
 frequencies = columns_phase_shift[0] * 1e9
 
 # Adjust positive phase values by subtracting 2π, if desired
-#columns_phase_shift[1][columns_phase_shift[1] > 0] -= 2 * np.pi
+#columns_phase_shift[1][columns_phase_shift[1] < 0] += 2 * np.pi
+columns_phase_shift[2][columns_phase_shift[2] < 0] += 2 * np.pi
 
 # === Phase, Magnitude, and E-Field Processing ===
 phase_shift = columns_phase_shift[1] - columns_phase_shift[2] #- np.pi # Subtract np.pi if necessary

@@ -393,7 +393,7 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 \end{figure}
 
 \FloatBarrier
-\subsubsection{Current distribution on septum}
+\subsubsection{Current distribution on septum and antenna offset}
 \FloatBarrier
 
 \autoref{fig:monopole_surface_currents} shows the surface current density on the septum caused by the monopole antenna. The current heads towards output ports in-phase, which causes the output power to be in-phase, too. This is a characteristic of the dominant electric dipole moment, predicted by . 
@@ -423,7 +423,8 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 
 \autoref{fig:monopole_surface_current_te01} shows the current density of the septum at 3.3\,GHz. Due to the magnetic fields propagating in the z-direction, the current on the septum creates a pattern of swirls. Current, which reach an output ports by following this pattern, contributes to the total power transferred by the TE\textsubscript{01} mode.
 
-\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}.
+\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}
+\todo[inline]{idea: offset in x-direction, showing surface current and explaining the decrease in power transfer (normal E-field distribution)}
 
 \FloatBarrier
 \subsubsection{Electromagnetic energy in the TEM cell}
@@ -931,15 +932,32 @@ Possible reasons for the deviation in power are numerical inaccuracies or the co
 \FloatBarrier
 
 \subsection{Loop antenna with gap}\label{sec:loop_gap_sim}
+\subsubsection{Setup and geometrical analysis}
 \FloatBarrier
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/gapped_loop_antenna}
-	\caption{Geometry of loop antenna with a gap in the return path inserted into the TEM cell.}
+	\caption{Geometry of loop antenna with a gap in the return path inserted in the TEM cell.}
 	\label{fig:gappedloopantenna}
 \end{figure}
 
-The loop is not closed, therefore, a simple calculation of the magnetic flux is not possible. Instead, the closed field integral of the electric field can be evaluated, where the integral of the gap region is set to zero. An equivalent electric field can be found, with which a magnetic field is easy to find. 
+The geometry of the loop antenna with a gap is similar to that of the loop antenna discussed in \autoref{sec:loop_sim}. A gap is present with $10\,\upmu\mathrm{m}$ height in the return path, as shown in \autoref{fig:gappedloopantenna}. The magnetic coupling is determined with \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int}, leading to 
+
+\begin{equation}
+	-\oint_C \boldsymbol{\tau} I(l) \cdot\mathbf{e}_n^\pm  dl= -\int_\text{wire} \boldsymbol{\tau} I_\text{wire}(l) \cdot\mathbf{e}_n^\pm  dl -\int_\text{gap} \boldsymbol{\tau} I_\text{gap}(l) \cdot\mathbf{e}_n^\pm  dl.
+\end{equation}
+
+The electric current in the gap is $I_\mathrm{gap}=0\,\mathrm{A}$, while the current in the antenna wire $I_\mathrm{wire}$ is significantly reduced due to the interrupted current path. Consequently, the magnetic coupling between the loop antenna with a gap and the TEM cell is expected to be lower than that of the loop antenna without a gap.
+
+The conductors around the gap act as capacitors, accumulating charges on both sides. This leads to a higher potential in the wire of the antenna. The electric coupling increases significantly, according to \crefrange{eqn:charges_a}{eqn:charges_b}. Concluding, the structure of the loop antenna with the gap suggests capacitive behavior with a dominating electric dipole moment.
+
+\todo[inline]{TODO: Some sources state that electrically small antennas must be either strongly capacitive or inductive. This would mean, that small antennas can always be represented by the same model: Either dominating electric dipole moment in the capacitive antenna case, with a non-linear behavior of the high frequencies, or a magnetic dipole moment with the same property in the inductive antenna case. The frequency, at which the non-linearities occur, depend on the amount of capacitance or inductance, i.e. the Q-factor. A high Q-factor leads to non-linearities in lower cut-off frequencies, and a low Q-factor increases the cut-off frequency. A capacitive antenna with low impedance has a high Q-factor. A inductive antenna with high impedance has a high Q-factor. This can practically be read from the impedance graphs. Can a relation between the impedance/Q-factor and a ``cut-off frequency'' of the dipole moments be established?}
+
+\todo[inline]{TODO: A little thought experiment on the gapped loop antenna demonstrates why this is the case: If the magnetic dipole moment shall be increased in this antenna, the height of the gap can be decreased to increase the current flow and therefore the magnetic coupling. Ironically, this also increases the amount of charges accumulating on the boundaries of the gap, therefore increasing the electric coupling and capacitive behavior. The capacitive behavior can therefore not change, unless the gap is completely removed. Also, the decrease in gap leads to larger total energy transfer and a higher Q-factor. I suspect, that a high Q-factor of an antenna leads to high energy transfer. This would make sense, because a high Q-factor indicates increased near-field intensities, that would naturally couple with the tem cell.}
+
+\FloatBarrier
+\subsubsection{Equivalent dipole moments}
+\FloatBarrier
 
 \begin{figure}[htbp]
 	\centering
@@ -961,6 +979,9 @@ The loop is not closed, therefore, a simple calculation of the magnetic flux is 
 	\label{fig:example}
 \end{figure}
 
+\FloatBarrier
+\subsubsection{Electrical characteristics}
+\FloatBarrier
 
 \begin{figure}[htbp]
 	\centering
@@ -1004,7 +1025,7 @@ The loop is not closed, therefore, a simple calculation of the magnetic flux is 
 	\label{fig:example}
 \end{figure}
 
-
+The gap leads to a significant reduction of electric current. Consequently, the impedance of the antenna shows capacitive behavior, as indicated in \autoref{fig:gappedloopim}. The energy transfer to the TEM cell occurs primarily by displacement current, explaining the dominating electric dipole moment due to \autoref{eqn:me_i}.
 
 \FloatBarrier
 
@@ -1107,6 +1128,8 @@ The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. T
 	\label{fig:center_fed_monopole}
 \end{figure}
 
+\todo[inline]{A question on my mind since the beginning of this thesis: Can how is the magnetic dipole moment influenced by rotating this geometry by 90 degrees? Is the magnetic dipole moment higher or lower than in the rotated loop antenna? With my current knowledge, I suspect that the electric dipole moment leads to current coupling with the TEM cell over displacement current, therefore leading to a smaller magnetic dipole moment then in the case of the loop antenna}
+
 The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff_cfm} shows stronger coupling. As will be seen below, this is because of an increased electric dipole moment, while the magnetic dipole moment remained the same. Therefore, the center fed monopole antenna couples well electrically with the TEM cell.
 
 \begin{figure}[h]
@@ -1208,45 +1231,4 @@ This section will discuss the antenna displayed in \autoref{fig:serialloopantenn
 \end{figure}
 
 \FloatBarrier
-
-\subsubsection{Offset of source antennas and eddy currents}
-
-\todo{Relate the offset to the normalized E field distribution. For Example, the vertical part of the current loop antenna does not influence the TEM cell coupling without offset, which can be shown with the normalized E field distribution.}
-
-\todo{Can the normalized h-field distribution be related to the E field by multiplying it with the free-space wave impedance? How does a 90° rotated current loop antenna couple with offset? There should be some coupling due to the existence of normalized h-fields there}
-
-\colorbox{red}{This section is probably wrong.}
-
-Next, the CFM is rotated by an angle. This angle is swept from 0° to 90°, iteratively increased by 1° [deg]. At 90° the magnetic dipole moment is at a minimum, while it is the largest at 0°. The idea is now to find a balance between the electric and magnetic dipole moment, such that the antenna operates in a way of resonance. In this operation, the S11 parameter shall be the lowest, even though the coupling of the magnetic field only becomes weaker with increasing angle \todo{Is it possible to proof this by mathematics?}. The reason for this approach by increasing angle is that it is otherwise very hard to achieve such a balance between the dipole moments by purely scaling the antenna. The electric dipole moment is very weak, and when increasing the antenna height (thus only the electric dipole moment), it soon becomes very large and even touches the septum. Rotating the angle instead becomes a very efficient alkternative. This has been determined just by looking at the phase shifts from the antenna to the waveports: If electric and magnetic dipole moments are roughly equally influential, then the phase shift between the ports shall be 90°\todo{Show mathematically?}. Very important for these simulation is the renormalization of the waveports \todo{Describe this in HFSS section, under excitations}. This enables the port exciting the antenna to have an impedance of 50 Ohm, independent of size. This will make a geometry sweep of the antenna able, without influencing the impedance of the port exciting the antenna (Imagine a coax cable attached to the antenna. It is hinted by the round waveport in the model. When it gets shifted around, its wave impedance changes, and so does the reflection, and the results are distorted) 
-
-
-
-
-\FloatBarrier
-
-\autoref{fig:cfm_rotation_sweep} it is visible, that the lowest S11 (least reflections) is achieved at a rotation angle of 72°. \todo{Why, how do the dipole moments look like there? Anf is this just a numerical error?}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/cfm_rotation_sweep.png}
-	\caption{CFM S11 sweep with rotation angle stepping}
-	\label{fig:cfm_rotation_sweep}
-\end{figure}
-
-
-Eddy currents occur on the septum. They increase with frequency. When they get too large, the next-order mode starts propagating. Offsetting the antenna / dipole moment in y-direction reduces the amount of influence of the eddy current on the power carrying current in the septum. 
-
-\todo{How does offset influence the eddy currents and the result?}
-
-
-When implementing an offset in the center fed monopole antenna, the coupling between the waveports and the antenna changes. The change is visible in \autoref{fig:DELETE_AFTER}, although the magnitude of the coupling to both ports is the same.
-
-\todo{Better investigation of offset: Show coupling and eddy currents}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/DELETE_AFTER.png}
-	\caption{Center fed monopole antenna coupling dependence on offset (Delete after)}
-	\label{fig:DELETE_AFTER}
-\end{figure}
 

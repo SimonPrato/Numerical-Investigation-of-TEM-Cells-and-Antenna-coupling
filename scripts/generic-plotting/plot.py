@@ -116,6 +116,10 @@ def create_ieee_plot(
     for y_data, label in zip(y_data_list, legend_labels):
         ax.plot(x_data, y_data, label=label)
 
+    if legend_labels and len(legend_labels) > 0:
+        legend = ax.legend(frameon=True)
+        legend.get_frame().set_facecolor('white')
+
     # Set labels and title
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
@@ -278,7 +282,6 @@ def create_ieee_plot_multifile(
         except Exception as e:
             raise ValueError(f"Error reading file {file_path}: {e}")
 
-    y_data[0] = y_data[0]**2
     # Use custom labels if provided
     if legend_labels is not None:
         if len(legend_labels) != len(all_labels):
@@ -778,30 +781,30 @@ if __name__ == '__main__':
     #     output_path='output/dual_axis_multifile.png'
     # )
 
-    #create_ieee_plot(
-    #    data_source="data/monopole/current-dist-3GHz.csv",
-    #    x_column=3,
-    #    y_columns=4,  
-    #    x_label='Position on antenna [mm]',
-    ##    y_label='Current (A)',
-    #    title=r'Current distribution along monopole antenna at 3$\,$GHz',
-    #    legend_labels='1MHz',
-    #    output_path='output/monopole-current-dist-3GHz.png',
-    #    x_limits=(0, 5),
-    #    y_limits=(0, 3.8e-2)
-    #)
-    create_ieee_plot_multifile(
-        data_sources=['data/loop/equ-moment-power.csv', 'data/loop/magnitude.csv'],
-        x_columns=0,  # Use column 0 as x-axis for both files
-        y_columns=[1, 1],  # Plot column 1 from file1, column 1 from file2
+    create_ieee_plot(
+        data_source="data/loop/feed-return-current.csv",
+        x_column=1,
+        y_columns=[2,3],  
         x_label='Frequency (GHz)',
-        y_label='Power (W)',
-        title='Comparison $P_\mathrm{out}$ loop antenna and $\mathbf{m}_e$, $\mathbf{m}_m$',
-        legend_labels=['Equivalent dipole moments', 'Loop antenna'],
-        output_path='output/comparison-loop.png',
-        y_limits=(0, 1e-4),
-        x_limits=(0.001, 3)
+        y_label='Current (A)',
+        title=r'Current at the feedpoint and return path of loop antenna',
+        legend_labels=['Return path', 'Feedpoint'],
+        output_path='output/loop-feed-return-current.png',
+        x_limits=(0, 3),
+        y_limits=(0.3, 0.4)
     )
+    #create_ieee_plot_multifile(
+    #    data_sources=['data/loop/equ-moment-power.csv', 'data/loop/magnitude.csv'],
+    #    x_columns=0,  # Use column 0 as x-axis for both files
+    #    y_columns=[1, 1],  # Plot column 1 from file1, column 1 from file2
+    #    x_label='Frequency (GHz)',
+    #    y_label='Power (W)',
+    #    title='Comparison $P_\mathrm{out}$ loop antenna and $\mathbf{m}_e$, $\mathbf{m}_m$',
+    #    legend_labels=['Equivalent dipole moments', 'Loop antenna'],
+    #    output_path='output/comparison-loop.png',
+    #    y_limits=(0, 1e-4),
+    #    x_limits=(0.001, 3)
+    #)
     
     # Example 2: Multiple files - simple case
     # Plot column 1 from file1.csv and column 2 from file2.csv
