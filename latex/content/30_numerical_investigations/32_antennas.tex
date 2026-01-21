@@ -1,6 +1,5 @@
 
-\subsection{Investigation of antennas}
-\subsubsection{Conceptual framework and modeling}
+\subsection{Conceptual framework and modeling of antennas}
 \todo[inline]{This section is TODO}
 
 \autoref{fig:deleteafter} shows the total power maintained in the system, meaning $S_{11}^2+S_{12}^2+S_{13}^2$. It does not add up to one, meaning that some energy is lost due to finite conductivity of the septum and antenna. This energy dispersion increases with frequency, most likely due to a decrease of the conductivity due to high-frequency effects like the Skin-effect. Consequently, the power consumption in \autoref{fig:currentlooppowerconsumption} shows a square root relation to the frequency, because the power dispersion is so high. When changing the material of the antenna and septum to a perfect electric conductor, the total power in a system remains one (no power is dispersed) and the power consumption over frequency of the antenna shows a quadratic relation to the frequency, due to the quadratic increase of the radiation resistance.
@@ -196,7 +195,7 @@ In the measurement configuration, the TEM cell with an inserted antenna can be m
  All values are peak values, unless otherwise stated. The septum of the TEM cell and the material of the antennas are perfectly conducting, to investigating results for coupling effects without distorting them with losses.
 
 \FloatBarrier
-\subsubsection{Monopole Antenna}
+\subsection{Monopole Antenna}
 \subsubsection{Setup}
 \FloatBarrier
 
@@ -223,7 +222,7 @@ In the measurement configuration, the TEM cell with an inserted antenna can be m
 \end{figure}
 
 
-The monopole antenna, shown in \autoref{fig:monopoleantenna}, is installed at the center of the TEM cell and connected to the feedpoint located on the top wall. It has a length of 5\,mm, which makes it electrically short at frequencies up to 6\,GHz. It may be approximated as an infinitesimal electric dipole for frequencies up to 1.25\,GHz. The equivalent dipole moments $\mathbf{m}_e$ and $\mathbf{m}_m$ are derived through \cref{eqn:ifa_me, eqn:ifa_mm}. 
+The monopole antenna, shown in \autoref{fig:monopoleantenna}, is installed at the center of the TEM cell and connected to the feedpoint located on the top wall. It has a length of 5\,mm, which makes it electrically short at frequencies up to 6\,GHz. It may be approximated as an infinitesimal electric dipole for frequencies up to 1.25\,GHz. The equivalent dipole moments $\mathbf{m}_e$ and $\mathbf{m}_m$ are derived through \crefrange{eqn:ifa_me}{eqn:ifa_mm}. 
 
 The frequency range investigated reaches from 1\,MHz to 3\,GHz. \autoref{fig:te01_te10_tem_propagation} demonstrates the cut-off frequencies of higher-order modes of the TEM cell in use for the simulation, where the cut-off frequency of TE\textsubscript{01} equals $f_{\mathrm{c,01}}=3.12\,\mathrm{GHz}$. The output power is influenced by the propagation of this evanescent mode, which must be considered in the simulation results in the upper frequency range. 
 
@@ -817,7 +816,7 @@ The loop antenna generates a current on the septum of the TEM cell, as shown in 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/loop_surface_currents_offset_rotation_3GHz3_plot}
-	\caption{Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript{01} separately over frequency.}
+	\caption{Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript{01} separately over frequency. TODO: log scale, bigger frequency range}
 	\label{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}
 \end{figure}
 
@@ -953,11 +952,13 @@ The conductors around the gap act as capacitors, accumulating charges on both si
 
 \todo[inline]{TODO: Some sources state that electrically small antennas must be either strongly capacitive or inductive. This would mean, that small antennas can always be represented by the same model: Either dominating electric dipole moment in the capacitive antenna case, with a non-linear behavior of the high frequencies, or a magnetic dipole moment with the same property in the inductive antenna case. The frequency, at which the non-linearities occur, depend on the amount of capacitance or inductance, i.e. the Q-factor. A high Q-factor leads to non-linearities in lower cut-off frequencies, and a low Q-factor increases the cut-off frequency. A capacitive antenna with low impedance has a high Q-factor. A inductive antenna with high impedance has a high Q-factor. This can practically be read from the impedance graphs. Can a relation between the impedance/Q-factor and a ``cut-off frequency'' of the dipole moments be established?}
 
-\todo[inline]{TODO: A little thought experiment on the gapped loop antenna demonstrates why this is the case: If the magnetic dipole moment shall be increased in this antenna, the height of the gap can be decreased to increase the current flow and therefore the magnetic coupling. Ironically, this also increases the amount of charges accumulating on the boundaries of the gap, therefore increasing the electric coupling and capacitive behavior. The capacitive behavior can therefore not change, unless the gap is completely removed. Also, the decrease in gap leads to larger total energy transfer and a higher Q-factor. I suspect, that a high Q-factor of an antenna leads to high energy transfer. This would make sense, because a high Q-factor indicates increased near-field intensities, that would naturally couple with the tem cell.}
+\todo[inline]{TODO: A little thought experiment on the gapped loop antenna demonstrates why this is the case: If the magnetic dipole moment shall be increased in this antenna, the height of the gap can be decreased to increase the current flow and therefore the magnetic coupling. Ironically, this also increases the amount of charges accumulating on the boundaries of the gap, therefore increasing the electric coupling and capacitive behavior. The capacitive behavior can therefore not change, unless the gap is completely removed. Also, the decrease in gap leads to larger total energy transfer and a higher Q-factor. I suspect, that a high Q-factor of an antenna leads to high energy transfer. This would make sense, because a high Q-factor indicates increased near-field intensities, that would naturally couple with the tem cell. A simulation showing the dipole moments for different gap heights over the frequency would support this claim.}
 
 \FloatBarrier
 \subsubsection{Equivalent dipole moments}
 \FloatBarrier
+
+The electric dipole moment shown in \autoref{fig:gappedloopmoments} clearly dominates over the magnetic dipole moment. The dipole moments behave non-linearly over the frequency. 
 
 \begin{figure}[htbp]
 	\centering
@@ -978,6 +979,30 @@ The conductors around the gap act as capacitors, accumulating charges on both si
 	\caption{Dipole moments and phase shift of loop antenna}
 	\label{fig:example}
 \end{figure}
+
+\autoref{fig:gappedloopcompmomentsgapsweep} demonstrates the effect of the gap height on the dipole moments' behavior. A larger gap height leads to an decreased charge charge concentration in the gap region, consequently a smaller magnitude of the electric dipole moment $\mathbf{m}_\mathrm{e}$. Additionally, it also leads to a decrease in electric current $\mathbf{J}$ in the antenna, reducing the magnetic dipole moment $\mathbf{m}_\mathrm{m}$. The reduction in the magnitude of $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$ with increasing gap height is reflected in the decreasing output power shown in \autoref{fig:gappedloopcomppowergapsweep}.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/gapped_loop_comp_moments_gap_sweep}
+		\caption{}
+		\label{fig:gappedloopcompmomentsgapsweep}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/gapped_loop_comp_power_gap_sweep}
+		\caption{}
+		\label{fig:gappedloopcomppowergapsweep}
+	\end{subfigure}
+	
+	\caption{Comparison of dipole moments and output power at different gap heights.}
+	\label{fig:example}
+\end{figure}
+
+An increase in gap height reduces the non-linearities in $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$. The voltage drop across the gap and the charge accumulation remains stabler over frequency. A higher Q-factor leads to a lower cut-off frequency.
 
 \FloatBarrier
 \subsubsection{Electrical characteristics}
@@ -1010,26 +1035,28 @@ The conductors around the gap act as capacitors, accumulating charges on both si
 	\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/gapped_loop_current}
-\caption{}
+\caption{RMS feed current.}
 \label{fig:gappedloopcurrent}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/gapped_loop_imp}
-\caption{}
+\caption{Magnitude and phase of impedance}
 \label{fig:gappedloopimp}
 	\end{subfigure}
-	
-	\caption{Dipole moments and phase shift of loop antenna}
 	\label{fig:example}
 \end{figure}
+
+
 
 The gap leads to a significant reduction of electric current. Consequently, the impedance of the antenna shows capacitive behavior, as indicated in \autoref{fig:gappedloopim}. The energy transfer to the TEM cell occurs primarily by displacement current, explaining the dominating electric dipole moment due to \autoref{eqn:me_i}.
 
 \FloatBarrier
 
-\subsubsection{Inverted F-antenna}\label{sec:ifa_sim}
+\subsection{Inverted F-antenna}\label{sec:ifa_sim}
+
+\todo[inline]{TODO}
 
 The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. It is positioned at the center of the TEM cell, mounted at the top surface. The 5\,mm long wire points towards waveport 2. The excitation is a modal wave port. With a maximum dimension of 5\,mm, the antenna is electrically small for a frequency of up to 6\,GHz, at which it will be a tenth of the wavelength. In this simulation, the antenna is investigated for the frequency of 100\,MHz to 1\,GHz. The TEM cell has a width of 40\,mm and a height of 24\,mm and an impedance of $\sim50\,\Omega$. The goal is to find equivalent dipole moments of the antenna. 
 
@@ -1117,7 +1144,10 @@ The magnetic coupling with the septum happens due to the alignment of the curren
 
 
 \FloatBarrier
-\subsubsection{Center Fed Monopole Antenna}
+
+\subsection{Center Fed Monopole Antenna}
+
+\todo[inline]{TODO}
 
 The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The electric wire with the length of 5 mm points towards the septum. The 1.1 x 1.6 mm loop is again aligned with the magnetic field lines of the TEM mode. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which once more leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both output ports. 
 
@@ -1131,13 +1161,6 @@ The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. T
 \todo[inline]{A question on my mind since the beginning of this thesis: Can how is the magnetic dipole moment influenced by rotating this geometry by 90 degrees? Is the magnetic dipole moment higher or lower than in the rotated loop antenna? With my current knowledge, I suspect that the electric dipole moment leads to current coupling with the TEM cell over displacement current, therefore leading to a smaller magnetic dipole moment then in the case of the loop antenna}
 
 The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff_cfm} shows stronger coupling. As will be seen below, this is because of an increased electric dipole moment, while the magnetic dipole moment remained the same. Therefore, the center fed monopole antenna couples well electrically with the TEM cell.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/forward_coeff_cfm.png}
-	\caption{S-parameter describing coupling of antenna to waveport 1}
-	\label{fig:forward_coeff_cfm}
-\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -1213,22 +1236,22 @@ When rotating this antenna by 79°, the electric and magnetic dipole moment infl
 
 
 
-\subsubsection{Serial Loop Antenna}
-
-This section will discuss the antenna displayed in \autoref{fig:serialloopantenna}. The idea of that antenna is to create two magnetic dipole moments, which are in phase. As the frequency increases, the displacement current between the loops becomes larger, thus reducing the current through and weakening the second loop. The dipole moments in \autoref{fig:serialloopantennadipolemoments} demonstrate a non-linear behavior of the magnetic dipole moment (only very weakly recognizable, but with a geometry sweep this becomes clearer \todo{Find a geometry where this effect is much stronger}). Also, it would be interesting to measure the wave impedances in both loops over the frequency. Also, find the current distributions, add current plots and electric fields, charge distributions.  
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.3\linewidth]{content/img/serial_loop_antenna}
-	\caption{Serial loop antenna}
-	\label{fig:serialloopantenna}
-\end{figure}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{content/img/serial_loop_antenna_dipole_moments}
-	\caption{Dipole moments }
-	\label{fig:serialloopantennadipolemoments}
-\end{figure}
+%\subsubsection{Serial Loop Antenna}
+%
+%This section will discuss the antenna displayed in \autoref{fig:serialloopantenna}. The idea of that antenna is to create two magnetic dipole moments, which are in phase. As the frequency increases, the displacement current between the loops becomes larger, thus reducing the current through and weakening the second loop. The dipole moments in \autoref{fig:serialloopantennadipolemoments} demonstrate a non-linear behavior of the magnetic dipole moment (only very weakly recognizable, but with a geometry sweep this becomes clearer \todo{Find a geometry where this effect is much stronger}). Also, it would be interesting to measure the wave impedances in both loops over the frequency. Also, find the current distributions, add current plots and electric fields, charge distributions.  
+%
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.3\linewidth]{content/img/serial_loop_antenna}
+%	\caption{Serial loop antenna}
+%	\label{fig:serialloopantenna}
+%\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\linewidth]{content/img/serial_loop_antenna_dipole_moments}
+%	\caption{Dipole moments }
+%	\label{fig:serialloopantennadipolemoments}
+%\end{figure}
 
 \FloatBarrier
 

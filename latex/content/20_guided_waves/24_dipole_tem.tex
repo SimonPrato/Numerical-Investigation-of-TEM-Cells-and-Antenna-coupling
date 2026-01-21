@@ -1,5 +1,76 @@
 \subsection{Electrically Small Radiating Sources in TEM Cells}
 
+\subsubsection{Arbitrary source}
+
+Suppose a current source $\mathbf{J}_1$ excites a waveguide (as is the case with the dipoles in the TEM cell). Normally, such a current source requires external fields to drive it, but for they are neglect for now. Only $\mathbf{E}$ and $\mathbf{H}$ are considered, which are the fields radiated by $\mathbf{J}_1$. $\mathbf{E}$ and $\mathbf{H}$ are solved according to $\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H}$ and $\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}$ \cite[p. 360]{Collin_2015}. Additionally, $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are the resulting waveguide fields, with the signs indicating the direction of propagation. Take \autoref{eqn:lorentz_rec_theorem_int} and set $\mathbf{J}_2=\mathbf{M}_1=\mathbf{M}_2=0$. Now, only the current source $\mathbf{J}_1$ remains, and the \autoref{eqn:J1_propagating_waves} emerges. % Explain how certain surfaces do not to have be integrated, therefore rendering this equation very useful. Also, the expansion coefficients can be determined. Maybe do this calculation with a rectangular waveguide.
+
+\begin{equation}
+	\oiint _S (\mathbf{e}_n^\pm\times \mathbf{H}-\mathbf{E}\times \mathbf{h}_n^\pm)\cdot\mathrm{d}\mathbf{s'}=\iiint \mathbf{J_1}\cdot\mathbf{e}_n^\pm\mathrm{d}v'
+	\label{eqn:J1_propagating_waves}
+\end{equation}
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/reciprocity_tem_cell}
+	\caption{TEM cell with an arbitrary current source $\mathbf{J}_1$ along the curve $\boldsymbol{\tau}$. $\mathbf{E}$ and $\mathbf{H}$ are the field intensities induced by the current. $\mathbf{e}^+_n$ and $\mathbf{e}^-_n$ are outgoing fields towards both output ports of the TEM cell of arbitrary form. $\mathbf{S}$ indicates the surface, and $V$ the volume of the domain in question.}
+	\label{fig:reciprocitytemcell}
+\end{figure}
+
+
+%In case of the TEM cell, it is desirable that only the TEM mode is propagating, and that the source is represented by a dipole. 
+
+The fields $\mathbf{E}$ and $\mathbf{H}$ radiated by $\mathbf{J}_1$ equal a combination of normals modes. Using the expansions \cref{eqn:a_modal_superposition1,eqn:a_modal_superposition2}, \cref{eqn:b_modal_superposition1,eqn:b_modal_superposition2} lead to
+
+\begin{align}
+	\oiint _S (\mathbf{e}_n^+\times \mathbf{H}-&\mathbf{E}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=\nonumber\\ \nonumber
+	&=\oiint _S (\mathbf{e}_n^+\times \sum_m a_m\mathbf{h}_m^+-\sum_m a_m\mathbf{e}_m^+\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}\\
+	&=\sum_m a_m \oiint _S (\mathbf{e}_n^+\times \mathbf{h}_m^+-\mathbf{e}_m^+\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}.
+\end{align}
+
+Due to the orthogonal property of \autoref{eqn:norm_power} and the normalization in \autoref{eqn:unit_power}, the coefficients of each mode can be evaluated separately through
+
+\begin{align}
+	\oiint _S (\mathbf{e_n^+}\times \mathbf{H}&-\mathbf{E}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=\nonumber\\
+	&=a_n \oiint _S (\mathbf{e_n^+}\times \mathbf{h_n^+}-\mathbf{e_n^+}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=-2a_n.
+\end{align}
+
+The coefficient $b_n$ of the fields $\mathbf{e}_n^-$ and $\mathbf{h}_n^-$ are evaluated in the same manner.
+
+In this equation, the wave amplitudes $a$ and $b$ are given through the surface integral in the Lorentz Reciprocity theorem, with $a$ being the wave going to the left side, and $b$ to the other. 
+
+\subsubsection{Equivalent dipole moments}
+
+The electric dipole moment $\mathbf{m_e}$ is given by the current $\mathbf{J}_1$ flowing through the infinitesimal wire. Note that only the electric field of TEM wave propagation is considered. In reality, more modes may propagate, for which the electric field must be replaced by the superposition of normal modes as in \crefrange{eqn:a_modal_superposition1}{eqn:b_modal_superposition1}. %Additionally, to calculate the exact value of the electric field, a series of image sources as a Green's function may be applied.
+
+\begin{equation}
+	\begin{pmatrix}a_n \\b_n\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{e}_n^\pm
+	\label{eqn:dipole_tem_waves}
+\end{equation}
+
+If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m_m}$. It is defined by the product $\mathbf{m_m}=\mathbf{A}\cdot I$, an infinitesimal current loop with area $A$ carrying a current $I$. This leads to \autoref{eqn:mag_dipole_moment_tem}. This formulation assumes, that the magnetic field strength $\mathbf{h}^\pm$ does not change over the loop area, i.e. the loop is electrically small. Otherwise, the magnetic field strength $\mathbf{h}^\pm$ must be considered in the integration \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
+
+\begin{align}
+	\begin{pmatrix}a_n \\b_n\end{pmatrix} &= -\oint_C \mathbf{e}_n^\pm \mathrm{d}l \nonumber \\
+	&= -\iint_{S_0} \nabla \times \mathbf{e}_n^\pm \mathrm{d}\mathbf{S}\nonumber\\
+	&= \mathrm{i}\omega\mu_0\iint_{S_0} \mathbf{h}_n^\pm\cdot \mathrm{d}\mathbf{S}\nonumber\\
+	&= \mathrm{i}\omega\mu_0\mathbf{m}_m\mathbf{h}_n^\pm 
+	\label{eqn:mag_dipole_moment_tem}
+\end{align}
+
+
+If there are several modes propagating, it is useful to find the coefficients of the modes $a_n$ and $b_n$ in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. In this case, the orthogonality property in \autoref{eqn:norm_power} is used to derive \autoref{eqn:an} and \autoref{eqn:bn} \cite{Collin_2015}. The wire is described by a curve C, and the tangential vector $\boldsymbol{\tau}$ is used to integrate along this curve.
+
+\begin{subequations}
+	\begin{equation}
+		2a_n = -\int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^-\mathrm{d}l
+		\label{eqn:an}
+	\end{equation}
+	\begin{equation}
+		2b_n = \int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^+\mathrm{d}l
+		\label{eqn:bn}
+	\end{equation}
+\end{subequations}
+
 % What is this subsection for? Maybe it should be combined with the TEM cell section. In there, the calculations with Green's theorem and Lorentz Reciprocity Theorem could be put. Then, the calculations from the paper of Sreenivasia could follow. It shows how to find the equivalent Dipole moments. It is important to know which modes are propagating. A Electric dipole, which points in direction of wave propagation, should not influence the result. However, it could create TM modes, which would transfer power to the ports. -> Investigate modes.
 
 An electrically small radiating source may be represented by six dipoles. This number includes three magnetic dipoles pointing in every direction of the Cartesian coordinate system (x, y, and z-direction), and three electric dipoles in the same orientation. Consequently, an equipment under test (EUT) could be modeled with these dipoles, leading to much less computational effort in simulation. The excited EM waves by point sources is discussed in \cite{Collin_2015} and in \autoref{sec:modes_tem_cell}. An analytical procedure to determine these dipole moments is presented by Sreenivasiah \cite{Sreenivasiah_Chang_Ma_1981}, and some experimental results based on it can be found in the research of Kreindl, where bond wires were modeled with magnetic dipoles\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}, and, again, Sreenivasiah \cite{Sreenivasiah_Chang_Ma_1981}.
@@ -36,7 +107,9 @@ The unity vector $\mathbf{\hat{a}}_z$ points in direction of propagation. The fu
 
 Note, that an electric dipole in the TEM cell leads to a increase in power with the same phase in both ports, and a magnetic dipole leads to the same increase, but with a phase shift of 180°. This also explains why the EUT shall be place halfway on the septum in x-direction. Any shift from this position changes this phase shift from 180°. It is therefore required to measure the power of the ports with phase information, like using a complex Poynting vector, which is easy to implement in a simulation software. When measuring a device with a real TEM cell, the phase information may be found by summing and subtracting the output powers of the ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
 
-The electric field coupling with the antenna can be simply put as \cite[p. 361]{Collin_2015}
+\subsubsection{Electrically small antennas}
+
+The electric field coupling with an electrically small antenna can be simply put as \cite[p. 361]{Collin_2015}
 
 \begin{subequations}
 	
@@ -51,7 +124,7 @@ The electric field coupling with the antenna can be simply put as \cite[p. 361]{
 	
 \end{subequations}
 
-If it the wire is electrically small, the electric field $\mathbf{e}_n^\pm$ is assumed to be constant in $C$. Furthermore, if the current $I$ is constant along $C$, it does not have to be considered in the integration. Integrating over the closed loop simplifies to \cite[p. 361]{Collin_2015}
+Since the antenna is electrically small, the electric field $\mathbf{e}_n^\pm$ is assumed to be constant in $C$. Furthermore, if the current $I$ is constant along $C$, it does not have to be considered in the integration. Integrating over the closed loop simplifies to \cite[p. 361]{Collin_2015}
 
 \begin{subequations}
 	\begin{equation}
@@ -144,83 +217,6 @@ The physical meaning of $I_n$ is electrical current passing between the septum a
 
 
 %\todo[inline]{This analysis might be wrong. The normalized E-Field is something different here than previously - I mixed it up. What could work: Simulate electric dipole moment in y-direction with geometry sweep. Adjust $y_0$ in \cite{Sreenivasiah_Chang_Ma_1981}. Find norm. E-Field for that. Simulate output power. Compare with calculations.}
-\todo[inline]{Explain why output power rises quadratically and moments linearly over f if U and I are kept constant}
-\todo[inline]{Chaotic rest of section to sort out}
-However, in a TEM cell, the normalized electric field strength is not necessarily symmetrical. Therefore, it must be found out, depending on the position of the dipole moment. In dead center, the normalized electric field only has a z-component. However, with an offset towards z- or y-direction, it will have a y-component, too. Then, the normalized electric field $\mathbf{e_0}$ can be found with through \autoref{eqn:e0x_mse} for  and \autoref{eqn:e0z_mse}. For these equations, a known electric dipole moment $m_{\mathrm{se}}$ is used for both the x- and z-direction. $P_\mathrm{x}$ and $P_\mathrm{z}$ describe the output powers at one port, depending on the electric dipole's orientation \cite{Sreenivasiah_Chang_Ma_1981}. When knowing the normalized electric field $\mathbf{e_0}$ at this point, any magnitude of electric dipole moments may be derived by scaling the coefficients $a$ and $b$. When only considering dipole moments in z-direction, then only \autoref{eqn:e0z_mse} is needed.
-
-\begin{subequations}
-\begin{equation}
-    e_{\mathrm{0x}} = \frac{2 \sqrt{P_\mathrm{x}}}{m_{\mathrm{se}}}
-    \label{eqn:e0x_mse}
-\end{equation}
-\begin{equation}
-    e_{\mathrm{0z}} = \frac{2 \sqrt{P_\mathrm{z}}}{m_{\mathrm{\mathrm{se}}}}
-    \label{eqn:e0z_mse}
-\end{equation}
-\end{subequations}
-
-The normalized electric field of the TEM mode is then given by \autoref{eqn:eox_normalized} in x-direction and by \autoref{eqn:eoz_normalized} in z-direction \cite{Wilson_Ma_1986}. The equations follow from the singular integral-equation approach in \cite{Wilson_1981}. The formula is not valid for the gap regions. However, since there won't be any dipole moment placed there, this approximation will suffice. These equations are to understand the influence of electrically small structures, which do not align with the TEM modes, but still couple with the TEM cell and influence the results. \todo{Is the series for several sine-waves fitting into the TEM cell, derived due to the nature of the Green's Function? If yes, then only the first-order must be used, since only the TEM mode is propagating. Now higher-order modes here.}
-
-\begin{subequations}
-
-\begin{equation}
-    e_{ox} = \frac{2}{a} Z_c^{1/2} \sum_{m_0=1}^{\infty} 
-    \frac{\sinh M(b - pz)}{\sinh M b} 
-    \cdot \sin Mx \sin Ma \; J_0(Mg)
-    \label{eqn:eox_normalized}
-\end{equation}
 
 
-\begin{equation}
-    e_{oz} = p\,\frac{2}{a}\, Z_c^{1/2} \sum_{m_0=1}^{\infty}
-    \frac{\cosh M(b - pz)}{\sinh M b}
-    \cdot \cos Mx\, \sin Ma\, J_0(Mg)
-    \label{eqn:eoz_normalized}
-\end{equation}
-    
-\end{subequations}
-
-\todo{Normalized E field: Excited by the dipole at this position. Derived through the Green's function, using said dipole as source. Check this assumption.}
-
-$Z_\mathrm{c}$ is the characteristic wave impedance, $a$ is half the width of the TEM cell, $b$ is half its height. The sign-function $p=1$ above the septum, and $p=-1$ below it. $M=m\pi / 2a$ and $g$ is the length of the gap between the septum and the conducting wall. The index $m=1,3,5, ...$ is iterated over odd integers. \todo{Use same notation as in the section, where the Green's function for the TEM cell has been derived. The paper this formula stems from is based on this Green's function.} 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\linewidth]{content/img/DELETE2.png}
-    \caption{Normalized e-field distribution along z-axis at center of septum for visualization, where the y-axis is the magnitude and the x-axis is the point in the height position in the TEM cell.}
-    \label{fig:placeholder}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/DELETE}
-	\caption{TODO: This is how the dimensions in these formulas are defined in \cite{Wilson_1981}}
-	\label{fig:delete}
-\end{figure}
-
-\todo{Electric normalized field intensity describes the amount of field strength necessary at a point in the TEM cell to achieve $1\,\sqrt{\mathrm{W}}$ power at the output}The normalized electric field intensity may be derived by the numerically resulting output power when placing dipole moments in the TEM cell. For example, \autoref{fig:outputpowereyoveroffset} demonstrates the output power of an electric dipole moment in the y-direction. It is shifted in the y-direction at center height between septum and upper TEM cell wall. Applying \autoref{eqn:e0x_mse} to the output power leads to the normalized magnitude of the field intensity in y-direction $e_y$. The distribution follows that of the magnitude of a sine wave, according to \autoref{eqn:eox_normalized}. There, at $y=0\,\mathrm{mm}$, the normalized electric field strength equals zero, and approaches a maximum at $y=\pm20\,\mathrm{mm}$. However, since this equation is valid outside the gap region, and the gap region is not relevant for further research, the is limited at an offset of $y=\pm15\,\mathrm{mm}$.
-
-Furthermore, \autoref{fig:} demonstrates the output power and the normalized $e_y$-field across the height from the septum to the upper TEM cell wall. The dipole moment is subject to an offset of $y=7.5\,\mathrm{mm}$ from the center. That is because the output power and normalized electric field strength is constantly zero at $y=0\,\mathrm{mm}$, independent of the height.
-
-
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_offset}
-		\caption{Output power and norm. E-field over offset}
-		\label{fig:outputpowereyoveroffset}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_height_w_offset}
-		\caption{Output power and norm. E-field over height}
-		\label{fig:outputpowereyoverheightwoffset}
-	\end{minipage}
-\end{figure}
-
-\todo{The electric field / magnetic field distribution of the TEM mode must be known ($e_0$). Other mode distributions are neither available, nor necessary. Calculations to find these field distributions can be found in \cite{4091811}. This would also solve the problem with not being able to shift the location of the electric dipole moment. In \cite{Sreenivasiah_Chang_Ma_1981}, the normalized electric field was also determined analytically, just with output power. IMPORTANT!!! Additionally, the electric field at the output port and the dipole location must be equal (in tem mode) for the formula to work. If they are not, then the formulas derived in \cite{4091811} must be used. That's why the formula does not work for offset shift of the dipole moment anymore. The electric field at the incident port must then be found out. How to use this in case of a shielding material? Not valid for only ez dipole. Additionally, field distributions of the TEM mode in a TEM cell is also derived in \cite{Wilson_1981}}
-
-% The paper goes on to talk about the total power radiated by the EUT in free space. I don't think I need that, but this comment is here as a reminder that it exists.
 \FloatBarrier

@@ -313,49 +313,14 @@ and its imaginary part is inductive \cite[p. 238]{Balanis_1997}.
 %	\label{fig:currentloopequcirc}
 %\end{figure}
 
-\subsection{Dipoles modeling Antennas}
 
-The infinitesimal electric and magnetic dipoles discussed in \autoref{sec:ele_dip} and \autoref{sec:mag_dip} can model electrically small antennas. Using Ampère-Maxwell Law in matter
-
-\begin{equation}
-	\nabla \times \mathbf{H} = \mathbf{J}_\mathrm{f} + \frac{\partial
-	 \mathbf{D}}{\partial t}
-	 \label{eqn:ampere-maxwell}
-\end{equation}
-
-\begin{equation}
-	\oint_C \mathbf{H} \cdot d\mathbf{s}' = I_f + \epsilon \frac{\partial \phi}{\partial t} 
-\end{equation}
-
-\begin{equation}
-	I_f = I - j \omega C U 
-\end{equation}
-
-Analogous to the Ampère-Maxwell Law in \autoref{eqn:ampere-maxwell}
-
-\begin{equation}
-	\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} - \mathbf{J}_m
-\end{equation}
-
-\begin{equation}
-I_m = U - j\omega L I 
-\end{equation}
-
-Relating them with the antenna impedance $Z = U/I$
-
-\begin{equation}
-	\frac{I_m}{I_e} = \frac{Z-j\omega L }{1-j\omega CZ}
-\end{equation}
-
-
-
-\subsubsection{Crossed Dipoles}
+\subsection{Crossed Dipoles}
+\todo[inline]{Section todo}
 % Read Bauernfeind's: Crossed Dipole Antennas
 
 % When placing the magnetic dipole in the center of the upper or lower chamber of the TEM cell, and pointing in y-direction, it will generate a TEM-wave. Same goes for the electric dipole, pointing in z-direction. When combining two of these dipole moments, any excitation with the first order TEM mode is possible. This is the main idea for modeling antennas. The relation of the magnetic and electric fields is assumed to be roughly equal to the free space wave impedance. Also, magnetic dipoles create a difference in output voltage of the two ports, while electric dipoles create a increase of voltage in both ports. The power transmitted is the same. However: How are they modeled in HFSS? 
 
 Crossed dipoles can generate a wide variety of radiation patterns. Supposed two dipoles are placed perpendicular to each other and fed 90° out of phase, an omnidirectional radiation pattern in created \cite{7293591}. If the equivalent dipoles of an EUT represents such two dipoles, any mode which can propagate in the TEM cell will do so, and therefore influence the measurement result. It is therefore not only important to know which dipoles there are representing the EUT, but also what phase and magnitude they have. Meaning that not only the dipoles aligned with the TEM mode alone influence the result. 
-\todo{Write}
 
 \todo{Dipoles next to conducting planes (balanis, collin)}
 
