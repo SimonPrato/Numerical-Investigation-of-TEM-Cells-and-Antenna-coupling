@@ -116,7 +116,7 @@ def create_ieee_plot(
     for y_data, label in zip(y_data_list, legend_labels):
         ax.plot(x_data, y_data, label=label)
 
-    if legend_labels and len(legend_labels) > 0:
+    if legend_labels and any(label.strip() for label in legend_labels):
         legend = ax.legend(frameon=True)
         legend.get_frame().set_facecolor('white')
 
@@ -692,6 +692,7 @@ def create_ieee_plot_dual_yaxis_multifile(
     ax1.set_xlabel(x_label)
     ax1.set_ylabel(y1_label, color=y1_color)
     ax1.tick_params(axis='y', labelcolor=y1_color)
+    ax1.yaxis.get_major_formatter().set_useOffset(False)
 
     # Create secondary axis
     ax2 = ax1.twinx()
@@ -705,6 +706,7 @@ def create_ieee_plot_dual_yaxis_multifile(
 
     ax2.set_ylabel(y2_label, color=y2_color)
     ax2.tick_params(axis='y', labelcolor=y2_color)
+    ax2.yaxis.get_major_formatter().set_useOffset(False)
 
     ax1.set_title(title)
 
@@ -739,6 +741,7 @@ def create_ieee_plot_dual_yaxis_multifile(
 
 # Example usage
 if __name__ == '__main__':
+    plt.rcParams['axes.formatter.useoffset'] = False
     #create_ieee_plot(
         #data_source="data/monopole/magnetic-energy.csv",
         #x_column=1,
@@ -752,18 +755,19 @@ if __name__ == '__main__':
         #y_limits=(0, 1.75e-6)
     #)
     #create_ieee_plot_dual_yaxis(
-        #data_source='data/monopole/impedance.csv',
-        #x_column=0,
-        #y1_columns=1,  # Plot column 1
-        #y2_columns=2,        # Plot column 3 on right axis
-        #x_label='Frequency (GHz)',
-        #y1_label=r'Magnitude ($\Omega$)',
-        #y2_label='Phase (deg)',
-        #title='Impedance of the monopole antenna',
-        #y1_legend_labels=['Magnitude'],
-        #y2_legend_labels=['Phase'],
-        #output_path='output/monopole_impedance.png',
-        #y1_limits=(0, 0.2e5)
+    #    data_source='data/gap-loop/impedance.csv',
+    #    x_column=0,
+    #    y1_columns=2,  # Plot column 1
+    #    y2_columns=1,        # Plot column 3 on right axis
+    #    x_label='Frequency (GHz)',
+    #    y1_label=r'Magnitude ($\Omega$)',
+    #    y2_label='Phase (deg)',
+    #    title='Impedance of the loop antenna with gap',
+    #    y1_legend_labels=['Magnitude'],
+    #    y2_legend_labels=['Phase'],
+    #    output_path='output/gap_loop_impedance.png',
+    #    y1_limits=(0, 4.5e4),
+    #    y2_limits=(-90, -89.988)
     #)
 
     # Example 2: Multiple files with dual y-axis
@@ -781,18 +785,18 @@ if __name__ == '__main__':
     #     output_path='output/dual_axis_multifile.png'
     # )
 
-    create_ieee_plot(
-        data_source="data/loop/feed-return-current.csv",
-        x_column=1,
-        y_columns=[2,3],  
-        x_label='Frequency (GHz)',
-        y_label='Current (A)',
-        title=r'Current at the feedpoint and return path of loop antenna',
-        legend_labels=['Return path', 'Feedpoint'],
-        output_path='output/loop-feed-return-current.png',
-        x_limits=(0, 3),
-        y_limits=(0.3, 0.4)
-    )
+    #create_ieee_plot(
+        #data_source="data/gap-loop/feed-current.csv",
+        #x_column=0,
+        #y_columns=1,  
+        #x_label='Frequency (GHz)',
+        #y_label='Current (A)',
+        #title=r'Current at the feedpoint of loop antenna with gap',
+        #legend_labels=[''],
+        #output_path='output/gap-loop-feed-return-current.png',
+        #x_limits=(0, 3),
+        #y_limits=(0, 0.04)
+    #)
     #create_ieee_plot_multifile(
     #    data_sources=['data/loop/equ-moment-power.csv', 'data/loop/magnitude.csv'],
     #    x_columns=0,  # Use column 0 as x-axis for both files
@@ -831,3 +835,28 @@ if __name__ == '__main__':
         ##legend_labels=['F1-V1', 'F1-V2', 'F2-V1', 'F2-V3'],
         #output_path='output/multifile_complex.png'
     #)
+    create_ieee_plot_multifile(
+        data_sources=['data/gap-loop/dipole-moments-15um.csv', 'data/gap-loop/dipole-moments-500um.csv'],
+        x_columns=0,  # Use column 0 as x-axis for both files
+        y_columns=[[1, 2], [1, 2]],  # Plot column 1 from file1, column 1 from file2
+        x_label='Frequency (GHz)',
+        y_label='Dipole moment magnitudes (Vm)',
+        title='Comparison of equivalent dipole moments at different gap heights',
+        legend_labels=[r'15 µm - $m_e$', r'15 µm - $m_m$',r'500 µm - $m_e$', r'500 µm - $m_m$'],
+        output_path='output/gap-sweep-moments.png',
+        y_limits=(0, 1.2e-2),
+        x_limits=(0.001, 3)
+    )
+    #create_ieee_plot_multifile(
+    #    data_sources=['data/gap-loop/output-power-15um.csv', 'data/gap-loop/output-power-500um.csv'],
+    #    x_columns=0,  # Use column 0 as x-axis for both files
+    #    y_columns=[1, 1],  # Plot column 1 from file1, column 1 from file2
+    #    x_label='Frequency (GHz)',
+    #    y_label='Output power (W)',
+    #    title='Comparison of output power at different gap heights',
+    #    legend_labels=[r'15 µm', r'500 µm'],
+    #    output_path='output/gap-sweep-power.png',
+    #    y_limits=(0, 1.2e-2),
+    #    x_limits=(0.001, 3)
+    #)
+

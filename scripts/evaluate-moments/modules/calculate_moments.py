@@ -1,4 +1,5 @@
 import numpy as np
+import csv
 
 
 def calculate_moments(e_field: complex, phase_shift: float, 
@@ -23,18 +24,20 @@ def calculate_moments(e_field: complex, phase_shift: float,
     wave_number = 2 * np.pi / wavelength
     
     # Moment source terms
-    source_real = 2 * output_power
-    source_complex = 2 * output_power * np.exp(1j * phase_shift)
+    a = 2 * output_power
+    b = 2 * output_power * np.exp(1j * phase_shift)
     
     # Electric moment (z-component)
-    m_electric = np.abs((source_real + source_complex) / e_field)
+    m_electric = np.abs((a + b) / e_field)
     
     # Magnetic moment calculation
-    m_magnetic_intermediate = 1j * (source_real - source_complex) / (e_field * wave_number)
+    m_magnetic_intermediate = 1j * (a - b) / (e_field * wave_number)
     m_magnetic = np.abs(1j * m_magnetic_intermediate * 2 * np.pi * frequency * mu_0)
     
-    print(f"Max magnetic moment magnitude: {np.max(m_magnetic):.6f}")
-    
+    data = np.column_stack((frequency, m_electric * 377, m_magnetic))
+    np.savetxt('output/csv/dipole-moments.csv', data, delimiter=',',
+           header='Frequency (GHz),Electric Dipole Moment * 377 (Vm),Magnetic Dipole Moment (Vm)')
+
     return m_electric, m_magnetic
 
 
