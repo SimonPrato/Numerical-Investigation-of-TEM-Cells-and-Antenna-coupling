@@ -1,13 +1,16 @@
+# Data and output directories
 scripts/evaluate-moments/data/*
-scripts/generic-plotting/output/*
+scripts/evaluate-moments/output/*
 scripts/generic-plotting/data/*
-scripts/evaluate-moments/output/
+scripts/generic-plotting/output/*
 scripts/eqc-ind-antenna/data/*
 scripts/eqc-ind-antenna/output/*
-scripts/eqc-ind-antenna/.venv
-scripts/evaluate-moments/.venv
-<<<<<<< HEAD
-=======
+
+# Virtual environments (all .venv folders)
+.venv/
+
+# Literature references
 literature-references/
+
+# VNC commands
 vnc-commands.txt
->>>>>>> a8d5b1bb020a1b0506edc40bd0db5d3175691f28
