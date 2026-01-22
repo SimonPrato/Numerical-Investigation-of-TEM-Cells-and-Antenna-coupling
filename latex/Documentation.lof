@@ -6,69 +6,68 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Geometrical arrangement of a current loop fed by a current $I_0$, producing a magnetic dipole moment. Alternatively, a magnetic current $I_\mathrm {m}$ flows perpendicular to the loop's area along the distance $L$, which produces an equivalent magnetic dipole moment.}}{6}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Behavior of Expression 1 and Expression 2 in \autoref {eqn:e_et_2} over distance $r$. The distance $r$ is normalized to the radian distance $\lambda / 2\pi $. The magnitude of both expressions is normed to 1 at radian distance for better comparison.}}{8}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Field regions of an antenna, here specifically a linear wire antenna. However, they are applicable for any antenna, as long as their largest dimension $d$ is known.}}{9}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Dominant modes in a rectangular waveguide.}}{13}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces TEM cell with vertical antenna inserted}}{14}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Cross section of the TEM cell}}{17}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Propagation of TEM, TE\textsubscript {01} and TE\textsubscript {10} modes in TEM cell}}{18}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Dominant modes in a rectangular waveguide.}}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces TEM cell with vertical antenna inserted}}{15}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Cross section of the TEM cell}}{18}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Propagation of TEM, TE\textsubscript {01} and TE\textsubscript {10} modes in TEM cell}}{19}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Transversal electric fields in cross section of TEM cell}}{19}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Normalized e-field distribution along z-axis at center of septum for visualization, where the y-axis is the magnitude and the x-axis is the point in the height position in the TEM cell.}}{20}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces TODO: This is how the dimensions in these formulas are defined in \blx@tocontentsinit {0}\cite {Wilson_1981}}}{20}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Output power and norm. E-field over offset}}{21}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Output power and norm. E-field over height}}{21}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Normalized e-field distribution along z-axis at center of septum for visualization, where the y-axis is the magnitude and the x-axis is the point in the height position in the TEM cell.}}{21}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces TODO: This is how the dimensions in these formulas are defined in \blx@tocontentsinit {0}\cite {Wilson_1981}}}{21}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Output power and norm. E-field over offset}}{22}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Output power and norm. E-field over height}}{22}{figure.caption.37}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces TEM cell with an arbitrary current source $\mathbf {J}_1$ along the curve $\boldsymbol {\tau }$. $\mathbf {E}$ and $\mathbf {H}$ are the field intensities induced by the current. $\mathbf {e}^+_n$ and $\mathbf {e}^-_n$ are outgoing fields towards both output ports of the TEM cell of arbitrary form. $\mathbf {S}$ indicates the surface, and $V$ the volume of the domain in question.}}{23}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Incident, reflected and transmitted electric fields due to interaction with shielding material}}{27}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Dual TEM cell with aperture}}{31}{figure.caption.54}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tetrahedron with points on the edge and vertices.}}{32}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Face of the finite element with unknowns}}{33}{figure.caption.56}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Adaptive solution process}}{35}{figure.caption.57}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a waveport. This geometry leads to a port impedance of $50\,\Omega $.}}{36}{figure.caption.64}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}}{37}{figure.caption.65}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Geometry of monopole antenna inserted into TEM cell with its electric near-field.}}{41}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces The equivalent dipole moments of the monopole antenna and the corresponding induced phase shift between the wave ports are presented in separate figures.}}{42}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Effective electric current and effective voltage at feedpoint of monopole antenna over frequency.}}{42}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Output power and electric field data of antenna and equivalent dipole moments}}{43}{figure.caption.72}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces At $3\,\mathrm {GHz}$}}{44}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces At $1\,\mathrm {MHz}$}}{44}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Effective electric current distribution along the monopole antenna at frequencies $1\,\mathrm {MHz}$ and $3\,\mathrm {GHz}$}}{44}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Magnitude and phase of monopole antenna's impedance.}}{44}{figure.caption.76}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Chu equivalent circuit of short dipole}}{45}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{46}{figure.caption.79}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Peak electromagnetic energy in the TEM cell generated by the monopole antenna}}{47}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Geometry of loop antenna inserted into the TEM cell with its magnetic near-field. The return path leads into the conducting surface of the cell.}}{47}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Dipole moments and phase shift of loop antenna.}}{48}{figure.caption.85}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Output power of the loop antenna compared with the output power produced by the dipole moments}}{48}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces \relax }}{49}{figure.caption.87}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Effective voltage and current at feedpoint of the loop antenna.}}{49}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Peak currents of loop antenna at feedpoint and return path.}}{50}{figure.caption.89}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Magnitude and phase of the impedance of the current loop antenna.}}{50}{figure.caption.91}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Equivalent circuits of the small loop antenna.}}{51}{figure.caption.92}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Circuit representing the TEM cell, small loop antenna and their coupling.}}{52}{figure.caption.95}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Equivalent dipole moments derived by the equivalent circuit compared to the dipole moments of the loop antenna in \autoref {fig:dipole_moments_loop_antenna}.}}{52}{figure.caption.96}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{54}{figure.caption.97}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript {01} separately over frequency. TODO: log scale, bigger frequency range}}{55}{figure.caption.98}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Dipole moments and phase shift of loop antenna}}{55}{figure.caption.100}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Geometry of loop antenna with a gap in the return path inserted in the TEM cell.}}{56}{figure.caption.101}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Dipole moments and phase shift of loop antenna}}{57}{figure.caption.104}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Comparison of dipole moments and output power at different gap heights.}}{58}{figure.caption.105}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}}{58}{figure.caption.106}%
-\contentsline {figure}{\numberline {4.35}{\ignorespaces Inverted F-antenna used in the simulation}}{60}{figure.caption.109}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces Dipole moments and phase shift of loop antenna}}{60}{figure.caption.110}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces Output power and electric field at output.}}{61}{figure.caption.111}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces Voltage and current at feedpoint of inverted-F antenna.}}{61}{figure.caption.112}%
-\contentsline {figure}{\numberline {4.39}{\ignorespaces Phase and magnitude of the inverted-F antenna's impedance over frequency.}}{62}{figure.caption.113}%
-\contentsline {figure}{\numberline {4.40}{\ignorespaces Center fed monopole antenna used in simulation}}{62}{figure.caption.117}%
-\contentsline {figure}{\numberline {4.41}{\ignorespaces Phase shift}}{63}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.42}{\ignorespaces Dipole moments}}{63}{figure.caption.119}%
-\contentsline {figure}{\numberline {4.43}{\ignorespaces Output power and electric field of center-fed monopole antenna}}{63}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.44}{\ignorespaces Magnitude and phase of center-fed monopole antenna's impedance.}}{63}{figure.caption.120}%
-\contentsline {figure}{\numberline {4.45}{\ignorespaces Voltage and current at feedpoint of center-fed monopole antenna.}}{64}{figure.caption.121}%
-\contentsline {figure}{\numberline {4.46}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{64}{figure.caption.124}%
-\contentsline {figure}{\numberline {4.47}{\ignorespaces TEM cell containing dipole moments}}{65}{figure.caption.126}%
-\contentsline {figure}{\numberline {4.48}{\ignorespaces Moments in small TEM cell}}{66}{figure.caption.128}%
-\contentsline {figure}{\numberline {4.49}{\ignorespaces Moments in normal TEM cell}}{66}{figure.caption.128}%
-\contentsline {figure}{\numberline {4.50}{\ignorespaces $k\cdot r$ in small TEM cell}}{66}{figure.caption.130}%
-\contentsline {figure}{\numberline {4.51}{\ignorespaces $k\cdot r$ for other TEM cells}}{66}{figure.caption.130}%
-\contentsline {figure}{\numberline {4.52}{\ignorespaces Output powers}}{67}{figure.caption.132}%
-\contentsline {figure}{\numberline {4.53}{\ignorespaces Phase shifts}}{67}{figure.caption.132}%
-\contentsline {figure}{\numberline {4.54}{\ignorespaces Shielding effectiveness of a sheet of zinc versus the material's thickness.}}{68}{figure.caption.133}%
-\contentsline {figure}{\numberline {4.55}{\ignorespaces Shielding effectiveness of graphite}}{69}{figure.caption.135}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Incident, reflected and transmitted electric fields due to interaction with shielding material}}{28}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Dual TEM cell with aperture}}{32}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tetrahedron with points on the edge and vertices.}}{33}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Face of the finite element with unknowns}}{34}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Adaptive solution process}}{36}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a waveport. This geometry leads to a port impedance of $50\,\Omega $.}}{37}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}}{38}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Geometry of monopole antenna inserted into TEM cell with its electric near-field.}}{41}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The equivalent dipole moments of the monopole antenna and the corresponding induced phase shift between the wave ports are presented in separate figures.}}{42}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Effective electric current and effective voltage at feedpoint of monopole antenna over frequency.}}{42}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Output power and electric field data of antenna and equivalent dipole moments}}{43}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces At $3\,\mathrm {GHz}$}}{44}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces At $1\,\mathrm {MHz}$}}{44}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Effective electric current distribution along the monopole antenna at frequencies $1\,\mathrm {MHz}$ and $3\,\mathrm {GHz}$}}{44}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Magnitude and phase of monopole antenna's impedance.}}{45}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Chu equivalent circuit of short dipole}}{45}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{46}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Peak electromagnetic energy in the TEM cell generated by the monopole antenna}}{47}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Geometry of loop antenna inserted into the TEM cell with its magnetic near-field. The return path leads into the conducting surface of the cell.}}{47}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Dipole moments and phase shift of loop antenna.}}{48}{figure.caption.82}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Output power of the loop antenna compared with the output power produced by the dipole moments}}{48}{figure.caption.83}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces \relax }}{49}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Effective voltage and current at feedpoint of the loop antenna.}}{49}{figure.caption.85}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Peak currents of loop antenna at feedpoint and return path.}}{50}{figure.caption.86}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Magnitude and phase of the impedance of the current loop antenna.}}{50}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Equivalent circuits of the small loop antenna.}}{51}{figure.caption.89}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Circuit representing the TEM cell, small loop antenna and their coupling.}}{52}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Equivalent dipole moments derived by the equivalent circuit compared to the dipole moments of the loop antenna in \autoref {fig:dipole_moments_loop_antenna}.}}{52}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{54}{figure.caption.94}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript {01} separately over frequency. TODO: log scale, bigger frequency range}}{55}{figure.caption.95}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Dipole moments and phase shift of loop antenna}}{55}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Geometry of loop antenna with a gap in the return path inserted in the TEM cell.}}{56}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Dipole moments and phase shift of loop antenna}}{57}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Comparison of dipole moments and output power at different gap heights.}}{58}{figure.caption.102}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}}{58}{figure.caption.103}%
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Inverted F-antenna used in the simulation}}{60}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Dipole moments and phase shift of loop antenna}}{60}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.34}{\ignorespaces Output power and electric field at output.}}{61}{figure.caption.108}%
+\contentsline {figure}{\numberline {5.35}{\ignorespaces Voltage and current at feedpoint of inverted-F antenna.}}{61}{figure.caption.109}%
+\contentsline {figure}{\numberline {5.36}{\ignorespaces Phase and magnitude of the inverted-F antenna's impedance over frequency.}}{62}{figure.caption.110}%
+\contentsline {figure}{\numberline {5.37}{\ignorespaces Center fed monopole antenna used in simulation}}{62}{figure.caption.114}%
+\contentsline {figure}{\numberline {5.38}{\ignorespaces Phase shift}}{63}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.39}{\ignorespaces Dipole moments}}{63}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.40}{\ignorespaces Output power and electric field of center-fed monopole antenna}}{63}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.41}{\ignorespaces Magnitude and phase of center-fed monopole antenna's impedance.}}{63}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.42}{\ignorespaces Voltage and current at feedpoint of center-fed monopole antenna.}}{64}{figure.caption.118}%
+\contentsline {figure}{\numberline {5.43}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{64}{figure.caption.121}%
+\contentsline {figure}{\numberline {5.44}{\ignorespaces TEM cell containing dipole moments}}{65}{figure.caption.123}%
+\contentsline {figure}{\numberline {5.45}{\ignorespaces Moments in small TEM cell}}{66}{figure.caption.125}%
+\contentsline {figure}{\numberline {5.46}{\ignorespaces Moments in normal TEM cell}}{66}{figure.caption.125}%
+\contentsline {figure}{\numberline {5.47}{\ignorespaces $k\cdot r$ in small TEM cell}}{66}{figure.caption.127}%
+\contentsline {figure}{\numberline {5.48}{\ignorespaces $k\cdot r$ for other TEM cells}}{66}{figure.caption.127}%
+\contentsline {figure}{\numberline {5.49}{\ignorespaces Output powers}}{67}{figure.caption.129}%
+\contentsline {figure}{\numberline {5.50}{\ignorespaces Phase shifts}}{67}{figure.caption.129}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Shielding effectiveness of a sheet of zinc versus the material's thickness.}}{68}{figure.caption.130}%

@@ -1,6 +1,9 @@
 
-\subsection{Conceptual framework and modeling of antennas}
-\todo[inline]{This section is TODO}
+\section{Coupling Behavior of Antennas with TEM Cells}
+
+\subsection{Conceptual framework and modeling}
+
+\subsubsection{Skin Effect}
 
 \autoref{fig:deleteafter} shows the total power maintained in the system, meaning $S_{11}^2+S_{12}^2+S_{13}^2$. It does not add up to one, meaning that some energy is lost due to finite conductivity of the septum and antenna. This energy dispersion increases with frequency, most likely due to a decrease of the conductivity due to high-frequency effects like the Skin-effect. Consequently, the power consumption in \autoref{fig:currentlooppowerconsumption} shows a square root relation to the frequency, because the power dispersion is so high. When changing the material of the antenna and septum to a perfect electric conductor, the total power in a system remains one (no power is dispersed) and the power consumption over frequency of the antenna shows a quadratic relation to the frequency, due to the quadratic increase of the radiation resistance.
 
@@ -20,12 +23,11 @@ The Skin-effect reduces the area in which the current flows, therefore increasin
 \end{subequations}
 
 At 1\,GHz, the dispersed power already equals to 0.46\,\%, which is much higher than the power transfer of the antenna to one waveport of 1.26e-5 at that frequency. Because this dispersed power is proportional to the square-root of the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$, the overall transferred power to the antenna shows the same characteristic. However, the power transfer to the waveports has a quadratic dependency on the frequency. %This, in turn, also leads to the unusual relation of the electric dipole moment to the frequency. 
-\todo{explain better.}
 
 This dispersed power may be ignored in the simulations by changing the antenna's material (main source of power dissipation) and the septum from copper to a perfect electric conductor. The overall power in the system then remains at a constant one over the whole frequency range. Additionally, the transferred power to the antenna now has a quadratic relationship with the frequency, indicating increased radiation efficiency, previously described by \autoref{eqn:elec_rad_res}. 
 \todo{Show plots?}
 
-\todo[inline]{Einige Themen hier sollten zum Theorieteil voriger Kapitel verschoben werden.}
+\subsubsection{Antenna feedpoint}
 
 \begin{figure}[h]
 	\centering
@@ -37,6 +39,7 @@ This dispersed power may be ignored in the simulations by changing the antenna's
 
 The coupling of various electrically small antennas placed in a TEM cell is investigated. Their electric and magnetic coupling is investigated through dipole moments. All antennas are fed with a power of 1\,W. Their material are made of a perfect electric conductor. Different positions and offsets are investigated and the results discussed. They are fed through a round wave port with a diameter of 0.46\,mm, and their wire has a diameter of 0.2\,mm and free-space permittivity. This results in a reference impedance of $Z_0\approx 50$\,$\Omega$. The TEM cell used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, and its cells walls and septum consist of a perfect electric conductor, too. The TEM cell model does not contain the tapered sections at the ports. The ports have an impedance of $50\,\Omega$ due to the TEM cell's geometry.
 
+\subsubsection{TEM cell design}
 
 \begin{figure}[htbp]
 	\centering
@@ -127,6 +130,10 @@ Consequently, if the normalized electric field distribution of the TEM mode $\ma
 If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{H}^\pm = H_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{E}^\pm = E_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
 An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{H}^\pm$ and $\mathbf{E}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.
 
+\subsubsection{Dipole moments models}
+
+All dipole moments are infinitesimal ones, see \autoref{sec:infinitesimal_electric_dipoles} and \autoref{sec:mag_dip}.
+
 A magnetic dipole moment can be expressed equivalently as either an electric current loop or a magnetic line current, as described in \autoref{eqn:magn_current_curr_loop}. For infinitesimal magnetic dipoles, this duality simplifies to
 \begin{equation}
 	m_{\mathrm{m}}=j\omega\mu_0 m_{\mathrm{0}},
@@ -136,30 +143,9 @@ where $m_{\mathrm{m}}$ (in V$\cdot$m) denotes the magnetic dipole moment in the 
 
 If the output power and phase shifts of the waveports are known, any antenna in the TEM cell may be replaced by an electric and a magnetic dipole moment. Using numeric simulation, the phase shift is determined by measuring the phase shifts of the electric fields at both output ports. When applying this described method in a measurement with a real TEM cell, the phase shift is found by adding and subtracting the output powers of both ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
 
-The energy density is given by \cite[p. 330]{Griffiths_2024}
-
-\begin{equation}
-	w_\mathrm{EM} = \frac{1}{2}\left(\underbrace{\epsilon E^2}_{\text{Electric energy} w_E} + \underbrace{\frac{1}{\mu} B ^ 2}_{\text{Magnetic energy} w_M}\right).
-	\label{eqn:em_energy}
-\end{equation}
-
-Integrating $w_\mathrm{EM}$ over a volume yields the total electromagnetic energy in this volume. Similarly, integrating $w_E$ gives the electric energy in said volume, and $w_M$ the magnetic energy.
-
-If all of the energy is provided by an electrically short antenna, its equivalent reactances can be derived through \cite[pp 107, 328]{Griffiths_2024}
-
-\begin{subequations}
-	\begin{equation}
-		L = 2\frac{W_m}{I^2}
-		\label{eqn:m_energy}
-	\end{equation}
-	\begin{equation}
-		C = 2 \frac{W_e}{V^2}
-		\label{eqn:e_energy}
-	\end{equation}
-\end{subequations}
-
-
 All simulations are counterchecked by inserting frequency-dependent dipole moments and checking the power and phase of the output ports.
+
+\subsubsection{S-parameters and derived data}
 
 In the measurement configuration, the TEM cell with an inserted antenna can be modeled as a three-port network. The two output ports of the TEM cell are denoted as ports 1 and 2, while the antenna feed point is represented as port A. The behavior of this system is fully characterized by its scattering matrix, given as
 
@@ -496,16 +482,16 @@ A square loop antenna is placed in the center of the TEM cell. Each side has a l
 \subsubsection{Equivalent dipole moments}
 \FloatBarrier
 
-\begin{figure}[htbp]
+\begin{figure}[tb]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/dipole_moments_loop_antenna.png}
 		\caption{Dipole moments}
 		\label{fig:dipole_moments_loop_antenna}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_phase}
 		\caption{Phase}
