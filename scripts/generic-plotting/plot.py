@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 import pandas as pd
 import scienceplots
@@ -109,6 +110,19 @@ def create_ieee_plot(
     x_data = x_data[valid_mask]
     y_data_list = [y[valid_mask] for y in y_data_list]
 
+    def model_func(x, a, b, c):
+        return a * x**2 + b * x**1 + c
+
+    # Fit curve
+    popt, pcov = curve_fit(model_func, x_data, y_data_list[0])
+
+    # Parameters fitted
+    a_e, b_e, c_e = popt
+
+    #x_data = np.linspace(x_data.min(), x_data.max(), 100)
+    # Generate corresponding y data using fitted coefficients
+    #y_data_list[0] = model_func(x_data, a_e, b_e, c_e)
+
     # Create figure and axis
     fig, ax = plt.subplots(figsize=figsize)
 
@@ -135,7 +149,7 @@ def create_ieee_plot(
         ax.set_ylim(y_limits)
 
     # Use scientific notation for y-axis
-    ax.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
+    #ax.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
 
     # Configure grid
     if show_grid:
@@ -835,18 +849,18 @@ if __name__ == '__main__':
         ##legend_labels=['F1-V1', 'F1-V2', 'F2-V1', 'F2-V3'],
         #output_path='output/multifile_complex.png'
     #)
-    create_ieee_plot_multifile(
-        data_sources=['data/gap-loop/dipole-moments-15um.csv', 'data/gap-loop/dipole-moments-500um.csv'],
-        x_columns=0,  # Use column 0 as x-axis for both files
-        y_columns=[[1, 2], [1, 2]],  # Plot column 1 from file1, column 1 from file2
-        x_label='Frequency (GHz)',
-        y_label='Dipole moment magnitudes (Vm)',
-        title='Comparison of equivalent dipole moments at different gap heights',
-        legend_labels=[r'15 µm - $m_e$', r'15 µm - $m_m$',r'500 µm - $m_e$', r'500 µm - $m_m$'],
-        output_path='output/gap-sweep-moments.png',
-        y_limits=(0, 1.2e-2),
-        x_limits=(0.001, 3)
-    )
+    #create_ieee_plot_multifile(
+    #    data_sources=['data/gap-loop/dipole-moments-15um.csv', 'data/gap-loop/dipole-moments-500um.csv'],
+    #    x_columns=0,  # Use column 0 as x-axis for both files
+    #    y_columns=[[1, 2], [1, 2]],  # Plot column 1 from file1, column 1 from file2
+    #    x_label='Frequency (GHz)',
+    #    y_label='Dipole moment magnitudes (Vm)',
+    #    title='Comparison of equivalent dipole moments at different gap heights',
+    #    legend_labels=[r'15 µm - $m_e$', r'15 µm - $m_m$',r'500 µm - $m_e$', r'500 µm - $m_m$'],
+    #    output_path='output/gap-sweep-moments.png',
+    #    y_limits=(0, 1.2e-2),
+    #    x_limits=(0.001, 3)
+    #)
     #create_ieee_plot_multifile(
     #    data_sources=['data/gap-loop/output-power-15um.csv', 'data/gap-loop/output-power-500um.csv'],
     #    x_columns=0,  # Use column 0 as x-axis for both files
@@ -859,4 +873,52 @@ if __name__ == '__main__':
     #    y_limits=(0, 1.2e-2),
     #    x_limits=(0.001, 3)
     #)
+    #create_ieee_plot(
+    #    data_source="data/shielding/zinc.csv",
+    #    x_column=0,
+    #    y_columns=1,  
+    #    x_label='Material thickenss (µm)',
+    #    y_label='Shielding efficiency (dB)',
+    #    title=r'Shielding effectiveness of zinc',
+    #    legend_labels=[''],
+    #    output_path='output/zinc-shielding.png',
+    #    x_limits=(1, 40),
+    #    y_limits=(75, 100)
+    #)
 
+    #create_ieee_plot(
+    #    data_source="data/gap-loop/feed-voltage.csv",
+    #    x_column=0,
+    #    y_columns=1,
+    #    x_label='Frequency (GHz)',
+    #    y_label='Voltage (V)',
+    #    title=r'Feed voltage of loop antenna with gap',
+    #    legend_labels=[''],
+    #    output_path='output/gap-feed-voltage.png',
+    #    x_limits=(0.001, 3),
+    #    y_limits=(19.8, 20)
+    #)
+    #create_ieee_plot_multifile(
+    #    data_sources=['data/loop-geometry-comp/dipole-moments-high.csv', 'data/loop-geometry-comp/dipole-moments-wide.csv'],
+    #    x_columns=0,  # Use column 0 as x-axis for both files
+    #    y_columns=[[1, 2], [1, 2]],  # Plot column 1 from file1, column 1 from file2
+    #    x_label='Frequency (GHz)',
+    #    y_label='Dipole moment magnitudes (Vm)',
+    #    title='Comparison of equivalent dipole moments at different antenna geometries',
+    #    legend_labels=[r'h=2.16 mm, w=1.4 mm - $m_e$', r'h=2.16 mm, w=1.4 mm - $m_m$',r'h=1.2 mm, w=2.36 mm - $m_e$', r'h=1.2 mm, w=2.36 mm - $m_m$'],
+    #    output_path='output/loop-comp.png',
+    #    y_limits=(0, 1.7e-2),
+    #    x_limits=(0.001, 3)
+    #)
+    create_ieee_plot_multifile(
+        data_sources=['data/loop-geometry-comp/output-power-high.csv', 'data/loop-geometry-comp/output-power-wide.csv'],
+        x_columns=0,  # Use column 0 as x-axis for both files
+        y_columns=[1, 1],  # Plot column 1 from file1, column 1 from file2
+        x_label='Frequency (GHz)',
+        y_label='Output power (W)',
+        title='Comparison of output power at different antenna geometries',
+        legend_labels=[r'h=2.16 mm, w=1.4 mm', r'h=1.2 mm, w=2.36 mm'],
+        output_path='output/loop-comp-power.png',
+        y_limits=(0, 1e-4),
+        x_limits=(0.001, 3)
+    )

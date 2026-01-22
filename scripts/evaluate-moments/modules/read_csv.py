@@ -4,7 +4,7 @@ from typing import List, Tuple
 from pathlib import Path
 
 
-def read_antenna_data(antenna_type: str) -> Tuple[List[np.ndarray], List[np.ndarray], List[np.ndarray]]:
+def read_antenna_data(antenna_type: str) -> Tuple[List[np.ndarray], List[np.ndarray]]:
     """
     Read phase shift, magnitude, and E-field data from CSV files for antenna analysis.
     
@@ -23,10 +23,7 @@ def read_antenna_data(antenna_type: str) -> Tuple[List[np.ndarray], List[np.ndar
     # Read magnitude data  
     magnitude_data = _read_csv_columns(data_dir / "magnitude.csv")
     
-    # Read E-field data
-    efield_data = _read_csv_columns(data_dir / "efield.csv")
-    
-    return phase_data, magnitude_data, efield_data
+    return phase_data, magnitude_data
 
 
 def _read_csv_columns(csv_path: Path) -> List[np.ndarray]:

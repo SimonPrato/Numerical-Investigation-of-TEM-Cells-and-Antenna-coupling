@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
-antenna_type = "gapped-loop" # same name as data folder to be read
+antenna_type = "high-loop" # same name as data folder to be read
 
 # === Data Loading ===
-columns_phase_shift, columns_magnitude, columns_efield = read_antenna_data(antenna_type=antenna_type)
+columns_phase_shift, columns_magnitude = read_antenna_data(antenna_type=antenna_type)
 
 # Convert frequencies from GHz to Hz
 frequencies = columns_phase_shift[0] * 1e9
@@ -22,26 +22,25 @@ frequencies = columns_phase_shift[0] * 1e9
 columns_phase_shift[2][columns_phase_shift[2] < 0] += 2 * np.pi
 
 # === Phase, Magnitude, and E-Field Processing ===
-phase_shift = columns_phase_shift[1] - columns_phase_shift[2] - np.pi
+phase_shift = columns_phase_shift[1] - columns_phase_shift[2] #- np.pi
 phase_shift = columns_phase_shift[1] - columns_phase_shift[2] #- np.pi # Subtract np.pi if necessary
-e_field = columns_efield[2]
-e_field_freq = columns_efield[1] * 1e9
 
-# Interpolate E-field to match frequency grid
-e_field_interp = np.interp(frequencies, e_field_freq, e_field)
 
 # Compute output power from dB magnitude
 magnitude = columns_magnitude[1]
 output_power = antenna_power * np.power(10.0, magnitude / 10.0)
+waveport_impedance = 50
+tem_cell_height = 24e-3
+efield = np.sqrt(output_power * 50) * np.sqrt(2) / (tem_cell_height / 2)
 
 # === Plotting and Moment Calculations ===
 plot_phase_shift(columns_phase_shift, frequencies, antenna_type)
 
-m_e, m_m = calculate_moments(e_field_interp, phase_shift, output_power, frequencies)
+m_e, m_m = calculate_moments(efield, phase_shift, output_power, frequencies)
 plot_moments(m_e, m_m, frequencies, antenna_type)
 
 # Optional: visualize power and E-field relationship
-plot_output_power_e_field(frequencies, output_power, e_field_interp, antenna_type)
+plot_output_power_e_field(frequencies, output_power, efield, antenna_type)
 data = np.column_stack((frequencies, output_power))
 np.savetxt('output/csv/output-power.csv', data, delimiter=',',
 header='Frequency (GHz),Output Power (W)')
