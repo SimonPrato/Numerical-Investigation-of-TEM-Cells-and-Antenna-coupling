@@ -467,6 +467,7 @@ As discussed previously, the monopole antenna demonstrates capacitive behavior a
 
 \subsection{Loop antenna}\label{sec:loop_sim}
 \subsubsection{Setup}
+
 \FloatBarrier
 
 \begin{figure}[htbp]
@@ -515,7 +516,32 @@ A square loop antenna is placed in the center of the TEM cell. Each side has a l
 	\label{fig:loop_moments_phase}
 \end{figure}
 
-The dipole moments are plotted in \autoref{fig:dipole_moments_loop_antenna}. The amount of magnetic flux passing through the area of the loop antenna lead to the large magnitude of $\mathbf{m}_m$, as described by \cref{eqn:e_a_closed_int, eqn:e_b_closed_int} and \autoref{eqn:m_v}. $\mathbf{m}_e$ is created by the current in the loop antenna according to \cref{eqn:e_int_a, eqn:e_int_b}, which partially points in direction of $\mathbf{e}^\pm_\mathrm{TEM}$. Opposed to the case of a monopole antenna, $\mathbf{m}_e$ and $\mathbf{m}_m$ demonstrate non-linear behavior over frequency, which is investigated further in \autoref{sec:loop_electrical_characteristics}.
+The dipole moments are plotted in \autoref{fig:dipole_moments_loop_antenna}. The amount of magnetic flux passing through the area of the loop antenna lead to the large magnitude of $\mathbf{m}_m$, as described by \crefrange{eqn:e_a_closed_int}{ eqn:e_b_closed_int} and \autoref{eqn:m_v}. $\mathbf{m}_e$ is created by the current in the loop antenna according to \crefrange{eqn:e_int_a}{ eqn:e_int_b}, which partially points in direction of $\mathbf{e}^\pm_\mathrm{TEM}$. Opposed to the case of a monopole antenna, $\mathbf{m}_e$ and $\mathbf{m}_m$ demonstrate non-linear behavior over frequency, which is investigated further in \autoref{sec:loop_electrical_characteristics}.
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop_opower}
+		\caption{}
+		\label{fig:loopopower}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop_opower_comp}
+		\caption{}
+		\label{fig:loopopowercomp}
+	\end{subfigure}
+	
+	\caption{Output power of the loop antenna compared with the output power produced by the dipole moments}
+	\label{fig:example}
+\end{figure}
+
+
+Possible reasons for the deviation in power are numerical inaccuracies or the coupling of the TE\textsubscript{01} mode, which changes the field distribution in a disadvantageous way.
 
 \FloatBarrier
 \subsubsection{Electrical characteristics}\label{sec:loop_electrical_characteristics}
@@ -562,12 +588,12 @@ The dipole moments are plotted in \autoref{fig:dipole_moments_loop_antenna}. The
 \label{fig:loopfeedvoltage}
 	\end{subfigure}
 	
-	\caption{Voltage and current at feedpoint of the loop antenna.}
+	\caption{Effective voltage and current at feedpoint of the loop antenna.}
 	\label{fig:example}
 \end{figure}
 
 
-The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling back to the septum and back to the feedpoint, also seen in the slightly changing magnetic field intensity in \autoref{fig:loopnearfield}. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is measured at the same height above the PEC surface. The results vary with position due of the displacement currents in the antenna's near-field.
+The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling back to the septum and back to the feedpoint, also seen in the slightly changing magnetic field intensity in \autoref{fig:loopnearfield}. The difference between the feedpoint and return path current increases over frequency. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is measured at the same height above the PEC surface. The results vary with position due of the displacement currents in the antenna's near-field.
 
 \begin{figure}[htbp]
 	\centering
@@ -575,7 +601,6 @@ The current $I$ in the loop antenna changes along the antenna wire as shown in \
 	\caption{Peak currents of loop antenna at feedpoint and return path.}
 	\label{fig:loopfeedreturncurrent}
 \end{figure}
-
 
 \todo[inline]{Insert free-space PEC loop simulations.}
 
@@ -891,28 +916,6 @@ At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode start to propagate, vi
 
 
 
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/loop_opower}
-		\caption{}
-		\label{fig:loopopower}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/loop_opower_comp}
-		\caption{}
-		\label{fig:loopopowercomp}
-	\end{subfigure}
-	
-	\caption{Output power of the loop antenna compared with the output power produced by the dipole moments}
-	\label{fig:example}
-\end{figure}
-
-Possible reasons for the deviation in power are numerical inaccuracies or the coupling of the TE\textsubscript{01} mode, which changes the field distribution in a disadvantageous way.
-
 %The current-loop antenna contains two electric dipoles, shifted in phase by 180°. They therefore oppose each other in the power transfer to the waveports. However, as visible in the electric near field plot in \autoref{fig:currentloopvoltagedrop}, the electric dipole moment from node A to the feedpoint is much larger than the one from node B to ground. The reason can be demonstrated by representing the antenna with its nodes in \autoref{fig:current_loop_ua_ub}. The partial inductances in this schematic are much larger than the capacitances. This leads to a large voltage drop between node A and B, and therefore a weaker electric dipole moment at node B.
 
 %Additionally, this voltage difference $V_\mathrm{A}-V_\mathrm{B}$ rises linearly over the frequency, due to the linearly increasing impedance of the inductance $\mathrm{i}\omega L$. This means, that the over electric dipole moment a quadratic relationship to the frequency has.
@@ -926,6 +929,37 @@ Possible reasons for the deviation in power are numerical inaccuracies or the co
 %	\left|Z_\mathrm{w}\right|\approx 2 \pi^2 \cdot 240\,\Omega \cdot\frac{r\cdot f}{c}
 %	\label{eqn:wave_impedance_loop}
 %\end{equation}
+
+\FloatBarrier
+\subsubsection{Influence of antenna's geometry}
+\FloatBarrier
+
+The antenna's geometry influences the coupling behavior. To demonstrate this, the loop antennas presented in are simulated, and their dipole moments and power consumption compared. 
+
+The behavior of the magnetic dipole moments $\mathbf{m}_m$ are equal in all cases according to \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int}, since the total area of the loop antenna remains the same. Non-linearities persist, due to almost unchanging capacitance of the antenna to the upper PEC plane, causing increasing displacement current over frequency.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop-geomg-comp}
+		\caption{}
+		\label{fig:loop-geomg-comp}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop-geom-power}
+		\caption{}
+		\label{fig:loop-geom-power}
+	\end{subfigure}
+	
+	\caption{Dipole moments and phase shift of loop antenna}
+	\label{fig:example}
+\end{figure}
+
+The electric dipole moment $\mathbf{m}_e$ is strongly influenced by the antenna's height. An antenna with large $h$ leads to increased displacement currents to the septum.
+
 
 
 \FloatBarrier
@@ -1002,7 +1036,7 @@ The electric dipole moment shown in \autoref{fig:gappedloopmoments} clearly domi
 	\label{fig:example}
 \end{figure}
 
-An increase in gap height reduces the non-linearities in $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$. The voltage drop across the gap and the charge accumulation remains stabler over frequency. A higher Q-factor leads to a lower cut-off frequency.
+An increase in gap height reduces the non-linearities in $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$. The voltage drop across the gap and the charge accumulation remains stabler over frequency. A small gap leads to both an increase in current and inductance, therefore creating a large voltage drop and influencing $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$.
 
 \FloatBarrier
 \subsubsection{Electrical characteristics}
@@ -1013,18 +1047,18 @@ An increase in gap height reduces the non-linearities in $\mathbf{m}_\mathrm{e}$
 	\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/gapped_loop_opower}
-\caption{}
+\caption{Output electric field and power}
 \label{fig:gappedloopopower}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/gapped_loop_voltage}
-\caption{}
+\caption{Peak feed voltage}
 \label{fig:gappedloopvoltage}
 	\end{subfigure}
 	
-	\caption{Dipole moments and phase shift of loop antenna}
+	\caption{Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}
 	\label{fig:example}
 \end{figure}
 
