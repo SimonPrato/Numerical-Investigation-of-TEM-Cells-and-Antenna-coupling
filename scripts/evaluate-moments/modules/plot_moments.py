@@ -8,7 +8,8 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna):
     # plt.rcParams.update({'font.size': 18})  # Schriftgröße auf 18 setzen
     # Use the 'science' style together with 'ieee' for IEEE formatting
     plt.style.use(['science', 'ieee'])
-    fig, ax1 = plt.subplots(figsize=(3.9, 2.64))
+    plt.rcParams.update({'figure.dpi': '100'})
+    fig, ax1 = plt.subplots(figsize=(4, 3))
 
     phase1 =  columns_phase_shift[1]
     phase2 = columns_phase_shift[2]

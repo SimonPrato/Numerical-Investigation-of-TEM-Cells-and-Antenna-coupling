@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
-antenna_type = "high-loop" # same name as data folder to be read
+antenna_type = "monopole" # same name as data folder to be read
 
 # === Data Loading ===
 columns_phase_shift, columns_magnitude = read_antenna_data(antenna_type=antenna_type)
