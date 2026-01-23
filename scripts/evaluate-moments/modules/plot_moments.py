@@ -79,12 +79,11 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna):
 
 
 def plot_moments(m_e, m_m, frequencies, antenna):
-
-    normed_m_e = np.abs(m_e) * 377
+    plt.rcParams.update({'figure.dpi': '100'})
+    fig, ax1 = plt.subplots(figsize=(4, 3))
     plt.style.use(['science', 'ieee'])
+    normed_m_e = np.abs(m_e) * 377
     # Plot mit zwei y-Achsen
-    fig, ax1 = plt.subplots(figsize=(3.9, 2.64))
-    # Erste y-Achse für |m_ez| * 377
     color = 'tab:red'
     ax1.set_xlabel('Frequency [GHz]')
     ax1.set_ylabel(r'Electric Dipole Moment $\left|m_e\right|\cdot 377 \Omega$ (Vm)')
@@ -132,8 +131,10 @@ def plot_moments(m_e, m_m, frequencies, antenna):
 def plot_output_power_e_field(frequencies, output_power, e_field_approx):
 
     # Plot mit zwei y-Achsen
+    plt.rcParams.update({'figure.dpi': '100'})
+    fig, ax1 = plt.subplots(figsize=(4, 3))
     plt.style.use(['science', 'ieee'])
-    fig, ax1 = plt.subplots(figsize=(3.9, 2.64))
+
 
     # Erste y-Achse für e_field_approx
     ax1.set_xlabel('Frequency [GHz]')
