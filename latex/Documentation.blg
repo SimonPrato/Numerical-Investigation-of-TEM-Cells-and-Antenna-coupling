@@ -23,45 +23,45 @@ Warning--I didn't find a database entry for "Balanis"
 Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 32 entries,
+You've used 33 entries,
             6399 wiz_defined-function locations,
-            1423 strings with 15868 characters,
-and the built_in function-call counts, 233907 in all, are:
-= -- 18310
-> -- 3540
-< -- 947
-+ -- 6483
-- -- 1375
-* -- 17214
-:= -- 26303
+            1430 strings with 16488 characters,
+and the built_in function-call counts, 245797 in all, are:
+= -- 19368
+> -- 3656
+< -- 971
++ -- 6899
+- -- 1422
+* -- 18063
+:= -- 27833
 add.period$ -- 0
-call.type$ -- 32
-change.case$ -- 393
+call.type$ -- 33
+change.case$ -- 402
 chr.to.int$ -- 49
-cite$ -- 62
-duplicate$ -- 24362
-empty$ -- 20618
-format.name$ -- 2147
-if$ -- 47444
+cite$ -- 64
+duplicate$ -- 25697
+empty$ -- 21584
+format.name$ -- 2241
+if$ -- 49716
 int.to.chr$ -- 0
-int.to.str$ -- 75
+int.to.str$ -- 78
 missing$ -- 0
-newline$ -- 1027
-num.names$ -- 1406
-pop$ -- 11148
+newline$ -- 1076
+num.names$ -- 1450
+pop$ -- 11565
 preamble$ -- 1
-purify$ -- 560
+purify$ -- 579
 quote$ -- 0
-skip$ -- 5738
+skip$ -- 5904
 stack$ -- 0
-substring$ -- 33806
-swap$ -- 4671
-text.length$ -- 903
-text.prefix$ -- 31
+substring$ -- 35787
+swap$ -- 4852
+text.length$ -- 931
+text.prefix$ -- 32
 top$ -- 1
-type$ -- 1076
+type$ -- 1110
 warning$ -- 0
-while$ -- 3189
+while$ -- 3389
 width$ -- 0
-write$ -- 996
+write$ -- 1044
 (There was 1 warning)

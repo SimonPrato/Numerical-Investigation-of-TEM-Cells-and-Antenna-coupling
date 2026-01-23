@@ -476,6 +476,60 @@
     \field{year}{1989}
   \endentry
 
+  \entry{10742020}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=KD}{%
+         family={Kreindl},
+         familyi={K\bibinitperiod},
+         given={Dominik},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={Bernhard},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Stockreiter},
+         familyi={S\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bauernfeind},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kaltenbacher},
+         familyi={K\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Integrated circuits;Stripline;Optical switches;Electromagnetic
+  interference;Electromagnetic compatibility;Finite element analysis;Optical
+  sensors;IEC Standards;Standards;Light sources;finite element method;Hertzian
+  dipole moment;IC stripline;radiated emissions}
+    \strng{namehash}{KD+1}
+    \strng{fullhash}{KDWBSCBTKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{2024 14th International Workshop on the Electromagnetic
+  Compatibility of Integrated Circuits (EMC Compo)}
+    \verb{doi}
+    \verb 10.1109/EMCCompo61192.2024.10742020
+    \endverb
+    \field{pages}{69\bibrangedash 73}
+    \field{title}{A Simulation Workflow for Predicting IC Stripline Radiated
+  Emissions of Bond Wire-Based Systems}
+    \field{year}{2024}
+  \endentry
+
   \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}{article}{}
     \name{author}{5}{}{%
       {{hash=KD}{%

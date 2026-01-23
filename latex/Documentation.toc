@@ -25,23 +25,24 @@
 \contentsline {subsubsection}{\numberline {3.4.2}Equivalent dipole moments}{24}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Electrically small antennas}{26}{subsubsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.5}Shielding}{28}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}ASTM ES7-83 Method}{30}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Dual TEM cell}{31}{subsubsection.3.5.2}%
-\contentsline {section}{\numberline {4}Finite Element Method}{32}{section.4}%
-\contentsline {subsection}{\numberline {4.1}General Idea}{32}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {3.5.1}ASTM ES7-83 Method}{31}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Dual TEM cell}{32}{subsubsection.3.5.2}%
+\contentsline {section}{\numberline {4}Finite Element Method}{33}{section.4}%
+\contentsline {subsection}{\numberline {4.1}General Idea}{33}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Dividing a computational domain into finite elements}{33}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Solving the differential equation}{34}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Solving the differential equation}{35}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Adaptive solution process}{36}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Coupling Behavior of Antennas with TEM Cells}{36}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Conceptual framework and modeling}{36}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Skin Effect}{36}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Antenna feedpoint}{37}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}TEM cell design}{38}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Dipole moments models}{40}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}S-parameters and derived data}{40}{subsubsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.2}Monopole Antenna}{41}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Setup}{41}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{42}{subsubsection.5.2.2}%
+\contentsline {section}{\numberline {5}Coupling Behavior of Antennas with TEM Cells}{37}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Conceptual framework and modeling}{37}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Skin Effect}{37}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Antenna models}{37}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}TEM cell model}{37}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Dipole moments models}{38}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Mesh settings}{39}{subsubsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.6}S-parameters and derived data}{39}{subsubsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.2}Monopole Antenna}{40}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Setup}{40}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{41}{subsubsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.3}Electrical characteristics}{42}{subsubsection.5.2.3}%
 \contentsline {subsubsection}{\numberline {5.2.4}Current distribution on septum and antenna offset}{45}{subsubsection.5.2.4}%
 \contentsline {subsubsection}{\numberline {5.2.5}Electromagnetic energy in the TEM cell}{46}{subsubsection.5.2.5}%
