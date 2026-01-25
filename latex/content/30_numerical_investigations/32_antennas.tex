@@ -91,7 +91,7 @@ Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ 
 A magnetic dipole moment can be expressed equivalently as either an electric current $I_0$ in a loop, or a magnetic current $I_\mathrm{m}$ in a line, as described in \autoref{eqn:magn_current_curr_loop}. All dipole moments used in the simulations are assumed to be of infinitesimal length, as discussed in \autoref{sec:infinitesimal_electric_dipoles} and \autoref{sec:mag_dip}. For infinitesimal magnetic dipoles, \autoref{eqn:magn_current_curr_loop} simplifies to 
 
 \begin{equation}
-	|\mathbf{m}_{\mathrm{m}}|=j\omega\mu_0 \mathbf{m}_{\mathrm{0}},
+	|\mathbf{m}_{\mathrm{m}}|=j\omega\mu_0 |\mathbf{m}_{\mathrm{0}}|,
 	\label{eqn:m_mymag_ifa}
 \end{equation}
 
@@ -128,7 +128,7 @@ The coupling between the antenna and the two ports of the TEM cell are described
   Consequently, if the normalized electric field distribution of the TEM mode $\mathbf{e^\pm}_\mathrm{TEM}$ is unknown, it may be derived by setting the output power of a waveport to $P_{\mathrm{1}}=P_{\mathrm{2}}=1/2\,\mathrm{W}$. For example, the uniformly distributed, normalized electric field of the TEM mode along the y-axis at the center of the TEM cell ($z=0$, $x=0$) is derived by
   
   \begin{equation}
-  	|a_\mathrm{TEM}|\cdot\mathbf{e}_\mathrm{TEM}^+(x=0,y,z=0)= \frac{\sqrt{P_\mathrm{out}R_\mathrm{waveport}}}{b/2}.
+  	|a_\mathrm{TEM}|\cdot\mathbf{e}_\mathrm{TEM}^+(x=0,y,z=0)= \frac{\sqrt{P_\mathrm{1}Z_\mathrm{0}}}{b/2}.
   \end{equation}
   
   The difference in phase of $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$ influences the magnitude of magnetic dipole moments and electric dipole moments, as discussed in \autoref{sec:equ-dip-mom}. 
