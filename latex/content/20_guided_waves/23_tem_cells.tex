@@ -312,7 +312,11 @@ The normalized electric field intensity may be derived by the numerically result
 	\end{minipage}
 \end{figure}
 
-The field distribution discussed are those of the TEM mode. In case of higher-order modes propagating, the field distribution is represented by a series of the mode fields. \autoref{eqn:norm_power} shows that each mode is orthogonal to each other, with $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are normalized to $\sqrt{\mathrm{W}}$. A coupling between the modes only occurs due to geometric changes of the waveguide. Additionally, each mode is normalized to $\sqrt{\mathrm{W}}$, shown by \autoref{eqn:unit_power}. Only the transverse fields are investigated in these Equations, because they carry power along the waveguide, opposed to the fields in the propagation direction.
+\todo[inline]{Plot Qualität erhöhen. Skalen anpassen.}
+
+The field distribution discussed are those of the TEM mode. In case of higher-order modes propagating, the field distribution is represented by a series of the mode fields. \autoref{eqn:norm_power} shows that each mode is orthogonal to each other, with $\mathbf{e}_\mathrm{n}^\pm$ and $\mathbf{h}_\mathrm{n}^\pm$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. This indicates that the modes do not couple with each other
+
+A coupling between the modes only occurs due to geometric changes of the waveguide. $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are normalized to $\sqrt{\mathrm{W}}$. Additionally, each mode is normalized to $\sqrt{\mathrm{W}}$, shown by \autoref{eqn:unit_power}. Only the transverse fields are investigated in these Equations, because they carry power along the waveguide, opposed to the fields in the propagation direction.
 
 \begin{subequations}
 	
@@ -334,12 +338,12 @@ The radiated fields can be described by a summation of normal modes, as in \auto
 	\end{align}
 \end{subequations}
 
-And the fields radiated in the negative z-direction are \cite[p. 360]{Collin_2015}
+And the fields propagating along the negative z-direction are \cite[p. 360]{Collin_2015}
 
 \begin{subequations}
 	\begin{align}
-		\mathbf{E^-}&=\sum_na_n\mathbf{e}_n^-    \label{eqn:b_modal_superposition1}\\
-		\mathbf{H^-}&=\sum_na_n\mathbf{h}_n^-    \label{eqn:b_modal_superposition2}
+		\mathbf{E^-}&=\sum_na_n\mathbf{e}_n^-,   \label{eqn:b_modal_superposition1}\\
+		\mathbf{H^-}&=\sum_na_n\mathbf{h}_n^-.    \label{eqn:b_modal_superposition2}
 	\end{align}
 \end{subequations}
 

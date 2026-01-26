@@ -338,7 +338,7 @@ The output power rises quadratically over the frequency, which fits the linearly
 \end{figure}
 
 
-\todo{can plot quality be improved? Max delta S parameter reduction}
+\todo[inline]{TODO: Improve Max delta S parameter reduction}
 
 
 
@@ -361,7 +361,7 @@ The current distribution at $1\,\mathrm{MHz}$ demonstrated in \autoref{fig:curre
 This frequency-dependent behavior is explained by the impedance of the monopole antenna shown in \autoref{fig:monopoleimp}. At low frequencies, the antenna impedance demonstrates a high magnitude, which rapidly decreases as frequency increases. Over the whole frequency range, it exhibits highly capacitive behavior, which is consistent with \autoref{eqn:compl_power_inf_elec_dipole}.
 
 
-An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. \todo{What is the purpose of this circuit here? Explain more. And should other chapters have circuits, too?}
+An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. 
 
 
 \begin{figure}[htbp]
@@ -829,6 +829,8 @@ The loop antenna generates a current on the septum of the TEM cell, as shown in 
 	\label{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}
 \end{figure}
 
+\todo[inline]{TODO: log scale in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}. Broader frequency range.}
+
 When the position of the current loop antenna is rotated by 90\textdegree and contains an offset of $x=7\,\mathrm{mm}$, the transmission of power is not possible. As visible in the current distribution \autoref{fig:loopsurfacecurrentsoffsetrotation}, there is no wave propagation and the surface current remains reactive, forming circles around magnetic fields. 
 
 At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode start to propagate, visible in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}. A large proportion of the current now reaches the output ports, providing output power, which is in-phase as opposed to the previous case. The propagation occurs due to the alignment of the current loop with the magnetic field lines in longitudinal direction, which leads to power transfer according to \cref{eqn:e_a_closed_int,eqn:e_b_closed_int}. The output power increases sharply, as demonstrated in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.
@@ -997,6 +999,8 @@ The electric dipole moment shown in \autoref{fig:gappedloopmoments} clearly domi
 	\caption{Dipole moments and phase shift of loop antenna}
 	\label{fig:example}
 \end{figure}
+
+
 
 \autoref{fig:gappedloopcompmomentsgapsweep} demonstrates the effect of the gap height on the dipole moments' behavior. A larger gap height leads to an decreased charge charge concentration in the gap region, consequently a smaller magnitude of the electric dipole moment $\mathbf{m}_\mathrm{e}$. Additionally, it also leads to a decrease in electric current $\mathbf{J}$ in the antenna, reducing the magnetic dipole moment $\mathbf{m}_\mathrm{m}$. The reduction in the magnitude of $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$ with increasing gap height is reflected in the decreasing output power shown in \autoref{fig:gappedloopcomppowergapsweep}.
 
