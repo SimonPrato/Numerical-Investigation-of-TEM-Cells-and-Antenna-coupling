@@ -1,7 +1,7 @@
 
-\section{Coupling Behavior of Antennas with TEM Cells}
+\section{Numerical Investigations of Antennas in TEM Cells}
 
-\subsection{Conceptual framework and modeling}
+\subsection{Preliminary Considerations for Numerical Analysis}
 
 \subsubsection{Skin Effect}
 
@@ -100,6 +100,8 @@ where $\mathbf{m}_{\mathrm{m}}$ with the unit Vm denotes the magnetic dipole mom
 The electric and magnetic dipole moments are placed at the center of the TEM cell at $x=0$, $y=b/2$, $z=0$. As discussed in \autoref{sec:field_dist}, $\mathbf{e}^\pm_\mathrm{TEM}(x=0, y=b/2, z=0)$ has only a y-component at this location, while $\mathbf{h}_\mathrm{TEM}^\pm(x=0, y=b/2, z=0)$ has only an x-component. Consequently, the equivalent dipole moment $\mathbf{m}_{\mathrm{e}}$ is oriented along the y-direction, and $\mathbf{m}_{\mathrm{m}}$ along the x-direction.
 
 Placing $\mathbf{m}_{\mathrm{m}}$ and $\mathbf{m}_{\mathrm{e}}$ in the center of the TEM cell therefore significantly simplifies modeling electrically small antennas with equivalent dipole moments. This assumption is valid for the TEM mode. This configuration is assumed for all numerical investigations following in this thesis, unless otherwise stated.
+
+ When normalizing to the free-space wave impedance $Z_0$, $\mathbf{m}_\mathrm{e}$ can be interchanged with an equivalent $\mathbf{m}_\mathrm{m}$ and vice-versa \cite[p. 414]{Jackson}. Therefore, normalizing either $\mathbf{m}_{\mathrm{e}}$ or $\mathbf{m}_{\mathrm{m}}$ to the free-space wave impedance $Z_0$ enables a meaningful comparison between them.
 
 All simulation results are counterchecked by inserting the equivalent dipole moments into the TEM cell and comparing the power and phase at the output ports with the antenna's results.
 
@@ -525,7 +527,7 @@ The dipole moments are plotted in \autoref{fig:dipole_moments_loop_antenna}. The
 \end{figure}
 
 
-Possible reasons for the deviation in power are numerical inaccuracies or the coupling of the TE\textsubscript{01} mode, which changes the field distribution in a disadvantageous way.
+Possible reasons for the deviation in power are numerical inaccuracies or the coupling of the TE\textsubscript{01} mode.
 
 \FloatBarrier
 \subsubsection{Electrical characteristics}\label{sec:loop_electrical_characteristics}
@@ -577,7 +579,9 @@ Possible reasons for the deviation in power are numerical inaccuracies or the co
 \end{figure}
 
 
-The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling back to the septum and back to the feedpoint, also seen in the slightly changing magnetic field intensity in \autoref{fig:loopnearfield}. The difference between the feedpoint and return path current increases over frequency. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is measured at the same height above the PEC surface. The results vary with position due of the displacement currents in the antenna's near-field.
+The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling to the septum and back to the feedpoint. The difference between the feedpoint and return path current increases over frequency, translating to rising displacement currents. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. 
+
+The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is processed with the same loop integration at the same height above the PEC surface. The results vary with height above the PEC surface due to the displacement currents in the near-field.
 
 \begin{figure}[htbp]
 	\centering
@@ -590,7 +594,7 @@ The current $I$ in the loop antenna changes along the antenna wire as shown in \
 
 \autoref{fig:loopfeedvoltage} demonstrates the voltage at the feedpoint of the antenna, which significantly rises over the frequency. Because the increase in voltage leads to larger displacement current according to \autoref{eqn:me_i}, $\mathbf{m}_e$ follows its frequency-behavior. Similarly, the reduction in current over frequency, shown in \autoref{fig:loopfeedcurrent}, leads a lower induced voltage, and according to \autoref{eqn:m_v} a smaller magnitude of $\mathbf{m}_m$. The current and the voltage are determined with \cref{eqn:vin,eqn:iin}.
 
-
+\todo[inline]{todo: replace effective voltage and current with peak values for consistency.}
 
 The increases in voltage and decrease in current follows from the impedance, depicted in \autoref{fig:currimp}. The strongly inductive impedance increases linearly over frequency, keeping the input power constant leads to the observed behavior. 
 
@@ -1000,9 +1004,7 @@ The electric dipole moment shown in \autoref{fig:gappedloopmoments} clearly domi
 	\label{fig:example}
 \end{figure}
 
-
-
-\autoref{fig:gappedloopcompmomentsgapsweep} demonstrates the effect of the gap height on the dipole moments' behavior. A larger gap height leads to an decreased charge charge concentration in the gap region, consequently a smaller magnitude of the electric dipole moment $\mathbf{m}_\mathrm{e}$. Additionally, it also leads to a decrease in electric current $\mathbf{J}$ in the antenna, reducing the magnetic dipole moment $\mathbf{m}_\mathrm{m}$. The reduction in the magnitude of $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$ with increasing gap height is reflected in the decreasing output power shown in \autoref{fig:gappedloopcomppowergapsweep}.
+\autoref{fig:gappedloopcompmomentsgapsweep} demonstrates the effect of the gap height on the dipole moments' behavior. A larger gap height leads to an decreased charge concentration in the gap region, consequently a smaller magnitude of the electric dipole moment $\mathbf{m}_\mathrm{e}$. Additionally, it also leads to a decrease in electric current $\mathbf{J}$ in the antenna, reducing the magnetic dipole moment $\mathbf{m}_\mathrm{m}$. The reduction in the magnitude of $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$ with increasing gap height is reflected in the decreasing output power shown in \autoref{fig:gappedloopcomppowergapsweep}.
 
 \begin{figure}[htbp]
 	\centering
@@ -1080,8 +1082,7 @@ The gap leads to a significant reduction of electric current. Consequently, the 
 
 \todo[inline]{TODO}
 
-The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. It is positioned at the center of the TEM cell, mounted at the top surface. The 5\,mm long wire points towards waveport 2. The excitation is a modal wave port. With a maximum dimension of 5\,mm, the antenna is electrically small for a frequency of up to 6\,GHz, at which it will be a tenth of the wavelength. In this simulation, the antenna is investigated for the frequency of 100\,MHz to 1\,GHz. The TEM cell has a width of 40\,mm and a height of 24\,mm and an impedance of $\sim50\,\Omega$. The goal is to find equivalent dipole moments of the antenna. 
-
+The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:ifa}. With a maximum dimension of 5\,mm, the antenna is electrically small for a frequency of up to 6\,GHz. 
 
 \begin{figure}[h]
 	\centering
@@ -1089,9 +1090,6 @@ The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:i
 	\caption{Inverted F-antenna used in the simulation}
 	\label{fig:ifa}
 \end{figure}
-
-
-
 
 \begin{figure}[htbp]
 	\centering
@@ -1115,7 +1113,7 @@ The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:i
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/inverted_f_opower}
+	\includegraphics[width=0.5\linewidth]{content/img/inverted_f_opower}
 	\caption{Output power and electric field at output.}
 	\label{fig:invertedfopower}
 \end{figure}
@@ -1143,7 +1141,7 @@ The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:i
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/inverted_f_impedance}
+	\includegraphics[width=0.5\linewidth]{content/img/inverted_f_impedance}
 	\caption{Phase and magnitude of the inverted-F antenna's impedance over frequency.}
 	\label{fig:invertedfimpedance}
 \end{figure}
@@ -1151,19 +1149,11 @@ The inverted F-antenna (IFA) is modeled in Ansys HFSS as shown in \autoref{fig:i
 
 
 
-\autoref{fig:dipole_moments_over_freq_ifa} shows the dipole moments over frequency. The electric dipole moment $m_e$ has been normalized to the free-space wave impedance of $377\,\Omega$ to make the dipole moments comparable. This is possible because the dipole moments are interchangeable through the wave impedance \cite[p. 414]{Jackson}. The antenna input power has been set to 142588.47\,W, because this leads to an output power of 1\,W at a frequency of 1\,GHz. The magnetic dipole moment is much larger than the electric dipole moment, because the current loop of the antenna is aligned with the TEM cell's magnetic fields, but the line current is not with the TEM electric fields. The magnetic dipole moments rises linearly with the frequency, which is equal to a quadratic increase of power. Only the TEM modes has been considered in the simulation, as other modes disturb the calculations. 
+\autoref{fig:dipole_moments_over_freq_ifa} shows the dipole moments over frequency. The magnetic dipole moment is much larger than the electric dipole moment.
 
+The magnetic coupling with the septum happens due to the alignment of the current loop with the magnetic field of the dominant TEM mode. The antenna is now rotated by 90° around the z-axis, such that the magnetic current loop stands perpendicular to the magnetic TEM fields. \autoref{fig:phase_shift_90_ifa} demonstrates the phase of the S-parameters, describing the coupling of antenna to waveport 1 and 2. 
 
-
-\todo{Repeat for different orientations? Change variable name: TEM cell height.}
-
-The magnetic coupling with the septum happens due to the alignment of the current loop with the magnetic field of the dominant TEM mode. The antenna is now rotated by 90° around the z-axis, such that the magnetic current loop stands perpendicular to the magnetic TEM fields. \autoref{fig:phase_shift_90_ifa} demonstrates the phase of the S-parameters, describing the coupling of antenna to waveport 1 and 2. Since the magnetic dipole moment is responsible for a phase between the ports, \autoref{fig:phase_shift_90_ifa} strongly hints to an absence of it.
-
-
-\autoref{dipole_moments_ifa_90} shows that the electric dipole moment $m_\mathrm{e}$ has stayed the same, while the magnetic dipole moment became zero. Consequently, the overall power transfer between the antenna and the waveports is also much lower. 
-
-\todo{The same procedure was repeated with different dipole moments positions, for which \autoref{eqn:e0z_mse} worked. Maybe do a general equation for the normalized e-field?}
-
+\autoref{dipole_moments_ifa_90} shows that the electric dipole moment $m_\mathrm{e}$ has stayed the same, while the magnetic dipole moment became zero. 
 
 \FloatBarrier
 
@@ -1171,7 +1161,7 @@ The magnetic coupling with the septum happens due to the alignment of the curren
 
 \todo[inline]{TODO}
 
-The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The conducting plane in \autoref{fig:center_fed_monopole} is on the top side of the TEM cell, thus the image is rotated counter-clockwise by 90 degrees. The electric wire with the length of 5 mm points towards the septum. The 1.1 x 1.6 mm loop is again aligned with the magnetic field lines of the TEM mode. The antenna is fed with a power of $P_\mathrm{Antenna}=127770.39\,\mathrm{W}$, which once more leads to an output power of $P_\mathrm{Out}=1\,\mathrm{W}$ at 1\,GHz at both output ports. 
+The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The electric wire with the length of 5 mm points towards the septum. 
 
 \begin{figure}[h]
 	\centering
@@ -1182,7 +1172,7 @@ The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. T
 
 \todo[inline]{A question on my mind since the beginning of this thesis: Can how is the magnetic dipole moment influenced by rotating this geometry by 90 degrees? Is the magnetic dipole moment higher or lower than in the rotated loop antenna? With my current knowledge, I suspect that the electric dipole moment leads to current coupling with the TEM cell over displacement current, therefore leading to a smaller magnetic dipole moment then in the case of the loop antenna}
 
-The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff_cfm} shows stronger coupling. As will be seen below, this is because of an increased electric dipole moment, while the magnetic dipole moment remained the same. Therefore, the center fed monopole antenna couples well electrically with the TEM cell.
+The loop area of the center-fed monopole antenna is equal to that of the loop antenna. Consequently, both antennas exhibit the same magnetic dipole moment.
 
 \begin{figure}[htbp]
 	\centering
@@ -1221,7 +1211,7 @@ The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff
 \end{figure}
 
 
-\autoref{fig:dipole_moment_cfm} shows that the magnetic dipole moments of the inverted F and center fed monopole antennas are equal. This is due to the same size of the current loops. However, the electric dipole moments increased for the center fed monopole antenna. The alignment of the line current with the TEM cell's electric field causes this. (antenna power = 126549.7191667088\,W)
+The electric dipole moment of the center fed-monopole antenna is larger than that of the inverted-F antenna. According to \crefrange{eqn:an}{eqn:bn}, electric current aligned with $\mathbf{e}_\mathrm{TEM}^\pm$ leads to power transfer, explaining the increased magnitude of the electric dipole moment.
 
 
 \begin{figure}[htbp]
@@ -1243,14 +1233,6 @@ The magnitude of $|S_\mathrm{A1}|=|S_\mathrm{A2}|$ in \autoref{fig:forward_coeff
 	\caption{Voltage and current at feedpoint of center-fed monopole antenna.}
 	\label{fig:example}
 \end{figure}
-
-
-
-
-The output power has been scaled as in the simulation before. This leads to the same electric field magnitude. Therefore, the electric field and output power over frequency plot are the same as in the case for the inverted F antenna, visible in \autoref{fig:output_power_e_fields_over_freq_ifa}.
-
-
-When rotating this antenna by 79°, the electric and magnetic dipole moment influence the output power by roughly the same amount, as visible in \autoref{fig:79cfm}. This makes itself manifest by a phase shift of around 45°  between the output powers of the waveports. Interestingly, both the electric and the magnetic dipole moment demonstrate a non-linear behavior. \todo{Why does the magnetic moment sink?}
 
 \todo{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}
 

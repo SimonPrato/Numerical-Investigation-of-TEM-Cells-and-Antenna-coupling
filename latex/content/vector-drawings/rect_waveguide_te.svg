@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="rect_waveguide_te.svg"
-   inkscape:export-filename="../../Dokumente/LaTeX/Documentation/content/img/rect_waveguide_te.png"
+   inkscape:export-filename="../img/rect_waveguide_te.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="2.3786088"
-     inkscape:cx="371.01519"
-     inkscape:cy="462.4552"
+     inkscape:cx="468.13078"
+     inkscape:cy="509.96196"
      inkscape:window-width="1920"
      inkscape:window-height="1200"
      inkscape:window-x="0"
@@ -240,6 +240,11 @@
        id="path-effect2088-7-0-6"
        is_visible="true"
        lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect488-0-6-3"
+       is_visible="true"
+       lpeversion="1" />
   </defs>
   <g
      inkscape:label="Ebene 1"
@@ -418,14 +423,14 @@
     <text
        xml:space="preserve"
        style="font-weight:500;font-size:6.35px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';fill:#5d5cd8;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       x="126.52077"
-       y="142.78819"
+       x="138.44345"
+       y="126.19164"
        id="text7037"><tspan
          sodipodi:role="line"
          id="tspan7035"
          style="font-size:6.35px;fill:#5d5cd8;fill-opacity:1;stroke:none;stroke-width:0.4"
-         x="126.52077"
-         y="142.78819">Electric field</tspan></text>
+         x="138.44345"
+         y="126.19164">Electric field</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:500;font-size:6.35px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';fill:#5d5cd8;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
@@ -444,10 +449,11 @@
          id="tspan8517">field</tspan></text>
     <path
        style="fill:#5d5cd8;fill-opacity:1;stroke:#545ded;stroke-width:0.6;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:markers stroke fill"
-       d="M 133.94488,136.79343 106.61105,121.01224"
+       d="M 155.70952,120.53977 123.21871,96.886693"
        id="path7971"
        inkscape:path-effect="#path-effect7973"
-       inkscape:original-d="M 133.94488,136.79343 C 124.77825,131.50119 115.7226,126.2729 106.61105,121.01224" />
+       inkscape:original-d="m 155.70952,120.53977 c -9.16663,-5.29224 -23.37926,-18.39242 -32.49081,-23.653077"
+       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -459,5 +465,50 @@
        id="path8587"
        inkscape:path-effect="#path-effect8589"
        inkscape:original-d="m 40.864186,85.660026 c 6.139225,3.827883 12.341897,7.655502 18.512448,11.482857" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.648;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;marker-end:url(#TriangleStart)"
+       d="m 140.038,161.2967 16.87557,-16.61139"
+       id="path1952" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;marker-end:url(#TriangleStart)"
+       d="M 140.14765,161.23649 V 140.50542"
+       id="path2725" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;marker-end:url(#TriangleStart)"
+       d="m 140.08731,161.0306 h 20.73107"
+       id="path2725-7" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="144.18571"
+       y="142.70844"
+       id="text2857"><tspan
+         sodipodi:role="line"
+         id="tspan2855"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.648"
+         x="144.18571"
+         y="142.70844">y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="156.99149"
+       y="150.93103"
+       id="text2857-7"><tspan
+         sodipodi:role="line"
+         id="tspan2855-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.648"
+         x="156.99149"
+         y="150.93103">z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="157.84474"
+       y="165.50008"
+       id="text2944"><tspan
+         sodipodi:role="line"
+         id="tspan2942"
+         style="stroke-width:0.648"
+         x="157.84474"
+         y="165.50008">x</tspan></text>
   </g>
 </svg>

@@ -2,14 +2,19 @@
 \subsection{ASTM ES7-83 method}
 \FloatBarrier
 
+A model as described in \autoref{sec:astm} is used to determine the shielding effectiveness of nickel and zink. The TEM cell contains a sheet of thickness ranging from 1 to 40 µm in the center at $z=0$.
+
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/se_zinc}
+	\includegraphics[width=0.5\linewidth]{content/img/se_zinc}
 	\caption{Shielding effectiveness of a sheet of zinc versus the material's thickness.}
 	\label{fig:sezinc}
 \end{figure}
 
+\todo[inline]{TODO: redo zinc simulation}
 
+Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with adaptive meshing, which is done here. 
 
 \FloatBarrier
 \subsection{Dual TEM cell}
@@ -82,3 +87,5 @@
 %	P_\mathrm{total}=|S_{13}|^2+|S_{14}|^2
 %	\label{eqn:dual_tem_cell_tot_power}
 %\end{equation}
+
+% Show which dipole moments are affected by an offset in z-direction, and which ones are not.

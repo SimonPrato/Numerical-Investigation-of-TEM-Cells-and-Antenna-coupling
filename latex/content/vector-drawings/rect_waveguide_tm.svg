@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="rect_waveguide_tm.svg"
-   inkscape:export-filename="../../Dokumente/LaTeX/Documentation/content/img/rect_waveguide_tm.png"
+   inkscape:export-filename="../img/rect_waveguide_tm.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,11 +28,11 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="2.3786088"
-     inkscape:cx="76.725521"
-     inkscape:cy="323.29822"
-     inkscape:window-width="3840"
-     inkscape:window-height="2160"
-     inkscape:window-x="1920"
+     inkscape:cx="367.65188"
+     inkscape:cy="311.10622"
+     inkscape:window-width="1920"
+     inkscape:window-height="1200"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -175,6 +175,25 @@
        id="path-effect488-0-6"
        is_visible="true"
        lpeversion="1" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-1" />
+    </marker>
   </defs>
   <g
      inkscape:label="Ebene 1"
@@ -347,14 +366,14 @@
     <text
        xml:space="preserve"
        style="font-weight:500;font-size:6.35px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';fill:#5d5cd8;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       x="121.31674"
-       y="151.71651"
+       x="141.4445"
+       y="125.0724"
        id="text7037"><tspan
          sodipodi:role="line"
          id="tspan7035"
          style="font-size:6.35px;fill:#5d5cd8;fill-opacity:1;stroke:none;stroke-width:0.4"
-         x="121.31674"
-         y="151.71651">Electric field</tspan></text>
+         x="141.4445"
+         y="125.0724">Electric field</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:500;font-size:6.35px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';fill:#5d5cd8;fill-opacity:1;stroke:none;stroke-width:0.4;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
@@ -373,10 +392,11 @@
          id="tspan8517">field</tspan></text>
     <path
        style="fill:#5d5cd8;fill-opacity:1;stroke:#545ded;stroke-width:0.6;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:markers stroke fill"
-       d="M 139.58738,146.19505 112.25355,130.41386"
+       d="m 140.3325,122.84162 -18.54823,-6.02168"
        id="path7971"
        inkscape:path-effect="#path-effect7973"
-       inkscape:original-d="m 139.58738,146.19505 c -9.16663,-5.29224 -18.22228,-10.52053 -27.33383,-15.78119" />
+       inkscape:original-d="m 140.3325,122.84162 c -9.16663,-5.29224 -9.43668,-0.76102 -18.54823,-6.02168"
+       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"
@@ -388,5 +408,50 @@
        id="path8587"
        inkscape:path-effect="#path-effect8589"
        inkscape:original-d="m 47.965582,92.072623 c 6.139225,3.827883 12.341897,7.655502 18.512448,11.482857" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.648;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-3);paint-order:markers stroke fill"
+       d="m 140.72529,160.12878 16.87557,-16.61139"
+       id="path1952" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-3);paint-order:markers stroke fill"
+       d="M 140.83494,160.06857 V 139.3375"
+       id="path2725" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart-3);paint-order:markers stroke fill"
+       d="m 140.7746,159.86268 h 20.73107"
+       id="path2725-7" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="144.873"
+       y="141.54051"
+       id="text2857"><tspan
+         sodipodi:role="line"
+         id="tspan2855"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.648"
+         x="144.873"
+         y="141.54051">y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="157.67877"
+       y="149.76311"
+       id="text2857-7"><tspan
+         sodipodi:role="line"
+         id="tspan2855-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:none;stroke-width:0.648"
+         x="157.67877"
+         y="149.76311">z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.647999;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="158.53203"
+       y="164.33215"
+       id="text2944"><tspan
+         sodipodi:role="line"
+         id="tspan2942"
+         style="stroke-width:0.648"
+         x="158.53203"
+         y="164.33215">x</tspan></text>
   </g>
 </svg>

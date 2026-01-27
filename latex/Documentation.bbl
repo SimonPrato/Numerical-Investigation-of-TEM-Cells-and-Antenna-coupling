@@ -63,6 +63,56 @@
     \field{year}{1997}
   \endentry
 
+  \entry{1430946}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BC}{%
+         family={Buccella},
+         familyi={B\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Feliziani},
+         familyi={F\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Maradei},
+         familyi={M\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Manzi},
+         familyi={M\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{Magnetic shielding;Physics computing;Boundary conditions;Eddy
+  currents;Magnetic analysis;Magnetic field measurement;Finite element
+  methods;Surface impedance;Integral equations;Frequency;Coupled boundary
+  conditions;edge elements;finite-element method (FEM);impedance network
+  boundary condition (INBC);physically large domain;shielding}
+    \strng{namehash}{BC+1}
+    \strng{fullhash}{BCFMMFMG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1109/TMAG.2005.846059
+    \endverb
+    \field{number}{5}
+    \field{pages}{1708\bibrangedash 1711}
+    \field{title}{Magnetic field computation in a physically large domain with
+  thin metallic shields}
+    \field{volume}{41}
+    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{year}{2005}
+  \endentry
+
   \entry{1063929}{article}{}
     \name{author}{2}{}{%
       {{hash=CZ}{%
@@ -850,6 +900,28 @@
     \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
     \field{year}{1981}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Steer_2019}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SMB}{%
+         family={Steer},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima Bernard},
+         giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {NC State University}%
+    }
+    \strng{namehash}{SMB1}
+    \strng{fullhash}{SMB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Microwave and RF design. volume 2, Transmission Lines}
+    \field{year}{2019}
   \endentry
 
   \entry{STRANG_2018}{book}{}
