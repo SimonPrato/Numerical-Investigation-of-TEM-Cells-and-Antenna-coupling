@@ -16,6 +16,24 @@ A model as described in \autoref{sec:astm} is used to determine the shielding ef
 
 Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with adaptive meshing, which is done here. 
 
+\begin{table}[h]
+	\centering
+
+	{\renewcommand{\arraystretch}{1.2}
+		\setlength{\tabcolsep}{12pt}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Material & Rel. permittivity $\varepsilon_r$ & Rel. permeability $\mu_r$ & Conductivity $\sigma$ \\
+			\hline\hline
+			Zinc & $\approx 1$ & $\approx 1$ & $1.67 \times 10^7$\,S/m\\
+			\hline
+			Nickel & $\approx 1$ & $600$ & $1.45 \times 10^7$\,S/m \\
+			\hline
+	\end{tabular}}
+	\caption{Electromagnetic Properties of Zinc and Nickel}
+	\label{tab:materials}
+\end{table}
+
 \FloatBarrier
 \subsection{Dual TEM cell}
 
