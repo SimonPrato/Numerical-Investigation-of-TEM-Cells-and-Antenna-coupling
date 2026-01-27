@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
-antenna_type = "monopole" # same name as data folder to be read
+antenna_type = "gapped-loop" # same name as data folder to be read
 
 # === Data Loading ===
 columns_phase_shift, columns_magnitude = read_antenna_data(antenna_type=antenna_type)
@@ -18,12 +18,14 @@ columns_phase_shift, columns_magnitude = read_antenna_data(antenna_type=antenna_
 frequencies = columns_phase_shift[0] * 1e9
 
 # Adjust positive phase values by subtracting 2π, if desired
-#columns_phase_shift[1][columns_phase_shift[1] < 0] += 2 * np.pi
-columns_phase_shift[2][columns_phase_shift[2] < 0] += 2 * np.pi
+columns_phase_shift[1][columns_phase_shift[1] < 0] += 2 * np.pi
+#columns_phase_shift[2][columns_phase_shift[2] < 0] += 2 * np.pi
 
 # === Phase, Magnitude, and E-Field Processing ===
-phase_shift = columns_phase_shift[1] - columns_phase_shift[2] #- np.pi
-phase_shift = columns_phase_shift[1] - columns_phase_shift[2] #- np.pi # Subtract np.pi if necessary
+columns_phase_shift[1] -= np.pi # Subtract np.pi if necessary
+#columns_phase_shift[2] -= np.pi # Subtract np.pi if necessary
+
+phase_shift = columns_phase_shift[1] - columns_phase_shift[2]
 
 
 # Compute output power from dB magnitude
