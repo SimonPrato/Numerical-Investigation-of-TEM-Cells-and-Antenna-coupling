@@ -140,9 +140,16 @@ Then, the S-parameters derived in the simulations are used to get to the output 
 
 \subsubsection{Dual TEM cell}
 
-The shielding effectiveness of a material may also be determined using two TEM cells, which are stacked upon each other, as shown in \autoref{fig:dual_tem_cell}. They are connected through an aperture, which can be filled with the shielding material. One TEM cell is excited, and therefore acts as a driving cell. It transmits power through the aperture. It is measured at the second TEM cell, which acts as a receiver. The dual TEM cell simulates near-field conditions, opposed to the far-field conditions simulated by the simple TEM cell \cite{MORARI_BĂLAN_2015}. This is important when using the shielding material to shield an antenna's radiation by placing the material directly next to it.
+The shielding effectiveness of a material may also be determined using two TEM cells, which are stacked upon each other, as shown in \autoref{fig:dual_tem_cell}. They are connected through an aperture, which can be filled with the shielding material. One TEM cell is excited, and therefore acts as a driving cell. It transmits power through the aperture. It is measured at the second TEM cell, which acts as a receiver. The dual TEM cell simulates near-field conditions, opposed to the far-field conditions simulated by the simple TEM cell \cite{MORARI_BĂLAN_2015}.
 
-The electrically small aperture may be described by an electric and a magnetic dipole moment\todo{must it be electrically small?}. Their magnitude is related to the electric and magnetic coupling between the TEM cells over the aperture. Therefore, the electric and magnetic coupling can be determined separately by adding or subtracting the output powers of the receiving TEM cell \cite{MORARI_BĂLAN_2015, 4091811}. Consequently, a electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$ can be calculated with \autoref{eqn:se_dual_cell_e}, and a magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$ with \autoref{eqn:se_dual_cell_m}. If a material, for example, permits energy transfer because of magnetic dipoles in it, then a measurement with lower $SE_\mathrm{dB}^\mathrm{m}$ than $SE_\mathrm{dB}^\mathrm{e}$ is to be expected \cite{4091811}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{content/img/dual_tem_cell.png}
+	\caption{Dual TEM cell with aperture}
+	\label{fig:dual_tem_cell}
+\end{figure}
+
+The electrically small aperture may be described by an electric and a magnetic dipole moment\todo{why must it be electrically small?}. Their magnitude is related to the electric and magnetic coupling between the TEM cells over the aperture. Therefore, the electric and magnetic coupling can be determined separately by adding or subtracting the output powers of the receiving TEM cell \cite{MORARI_BĂLAN_2015, 4091811}. Consequently, a electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$ can be calculated with \autoref{eqn:se_dual_cell_e}, and a magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$ with \autoref{eqn:se_dual_cell_m}. If a material, for example, permits energy transfer because of magnetic dipoles in it, then a measurement with lower $SE_\mathrm{dB}^\mathrm{m}$ than $SE_\mathrm{dB}^\mathrm{e}$ is to be expected \cite{4091811}.
 
 
 \begin{subequations}
@@ -160,10 +167,4 @@ Because the normalized electric field at the aperture will be of TEM mode, only 
 
 Since the aperture is electrically small, the field quantities may be assumed to be constant over it. This makes it possible to represent the energy transfer by dipole moments. \todo{Polarization of the material. Small aperture theory.}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.75\linewidth]{content/img/dual_tem_cell.png}
-    \caption{Dual TEM cell with aperture}
-    \label{fig:dual_tem_cell}
-\end{figure}
 
