@@ -130,7 +130,7 @@ As show in the previous simulations, antennas may be represented by dipole momen
 
 \subsubsection{Mesh modifications}
 
-The mesh determines the resolution of the field quantities over the computational domain. Since electrically small conductors are involved, implementing small mesh elements in their proximity is necessary for accurate modeling of near-fields. Adaptive meshing algorithms may neglect this task, due to the low impact of these near-fields on the solution of the overall computational domain. 
+The mesh determines the resolution of the field quantities over the computational domain. Since electrically small conductors are involved, implementing small mesh elements in their proximity is necessary for accurate modeling of near-fields. Adaptive meshing algorithms may neglect this task, due to the low impact of these near-fields on the solution of the overall computational domain. Consequently, adjusting mesh element sizes does not significantly influence the overall solution of the model, but greatly improves the accuracy of near-field investigations.
 
 The maximum mesh element length in error-prone volumes are adjusted, until the obtained results show a reasonably low amount of numerical artifacts. Such volumes are commonly located adjacent to feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions. The simulation models used in this thesis use roughly 15 elements on the surfaces of such critical volumes to achieve a reasonable representation of these regions while avoiding excessively large meshes.
 
@@ -402,7 +402,7 @@ Applying \autoref{eqn:me_i} to determine $\mathbf{m}_\mathrm{e}$ requires knowle
 	\mathbf{m}_\mathrm{e}(f=3\,\mathrm{GHz})=\int_{b/2-5\,\mathrm{mm}}^{b/2} I(y, f=3\,\mathrm{GHz})\,dy = 85.69\,\upmu\mathrm{Am}\cdot\mathbf{\hat{a}}_z,
 \end{equation}
 
-which corresponds to $\mathbf{m_e}\cdot Z_0=3.23\cdot 10^{-2} \cdot\,\mathrm{Vm}\mathbf{\hat{a}}_z$ when normalized by the free-space wave impedance $Z_0$. This approximates $\mathbf{m}_\mathrm{e}$ in \autoref{fig:dipolemomentsmonopolewide} at 3\,GHz well, therefore supporting \crefrange{eqn:e_int_a}{eqn:e_int_b}. 
+which corresponds to $\mathbf{m_e}\cdot Z_0=3.23\cdot 10^{-2} \cdot\,\mathrm{Vm}\mathbf\,{\hat{a}}_z$ when normalized by the free-space wave impedance $Z_0$. This approximates $\mathbf{m}_\mathrm{e}$ in \autoref{fig:dipolemomentsmonopolewide} at 3\,GHz reasonably well, therefore supporting \crefrange{eqn:e_int_a}{eqn:e_int_b}. 
 
 %cannot directly be applied using the feedpoint current $I$, since it predominantly gives rise to displacement currents returning to the feedpoint (see \autoref{fig:monopolenearfield}), which do not contribute to the electric coupling.
 
@@ -492,7 +492,7 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 \end{figure}
 
 \FloatBarrier
-\subsubsection{Current distribution on septum and antenna offset}
+\subsubsection{Current distribution on septum and}
 \FloatBarrier
 
 \autoref{fig:monopole_surface_currents} shows the surface current density on the septum induced by the monopole antenna at 3\,GHz. The current reaches both output ports in phase, confirming the absence of a phase shift between the output port powers. 
@@ -502,7 +502,7 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_surface_currents.png}
-		\caption{Current surface density at 3\,GHz}
+		\caption{Current surface density at 3\,GHz, where mostly the TEM-mode propagates.}
 		\label{fig:monopole_surface_currents}
 	\end{subfigure}
 	
@@ -511,22 +511,22 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_surface_currents_te01.png}
-		\caption{Current surface density at 3.3\,GHz }
+		\caption{Current surface density of only the TE\textsubscript{01}-mode at 3.3\,GHz with the TEM mode compensated.}
 		\label{fig:monopole_surface_current_te01}
 	\end{subfigure}
 	
-	\caption{Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript{01} mode.}
+	\caption{Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript{01}-mode.}
 	\label{fig:main}
 \end{figure}
 
 
-\autoref{fig:monopole_surface_current_te01} shows the current density of the septum at 3.3\,GHz. Due to the magnetic fields propagating in the z-direction, the current on the septum creates a pattern of swirls. Current, which reach an output ports by following this pattern, contributes to the total power transferred by the TE\textsubscript{01} mode.
+\autoref{fig:monopole_surface_current_te01} shows the current density of the septum at 3.3\,GHz, with the TEM-mode compensated at the output ports. Due to the magnetic fields propagating in the z-direction, the current on the septum creates a pattern of swirls. Furthermore, the phase shift of the induced power between the output ports is $\pi$. This results from the magnetic field intensities of the TE\textsubscript{01}-mode being in-phase at the output ports, opposed to the magnetic field intensities of the TEM-mode. 
 
 \todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}
 \todo[inline]{idea: offset in x-direction, showing surface current and explaining the decrease in power transfer (normal E-field distribution)}
 
-If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{h}^\pm = h_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{e}^\pm = e_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
-An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{h}^\pm$ and $\mathbf{e}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.
+%If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{h}^\pm = h_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{e}^\pm = e_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
+%An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{h}^\pm$ and $\mathbf{e}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.
 
 
 \FloatBarrier

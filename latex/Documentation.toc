@@ -24,8 +24,8 @@
 \contentsline {subsubsection}{\numberline {3.4.1}Arbitrary source}{21}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}Equivalent dipole moments}{22}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Electrically small antennas}{24}{subsubsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3.4.4}Radiation resistance}{26}{subsubsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.5}Shielding}{28}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.4.4}Radiation resistance}{27}{subsubsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.5}Shielding}{29}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}ASTM ES7-83 Method}{31}{subsubsection.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.2}Dual TEM cell}{32}{subsubsection.3.5.2}%
 \contentsline {section}{\numberline {4}Finite Element Method}{33}{section.4}%
@@ -44,12 +44,12 @@
 \contentsline {subsubsection}{\numberline {5.1.7}Investigation of field regions}{42}{subsubsection.5.1.7}%
 \contentsline {subsection}{\numberline {5.2}Monopole Antenna}{44}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Setup}{44}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{44}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{45}{subsubsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.3}Electrical characteristics}{45}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}Current distribution on septum and antenna offset}{49}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4}Current distribution on septum and}{48}{subsubsection.5.2.4}%
 \contentsline {subsubsection}{\numberline {5.2.5}Electromagnetic energy in the TEM cell}{50}{subsubsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.3}Loop antenna}{51}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Setup}{51}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3}Loop antenna}{50}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Setup}{50}{subsubsection.5.3.1}%
 \contentsline {subsubsection}{\numberline {5.3.2}Equivalent dipole moments}{51}{subsubsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.3}Electrical characteristics}{52}{subsubsection.5.3.3}%
 \contentsline {subsubsection}{\numberline {5.3.4}Equivalent circuit model}{54}{subsubsection.5.3.4}%
