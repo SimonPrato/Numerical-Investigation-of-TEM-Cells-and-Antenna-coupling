@@ -284,51 +284,6 @@
     \field{year}{2024}
   \endentry
 
-  \entry{809846}{article}{}
-    \name{author}{4}{}{%
-      {{hash=GC}{%
-         family={Groh},
-         familyi={G\bibinitperiod},
-         given={C.},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=KJ}{%
-         family={Karst},
-         familyi={K\bibinitperiod},
-         given={J.P.},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=KM}{%
-         family={Koch},
-         familyi={K\bibinitperiod},
-         given={M.},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=GH}{%
-         family={Garbe},
-         familyi={G\bibinitperiod},
-         given={H.},
-         giveni={H\bibinitperiod},
-      }}%
-    }
-    \keyw{Electromagnetic compatibility}
-    \strng{namehash}{GC+1}
-    \strng{fullhash}{GCKJKMGH1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1109/15.809846
-    \endverb
-    \field{number}{4}
-    \field{pages}{440\bibrangedash 445}
-    \field{title}{TEM waveguides for EMC measurements}
-    \field{volume}{41}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
-    \field{year}{1999}
-  \endentry
-
   \entry{Hansen_Collin_2013}{book}{}
     \name{author}{2}{}{%
       {{hash=HRC}{%
@@ -900,28 +855,6 @@
     \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
     \field{year}{1981}
     \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{Steer_2019}{book}{}
-    \name{author}{1}{}{%
-      {{hash=SMB}{%
-         family={Steer},
-         familyi={S\bibinitperiod},
-         given={Michael\bibnamedelima Bernard},
-         giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {NC State University}%
-    }
-    \strng{namehash}{SMB1}
-    \strng{fullhash}{SMB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{title}{Microwave and RF design. volume 2, Transmission Lines}
-    \field{year}{2019}
   \endentry
 
   \entry{STRANG_2018}{book}{}
