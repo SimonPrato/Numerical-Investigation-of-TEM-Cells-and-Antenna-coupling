@@ -128,7 +128,7 @@ An electric dipole in direction of propagation lead to no power transfer, even i
 
 As show in the previous simulations, antennas may be represented by dipole moments. This can be done in simulation models, which would otherwise be computationally too effortful. The dipole moments may be put into a shielded enclosure around a larger electronic system, as has been done in \cite{10274360}.
 
-\subsubsection{Mesh modifications}
+\subsubsection{Mesh modifications}\label{sec:mesh}
 
 The mesh determines the resolution of the field quantities over the computational domain. Since electrically small conductors are involved, implementing small mesh elements in their proximity is necessary for accurate modeling of near-fields. Adaptive meshing algorithms may neglect this task, due to the low impact of these near-fields on the solution of the overall computational domain. Consequently, adjusting mesh element sizes does not significantly influence the overall solution of the model, but greatly improves the accuracy of near-field investigations.
 
@@ -147,7 +147,7 @@ The TEM cell with an antenna is modeled as a three-port network. The two output 
 	\end{bmatrix}.
 \end{equation}
 
-The coupling between the antenna and the two ports of the TEM cell are described by S-parameters, specifically the forward transmission coefficients $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$. The magnitude of this coefficient is the same for the antenna to both ports $|S_{\mathrm{A1}}|=|S_{\mathrm{A2}}|$, given that the antenna is placed far from the output ports. The power transferred from the antenna $P_{\mathrm{A}}$ to the output ports $P_{\mathrm{1}}$ and $P_{\mathrm{2}}$ is derived through
+The coupling between the antenna and the two ports of the TEM cell are described by S-parameters, specifically the forward transmission coefficients $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$. The phases of the forward transmission coefficients $\Phi_\mathrm{A1}$ and $\Phi_\mathrm{A2}$ provide information on the phase shift between the incident wave at port A, and the transmitted wave at output ports 1 and 2. The magnitude of this coefficient is the same for the antenna to both ports $|S_{\mathrm{A1}}|=|S_{\mathrm{A2}}|$, given that the antenna is placed far from the output ports. The power transferred from the antenna $P_{\mathrm{A}}$ to the output ports $P_{\mathrm{1}}$ and $P_{\mathrm{2}}$ is derived through
   
   \begin{equation}
   	P_{\mathrm{A}}=\frac{P_{\mathrm{1}}}{10^{|S_{\mathrm{A1}}|/10}}=\frac{P_{\mathrm{2}}}{10^{|S_{\mathrm{A2}}|/10}}.
@@ -390,19 +390,19 @@ At low frequencies, the antenna impedance in \autoref{fig:monopoleimp} shows a h
 		\label{fig:monopoleimp}
 	\end{subfigure}
 	
-	\caption{The electrical characteristics of the monopole antenna over the frequency demonstrate capacitive behavior and a stable feed voltage.}
+	\caption{}
 	\label{fig:monopoleimpvoltcurr}
 \end{figure}
 
 %The electric current present in the monopole antenna is aligned with the electric field $\mathbf{e}_\mathrm{TEM}^\pm$ of the dominant TEM mode present in the investigated frequency range. The electric dipole moment in y-direction suffices to model the antenna, because they align with the fields of the TEM mode.
 
-Applying \autoref{eqn:me_i} to determine $\mathbf{m}_\mathrm{e}$ requires knowledge of the magnitude of the displacement current to the septum. Another possibility of determining $\mathbf{m}_\mathrm{e}$ is the integration of the current distribution $I(y)$ weighted by $\mathbf{e}_\mathrm{TEM}^\pm$ along the monopole antenna, as given in \crefrange{eqn:e_int_a}{eqn:e_int_b}. At a frequency of 3,GHz, this approach yields
+Applying \autoref{eqn:me_i} to determine $\mathbf{m}_\mathrm{e}$ requires knowledge of the magnitude of the displacement current to the septum. Another possibility of determining $\mathbf{m}_\mathrm{e}$ is the integration of the current $I$ weighted by $\mathbf{e}_\mathrm{TEM}^\pm$ along the monopole antenna, as given in \crefrange{eqn:e_int_a}{eqn:e_int_b}. At a frequency of 3,GHz, this approach yields
 
 \begin{equation}
 	\mathbf{m}_\mathrm{e}(f=3\,\mathrm{GHz})=\int_{b/2-5\,\mathrm{mm}}^{b/2} I(y, f=3\,\mathrm{GHz})\,dy = 85.69\,\upmu\mathrm{Am}\cdot\mathbf{\hat{a}}_z,
 \end{equation}
 
-which corresponds to $\mathbf{m_e}\cdot Z_0=3.23\cdot 10^{-2} \cdot\,\mathrm{Vm}\mathbf\,{\hat{a}}_z$ when normalized by the free-space wave impedance $Z_0$. This approximates $\mathbf{m}_\mathrm{e}$ in \autoref{fig:dipolemomentsmonopolewide} at 3\,GHz reasonably well, therefore supporting \crefrange{eqn:e_int_a}{eqn:e_int_b}. 
+which corresponds to $\mathbf{m_e}\cdot Z_0=3.23\cdot 10^{-2} \cdot\,\mathrm{Vm}\,\mathbf{\hat{a}}_z$ when normalized by the free-space wave impedance $Z_0$. This approximates $\mathbf{m}_\mathrm{e}$ in \autoref{fig:dipolemomentsmonopolewide} at 3\,GHz reasonably well, therefore supporting \crefrange{eqn:e_int_a}{eqn:e_int_b}. 
 
 %cannot directly be applied using the feedpoint current $I$, since it predominantly gives rise to displacement currents returning to the feedpoint (see \autoref{fig:monopolenearfield}), which do not contribute to the electric coupling.
 
@@ -434,7 +434,7 @@ The derived equivalent dipole moments $\mathbf{m}_e$, $\mathbf{m}_m$ in the TEM 
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_output_power}
-		\caption{Electric field $E_\mathrm{y}$ and power at one output port, derived with the S-parameters in \autoref{eqn:power_antenna}.}
+		\caption{Electric field in y-direction $E_\mathrm{y}$ at $x=0, y=b/4, z=\pm l/2$, and power at one output port, derived with the S-parameters in \autoref{eqn:power_antenna}.}
 		\label{fig:monopoleoutputpower}
 	\end{subfigure}
 	\hfill
@@ -449,7 +449,14 @@ The derived equivalent dipole moments $\mathbf{m}_e$, $\mathbf{m}_m$ in the TEM 
 	\label{fig:monopole_power_comp}
 \end{figure}
 
-The distribution of the current along the monopole antenna shown in \autoref{fig:monopole_current_dist} is numerically derived by integrating the magnetic field intensity in a closed loop around the wire using Ampère's law. 
+The distribution of the current along the monopole antenna shown in \autoref{fig:monopole_current_dist} is numerically derived by integrating the magnetic field intensity in a closed loop around the wire using Ampère's law,
+
+\begin{equation}
+	\oint_\mathrm{l} \mathbf{H} \cdot d\mathbf{l'} = I.
+	\label{sec:ampere_law_fem}
+\end{equation}
+
+A fine mesh resolution, as discussed in \autoref{sec:mesh}, is important for accurate results delivered by \autoref{sec:ampere_law_fem}. 
 
 Near the feedpoint at $0\,\mathrm{mm}$ non-linear behavior becomes apparent due to significant displacement currents and numerical artifacts in this region. This causes the current to exhibit a steeper decline with non-physical oscillations. 
 
@@ -492,7 +499,7 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 \end{figure}
 
 \FloatBarrier
-\subsubsection{Current distribution on septum and}
+\subsubsection{Current distribution on septum}
 \FloatBarrier
 
 \autoref{fig:monopole_surface_currents} shows the surface current density on the septum induced by the monopole antenna at 3\,GHz. The current reaches both output ports in phase, confirming the absence of a phase shift between the output port powers. 
@@ -574,80 +581,82 @@ Moreover, the effective inductance and capacitance of the monopole antenna insid
 
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_near_field}
-		\caption{}
+		\caption{TODO: Maybe show E-Field instead}
 		\label{fig:loopnearfield}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_antenna}
-		\caption{}
+		\caption{The geometry of the loop antenna assimilates a square with round edges. Each side has a length of 1.6\,mm. The return path leads back to the PEC surface of the TEM cell.}
 		\label{fig:loopantenna}
 	\end{subfigure}
 	
-	\caption{Geometry of loop antenna inserted into the TEM cell with its magnetic near-field. The return path leads into the conducting surface of the cell.}
+	\caption{}
 	\label{fig:loop_moments_phase}
 \end{figure}
 
-A square loop antenna is placed in the center of the TEM cell. Each side has a length of 1.6\,mm, hence it is electrically short for frequencies up to 4.69\,GHz. The square form is preferable to a round antenna in the following numerical simulations, due to more accurate mesh modeling and clearer investigation of the resulting dipole moments. The normal vector of the loop surface points in x-direction. The frequency investigated ranges from 1\,MHz to 3\,GHz, unless otherwise stated, and the input power of the antenna remains at 1\,W.
+A square loop antenna is placed in the center of the TEM cell. It consists of four wires with a length of 1.6\,mm each, and it is electrically short for frequencies up to 4.69\,GHz. The square geometry is preferable to a round version in the numerical simulations, as it allows for more accurate meshes and enables a clearer investigation of the resulting dipole moments. 
 
-\FloatBarrier
+The normal vector of the loop surface points in x-direction, leading to a maximum coupling with the magnetic field of the TEM-mode. In contrast to the monopole antenna discussed in \autoref{sec:monopole}, a return path for the current exists, which generates a magnetic dipole moment.
+
 \subsubsection{Equivalent dipole moments}
-\FloatBarrier
 
-\begin{figure}[tb]
+The equivalent dipole moments of the loop antenna are plotted in \autoref{fig:dipole_moments_loop_antenna}. The magnetic dipole moment $\mathbf{m}_\mathrm{m}$ dominates over the electric dipole moment $\mathbf{m}_\mathrm{e}$. Opposed to the case of a monopole antenna, $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$ demonstrate non-linear behavior over frequency, which is investigated further in \autoref{sec:loop_electrical_characteristics}.
+
+Furthermore, the phases of the powers at the output ports, shown in \autoref{fig:loopphase}, differ from one another. The phase shift in the low-frequency range approaches $\pi$, but gradually decreases with increasing frequency. This agrees with the analysis presented in \autoref{sec:equ-dip-mom}, which predicts a phase shift of $\pi$ when only $\mathbf{m}_\mathrm{m}$ is present, and a reduced phase shift as $\mathbf{m}_\mathrm{e}$ increases, as is the case here.
+
+\begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[t]{0.48\textwidth}
+	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/dipole_moments_loop_antenna.png}
-		\caption{Dipole moments}
+		\caption{The equivalent dipole moments of the loop antenna derived analytically with \crefrange{eqn:ifa_me}{eqn:ifa_mm}. The electric dipole moment $\mathbf{m}_\mathrm{e}$ is weighted with $Z_0$ to enable comparison with $\mathbf{m}_\mathrm{m}$.}
 		\label{fig:dipole_moments_loop_antenna}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_phase}
-		\caption{Phase}
+		\caption{Phases of the powers at output ports 1 and 2, derived from the S-parameters, as discussed in \autoref{sec:s-param-data}. The analysis focuses on the phase shift between the two ports, which provides information about the presence of $\mathbf{m}_\mathrm{m}$ and $\mathbf{m}_\mathrm{e}$, as investigated in \autoref{sec:equ-dip-mom}.}
 		\label{fig:loopphase}
 	\end{subfigure}
 	
-	\caption{Dipole moments and phase shift of loop antenna.}
+	\caption{}
 	\label{fig:loop_moments_phase}
 \end{figure}
 
-The dipole moments are plotted in \autoref{fig:dipole_moments_loop_antenna}. The amount of magnetic flux passing through the area of the loop antenna lead to the large magnitude of $\mathbf{m}_m$, as described by \crefrange{eqn:e_a_closed_int}{ eqn:e_b_closed_int} and \autoref{eqn:m_v}. $\mathbf{m}_e$ is created by the current in the loop antenna according to \crefrange{eqn:e_int_a}{ eqn:e_int_b}, which partially points in direction of $\mathbf{e}^\pm_\mathrm{TEM}$. Opposed to the case of a monopole antenna, $\mathbf{m}_e$ and $\mathbf{m}_m$ demonstrate non-linear behavior over frequency, which is investigated further in \autoref{sec:loop_electrical_characteristics}.
-
-
+\todo[inline]{TODO: Redo magnetic and electric energy plots logarithmic. Check feed and return current.}
 
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_opower}
-		\caption{}
+		\caption{Electric field in y-direction $E_\mathrm{y}$ at $x=0, y=b/4, z=\pm l/2$, and power at one output port, derived with the S-parameters in \autoref{eqn:power_antenna}.}
 		\label{fig:loopopower}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_opower_comp}
-		\caption{}
+		\caption{Comparison of output power produced by the monopole antenna and its equivalent dipole moments.}
 		\label{fig:loopopowercomp}
 	\end{subfigure}
 	
-	\caption{Output power of the loop antenna compared with the output power produced by the dipole moments}
+	\caption{}
 	\label{fig:example}
 \end{figure}
 
 
-Possible reasons for the deviation in power are numerical inaccuracies or the coupling of the TE\textsubscript{01} mode.
+The power and $E_y$ induced by the loop antenna at the output ports is shown in \autoref{fig:loopopower}, and increases not as steeply as the output power of the monopole antenna exhibited in \autoref{fig:monopoleoutputpower}. This directly correlates with the decrease of $\mathbf{m}_\mathrm{m}$ with increasing frequency.
 
-\FloatBarrier
+\autoref{fig:loopopowercomp} demonstrates the output power generated by the equivalent dipole moments $\mathbf{m}_\mathrm{m}$, $\mathbf{m}_\mathrm{e}$ and the loop antenna. Their similarity support the validity of the model used.
+
 \subsubsection{Electrical characteristics}\label{sec:loop_electrical_characteristics}
-\FloatBarrier
 
 \begin{figure}[htbp]
 	\centering
@@ -695,7 +704,7 @@ Possible reasons for the deviation in power are numerical inaccuracies or the co
 \end{figure}
 
 
-The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling to the septum and back to the feedpoint. The difference between the feedpoint and return path current increases over frequency, translating to rising displacement currents. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. 
+The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling to the septum and back to the feedpoint. The difference between the feedpoint and return path current increases over frequency, translating to rising displacement currents. Furthermore, the decrease in feed current over rising frequency, shown in \autoref{fig:loopfeedcurrent}, also hints to the presence of increasing displacement currents. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. 
 
 The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is processed with the same loop integration at the same height above the PEC surface. The results vary with height above the PEC surface due to the displacement currents in the near-field.
 
@@ -708,11 +717,13 @@ The feedpoint current is derived through integration of $\mathbf{H}$ in a closed
 
 \todo[inline]{Insert free-space PEC loop simulations.}
 
-\autoref{fig:loopfeedvoltage} demonstrates the voltage at the feedpoint of the antenna, which significantly rises over the frequency. Because the increase in voltage leads to larger displacement current according to \autoref{eqn:me_i}, $\mathbf{m}_e$ follows its frequency-behavior. Similarly, the reduction in current over frequency, shown in \autoref{fig:loopfeedcurrent}, leads a lower induced voltage, and according to \autoref{eqn:m_v} a smaller magnitude of $\mathbf{m}_m$. The current and the voltage are determined with \cref{eqn:vin,eqn:iin}.
+\autoref{fig:loopfeedvoltage} demonstrates the voltage at the feedpoint of the antenna, which significantly rises over the frequency, signaling increased induced voltage $V_\mathrm{n}$. According to \autoref{eqn:m_v}, this directly correlates with $\mathbf{m}_\mathrm{m}$, which also becomes apparent when comparing their behavior shown in \crefrange{fig:dipole_moments_loop_antenna}{fig:loopfeedvoltage}.
+
+The increase in voltage also correlates with the displacement current. It raises the potential on the loop antenna, therefore increasing the charge distributions and displacement currents.
 
 \todo[inline]{todo: replace effective voltage and current with peak values for consistency.}
 
-The increases in voltage and decrease in current follows from the impedance, depicted in \autoref{fig:currimp}. The strongly inductive impedance increases linearly over frequency, keeping the input power constant leads to the observed behavior. 
+The increases in voltage and decrease in current follows from the impedance, depicted in \autoref{fig:currimp}. The loop antenna shows strongly inductive behavior. 
 
 \begin{figure}[htbp]
 	\hspace*{4cm}
