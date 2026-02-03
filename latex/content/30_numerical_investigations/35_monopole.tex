@@ -1,0 +1,278 @@
+\subsection{Monopole Antenna}\label{sec:monopole}
+\subsubsection{Setup}
+\FloatBarrier
+
+\begin{figure}[htbp]
+	\centering
+	\hspace*{-0.0cm}
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[height=8cm]{content/img/monopole_near_field}
+		\caption{The numerically derived near-field plot of the monopole antenna shows strong displacement currents near the feedpoint and at the wire end. Simulation results are improved by decreasing mesh element lengths in these regions.}
+		\label{fig:monopolenearfield}		
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		
+		\centering
+		\raisebox{0.1cm}{\includegraphics[height=8cm]{content/img/monopole_antenna}}
+		\caption{The geometrical aspects of the cylindrical monopole antenna, as implemented in the simulation model.}
+		\label{fig:monopoleantenna}
+	\end{subfigure}
+	
+	\caption{}
+	\label{fig:field_monopole_antenna}
+\end{figure}
+
+
+The monopole antenna shown in \autoref{fig:monopoleantenna} is installed in the TEM cell and connected to a feed point located on the top wall. The current flowing through it is aligned with the TEM mode and produces an electric dipole moment.
+
+The antenna has a physical length of 5\,mm, making it electrically short for frequencies up to 6,GHz. For frequencies up to 1.25\,GHz, it can be accurately approximated as an infinitesimal electric dipole, as discussed in \autoref{sec:infinitesimal_electric_dipoles}. At higher frequencies, up to 6,GHz, it behaves as a small electric dipole, as explained in \autoref{sec:small_electric_dipole}.
+
+
+
+
+\subsubsection{Equivalent dipole moments}
+
+The corresponding equivalent electric and magnetic dipole moments, $\mathbf{m}_e$ and $\mathbf{m}_m$, are analytically derived using \crefrange{eqn:ifa_me}{eqn:ifa_mm}. The resulting $\mathbf{m}_e$ shown in \autoref{fig:dipolemomentsmonopolewide} increases approximately linearly over frequency, while the magnetic dipole moment is negligible over the whole frequency range. 
+
+Furthermore, the phase difference between the power at the two output ports is zero across the entire frequency range. This observation is consistent with the assumption that a pure electric dipole moment introduces no phase shift between the output port powers, as discussed in \autoref{sec:equ-dip-mom}.
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\linewidth]{content/img/dipole_moments_monopole_wide}
+	\caption{The equivalent electric and magnetic dipole moments analytically calculated with \crefrange{eqn:ifa_me}{eqn:ifa_mm}. To enable direct comparison with the magnetic dipole moment, the electric dipole moment is normalized by the impedance of free space $Z_0$, as discussed in \autoref{sec:prep_dip}.}
+	\label{fig:dipolemomentsmonopolewide}
+\end{figure}
+
+
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+	%		\centering
+	%		\includegraphics[width=1\linewidth]{content/img/dipole_moments_monopole.png}
+	%		\caption{Equivalent dipole moments to model the monopole antenna.}
+	%		\label{fig:dipole_moments_monopole}
+	%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+	%		\centering
+	%		\includegraphics[width=1\linewidth]{content/img/phase_shift_monopole}
+	%		\caption{Phase shift of the power between the output ports produced by the monopole antenna.}
+	%		\label{fig:phaseshiftmonopole}
+	%	\end{subfigure}
+%	
+%	\caption{The equivalent dipole moments and the corresponding induced phase shift of the power between the output ports delivers information about the electric and magnetic coupling behavior of the monopole antenna.}
+%	\label{fig:monopole_moments_phase}
+%\end{figure}
+
+
+
+\subsubsection{Electrical characteristics}
+
+The feedpoint voltage $V$ of the antenna, shown in \autoref{fig:monopolefeedpointvoltagecurrent}, remains largely constant over the investigated frequency range. Consequently, the voltage induced between the antenna and the septum is negligible. This observation is consistent with the absence of a magnetic dipole moment $\mathbf{m}_m$, which is directly related to the induced voltage according to \autoref{eqn:m_v}. 
+
+The feedpoint current $I$, shown in \autoref{fig:monopolefeedpointvoltagecurrent}, increases linearly. The entire current contributes to displacement currents due to the absence of a return path. According to \autoref{eqn:me_i}, $\mathbf{m}_\mathrm{e}$ is proportional to the displacement current to the septum. The linear increase of $\mathbf{m}_\mathrm{e}$ and $I$ are therefore related.
+
+At low frequencies, the antenna impedance in \autoref{fig:monopoleimp} shows a high magnitude, which rapidly decreases as frequency increases. Over the whole frequency range, it exhibits highly capacitive behavior, which is consistent with \autoref{eqn:compl_power_inf_elec_dipole} and the discussion in \autoref{sec:infinitesimal_electric_dipoles}.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_feedpoint_voltage_current}
+		\caption{Magnitude of the voltage and current applied at the feedpoint of the monopole antenna over frequency, derived through the S-parameters with \crefrange{eqn:iin}{eqn:vin}.}
+		\label{fig:monopolefeedpointvoltagecurrent}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_imp}
+		\caption{Magnitude and phase of the antenna impedance over frequency, derived through the S-parameters with \autoref{eqn:za}.}
+		\label{fig:monopoleimp}
+	\end{subfigure}
+	
+	\caption{}
+	\label{fig:monopoleimpvoltcurr}
+\end{figure}
+
+%The electric current present in the monopole antenna is aligned with the electric field $\mathbf{e}_\mathrm{TEM}^\pm$ of the dominant TEM mode present in the investigated frequency range. The electric dipole moment in y-direction suffices to model the antenna, because they align with the fields of the TEM mode.
+
+Applying \autoref{eqn:me_i} to determine $\mathbf{m}_\mathrm{e}$ requires knowledge of the magnitude of the displacement current to the septum. Another possibility of determining $\mathbf{m}_\mathrm{e}$ is the integration of the current $I$ weighted by $\mathbf{e}_\mathrm{TEM}^\pm$ along the monopole antenna, as given in \crefrange{eqn:e_int_a}{eqn:e_int_b}. At a frequency of 3,GHz, this approach yields
+
+\begin{equation}
+	\mathbf{m}_\mathrm{e}(f=3\,\mathrm{GHz})=\int_{b/2-5\,\mathrm{mm}}^{b/2} I(y, f=3\,\mathrm{GHz})\,dy = 85.69\,\upmu\mathrm{Am}\cdot\mathbf{\hat{a}}_z,
+\end{equation}
+
+which corresponds to $\mathbf{m_e}\cdot Z_0=3.23\cdot 10^{-2} \cdot\,\mathrm{Vm}\,\mathbf{\hat{a}}_z$ when normalized by the free-space wave impedance $Z_0$. This approximates $\mathbf{m}_\mathrm{e}$ in \autoref{fig:dipolemomentsmonopolewide} at 3\,GHz reasonably well, therefore supporting \crefrange{eqn:e_int_a}{eqn:e_int_b}. 
+
+%cannot directly be applied using the feedpoint current $I$, since it predominantly gives rise to displacement currents returning to the feedpoint (see \autoref{fig:monopolenearfield}), which do not contribute to the electric coupling.
+
+%According to \autoref{eqn:J1_propagating_waves}, this will lead to a coupling with the output ports. \autoref{eqn:J1_propagating_waves} also requires $\mathbf{e}_\mathrm{TEM}^\pm$ and the part of $I$ contributing to the output power to be in phase at the position of the monopole antenna, due to $\mathbf{e}_\mathrm{TEM}^\pm$ and $\mathbf{h}_\mathrm{TEM}^\pm$ being in-phase at the output ports.
+
+% Using \crefrange{eqn:e_int_a}{eqn:e_int_b} and integrating the current $I$ in \autoref{fig:monopolefeedcurrent} yields
+
+
+
+
+
+%For example, measuring the y-component of the electric field at the center of output port 1 yields $E_y^+(x=0, y, z=l/2)=15.35\,\mathrm{V/m}$, which is constant over $y$. \todo{differentiate somehow between normalized and normal electric field}. Using the Lorentz Reciprocity theorem \autoref{eqn:J1_propagating_waves}, and integrating $E_y^+(x=0, y, z=l/2)$ and $I(x=0, y, z=l/2)$ over the length of the monopole antenna yields \todo{all values must be peak values}
+
+%\begin{equation}
+%	\int_C E_y^+(x=0, y, z=l/2)\cdot I(x=0, y, z=l/2)\,dy=521.9\,\mathrm{\mu W}=2a^2.
+%\end{equation}
+%
+%Applying \autoref{eqn:ifa_me} to then derive the electric dipole moment leads to 
+%
+%\begin{equation}
+%	\mathbf{m}_e = \sqrt{2}\frac{521.9\,\mathrm{W}}{\mathbf{E^\pm}}=
+%\end{equation}
+
+The derived equivalent dipole moments $\mathbf{m}_e$, $\mathbf{m}_m$ in the TEM cell produce the output power over frequency shown in \autoref{fig:monopolemomentcomp}, where they are compared with the output power produced by the monopole antenna. The equivalent dipole moment approximation of the monopole antenna loses precision when approaching the cut-off frequency of the first higher-order mode TE\textsubscript{01}. Considering the coefficients $a_{\mathrm{TE}01}$ and $b_{\mathrm{TE}01}$ of the TE\textsubscript{01}-moment increases accuracy, which is not done here.
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_output_power}
+		\caption{Electric field in y-direction $E_\mathrm{y}$ at $x=0, y=b/4, z=\pm l/2$, and power at one output port, derived with the S-parameters in \autoref{eqn:power_antenna}.}
+		\label{fig:monopoleoutputpower}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_moment_comp}
+		\caption{Comparison of output power produced by the monopole antenna and its equivalent dipole moments to demonstrate validity of the model.}
+		\label{fig:monopolemomentcomp}
+	\end{subfigure}
+	
+	\caption{}
+	\label{fig:monopole_power_comp}
+\end{figure}
+
+The distribution of the current along the monopole antenna shown in \autoref{fig:monopole_current_dist} is numerically derived by integrating the magnetic field intensity in a closed loop around the wire using Ampère's law,
+
+\begin{equation}
+	\oint_\mathrm{l} \mathbf{H} \cdot d\mathbf{l'} = I.
+	\label{sec:ampere_law_fem}
+\end{equation}
+
+A fine mesh resolution, as discussed in \autoref{sec:mesh}, is important for accurate results delivered by \autoref{sec:ampere_law_fem}. 
+
+Near the feedpoint at $0\,\mathrm{mm}$ non-linear behavior becomes apparent due to significant displacement currents and numerical artifacts in this region. This causes the current to exhibit a steeper decline with non-physical oscillations. 
+
+The current distribution at $3\,\mathrm{GHz}$ (see \autoref{fig:currentdistributionmonopole}) approximates that of a small electric dipole, as described in \autoref{sec:small_electric_dipole}. It shows an approximately linear decrease towards zero.
+
+The current distribution at $1\,\mathrm{MHz}$, shown in \autoref{fig:currentloopchargedistribution1mhz}, also decreases linearly along the monopole antenna. I can be approximated with an infinitesimal electric dipole, as discussed in \autoref{sec:infinitesimal_electric_dipoles}.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_current_dist}
+		\caption{The current distribution along the monopole antenna at $3\,\mathrm{GHz}$ shows a linear decrease, which is common for a small electric dipole.}
+		\label{fig:currentdistributionmonopole}
+		\hfill
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/current_loop_charge_distribution_1MHz}
+		\caption{The current distribution along the monopole antenna at $1\,\mathrm{MHz}$ shows a large decline near the feedpoint due to increased displacement currents. It then approaches a roughly constant current distribution, which is typical for an approximate infinitely small electric dipole.}
+		\label{fig:currentloopchargedistribution1mhz}
+	\end{minipage}
+	\caption{}
+	\label{fig:monopole_current_dist}
+\end{figure}
+
+
+\todo[inline]{TODO: Equivalent circuit for Monopole Antennas}
+
+An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. 
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{content/img/chu_circuit}
+	\caption{The Chu equivalent circuit for a short electric dipole models the monopole antenna's behavior. }
+	\label{fig:chucircuit}
+\end{figure}
+
+\FloatBarrier
+\subsubsection{Current distribution on septum}
+\FloatBarrier
+
+\autoref{fig:monopole_surface_currents} shows the surface current density on the septum induced by the monopole antenna at 3\,GHz. The current reaches both output ports in phase, confirming the absence of a phase shift between the output port powers. 
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_surface_currents.png}
+		\caption{Current surface density at 3\,GHz, where mostly the TEM-mode propagates.}
+		\label{fig:monopole_surface_currents}
+	\end{subfigure}
+	
+	\vspace{1em} % Add vertical space between subfigures
+	
+	\begin{subfigure}[b]{1\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_surface_currents_te01.png}
+		\caption{Current surface density of only the TE\textsubscript{01}-mode at 3.3\,GHz with the TEM mode compensated.}
+		\label{fig:monopole_surface_current_te01}
+	\end{subfigure}
+	
+	\caption{Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript{01}-mode.}
+	\label{fig:main}
+\end{figure}
+
+
+\autoref{fig:monopole_surface_current_te01} shows the current density of the septum at 3.3\,GHz, with the TEM-mode compensated at the output ports. Due to the magnetic fields propagating in the z-direction, the current on the septum creates a pattern of swirls. Furthermore, the phase shift of the induced power between the output ports is $\pi$. This results from the magnetic field intensities of the TE\textsubscript{01}-mode being in-phase at the output ports, opposed to the magnetic field intensities of the TEM-mode. 
+
+\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}
+\todo[inline]{idea: offset in x-direction, showing surface current and explaining the decrease in power transfer (normal E-field distribution)}
+
+%If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{h}^\pm = h_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{e}^\pm = e_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
+%An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{h}^\pm$ and $\mathbf{e}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.
+
+
+\FloatBarrier
+\subsubsection{Electromagnetic energy in the TEM cell}
+\FloatBarrier
+
+The monopole antenna generates electromagnetic fields within the TEM cell, resulting in stored electromagnetic energy. The frequency-dependent electric energy is shown in \autoref{eqn:em_energy}. Its quadratic increase correlates with the output power in \autoref{fig:monopoleoutputpower}. The corresponding magnetic energy is several orders of magnitude smaller due to the capacitive behavior of the monopole antenna and is therefore neglected. From the stored electric energy, both the real and imaginary components of the power consumed by the antenna can be determined.
+
+Moreover, the effective inductance and capacitance of the monopole antenna inside the TEM cell can be derived from the magnetic and electric energy expressions given in \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. Using the peak value of the electric energy shown in \autoref{fig:monopoleelecenergy}, the capacitance is estimated to be $C\approx108.55\,\mathrm{fF}$.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\linewidth]{content/img/monopole_elec_energy}
+	\caption{Electric energy determined by integrating the electric field over the TEM cell volume, using \autoref{eqn:em_energy}. }
+	\label{fig:monopoleelecenergy}
+\end{figure}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+	%	\centering
+	%\includegraphics[width=1\linewidth]{content/img/monopole_magn_energy}
+	%\caption{Magnetic energy determined with \autoref{eqn:em_energy}}
+	%\label{fig:monopolemagenergy}
+	%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+	%	\centering
+	%\includegraphics[width=1\linewidth]{content/img/monopole_elec_energy}
+	%\caption{Electric energy determined with \autoref{eqn:em_energy}}
+	%\label{fig:monopoleelecenergy}
+	%	\end{subfigure}
+%	
+%	\caption{Peak electromagnetic energy in the TEM cell generated by the monopole antenna}
+%	\label{fig:monopole_em_energy}
+%\end{figure}
+
+
+\FloatBarrier

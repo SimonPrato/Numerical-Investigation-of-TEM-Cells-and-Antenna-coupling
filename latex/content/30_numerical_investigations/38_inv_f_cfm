@@ -1,0 +1,61 @@
+\subsection{Inverted-F and center-fed monopole antenna}\label{sec:ifa_sim}
+
+\todo[inline]{TODO}
+
+The inverted-F antenna (IFA) and center-fed monopole antenna are modeled in Ansys HFSS as shown in \crefrange{fig:center_fed_monopole}{fig:ifa}. Both have a maximum dimension of 5\,mm and consequently are electrically small for a frequency of up to 6\,GHz. They are both presented here, because of their similar geometry and electrical behavior. Both posses a current loop with equal area and a bar leading away from it. The bar of the CFM points towards the TEM cell's septum, and the bar of the IFA points towards an output port.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[c]{0.48\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{content/img/center_fed_monopole.png}
+		\caption{Center-fed monopole antenna used in simulation}
+		\label{fig:center_fed_monopole}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[c]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{content/img/inverted_f_antenna.png}
+		\caption{Inverted F-antenna used in the simulation}
+		\label{fig:ifa}
+		
+		\vspace{1em}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/gapped_loop_moments}
+		\caption{PLACEHOLDER: Dipole moments comparison}
+		\label{fig:gappedloopmoments2}
+	\end{subfigure}
+	\caption{Main figure caption with one subfigure on the left and two stacked on the right}
+	\label{fig:main}
+\end{figure}
+
+The center fed monopole antenna is shown in \autoref{fig:center_fed_monopole}. The electric wire with the length of 5 mm points towards the septum. 
+
+\todo[inline]{A question on my mind since the beginning of this thesis: Can how is the magnetic dipole moment influenced by rotating this geometry by 90 degrees? Is the magnetic dipole moment higher or lower than in the rotated loop antenna? With my current knowledge, I suspect that the electric dipole moment leads to current coupling with the TEM cell over displacement current, therefore leading to a smaller magnetic dipole moment then in the case of the loop antenna}
+
+The loop area of the center-fed monopole antenna is equal to that of the loop antenna. Consequently, both antennas exhibit the same magnetic dipole moment.
+
+\todo{CFM at 90° rotation still demonstrates magnetic dipole moment, opposed to current loop. Does this scale with antenna height, i.e. electric dipole moment?}
+
+\FloatBarrier
+
+
+
+%\subsubsection{Serial Loop Antenna}
+%
+%This section will discuss the antenna displayed in \autoref{fig:serialloopantenna}. The idea of that antenna is to create two magnetic dipole moments, which are in phase. As the frequency increases, the displacement current between the loops becomes larger, thus reducing the current through and weakening the second loop. The dipole moments in \autoref{fig:serialloopantennadipolemoments} demonstrate a non-linear behavior of the magnetic dipole moment (only very weakly recognizable, but with a geometry sweep this becomes clearer \todo{Find a geometry where this effect is much stronger}). Also, it would be interesting to measure the wave impedances in both loops over the frequency. Also, find the current distributions, add current plots and electric fields, charge distributions.  
+%
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.3\linewidth]{content/img/serial_loop_antenna}
+%	\caption{Serial loop antenna}
+%	\label{fig:serialloopantenna}
+%\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\linewidth]{content/img/serial_loop_antenna_dipole_moments}
+%	\caption{Dipole moments }
+%	\label{fig:serialloopantennadipolemoments}
+%\end{figure}
+
+\FloatBarrier
