@@ -34,7 +34,7 @@ def calculate_moments(e_field: complex, phase_shift: float,
     m_magnetic_intermediate = 1j * (a - b) / (e_field * wave_number)
     m_magnetic = np.abs(1j * m_magnetic_intermediate * 2 * np.pi * frequency * mu_0)
     
-    data = np.column_stack((frequency, m_electric * 377, m_magnetic))
+    data = np.column_stack((frequency/1e9, m_electric * 377, m_magnetic))
     np.savetxt('output/csv/dipole-moments.csv', data, delimiter=',',
            header='Frequency (GHz),Electric Dipole Moment * 377 (Vm),Magnetic Dipole Moment (Vm)')
 
