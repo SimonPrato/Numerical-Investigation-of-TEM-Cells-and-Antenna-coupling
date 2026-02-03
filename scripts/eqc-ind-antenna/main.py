@@ -139,7 +139,7 @@ def main():
 
     # Save dipole moments to csv file
     output_csv = f"output/{antenna_name}_dipole_moments.csv"
-    save_dipole_moments_to_csv(frequencies/1e9, np.abs(m_e), np.abs(m_m), output_csv)
+    save_dipole_moments_to_csv(frequencies, np.abs(m_e), np.abs(m_m), output_csv)
 
 
 if __name__ == "__main__":
