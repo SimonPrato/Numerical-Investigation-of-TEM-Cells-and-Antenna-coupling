@@ -27,6 +27,7 @@ urlcolor=black
 \usepackage{todonotes}
 \usepackage{subcaption}
 \usepackage{multirow}
+\usepackage{enumitem}
 \usepackage{upgreek}
 \usepackage{circuitikz}
 \usepackage[labelfont=bf,labelsep=space]{caption}
@@ -39,6 +40,17 @@ urlcolor=black
 \crefname{figure}{Figure}{Figures}
 \Crefname{figure}{Figure}{Figures}
 
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+
+\crefname{section}{Section}{Sections}
+\Crefname{section}{Section}{Sections}
+\crefname{subsection}{Section}{Sections}
+\Crefname{subsection}{Section}{Sections}
+\crefname{subsubsection}{Section}{Sections}
+\Crefname{subsubsection}{Section}{Sections}
+
 \addbibresource{references/references.bib}
 \setlength{\textwidth}{15 true cm}
 \setlength{\textheight}{22 true cm}
@@ -48,6 +60,8 @@ urlcolor=black
 
 \renewcommand{\textfraction}{.2}
 \renewcommand{\floatpagefraction}{.8}
+
+
 
 \begin{document}
 %\frontmatter
