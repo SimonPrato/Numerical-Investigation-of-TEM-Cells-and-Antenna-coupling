@@ -82,7 +82,7 @@ def save_dipole_moments_to_csv(frequencies, m_e, m_m, output_file):
     """Save frequencies and dipole moments to a CSV file."""
     # Create a DataFrame with the data
     df = pd.DataFrame({
-        'Frequency [GHz]': frequencies / 1e9,
+        'Frequency [GHz]': frequencies/1e9,
         'Electric Dipole Moment (m_e) [A·m]': m_e,
         'Magnetic Dipole Moment (m_m) [V/m]': m_m
     })
