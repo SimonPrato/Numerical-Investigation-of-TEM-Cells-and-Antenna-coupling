@@ -78,6 +78,20 @@ def plot_dipole_moments(frequencies, m_e, m_m, antenna_name):
     plt.show()
 
 
+def save_dipole_moments_to_csv(frequencies, m_e, m_m, output_file):
+    """Save frequencies and dipole moments to a CSV file."""
+    # Create a DataFrame with the data
+    df = pd.DataFrame({
+        'Frequency [GHz]': frequencies / 1e9,
+        'Electric Dipole Moment (m_e) [A·m]': m_e,
+        'Magnetic Dipole Moment (m_m) [V/m]': m_m
+    })
+
+    # Save to CSV
+    df.to_csv(output_file, index=False)
+    print(f"Data saved to {output_file}")
+
+
 def main():
     antenna_name = "loop"  # Example: rename this to your actual antenna label
 
@@ -122,6 +136,10 @@ def main():
 
     # Plot results
     plot_dipole_moments(frequencies, m_e, m_m, antenna_name)
+
+    # Save dipole moments to csv file
+    output_csv = f"output/{antenna_name}_dipole_moments.csv"
+    save_dipole_moments_to_csv(frequencies/1e9, np.abs(m_e), np.abs(m_m), output_csv)
 
 
 if __name__ == "__main__":
