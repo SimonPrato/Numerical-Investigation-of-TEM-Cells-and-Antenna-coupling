@@ -44,19 +44,18 @@
 \contentsline {figure}{\numberline {5.21}{\ignorespaces \relax }}{52}{figure.caption.83}%
 \contentsline {figure}{\numberline {5.22}{\ignorespaces \relax }}{53}{figure.caption.85}%
 \contentsline {figure}{\numberline {5.23}{\ignorespaces \relax }}{53}{figure.caption.86}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces Effective voltage and current at feedpoint of the loop antenna.}}{54}{figure.caption.87}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces Peak currents of loop antenna at feedpoint and return path.}}{54}{figure.caption.88}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces Magnitude and phase of the impedance of the current loop antenna.}}{55}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.27}{\ignorespaces Equivalent circuits of the small loop antenna.}}{55}{figure.caption.92}%
-\contentsline {figure}{\numberline {5.28}{\ignorespaces Circuit representing the TEM cell, small loop antenna and their coupling.}}{56}{figure.caption.95}%
-\contentsline {figure}{\numberline {5.29}{\ignorespaces Equivalent dipole moments derived by the equivalent circuit compared to the dipole moments of the loop antenna in \autoref {fig:dipole_moments_loop_antenna}.}}{57}{figure.caption.96}%
-\contentsline {figure}{\numberline {5.30}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{58}{figure.caption.97}%
-\contentsline {figure}{\numberline {5.31}{\ignorespaces Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript {01} separately over frequency. TODO: log scale, bigger frequency range}}{59}{figure.caption.98}%
-\contentsline {figure}{\numberline {5.32}{\ignorespaces Dipole moments and phase shift of loop antenna}}{59}{figure.caption.101}%
-\contentsline {figure}{\numberline {5.33}{\ignorespaces Geometry of loop antenna with a gap in the return path inserted in the TEM cell.}}{60}{figure.caption.102}%
-\contentsline {figure}{\numberline {5.34}{\ignorespaces Dipole moments and phase shift of loop antenna}}{61}{figure.caption.105}%
-\contentsline {figure}{\numberline {5.35}{\ignorespaces Comparison of dipole moments and output power at different gap heights.}}{62}{figure.caption.106}%
-\contentsline {figure}{\numberline {5.36}{\ignorespaces Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}}{62}{figure.caption.107}%
-\contentsline {figure}{\numberline {5.38}{\ignorespaces Main figure caption with one subfigure on the left and two stacked on the right}}{64}{figure.caption.110}%
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Shielding effectiveness of a sheet of zinc and nickel versus the material thickness.}}{65}{figure.caption.113}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Coupling of port 1 to ports 3 and 4 with empty square aperture}}{65}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces \relax }}{54}{figure.caption.87}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Magnitude and phase of the impedance of the current loop antenna.}}{54}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Equivalent circuits of the small loop antenna.}}{55}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Circuit representing the TEM cell, small loop antenna and their coupling.}}{56}{figure.caption.94}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Equivalent dipole moments derived by the equivalent circuit compared to the dipole moments of the loop antenna in \autoref {fig:dipole_moments_loop_antenna}.}}{57}{figure.caption.95}%
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Current surface densities at different frequencies, below and above the cut-off frequency of the TE\textsubscript {01} mode.}}{58}{figure.caption.96}%
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Output power transmitted by the antenna to an output ports through the TEM and TE\textsubscript {01} separately over frequency. TODO: log scale, bigger frequency range}}{59}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Dipole moments and phase shift of loop antenna}}{59}{figure.caption.100}%
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Geometry of loop antenna with a gap in the return path inserted in the TEM cell.}}{60}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Dipole moments and phase shift of loop antenna}}{61}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.34}{\ignorespaces Comparison of dipole moments and output power at different gap heights.}}{62}{figure.caption.105}%
+\contentsline {figure}{\numberline {5.35}{\ignorespaces Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}}{62}{figure.caption.106}%
+\contentsline {figure}{\numberline {5.37}{\ignorespaces Main figure caption with one subfigure on the left and two stacked on the right}}{64}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Shielding effectiveness of a sheet of zinc and nickel versus the material thickness.}}{65}{figure.caption.112}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Coupling of port 1 to ports 3 and 4 with empty square aperture}}{65}{figure.caption.115}%

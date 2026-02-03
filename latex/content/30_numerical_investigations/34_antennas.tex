@@ -685,21 +685,21 @@ The power and $E_y$ induced by the loop antenna at the output ports is shown in 
 
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-	\centering
-\includegraphics[width=1\linewidth]{content/img/loop_feed_current}
-\caption{Current}
-\label{fig:loopfeedcurrent}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop_feed_return_current}
+		\caption{The current at feedpoint and return path of the loop antenna demonstrates an increasing difference with frequency, indicating a growing occurrence of displacement currents. It is determined with \autoref{sec:ampere_law_fem}.}
+		\label{fig:loopfeedreturncurrent}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.45\textwidth}
-	\centering
-\includegraphics[width=1\linewidth]{content/img/loop_feed_voltage}
-\caption{Voltage}
-\label{fig:loopfeedvoltage}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop_feed_voltage}
+		\caption{The voltage across the feedpoint, which is determined with \autoref{eqn:vin}.}
+		\label{fig:loopfeedvoltage}
 	\end{subfigure}
 	
-	\caption{Effective voltage and current at feedpoint of the loop antenna.}
+	\caption{}
 	\label{fig:example}
 \end{figure}
 
@@ -707,13 +707,6 @@ The power and $E_y$ induced by the loop antenna at the output ports is shown in 
 The current $I$ in the loop antenna changes along the antenna wire as shown in \autoref{fig:loopfeedreturncurrent}, indicating displacement current coupling to the septum and back to the feedpoint. The difference between the feedpoint and return path current increases over frequency, translating to rising displacement currents. Furthermore, the decrease in feed current over rising frequency, shown in \autoref{fig:loopfeedcurrent}, also hints to the presence of increasing displacement currents. Consequently, $\mathbf{m}_e$ gains a significant magnitude according to \autoref{eqn:me_i}, influencing the electric coupling behavior of the antenna. 
 
 The feedpoint current is derived through integration of $\mathbf{H}$ in a closed loop of radius 0.11\,mm, measured 0.17\,mm above the feedpoint. The return path current is processed with the same loop integration at the same height above the PEC surface. The results vary with height above the PEC surface due to the displacement currents in the near-field.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.7\linewidth]{content/img/loop_feed_return_current}
-	\caption{Peak currents of loop antenna at feedpoint and return path.}
-	\label{fig:loopfeedreturncurrent}
-\end{figure}
 
 \todo[inline]{Insert free-space PEC loop simulations.}
 
