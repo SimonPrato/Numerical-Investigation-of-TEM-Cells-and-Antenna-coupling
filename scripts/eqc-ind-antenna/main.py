@@ -45,9 +45,6 @@ def plot_dipole_moments(frequencies, m_e, m_m, antenna_name):
     fig, ax1 = plt.subplots(figsize=(3.9, 2.64))
 
     # Left Y-axis: Electric dipole moment
-    print(list(normed_m_e))
-    print(list(abs_m_m))
-    print(list(frequencies))
     ax1.set_xlabel('Frequency [GHz]')
     ax1.set_ylabel(r'Electric Dipole Moment $\left|m_e\right|\cdot 377\ \Omega$ [V/m]', color='tab:red')
     ax1.plot(frequencies / 1e9, normed_m_e, color='tab:red', label=r'$\left|m_e\right|\cdot 377\Omega$')

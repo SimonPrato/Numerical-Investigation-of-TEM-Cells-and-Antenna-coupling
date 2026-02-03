@@ -32,10 +32,10 @@ def calc(output_power, output_voltage_phase_1, output_voltage_phase_2,
     u_2 = np.sqrt(output_power * 50) * np.exp(1j * output_voltage_phase_2)
 
     # Component values
-    ct = tem_capacitance / 2# tem cell capacitance
-    lt = tem_inductance / 2 # tem cell inductance
-    ca = antenna_capacitance  # antenna capacitance
-    la = antenna_inductance  # antenna inductance 
+    ct = tem_capacitance / 2 # tem cell capacitance
+    lt = tem_inductance / 2# tem cell inductance
+    ca = antenna_capacitance# antenna capacitance
+    la = antenna_inductance # antenna inductance 
 
     # circuit values
     i_ca = input_voltage * 1j * 2 * np.pi * frequency * ca
@@ -49,13 +49,14 @@ def calc(output_power, output_voltage_phase_1, output_voltage_phase_2,
     i_ck = i_lt1 + i_lt2
     i_la = i - i_ca - i_ck
     r_c_parallel = 1/(1/50+1j*2*np.pi*frequency*ct)
-    induced_voltage = np.sqrt((((u_1 - u_2) - (-1j * 2 * np.pi * frequency * lt * i_lt1 + 1j * 2 * np.pi * frequency * lt * i_lt2)) / 2 * r_c_parallel/(1j * 2*np.pi*frequency*lt+r_c_parallel))**2/50)
+    induced_voltage = np.sqrt((((u_1 - u_2) - (-1j * 2 * np.pi * frequency * lt * i_lt1 + 1j * 2 * np.pi * frequency * lt * i_lt2)) * r_c_parallel/(1j * 2*np.pi*frequency*lt+r_c_parallel))**2/50)
     m = (input_voltage - 1j * 2 * np.pi * frequency * la * i_la) / (1j * 2 * np.pi * frequency * (i_lt1 - i_lt2))
     inductive_power = np.conj(i_la) * input_voltage * np.cos(np.angle(i_la))
     a_minus_b = induced_voltage
-    equ_mag_dipole_moment = 1j * a_minus_b / (183.1858* 2 * np.pi * frequency) * 299792458 * 2 * np.pi * frequency * 1.256637 * pow(10.0,-6)
-    a_plus_b = np.sqrt((i_ck / 2 * 1/50 / (1/50 + 1j * 2 * np.pi * frequency * ct))**2 * 50) 
-    equ_ele_dipole_moment = a_plus_b / 183.1858 
+    # Note: Effective voltages are used here
+    equ_mag_dipole_moment = 1j * a_minus_b / (416.6666* 2 * np.pi * frequency) * 299792458 * 2 * np.pi * frequency * 1.256637 * pow(10.0,-6)
+    a_plus_b = np.sqrt((i_ck * 1/50 / (1/50 + 1j * 2 * np.pi * frequency * ct))**2 * 50) 
+    equ_ele_dipole_moment = a_plus_b / 416.6666
     variables = [i_ca, i, i_r1, i_r2, i_ct1, i_ct2, i_lt1, i_lt2, i_ck, i_la, m, equ_mag_dipole_moment, equ_ele_dipole_moment, 1e12 * ct, 1e12 * lt, 1e12 * ca, 1e12 * la, u_1, u_2, input_impedance, induced_voltage]
     names = ['i_ca', 'i', 'i_r1', 'i_r2', 'i_ct1', 'i_ct2', 'i_lt1', 'i_lt2', 'i_ck', 'i_la', 'm', 'equ_mag_dipole_moment', 'equ_ele_dipole_moment', 'ct', 'lt', 'ca', 'la', 'u_1', 'u_2', 'input_impedance', 'induced_voltage']
 
