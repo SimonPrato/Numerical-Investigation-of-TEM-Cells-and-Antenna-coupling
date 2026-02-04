@@ -19,7 +19,7 @@
 		\label{fig:loopantenna}
 	\end{subfigure}
 	
-	\caption{The geometry of the loop antenna assimilates a square with round edges. Each side has a length of 1.6\,mm. The return path leads back to the PEC surface of the TEM cell. The electric near-field shows large a displacement current and voltage drop near the feed-point. It has been derived with a refined mesh on the antenna surface and near the feedpoint, according to the discussion in \cref{sec:mesh}.}
+	\caption{The geometry of the loop antenna assimilates a square with round edges. The height and width of the antenna equal $h=w=1.6$\,mm. The return path leads back to the PEC surface of the TEM cell. The electric near-field shows large a displacement current and voltage drop near the feed-point. It has been derived with a refined mesh on the antenna surface and near the feedpoint, according to the discussion in \cref{sec:mesh}.}
 	\label{fig:loop_moments_phase}
 \end{figure}
 
@@ -298,55 +298,31 @@ Due to the modeling of the power transfer with $C_k$, $M_{A,T1}$ and $M_{A,T2}$,
 			\node[circ] at (16.75, 10.5){};
 		\end{tikzpicture}
 	}
-	\caption{Circuit representing the TEM cell, small loop antenna and their coupling.}
+	\caption{Circuit representing the TEM cell and the loop antenna, with the additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their near-field coupling behavior.}
 	\label{fig:full_circuit}
 \end{figure}
-
-%A fine mesh is important due to the near-fields of the antenna. Coarse meshes lead to bad modeling the the fields near the antenna, leading to bad current and voltage calculations in the antenna. A large part of this happens due to bad modeling of the displacement current near the port. Especially small values which are important, such as the capicitance responsible for electric coupling of the antenna, heavily suffer from the numerical error.
-
-%\begin{figure}[htbp]
-%	\centering
-%	\begin{subfigure}[b]{0.48\textwidth}
-	%	\centering
-	%\includegraphics[width=1\linewidth]{content/img/loop_inductance}
-	%\caption{}
-	%\label{fig:loopinductance}
-	%	\end{subfigure}
-%	\hfill
-%	\begin{subfigure}[b]{0.48\textwidth}
-	%	\centering
-	%	\includegraphics[width=1\linewidth]{content/img/loop_capacitance}
-	%	\caption{}
-	%	\label{fig:loopcapacitance}
-	%	\end{subfigure}
-%	
-%	\caption{Dipole moments and phase shift of loop antenna}
-%	\label{fig:example}
-%\end{figure}
-
-%The capacitance of the antenna in the TEM cell is $C_{AT}=6.74\,\mathrm{pF}$ and the inductance $L_{AT}=16.51\,\mathrm{nH}$, approximately constant over frequency. In free space, the antenna has much lower inductance and capacitance values, which vary with frequency. \todo{plot free space capacitance and inductance values}
 
 The magnetic dipole moment $\mathbf{m}_m$ is derived by the induced voltage in $L_{T1}$ and $L_{T2}$ according to \autoref{eqn:m_v}, and the electric dipole moment $\mathbf{m}_e$ by the displacement current in $C_k$ through \autoref{eqn:me_i}. This results in $\mathbf{m}_e$ and $\mathbf{m}_m$ depicted in \autoref{fig:loopeqcmoments}, which are similar to the dipole moments derived by the simulator in the high-frequency range, but accuracy recedes in the low-frequency range. 
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\linewidth]{content/img/loop_eqc_moments}
-	\caption{Equivalent dipole moments derived by the equivalent circuit in \autoref{fig:full_circuit} compared to the dipole moments of the loop antenna, shown in \autoref{fig:dipole_moments_loop_antenna}.}
+	\caption{Equivalent dipole moments derived by the equivalent circuit depicted in \autoref{fig:full_circuit}, compared to the dipole moments of the loop antenna, shown in \autoref{fig:dipole_moments_loop_antenna}. The electric dipole moment $\mathbf{m}_e$ is weighted with $Z_0$ for comparison purposes.}
 	\label{fig:loopeqcmoments}
 \end{figure}
 
-\FloatBarrier
-\subsubsection{Current distribution on septum and higher order modes}
-\FloatBarrier
+\todo[inline]{TODO: I suspect that better modeling of the TEM cell reactance leads to more accurate results in \autoref{fig:loopeqcmoments}}
 
-The loop antenna induces surface currents on the septum of the TEM cell, as shown in \autoref{fig:loop_surface_current}. At a frequency of 3,GHz, the currents reaching the output ports are out of phase, as illustrated in \autoref{fig:current_loop_surface_current}. This observation is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase shift equal $\pm\pi$ for a pure magnetic dipole moment.
+\subsubsection{Current distribution on septum and higher order modes}
+
+The radiating loop antenna induces surface currents on the septum of the TEM cell, as shown in \autoref{fig:loop_surface_current}. At a frequency of 3,GHz, the currents reaching the output ports are out of phase, as illustrated in \autoref{fig:current_loop_surface_current}. This observation is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase shift of $\pm\pi$ between the output port powers in the presence of a magnetic dipole moment.
 
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents.png}
-		\caption{Surface current density of septum induced by loop antenna at 3\,GHz, where the TEM mode propagates.}
+		\caption{The centrally located loop antenna without offset or rotation at a frequency of 3\,GHz, where mainly the TEM mode propagates.}
 		\label{fig:current_loop_surface_current}
 	\end{subfigure}
 	
@@ -355,7 +331,7 @@ The loop antenna induces surface currents on the septum of the TEM cell, as show
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation_100MHz}
-		\caption{Surface current density of loop antenna with offset of $x=7\,\mathrm{mm}$ and a 90$\textdegree$ rotation angle at 100\,MHz, where the TEM mode propagates. The currents passing to the output ports are negligible.}
+		\caption{Loop antenna with offset of $x=7\,\mathrm{mm}$ and a $\pi/4$ rotation angle at 100\,MHz, where only the TEM mode propagates. The currents passing to the output ports are negligible.}
 		\label{fig:loopsurfacecurrentsoffsetrotation}
 	\end{subfigure}
 	
@@ -364,11 +340,11 @@ The loop antenna induces surface currents on the septum of the TEM cell, as show
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation_3GHz3}
-		\caption{Surface current density of loop antenna with offset of $x=7\,\mathrm{mm}$ and a 90$\textdegree$ rotation angle at 3.3\,GHz, where the TEM and TE\textsubscript{01} modes propagate. The currents passing to the output ports produce significant power, shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.}
+		\caption{Loop antenna with offset of $x=7\,\mathrm{mm}$ and a $\pi/4$ rotation angle at 3.3\,GHz, where the TEM and TE\textsubscript{01} modes both propagate. The currents passing to the output ports produce significant power, as shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.}
 		\label{fig:loopsurfacecurrentsoffsetrotation3ghz3}
 	\end{subfigure}
 	
-	\caption{}
+	\caption{Surface current density on the septum induced by the loop antenna for different frequencies and positions of the antenna.}
 	\label{fig:loop_surface_current}
 \end{figure}
 
@@ -379,15 +355,11 @@ The loop antenna induces surface currents on the septum of the TEM cell, as show
 	\label{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}
 \end{figure}
 
-\todo[inline]{TODO: log scale in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}. Broader frequency range.}
+When the antenna is rotated by $\pm\pi/4$ and offset by $x=7\,\mathrm{mm}$, power transmission at 3\,GHz is insignificant. According to \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int} and \autoref{eqn:m_v}, efficient coupling requires the magnetic field intensity of the propagating TEM mode $\mathbf{h}_\mathrm{TEM}^\pm$ to be aligned with the vector normal to the antenna surface. The current distribution \autoref{fig:loopsurfacecurrentsoffsetrotation} demonstrates no excited waves in this configuration. Instead, the power produced by the surface current remains reactive, forming closed circulation patterns around the induced magnetic fields. 
 
-When rotating the antenna by $\pi/4$ and offsetting it by $x=7\,\mathrm{mm}$, the transmission of power is not possible at 3\,GHz. According to \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int} and \autoref{eqn:m_v}, the magnetic field intensity of the propagating TEM  mode $\mathbf{h}_\mathrm{TEM}^\pm$ must align with the vector perpendicular to the antenna's surface. As visible in the current distribution \autoref{fig:loopsurfacecurrentsoffsetrotation}, there is no wave propagation and the power produced by the surface current remains reactive, which forms circles around the generated magnetic fields. 
-
-At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode is able to propagate in the TEM cell. In this case, $\mathbf{h}_\mathrm{TE01}^\pm$ aligns with the axial vector offsetted, rotated loop antenna surface. As visible in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}, a large proportion of the current now reaches the output ports, providing output power. It is in-phase as opposed to the previous case, due to $\mathbf{h}_\mathrm{TE01}^+$ being in-phase with $\mathbf{h}_\mathrm{TE01}^-$ at the output ports, too, as discussed in \cref{sec:equ-dip-mom}. The output power increases sharply, as demonstrated in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.
+At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode propagates in the TEM cell. In this case, $\mathbf{h}_\mathrm{TE01}^\pm$ aligns with the normal vector of the offset and rotated loop antenna surface. As shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}, a significant proportion of the current now reaches the output ports, resulting in transmission of power. In contrast to the previous case, the output powers are in-phase, as discussed in \cref{sec:equ-dip-mom}. The output power transmitted by the TE\textsubscript{01} mode increases sharply with frequency, as demonstrated in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.
 
 \todo[inline]{change jsurf name in legend to surface current}
-
-
 
 
 %\autoref{fig:currentloopchargedistribution} shows the charge density distribution in the current loop antenna. Charges collect, among other locations, at the bottom wire. This leads to electric coupling with the septum. 
@@ -470,31 +442,32 @@ At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode is able to propagate i
 \subsubsection{Influence of antenna's geometry}
 \FloatBarrier
 
-The antenna's geometry influences the coupling behavior. To demonstrate this, the loop antennas presented in are simulated, and their dipole moments and power consumption compared. 
-
-The behavior of the magnetic dipole moments $\mathbf{m}_m$ are equal in all cases according to \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int}, since the total area of the loop antenna remains the same. Non-linearities persist, due to almost unchanging capacitance of the antenna to the upper PEC plane, causing increasing displacement current over frequency.
+The influence of the antenna's geometry on coupling behavior is investigated. The height $h$ and width $w$ of the loop antenna presented in \autoref{fig:loopantenna} is varied, and their dipole moments and power consumption compared in \crefrange{fig:loop-geomg-comp}{fig:loop-geom-power}. 
 
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[t]{0.48\textwidth}
+	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop-geomg-comp}
-		\caption{}
+		\caption{Dipole moments comparison}
 		\label{fig:loop-geomg-comp}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop-geom-power}
-		\caption{}
+		\caption{Output power comparison}
 		\label{fig:loop-geom-power}
 	\end{subfigure}
 	
-	\caption{Dipole moments and phase shift of loop antenna}
+	\caption{Dipole moments and output power comparisons of two different loop antenna configurations presented, one with $h=2.16\,\mathrm{mm}, w=1.4\,\mathrm{mm}$ and the other with $h=1.2\,\mathrm{mm}, w=2.36\,\mathrm{mm}$. The electric dipole moment $\mathbf{m}_e$ is weighted with $Z_0$ for comparison purposes.}
 	\label{fig:example}
 \end{figure}
 
-The electric dipole moment $\mathbf{m}_e$ is strongly influenced by the antenna's height. An antenna with large $h$ leads to increased displacement currents to the septum.
+The loop area is identical in both configurations presented. Consequently, the behavior of the magnetic dipole moments $\mathbf{m}_m$ are the same in both cases, which agrees with \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int}.
+Nonlinear frequency dependence of $\mathbf{m}_m$ persists in both configurations, due to the nearly constant capacitance of the antenna. 
+
+The electric dipole moment $\mathbf{m}_e$ is strongly dependent on the antenna height $h$. The antenna with a height of $h=2.16\,\mathrm{mm}$ generates an electric dipole moment $\mathbf{m}_e$, more than twice as large as that of the antenna with $h = 1.2,\mathrm{mm}$, as depicted in \autoref{fig:loop-geomg-comp}. This result supports validity of the used models and is consistent with \autoref{eqn:me_i}, which relates the displacement current between the antenna and septum to the electric dipole moment $\mathbf{m}_e$. Lastly, the output power produced by the antenna generating the larger electric dipole moment $\mathbf{m}_e$ is also greater, as shown in \autoref{fig:loop-geom-power}.
 
 
 
