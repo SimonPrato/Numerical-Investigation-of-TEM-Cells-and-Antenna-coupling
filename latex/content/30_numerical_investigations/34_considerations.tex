@@ -57,12 +57,14 @@ Every antenna is fed with a round feedpoint, shown in \autoref{fig:antennaport}.
 	\label{fig:antennaport}
 \end{figure}
 
-
+The first two antennas investigated are the monopole (\cref{sec:monopole}) and the loop antenna (\cref{sec:loop_sim}), which represent the most basic antennas producing electric and magnetic dipole moments, respectively. Other electrically small antennas deliver similar results, depending on wether they are capacitive or inductive. Capacitive antennas are analogous to monopole antennas, and inductive ones to the loop antenna, both including their equivalent circuits. This applies even for electrically small antennas with high Q-factor.
 
 
 \subsubsection{TEM cell model}
 
-The TEM cell model used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, shown in \autoref{fig:tem_cell_model}. The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. This simplification allows unrestricted propagation of higher-order modes, facilitating investigations of their coupling behavior with antennas. \todo{reference section where I discussed this} The reference impedances of the output ports equal $Z_0 \approx 50\,\Omega$.
+The TEM cell model used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, shown in \autoref{fig:tem_cell_model}. The cut-off frequencies of higher-order modes are demonstrated in \autoref{fig:te01_te10_tem_propagation}. In following investigations focusing on the TEM mode, the frequency range of interest spans from 1\,MHz to 3\,GHz. If the TE\textsubscript{01} mode is included in the investigations, the upper limit of the frequency range is extended to 3.3\,GHz.
+
+The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. This simplification allows unrestricted propagation of higher-order modes, facilitating investigations of their coupling behavior with antennas. \todo{reference section where I discussed this} The reference impedances of the output ports equal $Z_0 \approx 50\,\Omega$.
 
 \begin{figure}[htbp]
 	\centering
@@ -84,7 +86,9 @@ The TEM cell model used has a width of $a=40$\,mm, a height of $b=24$\,mm and a 
 	\label{fig:tem_cell_model}
 \end{figure}
 
-Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell is derived by \autoref{eqn:em_energy}. The current and voltage at the output ports is found with \crefrange{eqn:iin}{eqn:vin}. The capacitance and inductance of the TEM cell are given by \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. The reactance values fluctuate negligibly over frequency likely due to numerical inaccuracies. The average capacitance and inductance values over the frequency range are chosen. It is assumed that the TEM cell has a constant capacitance and inductance of $C_\mathrm{T} = 6.74\,\mathrm{pF}$ and $L_\mathrm{T} = 16.25\,\mathrm{nH}$. 
+Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell is derived by \autoref{eqn:em_energy}. The current and voltage at the output ports is found with \crefrange{eqn:iin}{eqn:vin}. The capacitance and inductance of the TEM cell are given by \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. The TEM cell has a constant capacitance and inductance of $C_\mathrm{T} = 6.74\,\mathrm{pF}$ and $L_\mathrm{T} = 16.25\,\mathrm{nH}$. 
+
+\todo[inline]{Note: It might be worth it to present the equivalent TEM circuit here.}
 
 \subsubsection{Dipole moments models}\label{sec:prep_dip}
 
@@ -133,6 +137,8 @@ As show in the previous simulations, antennas may be represented by dipole momen
 The mesh determines the resolution of the field quantities over the computational domain. Since electrically small conductors are involved, implementing small mesh elements in their proximity is necessary for accurate modeling of near-fields. Adaptive meshing algorithms may neglect this task, due to the low impact of these near-fields on the solution of the overall computational domain. Consequently, adjusting mesh element sizes does not significantly influence the overall solution of the model, but greatly improves the accuracy of near-field investigations.
 
 The maximum mesh element length in error-prone volumes are adjusted, until the obtained results show a reasonably low amount of numerical artifacts. Such volumes are commonly located adjacent to feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions. The simulation models used in this thesis use roughly 15 elements on the surfaces of such critical volumes to achieve a reasonable representation of these regions while avoiding excessively large meshes.
+
+Lastly, it is best practice to select the upper limit of the investigated frequency range as the solution frequency. This choice produces the largest spatial field changes, forcing the adaptive mesh process to generate a high-resolution mesh. Results in the frequency range below the solution frequency benefit from a reusable mesh that is finer than required. This procedure is applied for every numerically derived frequency-dependent result presented in this thesis.
 
 \subsubsection{S-parameters and derived data}\label{sec:s-param-data}
 

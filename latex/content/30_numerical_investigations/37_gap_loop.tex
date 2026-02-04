@@ -4,7 +4,7 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/gapped_loop_antenna}
-	\caption{Geometry of the loop antenna with a gap in the return path inserted in the TEM cell.}
+	\caption{Geometry of the loop antenna with a gap in the return path inserted in the TEM cell. The gap height is exaggerated for demonstration purposes.}
 	\label{fig:gappedloopantenna}
 \end{figure}
 
@@ -75,39 +75,61 @@ The equivalent dipole moments of the loop antenna with gap are shown in \autoref
 
 An increase in gap height reduces the non-linearities in $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$. The voltage drop across the gap and the charge accumulation remains stabler over frequency. A small gap leads to both an increase in current and inductance, therefore creating a large voltage drop and influencing $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$.
 
-\FloatBarrier
 \subsubsection{Electrical characteristics}
-\FloatBarrier
+
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/gapped_loop_opower}
+%		\caption{Output electric field and power}
+%		\label{fig:gappedloopopower}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/gapped_loop_voltage}
+%		\caption{Peak feed voltage}
+%		\label{fig:gappedloopvoltage}
+%	\end{subfigure}
+%	
+%	\caption{Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}
+%	\label{fig:example}
+%\end{figure}
+
+
+
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/gapped_loop_current}
+%		\caption{RMS feed current.}
+%		\label{fig:gappedloopcurrent}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/gapped_loop_imp}
+%		\caption{Magnitude and phase of impedance}
+%		\label{fig:gappedloopimp}
+%	\end{subfigure}
+%	\label{fig:example}
+%\end{figure}
+
+
+The impedance of the loop antenna with gap is capacitive, shown in \autoref{fig:gappedloopimp},
+The inductance of this antenna is not negligible, opposed to the case of the monopole antenna in \autoref{sec:monopole}. This causes a significant magnitude of $\mathbf{m}_\mathrm{m}$ in \autoref{fig:gappedloopmoments} and a stronger decline in impedance magnitude of the loop antenna with gap, compared to the monopole antenna's impedance, demonstrated in \autoref{fig:monopoleimp}. 
+
+The feedpoint voltage decreases more rapidly over frequency compared to that of the monopole antenna, see \crefrange{fig:gap-loop-voltage-current}{fig:loopfeedreturncurrent}. This behavior is a direct result of increased induced voltage, which correlates with the pronounced magnetic dipole moment $\mathbf{m}_m$, according to \autoref{eqn:m_v}. Furthermore, the feed current increases more slowly, resulting in a slower growth of the electric dipole moment $\mathbf{m}_e$ with frequency, according to \autoref{eqn:me_i}. The magnitude of $\mathbf{m}_e$ is additionally smaller than that of the monopole in \autoref{fig:dipolemomentsmonopolewide}. 
 
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/gapped_loop_opower}
-		\caption{Output electric field and power}
-		\label{fig:gappedloopopower}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/gapped_loop_voltage}
-		\caption{Peak feed voltage}
-		\label{fig:gappedloopvoltage}
-	\end{subfigure}
-	
-	\caption{Electric field and power at the TEM cell's output port, and the peak feed voltage of the antenna.}
-	\label{fig:example}
-\end{figure}
-
-
-
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/gapped_loop_current}
-		\caption{RMS feed current.}
-		\label{fig:gappedloopcurrent}
+		\includegraphics[width=1\linewidth]{content/img/gap-loop-voltage-current}
+		\caption{Voltage and current across feedpoint}
+		\label{fig:gap-loop-voltage-current}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
@@ -116,13 +138,6 @@ An increase in gap height reduces the non-linearities in $\mathbf{m}_\mathrm{e}$
 		\caption{Magnitude and phase of impedance}
 		\label{fig:gappedloopimp}
 	\end{subfigure}
+	\caption{The voltage and current across the feedpoint, together with the related impedance of the loop antenna with gap.}
 	\label{fig:example}
 \end{figure}
-
-The inductance of this antenna is not negligible, opposed to the case of the monopole antenna in \autoref{sec:monopole}. This causes a significant magnitude of $\mathbf{m}_\mathrm{m}$ in \autoref{fig:gappedloopmoments} and a stronger decline in impedance magnitude of the loop antenna with gap, shown in \autoref{fig:gappedloopimp}, compared to the monopole antenna's impedance, demonstrated in \autoref{fig:monopoleimp}.
-
-
-
-The gap leads to a significant reduction of electric current. Consequently, the impedance of the antenna shows capacitive behavior, as indicated in \autoref{fig:gappedloopim}. The energy transfer to the TEM cell occurs primarily by displacement current, explaining the dominating electric dipole moment due to \autoref{eqn:me_i}.
-
-\FloatBarrier
