@@ -2,10 +2,30 @@
 \subsubsection{Setup and geometrical analysis}\label{sec:loop_gap_setup}
 \FloatBarrier
 \begin{figure}[h]
+
+\end{figure}
+\begin{figure}
+
+\end{figure}
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/gapped_loop_antenna}
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/gap_loop_antenna_fields}
+		\caption{Electric near-field intensity}
+		\label{fig:gaploopantennafields}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/gapped_loop_antenna}
+		\caption{Geometry of loop antenna with gap}
+		\label{fig:gappedloopantenna}
+	\end{subfigure}
+	
 	\caption{Geometry of the loop antenna with a gap in the return path inserted in the TEM cell. The gap height is exaggerated for demonstration purposes.}
-	\label{fig:gappedloopantenna}
+	\label{fig:example}
 \end{figure}
 
 The geometry of the loop antenna with a gap is similar to that of the loop antenna discussed in \autoref{sec:loop_sim}. It is electrically short for frequencies up to 4.69\,GHz. A gap with a height of $10\,\upmu\mathrm{m}$ is introduced in the return path, as shown in \autoref{fig:gappedloopantenna}. The gap is intentionally kept small to emphasize specific coupling mechanics and to demonstrate the consistency of antenna analysis with the framework developed in this thesis, although such a small gap would be hard to implement in a physical antenna. Furthermore, manual mesh refinement is necessary around the gap region, as well as the feedpoint and the curved surfaces, as discussed in \autoref{sec:mesh}.	
