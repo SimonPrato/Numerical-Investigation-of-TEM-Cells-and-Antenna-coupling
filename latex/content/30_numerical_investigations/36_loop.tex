@@ -5,12 +5,14 @@
 
 \begin{figure}[tbp]
 	\centering
-	\begin{subfigure}[t]{0.48\textwidth}
+	\raisebox{-4.5mm}{
+	\begin{subfigure}[t]{0.49\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_near_field}
 		\caption{Electric near-field intensity of loop antenna}
 		\label{fig:loopnearfield}
 	\end{subfigure}
+}
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
@@ -314,7 +316,16 @@ The magnetic dipole moment $\mathbf{m}_m$ is derived by the induced voltage in $
 	\label{fig:loopeqcmoments}
 \end{figure}
 
-\todo[inline]{TODO: I suspect that better modeling of the TEM cell reactance leads to more accurate results in \autoref{fig:loopeqcmoments}}
+The equivalent circuit of the loop antenna shown in \autoref{fig:eqc_simple} can also be used to reason about the coupling behavior of the antenna. In particular, the voltage induced across the inductance $V_n$ is related to the displacement current $I_n$ by
+
+\begin{equation}
+	\frac{I_n}{V_n}=\frac{j\omega Q}{R_A\omega_0^2+j\omega L\omega_0^2-R_w\omega^2},
+	\label{eqn:loop_w0}
+\end{equation}
+
+where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, $Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the real characteristic impedance of the antenna feedpoint. Since $V_n$ and $I_n$ are directly associated with the magnetic and electric dipole moments $\mathbf{m}_m$ and $\mathbf{m}_e$ through \crefrange{eqn:m_v}{eqn:me_i}, the electric and magnetic coupling behavior of the small loop antenna can be directly linked to its resonance frequency and Q-factor. A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance $C_A$ results in a more pronounced non-linear frequency-behavior of $\mathbf{m}_m$ and $\mathbf{m}_e$.
+
+%\todo[inline]{TODO: I suspect that better modeling of the TEM cell reactance leads to more accurate results in \autoref{fig:loopeqcmoments}}
 
 \subsubsection{Current distribution on septum and higher order modes}
 
