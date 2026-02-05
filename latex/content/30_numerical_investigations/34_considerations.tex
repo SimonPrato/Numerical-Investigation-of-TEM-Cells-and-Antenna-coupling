@@ -64,7 +64,7 @@ The first two antennas investigated are the monopole (\cref{sec:monopole}) and t
 
 The TEM cell model used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, shown in \autoref{fig:tem_cell_model}. The cut-off frequencies of higher-order modes are demonstrated in \autoref{fig:te01_te10_tem_propagation}. In following investigations focusing on the TEM mode, the frequency range of interest spans from 1\,MHz to 3\,GHz. If the TE\textsubscript{01} mode is included in the investigations, the upper limit of the frequency range is extended to 3.3\,GHz.
 
-The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. This simplification allows unrestricted propagation of higher-order modes, facilitating investigations of their coupling behavior with antennas. \todo{reference section where I discussed this} The reference impedances of the output ports equal $Z_0 \approx 50\,\Omega$.
+The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. This simplification allows unrestricted propagation of higher-order modes, facilitating investigations of their coupling behavior with antennas. \todo{reference section where I discussed this} The reference impedances of the output ports equal $Z_w \approx 50\,\Omega$.
 
 \begin{figure}[htbp]
 	\centering
@@ -88,7 +88,35 @@ The cell walls and septum are modeled as PECs. In the TEM cell simulation model,
 
 Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell is derived by \autoref{eqn:em_energy}. The current and voltage at the output ports is found with \crefrange{eqn:iin}{eqn:vin}. The capacitance and inductance of the TEM cell are given by \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. The TEM cell has a constant capacitance and inductance of $C_\mathrm{T} = 6.74\,\mathrm{pF}$ and $L_\mathrm{T} = 16.25\,\mathrm{nH}$. 
 
-\todo[inline]{Note: It might be worth it to present the equivalent TEM circuit here.}
+\begin{figure}[htbp]
+	\centering
+	\resizebox{0.7\textwidth}{!}{%
+		\begin{tikzpicture}
+			% Paths, nodes and wires:
+			\draw (5, 7) to[european inductor, l={$L_{T1}$}] (7, 7);
+			\draw (8, 7) to[european inductor, l={$L_{T2}$}] (10, 7);
+			\draw (4, 7) to[capacitor, l={$C_{T1}$}] (4, 5.5);
+			\node[ground] at (4, 5.5){};
+			\draw (11, 7) to[capacitor, l={$C_{T2}$}] (11, 5.5);
+			\node[ground] at (11, 5.5){};
+			\draw (4, 7) -- (5, 7);
+			\draw (7, 7) -- (8.25, 7);
+			\draw (10, 7) -- (11, 7);
+			\draw (4, 7) -- (2.5, 7);
+			\draw (11, 7) -- (12.5, 7);
+			\draw (2.5, 7) to[european resistor, l={$R_1$}] (2.5, 5.5);
+			\node[ground] at (2.5, 5.5){};
+			\draw (12.5, 7) to[european resistor, l={$R_2$}] (12.5, 5.5);
+			\node[ground] at (12.5, 5.5){};
+			\node[circ] at (11, 7){};
+			\node[circ] at (4, 7){};
+			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (12.75, 7.375){} node[anchor=north west, align=left, text width=2.077cm, inner sep=6pt] at (11.5, 7.75){output port 2};
+			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (2.5, 7.375){} node[anchor=north west, align=left, text width=2.077cm, inner sep=6pt] at (1.25, 7.75){output port 1};
+		\end{tikzpicture}
+	}
+	\caption{Circuit representing the TEM cell, where the capacitance and inductance is split into two separate, equal components $C_T=C_{T1} + C_{T2}$, $L_T=L_{T1} + L_{T2}$ and $C_{T1} = C_{T2}$, $L_{T1} = L_{T2}$. The resistances $R_1, R_2$ at the output ports model the reference impedance $Z_w \approx 50\,\Omega$.}
+	\label{fig:full_circuit}
+\end{figure}
 
 \subsubsection{Dipole moments models}\label{sec:prep_dip}
 
