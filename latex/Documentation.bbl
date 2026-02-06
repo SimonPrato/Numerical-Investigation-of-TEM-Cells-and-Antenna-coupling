@@ -262,6 +262,40 @@
     \field{year}{2019}
   \endentry
 
+  \entry{9153508}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=DAV}{%
+         family={Demakov},
+         familyi={D\bibinitperiod},
+         given={Alexander\bibnamedelima V.},
+         giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=KME}{%
+         family={Komnatnov},
+         familyi={K\bibinitperiod},
+         given={Maxim\bibnamedelima E.},
+         giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \keyw{TEM cells;Integrated circuits;Conductors;Solid
+  modeling;Prototypes;Connectors;Electrodynamics;TEM cells;integrated circuit
+  noise;electromagnetic modeling;electromagnetic compatibility}
+    \strng{namehash}{DAVKME1}
+    \strng{fullhash}{DAVKME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{booktitle}{2020 21st International Conference of Young Specialists
+  on Micro/Nanotechnologies and Electron Devices (EDM)}
+    \verb{doi}
+    \verb 10.1109/EDM49804.2020.9153508
+    \endverb
+    \field{pages}{154\bibrangedash 158}
+    \field{title}{TEM cell for Testing Low-profile Integrated Circuits for EMC}
+    \field{year}{2020}
+  \endentry
+
   \entry{Griffiths_2024}{book}{}
     \name{author}{1}{}{%
       {{hash=GDJ}{%
@@ -282,6 +316,51 @@
     \field{sortinithash}{G}
     \field{title}{Introduction to electrodynamics}
     \field{year}{2024}
+  \endentry
+
+  \entry{809846}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GC}{%
+         family={Groh},
+         familyi={G\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Karst},
+         familyi={K\bibinitperiod},
+         given={J.P.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Koch},
+         familyi={K\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Garbe},
+         familyi={G\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{Electromagnetic compatibility}
+    \strng{namehash}{GC+1}
+    \strng{fullhash}{GCKJKMGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1109/15.809846
+    \endverb
+    \field{number}{4}
+    \field{pages}{440\bibrangedash 445}
+    \field{title}{TEM waveguides for EMC measurements}
+    \field{volume}{41}
+    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
+    \field{year}{1999}
   \endentry
 
   \entry{Hansen_Collin_2013}{book}{}
@@ -479,6 +558,49 @@
     \field{journaltitle}{Theory and measurements of radiated emissions using a
   TEM cell}
     \field{year}{1989}
+  \endentry
+
+  \entry{Kreindl_Bauernfeind_Weiss_Stockreitner_Kaltenbacher_2024}{article}{}
+    \name{author}{5}{}{%
+      {{hash=KD}{%
+         family={Kreindl},
+         familyi={K\bibinitperiod},
+         given={Dominik},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bauernfeind},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={Bernhard},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Stockreiter},
+         familyi={S\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kaltenbacher},
+         familyi={K\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KD+1}
+    \strng{fullhash}{KDBTWBSCKM1}
+    \field{labelnamesource}{author}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{journaltitle}{Near Field Electromagnetic Interference Coupling-
+  Mechanisms of Multilayer Ceramic Capacitors}
+    \field{year}{2024}
   \endentry
 
   \entry{10742020}{inproceedings}{}
@@ -781,6 +903,40 @@
     \field{journaltitle}{Methods for determining shielding effectiveness of
   materials}
     \field{year}{2015}
+  \endentry
+
+  \entry{Paul_Scully_Steffka_2023}{book}{}
+    \name{author}{3}{}{%
+      {{hash=PCR}{%
+         family={Paul},
+         familyi={P\bibinitperiod},
+         given={Clayton\bibnamedelima R.},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SRC}{%
+         family={Scully},
+         familyi={S\bibinitperiod},
+         given={Robert\bibnamedelima C.},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SMA}{%
+         family={Steffka},
+         familyi={S\bibinitperiod},
+         given={Mark\bibnamedelima A.},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley}%
+    }
+    \strng{namehash}{PCRSRCSMA1}
+    \strng{fullhash}{PCRSRCSMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Introduction to electromagnetic compatibility}
+    \field{year}{2023}
   \endentry
 
   \entry{Shenton_Cendes_1985}{article}{}

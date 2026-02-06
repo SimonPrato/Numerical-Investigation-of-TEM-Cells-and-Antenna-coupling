@@ -17,51 +17,52 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 10320 items from 5000.
 Database file #1: Documentation-blx.bib
 Database file #2: references/references.bib
 Warning--I didn't find a database entry for "Balanis"
 Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 33 entries,
+You've used 37 entries,
             6399 wiz_defined-function locations,
-            1431 strings with 16862 characters,
-and the built_in function-call counts, 246058 in all, are:
-= -- 19397
-> -- 3656
-< -- 971
-+ -- 6899
-- -- 1422
-* -- 18092
-:= -- 27862
+            1452 strings with 17807 characters,
+and the built_in function-call counts, 286681 in all, are:
+= -- 22884
+> -- 4142
+< -- 1085
++ -- 8121
+- -- 1620
+* -- 21153
+:= -- 32774
 add.period$ -- 0
-call.type$ -- 33
-change.case$ -- 402
+call.type$ -- 37
+change.case$ -- 444
 chr.to.int$ -- 49
-cite$ -- 64
-duplicate$ -- 25697
-empty$ -- 21613
-format.name$ -- 2241
-if$ -- 49774
+cite$ -- 72
+duplicate$ -- 29803
+empty$ -- 25079
+format.name$ -- 2577
+if$ -- 57829
 int.to.chr$ -- 0
-int.to.str$ -- 78
+int.to.str$ -- 89
 missing$ -- 0
-newline$ -- 1076
-num.names$ -- 1450
-pop$ -- 11565
+newline$ -- 1228
+num.names$ -- 1628
+pop$ -- 13114
 preamble$ -- 1
-purify$ -- 579
+purify$ -- 652
 quote$ -- 0
-skip$ -- 5904
+skip$ -- 6621
 stack$ -- 0
-substring$ -- 35874
-swap$ -- 4852
-text.length$ -- 931
-text.prefix$ -- 32
+substring$ -- 42704
+swap$ -- 5484
+text.length$ -- 1050
+text.prefix$ -- 36
 top$ -- 1
-type$ -- 1110
+type$ -- 1246
 warning$ -- 0
-while$ -- 3389
+while$ -- 3966
 width$ -- 0
-write$ -- 1044
+write$ -- 1192
 (There was 1 warning)
