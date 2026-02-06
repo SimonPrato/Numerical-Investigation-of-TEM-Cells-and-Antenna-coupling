@@ -2,8 +2,9 @@
 \subsection{ASTM ES7-83 method}
 \FloatBarrier
 
-A model as described in \autoref{sec:astm} is used to determine the shielding effectiveness of nickel and zink. The TEM cell contains a sheet of thickness ranging from 1 to 40 µm in the center at $z=0$.
+A model as described in \autoref{sec:astm} is used to determine the shielding effectiveness of nickel and zink according to the ASTM ES7-83 method discussed in \cref{sec:astm}. The TEM cell contains a shielding material sheet of thickness ranging from 1 to 40\,µm in the center of the TEM cell at $z=0$. A reference power $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen, the load power $P_\mathrm{load}$ is numerically derived. Using \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material depending on thickness. The investigated frequency is 1\,GHz.
 
+\todo[inline]{Compare results with other papers}
 
 \begin{figure}
 	\centering
@@ -12,9 +13,7 @@ A model as described in \autoref{sec:astm} is used to determine the shielding ef
 	\label{fig:se}
 \end{figure}
 
-\todo[inline]{TODO: redo zinc simulation}
-
-Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with adaptive meshing, which is done here. 
+Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with the adaptive meshing algorithm discussed in \cref{sec:simulations}, which is applied to these simulation models. 
 
 \begin{table}[h]
 	\centering

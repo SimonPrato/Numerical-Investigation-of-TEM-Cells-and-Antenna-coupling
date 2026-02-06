@@ -1,5 +1,7 @@
 \subsection{Shielding}
 
+\subsubsection{Incident, reflected and transmitted waves in medium}
+
 Effective shielding is of great interest to reduce EMI of electronic systems. A figure of merit for shielding capabilities of a material is the electromagnetic shielding effectiveness (SE), given in \autoref{eqn:se_elec_fields} \cite{10518640}. $E_\mathrm{i}$ is the incident electric field, while $E_\mathrm{t}$ is the transmitted electric field, also depicted in \autoref{fig:shielding_material_diagram}. It depends on the thickness and shape of the material, and its electric and magnetic properties. Additionally, the TEM cell contributes to the SE values.
 
 % Should I add wave reflections formula?
@@ -131,7 +133,7 @@ Additionally, a rectangular TEM cell is used for this method, instead of the com
 Then, the S-parameters derived in the simulations are used to get to the output powers $P_\mathrm{ref}$ and $P_\mathrm{load}$. By exciting the TEM cell with a power of 1\,W, the reference power $P_\mathrm{ref}=1\,\mathrm{W}$. The measured power is then derived through \autoref{eqn:load_power}.
 
 \begin{equation}
-    P_\mathrm{load}=P_\mathrm{ref}\cdot10^{|S_\mathrm{12}|/10}
+    P_\mathrm{load}=P_\mathrm{ref}\cdot10^{|S_\mathrm{12, dB}|/10}
     \label{eqn:load_power}
 \end{equation}
 

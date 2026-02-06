@@ -1,7 +1,6 @@
 \FloatBarrier
 \subsection{Inverted-F and center-fed monopole antenna}\label{sec:ifa_sim}
-
-\todo[inline]{TODO}
+\subsubsection{Setup and geometrical analysis}
 
 The inverted-F antenna (IFA) and center-fed monopole antenna (CFM), shown in \crefrange{fig:center_fed_monopole}{fig:ifa}, are presented here together, because of their related geometry and similar electromagnetic behavior. Both have a maximum dimension of 5\,mm, and are electrically small at frequencies up to 6\,GHz. They exhibit an inductive nature, hence a similar behavior as the loop antenna in \autoref{sec:loop_sim} is expected. Both antennas consist of a loop of identical area to the loop antenna discussed in \cref{sec:loop_sim}, to which a linear arm is connected. In the CFM, this arm is oriented toward the TEM cell septum, whereas in the IFA it is directed toward an output port.
 
@@ -30,6 +29,8 @@ The inverted-F antenna (IFA) and center-fed monopole antenna (CFM), shown in \cr
 \end{figure}
 
 %\todo[inline]{A question on my mind since the beginning of this thesis: Can how is the magnetic dipole moment influenced by rotating this geometry by 90 degrees? Is the magnetic dipole moment higher or lower than in the rotated loop antenna? With my current knowledge, I suspect that the electric dipole moment leads to current coupling with the TEM cell over displacement current, therefore leading to a smaller magnetic dipole moment then in the case of the loop antenna}
+
+\subsubsection{Equivalent dipole moments}
 
 The magnetic dipole moments $\mathbf{m}_m$ of the CFM and IFA presented in \autoref{fig:cfm-ifa-moments} are comparable to each other, but are smaller in magnitude than that of the loop antenna shown in \autoref{fig:dipole_moments_loop_antenna}. This reduction can be attributed to the linear arms of the CFM and IFA, which introduce additional capacitance. The increased capacitance enhances the displacement current while reducing the induced voltage. According to \crefrange{eqn:m_v}{eqn:me_i}, this results in a decrease of magnetic dipole moment $\mathbf{m}_m$ and an increase of the electric dipole moment $\mathbf{m}_e$. 
 

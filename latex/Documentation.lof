@@ -18,22 +18,22 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Field distribution of the TEM mode highlighting the out-of-phase magnetic fields at the output ports.}}{25}{figure.caption.36}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Incident, reflected and transmitted electric fields due to interaction with shielding material}}{29}{figure.caption.42}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Dual TEM cell with aperture}}{33}{figure.caption.52}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tetrahedron with points on the edge and vertices.}}{34}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tetrahedron with points on the edge and vertices.}}{35}{figure.caption.55}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Face of the finite element with unknowns}}{35}{figure.caption.56}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Adaptive solution process}}{37}{figure.caption.57}%
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a round waveport of diameter $0.46\,\mathrm {mm}$. The antenna consists of PEC wire with diameter of $0.2\,\mathrm {mm}$. This geometry leads to a reference impedance of $Z_0\approx 50$\,$\Omega $.}}{38}{figure.caption.59}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}}{39}{figure.caption.61}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Circuit representing the TEM cell, where the capacitance and inductance is split into two separate, equal components $C_T=C_{T1} + C_{T2}$, $L_T=L_{T1} + L_{T2}$ and $C_{T1} = C_{T2}$, $L_{T1} = L_{T2}$. The resistances $R_1, R_2$ at the output ports model the reference impedance $Z_w \approx 50\,\Omega $.}}{39}{figure.caption.62}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{40}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of normalized output power of electric dipole moments}}{41}{figure.caption.63}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces A TEM cell containing an electric $\mathbf {m}_\mathrm {e}$ and a magnetic dipole moment $\mathbf {m}_\mathrm {m}$ in the center $x=0, y=r=b/4, z=0$ to investigate the field regions in which the coupling occurs.}}{43}{figure.caption.66}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces $k\cdot r$ in small TEM cell}}{43}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces $k\cdot r$ in small TEM cell}}{44}{figure.caption.67}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Moments in small TEM cell}}{44}{figure.caption.69}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Moments in normal TEM cell}}{44}{figure.caption.69}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Output powers}}{45}{figure.caption.72}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Phase shifts}}{45}{figure.caption.72}%
 \contentsline {figure}{\numberline {5.11}{\ignorespaces \relax }}{46}{figure.caption.73}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces The equivalent electric and magnetic dipole moments analytically calculated with \crefrange {eqn:ifa_me}{eqn:ifa_mm}. To enable direct comparison with the magnetic dipole moment, the electric dipole moment is weighted with the free space impedance $Z_0$, as discussed in \autoref {sec:prep_dip}.}}{47}{figure.caption.74}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces \relax }}{47}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces \relax }}{48}{figure.caption.75}%
 \contentsline {figure}{\numberline {5.14}{\ignorespaces \relax }}{48}{figure.caption.76}%
 \contentsline {figure}{\numberline {5.15}{\ignorespaces The current distribution along the monopole antenna at $3\,\mathrm {GHz}$ shows a linear decrease, which is common for a small electric dipole.}}{49}{figure.caption.77}%
 \contentsline {figure}{\numberline {5.16}{\ignorespaces The current distribution along the monopole antenna at $1\,\mathrm {MHz}$ shows a large decline near the feedpoint due to increased displacement currents. It then approaches a roughly constant current distribution, which is typical for an approximate infinitely small electric dipole.}}{49}{figure.caption.77}%
@@ -58,6 +58,6 @@
 \contentsline {figure}{\numberline {5.35}{\ignorespaces The equivalent dipole moments of the loop antenna with a gap, where the electric dipole moment $\mathbf {m}_\mathrm {e}$ is weighted with $Z_0$ to enable comparison with $\mathbf {m}_\mathrm {m}$. The phases of the powers at output ports 1 and 2 are derived from the S-parameters, as discussed in \cref {sec:s-param-data}. The analysis specifically focuses on the phase shift between the two ports, which provides information about the presence of $\mathbf {m}_\mathrm {m}$ and $\mathbf {m}_\mathrm {e}$, as investigated in \cref {sec:equ-dip-mom}.}}{63}{figure.caption.103}%
 \contentsline {figure}{\numberline {5.36}{\ignorespaces Comparison of dipole moments, where the electric dipole moment $\mathbf {m}_\mathrm {e}$ is weighted with $Z_0$ to enable comparison with $\mathbf {m}_\mathrm {m}$, and output power for different gap heights in the loop antenna.}}{64}{figure.caption.104}%
 \contentsline {figure}{\numberline {5.37}{\ignorespaces The voltage and current across the feedpoint, together with the related impedance of the loop antenna with gap.}}{64}{figure.caption.105}%
-\contentsline {figure}{\numberline {5.38}{\ignorespaces Geometries of IFA and CFM antenna, together with their equivalent dipole moments. the electric dipole moment $\mathbf {m}_e$ is weighted with the free space impedance $Z_0$ to enable comparison with the magnetic dipole moment $\mathbf {m}_m$.}}{65}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.38}{\ignorespaces Geometries of IFA and CFM antenna, together with their equivalent dipole moments. the electric dipole moment $\mathbf {m}_e$ is weighted with the free space impedance $Z_0$ to enable comparison with the magnetic dipole moment $\mathbf {m}_m$.}}{65}{figure.caption.106}%
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Shielding effectiveness of a sheet of zinc and nickel versus the material thickness.}}{67}{figure.caption.109}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Coupling of port 1 to ports 3 and 4 with empty square aperture}}{67}{figure.caption.112}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Coupling of port 1 to ports 3 and 4 with empty square aperture}}{67}{figure.caption.111}%
