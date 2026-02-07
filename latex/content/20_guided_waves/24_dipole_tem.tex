@@ -234,7 +234,7 @@ Now, further surfaces $S_1$ and $S_2$ are defined. Surface $S_1$ leads, starting
 
 
 \begin{equation}
-	j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}=j \omega \epsilon_0 \iint_{S_0} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}+\underbrace{j \omega \epsilon_0 \iint_{S_1} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}+\underbrace{j \omega \epsilon_0 \iint_{S_2} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}.
+	j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}=j \omega \epsilon_0 \iint_{S_0} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}+\underbrace{j \omega \epsilon_0 \iint_{S_1} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}}_{=0}+\underbrace{j \omega \epsilon_0 \iint_{S_2} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}.
 \end{equation}
 
 Inserting Gauss' law $\nabla\cdot \mathbf{E}=\frac{\rho}{\epsilon_0}$ leads to
@@ -271,7 +271,7 @@ Numerical simulations enable the determination of $a+b$ and $a-b$ directly. When
 
 \subsubsection{Radiation resistance}
 
-\todo[inline]{TODO: Wird dieses Unterkapitel gebraucht?}
+\todo[inline]{TODO: Dieses Kapitel eventuell rausnehmen.}
 
 The radiation resistance of an electrically small antenna is derived by applying the Green's function. The following content is mostly taken from \cite{4091747}.
 
@@ -296,6 +296,13 @@ are functions implemented in \autoref{eqn:unperturbed_green}. The components $x$
 	\frac{-\mathrm{j} \eta_0}{k_0} \left\{\sum_{m,n=0}^{\infty} \frac{\Delta_n [M^2 + \beta^2]}{M^2 + N^2 - \xi^2} \; g_{mn}(\mathbf{x}_t, \mathbf{x}_t')
 	\right\}
 \end{equation}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/vertical_antenna_tem_cell}
+	\caption{TEM cell with vertical antenna inserted}
+	\label{fig:verticalantennatemcell}
+\end{figure}
 
 
 The TEM cells Green's function by adding a unperturbed term to it \cite{4091747}. The derivation of those Green's Functions is demonstrated in \cite{Wilson_1981}, which uses the same methods described in \cite{Balanis_1997}, as mentioned above.
