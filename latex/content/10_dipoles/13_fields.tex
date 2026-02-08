@@ -5,13 +5,13 @@
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/kr_over_distance}
-	\caption{Behavior of Expression 1 and Expression 2 in \autoref{eqn:e_et_2} over distance $r$. The distance $r$ is normalized to the radian distance $\lambda / 2\pi$. The magnitude of both expressions is normed to 1 at radian distance for better comparison.}
+	\caption{Behavior of Expression 1 and Expression 2 in \autoref{eqn:e_et_2} over distance $r$. The distance $r$ is normalized to the radian distance $\lambda / 2\pi$. The magnitude of both expressions is normed to 1 at radian distance to improve comparison.}
 	\label{fig:kroverdistance}
 \end{figure}
 
-The field quantities $\mathbf{E}$ and $\mathbf{H}$ have been derived for an infinitesimal electric dipole in \cref{eqn:e_er,eqn:e_et,eqn:e_ep} and \cref{eqn:e_hr,eqn:e_hpt}, and for an infinitesimal magnetic dipole in \cref{eqn:m_hr,eqn:m_ht,eqn:m_hp} and \cref{eqn:m_ert,eqn:m_ep}. They are valid everywhere except for the source region \cite[p. 156]{Balanis_1997}.
+The field quantities $\mathbf{E}$ and $\mathbf{H}$ have been derived for an infinitesimal electric dipole in \cref{eqn:e_er,eqn:e_et,eqn:e_ep} and \cref{eqn:e_hr,eqn:e_hpt}, further for an infinitesimal magnetic dipole in \cref{eqn:m_hr,eqn:m_ht,eqn:m_hp} and \cref{eqn:m_ert,eqn:m_ep}. They are valid everywhere except for the source region \cite[p. 156]{Balanis_1997}.
 
-Depending on the distance $r$ to the dipole, the behavior of the fields changes. This becomes apparent when investigating the expressions $1/(jkr)$ and $1/(kr)^2$ in \cref{eqn:e_er,eqn:e_et,eqn:e_ep} and \cref{eqn:e_hr,eqn:e_hpt} of the infinitesimal electric dipole. These expressions are highlighted here in the case of $E_\theta$, although they partly also appear in $E_r$ and $H_\phi$, and referred to as Expression 1 and Expression 2 in
+The behavior of the fields depends on the distance $r$ from the dipole. This dependence becomes evident by investigating the terms $1/(jkr)$ and $1/(kr)^2$ appearing in \cref{eqn:e_er,eqn:e_et,eqn:e_ep} and \cref{eqn:e_hr,eqn:e_hpt} for the infinitesimal electric dipole. For clarity, these terms are highlighted in the expression for $E_\theta$ in \cref{eqn:e_et_2}, although they also partially appear in $E_r$ and $H_\phi$. They are denoted as Expression~1 and Expression~2, respectively:
 
 \begin{equation}
 	E_\theta = j\eta \frac{kI_0 d \sin \theta }{4\pi r}\left[ 1 + \underbrace{\frac{1}{jkr}}_{\text{Expression 1}} - \underbrace{\frac{1}{(kr)^2}}_{\text{Expression 2}} \right] \mathrm{e}^{-jkr}.
@@ -20,22 +20,20 @@ Depending on the distance $r$ to the dipole, the behavior of the fields changes.
 
 
 
-If the distance $r < \lambda/2\pi$ $(kr < 1)$, then Expression 2 delivers the largest value in the brackets. Consequently, the energy stored in this region is mostly imaginary, especially if $r \ll \lambda/\pi$ ($kr\ll 1$). It is referred to as the near-field region.
+If the distance $r < \lambda/2\pi$ (or equivalently, $kr < 1$), then Expression~2 delivers the largest value in the brackets. Consequently, the energy stored in this region is predominantly imaginary. This region is referred to as the near-field region.
 
-At distances $r > \lambda / 2\pi$ $(kr > 1)$, Expression 1 exceeds Expression 2 in value. The real part of the energy is larger than the imaginary part. This region is referred to as the intermediate-field region. For $r \gg \lambda / 2\pi$ ($kr \gg 1$) the energy is primarily real, indicating radiation. This region is called the far-field region.
+At distances $r > \lambda / 2\pi$ $(kr > 1)$, Expression~1 exceeds Expression~2 in magnitude, resulting in a larger real than imaginary part  of the energy. This region is referred to as the intermediate-field region. 
+
+At larger distances $r \gg \lambda / 2\pi$ ($kr \gg 1$) the energy is predominantly real, reflecting radiated energy propagating outward. This region is referred to as the far-field region.
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.4\linewidth]{content/img/field_regions_antenna}
-	\caption{Field regions of an antenna, here specifically a linear wire antenna. However, they are applicable for any antenna, as long as their largest dimension $d$ is known.}
+	\caption{Field regions of an antenna, here specifically a linear wire antenna, although they are applicable for any antenna with dimension $d$.}
 	\label{fig:fieldregionsantenna}
 \end{figure}
 
-At $r = \lambda/2\pi$ $(kr = 1)$, Expression 1 and Expression 2 are of equal magnitude. This is marked as the radian distance \cite[pp. 156-160]{Balanis_1997}. The radian distance therefore represents an important transition point between field regions, where the behavior of the fields shifts. \autoref{fig:kroverdistance} visualizes Expression 1 and Expression 2 over $r$. The same analysis of the field region is also valid for the infinitesimal magnetic dipole.
-
-
-
-%\todo[inline]{The rest of this section may be irrelevant for the thesis: We are interested only in the field regions of an inf. dipole. Maybe leave this for sake of completeness?}
+At $r = \lambda/2\pi$ $(kr = 1)$, Expression 1 and Expression 2 are of equal magnitude. This is marked as the radian distance \cite[pp. 156-160]{Balanis_1997}. The radian distance therefore represents an important transition point between field regions, where the behavior of the fields shifts. \autoref{fig:kroverdistance} visualizes Expression~1 and Expression~2 over $r$. The analysis of the field regions presented here can be conducted analogously for both the small and infinitesimal magnetic dipole.
 
 Antennas, which cannot be modeled as infinitesimal dipoles, such as the linear wire antenna, are surrounded by different field regions. They are shown in \autoref{fig:fieldregionsantenna}. The far-field region contains mostly real energy, and the antenna may be most accurately approximated by an infinitesimal electric dipole. In the radiating near-field, the energy is largely real, but depends on the distance $r$. Lastly, in the reactive near-field the energy is mostly imaginary.
 
@@ -59,21 +57,21 @@ Here, $d$ is the largest dimension of the antenna. In the case of the linear wir
 The energy density is given by \cite[p. 330]{Griffiths_2024}
 
 \begin{equation}
-	w_\mathrm{EM} = \frac{1}{2}\left(\underbrace{\epsilon E^2}_{\text{Electric energy} w_E} + \underbrace{\frac{1}{\mu} B ^ 2}_{\text{Magnetic energy} w_M}\right).
+	w_\mathrm{em} = \frac{1}{2}\left(\underbrace{\vphantom{\frac{1}{\mu} B ^ 2}{\epsilon E^2}}_{{\text{Electric energy}\ w_e}} + \underbrace{\frac{1}{\mu} B ^ 2}_{{\text{Magnetic energy} \ w_m}}\right).
 	\label{eqn:em_energy}
 \end{equation}
 
-Integrating $w_\mathrm{EM}$ over a volume yields the total electromagnetic energy in this volume. Similarly, integrating $w_E$ gives the electric energy in said volume, and $w_M$ the magnetic energy.
+Integrating $w_\mathrm{em}$ over a volume yields the total electromagnetic energy within that volume. Similarly, integrating $w_e$ gives the electric energy $W_e$, and $w_m$ the magnetic energy $W_m$.
 
-If all of the energy is provided by an electrically short antenna, its equivalent reactances can be derived through \cite[pp 107, 328]{Griffiths_2024}
+The reactance of an electrically short antenna directly relates to the electric and magnetic energies $w_e$, $w_m$, that it produces. The antennas's equivalent inductance and capacitance can be derived through \cite[pp. 107, 328]{Griffiths_2024}
 
 \begin{subequations}
 	\begin{equation}
-		L = 2\frac{W_m}{I^2}
+		L = 2\frac{W_m}{I^2},
 		\label{eqn:l_m_energy}
 	\end{equation}
 	\begin{equation}
-		C = 2 \frac{W_e}{V^2}
+		C = 2 \frac{W_e}{V^2}.
 		\label{eqn:c_e_energy}
 	\end{equation}
 \end{subequations}

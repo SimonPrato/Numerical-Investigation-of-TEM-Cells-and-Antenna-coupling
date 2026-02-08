@@ -1,20 +1,27 @@
 
-Magnetic and electric dipoles are an effective approach for modeling the radiation of electrically small antennas. They are defined as antennas with dimensions much less than one-tenth of the wavelength ($l\ll\lambda$)\cite[p. 151]{Balanis_1997}. By calculating the respective dipole moments, the coupling between antennas and TEM cells can be numerically estimated. This section provides a brief introduction to the underlying theory of this concept.
-
-\todo{Explanation Dipole Moments modeling, antennas and fields}
+%Magnetic and electric dipoles are an effective approach for modeling the radiation of electrically small antennas. They are defined as antennas with dimensions much less than one-tenth of the wavelength ($l\ll\lambda$)\cite[p. 151]{Balanis_1997}. By calculating the respective dipole moments, the coupling between antennas and TEM cells can be numerically estimated. This section provides a brief introduction to the underlying theory of this concept.
+%
+%\todo{Explanation Dipole Moments modeling, antennas and fields}
 
 \subsection{Electric Dipoles}\label{sec:ele_dip}
 \subsubsection{Infinitesimal Electric Dipoles}\label{sec:infinitesimal_electric_dipoles}
 
-An electric dipole can be modeled as two tiny charged metal spheres or two capacitor-plates connected by a linear wire of length $d$ and diameter $a$ \cite[p. 467]{Griffiths_2024}, \cite[p. 151]{Balanis_1997}. The charges accelerate along the wire and radiate. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cite[p. 151]{Balanis_1997}, \cite[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length usually must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries or as a useful excitation method in numerical investigations. 
+An electric dipole can be modeled as two tiny charged metal spheres \cite[p. 467]{Griffiths_2024}, or alternatively two capacitor-plates \cite[p. 151]{Balanis_1997}, connected with a linear wire of length $d$ and diameter $a$. The charges accelerate along the wire and radiate. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cites[p. 151]{Balanis_1997}[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries, or as an excitation source in numerical investigations. 
 
-An electric dipole is shown in \autoref{fig:electric_dipole} and will now be analyzed. The dipole is aligned with the z-axis, which simplifies the mathematical calculations. Time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted. A current flows in the wire, which is spatially uniform throughout the wire This is expressed as \cite[p. 151]{Balanis_1997}
+An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, is analyzed in detail below. The dipole is aligned with the $z$-axis, which simplifies the following mathematical investigations. Time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted. A current flows in the wire, which is spatially uniform throughout the wire. This is expressed as \cite[p. 151]{Balanis_1997}
 
 \begin{equation}
 	\mathbf{I}(z) = \mathbf{\hat{a}}_z I_0.
 \end{equation}
 
-The capacitances modeled at the end of the wire enable the constant current flow, which would otherwise be physically impossible. Next, the vector potential $\mathbf{A}$ is determined through the general expression
+The capacitances modeled at the ends of the wire allow for a constant current flow, which would otherwise be physically impossible. The electric dipole moment can be expressed as 
+
+\begin{equation}
+	\mathbf{m}_e = I_0 d \cdot \mathbf{\hat{a}}_z.
+	\label{eqn:m_e_def}
+\end{equation}
+
+Next, the vector potential $\mathbf{A}$ is determined through the general expression
 
 \begin{equation}
 	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,dv'.
@@ -132,7 +139,7 @@ The complex power $P$ is derived by integrating $\mathbf{W}$ over a closed surfa
 	\label{eqn:compl_power_inf_elec_dipole}
 \end{equation}
 
-\autoref{eqn:compl_power_inf_elec_dipole} demonstrates, that the imaginary part of the power radiated by the infinitesimal electric dipole shows capacitive behavior.
+The imaginary part of the power radiated by the infinitesimal electric dipole shows capacitive behavior, as demonstrated by \autoref{eqn:compl_power_inf_elec_dipole}.
 
 %By integrating the time-averaged real Poynting vector $ \mathbf{W}_\mathrm{av} $ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, opposed to the imaginary part. $P_{\mathrm{rad}}$ is expressed as \cite[p. 155]{Balanis_1997}
 %
@@ -165,12 +172,12 @@ This is different to the current distribution of the infinitesimal dipole. The c
 
 $\rho'$ is uniformly distributed along each antenna arm.
 
-An important metric is the electric dipole moment $\mathbf{p}$. It is defined as the product of charge density $\rho$ along the antenna and their source point $\mathbf{x'}$ \cite[p.410]{Jackson}, and generally expressed as 
-
-\begin{equation}
-	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,dv'.
-	\label{eqn:elec_dipole_mom}
-\end{equation}
+%An important metric is the electric dipole moment $\mathbf{p}$. It is defined as the product of charge density $\rho$ along the antenna and their source point $\mathbf{x'}$ \cite[p.410]{Jackson}, and generally expressed as 
+%
+%\begin{equation}
+%	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,dv'.
+%	\label{eqn:elec_dipole_mom}
+%\end{equation}
 
 \begin{figure}[t]
 	\centering
@@ -179,21 +186,24 @@ An important metric is the electric dipole moment $\mathbf{p}$. It is defined as
 	\label{fig:linear_wire_antenna}
 \end{figure}
 
-The charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$, which results in
+%The charge distribution $\rho'$ enables the calculation of the electric dipole moment $\mathbf{p}$, which results in
+%
+%\begin{equation}
+%    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\,dz\cdot\mathbf{\hat{a}}_z = j\frac{I_0d}{2\omega}\cdot\mathbf{\hat{a}}_z.
+%    \label{eqn:dipole_mom_example}
+%\end{equation}
+
+%The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite[p. 412]{Jackson}, \cite[p. 155]{Griffiths_2024}. 
+Next, the vector potential $\mathbf{A}$ is determined using \autoref{eqn:vector_pot}. The calculations of $\mathbf{A}$ simplify to \cite[p. 410]{Jackson},
 
 \begin{equation}
-    \mathbf{p}=\int_{-\frac{d}{2}}^{\frac{d}{2}}z\rho'(z)\,dz\cdot\mathbf{\hat{a}}_z = j\frac{I_0d}{2\omega}\cdot\mathbf{\hat{a}}_z.
-    \label{eqn:dipole_mom_example}
-\end{equation}
-
-The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite[p. 412]{Jackson}, \cite[p. 155]{Griffiths_2024}. Next, the vector potential $\mathbf{A}$ is determined using \autoref{eqn:vector_pot}. The calculations of $\mathbf{A}$ simplify to \cite[p. 410]{Jackson},
-
-\begin{equation}
-    \mathbf{A} (\mathbf{x})=-j\frac{\mathrm{\mu\omega}}{4\pi}\mathbf{p}\frac{\mathrm{e}^{-jkr}}{r}
+    \mathbf{A} (\mathbf{x})=\mathbf{\hat{a}}_z \frac{\mu I_0 d}{8\pi r}\mathrm{e}^{-jkr}
     \label{eqn:vector_pot_elec_dipole}
 \end{equation}
 
-The formulation of $\mathbf{A}$ now contains an additional factor of $1/2$, compared to the previously derived $\mathbf{A}$ of the infinitesimal dipoles in \autoref{eqn:a_e_inf}. This is due to the integration process of $\mathbf{I}$. When integrated over the same interval $\left[-d/2, d/2\right]$, the linearly dropping $\mathbf{I}$ yields half the value of a constant $\mathbf{I}$. Furthermore, it makes sense to keep $\mathbf{x'}=\mathbf{0}$ for simplicity reasons. It has been shown, that this approximation is sufficient for large $r$, and the amplitude error remains negligible for small $r$ \cite[p. 409]{Jackson}, \cite[pp. 164-168]{Balanis_1997}. \todo{This makes it reasonable to model electrically small antennas with infinitesimal dipoles}
+The formulation of $\mathbf{A}$ now includes an additional factor of $1/2$ compared to the previously derived expression for infinitesimal dipoles in \autoref{eqn:a_e_inf}. This factor arises from the integration of $\mathbf{I}$: when integrated over the interval $\left[-d/2, d/2\right]$, a linearly decreasing $\mathbf{I}$ yields half the value obtained from a constant $\mathbf{I}$. For the same reason, the electric dipole moment $\mathbf{m}_e$ is also reduced to half of that in \autoref{eqn:m_e_def}.
+
+Furthermore, it makes sense to keep $\mathbf{x'}=\mathbf{0}$ for simplicity reasons. It has been shown, that this approximation is sufficient for large $r$, and the amplitude error remains negligible for small $r$ \cite[p. 409]{Jackson}, \cite[pp. 164-168]{Balanis_1997}.
 
 \begin{figure}[t]
 	\centering
@@ -202,28 +212,20 @@ The formulation of $\mathbf{A}$ now contains an additional factor of $1/2$, comp
 	\label{fig:electricdipolecurrent}
 \end{figure}
 
-%The electric field intensity $\mathbf{E}$, the magnetic field intensity $\mathbf{H}$ and the radiated power $P_\mathrm{rad}$ can be derived analogous to the infinitesimal dipole. $P_\mathrm{rad}$ is expressed as \cite[p. 165]{Balanis_1997}
-%
-%\begin{equation}
-%	P_{\mathrm{rad}} = \eta \left(\frac{\pi}{12}\right) \left|\frac{I_0l}{\lambda}\right|^2 
-%\end{equation}
-%
-%and is also smaller by a factor of $1/4$ compared to $P_\mathrm{rad}$ of the infinitesimal dipole in \autoref{eqn:elec_rad_res}.
-
 The short physical electric dipole described in this section approximate the behavior of electrically short antennas. Special care must be taken of the excitation method and shape, as it influences the behavior \cite[p. 413]{Jackson}. Additionally, any antenna investigated through this method must remain as small as possible compared to the wavelength $\lambda$, to reduce any analytical approximation errors. 
 
-
-\todo[inline]{Image theory may be added for TEM cell explanations \cite[p. 184]{Balanis}}
+%
+%\todo[inline]{Image theory may be added for TEM cell explanations \cite[p. 184]{Balanis}}
 
 
 \subsection{Magnetic Dipoles}\label{sec:mag_dip}
 
 The magnetic dipole moment characterizes the strength of a magnetic source. A small current loop fed with a current $I_0$ can be used to model the magnetic dipole, as demonstrated in \autoref{fig:magnetic_dipole_drawing}. This relation holds as long as its overall length is smaller than a tenth of the wavelength ($2b\pi < \lambda/10$) and as long as the the wire is very thin \cite[p. 231]{Balanis_1997}. Furthermore, the radiation pattern of the magnetic dipole is equal to that of the electric dipole, with the role of the electric and magnetic fields interchanged \cite[p. 254]{Griffiths_2024}.
 
-The magnetic dipole moment $\mathbf{m}$ is given by \cite[p. 413]{Jackson}
+The magnetic dipole moment $\mathbf{m}_m$ is given by
 
 \begin{equation}
-    \mathbf{m}=\frac{1}{2}\iiint_V (\mathbf{x'} \times \mathbf{J})\,dv'.
+    \mathbf{m}=I_m L \cdot \mathbf{\hat{a}}_z.
     \label{eqn:mag_dipole_moment}
 \end{equation}
 
@@ -240,11 +242,11 @@ Furthermore, the magnetic current $I_m$ and the electric current $I_0$ in the lo
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
-	\caption{Geometrical arrangement of a current loop fed by a current $I_0$, producing a magnetic dipole moment. Alternatively, a magnetic current $I_\mathrm{m}$ flows perpendicular to the loop's area along the distance $L$, which produces an equivalent magnetic dipole moment.}
+	\caption{Geometrical arrangement of a current loop with radius $b$ fed by a current $I_0$, producing a magnetic dipole moment $\mathbf{m}_m$. Alternatively, a magnetic current $I_\mathrm{m}$ flows perpendicular to the loop's area along the distance $L$, which produces an equivalent magnetic dipole moment.}
 	\label{fig:magnetic_dipole_drawing}
 \end{figure}
 
-with $A=b^2\pi$ being the area of the current loop. Analogous to the separation distance $d$ in the electric dipole, $L$ is the length of the magnetic dipole. $I_m$ and $L$ may be used to model the magnetic dipole moment instead of the current loop. The fields $\mathbf{E}$ and $\mathbf{H}$ generated are the same in both cases. This means, that the infinitesimal magnetic dipole can be replaced with an electrically small loop \cite[p. 237]{Balanis_1997}. This was not the case for the infinitesimal and electrically small electric dipoles. $\mathbf{E}$ and $\mathbf{H}$ of the magnetic dipole moment or electrically small current loop are then determined with \cite[p. 237]{Balanis_1997}
+with $A=b^2\pi$ denoting the area of the current loop. Analogous to the separation distance $d$ in the electric dipole, $L$ is the length of the magnetic dipole. $I_m$ and $L$ may be used to model the magnetic dipole moment instead of the current loop, since the electric and magnetic field intensities $\mathbf{E}$ and $\mathbf{H}$ produced by the dipole are the same in both cases. This means, that the infinitesimal magnetic dipole has an equivalent behavior to the electrically small loop \cite[p. 237]{Balanis_1997}. $\mathbf{E}$ and $\mathbf{H}$ of the magnetic dipole moment or electrically small current loop are then determined with \cite[p. 237]{Balanis_1997}
 
 
 \begin{subequations}
@@ -274,8 +276,6 @@ and,
 		\label{eqn:m_hp}
 	\end{equation}
 \end{subequations}
-
- 
 
 The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals to 
 
@@ -313,16 +313,16 @@ and its imaginary part is inductive \cite[p. 238]{Balanis_1997}.
 %	\label{fig:currentloopequcirc}
 %\end{figure}
 
-
-\subsection{Crossed Dipoles}
-\todo[inline]{Section todo}
-% Read Bauernfeind's: Crossed Dipole Antennas
-
-% When placing the magnetic dipole in the center of the upper or lower chamber of the TEM cell, and pointing in y-direction, it will generate a TEM-wave. Same goes for the electric dipole, pointing in z-direction. When combining two of these dipole moments, any excitation with the first order TEM mode is possible. This is the main idea for modeling antennas. The relation of the magnetic and electric fields is assumed to be roughly equal to the free space wave impedance. Also, magnetic dipoles create a difference in output voltage of the two ports, while electric dipoles create a increase of voltage in both ports. The power transmitted is the same. However: How are they modeled in HFSS? 
-
-Crossed dipoles can generate a wide variety of radiation patterns. Supposed two dipoles are placed perpendicular to each other and fed 90° out of phase, an omnidirectional radiation pattern in created \cite{7293591}. If the equivalent dipoles of an EUT represents such two dipoles, any mode which can propagate in the TEM cell will do so, and therefore influence the measurement result. It is therefore not only important to know which dipoles there are representing the EUT, but also what phase and magnitude they have. Meaning that not only the dipoles aligned with the TEM mode alone influence the result. 
-
-\todo{Dipoles next to conducting planes (balanis, collin)}
+%
+%\subsection{Crossed Dipoles}
+%\todo[inline]{Section todo}
+%% Read Bauernfeind's: Crossed Dipole Antennas
+%
+%% When placing the magnetic dipole in the center of the upper or lower chamber of the TEM cell, and pointing in y-direction, it will generate a TEM-wave. Same goes for the electric dipole, pointing in z-direction. When combining two of these dipole moments, any excitation with the first order TEM mode is possible. This is the main idea for modeling antennas. The relation of the magnetic and electric fields is assumed to be roughly equal to the free space wave impedance. Also, magnetic dipoles create a difference in output voltage of the two ports, while electric dipoles create a increase of voltage in both ports. The power transmitted is the same. However: How are they modeled in HFSS? 
+%
+%Crossed dipoles can generate a wide variety of radiation patterns. Supposed two dipoles are placed perpendicular to each other and fed 90° out of phase, an omnidirectional radiation pattern in created \cite{7293591}. If the equivalent dipoles of an EUT represents such two dipoles, any mode which can propagate in the TEM cell will do so, and therefore influence the measurement result. It is therefore not only important to know which dipoles there are representing the EUT, but also what phase and magnitude they have. Meaning that not only the dipoles aligned with the TEM mode alone influence the result. 
+%
+%\todo{Dipoles next to conducting planes (balanis, collin)}
 
 % Also, the reflections of the conducting sheets of the TEM cell might enhance the dipoles' gain, therefore artificially supporting a certain mode even more. This property is often used in antennas, where a perfect electric conductor (PEC) is placed a quarter wavelength away from the antenna, hence enhancing the gain \cite{7293591}. 
 

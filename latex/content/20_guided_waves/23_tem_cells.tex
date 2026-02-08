@@ -1,9 +1,6 @@
 \subsection{Modes in Waveguides}\label{sec:modes_tem_cell}
 \subsubsection{Rectangular Waveguides as non-TEM structures}
 
-
-
-
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
@@ -20,12 +17,12 @@
 \label{fig:rectwaveguidete}
 	\end{subfigure}
 	
-	\caption{Dominant modes in a rectangular waveguide.}
+	\caption{The electric and magnetic fields of each the first dominant TE and TM mode in a hallow rectangular waveguide with perfectly conducting walls.}
 	\label{fig:rect_waveguide_modes}
 \end{figure}
 
 
-A hollow rectangular waveguide with perfectly conducting walls cannot support TEM modes. This can be shown directly from Maxwell's equation, as done in \cite[pp. 425-427]{Griffiths_2024}. The first two dominant modes are demonstrated in \autoref{fig:rect_waveguide_modes}. The electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$ are defined as 
+A hollow rectangular waveguide with perfectly conducting walls do not support the propagation of the TEM mode. This can be shown directly from Maxwell's equation, as done in \cite[pp. 425-427]{Griffiths_2024}. The first two dominant modes are demonstrated in \autoref{fig:rect_waveguide_modes}. The electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$ are defined as 
 
 \begin{subequations}
 	\begin{align}
@@ -38,16 +35,16 @@ Using Faraday's and Ampère-Maxwell law transforms \crefrange{eqn:rect_e}{eqn:re
 
 \begin{subequations}
 \begin{align}
-	\nabla \times \mathbf{E} &=\begin{pmatrix}\frac{\mathrm{d}}{\mathrm{d}y}E_z-\mathrm{i}kE_y \\\mathrm{i}kE_x-\frac{\mathrm{d}}{\mathrm{d}x}E_z \\\frac{\mathrm{d}}{\mathrm{d}x}E_y-\frac{\mathrm{d}}{\mathrm{d}y}E_x\end{pmatrix}=\begin{pmatrix} -\mathrm{i}\omega B_x\\-\mathrm{i}\omega B_y\\ -\mathrm{i}\omega B_z \end{pmatrix}\label{eqn:faraday},\\
-	\nabla \times \mathbf{B} &=\begin{pmatrix}\frac{\mathrm{d}}{\mathrm{d}y}B_z-\mathrm{i}kB_y \\\mathrm{i}kB_x-\frac{\mathrm{d}}{\mathrm{d}x}B_z \\\frac{\mathrm{d}}{\mathrm{d}x}B_y-\frac{\mathrm{d}}{\mathrm{d}y}B_x\end{pmatrix}=\begin{pmatrix} \frac{\mathrm{i}\omega}{\mu\epsilon} E_x\\\frac{\mathrm{i}\omega}{\mu\epsilon} E_y\\ \frac{\mathrm{i}\omega}{\mu\epsilon} E_z \end{pmatrix}.\label{eqn:ampere_maxwell}
+	\nabla \times \mathbf{E} &=\begin{pmatrix}\frac{\partial}{\partial y}E_z-jkE_y \\jkE_x-\frac{\partial}{\partial x}E_z \\\frac{\partial}{\partial x}E_y-\frac{\partial}{\partial y}E_x\end{pmatrix}=\begin{pmatrix} -j\omega B_x\\-j\omega B_y\\ -j\omega B_z \end{pmatrix},\label{eqn:faraday}\\
+	\nabla \times \mathbf{B} &=\begin{pmatrix}\frac{\partial}{\partial y}B_z-jkB_y \\jkB_x-\frac{\partial}{\partial x}B_z \\\frac{\partial}{\partial x}B_y-\frac{\partial}{\partial y}B_x\end{pmatrix}=\begin{pmatrix} \frac{j\omega}{\mu\epsilon} E_x\\\frac{j\omega}{\mu\epsilon} E_y\\ \frac{j\omega}{\mu\epsilon} E_z \end{pmatrix}.\label{eqn:ampere_maxwell}
 \end{align}
 \end{subequations}
 
-For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm{z}=0$. Under this assumption, \crefrange{eqn:faraday}{eqn:ampere_maxwell} together with the Gauss' law and Faraday's law reduce to the following conditions for $\mathbf{E}$ components:
+For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm{z}=0$. Under this assumption, \crefrange{eqn:faraday}{eqn:ampere_maxwell} together with Gauss' law and Faraday's law reduce to the following conditions for $\mathbf{E}$ components:
 
 \begin{align}
-	\frac{\mathrm{d}}{\mathrm{d}x}E_x+\frac{\mathrm{d}}{\mathrm{d}y}E_y&=0\quad\text{Derived out of Gauss' law}\label{eqn:rect_waveguide_gauss},\\
-	\frac{\mathrm{d}}{\mathrm{d}y}E_x-\frac{\mathrm{d}}{\mathrm{d}x}E_y&=0\quad\text{Derived out of Faraday's law}\label{eqn:rect_waveguide_faraday}.
+	\frac{\partial}{\partial x}E_x+\frac{\partial}{\partial y}E_y&=0\quad\text{Derived out of Gauss' law}\label{eqn:rect_waveguide_gauss},\\
+	\frac{\partial}{\partial y}E_x-\frac{\partial}{\partial x}E_y&=0\quad\text{Derived out of Faraday's law}\label{eqn:rect_waveguide_faraday}.
 \end{align}
 
 The derived \crefrange{eqn:rect_waveguide_gauss}{eqn:rect_waveguide_faraday} cannot fulfill any boundary conditions imposed by the rectangular waveguide. Therefore, a TEM mode cannot propagate.
