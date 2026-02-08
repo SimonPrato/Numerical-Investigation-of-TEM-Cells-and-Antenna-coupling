@@ -73,7 +73,15 @@ The TEM mode in the TEM cell is derived by a procedure presented in \cites{Tippe
 
 \end{subequations}
 
-The wave number is separated in a transversal and a longitudinal component $k_0^2=k_{0,t}^2+k_{0,z}^2$. \autoref{eqn:bc_tem} express the boundary condition on the perfectly conducting walls and septum of the TEM cell\todo{sketch}, as well as for the gaps. The source points are denoted with $\mathbf{x'}_t=(\mathbf{\hat{a}}_xx'+\mathbf{\hat{a}}_yy')$ and the observation points with $\mathbf{x}_t=(\mathbf{\hat{a}}_xx+\mathbf{\hat{a}}_yy)$. They are transformed, such that they have a dependence on the wave number $k$ instead of a $z$-dependence. This significantly facilitates the derivation of the Green's function, since only a two-dimensional surface has to be considered. 
+The wave number is separated in a transversal and a longitudinal component $k_0^2=k_{0,t}^2+k_{0,z}^2$. \autoref{eqn:bc_tem} express the boundary condition on the perfectly conducting walls and septum of the TEM cell, as well as for the gaps, as illustrated in \autoref{fig:greentemcell}. The source points are denoted with $\mathbf{x'}_t=(\mathbf{\hat{a}}_xx'+\mathbf{\hat{a}}_yy')$ and the observation points with $\mathbf{x}_t=(\mathbf{\hat{a}}_xx+\mathbf{\hat{a}}_yy)$. They are transformed, such that they have a dependence on the wave number $k$ instead of a $z$-dependence. This significantly facilitates the derivation of the Green's function, since only a two-dimensional surface has to be considered. 
+
+\begin{figure}[bt]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/green_tem_cell}
+	\caption{The Green's function solves the fields in the cross section surface $S$ of the TEM cell, which is colored in light gray and bounded by $l$. The source exciting these fields is a centered, electric dipole moment $\mathbf{m}_e$.}
+	\label{fig:greentemcell}
+\end{figure}
+
 
 The source exciting the waveguide is assumed to be an infinitesimal electric dipole moment centrally located and oriented along the $y$-axis. 
 Solving for $H_z$ and applying Green's second identity yields
