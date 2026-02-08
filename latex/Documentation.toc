@@ -65,7 +65,5 @@
 \contentsline {subsubsection}{\numberline {5.5.2}Equivalent dipole moments}{68}{subsubsection.5.5.2}%
 \contentsline {section}{\numberline {6}Application of Shielding Techniques in TEM Cells}{69}{section.6}%
 \contentsline {subsection}{\numberline {6.1}ASTM ES7-83 method}{69}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Dual TEM cell}{69}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Shielding Antennas}{70}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Shielding Equivalent Dipole Moments}{70}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.2}Dual TEM cell}{70}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Conclusions}{71}{section.7}%

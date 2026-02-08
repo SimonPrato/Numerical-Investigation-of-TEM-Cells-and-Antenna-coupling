@@ -8,8 +8,8 @@ A model as described in \autoref{sec:astm} is used to determine the shielding ef
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/se}
-	\caption{Shielding effectiveness of a sheet of zinc and nickel versus the material thickness.}
+	\includegraphics[width=1\linewidth]{content/img/se}
+	\caption{Shielding effectiveness of a sheet of zinc and nickel versus the material thickness determined with the ASTM ES7-83 Method.}
 	\label{fig:se}
 \end{figure}
 
@@ -38,21 +38,39 @@ Metallic thin shields are normally removed from the computational domain and rep
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/empty-aperture-coupling}
+	\includegraphics[width=1\linewidth]{content/img/empty-aperture-coupling}
 	\caption{Coupling of port 1 to ports 3 and 4 with empty square aperture}
 	\label{fig:empty-aperture-coupling}
 \end{figure}
 
-Empty square aperture with side length of $d=11.2\,\mathrm{mm}$ used. Simulation model leans on measurement setup in \cite{4091811}.
+Empty square aperture with side length of $d=11.2\,\mathrm{mm}$ used. Materials filling the aperture have a thickness of $t=10\,\upmu\mathrm{m}$. Simulation model leans on measurement setup in \cite{4091811}.
 
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/zinc_aperture}
+		\caption{Zinc}
+		\label{fig:zincaperture}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/gapped_loop_imp}
+		\caption{PLACEHOLDER NICKEL}
+		\label{fig:placeholder}
+	\end{subfigure}
+	\caption{The forward transmission S-parameters of port 1 to ports 3 and 4 $|S_{13}|$, $|S_{14}|$ for different shielding materials filling the aperture. }
+	\label{fig:example}
+\end{figure}
 
-\subsection{Shielding Antennas}
-
-\todo[inline]{shielding antennas and investigating field distribution will be done here. Some tilt in shielding material would be interesting to investigate}
-
-\subsection{Shielding Equivalent Dipole Moments}
-
-\todo[inline]{Check latex comments, which contain some good ideas. TODO Rest of section}
+%\subsection{Shielding Antennas}
+%
+%\todo[inline]{shielding antennas and investigating field distribution will be done here. Some tilt in shielding material would be interesting to investigate}
+%
+%\subsection{Shielding Equivalent Dipole Moments}
+%
+%\todo[inline]{Check latex comments, which contain some good ideas. TODO Rest of section}
 
 %\todo[inline]{Rest of shielding material section still TODO}
 %\subsection{Shielding effectiveness of graphite}
