@@ -68,14 +68,14 @@ The cell walls and septum are modeled as PECs. In the TEM cell simulation model,
 
 \begin{figure}[htbp]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[t]{0.46\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/tem_cell_front}
 \caption{xy-plane}
 \label{fig:temcellfront}
 	\end{subfigure}
 	\hfill
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[t]{0.5\textwidth}
 	\centering
 \includegraphics[width=1\linewidth]{content/img/tem_cell_side}
 \caption{yz-plane}
@@ -85,6 +85,8 @@ The cell walls and septum are modeled as PECs. In the TEM cell simulation model,
 	\caption{Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}
 	\label{fig:tem_cell_model}
 \end{figure}
+
+\todo[inline]{Note: Duplicate figure \autoref{fig:tem_cell_model}}
 
 Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell is derived by \autoref{eqn:em_energy}. The current and voltage at the output ports is found with \crefrange{eqn:iin}{eqn:vin}. The capacitance and inductance of the TEM cell are given by \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. The TEM cell has a constant capacitance and inductance of $C_\mathrm{T} = 6.74\,\mathrm{pF}$ and $L_\mathrm{T} = 16.25\,\mathrm{nH}$. 
 

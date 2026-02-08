@@ -1,13 +1,18 @@
-\subsection{Radiating Sources in TEM Cells}
+\subsection{Radiating Sources in TEM Cells}\label{sec:rad_source_tem}
 
 \subsubsection{Arbitrary source}
 
-Suppose a current source $\mathbf{J}_1$ excites a waveguide (as is the case with the dipoles in the TEM cell). Normally, such a current source requires external fields to drive it, but for they are neglect for now. Only $\mathbf{E}$ and $\mathbf{H}$ are considered, which are the fields radiated by $\mathbf{J}_1$. $\mathbf{E}$ and $\mathbf{H}$ are solved according to $\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H}$ and $\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}$ \cite[p. 360]{Collin_2015}. Additionally, $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are the resulting waveguide fields, with the signs indicating the direction of propagation. Take \autoref{eqn:lorentz_rec_theorem_int} and set $\mathbf{J}_2=\mathbf{M}_1=\mathbf{M}_2=0$. Now, only the current source $\mathbf{J}_1$ remains, and the \autoref{eqn:J1_propagating_waves} emerges. % Explain how certain surfaces do not to have be integrated, therefore rendering this equation very useful. Also, the expansion coefficients can be determined. Maybe do this calculation with a rectangular waveguide.
+Suppose a current $\mathbf{J}_1$ excites the TEM cell, as shown in \autoref{fig:reciprocitytemcell}. Normally, such a current would require external fields to drive it, however, these are neglected here. Only the fields $\mathbf{E}$ and $\mathbf{H}$ radiated by $\mathbf{J}_1$ are considered. These fields satisfy Maxwell's equations: \cite[p. 360]{Collin_2015}
 
-\begin{equation}
-	\oiint _S (\mathbf{e}_n^\pm\times \mathbf{H}-\mathbf{E}\times \mathbf{h}_n^\pm)\cdot\mathrm{d}\mathbf{s'}=\iiint \mathbf{J_1}\cdot\mathbf{e}_n^\pm\mathrm{d}v'
-	\label{eqn:J1_propagating_waves}
-\end{equation}
+\begin{subequations}
+	\begin{equation}
+		\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H},
+	\end{equation}
+	\begin{equation}
+		\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}_1.
+	\end{equation}
+\end{subequations}
+
 
 \begin{figure}[htbp]
 	\centering
@@ -16,11 +21,14 @@ Suppose a current source $\mathbf{J}_1$ excites a waveguide (as is the case with
 	\label{fig:reciprocitytemcell}
 \end{figure}
 
-\todo[inline]{TODO: Maybe add H fields in figure?}
+Applying the integral form of the Lorentz reciprocity theorem in \autoref{eqn:lorentz_rec_theorem_int} with $\mathbf{J}_2=\mathbf{M}_1=\mathbf{M}_2=0$ yields
 
-%In case of the TEM cell, it is desirable that only the TEM mode is propagating, and that the source is represented by a dipole. 
+\begin{equation}
+	\oiint _S (\mathbf{e}_n^\pm\times \mathbf{H}-\mathbf{E}\times \mathbf{h}_n^\pm)\cdot\mathrm{d}\mathbf{s'}=\iiint \mathbf{J_1}\cdot\mathbf{e}_n^\pm\mathrm{d}v'.
+	\label{eqn:J1_propagating_waves}
+\end{equation}
 
-The fields $\mathbf{E}$ and $\mathbf{H}$ radiated by $\mathbf{J}_1$ equal a combination of normals modes. Using the expansions \cref{eqn:a_modal_superposition1,eqn:a_modal_superposition2}, \cref{eqn:b_modal_superposition1,eqn:b_modal_superposition2} lead to
+Using the modal expansions \cref{eqn:a_modal_superposition1,eqn:a_modal_superposition2}, \cref{eqn:b_modal_superposition1,eqn:b_modal_superposition2} for the fields $\mathbf{E}$ and $\mathbf{H}$ radiated by $\mathbf{J}_1$ lead to
 
 \begin{align}
 	\oiint _S (\mathbf{e}_n^+\times \mathbf{H}-&\mathbf{E}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=\nonumber\\ \nonumber
@@ -28,7 +36,7 @@ The fields $\mathbf{E}$ and $\mathbf{H}$ radiated by $\mathbf{J}_1$ equal a comb
 	&=\sum_m a_m \oiint _S (\mathbf{e}_n^+\times \mathbf{h}_m^+-\mathbf{e}_m^+\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}.
 \end{align}
 
-Due to the orthogonal property of \autoref{eqn:norm_power} and the normalization in \autoref{eqn:unit_power}, the coefficients of each mode can be evaluated separately through
+Due to the orthogonal property of \autoref{eqn:norm_power} and the normalization in \autoref{eqn:unit_power}, the coefficients of each mode can be evaluated separately with
 
 \begin{align}
 	\oiint _S (\mathbf{e_n^+}\times \mathbf{H}&-\mathbf{E}\times \mathbf{h}_n^+)\cdot\mathrm{d}\mathbf{s'}=\nonumber\\
@@ -37,42 +45,38 @@ Due to the orthogonal property of \autoref{eqn:norm_power} and the normalization
 
 The coefficient $b_n$ of the fields $\mathbf{e}_n^-$ and $\mathbf{h}_n^-$ are evaluated in the same manner.
 
-In this equation, the wave amplitudes $a_n$ and $b_n$ are given through the surface integral in the Lorentz Reciprocity theorem, with $a_n$ being the wave going to the left side, and $b_n$ to the other. 
-
-One pair of coefficients $a_\mathrm{TEM}$, $b_\mathrm{TEM}$ suffice when investigating the propagation of the TEM mode, only. The fields $\mathbf{e}_\mathrm{TEM}$ and $\mathbf{h}_\mathrm{TEM}$ of the TEM-mode are known \todo{Some plot or table for explanation, plus citation}. Combining them with \autoref{eqn:unit_power} leads to \cite{4091811}
+Assuming only the TEM mode can propagate, combining \autoref{eqn:unit_power} with the fields $\mathbf{e}_\mathrm{TEM}$ and $\mathbf{h}_\mathrm{TEM}$ with their respective coefficients $a_\mathrm{TEM}$, $b_\mathrm{TEM}$ leads to \cite{4091811}
 
 \begin{subequations}
 	\begin{equation}
-		P_{\mathrm{out1}}=\iint_S \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{s'}= \iint_S \frac{1}{2} \, \Re \{ \left(a\cdot \mathbf{e}_\mathrm{TEM}^\pm\right) \times \left(a\cdot \mathbf{h}_\mathrm{TEM}^\pm\right)^* \}\cdot \mathrm{d}\mathbf{s'} = \frac{|a|^2}{2},
+		P_{\mathrm{out1}}=\iint_S \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{s'}= \iint_S \frac{1}{2} \, \Re \{ \left(a\cdot \mathbf{e}_\mathrm{TEM}^\pm\right) \times \left(a\cdot \mathbf{h}_\mathrm{TEM}^\pm\right)^* \}\cdot \mathrm{d}\mathbf{s'} = \frac{|a_\mathrm{TEM}|^2}{2},
 		\label{eqn:power_of_poynting1}
 	\end{equation}
 	\begin{equation}
-		P_{\mathrm{out2}}=\iint_S \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{s'}= \iint_S \frac{1}{2} \, \Re \{ \left(b\cdot \mathbf{e}_\mathrm{TEM}^\pm\right) \times \left(b\cdot \mathbf{h}_\mathrm{TEM}^\pm\right)^* \}\cdot \mathrm{d}\mathbf{s'} = \frac{|b|^2}{2}.
+		P_{\mathrm{out2}}=\iint_S \langle \mathbf{S} \rangle \cdot \mathrm{d}\mathbf{s'}= \iint_S \frac{1}{2} \, \Re \{ \left(b\cdot \mathbf{e}_\mathrm{TEM}^\pm\right) \times \left(b\cdot \mathbf{h}_\mathrm{TEM}^\pm\right)^* \}\cdot \mathrm{d}\mathbf{s'} = \frac{|b_\mathrm{TEM}|^2}{2}.
 		\label{eqn:power_of_poynting2}
 	\end{equation}
 \end{subequations}
 
-
-
-The Poynting vector $\langle \mathbf{S} \rangle$ of the TEM mode does not have an imaginary component,
+The Poynting vector $\langle \mathbf{S} \rangle$ of the TEM mode in \crefrange{eqn:power_of_poynting1}{eqn:power_of_poynting2} does not have an imaginary component,
 
 \begin{equation}
 	\langle \mathbf{S} \rangle=\mathbf{e}_\mathrm{TEM}^\pm\times\mathbf{h}_\mathrm{TEM}^\pm=\Re\{\mathbf{e}_\mathrm{TEM}^\pm\times\left(\mathbf{h}_\mathrm{TEM}^\pm\right)^*\}.
 	\label{eqn:equivalent_tem}
 \end{equation}
 
-
+\crefrange{eqn:power_of_poynting1}{eqn:power_of_poynting2} demonstrate that the coefficients $a_\mathrm{TEM}$ and $b_\mathrm{TEM}$ are directly related to the output power. Consequently, the output power can be directly linked to the electric and magnetic field distribution of the TEM mode, and vice versa.
 
 \subsubsection{Equivalent dipole moments}\label{sec:equ-dip-mom}
 
-The electric dipole moment $\mathbf{m_e}$ is given by the current $\mathbf{J}_1$ flowing through the infinitesimal wire.
+\cref{eqn:m_e_def,eqn:J1_propagating_waves} relate the electric dipole moment $\mathbf{m}_e$ with a given source current $\mathbf{J}_1$ flowing through an infinitesimal wire, yielding \cite{Sreenivasiah_Chang_Ma_1981}
 
 \begin{equation}
-	\begin{pmatrix}a_n \\b_n\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{e}_n^\pm
+	\begin{pmatrix}a_n \\b_n\end{pmatrix} = -\frac{1}{2}\mathbf{m_e}\cdot \mathbf{e}_n^\pm.
 	\label{eqn:dipole_tem_waves}
 \end{equation}
 
-If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m_m}$. It is defined by the product $\mathbf{m_m}=\mathbf{A}\cdot I$, an infinitesimal current loop with area $A$ carrying a current $I$. This leads to \autoref{eqn:mag_dipole_moment_tem}. This formulation assumes, that the magnetic field strength $\mathbf{h}^\pm$ does not change over the loop area, i.e. the loop is electrically small. Otherwise, the magnetic field strength $\mathbf{h}^\pm$ must be considered in the integration \cite{Collin_2015,Sreenivasiah_Chang_Ma_1981}.
+If this arbitrary current distribution forms an infinitesimal loop, the source can be represented by a magnetic dipole moment $\mathbf{m}_m$. This leads to \cite{Collin_2015}
 
 \begin{align}
 	\begin{pmatrix}a_n \\b_n\end{pmatrix} &= -\oint_C \mathbf{e}_n^\pm \mathrm{d}l \nonumber \\
@@ -82,55 +86,53 @@ If this arbitrary current distribution forms an infinitesimal loop, the source c
 	\label{eqn:mag_dipole_moment_tem}
 \end{align}
 
+This formulation assumes, that the magnetic field strength $\mathbf{h}^\pm$ does not change over the loop area. This is the case for electrically small loops. Otherwise, the magnetic field strength $\mathbf{h}^\pm$ must be considered in the integration process of \autoref{eqn:mag_dipole_moment_tem} \cite{Collin_2015}.
 
-If there are several modes propagating, it is useful to find the coefficients of the modes $a_n$ and $b_n$ in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. In this case, the orthogonality property in \autoref{eqn:norm_power} is used to derive \autoref{eqn:an} and \autoref{eqn:bn} \cite{Collin_2015}. The wire is described by a curve C, and the tangential vector $\boldsymbol{\tau}$ is used to integrate along this curve.
+If several modes are propagating, it is useful to determine the coefficients $a_n$ and $b_n$ weighting the modes in \crefrange{eqn:a_modal_superposition1}{eqn:b_modal_superposition2}. In this case, the orthogonality property in \autoref{eqn:norm_power} can be used to derive  \cite{Collin_2015}
 
 \begin{subequations}
 	\begin{equation}
-		2a_n = -\int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^-\mathrm{d}l
+		2a_n = -\int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^-\mathrm{d}l,
 		\label{eqn:an}
 	\end{equation}
 	\begin{equation}
-		2b_n = \int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^+\mathrm{d}l
+		2b_n = \int_C \boldsymbol{\tau}\cdot\mathbf{e}_n^+\mathrm{d}l.
 		\label{eqn:bn}
 	\end{equation}
-\end{subequations}
+\end{subequations} 
 
-% What is this subsection for? Maybe it should be combined with the TEM cell section. In there, the calculations with Green's theorem and Lorentz Reciprocity Theorem could be put. Then, the calculations from the paper of Sreenivasia could follow. It shows how to find the equivalent Dipole moments. It is important to know which modes are propagating. A Electric dipole, which points in direction of wave propagation, should not influence the result. However, it could create TM modes, which would transfer power to the ports. -> Investigate modes.
+The wire follows the curve $C$, and $\boldsymbol{\tau}$ is the tangential vector along that curve.
 
-An electrically small radiating source may be represented by six dipoles. This number includes three magnetic dipoles pointing in every direction of the Cartesian coordinate system (x, y, and z-direction), and three electric dipoles in the same orientation. Consequently, an equipment under test (EUT) could be modeled with these dipoles, leading to much less computational effort in simulation. The excited EM waves by point sources is discussed in \cite{Collin_2015} and in \autoref{sec:modes_tem_cell}. An analytical procedure to determine these dipole moments is presented by Sreenivasiah \cite{Sreenivasiah_Chang_Ma_1981}, and some experimental results based on it can be found in the research of Kreindl, where bond wires were modeled with magnetic dipoles\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}, and, again, Sreenivasiah \cite{Sreenivasiah_Chang_Ma_1981}.
+%An electrically small radiating source may be represented by six dipoles. This number includes three magnetic dipoles pointing in every direction of the Cartesian coordinate system (x, y, and z-direction), and three electric dipoles in the same orientation. Consequently, an equipment under test (EUT) could be modeled with these dipoles, leading to much less computational effort in simulation. The excited EM waves by point sources is discussed in \cite{Collin_2015} and in \autoref{sec:modes_tem_cell}. An analytical procedure to determine these dipole moments is presented by Sreenivasiah \cite{Sreenivasiah_Chang_Ma_1981}, and some experimental results based on it can be found in the research of Kreindl, where bond wires were modeled with magnetic dipoles\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}, and, again, Sreenivasiah \cite{Sreenivasiah_Chang_Ma_1981}.
 
-% Citing: "If the waveguide walls are perfectly conducting, the coefficients of such an expansion may be obtained in a straightforward manner, by an application of Lorentz's reciprocity principle." - This should be treated in the section about TEM cells. A reference to the Lorentz Reciprocity Theorem shall be made, and how it is used to determine the coefficients of the orthonormal modes.
-
-The idea is to place the EUT in the TEM cell and measure the power of both output ports. The amplitudes of the TEM fields are expressed by \autoref{eqn:a_b_moments} \cite{Sreenivasiah_Chang_Ma_1981}.
+In the presence of both a magnetic and an electric dipole moment, their contributions can be summed, resulting in \cite{Sreenivasiah_Chang_Ma_1981}
 
 \begin{equation}
-    \begin{pmatrix}a_n \\b_n\end{pmatrix} = \frac{1}{2}(-\mathbf{m_e}\cdot \mathbf{e}_n^\pm+\mathrm{i}\omega\mu_0\mathbf{m_m}\cdot\mathbf{h}_n^\pm)
+    \begin{pmatrix}a_n \\b_n\end{pmatrix} = \frac{1}{2}(-\mathbf{m_e}\cdot \mathbf{e}_n^\pm+\mathrm{i}\omega\mu_0\mathbf{m_m}\cdot\mathbf{h}_n^\pm).
     \label{eqn:a_b_moments}
 \end{equation}
 
-The magnetic field $\mathbf{h}_n$ and electric field $\mathbf{e}_n$ are both normalized to $1\,\sqrt{\mathrm{Hz}}$ \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024} and correspond to the TEM mode in free space \cite{Sreenivasiah_Chang_Ma_1981}. The electric dipole moment $\mathbf{m_e}$ and the magnetic dipole moment $\mathbf{m_m}$ are complex vectors, containing an amplitude and phase for every one of the three directions in the coordinate system (x, y, z), and have the units $\mathrm{A\cdot m}$ and $\mathrm{V\cdot m}$. The variables $a$ and $b$ correspond to the amplitudes of the waves in both possible directions in the TEM cell with the unit $\sqrt{\mathrm{W}}$.
-This leads to the final form in \autoref{eqn:a_b_moments_simp} \cite{Sreenivasiah_Chang_Ma_1981}.
+For the TEM mode, the relation between $\mathbf{e}^\pm_\mathrm{TEM}$ and $\mathbf{h}^\pm_\mathrm{TEM}$ expressed in \autoref{eqn:tem_h_e_relation} yields to a simplified form of \autoref{eqn:a_b_moments}, written as \cite{Sreenivasiah_Chang_Ma_1981}
 
 \begin{equation}
-    \begin{pmatrix}a_n \\b_n\end{pmatrix} =-\frac{1}{2}(\mathbf{m_e}\pm jk\mathbf{m_m}\times \mathbf{z})\cdot \mathbf{e}_n^\pm.
+    \begin{pmatrix}a_\mathrm{TEM} \\b_\mathrm{TEM}\end{pmatrix} =-\frac{1}{2}(\mathbf{m_e}\pm jk\mathbf{m_m}\times \mathbf{z})\cdot \mathbf{e}_\mathrm{TEM}^\pm.
     \label{eqn:a_b_moments_simp}
 \end{equation}
 
-$\mathbf{m}_{\mathrm{e}}$ and $\mathbf{m}_{\mathrm{e}}$ are separately derived by 
+\autoref{eqn:a_b_moments_simp} is useful in investigations further in this thesis, because it requires knowledge of only $\mathbf{e}^\pm_\mathrm{TEM}$ to determined the dipole moments. The dipole moments $\mathbf{m}_{\mathrm{e}}$ and $\mathbf{m}_{\mathrm{e}}$ are separately derived by 
 
+\begin{subequations}
 \begin{equation}
-	\mathbf{m}_{\mathrm{e}}=\frac{a_n+b_n}{\mathbf{e}_n^\pm},
+	\mathbf{m}_{\mathrm{e}}=\frac{a_\mathrm{TEM}+b_\mathrm{TEM}}{\mathbf{e}_\mathrm{TEM}^\pm},
 	\label{eqn:ifa_me}
 \end{equation}
 
 \begin{equation}
-	\mathbf{m}_{\mathrm{m}}=j\frac{a_n-b_n}{k_0  \mathbf{e}_n^\pm}.	\label{eqn:ifa_mm}
+	\mathbf{m}_{\mathrm{m}}=j\frac{a_\mathrm{TEM}-b_\mathrm{TEM}}{k_0  \mathbf{e}_\mathrm{TEM}^\pm}.	\label{eqn:ifa_mm}
 \end{equation}
+\end{subequations}
 
-The unity vector $\mathbf{\hat{a}}_z$ points in direction of propagation. The function vector $\mathbf{e}_n^\pm$ describes the normalized electric field amplitude in traverse direction, i.e. x and y-directions, of the excited fundamental mode. Due to the normalization of the electric and magnetic fields to $1\,\sqrt{\mathrm{W}}$, the total power at one port is 1/2\,W. This defines $\mathbf{e}_n^\pm$ as the electric field of the TEM cell, excited with a peak unit power (1\,W).
-
-The individual components aligned with the x- and y-direction can be investigated separately. For example, the components of $\mathbf{m}_\mathrm{e}$ are derived with
+The individual components of the electric field for a given mode $\mathbf{e}^\pm_n=e_n,x^\pm\cdot \mathbf{\hat{a}}_x+e_n,y^\pm\cdot \mathbf{\hat{a}}_y+e_n,z^\pm\cdot \mathbf{\hat{a}}_z$ can be analyzed separately by examining the output power of the TEM cell. For example, the components of $\mathbf{m}_\mathrm{e}$ are derived with
 
 \begin{subequations}
 	\begin{equation}
@@ -143,15 +145,9 @@ The individual components aligned with the x- and y-direction can be investigate
 	\end{equation}
 \end{subequations}
 
-$P_\mathrm{x}$ and $P_\mathrm{y}$ describe the power measured at one output port induced by the respective component of the dipole moment \cite{Sreenivasiah_Chang_Ma_1981}. The output power generated by a component of the dipole moment depends on $\mathbf{e}^\pm_{\mathrm{n}}$, therefore on the position in the TEM cell.
+$P_\mathrm{x}$ and $P_\mathrm{y}$ describe the power measured at one output port induced by the respective component of the dipole moment \cite{Sreenivasiah_Chang_Ma_1981}. 
 
-In case of the TEM mode, the electric dipole in the TEM cell leads to a increase in power with the same phase in both ports, and a magnetic dipole leads to the same increase, but with a phase shift of $\pm\pi$. This is due to the phase-shift of the magnetic fields at the output ports, as shown in \autoref{fig:reciprocitytemcelltemmode}. 
-
-In case of the next higher-order mode TE\textsubscript{01}, the situation is reversed. An electric dipole moment leads to a phase shift of $\pm\pi$, and a magnetic dipole moment to an absence of a phase shift. This is, again, due to the phase shift between $\mathbf{e}_\mathrm{TE01}^+$ and $\mathbf{e}_\mathrm{TE01}^-$, while there isn't a phase shift present between $\mathbf{h}_\mathrm{TE01}^+$ and $\mathbf{h}_\mathrm{TE01}^-$.
-
-The EUT shall be placed halfway on the septum in $z$-direction to accurately derive electric and magnetic dipole moments. A shift in $z$-direction leads to a phase shift between the powers at the output ports, therefore inducing an error to the results.
-
-It is required to measure the power at the output ports with phase information, which is done with the complex Poynting vector in a numerical analysis. When measuring an EUT with a real TEM cell, the phase information may be found by summing and subtracting the output powers of the ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
+For the TEM mode, an electric dipole placed in the TEM cell leads to output power with the same phase at both ports. In contrast, a magnetic dipole results in a phase shift of $\pm\pi$. This difference arises from the phase shift of the magnetic fields at the output ports, $\mathbf{h}_\mathrm{TEM}^+$ and $\mathbf{h}_\mathrm{TEM}^-$, as illustrated in \autoref{fig:reciprocitytemcelltemmode}. 
 
 \begin{figure}[htbp]
 	\centering
@@ -160,10 +156,17 @@ It is required to measure the power at the output ports with phase information, 
 	\label{fig:reciprocitytemcelltemmode}
 \end{figure}
 
+For the next higher-order mode TE\textsubscript{01}, the situation is reversed. An electric dipole moment leads to a phase shift of $\pm\pi$, while a magnetic dipole moment produces no phase shift. This behavior is again due to the phase shift occurring now between the electric field intensities at the output ports, $\mathbf{e}_\mathrm{TE01}^+$ and $\mathbf{e}_\mathrm{TE01}^-$, while there is no phase shift between the magnetic field intensities, $\mathbf{h}_\mathrm{TE01}^+$ and $\mathbf{h}_\mathrm{TE01}^-$.
+
+It is assumed that the dipole moments are positioned halfway along the septum in $z$-direction. A shift in $z$-direction introduces a phase shift between the output port powers, consequently altering the results derived above.
+
+%It is required to measure the power at the output ports with phase information, which is done with the complex Poynting vector in a numerical analysis. When measuring an EUT with a real TEM cell, the phase information may be found by summing and subtracting the output powers of the ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
+
+
 
 \subsubsection{Electrically small antennas}
 
-The electric field coupling with an electrically small antenna can be simply put as \cite[p. 361]{Collin_2015}
+The electric field coupling with an electrically small antenna can be expressed as \cite[p. 361]{Collin_2015}
 
 \begin{subequations}
 	
@@ -191,18 +194,18 @@ Since the antenna is electrically small, the electric field $\mathbf{e}_n^\pm$ i
 	\end{equation}
 \end{subequations}
 
-The induced voltage $V_n^+$ causes or is caused by the fields at one port $\mathbf{e}_n^+$, $\mathbf{h}_n^+$, and the induced voltage $V_n^-$ by the fields at the other port $\mathbf{e}_n^-$, $\mathbf{h}_n^-$. The induced voltages $V_n^+$ and $V_n^-$ relate to the magnetic dipole moment $\mathbf{m_m}$ and the coefficients $a$ and $b$. Defining a total induced voltage as $V_n=V_n^--V_n^+$ leads to 
-
-\todo[inline]{Only valid for TEM mode. Make general assumption}
+The induced voltage $V_n^+$ is related to the fields $\mathbf{e}_n^+$ and $\mathbf{h}_n^+$ at the output port located in positive $z$-direction, while the induced voltage $V_n^-$ to the fields at the other output port $\mathbf{e}_n^-$ and $\mathbf{h}_n^-$. For the TEM mode, the total induced voltage equals $V_\mathrm{TEM}=V_\mathrm{TEM}^--V_\mathrm{TEM}^+$. The relation to the magnetic dipole moment $\mathbf{m}_m$ is expressed as
 
 \begin{equation}
-	\mathbf{m}_m=\frac{a_n-b_n}{\mathbf{e}_n^\pm\cdot k_0}=\frac{V_n}{\mathbf{e}_n^\pm\cdot k_0}.
+	\mathbf{m}_m=\frac{a_\mathrm{TEM}-b_\mathrm{TEM}}{\mathbf{e}_\mathrm{TEM}^\pm\cdot k_0}=\frac{V_\mathrm{TEM}}{\mathbf{e}_\mathrm{TEM}^\pm\cdot k_0}.
 	\label{eqn:m_v}
 \end{equation}
 
-A magnetic dipole moment $\mathbf{m}_m$ producing fields characterized with coefficients $a_n$ and $b_n$ models the magnetic coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent $\mathbf{m}_m$ of an electrically small antenna is possible by measuring $a_n-b_n$ at the output port. 
+For the TE\textsubscript{01} mode, the total induced voltage equals $V_\mathrm{TE01}=V_\mathrm{TEM}^-+V_\mathrm{TE01}^+$. 
 
-In a similar manner to \cref{eqn:e_int_a,eqn:e_int_b}, a constant magnetic field $\mathbf{h}_n^\pm$ along $C$, where a magnetic current is present, leads to
+In the general case, a magnetic dipole moment $\mathbf{m}_m$ producing fields characterized with coefficients $a_n$ and $b_n$ models the magnetic coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent magnetic dipole moments $\mathbf{m}_m$ of an electrically small antenna is possible by measuring $a_n$ and $b_n$ at the output ports. 
+
+In a similar manner to \cref{eqn:e_int_a,eqn:e_int_b}, a constant magnetic field $\mathbf{h}_n^\pm$ along a magnetic current $I_m$ following a curve $C$, makes following expression possible:
 
 \begin{subequations}
 	
@@ -230,8 +233,9 @@ Analogous to \cref{eqn:e_a_closed_int,eqn:e_b_closed_int}, $I_m$ is assumed to b
 	\end{equation}
 \end{subequations}
 
-Now, further surfaces $S_1$ and $S_2$ are defined. Surface $S_1$ leads, starting from $S_0$, parallel to the electric field $\mathbf{e}_n^\pm$ to infinity. A total surface is defined $S=S_0+S_1+S_2$, where $S_2$ closes the total surface around $S_1$ in infinity\todo{sketch}. Therefore, the total surface covered is closed, and \cref{eqn:h_a_closed_int,eqn:h_b_closed_int} can be written as 
+Now, the surfaces $S_1$ and $S_2$ are defined. Surface $S_1$ starts from $S_0$ and runs parallel to the electric field $\mathbf{e}_n^\pm$, extending infinitely. A total surface is defined $S=S_0+S_1+S_2$, where $S_2$ closes the total surface around $S_1$ in infinity. Therefore, \cref{eqn:h_a_closed_int,eqn:h_b_closed_int} can be written with the newly defined closed surface $S$ as 
 
+\todo[inline]{TODO: Hier wäre vielleicht eine Skizze mit $S_1$, $S_2$ angebracht.}
 
 \begin{equation}
 	j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}=j \omega \epsilon_0 \iint_{S_0} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}+\underbrace{j \omega \epsilon_0 \iint_{S_1} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}}_{=0}+\underbrace{j \omega \epsilon_0 \iint_{S_2} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}.
@@ -243,7 +247,7 @@ Inserting Gauss' law $\nabla\cdot \mathbf{E}=\frac{\rho}{\epsilon_0}$ leads to
 	-j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'} = -j \omega \epsilon_0 \iiint_{V} \nabla \cdot\mathbf{e}_n^{\pm} \cdot dv' = -j \omega \iiint_{V} {\rho}_n^\pm \cdot dv'.
 \end{equation}
 
-With the continuity equation $j\omega\rho = -\nabla\cdot \mathbf{J}$ this leads to
+With the continuity equation $j\omega\rho = -\nabla\cdot \mathbf{J}$ this yields
 
 \begin{subequations}
 	\begin{equation}
@@ -256,18 +260,18 @@ With the continuity equation $j\omega\rho = -\nabla\cdot \mathbf{J}$ this leads 
 	\end{equation}
 \end{subequations}
 
-Relating the obtained expression to the electric dipole moment from \autoref{eqn:ifa_me} with a total current $I_n=I_n^+ + I_n^-$ delivers
+For the TEM mode, relating the obtained \cref{eqn:charges_a,eqn:charges_b} to the electric dipole moment from \autoref{eqn:ifa_me} with a total current $I_\mathrm{TEM}=I_\mathrm{TEM}^+ + I_\mathrm{TEM}^-$ delivers
 
 \begin{equation}
-	\mathbf{m}_e=\frac{a_n+b_n}{\mathbf{e}_n^\pm}=\frac{I_n}{\mathbf{e}_n^\pm}.
+	\mathbf{m}_e=\frac{a_\mathrm{TEM}+b_\mathrm{TEM}}{\mathbf{e}_\mathrm{TEM}^\pm}=\frac{I_\mathrm{TEM}}{\mathbf{e}_\mathrm{TEM}^\pm}.
 	\label{eqn:me_i}
 \end{equation}
 
-The physical meaning of $I_n$ is electrical current passing between the septum and the dipole through capacitive coupling with a certain mode, i.e. displacement current. Concluding, the magnetic dipole moment occurs due to induced voltage, while the electric dipole moment due to coupling electric current.
+An electric dipole moment $\mathbf{m}_e$ producing fields characterized with coefficients $a_n$ and $b_n$ models the electric coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent $\mathbf{m}_e$ of an electrically small antenna is possible by measuring $a_n$ and $b_n$ at the output port. 
 
-An electric dipole moment $\mathbf{m}_e$ producing fields characterized with coefficients $a_n$ and $b_n$ models the electric coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent $\mathbf{m}_e$ of an electrically small antenna is possible by measuring $a_n+b_n$ at the output port. 
+The physical meaning of $I_n$ is the electrical current passing between the septum and the dipole via capacitive coupling, representing the displacement current. In summary, the magnetic dipole moment arises from the induced voltage on the septum, whereas the electric dipole moment results from the coupling displacement current.
 
-Numerical simulations enable the determination of $a+b$ and $a-b$ directly. When applying this described method in a measurement with a real TEM cell, the values are found by adding and subtracting the output powers of both ports, as is shown in \cite{Sreenivasiah_Chang_Ma_1981}.
+%Numerical simulations enable the determination of the combined coefficients $a+b$ and $a-b$ directly. When applying this described method in a measurement with a real TEM cell, the values are found by adding and subtracting the output powers of both ports. The detailed procedure can be found in \cite{Sreenivasiah_Chang_Ma_1981}.
 
 \subsubsection{Radiation resistance}
 

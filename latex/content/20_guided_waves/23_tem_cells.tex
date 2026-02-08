@@ -49,7 +49,7 @@ For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm
 
 The derived \crefrange{eqn:rect_waveguide_gauss}{eqn:rect_waveguide_faraday} cannot fulfill any boundary conditions imposed by the rectangular waveguide. Therefore, a TEM mode cannot propagate.
 
-\subsubsection{TEM mode in the TEM cell}
+\subsubsection{TEM mode in the TEM cell}\label{sec:tem_mode_tem_cell}
 
 Opposed to the rectangular waveguide, a TEM cell conducts TEM waves. Further, the TEM mode is necessarily excited by the geometry of the TEM cell, hence this mode is called essential. The higher order TE and TM modes, which are only excited due to non-uniformity of the TEM cell, are called non-essential modes \cite{990711}.
 
@@ -75,7 +75,7 @@ The wave number is separated in a transversal and a longitudinal component $k_0^
 \begin{figure}[bt]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/green_tem_cell}
-	\caption{The Green's function solves the fields in the cross section surface $S$ of the TEM cell1, which is colored in light gray and bounded by $l$. The source exciting these fields is a centered, electric dipole moment $\mathbf{m}_e$.}
+	\caption{The Green's function in this analysis solves the fields in the cross section surface $S$ of the TEM cell1, which is colored in light gray and bounded by $l$. The source exciting these fields is a centered, electric dipole moment $\mathbf{m}_e$.}
 	\label{fig:greentemcell}
 \end{figure}
 
@@ -124,9 +124,9 @@ where $\mathbf{t}$ denotes the transversal unit vector.
 %Constraints in their involve the gap is assumed to be small, electrically ($\xi g \ll 1$) and compared to the septum width ($g/a \ll 1$) \cite{4091747}. The variable $\xi=\sqrt{k_0^2 - \beta ^2}$ is the transverse (in y-direction) propagation constant, and consists of the free-space wave number $k_0$ and longitudinal (in z-direction) propagation constant $\beta$. The variables $g$ and $a$ are geometry variables of the TEM cell annotated in \autoref{fig:verticalantennatemcell}.
 
 
-\subsubsection{Higher-order modes}
+\subsubsection{Higher-order modes}\label{sec:higher-order-modes}
 
-The TEM cell under investigation has a width of $a=40\,\mathrm{mm}$ and a height of $b=24\,\mathrm{mm}$. A cross section of the TEM cell with the important dimensions is shown in \autoref{fig:tem_cell_crosssection}. For a thin septum ($t/b \ll 0.1$), the cut-off frequency $f_\mathrm{c}$ of modes with n-even subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes, is approximated as 
+The TEM cell under investigation has a width of $a=40\,\mathrm{mm}$ and a height of $b=24\,\mathrm{mm}$ with a gap length of $g=5\,\mathrm{mm}$, which is shown in \autoref{fig:tem_cell_crosssection}. For a thin septum ($t/b \ll 0.1$), the cut-off frequency $f_\mathrm{c}$ of modes with n-even subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes, is approximated as \cite{Weil_Gruner_1984}
 
 \begin{equation}
 	f_c = \frac{c}{2} \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}.
@@ -134,42 +134,53 @@ The TEM cell under investigation has a width of $a=40\,\mathrm{mm}$ and a height
 \end{equation}
 
 \begin{itemize}
-	\item \( f_c \): cutoff frequency of the mode \(\text{T}_{mn}\)
-	\item \( c \): speed of light in the medium (approximately \(3 \times 10^8 \, \text{m/s}\) in air)
-	\item \( a \): wider dimension (broad wall) of the rectangular waveguide (meters)
-	\item \( b \): narrower dimension (narrow wall) of the rectangular waveguide (meters)
+	\item \( f_c \): cutoff frequency of the mode \(\text{T}_{m,2n}\)
+	\item \( c \): speed of light in the medium
+	\item \( a \): width of the TEM cell
+	\item \( b \): height of the TEM cell
 	\item \( m \): mode index in the \(a\)-direction (integer, \(m \geq 0\))
 	\item \( n \): mode index in the \(b\)-direction (integer, \(n \geq 0\))
 \end{itemize}
 
-\autoref{eqn:cutoff_frequency_rect_waveguide} is also valid for $f_\mathrm{c}$ of higher-order modes in rectangular waveguides \cite{Weil_Gruner_1984}.
+\autoref{eqn:cutoff_frequency_rect_waveguide} is also valid for cut-off frequencies $f_\mathrm{c}$ of higher-order modes in rectangular waveguides \cite{Weil_Gruner_1984}.
 
-\begin{figure}[h]
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/tem_cell_crosssection.png}
-	\caption{Geometrical arrangement of the TEM cell in the xy-plane.}
-	\label{fig:tem_cell_crosssection}
+	\begin{subfigure}[t]{0.46\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/tem_cell_front}
+		\caption{xy-plane}
+		\label{fig:temcellfront2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/tem_cell_side}
+		\caption{yz-plane}
+		\label{fig:temcellside2}
+	\end{subfigure}
+	
+	\caption{Geometrical arrangement of the TEM cell, demonstrated with cross sections in the xy-plane and the yz-plane.}
+	\label{fig:tem_cell_model2}
 \end{figure}
 
-The cutoff frequency of the TE\textsubscript{10} mode equals $f_\mathrm{c,10}=3.75\,\mathrm{GHz}$, according to \autoref{eqn:cutoff_frequency_rect_waveguide}. A numerical approach yields the forward transmission coefficients between the output ports of the TEM cell S\textsubscript{12} shown in \autoref{fig:te01_te10_tem_propagation}. There, the cut-off frequency $f_\mathrm{c}$ is defined as the smallest frequency point of undisturbed mode propagation (S\textsubscript{12}$=0\,\mathrm{dB}$). 
+Using numerical analysis, the forward transmission coefficients between the output ports of the TEM cell $S_{12}$, is computed and shown in \autoref{fig:te01_te10_tem_propagation}. The cut-off frequency $f_\mathrm{c}$ is defined as the lowest frequency at which undisturbed mode propagation occurs, corresponding to $S_{12}=0\,\mathrm{dB}$. The numerically determined cutoff frequency of the TE\textsubscript{10} mode, $f_{\mathrm{c},10}=3.75,\mathrm{GHz}$, is in agreement with the analytically obtained value given by \autoref{eqn:cutoff_frequency_rect_waveguide}.
 
-\todo[inline]{Note for potential further work in this chapter: A paper by Wilson and Ma present analytical approximations to determine the cut-off frequencies \cite{Wilson_Ma_1986}.  There is a long list for the several first few corner frequencies of the first modes. Additionally, a paper by Koch, Groh and Garbe determines the resonance frequencies of the first TE modes analytically \cite{10791592}. }
-
-A TEM cell contains a tapered section at the output ports. TEM modes pass this section with a minimal amount of reflections. However, higher order TE and TM modes reflect from those sections, and because the TEM cell is a high-Q cavity, resonances occur at $\frac{\lambda}{4}$ and $\frac{\lambda}{2}$ \cite{990711}.\todo[inline]{Simulations with a tapered section have been done in \cite{990711}}
+Analytical approximations for the cut-off frequencies of modes with n-odd subscripts are presented in \cite{Wilson_Ma_1986}. For this thesis, the cut-off frequency of the next higher order mode TE\textsubscript{01} is determined analytically in \autoref{fig:te01_te10_tem_propagation} as $f_{c,01}=3.12\,\mathrm{GHz}$.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/tem_cell_modes.png}
-	\caption{Propagation of TEM, TE\textsubscript{01} and TE\textsubscript{10} modes in the TEM cell. 
-		The black trace shows the S\textsubscript{12}-parameter over the frequency of TEM mode. The blue trace demonstrates S\textsubscript{12}-parameter of the TE\textsubscript{10} mode. At a frequency of 3.75\,GHz, this mode propagates without attenuation (S\textsubscript{12}$=0$), defining the cut-off frequency $f_\mathrm{c,10}$. The simulated result comes very close to the analytically determined one. The red trace shows a cutoff frequency of $f_\mathrm{c,10}=3.12\,\mathrm{GHz}$ for the TE\textsubscript{01} mode. \autoref{eqn:cutoff_frequency_rect_waveguide} would predict a cutoff frequency of 6.25\,GHz, however, the septum influences n-odd modes like this one. Their cutoff frequencies are shifted to a lower value \cite{Weil_Gruner_1984}.}
+	\caption{Forward transmission coefficients $S_{12}$ of the TEM, TE\textsubscript{01} and TE\textsubscript{10} modes in the TEM cell over frequency.}
 	\label{fig:te01_te10_tem_propagation}
 \end{figure}
 
-\todo[inline]{plot title: $|S_{12}|$}
+A TEM cell incorporates tapered sections at its output ports, through which the TEM mode propagates with negligible reflection. In contrast, higher-order TE and TM modes reflect at the tapered transitions. Consequently, the TEM cell behaves as a high-Q cavity resonator for these modes, with resonance frequencies occurring at an electrical length of $\frac{\lambda}{4}$ and its multiples. Numerical investigations of TEM cell simulation models that include tapered sections are presented in \cite{990711}, while analytical approximations of the resonance frequencies for different modes in a TEM cell are given in \cite{Weil_Gruner_1984}.
 
-Due to imperfections, change in materials or finite conductivity of the conducting plates, wave propagating in the TEM mode may excite higher order TE and TM modes \cite{10791592}. A change in material, for example, demands the electric and magnetic field to have a component in the direction of propagation at the discontinuity, consequently exciting TM modes. 
+Wave propagating in the TEM mode may excite higher order TE and TM modes due to material discontinuities or finite conductivity of the conducting plates \cite{10791592}. Such discontinuities require the electric and magnetic field to have a component in the direction of propagation, thereby exciting TE and TM modes. This leads to measurement uncertainties that are not present in numerical analysis.
 
-The TE\textsubscript{10} and TE\textsubscript{01} modes are non-essential modes with the lowest cut-off frequencies. Their transversal electric fields are depicted in \autoref{fig:transversal_e_fields_tem_cell}. 
+Among the higher-order modes, the TE\textsubscript{10} and TE\textsubscript{01} modes are non-essential modes with the lowest cutoff frequencies. Their transverse electric field distributions are illustrated in \autoref{fig:transversal_e_fields_tem_cell}.
 
 \begin{figure}[h]
 	\centering
@@ -195,7 +206,7 @@ The TE\textsubscript{10} and TE\textsubscript{01} modes are non-essential modes 
 	\label{fig:transversal_e_fields_tem_cell}
 \end{figure}
 
-\autoref{tab:modes_tem_cell} shows some cut-off frequencies of these modes for different TEM cell dimensions. A characteristic impedance of $50\,\Omega$ at the output ports is only kept in the case $a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$.  
+\autoref{tab:modes_tem_cell} shows some cut-off frequencies of these modes for different TEM cell dimensions. The focus for the remainder of this thesis lays on a TEM cell with the dimensions $a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$, for which the characteristic impedance of the output ports equals $Z_w=50\,\Omega$.  
 
 \begin{table}[h]
 	\centering
@@ -216,126 +227,121 @@ The TE\textsubscript{10} and TE\textsubscript{01} modes are non-essential modes 
 	\label{tab:modes_tem_cell}
 \end{table}
 
-\FloatBarrier
 \subsubsection{Field distributions}\label{sec:field_dist}
-\FloatBarrier
 
-The normalized electric field of the TEM mode is then given by \autoref{eqn:eox_normalized} in x-direction and by \autoref{eqn:eoz_normalized} in z-direction \cite{Wilson_Ma_1986}. The equations follow from the singular integral-equation approach in \cite{Wilson_1981}. The formula is not valid for the gap regions. However, since there won't be any dipole moment placed there, this approximation will suffice. These equations are to understand the influence of electrically small structures, which do not align with the TEM modes, but still couple with the TEM cell and influence the results. \todo{Is the series for several sine-waves fitting into the TEM cell, derived due to the nature of the Green's Function? If yes, then only the first-order must be used, since only the TEM mode is propagating. Now higher-order modes here.}
-
+The normalized electric field intensity of the TEM mode is given as $\mathbf{e}^\pm_\mathrm{TEM}=e^\pm_\mathrm{TEM,x}\cdot \mathbf{\hat{a}}_y+e^\pm_\mathrm{TEM,y}\cdot \mathbf{\hat{a}}_y+e^\pm_\mathrm{TEM,z}\cdot \mathbf{\hat{a}}_z$ and normalized to $\sqrt{\mathrm{W}}$. The $x$- and $z$-component of $\mathbf{e}^\pm_\mathrm{TEM,x}$ is analytically approximated by
 
 \begin{subequations}
 	
 	\begin{equation}
-		e^\pm_\mathrm{n,x} = \frac{2}{a} Z_\mathrm{w}^{1/2} \sum_{m_0=1}^{\infty} 
-		\frac{\sinh M(b - py)}{\sinh M b} 
-		\cdot \sin Mx \sin Ma \; J_0(Mg)
+		e^\pm_\mathrm{TEM,x} = \frac{4}{a} Z_\mathrm{w}^{1/2} \sum_{m_o=1}^{\infty} 
+		\frac{\sinh M(b/2 - py)}{\sinh M b/2} 
+		\cdot \sin Mx \sin Ma/2 \; J_0(Mg),
 		\label{eqn:eox_normalized}
 	\end{equation}
 	
 	
 	\begin{equation}
-		e^\pm_\mathrm{n,y} = p\,\frac{2}{a}\, Z_\mathrm{w}^{1/2} \sum_{m_0=1}^{\infty}
-		\frac{\cosh M(b - py)}{\sinh M b}
-		\cdot \cos Mx\, \sin Ma\, J_0(Mg)
-		\label{eqn:eoz_normalized}
+		e^\pm_\mathrm{TEM,y} = p\,\frac{4}{a}\, Z_\mathrm{w}^{1/2} \sum_{m_o=1}^{\infty}
+		\frac{\cosh M(b/2 - py)}{\sinh M b/2}
+		\cdot \cos Mx\, \sin Ma/2\, J_0(Mg).
+		\label{eqn:eoy_normalized}
 	\end{equation}
 	
 \end{subequations}
 
-\todo[inline]{Formeln noch einmal überprüfen (TEM Zelle Geometrie beachten)}
+$Z_\mathrm{w}$ denotes the characteristic impedance of the TEM cell output port, $a$ its width and $b$ its height. The sign-function is defined as $p=1$ above the septum and $p=-1$ below it. The parameter $M=m_o\pi / 2a$, and $g$ represented the distance of the gap between the septum and the conducting wall. The index $m_o=1,3,5, ...$ iterates over odd integers. Both expressions are derived in \cite{Wilson_1981} using the procedure described in \cref{sec:tem_mode_tem_cell}. Analytical expression of higher-order modes are provided in \cite{Tippet_Chang_Crawford_1976} and not investigated further in this thesis.
 
+In case of higher-order modes propagating, the analysis of the field distribution is conducted with the following assumptions. Each of the propagating modes is assumed to be orthogonal to each other, 
 
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[b]{1\textwidth}
-		\centering
-		\includegraphics[width=0.5\linewidth]{content/img/ex_normalized}
-		\caption{Component of the normalized electric field distribution $\mathbf{e}_\mathrm{TEM}^\pm$ aligned in x-direction in TEM cell excited with 1/2\,W at 3\,GHz.}
-		\label{fig:exnormalized}
-	\end{subfigure}
-	
-	\vspace{1em} % Add vertical space between subfigures
-	
-	\begin{subfigure}[b]{1\textwidth}
-		\centering
-		\includegraphics[width=0.5\linewidth]{content/img/ey_normalized}
-		\caption{Component of the normalized electric field distribution $\mathbf{e}_\mathrm{TEM}^\pm$ aligned in y-direction in TEM cell excited with 1/2\,W at 3\,GHz.}
-		\label{fig:eynormalized}
-	\end{subfigure}
-	
-	\caption{}
-	\label{fig:norm_efield}
-\end{figure}
+\begin{equation}
+	\iint \mathbf{e}_\mathrm{n}^\pm\times \mathbf{h}_\mathrm{m}^\pm\mathrm{d}\mathbf{s'}=0 \quad\text{if}\quad n\neq m,
+	\label{eqn:norm_power}
+\end{equation}
 
-\todo[inline]{Hier würde ich gerne eine Tabelle mit Messwerten des normalisierten elektrischen Feldes in der TEM Zelle einfügen, wie es in \cite{Wilson_1981} getan wurde}
+with $\mathbf{e}_\mathrm{n}^\pm$ and $\mathbf{h}_\mathrm{n}^\pm$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. This indicates that the modes do not couple with each other, which is the case in an uniform waveguide with perfectly conducting walls, as discussed in \cref{sec:higher-order-modes}. Furthermore, each mode is normalized to $\sqrt{\mathrm{W}}$ as shown by
 
+\begin{equation}
+	\iint \mathbf{e}_\mathrm{n}^\pm\times \mathbf{h}_\mathrm{n}^\pm\mathrm{d}\mathbf{s'}=1.
+	\label{eqn:unit_power}
+\end{equation}
 
-$Z_\mathrm{w}$ is the characteristic wave impedance, $a$ the width of the TEM cell, $b$ its height. The sign-function $p=1$ above the septum, and $p=-1$ below it. $M=m\pi / 2a$ and $g$ is the distance between the gap between the septum and the conducting wall. The index $m=1,3,5, ...$ is iterated over odd integers. 
-
-The normalized electric field intensity may be derived by the numerically resulting output power when placing dipole moments in the TEM cell. For example, \autoref{fig:outputpowereyoveroffset} demonstrates the output power of an electric dipole moment in the y-direction. It is shifted in the y-direction at center height between septum and upper TEM cell wall. Applying \autoref{eqn:e0x_mse} to the output power leads to the normalized magnitude of the field intensity in y-direction $e_y$.
-
-
-\begin{figure}[htbp]
-	\centering
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_offset}
-		\caption{Output power and norm. E-field over offset. TODO: Move to numerical investigation chapter. Redo this simulation and correct plot labels. Plot Qualität erhöhen. Skalen anpassen.}
-		\label{fig:outputpowereyoveroffset}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_height_w_offset}
-		\caption{Output power and norm. E-field over height}
-		\label{fig:outputpowereyoverheightwoffset}
-	\end{minipage}
-\end{figure}
-
-The field distribution discussed are those of the TEM mode. In case of higher-order modes propagating, the field distribution is represented by a series of the mode fields. \autoref{eqn:norm_power} shows that each mode is orthogonal to each other, with $\mathbf{e}_\mathrm{n}^\pm$ and $\mathbf{h}_\mathrm{n}^\pm$ being the function vectors of the electric and magnetic field in transverse direction \cite{Collin_2015}. This indicates that the modes do not couple with each other
-
-A coupling between the modes only occurs due to geometric changes of the waveguide. $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ are normalized to $\sqrt{\mathrm{W}}$. Additionally, each mode is normalized to $\sqrt{\mathrm{W}}$, shown by \autoref{eqn:unit_power}. Only the transverse fields are investigated in these Equations, because they carry power along the waveguide, opposed to the fields in the propagation direction.
-
-\begin{subequations}
-	
-	\begin{align}
-		\iint \mathbf{e}_\mathrm{n}^\pm\times \mathbf{h}_\mathrm{m}^\pm\mathrm{d}\mathbf{s'}&=0 \quad\text{if}\quad n\neq m
-		\label{eqn:norm_power}\\
-		\iint \mathbf{e}_\mathrm{n}^\pm\times \mathbf{h}_\mathrm{n}^\pm\mathrm{d}\mathbf{s'}&=1
-		\label{eqn:unit_power}
-	\end{align}
-	
-\end{subequations}
-
-The radiated fields can be described by a summation of normal modes, as in \autoref{eqn:modal_superposition1} and \autoref{eqn:modal_superposition2}. The coefficients of these modes are straightforward to calculate, due to Lorentz Reciprocity Theorem, if the waveguide's walls are perfectly conducting. Ideally, any higher order mode than the first TEM mode will be suppressed, and the calculation simplifies to $n=0$. Additionally, it is assumed that the source is electrically small, which makes it possible to represent it with dipoles, further simplifying the equations \cite{Koepke_1989}. The fields radiated in the positive z-direction are
+The radiated fields can then be described by a summation of normal modes, as in 
 
 \begin{subequations}
 	\begin{align}
-		\mathbf{E^+}&=\sum_na_n\mathbf{e}_n^+    \label{eqn:a_modal_superposition1}\\
-		\mathbf{H^+}&=\sum_na_n\mathbf{h}_n^+    \label{eqn:a_modal_superposition2}.
+		\mathbf{E^+}&=\sum_na_n\mathbf{e}_n^+,    \label{eqn:a_modal_superposition1}\\
+		\mathbf{H^+}&=\sum_na_n\mathbf{h}_n^+.    \label{eqn:a_modal_superposition2}
 	\end{align}
 \end{subequations}
 
-And the fields propagating along the negative z-direction are \cite[p. 360]{Collin_2015}
+And the fields propagating along the negative z-direction are expressed by \cite[p. 360]{Collin_2015}
 
 \begin{subequations}
 	\begin{align}
 		\mathbf{E^-}&=\sum_na_n\mathbf{e}_n^-,   \label{eqn:b_modal_superposition1}\\
-		\mathbf{H^-}&=\sum_na_n\mathbf{h}_n^-.    \label{eqn:b_modal_superposition2}
+		\mathbf{H^-}&=\sum_na_n\mathbf{h}_n^-,   \label{eqn:b_modal_superposition2}
 	\end{align}
 \end{subequations}
 
-$a_n$ and $b_n$ are coefficents with unit $\sqrt{\mathrm{W}}$, which scale the normalized electric fields of each mode $\mathbf{e}_n^\pm$. The fields at the outputs $\mathbf{E^\pm}$ are decomposed therefore of several propagating modes, each weighted with the coefficients.
+where $\mathbf{h}_n^\pm$ is the normalized magnetic field intensity.
 
-The normalized magnetic field intensity $\mathbf{h}^\pm_\mathrm{n}$ is derived similarly as $\mathbf{e}_\mathrm{n}^\pm$. In case of TEM mode 
+The coefficients $a_n$ and $b_n$ have units of $\sqrt{\mathrm{W}}$ and weight $\mathbf{e}_n^\pm$ and $\mathbf{h}_n^\pm$ of each mode. The field intensities at the outputs $\mathbf{E^\pm}$ and $\mathbf{H^\pm}$ are therefore decomposed into several propagating mode fields, each weighted with the corresponding coefficients. The derivation of $a_n$ and $b_n$ is discussed in \cref{sec:rad_source_tem}.
+
+The normalized magnetic field intensity $\mathbf{h}^\pm_\mathrm{n}$ is derived in an analogous manner to $\mathbf{e}_\mathrm{n}^\pm$. For the TEM mode, $\mathbf{h}_\mathrm{TEM}^\pm$ can also be directly obtained from $\mathbf{e}_\mathrm{TEM}^\pm$ with
 
 \begin{equation}
-	\mathbf{h}_\mathrm{TEM}^\pm = \frac{1}{Z_0}\mathbf{\hat{a}}_\mathrm{z}\times\mathbf{e}_\mathrm{TEM}^\pm,
+	\mathbf{h}_\mathrm{TEM}^\pm = \pm \frac{1}{\eta_0}\mathbf{\hat{a}}_\mathrm{z}\times\mathbf{e}_\mathrm{TEM}^\pm,
+	\label{eqn:tem_h_e_relation}
 \end{equation}
 
-where $Z_0 \approx 377\,\Omega$ is the free-space wave impedance.
+where $\eta_0 \approx 377\,\Omega$ is the free-space wave impedance.
 
+The normalized electric field intensity $\mathbf{e}^\pm_\mathrm{TEM}$ of the TEM mode is a key parameter for determining the coupling between a source and the output ports of the TEM cell, as derived using the Lorentz reciprocity theorem discussed in \cref{sec:lorentz_theorem}. For example, \autoref{fig:outputpowereyoveroffset} shows the output power generated by an electric dipole moment $\mathbf{m}_e$ oriented along the $y$-direction. The dipole is displaced along the $x$-axis at the center height between the septum and the upper wall of the TEM cell, which has a width of $a=40\,\mathrm{mm}$ and a height of $b=24\,\mathrm{mm}$. The normalized electric field component in the $y$-direction $e_\mathrm{TEM,y}^\pm$ reaches its maximum magnitude at the center of the TEM cell, according to \autoref{eqn:eoy_normalized}. The integral form of the Lorentz reciprocity theorem in \autoref{eqn:lorentz_rec_theorem_int} states that this results in the largest output power. This behavior is confirmed by the results shown in \autoref{fig:outputpowereyoveroffset}. Analysis of the field distribution is therefore useful to explain coupling behavior of electrically small antennas or dipole moments displaced within the TEM cell.
 
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[h]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_offset}
+		\caption{Output power and norm. E-field over offset. TODO: Move to numerical investigation chapter. Redo this simulation and correct plot labels. Plot Qualität erhöhen. Skalen anpassen.}
+		\label{fig:outputpowereyoveroffset}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[h]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_height_w_offset}
+		\caption{Output power and norm. E-field over height}
+		\label{fig:outputpowereyoverheightwoffset}
+	\end{subfigure}
+	\caption{}
+	\label{fig:dipole_moments_output_power}
+\end{figure}
+
+\todo[inline]{\autoref{fig:dipole_moments_output_power} Qualität verbessern}
+
+For this reason, \autoref{fig:norm_efield} shows the normalized electric field intensity in the TEM cell for both the $x$- and $y$-direction.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[h]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/ex_normalized}
+		\caption{${e}_\mathrm{TEM,x}^\pm$}
+		\label{fig:exnormalized}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[h]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/ey_normalized}
+		\caption{${e}_\mathrm{TEM,y}^\pm$}
+		\label{fig:eynormalized}
+	\end{subfigure}
+	\caption{The normalized electric field distribution $\mathbf{e}_\mathrm{TEM}^\pm$ in the TEM cell excited with an input power of 1/2\,W at a frequency of 3\,GHz.}
+	\label{fig:norm_efield}
+\end{figure}
+
+\todo[inline]{Hier würde ich gerne eine Tabelle mit Messwerten des normalisierten elektrischen Feldes in der TEM Zelle einfügen, wie es in \cite{Wilson_1981} getan wurde}
 
 
 
