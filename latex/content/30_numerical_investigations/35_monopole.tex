@@ -8,7 +8,7 @@
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[height=8cm]{content/img/monopole_near_field}
-		\caption{The numerically derived near-field plot of the monopole antenna shows strong displacement currents near the feedpoint and at the wire end. Simulation results are improved by decreasing mesh element lengths in these regions.}
+		\caption{Electric near-field intensity}
 		\label{fig:monopolenearfield}		
 	\end{subfigure}
 	\hfill
@@ -16,15 +16,15 @@
 		
 		\centering
 		\raisebox{0.1cm}{\includegraphics[height=8cm]{content/img/monopole_antenna}}
-		\caption{The geometrical aspects of the cylindrical monopole antenna, as implemented in the simulation model.}
+		\caption{Geometry of monopole antenna}
 		\label{fig:monopoleantenna}
 	\end{subfigure}
 	
-	\caption{}
+	\caption{The geometrical aspects of the cylindrical monopole antenna, as implemented in the simulation model, with the respective electric near-field plot.}
 	\label{fig:field_monopole_antenna}
 \end{figure}
 
-The monopole antenna is the most basic antenna generating an electric dipole moment. It is shown in \autoref{fig:monopoleantenna}, installed in the TEM cell and connected to a feed point located on the top wall. The current flowing through it is aligned with the TEM mode and produces an electric dipole moment.
+The monopole antenna is the most basic antenna generating an electric dipole moment. It is shown in \autoref{fig:monopoleantenna}, installed in the TEM cell and connected to a feed point located on the top wall. The numerically derived near-field plot of the monopole antenna shows strong displacement currents near the feedpoint and at the wire end. Simulation results are improved by decreasing mesh element lengths in these regions. The current flowing through it is aligned with the TEM mode and produces an electric dipole moment.
 
 The antenna has a physical length of 5\,mm, making it electrically short for frequencies up to 6,GHz. For frequencies up to 1.25\,GHz, it can be accurately approximated as an infinitesimal electric dipole, as discussed in \autoref{sec:infinitesimal_electric_dipoles}. At higher frequencies, up to 6,GHz, it behaves as a small electric dipole, as explained in \autoref{sec:small_electric_dipole}.
 
@@ -81,18 +81,18 @@ At low frequencies, the antenna impedance in \autoref{fig:monopoleimp} shows a h
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_feedpoint_voltage_current}
-		\caption{Magnitude of the voltage and current applied at the feedpoint of the monopole antenna over frequency, derived through the S-parameters with \crefrange{eqn:iin}{eqn:vin}.}
+		\caption{Voltage and current at feedpoint over frequency}
 		\label{fig:monopolefeedpointvoltagecurrent}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_imp}
-		\caption{Magnitude and phase of the antenna impedance over frequency, derived through the S-parameters with \autoref{eqn:za}.}
+		\caption{Antenna impedance over frequency}
 		\label{fig:monopoleimp}
 	\end{subfigure}
 	
-	\caption{}
+	\caption{Magnitude of the voltage and current applied at the feedpoint of the monopole antenna over frequency, derived through the S-parameters with \crefrange{eqn:iin}{eqn:vin}, with the respective magnitude and phase of the antenna impedance over frequency, derived through the S-parameters with \autoref{eqn:za}.}
 	\label{fig:monopoleimpvoltcurr}
 \end{figure}
 
@@ -136,18 +136,18 @@ The derived equivalent dipole moments $\mathbf{m}_e$, $\mathbf{m}_m$ in the TEM 
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_output_power}
-		\caption{Electric field in y-direction $E_\mathrm{y}$ at $x=0, y=b/4, z=\pm l/2$, and power at one output port, derived with the S-parameters in \autoref{eqn:power_antenna}.}
+		\caption{$E_\mathrm{y}$ and output power over frequency}
 		\label{fig:monopoleoutputpower}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_moment_comp}
-		\caption{Comparison of output power produced by the monopole antenna and its equivalent dipole moments to demonstrate validity of the model.}
+		\caption{Comparison of output powers}
 		\label{fig:monopolemomentcomp}
 	\end{subfigure}
 	
-	\caption{}
+	\caption{Electric field in y-direction $E_\mathrm{y}$ at $x=0, y=b/4, z=\pm l/2$, and power at one output port, derived with the S-parameters in \autoref{eqn:power_antenna}. The output power produced by the monopole antenna is compared to the output power produced by the equivalent dipole moments, to demonstrate validity of the model.}
 	\label{fig:monopole_power_comp}
 \end{figure}
 
@@ -158,13 +158,13 @@ The distribution of the current along the monopole antenna shown in \autoref{fig
 	\label{eqn:ampere_law_fem}
 \end{equation}
 
-A fine mesh resolution, as discussed in \autoref{sec:mesh}, is important for accurate results delivered by \autoref{eqn:ampere_law_fem}. 
 
-Near the feedpoint at $0\,\mathrm{mm}$ non-linear behavior becomes apparent due to significant displacement currents and numerical artifacts in this region. This causes the current to exhibit a steeper decline with non-physical oscillations. 
 
-The current distribution at $3\,\mathrm{GHz}$ (see \autoref{fig:currentdistributionmonopole}) approximates that of a small electric dipole, as described in \autoref{sec:small_electric_dipole}. It shows an approximately linear decrease towards zero.
+The current distribution at $3\,\mathrm{GHz}$ (see \autoref{fig:currentdistributionmonopole}) approximates that of a small electric dipole, as described in \autoref{sec:small_electric_dipole}. It shows an approximately linear decrease towards zero. 
 
 The current distribution at $1\,\mathrm{MHz}$, shown in \autoref{fig:currentloopchargedistribution1mhz}, also decreases linearly along the monopole antenna. I can be approximated with an infinitesimal electric dipole, as discussed in \autoref{sec:infinitesimal_electric_dipoles}.
+
+A fine mesh resolution, as discussed in \autoref{sec:mesh}, is important for accurate results delivered by \autoref{eqn:ampere_law_fem}. Consequences of a rough mesh is non-linear behavior near the feedpoint at $0\,\mathrm{mm}$ in \autoref{fig:monopole_current_dist}, which becomes apparent due to significant displacement currents and numerical artifacts in this region. This causes the current to exhibit a steeper decline with non-physical oscillations. 
 
 \begin{figure}[htbp]
 	\centering
@@ -172,7 +172,7 @@ The current distribution at $1\,\mathrm{MHz}$, shown in \autoref{fig:currentloop
 		\centering
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/monopole_current_dist}
-		\caption{The current distribution along the monopole antenna at $3\,\mathrm{GHz}$ shows a linear decrease, which is common for a small electric dipole.}
+		\caption{Current distribution at $3\,\mathrm{GHz}$}
 		\label{fig:currentdistributionmonopole}
 		\hfill
 	\end{minipage}
@@ -180,10 +180,10 @@ The current distribution at $1\,\mathrm{MHz}$, shown in \autoref{fig:currentloop
 	\begin{minipage}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/current_loop_charge_distribution_1MHz}
-		\caption{The current distribution along the monopole antenna at $1\,\mathrm{MHz}$ shows a large decline near the feedpoint due to increased displacement currents. It then approaches a roughly constant current distribution, which is typical for an approximate infinitely small electric dipole.}
+		\caption{Current distribution at $1\,\mathrm{MHz}$}
 		\label{fig:currentloopchargedistribution1mhz}
 	\end{minipage}
-	\caption{}
+	\caption{The current distribution along the monopole antenna at $3\,\mathrm{GHz}$ and $1\,\mathrm{MHz}$.}
 	\label{fig:monopole_current_dist}
 \end{figure}
 

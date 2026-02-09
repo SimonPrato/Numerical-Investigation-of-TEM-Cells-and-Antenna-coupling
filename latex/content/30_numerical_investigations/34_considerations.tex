@@ -112,8 +112,8 @@ Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ 
 			\node[ground] at (12.5, 5.5){};
 			\node[circ] at (11, 7){};
 			\node[circ] at (4, 7){};
-			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (12.75, 7.375){} node[anchor=north west, align=left, text width=2.077cm, inner sep=6pt] at (11.5, 7.75){output port 2};
-			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (2.5, 7.375){} node[anchor=north west, align=left, text width=2.077cm, inner sep=6pt] at (1.25, 7.75){output port 1};
+			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (12.75, 7.375){} node[anchor=north west, align=left, text width=2.477cm, inner sep=6pt] at (11.5, 7.75){output port 2};
+			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (2.5, 7.375){} node[anchor=north west, align=left, text width=2.477cm, inner sep=6pt] at (1.25, 7.75){output port 1};
 		\end{tikzpicture}
 	}
 	\caption{Circuit representing the TEM cell, where the capacitance and inductance is split into two separate, equal components $C_T=C_{T1} + C_{T2}$, $L_T=L_{T1} + L_{T2}$ and $C_{T1} = C_{T2}$, $L_{T1} = L_{T2}$. The resistances $R_1, R_2$ at the output ports model the reference impedance $Z_w \approx 50\,\Omega$.}
@@ -135,32 +135,34 @@ The electric and magnetic dipole moments are placed at the center of the TEM cel
 
 Placing $\mathbf{m}_{\mathrm{m}}$ and $\mathbf{m}_{\mathrm{e}}$ in the center of the TEM cell therefore significantly simplifies modeling electrically small antennas with equivalent dipole moments. This assumption is valid for the TEM mode. This configuration is assumed for all numerical investigations following in this thesis, unless otherwise stated.
 
- When normalizing to the free-space wave impedance $Z_0$, $\mathbf{m}_\mathrm{e}$ can be interchanged with an equivalent $\mathbf{m}_\mathrm{m}$ and vice-versa \cite[p. 414]{Jackson}. Therefore, normalizing either $\mathbf{m}_{\mathrm{e}}$ or $\mathbf{m}_{\mathrm{m}}$ to the free-space wave impedance $Z_0$ enables a meaningful comparison between them.
+ When normalizing to the free-space wave impedance $\eta_0$, $\mathbf{m}_\mathrm{e}$ can be interchanged with an equivalent $\mathbf{m}_\mathrm{m}$ and vice-versa \cite[p. 414]{Jackson}. Therefore, normalizing either $\mathbf{m}_{\mathrm{e}}$ or $\mathbf{m}_{\mathrm{m}}$ to the free-space wave impedance $Z_0$ enables a meaningful comparison between them.
 
 All simulation results are counterchecked by inserting the equivalent dipole moments into the TEM cell and comparing the power and phase at the output ports with the antenna's results.
 
-\autoref{fig:eyezcouplingcomparison} demonstrates the normalized output power of an electric dipole moment pointing in y-direction, and one in z-direction. This simulation only demonstrates the coupling behavior of the dipole moments over frequency, to explain the non-linear coupling of certain antennas. If dipole moments in certain positions and orientations couple with a different proportionality than the standard two dipole moments (ez and my), then the non-linear coupling may be explained that way.
+%\autoref{fig:eyezcouplingcomparison} demonstrates the normalized output power of an electric dipole moment pointing in y-direction, and one in z-direction. This simulation only demonstrates the coupling behavior of the dipole moments over frequency, to explain the non-linear coupling of certain antennas. If dipole moments in certain positions and orientations couple with a different proportionality than the standard two dipole moments (ez and my), then the non-linear coupling may be explained that way.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/ey_ez_coupling_comparison}
-	\caption{Comparison of normalized output power of electric dipole moments}
-	\label{fig:eyezcouplingcomparison}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{content/img/ey_ez_coupling_comparison}
+%	\caption{Comparison of normalized output power of electric dipole moments}
+%	\label{fig:eyezcouplingcomparison}
+%\end{figure}
 
 
+%
+%The electric dipole moment in z-direction $e_\mathrm{z}$ demonstrates the expected behavior: As the frequency rises, this dipole moment rises linearly and thus increases the output power quadratically. The electric dipole moment in y-direction $e_\mathrm{y}$ also increases linearly increase with frequency, but does not significantly change the output power for the low frequencies. However, as the frequency approaches the cut-off frequency of the next-higher order mode, the coupling rises significantly.
 
-The electric dipole moment in z-direction $e_\mathrm{z}$ demonstrates the expected behavior: As the frequency rises, this dipole moment rises linearly and thus increases the output power quadratically. The electric dipole moment in y-direction $e_\mathrm{y}$ also increases linearly increase with frequency, but does not significantly change the output power for the low frequencies. However, as the frequency approaches the cut-off frequency of the next-higher order mode, the coupling rises significantly.
+%This simulation is repeated where the dipole moments are located at a height of $h=6\,\mathrm{mm}$, which is the dead center of the TEM cell, and $h=9\,\mathrm{mm}$, which is near the top wall of the TEM cell. The simulation results are similar for both cases. 
+%
+%Most importantly, this simulation shows that the dipole moments have a relation to the frequency independent on their position. While their magnitude themselves do depend on the position, the relation to the frequency does not. 
 
-This simulation is repeated where the dipole moments are located at a height of $h=6\,\mathrm{mm}$, which is the dead center of the TEM cell, and $h=9\,\mathrm{mm}$, which is near the top wall of the TEM cell. The simulation results are similar for both cases. 
+%An electric dipole in direction of propagation lead to no power transfer, even in higher order modes. That's because these fields do not overlap with the dipole, for which TM modes would be necessary.
 
-Most importantly, this simulation shows that the dipole moments have a relation to the frequency independent on their position. While their magnitude themselves do depend on the position, the relation to the frequency does not. 
-
-An electric dipole in direction of propagation lead to no power transfer, even in higher order modes. That's because these fields do not overlap with the dipole, for which TM modes would be necessary.
-
-\todo{Repeat Simulation for several other dipole moment positions and orientations?} 
+%\todo{Repeat Simulation for several other dipole moment positions and orientations?} 
 
 As show in the previous simulations, antennas may be represented by dipole moments. This can be done in simulation models, which would otherwise be computationally too effortful. The dipole moments may be put into a shielded enclosure around a larger electronic system, as has been done in \cite{10274360}.
+
+\todo[inline]{TODO:Paragraph ausschmücken}
 
 \subsubsection{Mesh modifications}\label{sec:mesh}
 
@@ -286,7 +288,7 @@ aking the TEM cell smaller such that $k\cdot r \ll 1$, proves to be feasible. Th
  
  This is done to compare the dipole moments in both cases. While they clearly increased by magnitude in case of the small TEM cell due to better coupling, their non-linear frequency relation still remains. This means that the change of field regions is not the reason for this behavior.
  
- \todo{TODO: Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts. Insert small current loop simulation. Insert Dipole Moment Simulations}
+% \todo{TODO: Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts. Insert small current loop simulation. Insert Dipole Moment Simulations}
  
  The $k\cdot r$ factor is determined in \autoref{fig:kranalysissmalltem} in the frequency range from 1\,MHz to 3\,GHz for the small TEM cell. This factor does not surpass 0.1, thus fulfilling the requirement $k\cdot r \ll 1$ for this investigation. For comparison, the $k\cdot r$ factor over a wider frequency range are shown in \autoref{fig:kranalysissmalltem} for the normal sized TEM cell ($a = 40\,\mathrm{mm}$ and $b = 24\,\mathrm{mm}$) and a degenerately high TEM cell ($a = 10\,\mathrm{mm}$ and $b=44\,\mathrm{mm}$). The high TEM does not have a port impedance of $50\,\Omega$, and is an attempt to achieve a large $k\cdot r$ factor without higher-order modes propagating. The markers in \autoref{fig:kranalysis} indicate the cut-off frequency, in which the next higher-order mode propagates. They demonstrate, that even in the high TEM cell a $k\cdot r = 1$ is not achieved.
  
