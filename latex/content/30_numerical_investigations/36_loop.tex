@@ -242,6 +242,8 @@ which provides an approximation for the inductance of a square loop antenna in f
 
 \todo[inline]{Check: Does this formula consider external inductances?}
 
+\todo[inline]{TODO: Approximate magnetic dipole moment with loop area and norm. h-field.}
+
 The model is extended in \autoref{fig:full_circuit} with an equivalent circuit representing the TEM cell, which consists of a TEM cell inductance $L_T=L_{T1}+L_{T2}$ and capacitance $C_T = C_{T1}+C_{T2}$. The part inductances $L_{T1} = L_{T2}$ and capacitances $C_{T1}=C_{T2}$ are of equal values and are split for symmetry purposes. Special care must be taken to ensure that the model is applied within the valid frequency range of the TEM cell equivalent circuit model. The equivalent circuits of the antenna and the TEM cell are coupled via $C_k$, which models the displacement current coupling, and the mutual inductances $M_{A,T1}$ and $M_{A,T2}$, which account for coupling through induced voltages. The mutual inductances are given by
 
 \begin{equation}
@@ -324,7 +326,7 @@ The equivalent circuit of the loop antenna shown in \autoref{fig:eqc_simple} can
 	\label{eqn:loop_w0}
 \end{equation}
 
-where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, $Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the real characteristic impedance of the antenna feedpoint. Since $V_n$ and $I_n$ are directly associated with the magnetic and electric dipole moments $\mathbf{m}_m$ and $\mathbf{m}_e$ through \crefrange{eqn:m_v}{eqn:me_i}, the electric and magnetic coupling behavior of the small loop antenna can be directly linked to its resonance frequency and Q-factor. A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance $C_A$ results in a more pronounced non-linear frequency-behavior of $\mathbf{m}_m$ and $\mathbf{m}_e$.
+where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, $Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the real characteristic impedance of the antenna feedpoint. Since $V_n$ and $I_n$ are directly associated with the magnetic and electric dipole moments $\mathbf{m}_m$ and $\mathbf{m}_e$ through \crefrange{eqn:m_v}{eqn:me_i}, the electric and magnetic coupling behavior of the small loop antenna can be directly linked to its resonance frequency and Q-factor. A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance $C_A$ results in a more pronounced non-linear frequency-behavior of $\mathbf{m}_m$ and $\mathbf{m}_e$. Furthermore, a lower resonance-frequency $\omega_0$ leads to more efficient radiation of the electrically small antenna in the investigated frequency range, which corresponds to capacitive loading of the loop antenna.
 
 %\todo[inline]{TODO: I suspect that better modeling of the TEM cell reactance leads to more accurate results in \autoref{fig:loopeqcmoments}}
 
