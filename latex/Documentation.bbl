@@ -63,56 +63,6 @@
     \field{year}{1997}
   \endentry
 
-  \entry{1430946}{article}{}
-    \name{author}{4}{}{%
-      {{hash=BC}{%
-         family={Buccella},
-         familyi={B\bibinitperiod},
-         given={C.},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=FM}{%
-         family={Feliziani},
-         familyi={F\bibinitperiod},
-         given={M.},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=MF}{%
-         family={Maradei},
-         familyi={M\bibinitperiod},
-         given={F.},
-         giveni={F\bibinitperiod},
-      }}%
-      {{hash=MG}{%
-         family={Manzi},
-         familyi={M\bibinitperiod},
-         given={G.},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \keyw{Magnetic shielding;Physics computing;Boundary conditions;Eddy
-  currents;Magnetic analysis;Magnetic field measurement;Finite element
-  methods;Surface impedance;Integral equations;Frequency;Coupled boundary
-  conditions;edge elements;finite-element method (FEM);impedance network
-  boundary condition (INBC);physically large domain;shielding}
-    \strng{namehash}{BC+1}
-    \strng{fullhash}{BCFMMFMG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \verb{doi}
-    \verb 10.1109/TMAG.2005.846059
-    \endverb
-    \field{number}{5}
-    \field{pages}{1708\bibrangedash 1711}
-    \field{title}{Magnetic field computation in a physically large domain with
-  thin metallic shields}
-    \field{volume}{41}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
-    \field{year}{2005}
-  \endentry
-
   \entry{1063929}{article}{}
     \name{author}{2}{}{%
       {{hash=CZ}{%
@@ -560,49 +510,6 @@
     \field{year}{1989}
   \endentry
 
-  \entry{Kreindl_Bauernfeind_Weiss_Stockreitner_Kaltenbacher_2024}{article}{}
-    \name{author}{5}{}{%
-      {{hash=KD}{%
-         family={Kreindl},
-         familyi={K\bibinitperiod},
-         given={Dominik},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=BT}{%
-         family={Bauernfeind},
-         familyi={B\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=WB}{%
-         family={Weiss},
-         familyi={W\bibinitperiod},
-         given={Bernhard},
-         giveni={B\bibinitperiod},
-      }}%
-      {{hash=SC}{%
-         family={Stockreiter},
-         familyi={S\bibinitperiod},
-         given={Christian},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=KM}{%
-         family={Kaltenbacher},
-         familyi={K\bibinitperiod},
-         given={Manfred},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KD+1}
-    \strng{fullhash}{KDBTWBSCKM1}
-    \field{labelnamesource}{author}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{journaltitle}{Near Field Electromagnetic Interference Coupling-
-  Mechanisms of Multilayer Ceramic Capacitors}
-    \field{year}{2024}
-  \endentry
-
   \entry{10742020}{inproceedings}{}
     \name{author}{5}{}{%
       {{hash=KD}{%
@@ -939,6 +846,34 @@
     \field{year}{2023}
   \endentry
 
+  \entry{Schelkunoff_1938}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SSA}{%
+         family={Schelkunoff},
+         familyi={S\bibinitperiod},
+         given={S.\bibnamedelima A.},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SSA1}
+    \strng{fullhash}{SSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1002/j.1538-7305.1938.tb00774.x
+    \endverb
+    \field{number}{1}
+    \field{pages}{17–48}
+    \field{title}{The impedance concept and its application to problems of
+  reflection, refraction, shielding and power absorption}
+    \field{volume}{17}
+    \field{journaltitle}{Bell System Technical Journal}
+    \field{year}{1938}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{Shenton_Cendes_1985}{article}{}
     \name{author}{2}{}{%
       {{hash=SD}{%
@@ -1033,46 +968,6 @@
     \field{sortinithash}{S}
     \field{title}{Analysis of the finite element method}
     \field{year}{2018}
-  \endentry
-
-  \entry{7293591}{article}{}
-    \name{author}{3}{}{%
-      {{hash=TSX}{%
-         family={Ta},
-         familyi={T\bibinitperiod},
-         given={Son\bibnamedelima Xuat},
-         giveni={S\bibinitperiod\bibinitdelim X\bibinitperiod},
-      }}%
-      {{hash=PI}{%
-         family={Park},
-         familyi={P\bibinitperiod},
-         given={Ikmo},
-         giveni={I\bibinitperiod},
-      }}%
-      {{hash=ZRW}{%
-         family={Ziolkowski},
-         familyi={Z\bibinitperiod},
-         given={Richard\bibnamedelima W.},
-         giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-    }
-    \keyw{Dipole antennas;Antenna radiation
-  patterns;Broadcasting;Bandwidth;Wireless communication;Transmitting antennas}
-    \strng{namehash}{TSXPIZRW1}
-    \strng{fullhash}{TSXPIZRW1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \verb{doi}
-    \verb 10.1109/MAP.2015.2470680
-    \endverb
-    \field{number}{5}
-    \field{pages}{107\bibrangedash 122}
-    \field{title}{Crossed Dipole Antennas: A review}
-    \field{volume}{57}
-    \field{journaltitle}{IEEE Antennas and Propagation Magazine}
-    \field{year}{2015}
   \endentry
 
   \entry{Tippet_Chang_Crawford_1976}{article}{}

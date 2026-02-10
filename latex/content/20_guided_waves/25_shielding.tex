@@ -9,101 +9,84 @@ In the following, theory of electromagnetic shielding is presented. A figure of 
 	\label{eqn:se_elec_fields}
 \end{equation}
 
-$E_\mathrm{i}$ is the incident electric field, while $E_\mathrm{t}$ is the transmitted electric field, also depicted in \autoref{fig:shielding_material_diagram}. It depends on the thickness and shape of the material, and its electric and magnetic properties. Additionally, the TEM cell contributes to the SE values.
-
-% Should I add wave reflections formula?
-
-
+$E_\mathrm{i}$ denotes the incident electric field intensity, while $E_\mathrm{t}$ represents the transmitted electric field intensity, as illustrated in \autoref{fig:shielding_material_diagram}. These values depend on the material’s thickness, geometry, and its electric and magnetic properties.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.35\linewidth]{content/img/shielding_material_diagram.png}
-    \caption{Incident, reflected and transmitted electric fields due to interaction with shielding material}
+    \caption{Incident, reflected and transmitted electric field intensities at a shielding material.}
     \label{fig:shielding_material_diagram}
 \end{figure}
 
 % (Note: Higher order modes may be able to propagate in the TEM cell, as the refraction of the shielding material follows to excitation of these modes.)
 
-An electromagnetic wave may undergo several reflections inside the shielding material, with each reflection adding up to the total reflected, absorbed and transmitted waves. The total shielding effectiveness is therefore determined by
+An electromagnetic wave can undergo multiple reflections within the shielding material, with each reflection contributing to the total reflected, absorbed, and transmitted wave. The total shielding effectiveness is determined by
 
 \begin{equation}
 	SE_{\mathrm{dB}}=R_{\mathrm{dB}}+A_{\mathrm{dB}}+B_{\mathrm{dB}},
 	\label{eqn:se_rereflections}
 \end{equation}
 
-according to Schelkunoff. $A_{\mathrm{dB}}$ represents the absorption losses traveling through the shield, $R_{\mathrm{dB}}$ the reflection losses, and $B_{\mathrm{dB}}$ is the correction factor for the multiple reflections inside the shield \cite{10518640}.
+according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material's surface, and $B_{\mathrm{dB}}$ is a correction factor accounting for multiple reflections within the shield \cite{10518640}.
 
-%Calculate with S-params $S_{11}$ and $S_{21}$: A, R and T.  
-
-%This approach to shielding with internal re-reflections in the shielding material was derived by Schelkunoff. 
-%\url{https://www.ieee.li/pdf/viewgraphs/fundamentals_electromagnetic_shield.pdf}
-
-The reflections occur due to the change in wave impedance. They are described through a reflection coefficient $R$. Additionally, it is common to normalize the wave impedance $Z$ to the free-space wave impedance $Z_0$. At the interface from free-space to a shielding material, this leads to \cite{Collin_2015}
+Reflections are caused by changes in wave impedance and are characterized by the reflection coefficient $R$. It is common practice to normalize the wave impedance $Z$ to the free-space wave impedance $Z_0$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
 
 \begin{equation}
-	R=\frac{Z-1}{Z+1},
+	R=\frac{Z-1}{Z+1}.
 	\label{eqn:reflection_coefficient_plane_dielectric}
 \end{equation}
 
-where
+
+\subsubsection{Electrical characteristics}
+
+The normalized wave impedance is given by
 
 \begin{equation}
     Z=\frac{1}{Z_0}\sqrt{\frac{\mathrm{i}\omega\mu}{\sigma+\mathrm{i}\omega\epsilon}}.
     \label{eqn:rel_wave_imp}
 \end{equation}
 
-The reflection coefficient can be converted into dB, leading to $R_\mathrm{dB}$. Any additional reflection happen due to re-reflections inside the shielding material, described by $B_\mathrm{dB}$. The rest of the energy must either be absorbed, described by $A_\mathrm{dB}$ or transmitted, shown by $T_\mathrm{dB}$. 
 
-\todo{p. 309 Classical Electrodynamics (John David Jackson) describe shielding material by dipole moments}
 
-The wave number $k$ in lossy media is described in a real an imaginary parts as in
+%The reflection coefficient can be converted into dB, leading to $R_\mathrm{dB}$. Any additional reflection happen due to re-reflections inside the shielding material, described by $B_\mathrm{dB}$. The rest of the energy must either be absorbed, described by $A_\mathrm{dB}$ or transmitted, shown by $T_\mathrm{dB}$. 
 
-\begin{equation}
-	k = \beta + \mathrm{i}\frac{\alpha}{2}.
-	\label{eqn:wave_number}
-\end{equation}
+%\todo{p. 309 Classical Electrodynamics (John David Jackson) describe shielding material by dipole moments}
 
-The imaginary part $\alpha$ is the attenuation or absorption coefficient. It describes the reduction of the intensity of the wave, which occurs with $\mathrm{e}^{-\alpha x}$, where x is the coordinate direction of propagation. The real part $\beta=\frac{2\pi}{\lambda}$ is the phase constant \cite{Jackson}.
 
-\todo{Formula $\alpha$? Needed?}
+%The wavenumber $k$ in lossy media consists of a real and an imaginary, parts as in
+%
+%\begin{equation}
+%	k = \beta + \mathrm{i}\alpha.
+%	\label{eqn:wave_number}
+%\end{equation}
 
-\begin{equation}
-    \mathbf{E} = \mathbf{e}\cdot \mathrm{e}^{-jkx}
-\end{equation}
+%The imaginary part of the wavenumber $k$, $\alpha$ denotes the attenuation or absorption coefficient. It describes the reduction of the intensity of the wave over distance.
 
-\todo{S-parameters should enable derivation of $\alpha$. Due to normal incident wave of TEM, no angle needed to consider.}
+When molecules in a material are exposed to an electric field, they become polarized. This property is characterized by the material's permittivity $\epsilon$. Exposure to a magnetic field causes the spins of electrons within atoms to align with the field, described by the material’s permeability $\mu$. When these electric and magnetic fields vary with time, the molecules continuously move and realign, resulting in the movement of charges, which is quantified by the conductivity $\sigma$. The energy lost in this dynamic process is dissipated as heat \cite{Balanis_2012}.
 
-% Quick mathematical formulation of how to calculate reflected waves?
-
-\todo{Basics: Balanis 2012 page 68?}
-
-When the molecules in a material are exposed to electric fields, they will polarize, described by their permittivity $\epsilon$. When exposed to a magnetic field, the spinning of their electrons in the atoms align with the magnetic field, described by the permeability $\mu$ of the material. When the fields alternate over time, the molecules will always move and align according to them. This is essentially a movement of charges, and therefore described by a conductivity $\sigma$. The energy lost in this process is dissipated as heat \cite{Balanis_2012}.
-
-The electric field will push charges in polarizable molecules apart. This separation of charges may be described as a electric dipole, depending on the separation distance and the charge. Under alternating electric fields, the moving of charges will contribute to $\sigma$. This phenomenon is called dielectric hysteresis. It is quantified by a loss tangent $\tan\delta_e$ in \cite{Balanis_2012}
+The electric field will push charges in polarizable molecules apart. This separation of charges may be described as a electric dipole, depending on the separation distance and the charge. Under alternating electric fields, the moving of charges will contribute to $\sigma$. This phenomenon is called dielectric hysteresis. It is quantified by the loss tangent $\tan\delta_e$, and defined as \cite{Balanis_2012}
 
 \begin{equation}
 	\tan\delta_e = \frac{\sigma_s}{\omega\epsilon'}+\frac{\epsilon''}{\epsilon'}.
 	\label{eqn:loss_tangent_permittivity}
 \end{equation}
 
-There, $\sigma_s$ is the static conductivity, meaning the conductivity of the material for static fields. The complex part of the permittivity $\epsilon''$ describes the lossy part of the dielectric material, specifically relevant for the alternating fields case. The real part of the permittivity is lossless and is noted by $\epsilon'$. The overall complex permittivity is therefore $\epsilon=\epsilon'+\mathrm{i}\epsilon''$.
-\todo{Some way to describe coupling of shielding material to TEM cell?}
+There, $\sigma_s$ is the static conductivity, indicating the conductivity of the material for constant fields over time. The complex part of the permittivity $\epsilon''$ describes the lossy part of the dielectric material, specifically relevant for alternating fields over time. The real part of the permittivity is lossless and is noted by $\epsilon'$, and corresponds to the material's ability to store electric energy \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The overall complex permittivity is therefore $\epsilon=\epsilon'+\mathrm{i}\epsilon''$.
 
+The loss tangent relates therefore the conductivity of a material to the real permittivity. A dielectric with low losses has a much larger displacement current than conduction current density ($\tan\delta_e \ll 1$). The opposite is true for a good conductor ($\tan\delta_e \gg 1$) \cite{Balanis_2012}.
 
-The loss tangent therefore $\tan\delta_e$ relates the conductivity of a material to the real permittivity. A dielectric with low losses has a much larger displacement current than conduction current density ($\tan\delta_e \ll 1$). The opposite is true for a good conductor ($\tan\delta_e \gg 1$) \cite{Balanis_2012}.
+%The loss tangent $\tan\delta_e$ is a function of frequency, however, it is often not stated as such. Therefore, the loss tangent of FR4, for example, is given as $\tan\delta_e=0.02$ for frequencies up to 1\,GHz. For higher frequencies, the molecules may have resonance frequencies, where they influence more strongly the overall conductance and consequently increase the imaginary part of the permittivity $\epsilon''$.
 
-The loss tangent $\tan\delta_e$ is a function of frequency, however, it is often not stated as such. Therefore, the loss tangent of FR4, for example, is given as $\tan\delta_e=0.02$ for frequencies up to 1\,GHz. For higher frequencies, the molecules may have resonance frequencies, where they influence more strongly the overall conductance and consequently increase the imaginary part of the permittivity $\epsilon''$.
+Analogous to polarizable material, there are also magnetizable lossy materials, which is characterized by a complex permeability $\mu=\mu'+\mathrm{i}\mu''$. The real part of the permeability $\mu'$ described the material's ability to store magnetic energy, while $\mu''$ described the magnetic losses  \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The complex permeability can also be described by a magnetic loss tangent $\tan{\delta_m}$, as shown in
 
-There are also magnetically lossy materials, which is introduced by a complex permeability $\mu=\mu'+\mathrm{i}\mu''$. Analog to the dielectric case, the permeability can also be described by a loss tangent $\tan{\delta_m}$ as shown in \begin{equation}
+\begin{equation}
 	\tan{\delta_m}=\frac{\mu''}{\mu'}.
 	\label{eqn:magnetic_loss_tangent}
 \end{equation}
 
-However, the loss tangent is very low for the majority of materials and will be neglected. Ferrites are an exception, which are commonly used to dampen high frequency signals \cite{Balanis_2012}.
+Although, the loss tangent is very low for the majority of materials and will be neglected. Ferrites are an exception, which are commonly used to dampen high frequency signals \cite{Balanis_2012}.
 
-\todo{describe $\alpha$ and $\delta$ for absorption. Then reflections with $\epsilon$ and $\mu$}
-
-Electric fields dominate in the near-field region of electric dipoles. To shield them, high permittivity and high conductivity materials, ideally with a high loss tangent $\tan\delta_e$ shall be used. On the other hand, magnetic fields dominate in the near-field region of magnetic dipoles. For shielding them, high permittivity and high conductivity materials, again with a high loss tangent $\tan\delta_m$ shall be used.\todo{source}
+Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Effective shielding in this case requires materials with high permittivity and high conductivity, ideally featuring a high electric loss tangent $\tan\delta_e$. In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles (see \cref{sec:mag_dip}). Shielding and redirecting magnetic fields require materials with high permeability and conductivity, again with a high magnetic loss tangent $\tan\delta_m$ shall be used.\todo{source}
 
 \subsubsection{ASTM ES7-83 Method}\label{sec:astm}
 
@@ -118,7 +101,7 @@ In this method, two measurements are performed with an oscilloscope attached to 
 
 to derive the shielding effectiveness $SE_\mathrm{dB}$ \cite{MORARI_BĂLAN_2015}.
 
-In the case of simulating the problem, such a procedure may be used, too. It is more convenient, then, to defined a reference output power $P_\mathrm{ref}$ for an unloaded TEM cell, and a output power for the loaded case $P_\mathrm{load}$. This leads to the similar 
+When applying numerical analysis in combination with this method, it is more convenient to defined a reference output power $P_\mathrm{ref}$ for an unloaded TEM cell, and an output power for the loaded case $P_\mathrm{load}$. This leads to the similar 
 
 \begin{equation}
 	SE_\mathrm{dB}=10\cdot\log{\left( \frac{P_\mathrm{ref}}{P_\mathrm{load}} \right)}.
