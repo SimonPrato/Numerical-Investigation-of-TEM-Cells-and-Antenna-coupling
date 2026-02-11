@@ -63,6 +63,56 @@
     \field{year}{1997}
   \endentry
 
+  \entry{1430946}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BC}{%
+         family={Buccella},
+         familyi={B\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Feliziani},
+         familyi={F\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Maradei},
+         familyi={M\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Manzi},
+         familyi={M\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{Magnetic shielding;Physics computing;Boundary conditions;Eddy
+  currents;Magnetic analysis;Magnetic field measurement;Finite element
+  methods;Surface impedance;Integral equations;Frequency;Coupled boundary
+  conditions;edge elements;finite-element method (FEM);impedance network
+  boundary condition (INBC);physically large domain;shielding}
+    \strng{namehash}{BC+1}
+    \strng{fullhash}{BCFMMFMG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1109/TMAG.2005.846059
+    \endverb
+    \field{number}{5}
+    \field{pages}{1708\bibrangedash 1711}
+    \field{title}{Magnetic field computation in a physically large domain with
+  thin metallic shields}
+    \field{volume}{41}
+    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{year}{2005}
+  \endentry
+
   \entry{1063929}{article}{}
     \name{author}{2}{}{%
       {{hash=CZ}{%
@@ -674,6 +724,59 @@
     \field{title}{Measurement and Simulation Methodology for Characterizing the
   Shielding Effectiveness of Coating Materials for Optical Sensors}
     \field{year}{2023}
+  \endentry
+
+  \entry{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}{article}{}
+    \name{author}{6}{}{%
+      {{hash=KJ}{%
+         family={Kruželák},
+         familyi={K\bibinitperiod},
+         given={Ján},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kvasničáková},
+         familyi={K\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Džuganová},
+         familyi={D\bibinitperiod},
+         given={Michaela},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DR}{%
+         family={Dosoudil},
+         familyi={D\bibinitperiod},
+         given={Rastislav},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HI}{%
+         family={Hudec},
+         familyi={H\bibinitperiod},
+         given={Ivan},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Krump},
+         familyi={K\bibinitperiod},
+         given={Henrich},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KJ+1}
+    \strng{fullhash}{KJKADMDRHIKH1}
+    \field{labelnamesource}{author}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.20944/preprints202401.1547.v1
+    \endverb
+    \field{journaltitle}{Electrical conductivity, EMI absorption shielding
+  performance, curing process and mechanical properties of rubber composites}
+    \field{year}{2024}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{85399}{article}{}

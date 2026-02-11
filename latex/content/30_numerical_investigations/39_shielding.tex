@@ -1,17 +1,19 @@
 \section{Application of Shielding Techniques in TEM Cells}\label{sec:shielding-sim}
-\subsection{ASTM ES7-83 method}
+\subsection{ASTM ES7-83 method}\label{sec:astm-sim}
 \FloatBarrier
 
-A model as described in \autoref{sec:astm} is used to determine the shielding effectiveness of nickel and zink according to the ASTM ES7-83 method discussed in \cref{sec:astm}. The TEM cell contains a shielding material sheet of thickness ranging from 1 to 40\,µm in the center of the TEM cell at $z=0$. A reference power $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen, the load power $P_\mathrm{load}$ is numerically derived. Using \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material depending on thickness. The investigated frequency is 1\,GHz.
-
-%\todo[inline]{Compare results with other papers}
-
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\linewidth]{content/img/se}
 	\caption{Shielding effectiveness of a sheet of zinc and nickel versus the material thickness determined with the ASTM ES7-83 Method.}
 	\label{fig:se}
 \end{figure}
+
+A model as described in \autoref{sec:astm} is used to determine the shielding effectiveness of barium titanate and ferrite according to the ASTM ES7-83 method discussed in \cref{sec:astm}. The TEM cell contains a shielding material sheet with a thickness of 10\,µm in the center of the TEM cell at $z=0$, which is modeled with impedance boundary conditions as discussed in \cref{sec:bc-shield}. A reference power of $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen and the load power $P_\mathrm{load}$ is numerically derived. \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material depending on frequency. The investigated frequency is 1\,GHz.
+
+%\todo[inline]{Compare results with other papers}
+
+The properties of the materials used are listed in \autoref{tab:materials}. Ferrite additionally is modeled to have a magnetic loss tangent of $\tan \delta_m = 0.05$.
 
 %Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with the adaptive meshing algorithm discussed in \cref{sec:simulations}, which is applied to these simulation models. 
 
@@ -24,24 +26,32 @@ A model as described in \autoref{sec:astm} is used to determine the shielding ef
 			\hline
 			Material & Rel. permittivity $\varepsilon_r$ & Rel. permeability $\mu_r$ & Conductivity $\sigma$ \\
 			\hline\hline
-			Zinc & $\approx 1$ & $\approx 1$ & $1.67 \cdot 10^7$\,S/m\\
-			\hline
-			Nickel & $\approx 1$ & $600$ & $1.45 \cdot 10^7$\,S/m \\
-			\hline
-			Permalloy 45 & $\approx 1$ & $\approx 90,000$ & $2.00 \cdot 10^6$\,S/m\\
+			Ferrite & $\approx 12$ & $\approx 1,000$ & $0.01$\,S/m\\
 			\hline
 			Barium titanate & $\approx 2,000$ & $\approx 1$ & $3.64\cdot 10^{-11}$\,S/m \\
 			\hline
 	\end{tabular}}
-	\caption{Electromagnetic Properties of Zinc and Nickel}
+	\caption{Electromagnetic Properties of barium titanate and ferrite}
 	\label{tab:materials}
 \end{table}
 
+\FloatBarrier
 \subsection{Dual TEM cell}
 
-A simulation model of two TEM cells as shown in \autoref{fig:dual_tem_cell}, consisting of the models demonstrated in \cref{sec:tem_cell_model}, without the tapered sections, is created. An empty square aperture with a side length of $d=10\,\mathrm{mm}$ is used, which makes it electrically small up to a frequency of approximately $3\,\mathrm{GHz}$. The largest numerical error stems from insufficient mesh size in the aperture region, hence 10 to 15 mesh elements across the aperture are aimed for. The procedure described in \cref{sec:dual_tem_cell} is applied to derive the electric and magnetic shielding effectiveness of permalloy 45 and barium titanate (BaTiO\textsubscript{3}).
+A simulation model of two TEM cells as shown in \autoref{fig:dual_tem_cell}, consisting of the models demonstrated in \cref{sec:tem_cell_model}, without the tapered sections, is created. An empty square aperture with a side length of $d=10\,\mathrm{mm}$ is used, which makes it electrically small up to a frequency of approximately $3\,\mathrm{GHz}$. The largest numerical error stems from insufficient mesh size in the aperture region, hence 10 to 15 mesh elements across the aperture are aimed for. The procedure described in \cref{sec:dual_tem_cell} is applied to derive the electric and magnetic shielding effectiveness of, again, ferrite and barium titanate (BaTiO\textsubscript{3}).
 
-Port 1 excites the waveguides with a power of $1\,\mathrm{W}$. The sum  $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the powers arriving at port 3 and 4 is demonstrated in \autoref{fig:emptypowersumdiff}. 
+Port 1 excites the waveguides with a power of $1\,\mathrm{W}$. The sum  $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the powers arriving at port 3 and 4 is demonstrated in \autoref{fig:emptypowersumdiff}, which is calculated using \cite{Sreenivasiah_Chang_Ma_1981}
+
+\begin{subequations}
+\begin{equation}
+	P_\mathrm{sum} = (a+b)(a+b)^*,
+\end{equation}
+\begin{equation}
+	P_\mathrm{diff} = (a-b)(a-b)^*,
+\end{equation}
+\end{subequations}
+
+where $a$ and $b$ are the amplitudes of the fields at port 3 and 4, respectively.
 
 %Simulation model leans on measurement setup in \cite{4091811}.
 
@@ -59,7 +69,11 @@ Port 1 excites the waveguides with a power of $1\,\mathrm{W}$. The sum  $P_\math
 	\label{fig:emptypowersumdiff}
 \end{figure}
 
-Materials filling the aperture have a thickness of $t=10,\upmu\mathrm{m}$. For highly conductive materials, applying skin-depth based meshing within the material enhances accuracy while reducing computational effort. This approach refines the mesh especially near the material’s surface, where rapid field variations occur. The skin depth is calculated as shown in \autoref{eqn:skin_depth} and further discussed in \cref{sec:skin_effect}. Again, the sum $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the powers at port 3 and 4 are derived and shown in \cref{fig:bariumpowersumdiff,fig:permalloypowersumdiff}, once for the aperture filled with barium titanate, and once with permalloy 45.
+Materials filling the aperture have a thickness of $t=10,\upmu\mathrm{m}$. 
+
+When investigating highly conductive materials, applying skin-depth based meshing within the material enhances simulation accuracy while reducing computational effort. This approach refines the mesh especially near the material’s surface, where rapid field variations occur. The skin depth is calculated as shown in \autoref{eqn:skin_depth} and further discussed in \cref{sec:skin_effect}. In contrast, both ferrite and barium titanate have a low conductivity, therefore, the mesh refinement of the aperture is instead achieved by setting a maximum mesh element length.
+
+Again, the sum $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the powers at port 3 and 4 are derived and shown in \cref{fig:bariumpowersumdiff,fig:ferritepowersumdiff}, once for the aperture filled with barium titanate, and once with ferrite.
 
 \begin{figure}[htbp]
 	\centering
@@ -72,15 +86,15 @@ Materials filling the aperture have a thickness of $t=10,\upmu\mathrm{m}$. For h
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/permalloy_power_sum_diff}
-		\caption{Permalloy 45}
-		\label{fig:permalloypowersumdiff}
+		\includegraphics[width=1\linewidth]{content/img/ferrite_power_sum_diff}
+		\caption{Ferrite}
+		\label{fig:ferritepowersumdiff}
 	\end{subfigure}
 	\caption{The sum $P_\mathrm{load,sum}$ and difference in output power $P_\mathrm{load,diff}$ measured at port 3 and 4 with the phase information considered.}
 	\label{fig:example}
 \end{figure}
 
-Permalloy 45 exhibits lower power transfer, indicating stronger shielding effectiveness compared to barium titanate. Additionally, $P_\mathrm{load,sum}$ is low for both materials, suggesting high electric shielding effectiveness, as indicated by \cref{eqn:se_dual_cell_e}. When the aperture is filled with barium titanate, power transfer increases with frequency, which can be attributed to the material’s low bulk conductivity and slightly decreasing permittivity at higher frequencies. In contrast, the transferred power through the permalloy 45 sheet decreases with frequency, reflecting increased absorption due to the material’s high bulk conductivity. The electric and magnetic shielding effectiveness for both materials are illustrated in \cref{fig:sebarium,fig:sepermalloy}.
+Ferrite exhibits higher power transfer, indicating lower shielding effectiveness compared to barium titanate. Additionally, $P_\mathrm{load,sum}$ is low for barium titanate, suggesting high electric shielding effectiveness, as indicated by \cref{eqn:se_dual_cell_e}. The power transfer of both materials increases with frequency, which can be attributed to the low bulk conductivity and slightly decreasing permittivity at higher frequencies. The electric and magnetic shielding effectiveness for both materials are illustrated in \cref{fig:sebarium,fig:seferrite}.
 
 \begin{figure}[htbp]
 	\centering
@@ -93,24 +107,21 @@ Permalloy 45 exhibits lower power transfer, indicating stronger shielding effect
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/se_permalloy}
-		\caption{Permalloy}
-		\label{fig:sepermalloy}
+		\includegraphics[width=1\linewidth]{content/img/se_ferrite}
+		\caption{Ferrite}
+		\label{fig:seferrite}
 	\end{subfigure}
 
 	\caption{The electric $SE_\mathrm{dB}^\mathrm{e}$ and magnetic $SE_\mathrm{dB}^\mathrm{m}$ shielding effectiveness derived with \cref{eqn:se_dual_cell_e,eqn:se_dual_cell_m}.}
 	\label{fig:se_e_m}
 \end{figure}
 
-\todo[inline]{TODO: Permalloy 45 simulationergebnis ist unpräzise im niedrigen Frequenzbereich, ich werde das ausbessern.}
+Barium titanate exhibits good electric shielding characteristics, but demonstrates a negative $SE_\mathrm{dB}^\mathrm{m}$ value, indicating poor magnetic shielding. Negative shield effectiveness values are possible, and occur due to interference patterns at the filled aperture, which cause $a$ and the output power at port 3 to increase \cite{4091811}. Ferrite, on the other hand, demonstrates a higher magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$, but a low or negative electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$. 
 
-Barium titanate exhibits good electric shielding characteristics, but demonstrates a negative $SE_\mathrm{dB}^\mathrm{m}$ value, indicating poor magnetic shielding. This effect occurs due to interference patterns at the filled aperture, which cause port 3 to receive more power, than in the case of an empty aperture \cite{4091811}.
-
-Barium titanate has a high permittivity, which is related to high electric shielding, but low bulk conductivity and permeability, as shown in \autoref{tab:materials}. Consequently, magnetic shielding is low. 
-
+\FloatBarrier
 \subsection{Antennas in shield enclosure}
 
-The loop and monopole antennas investigated in \cref{sec:monopole,sec:loop_sim} are shielded in a covered enclosure, as shown in \cref{fig:loopantennaenclosure,fig:monopoleantennaenclosure}. The enclosure has a thickness of $10\,$µm, and all sides have a length of 6\,mm. The near-field region of the monopole antenna is predominantly electric (\autoref{eqn:compl_power_inf_elec_dipole}), while that of the loop antenna is magnetic (\autoref{eqn:pr_loop}).
+The loop and monopole antennas investigated in \cref{sec:monopole,sec:loop_sim} are shielded in a hollow enclosure, as shown in \cref{fig:loopantennaenclosure,fig:monopoleantennaenclosure}. The enclosure has a thickness of $10\,$µm, and all sides have a length of 6\,mm. 
 
 \begin{figure}[htbp]
 	\centering
@@ -132,13 +143,28 @@ The loop and monopole antennas investigated in \cref{sec:monopole,sec:loop_sim} 
 	\label{fig:example}
 \end{figure}
 
-\autoref{fig:bariumenclosurepower} shows the radiated power by the antennas with and without barium titanate enclosure. The output power increases due to the barium titanate enclosure capacitively loading the antenna. This leads to an decrease in resonance frequency, making it a more efficient radiator at the investigated frequency range, as discussed in \autoref{sec:loop_sim}. 
+\autoref{fig:ferriteenclosurepower} shows the radiated power from the antennas with and without a barium titanate enclosure. The output power of the loop antenna increases because the barium titanate enclosure capacitively loads the antenna, resulting in a decrease in resonance frequency, which leads to a more efficient operating point of the antenna in the investigated frequency range, as discussed in \cref{sec:loop_sim}. In contrast, the enclosure effectively shields against the monopole antenna’s radiation. The results are consistent with the near-field region of the monopole antenna being predominantly electric (\autoref{eqn:compl_power_inf_elec_dipole}), while that of the loop antenna is predominantly magnetic (\autoref{eqn:pr_loop}).
 
-\begin{figure}
+Similarly, \autoref{fig:ferriteenclosurepower} shows the radiated power from the antennas with and without the ferrite enclosure. In this case, the output power of the monopole antenna increases due to the ferrite enclosure inductively loading the antenna. The enclosure serves as an effective shield against the loop antenna’s radiation.
+
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1\linewidth]{content/img/barium_enclosure_power}
-	\caption{Barium titanate}
-	\label{fig:bariumenclosurepower}
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/barium_enclosure_power}
+		\caption{Barium titanate}
+		\label{fig:bariumenclosurepower}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/ferrite_enclosure_power}
+		\caption{Ferrite}
+		\label{fig:ferriteenclosurepower}
+	\end{subfigure}
+	
+	\caption{Output power over frequency produced by antennas with and without enclosure.}
+	\label{fig:enclosurepower}
 \end{figure}
 
 \subsection{Dipole moments in shield enclosure}

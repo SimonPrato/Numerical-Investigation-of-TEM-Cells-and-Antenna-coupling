@@ -172,6 +172,12 @@ The maximum mesh element length in error-prone volumes are adjusted, until the o
 
 Lastly, it is best practice to select the upper limit of the investigated frequency range as the solution frequency. This choice produces the largest spatial field changes, forcing the adaptive mesh process to generate a high-resolution mesh. Results in the frequency range below the solution frequency benefit from a reusable mesh that is finer than required. This procedure is applied for every numerically derived frequency-dependent result presented in this thesis.
 
+\subsubsection{Shielding material models}\label{sec:bc-shield}
+
+The numerical investigation of large computational domains containing thin shielding material requires large mesh sizes for accurate representation of fields around the shield. Especially in the analysis of the ASTM ES7-83 method in \cref{sec:astm-sim}, the shielding material leads to high computational effort. A solution is the implementation of boundary conditions on the shielding material's surface, as described in \cite{1430946}.
+
+In this solution process, the shielding material is removed from the computational domain. Instead, the boundary conditions imposed on its surface are considered, and plane wave propagation normal to the surface is assumed. 
+
 \subsubsection{S-parameters and derived data}\label{sec:s-param-data}
 
 The TEM cell with an antenna is modeled as a three-port network. The two output ports of the TEM cell are denoted as ports 1 and 2, while the antenna feedpoint is marked as port A. The behavior of this system is fully characterized by its scattering matrix, given as
