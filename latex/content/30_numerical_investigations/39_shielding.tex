@@ -38,7 +38,7 @@ The properties of the materials used are listed in \autoref{tab:materials}. Ferr
 \FloatBarrier
 \subsection{Dual TEM cell}
 
-A simulation model of two TEM cells as shown in \autoref{fig:dual_tem_cell}, consisting of the models demonstrated in \cref{sec:tem_cell_model}, without the tapered sections, is created. An empty square aperture with a side length of $d=10\,\mathrm{mm}$ is used, which makes it electrically small up to a frequency of approximately $3\,\mathrm{GHz}$. The largest numerical error stems from insufficient mesh size in the aperture region, hence 10 to 15 mesh elements across the aperture are aimed for. The procedure described in \cref{sec:dual_tem_cell} is applied to derive the electric and magnetic shielding effectiveness of, again, ferrite and barium titanate (BaTiO\textsubscript{3}).
+A simulation model of two TEM cells as shown in \autoref{fig:dual_tem_cell}, consisting of the models demonstrated in \cref{sec:tem_cell_model}, without the tapered sections, is created. An empty square aperture with a side length of $d=10\,\mathrm{mm}$ is used, which makes it electrically small up to a frequency of approximately $3\,\mathrm{GHz}$. Significant numerical error may result from insufficient mesh resolution in the aperture region, therefore, 10 to 15 mesh elements across the aperture are desirable to guarantee accurate results. The procedure described in \cref{sec:dual_tem_cell} is applied to derive the electric and magnetic shielding effectiveness of, again, ferrite and barium titanate (BaTiO\textsubscript{3}).
 
 Port 1 excites the waveguides with a power of $1\,\mathrm{W}$. The sum  $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the powers arriving at port 3 and 4 is demonstrated in \autoref{fig:emptypowersumdiff}, which is calculated using \cite{Sreenivasiah_Chang_Ma_1981}
 
@@ -145,7 +145,7 @@ The loop and monopole antennas investigated in \cref{sec:monopole,sec:loop_sim} 
 
 \autoref{fig:ferriteenclosurepower} shows the radiated power from the antennas with and without a barium titanate enclosure. The output power of the loop antenna increases because the barium titanate enclosure capacitively loads the antenna, resulting in a decrease in resonance frequency, which leads to a more efficient operating point of the antenna in the investigated frequency range, as discussed in \cref{sec:loop_sim}. In contrast, the enclosure effectively shields against the monopole antenna’s radiation. The results are consistent with the near-field region of the monopole antenna being predominantly electric (\autoref{eqn:compl_power_inf_elec_dipole}), while that of the loop antenna is predominantly magnetic (\autoref{eqn:pr_loop}).
 
-Similarly, \autoref{fig:ferriteenclosurepower} shows the radiated power from the antennas with and without the ferrite enclosure. In this case, the output power of the monopole antenna increases due to the ferrite enclosure inductively loading the antenna. The enclosure serves as an effective shield against the loop antenna’s radiation.
+Similarly, \autoref{fig:ferriteenclosurepower} shows the radiated power from the antennas with and without the ferrite enclosure. In this case, the output power of the monopole antenna increases due to the ferrite enclosure inductively loading the antenna. The enclosure dampens the loop antenna’s radiation, which can be attributed to the redirection of magnetic flux in the material, and the power dispersion induced by the magnetic loss tangent and conductivity.
 
 \begin{figure}[htbp]
 	\centering
@@ -169,7 +169,8 @@ Similarly, \autoref{fig:ferriteenclosurepower} shows the radiated power from the
 
 \subsection{Dipole moments in shield enclosure}
 
-Next, the antennas in the enclosures are replaced with their equivalent dipole moments determined in \cref{sec:monopole,sec:loop_sim}. 
+\todo[inline]{TODO: Simulation von Dipolmomenten in denselben Schildmaterialien.}
+%Next, the antennas in the enclosures are replaced with their equivalent dipole moments determined in \cref{sec:monopole,sec:loop_sim}. 
 
 \FloatBarrier
 %\subsection{Shielding Antennas}

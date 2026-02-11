@@ -3,27 +3,7 @@
 
 \subsection{Preliminary Considerations for Numerical Analysis}
 
-\subsubsection{Skin Effect}\label{sec:skin_effect}
 
-\todo[inline]{TODO: Skin Effect Kapitel zu Shielding Kapiteln geben?}
-
-The Skin-effect causes current to flow through a reduced area in a conductor, thus increasing resistance. The imaginary part $\kappa$ of the complex wave number $k$ is described by
-
-\begin{equation}
-	\kappa = \omega \sqrt{\frac{\epsilon \mu}{2}}\left[\sqrt{ 1+\left(\frac{\sigma}{\epsilon\omega}\right) ^2 } -1\right]^{1/2}.
-	\label{eqn:kappa}
-\end{equation}
-
-The skin depth $d$ is responsible for the increased conductor losses and is expressed as 
-
-\begin{equation}
-	d = 1/\kappa.
-	\label{eqn:skin_depth}
-\end{equation}
-
-For highly conductive materials $\left(\sigma \ll \epsilon\omega\right)$ the skin depth is $d \propto 1/\sqrt{\omega}$. Conductor losses $P_\mathrm{loss}$ are linearly proportional to the area of the conductor and therefore Skin-depth. They show the same dependency on the frequency $P_\mathrm{loss}\propto 1/\sqrt{\omega}$ \cite[p. 413]{Griffiths_2024}. Conductor losses contribute to the power consumption of the small loop antenna and is significantly larger than radiation power \cite[p. 231]{Balanis_1997}. 
-
-The investigations in this thesis focus on the coupling behavior of antennas, including the radiation power consumed. All conducting surfaces in the simulation models are perfect electric conductors (PEC) to remove the impact of the Skin-effect.
 
 %reduces the area in which the current flows, therefore increasing resistance. This appears due to the reduction of the depth, in which the electromagnetic waves enter. It is also called Skin depth and mathematically described by \autoref{eqn:skin_depth}. It depends on the imaginary part of the wave number $\kappa$, which is described in \autoref{eqn:kappa}. For high conducting materials $\left(\sigma >> \epsilon\omega\right)$, the dependency of the skin depth $d$ on the frequency can be described therefore as $d \propto 1/\sqrt{\omega}$. Since the power dispersion is linearly proportional to the area of the conductor and therefore Skin-depth, it shows the same dependency on the frequency $P_\mathrm{disp}\propto 1/\sqrt{\omega}$ \cite{Griffiths_2024}.  
 %\todo{Own little chapter for skin effect? Loop antennas are known for higher conductor losses than radiation Balanis page 231}
@@ -50,7 +30,7 @@ The investigations in this thesis focus on the coupling behavior of antennas, in
 
 \subsubsection{Antenna models}\label{sec:antenna_model}
 
-Every antenna is fed with a round feedpoint, shown in \autoref{fig:antennaport}. They provide an incident wave of unit power (1\,W). The antenna wires are modeled as PECs with a diameter of 0.2\,mm. The geometry is intentionally kept simple, with the cylindrical wires pointing either in x-, y- or z-direction, without combining multiple orientations. 
+Every antenna is fed with a round feedpoint, shown in \autoref{fig:antennaport}. They provide an incident wave of unit power (1\,W). The antenna wires are modeled as PECs with a diameter of 0.2\,mm. The geometry is intentionally kept simple, with the cylindrical wires pointing either in $x$-, $y$- or $z$-direction, without combining multiple orientations. 
 
 \begin{figure}[h]
 	\centering
@@ -58,6 +38,8 @@ Every antenna is fed with a round feedpoint, shown in \autoref{fig:antennaport}.
 	\caption{Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a round waveport of diameter $0.46\,\mathrm{mm}$. The antenna consists of PEC wire with diameter of $0.2\,\mathrm{mm}$.	This geometry leads to a reference impedance of $Z_0\approx 50$\,$\Omega$.}
 	\label{fig:antennaport}
 \end{figure}
+
+The investigations in this thesis focus on the coupling behavior of antennas. All conducting surfaces in the simulation models are perfect electric conductors (PEC) to remove the influence of lossy conductors, which are especially significant due to the Skin-effect. Conductor losses contribute to the power consumption of the small loop antenna, for example, and is significantly larger than radiation power \cite[p. 231]{Balanis_1997}.
 
 The first two antennas investigated are the monopole (\cref{sec:monopole}) and the loop antenna (\cref{sec:loop_sim}), which represent the most basic antennas producing electric and magnetic dipole moments, respectively. Other electrically small antennas deliver similar results, depending on wether they are capacitive or inductive. Capacitive antennas are analogous to monopole antennas, and inductive ones to the loop antenna, both including their equivalent circuits. This applies even for electrically small antennas with high Q-factor.
 
@@ -248,7 +230,7 @@ The coupling between the antenna and the two ports of the TEM cell are described
  
 \todo[inline]{Update field plots}
  
-In this section, the coupling-field regions described in \autoref{sec:rad_fields} are analyzed using the model shown in \autoref{fig:krtemcell}. This analysis examines whether frequency-dependent coupling behavior of the TEM cell can be attributed to changes in the dominant coupling-field region.
+In this section, the regions of the electromagnetic fields contributing to the coupling between the antenna and the TEM cell are analyzed using the model presented in \autoref{fig:krtemcell}. This model consists of a TEM cell and two dipole moments. It is assumed that the coupling occurs in the near-field region ($k \cdot r \ll 1$). Any deviation from this condition could affect the simulation results and the derived equivalent dipole moments of the antenna. By varying the size of the TEM cell and observing the corresponding changes in output power over frequency, it is possible to determine whether the output power depends on the dominant coupling field region within the frequency range of interest.
 
  \begin{figure}[h]
  	\centering
@@ -272,8 +254,6 @@ aking the TEM cell smaller such that $k\cdot r \ll 1$, proves to be feasible. Th
  
  
  First, the current loop antenna used in \autoref{sec:loop_sim} is placed in the dead center of the TEM cell. The equivalent dipole moments are shown in \autoref{fig:loop_small_tem_moments}. In the \autoref{fig:dipole_moments_loop_antenna_copy} next to it, the dipole moments of the same antenna in the larger TEM cell used before ($a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$) are presented. 
- 
- \todo[inline]{TODO:Redo plots}
  
  \begin{figure}[htbp]
  	\centering

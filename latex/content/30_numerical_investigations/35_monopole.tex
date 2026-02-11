@@ -187,18 +187,95 @@ A fine mesh resolution, as discussed in \autoref{sec:mesh}, is important for acc
 	\label{fig:monopole_current_dist}
 \end{figure}
 
+\FloatBarrier
+\subsubsection{Equivalent circuit model}
+\FloatBarrier
 
-\todo[inline]{TODO: Equivalent circuit for Monopole Antennas}
+An equivalent circuit is derived in \autoref{fig:eqc_simple_monopole}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. 
 
-An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. 
+\begin{figure}[h]
+	\centering
+	\resizebox{0.25\textwidth}{!}{
+		\begin{tikzpicture}
+			% Paths, nodes and wires:
+			\draw (11, 7) to[european inductor, l={$L_A$}] (11, 5);
+			\draw (10, 7) to[capacitor, l={$C_A$}] (8.5, 7);
+			\node[ground] at (11, 5){};
+			\draw (10, 7) -- (11, 7);
+			\draw (11, 7) -- (12.5, 7);
+			\draw (12.5, 7) to[european resistor, l={$R_A$}] (12.5, 5);
+			\node[ground] at (12.5, 5){};
+			\node[circ] at (11, 7){};
+			\draw (8.5, 7) -- (7, 7);
+			\draw[-latex] (7, 7.5) -- (8.75, 7.5);
+			\node[shape=rectangle, minimum width=2.215cm, minimum height=0.965cm] at (8.534, 7.75){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (7.409, 8.25){$P_{in}$};
+		\end{tikzpicture}
+	}
+	\caption{The Chu equivalent circuit for a short electric dipole models the monopole antenna's behavior.}
+	\label{fig:eqc_simple_monopole}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{content/img/free-space-monopole}
+	\caption{Model of the loop antenna connected to a feedpoint mounted on a PEC surface with a side length of $\lambda/2$, where $\lambda$ corresponds to the free-space wavelength of the solution frequency. This configuration enables the investigation of the loop antenna reactance without influence of the TEM cell.}
+	\label{fig:free-space-monopole}
+\end{figure}
 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.3\linewidth]{content/img/chu_circuit}
-	\caption{The Chu equivalent circuit for a short electric dipole models the monopole antenna's behavior. }
-	\label{fig:chucircuit}
+	\resizebox{\textwidth}{!}{%
+		\begin{tikzpicture}
+			% Paths, nodes and wires:
+			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm](N1) at (2.5, 10){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
+			\node[ground] at (2.5, 8){};
+			\draw (2.5, 8) -| (2.5, 9.5);
+			\draw (4, 12) to[european resistor, l={$R_s$}] (6, 12);
+			\draw (8.5, 12) to[capacitor, l={$C_A$}] (8.5, 10);
+			\draw (8.5, 10) to[european inductor, l={$L_A$}] (8.5, 8);
+			\node[ground] at (8.5, 8){};
+			\draw (2.5, 10.5) -| (2.5, 12) -- (4, 12);
+			\draw (6, 12) -- (7.5, 12) -- (10, 12);
+			\node[circ] at (8.5, 12){};
+			\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=4.965cm, minimum height=5.715cm] at (8.5, 9.875){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (8.375, 11.5){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
+			\draw (10, 12) to[capacitor, l={$C_k$}] (14.5, 12);
+			\node[circ] at (9, 9.5){};
+			\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
+			\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
+			\draw (14.5, 10) -| (14.5, 12);
+			\node[circ] at (14.5, 12){};
+			\draw (18, 10) to[capacitor, l={$C_{T2}$}] (18, 8);
+			\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
+			\node[ground] at (18, 8){};
+			\node[ground] at (20.5, 8){};
+			\node[circ] at (18, 10){};
+			\draw (18, 12) -- (22, 12);
+			\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
+			\node[ground] at (23, 8){};
+			\draw (25.5, 10) to[european resistor, l={$R_1$}] (25.5, 8);
+			\node[ground] at (25.5, 8){};
+			\draw (22, 12) -- (24.5, 12);
+			\draw (20.5, 10) -- (20.5, 12);
+			\node[jump crossing] at (20.5, 10){};
+			\draw (18, 10) -- (20.36, 10);
+			\draw (20.64, 10) -- (23, 10);
+			\draw (24.5, 12) -| (25.5, 10);
+			\node[circ] at (20.5, 12){};
+			\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=7.965cm, minimum height=5.715cm] at (18, 9.875){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (16.375, 12.75){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (23.375, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (26.875, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
+			\node[circ] at (15.75, 12.5){};
+			\node[circ] at (16.75, 10.5){};
+		\end{tikzpicture}
+	}
+	\caption{Circuit representing the TEM cell and the monopole antenna, with the additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their near-field coupling behavior.}
+	\label{fig:full_circuit_monopole}
 \end{figure}
+
+
 
 \FloatBarrier
 \subsubsection{Current distribution on septum}

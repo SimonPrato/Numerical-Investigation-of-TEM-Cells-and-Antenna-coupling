@@ -20,33 +20,50 @@ $E_\mathrm{i}$ denotes the incident electric field intensity, while $E_\mathrm{t
 
 % (Note: Higher order modes may be able to propagate in the TEM cell, as the refraction of the shielding material follows to excitation of these modes.)
 
-An electromagnetic wave can undergo reflection, absorption or multiple reflections within the shielding material, with each reflection contributing to the total reflected, absorbed, and transmitted wave. The main contribution of a material's shielding effectiveness is reflection \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. The total shielding effectiveness is determined by \cite[p. 63]{Jaroszewski_Thomas_Rane_2019}
+An electromagnetic wave can undergo reflection, absorption or multiple reflections within the shielding material, with each reflection contributing to the total reflected, absorbed, and transmitted wave. The total shielding effectiveness is determined by \cite[p. 63]{Jaroszewski_Thomas_Rane_2019}
 
 \begin{equation}
 	SE_{\mathrm{dB}}=R_{\mathrm{dB}}+A_{\mathrm{dB}}+B_{\mathrm{dB}},
 	\label{eqn:se_rereflections}
 \end{equation}
 
-according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material's surface, and $B_{\mathrm{dB}}$ is a correction factor accounting for multiple reflections within the shield \cite{10518640}. However, when investigating shielding materials with thicknesses less than the skin depth, $B_{\mathrm{dB}}$ can be neglected \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. While absorption $A_{\mathrm{dB}}$ is related to the skin depth, the thinness of the shielding material shifts the emphasis to reflection as the primary shielding mechanism. The concept of skin depth is still discussed in \cref{sec:skin_effect}.
 
-Reflections are caused by wave impedance mismatch between to materials, and are characterized by the reflection coefficient $R$. It is common practice to normalize the wave impedance $Z$ to the free-space wave impedance $Z_0$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
+according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material’s surface, and $B_{\mathrm{dB}}$ is a correction factor that accounts for multiple reflections within the shield \cite{10518640}.
+
+Reflections contribute most significantly to a material’s shielding effectiveness \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. They are characterized by the reflection coefficient $R$. Highly conductive materials, such as metals, reflect the majority of incident electromagnetic waves. The same is true for materials with high permittivity or permeability. 
+
+Reflections are caused by wave impedance mismatch between two materials. It is common practice to use the normalized wave impedance $Z$ to free-space wave impedance $Z_0$ when determining the reflection coefficient $R$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
 
 \begin{equation}
 	R=\frac{Z-1}{Z+1}.
 	\label{eqn:reflection_coefficient_plane_dielectric}
 \end{equation}
 
-
-\subsubsection{Electrical characteristics}
-
 The normalized wave impedance is given by
 
 \begin{equation}
-    Z=\frac{1}{Z_0}\sqrt{\frac{\mathrm{i}\omega\mu}{\sigma+\mathrm{i}\omega\epsilon}}.
-    \label{eqn:rel_wave_imp}
+Z=\frac{1}{Z_0}\sqrt{\frac{\mathrm{i}\omega\mu}{\sigma+\mathrm{i}\omega\epsilon}}.
+\label{eqn:rel_wave_imp}
 \end{equation}
 
+Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p. 67]{Jaroszewski_Thomas_Rane_2019}.
 
+In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p. 112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magentic flux line due to high permeability of the shielding material \cite[pp. 112-113]{Jaroszewski_Thomas_Rane_2019}.
+
+The portion of the electromagnetic wave that is not reflected is subject to absorption within the shielding material. This phenomenon is described by $A_{\mathrm{dB}}$ and accounts for an exponentially decreasing amplitude of an electromagnetic wave in a lossy medium. In conductive materials, this phenomenon is closely related to the skin depth, as discussed in \cref{sec:skin_effect}. For non-conductive materials, absorption depends on the electric loss factor \cite[pp.~102-103]{Jaroszewski_Thomas_Rane_2019}, as further described in \cref{sec:shielding_parameters}.
+
+Upon reaching the other end of the shielding material, re-reflections can occur. However, when investigating shielding materials with thicknesses less than the skin depth, the correction factor for this effect $B_{\mathrm{dB}}$ can be neglected \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}.
+
+
+
+
+
+
+%Conductor losses $P_\mathrm{loss}$ are linearly proportional to the area of the conductor and therefore the Skin depth. They show the same dependency on the frequency $P_\mathrm{loss}\propto 1/\sqrt{\omega}$ \cite[p. 413]{Griffiths_2024}. 
+
+
+
+\subsubsection{Conductivity, permeability and permittivity in shields}\label{sec:shielding_parameters}
 
 %The reflection coefficient can be converted into dB, leading to $R_\mathrm{dB}$. Any additional reflection happen due to re-reflections inside the shielding material, described by $B_\mathrm{dB}$. The rest of the energy must either be absorbed, described by $A_\mathrm{dB}$ or transmitted, shown by $T_\mathrm{dB}$. 
 
@@ -84,11 +101,27 @@ Analogous to polarizable material, there are also magnetizable lossy materials, 
 	\label{eqn:magnetic_loss_tangent}
 \end{equation}
 
-Although, the loss tangent is very low for the majority of materials and will be neglected. Ferrites are an exception, which are commonly used to dampen high frequency signals \cite{Balanis_2012}.
+The loss tangent is very low for the majority of materials. Ferrites are an exception, which are commonly used to dampen high frequency signals \cite{Balanis_2012}.
 
-Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p. 67]{Jaroszewski_Thomas_Rane_2019}.
 
-In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p. 112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magentic flux line due to high permeability of the shielding material \cite[pp. 112-113]{Jaroszewski_Thomas_Rane_2019}.
+
+\subsubsection{Skin Effect}\label{sec:skin_effect}
+
+The Skin effect describes the interaction of electromagnetic waves with conductors, causing eddy currents to form on the surface. To investigate this phenomenon, the complex wavenumber is introduced $\tilde{k}=k + i\kappa$, which is assists in mathematically describing waves propagating in lossy materials. The imaginary part $\kappa$ is expressed as
+
+\begin{equation}
+	\kappa = \omega \sqrt{\frac{\epsilon \mu}{2}}\left[\sqrt{ 1+\left(\frac{\sigma}{\epsilon\omega}\right) ^2 } -1\right]^{1/2}.
+	\label{eqn:kappa}
+\end{equation}
+
+The skin depth $d$ is described by 
+
+\begin{equation}
+	d = 1/\kappa.
+	\label{eqn:skin_depth}
+\end{equation}
+
+For highly conductive materials $\left(\sigma \ll \epsilon\omega\right)$ the skin depth is $d \propto 1/\sqrt{\omega}$. Therefore, high-frequency electromagnetic waves do not penetrate deeply into conductive materials, due to the free electrons associated with high conductivity absorbing the waves with eddy current on the material's surface and transforming the energy into heat. A material's permeability further reduces the skin depth due to the increased susceptibility to eddy currents \cite[p. 104]{Jaroszewski_Thomas_Rane_2019}.
 
 \subsubsection{ASTM ES7-83 Method}\label{sec:astm}
 
