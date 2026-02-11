@@ -2,7 +2,7 @@
 
 \subsubsection{Incident, reflected and transmitted waves in medium}
 
-In the following, theory of electromagnetic shielding is presented. A figure of merit for shielding capabilities of a material is the electromagnetic shielding effectiveness $SE$, given in \cite{10518640}
+In the following, the fundamental theory of electromagnetic shielding is presented. A figure of merit for shielding capabilities of a material is the electromagnetic shielding effectiveness $SE$, given in \cites{10518640}[p. 63]{Jaroszewski_Thomas_Rane_2019}
 
 \begin{equation}
 	SE_{\mathrm{dB}}=20\log{\left(\frac{E_\mathrm{i}}{E_\mathrm{t}}\right)}.
@@ -20,16 +20,16 @@ $E_\mathrm{i}$ denotes the incident electric field intensity, while $E_\mathrm{t
 
 % (Note: Higher order modes may be able to propagate in the TEM cell, as the refraction of the shielding material follows to excitation of these modes.)
 
-An electromagnetic wave can undergo multiple reflections within the shielding material, with each reflection contributing to the total reflected, absorbed, and transmitted wave. The total shielding effectiveness is determined by
+An electromagnetic wave can undergo reflection, absorption or multiple reflections within the shielding material, with each reflection contributing to the total reflected, absorbed, and transmitted wave. The main contribution of a material's shielding effectiveness is reflection \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. The total shielding effectiveness is determined by \cite[p. 63]{Jaroszewski_Thomas_Rane_2019}
 
 \begin{equation}
 	SE_{\mathrm{dB}}=R_{\mathrm{dB}}+A_{\mathrm{dB}}+B_{\mathrm{dB}},
 	\label{eqn:se_rereflections}
 \end{equation}
 
-according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material's surface, and $B_{\mathrm{dB}}$ is a correction factor accounting for multiple reflections within the shield \cite{10518640}.
+according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material's surface, and $B_{\mathrm{dB}}$ is a correction factor accounting for multiple reflections within the shield \cite{10518640}. However, when investigating shielding materials with thicknesses less than the skin depth, $B_{\mathrm{dB}}$ can be neglected \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. While absorption $A_{\mathrm{dB}}$ is related to the skin depth, the thinness of the shielding material shifts the emphasis to reflection as the primary shielding mechanism. The concept of skin depth is still discussed in \cref{sec:skin_effect}.
 
-Reflections are caused by changes in wave impedance and are characterized by the reflection coefficient $R$. It is common practice to normalize the wave impedance $Z$ to the free-space wave impedance $Z_0$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
+Reflections are caused by wave impedance mismatch between to materials, and are characterized by the reflection coefficient $R$. It is common practice to normalize the wave impedance $Z$ to the free-space wave impedance $Z_0$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
 
 \begin{equation}
 	R=\frac{Z-1}{Z+1}.
@@ -86,8 +86,9 @@ Analogous to polarizable material, there are also magnetizable lossy materials, 
 
 Although, the loss tangent is very low for the majority of materials and will be neglected. Ferrites are an exception, which are commonly used to dampen high frequency signals \cite{Balanis_2012}.
 
-Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Effective shielding in this case requires materials with high permittivity and high conductivity, ideally featuring a high electric loss tangent $\tan\delta_e$. In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles (see \cref{sec:mag_dip}). Shielding and redirecting magnetic fields require materials with high permeability and conductivity, again with a high magnetic loss tangent $\tan\delta_m$ shall be used.\todo{source}
+Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p. 67]{Jaroszewski_Thomas_Rane_2019}.
 
+In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p. 112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magentic flux line due to high permeability of the shielding material \cite[pp. 112-113]{Jaroszewski_Thomas_Rane_2019}.
 
 \subsubsection{ASTM ES7-83 Method}\label{sec:astm}
 

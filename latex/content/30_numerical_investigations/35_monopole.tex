@@ -204,8 +204,6 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 \subsubsection{Current distribution on septum}
 \FloatBarrier
 
-\autoref{fig:monopole_surface_currents} shows the surface current density on the septum induced by the monopole antenna at 3\,GHz. The current reaches both output ports in phase, confirming the absence of a phase shift between the output port powers. 
-
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{1\textwidth}
@@ -228,11 +226,15 @@ An equivalent circuit is derived in \autoref{fig:chucircuit}, which is known as 
 	\label{fig:main}
 \end{figure}
 
+\autoref{fig:monopole_surface_currents} shows the surface current density on the septum induced by the monopole antenna at 3\,GHz. The current reaches both output ports in phase, confirming the absence of a phase shift between the output port powers. 
 
-\autoref{fig:monopole_surface_current_te01} shows the current density of the septum at 3.3\,GHz, with the TEM-mode compensated at the output ports. Due to the magnetic fields propagating in the z-direction, the current on the septum creates a pattern of swirls. Furthermore, the phase shift of the induced power between the output ports is $\pi$. This results from the magnetic field intensities of the TE\textsubscript{01}-mode being in-phase at the output ports, opposed to the magnetic field intensities of the TEM-mode. 
+\autoref{fig:monopole_surface_current_te01} shows the current density of the septum at 3.3\,GHz, with the TEM-mode compensated at the output ports. Due to the magnetic fields propagating in the $z$-direction, the current on the septum forms a pattern of swirls. However, at a frequency of 3,GHz, this pattern is not as pronounced, as the current in the swirls negligible, as shown in \autoref{fig:monopole_surface_currents}. Furthermore, the phase shift of the induced power between the output ports is $\pi$. This results from the magnetic field intensities of the TE\textsubscript{01}-mode being in-phase at the output ports, opposed to the magnetic field intensities of the TEM-mode. 
 
-\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}
-\todo[inline]{idea: offset in x-direction, showing surface current and explaining the decrease in power transfer (normal E-field distribution)}
+
+
+
+%\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}
+%\todo[inline]{idea: offset in x-direction, showing surface current and explaining the decrease in power transfer (normal E-field distribution)}
 
 %If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{h}^\pm = h_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{e}^\pm = e_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
 %An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{h}^\pm$ and $\mathbf{e}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.

@@ -5,6 +5,8 @@
 
 \subsubsection{Skin Effect}\label{sec:skin_effect}
 
+\todo[inline]{TODO: Skin Effect Kapitel zu Shielding Kapiteln geben?}
+
 The Skin-effect causes current to flow through a reduced area in a conductor, thus increasing resistance. The imaginary part $\kappa$ of the complex wave number $k$ is described by
 
 \begin{equation}
@@ -62,31 +64,29 @@ The first two antennas investigated are the monopole (\cref{sec:monopole}) and t
 
 \subsubsection{TEM cell model}\label{sec:tem_cell_model}
 
-The TEM cell model used has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm, shown in \autoref{fig:tem_cell_model}. The cut-off frequencies of higher-order modes are demonstrated in \autoref{fig:te01_te10_tem_propagation}. In following investigations focusing on the TEM mode, the frequency range of interest spans from 1\,MHz to 3\,GHz. If the TE\textsubscript{01} mode is included in the investigations, the upper limit of the frequency range is extended to 3.3\,GHz.
+The TEM cell model used, shown in \autoref{fig:tem_cell_model2}, has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm. The cut-off frequencies of higher-order modes are demonstrated in \autoref{fig:te01_te10_tem_propagation}. In following investigations focusing on the TEM mode, the frequency range of interest spans from 1\,MHz to 3\,GHz. If the TE\textsubscript{01} mode is included in the investigations, the upper limit of the frequency range is extended to 3.3\,GHz.
 
 The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. As discussed in \cref{sec:higher-order-modes}, this simplification allows unrestricted propagation of higher-order modes, facilitating investigations of their coupling behavior with antennas. The reference impedances of the output ports equal $Z_w \approx 50\,\Omega$.
 
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[t]{0.46\textwidth}
-	\centering
-\includegraphics[width=1\linewidth]{content/img/tem_cell_front}
-\caption{xy-plane}
-\label{fig:temcellfront}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[t]{0.5\textwidth}
-	\centering
-\includegraphics[width=1\linewidth]{content/img/tem_cell_side}
-\caption{yz-plane}
-\label{fig:temcellside}
-	\end{subfigure}
-	
-	\caption{Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}
-	\label{fig:tem_cell_model}
-\end{figure}
-
-\todo[inline]{Note: Duplicate figure \autoref{fig:tem_cell_model}}
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[t]{0.46\textwidth}
+%	\centering
+%\includegraphics[width=1\linewidth]{content/img/tem_cell_front}
+%\caption{xy-plane}
+%\label{fig:temcellfront}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[t]{0.5\textwidth}
+%	\centering
+%\includegraphics[width=1\linewidth]{content/img/tem_cell_side}
+%\caption{yz-plane}
+%\label{fig:temcellside}
+%	\end{subfigure}
+%	
+%	\caption{Geometrical arrangement of the TEM cell used in simulations. The front shows the xy-plane, and the side the yz-plane of the TEM cell.}
+%	\label{fig:tem_cell_model}
+%\end{figure}
 
 Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell is derived by \autoref{eqn:em_energy}. The current and voltage at the output ports is found with \crefrange{eqn:iin}{eqn:vin}. The capacitance and inductance of the TEM cell are given by \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. The TEM cell has a constant capacitance and inductance of $C_\mathrm{T} = 6.74\,\mathrm{pF}$ and $L_\mathrm{T} = 16.25\,\mathrm{nH}$. 
 
@@ -160,9 +160,9 @@ All simulation results are counterchecked by inserting the equivalent dipole mom
 
 %\todo{Repeat Simulation for several other dipole moment positions and orientations?} 
 
-As show in the previous simulations, antennas may be represented by dipole moments. This can be done in simulation models, which would otherwise be computationally too effortful. The dipole moments may be put into a shielded enclosure around a larger electronic system, as has been done in \cite{10274360}.
-
-\todo[inline]{TODO:Paragraph ausschmücken}
+%As show in the previous simulations, antennas may be represented by dipole moments. This can be done in simulation models, which would otherwise be computationally too effortful. The dipole moments may be put into a shielded enclosure around a larger electronic system, as has been done in \cite{10274360}.
+%
+%\todo[inline]{TODO:Paragraph ausschmücken}
 
 \subsubsection{Mesh modifications}\label{sec:mesh}
 

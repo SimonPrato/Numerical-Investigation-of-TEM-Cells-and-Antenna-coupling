@@ -278,14 +278,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.23333px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#313ced;fill-opacity:1;stroke:none;stroke-width:0.600001;stroke-linejoin:bevel;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
-       x="146.95464"
-       y="26.274895"
+       x="151.23508"
+       y="27.21875"
        id="text6829"><tspan
          sodipodi:role="line"
          id="tspan6827"
-         style="fill:#000000;fill-opacity:1;stroke-width:0.6"
-         x="146.95464"
-         y="26.274895">(S2 in infinity)</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:5.64444px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.6"
+         x="151.23508"
+         y="27.21875">(<tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:5.64444px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan7310">S</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:5.64444px;font-family:'Clear Sans Medium';-inkscape-font-specification:'Clear Sans Medium, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub"
+   id="tspan7306">2</tspan> in infinity)</tspan></text>
     <path
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.600001;stroke-linejoin:bevel;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart);paint-order:markers fill stroke"
        d="m 132.33251,25.027602 -6.61299,-6.325094"

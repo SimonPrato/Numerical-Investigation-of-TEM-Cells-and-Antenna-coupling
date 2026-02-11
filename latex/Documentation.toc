@@ -27,8 +27,8 @@
 \contentsline {subsection}{\numberline {3.5}Shielding}{30}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Incident, reflected and transmitted waves in medium}{30}{subsubsection.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.2}Electrical characteristics}{31}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}ASTM ES7-83 Method}{32}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Dual TEM cell}{33}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.3}ASTM ES7-83 Method}{33}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Dual TEM cell}{34}{subsubsection.3.5.4}%
 \contentsline {section}{\numberline {4}Finite Element Method}{34}{section.4}%
 \contentsline {subsection}{\numberline {4.1}General Idea}{34}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Dividing a computational domain into finite elements}{35}{subsection.4.2}%
@@ -40,20 +40,20 @@
 \contentsline {subsubsection}{\numberline {5.1.2}Antenna models}{39}{subsubsection.5.1.2}%
 \contentsline {subsubsection}{\numberline {5.1.3}TEM cell model}{40}{subsubsection.5.1.3}%
 \contentsline {subsubsection}{\numberline {5.1.4}Dipole moments models}{41}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}Mesh modifications}{42}{subsubsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.5}Mesh modifications}{41}{subsubsection.5.1.5}%
 \contentsline {subsubsection}{\numberline {5.1.6}Shielding material models}{42}{subsubsection.5.1.6}%
 \contentsline {subsubsection}{\numberline {5.1.7}S-parameters and derived data}{42}{subsubsection.5.1.7}%
-\contentsline {subsubsection}{\numberline {5.1.8}Investigation of field regions}{44}{subsubsection.5.1.8}%
+\contentsline {subsubsection}{\numberline {5.1.8}Investigation of field regions}{43}{subsubsection.5.1.8}%
 \contentsline {subsection}{\numberline {5.2}Monopole Antenna}{46}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Setup}{46}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{46}{subsubsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.3}Electrical characteristics}{47}{subsubsection.5.2.3}%
 \contentsline {subsubsection}{\numberline {5.2.4}Current distribution on septum}{50}{subsubsection.5.2.4}%
-\contentsline {subsubsection}{\numberline {5.2.5}Electromagnetic energy in the TEM cell}{52}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.5}Electromagnetic energy in the TEM cell}{51}{subsubsection.5.2.5}%
 \contentsline {subsection}{\numberline {5.3}Loop antenna}{52}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Setup}{52}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Equivalent dipole moments}{53}{subsubsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3}Electrical characteristics}{55}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.2}Equivalent dipole moments}{52}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Electrical characteristics}{54}{subsubsection.5.3.3}%
 \contentsline {subsubsection}{\numberline {5.3.4}Equivalent circuit model}{56}{subsubsection.5.3.4}%
 \contentsline {subsubsection}{\numberline {5.3.5}Current distribution on septum and higher order modes}{59}{subsubsection.5.3.5}%
 \contentsline {subsubsection}{\numberline {5.3.6}Influence of antenna's geometry}{61}{subsubsection.5.3.6}%
