@@ -2,18 +2,24 @@
 \subsection{ASTM ES7-83 method}\label{sec:astm-sim}
 \FloatBarrier
 
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=1\linewidth]{content/img/se}
+%	\caption{Shielding effectiveness of a sheet of zinc and nickel versus the material thickness determined with the ASTM ES7-83 Method.}
+%	\label{fig:se}
+%\end{figure}
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1\linewidth]{content/img/se}
-	\caption{Shielding effectiveness of a sheet of zinc and nickel versus the material thickness determined with the ASTM ES7-83 Method.}
-	\label{fig:se}
+	\includegraphics[width=1\linewidth]{content/img/se-barrium-ferrite}
+	\caption{Shielding effectiveness of a sheet of ferrite and barium titanate versus the material thickness determined with the ASTM ES7-83 method.}
+	\label{fig:se-barrium-ferrite}
 \end{figure}
 
-A model as described in \autoref{sec:astm} is used to determine the shielding effectiveness of barium titanate and ferrite according to the ASTM ES7-83 method discussed in \cref{sec:astm}. The TEM cell contains a shielding material sheet with a thickness of 10\,µm in the center of the TEM cell at $z=0$, which is modeled with impedance boundary conditions as discussed in \cref{sec:bc-shield}. A reference power of $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen and the load power $P_\mathrm{load}$ is numerically derived. \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material depending on frequency. The investigated frequency is 1\,GHz.
 
-%\todo[inline]{Compare results with other papers}
+A model of a TEM cell containing a sheet of a shielding material according to the ASTM ES7-83 method described in \cref{sec:astm} is used to determine the shielding effectiveness of barium titanate and ferrite. The shielding material sheet has a thickness of 10\,µm, and is located in the center of the TEM cell at $z=0$. The sheet is modeled with impedance boundary conditions to significantly reduce computational effort, as discussed in \cref{sec:bc-shield}. 
 
-The properties of the materials used are listed in \autoref{tab:materials}. Ferrite additionally is modeled to have a magnetic loss tangent of $\tan \delta_m = 0.05$.
+A reference power of $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen and the load power $P_\mathrm{load}$ is numerically derived. \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material over frequency. The properties of the materials used are listed in \autoref{tab:materials}. Ferrite additionally is modeled to have a magnetic loss tangent of $\tan \delta_m = 0.05$.
 
 %Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with the adaptive meshing algorithm discussed in \cref{sec:simulations}, which is applied to these simulation models. 
 
@@ -68,6 +74,8 @@ where $a$ and $b$ are the amplitudes of the fields at port 3 and 4, respectively
 	\caption{The sum $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the reference power, measured with empty aperture and calculated with the phase information considered.}
 	\label{fig:emptypowersumdiff}
 \end{figure}
+
+
 
 Materials filling the aperture have a thickness of $t=10,\upmu\mathrm{m}$. 
 
