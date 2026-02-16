@@ -6,7 +6,7 @@ scripts/generic-plotting/output/*
 scripts/eqc-ind-antenna/data/*
 scripts/eqc-ind-antenna/output/*
 
-pflichtenheft.pdf
+anweisungen/
 dokumente/
 
 # Virtual environments (all .venv folders)
