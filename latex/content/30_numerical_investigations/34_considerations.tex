@@ -227,10 +227,16 @@ The coupling between the antenna and the two ports of the TEM cell are described
  All values are peak values, unless otherwise stated. 
  
  \subsubsection{Investigation of field regions}
- 
-\todo[inline]{Update field plots}
- 
-In this section, the regions of the electromagnetic fields contributing to the coupling between the antenna and the TEM cell are analyzed using the model presented in \autoref{fig:krtemcell}. This model consists of a TEM cell and two dipole moments. It is assumed that the coupling occurs in the near-field region ($k \cdot r \ll 1$). Any deviation from this condition could affect the simulation results and the derived equivalent dipole moments of the antenna. By varying the size of the TEM cell and observing the corresponding changes in output power over frequency, it is possible to determine whether the output power depends on the dominant coupling field region within the frequency range of interest.
+
+%This analysis examines how dipole moments behave inside TEM cells of different sizes. The main goal is to prove that the way these antennas respond to various frequencies depends on their own shape, rather than the specific size of the testing cell. By scaling the cell geometry while keeping the electrical properties constant, we aim to show that the resulting signal patterns remain identical once they are normalized. This study helps confirm that measurements taken in a small, controlled environment are representative of the antenna's true physical characteristics across the entire frequency spectrum.
+%
+%This section examines the correlation between TEM cell dimensions and electromagnetic coupling to ensure that the coupling mechanisms remain invariant to shifts in the dominant field regions. 
+
+This chapter investigates how changes in the dominant coupling field region over frequency between an antenna and a TEM cell influence the non-linear frequency behavior observed in output power measurements. To clarify this relationship, a numerical analysis was conducted by evaluating the dipole moments in both a large and a small TEM cell, as shown in \autoref{fig:krtemcell}. The resulting output powers were compared to assess the impact of varying coupling field regions on the frequency response. In particular, this analysis aims to determine whether the frequency-dependent coupling behavior arises primarily from the antenna geometry itself or from the associated coupling field regions.
+
+%This section answers the question, if the frequency-dependent behavior of the output power produced is intrinsic to the antenna's geometry. By systematically scaling the TEM cell dimensions while maintaining a constant impedance $Z_0 \approx 50\,\Omega$, the influence of specific field regions ($k \cdot r$) is isolated. The objective is to demonstrate that the normalized output power $P_\mathrm{norm}(f)$ remains congruent across different cell sizes, thereby proving that the non-linear coupling characteristic is independent of the surrounding environment and solely defined by the antenna's equivalent dipole moments $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$.
+
+%An electric dipole moment $\mathbf{m}_e$ and a magnetic dipole moment $\mathbf{m}_m$ are located within the TEM cell numerical model, as shown in \autoref{fig:krtemcell}. 
 
  \begin{figure}[h]
  	\centering
@@ -239,84 +245,113 @@ In this section, the regions of the electromagnetic fields contributing to the c
  	\label{fig:krtemcell}
  \end{figure} 
  
-To determine the influence of the field regions on the coupling effect, $\mathbf{m}_\mathrm{e}$ and  $\mathbf{m}_\mathrm{m}$ are placed in two different TEM cells of dimensions  $a=10\,\mathrm{mm}, b=6\,\mathrm{mm}$ and $a=40\,\mathrm{mm}, b=24\,\mathrm{mm}$. The $k\cdot r$-factor for both cases is shown in \autoref{fig:kranalysissmalltem}.
+The large TEM cell has dimensions of $a=40,\mathrm{mm}$ and $b=24,\mathrm{mm}$, while the small TEM cell has $a=10,\mathrm{mm}$ and $b=6,\mathrm{mm}$. Both configurations maintain a characteristic impedance of $Z_0 \approx 50,\Omega$. The dipole moments exhibit the behavior shown in \autoref{fig:linearmomentws}. The output power, normalized to unity for both the large and the small TEM cell, is presented in \autoref{fig:small-large-tem-power1}. The agreement between the output powers indicates that changes in the coupling field regions over frequency between the TEM cell and the source are minimal.
+ 
+%To determine the influence of the field regions on the coupling effect, $\mathbf{m}_\mathrm{e}$ and  $\mathbf{m}_\mathrm{m}$ are placed in two different TEM cells of dimensions  $a=10\,\mathrm{mm}, b=6\,\mathrm{mm}$ and $a=40\,\mathrm{mm}, b=24\,\mathrm{mm}$. The $k\cdot r$-factor for both cases is shown in \autoref{fig:kranalysissmalltem}.
 
- \begin{figure}[htbp]
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=1\linewidth]{content/img/small-large-tem-power}
+%	\caption{Comparison of output powers between small and large TEM cell.}
+%	\label{fig:small-large-tem-power}
+%\end{figure}
+
+\begin{figure}[htbp]
 	\centering
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/kr_analysis_small_TEM}
-	\caption{$k\cdot r$ in small TEM cell}
-	\label{fig:kranalysissmalltem}
+	\begin{subfigure}[c]{0.45\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/small-large-tem-power1}
+		\caption{Output power}
+		\label{fig:small-large-tem-power1}
+	\end{subfigure}
 	\hfill
+	\begin{subfigure}[c]{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/linear_momentws}
+		\caption{Dipole moments}
+		\label{fig:linearmomentws}
+	\end{subfigure}
+	\caption{}
+	\label{fig:linear_moments_power}
 \end{figure}
 
-aking the TEM cell smaller such that $k\cdot r \ll 1$, proves to be feasible. The following simulations are conducted with a TEM cell of dimensions $a=10\,\mathrm{mm}$ and $b=6\,\mathrm{mm}$, visible in \autoref{fig:krtemcell}.  
- 
- 
- First, the current loop antenna used in \autoref{sec:loop_sim} is placed in the dead center of the TEM cell. The equivalent dipole moments are shown in \autoref{fig:loop_small_tem_moments}. In the \autoref{fig:dipole_moments_loop_antenna_copy} next to it, the dipole moments of the same antenna in the larger TEM cell used before ($a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$) are presented. 
- 
- \begin{figure}[htbp]
- 	\centering
- 	\begin{minipage}[t]{0.48\textwidth}
- 		\centering
- 		\includegraphics[width=1\linewidth]{content/img/loop_small_tem_moments.png}
- 		\caption{Moments in small TEM cell}
- 		\label{fig:loop_small_tem_moments}
- 	\end{minipage}
- 	\hfill
- 	\begin{minipage}[t]{0.48\textwidth}
- 		\centering
- 		\includegraphics[width=1\linewidth]{content/img/dipole_moments_loop_antenna.png}
- 		\caption{Moments in normal TEM cell}
- 		\label{fig:dipole_moments_loop_antenna_copy}
- 	\end{minipage}
- \end{figure}
- 
- This is done to compare the dipole moments in both cases. While they clearly increased by magnitude in case of the small TEM cell due to better coupling, their non-linear frequency relation still remains. This means that the change of field regions is not the reason for this behavior.
- 
-% \todo{TODO: Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts. Insert small current loop simulation. Insert Dipole Moment Simulations}
- 
- The $k\cdot r$ factor is determined in \autoref{fig:kranalysissmalltem} in the frequency range from 1\,MHz to 3\,GHz for the small TEM cell. This factor does not surpass 0.1, thus fulfilling the requirement $k\cdot r \ll 1$ for this investigation. For comparison, the $k\cdot r$ factor over a wider frequency range are shown in \autoref{fig:kranalysissmalltem} for the normal sized TEM cell ($a = 40\,\mathrm{mm}$ and $b = 24\,\mathrm{mm}$) and a degenerately high TEM cell ($a = 10\,\mathrm{mm}$ and $b=44\,\mathrm{mm}$). The high TEM does not have a port impedance of $50\,\Omega$, and is an attempt to achieve a large $k\cdot r$ factor without higher-order modes propagating. The markers in \autoref{fig:kranalysis} indicate the cut-off frequency, in which the next higher-order mode propagates. They demonstrate, that even in the high TEM cell a $k\cdot r = 1$ is not achieved.
- 
- 
 
- \todo[inline]{Fix figures: Titles and Legends. Add kr of normal cell.}
+% \begin{figure}[htbp]
+%	\centering
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{content/img/kr_analysis_small_TEM}
+%	\caption{$k\cdot r$ in small TEM cell}
+%	\label{fig:kranalysissmalltem}
+%	\hfill
+%\end{figure}
+
+%aking the TEM cell smaller such that $k\cdot r \ll 1$, proves to be feasible. The following simulations are conducted with a TEM cell of dimensions $a=10\,\mathrm{mm}$ and $b=6\,\mathrm{mm}$, visible in \autoref{fig:krtemcell}.  
+% 
  
-% \begin{minipage}[t]{0.48\textwidth}
+% First, the current loop antenna used in \autoref{sec:loop_sim} is placed in the dead center of the TEM cell. The equivalent dipole moments are shown in \autoref{fig:loop_small_tem_moments}. In the \autoref{fig:dipole_moments_loop_antenna_copy} next to it, the dipole moments of the same antenna in the larger TEM cell used before ($a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$) are presented. 
+% 
+% \begin{figure}[htbp]
 % 	\centering
-% 	\includegraphics[width=1\linewidth]{content/img/kr_analysis}
-% 	\caption{$k\cdot r$ for other TEM cells}
-% 	\label{fig:kranalysis}
-% \end{minipage}
- 
- Now, three simulations are conducted with different excitation sources in the small TEM cell:
- 
- \begin{itemize}
- 	\item The current loop 
- 	\item The equivalent dipole sources $e_z$ and $m_m$ of the current loop
- 	\item The equivalent magnetic dipole source $m_m$, neglecting $e_z$
- \end{itemize}
- 
- \autoref{fig:outputpowercomparisonsmalltem} shows the output power over frequency normalized to 1\,W for all three constellations. The normalization is done to qualitatively discuss the frequency-dependent coupling behavior. \autoref{fig:phaseshiftcomparisonsmalltem} demonstrates the phase shift between the powers at the two waveports over frequency.
- 
- \begin{figure}[htbp]
- 	\centering
- 	\begin{minipage}[t]{0.48\textwidth}
- 		\centering
- 		\includegraphics[width=1\linewidth]{content/img/output_power_comparison_small_tem}
- 		\caption{Output powers}
- 		\label{fig:outputpowercomparisonsmalltem}
- 	\end{minipage}
- 	\hfill
- 	\begin{minipage}[t]{0.48\textwidth}
- 		\centering
- 		\includegraphics[width=1\linewidth]{content/img/phase_shift_comparison_small_tem}
- 		\caption{Phase shifts}
- 		\label{fig:phaseshiftcomparisonsmalltem}
- 	\end{minipage}
- \end{figure}
- 
- The frequency dependent behavior of the output power does not change depending on the type of dipole moment used. This is significant, because this shows that the dipole moments do not exhibit different coupling behaviors in the TEM cells. This is further proven in the phase shift plots. The magnetic dipole moment causes a constant phase shift of $-\pi$. If this was not the case, this would mean that the coupling behavior of the magnetic dipole moment in the TEM cell would change. Since the opposite is the case, this poses as good evidence against arguments of change in field regions causing the non-linear dipole moment behavior. Instead, it is very likely to be caused by the geometry of the antenna.
+% 	\begin{minipage}[t]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=1\linewidth]{content/img/loop_small_tem_moments.png}
+% 		\caption{Moments in small TEM cell}
+% 		\label{fig:loop_small_tem_moments}
+% 	\end{minipage}
+% 	\hfill
+% 	\begin{minipage}[t]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=1\linewidth]{content/img/dipole_moments_loop_antenna.png}
+% 		\caption{Moments in normal TEM cell}
+% 		\label{fig:dipole_moments_loop_antenna_copy}
+% 	\end{minipage}
+% \end{figure}
+% 
+% This is done to compare the dipole moments in both cases. While they clearly increased by magnitude in case of the small TEM cell due to better coupling, their non-linear frequency relation still remains. This means that the change of field regions is not the reason for this behavior.
+% 
+%% \todo{TODO: Insert kr, describe where r is measured, describe why the suspicion was that kr could influence this and how the fields change in the regions as described in the theoretical parts. Insert small current loop simulation. Insert Dipole Moment Simulations}
+% 
+% The $k\cdot r$ factor is determined in \autoref{fig:kranalysissmalltem} in the frequency range from 1\,MHz to 3\,GHz for the small TEM cell. This factor does not surpass 0.1, thus fulfilling the requirement $k\cdot r \ll 1$ for this investigation. For comparison, the $k\cdot r$ factor over a wider frequency range are shown in \autoref{fig:kranalysissmalltem} for the normal sized TEM cell ($a = 40\,\mathrm{mm}$ and $b = 24\,\mathrm{mm}$) and a degenerately high TEM cell ($a = 10\,\mathrm{mm}$ and $b=44\,\mathrm{mm}$). The high TEM does not have a port impedance of $50\,\Omega$, and is an attempt to achieve a large $k\cdot r$ factor without higher-order modes propagating. The markers in \autoref{fig:kranalysis} indicate the cut-off frequency, in which the next higher-order mode propagates. They demonstrate, that even in the high TEM cell a $k\cdot r = 1$ is not achieved.
+% 
+% 
+%
+% \todo[inline]{Fix figures: Titles and Legends. Add kr of normal cell.}
+% 
+%% \begin{minipage}[t]{0.48\textwidth}
+%% 	\centering
+%% 	\includegraphics[width=1\linewidth]{content/img/kr_analysis}
+%% 	\caption{$k\cdot r$ for other TEM cells}
+%% 	\label{fig:kranalysis}
+%% \end{minipage}
+% 
+% Now, three simulations are conducted with different excitation sources in the small TEM cell:
+% 
+% \begin{itemize}
+% 	\item The current loop 
+% 	\item The equivalent dipole sources $e_z$ and $m_m$ of the current loop
+% 	\item The equivalent magnetic dipole source $m_m$, neglecting $e_z$
+% \end{itemize}
+% 
+% \autoref{fig:outputpowercomparisonsmalltem} shows the output power over frequency normalized to 1\,W for all three constellations. The normalization is done to qualitatively discuss the frequency-dependent coupling behavior. \autoref{fig:phaseshiftcomparisonsmalltem} demonstrates the phase shift between the powers at the two waveports over frequency.
+% 
+% \begin{figure}[htbp]
+% 	\centering
+% 	\begin{minipage}[t]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=1\linewidth]{content/img/output_power_comparison_small_tem}
+% 		\caption{Output powers}
+% 		\label{fig:outputpowercomparisonsmalltem}
+% 	\end{minipage}
+% 	\hfill
+% 	\begin{minipage}[t]{0.48\textwidth}
+% 		\centering
+% 		\includegraphics[width=1\linewidth]{content/img/phase_shift_comparison_small_tem}
+% 		\caption{Phase shifts}
+% 		\label{fig:phaseshiftcomparisonsmalltem}
+% 	\end{minipage}
+% \end{figure}
+% 
+% The frequency dependent behavior of the output power does not change depending on the type of dipole moment used. This is significant, because this shows that the dipole moments do not exhibit different coupling behaviors in the TEM cells. This is further proven in the phase shift plots. The magnetic dipole moment causes a constant phase shift of $-\pi$. If this was not the case, this would mean that the coupling behavior of the magnetic dipole moment in the TEM cell would change. Since the opposite is the case, this poses as good evidence against arguments of change in field regions causing the non-linear dipole moment behavior. Instead, it is very likely to be caused by the geometry of the antenna.
 
 \FloatBarrier
 
