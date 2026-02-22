@@ -126,24 +126,55 @@ where $\nabla_t=\partial/\partial x + \partial/\partial y$ denotes the transvers
 
 \subsubsection{Higher-order modes}\label{sec:higher-order-modes}
 
-The TEM cell under investigation has a width of $a=40,\mathrm{mm}$, a height of $b=24,\mathrm{mm}$, and a gap length of $g=5,\mathrm{mm}$, as shown in \autoref{fig:tem_cell_model2}. For a thin septum ($t/b \ll 0.1$), the cut-off frequency $f_\mathrm{c}$ of modes with even $n$ subscripts, i.e., TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes, can be approximated as \cite{Weil_Gruner_1984}:
-
+To determine the usable frequency range of the TEM cell shown in 
+\autoref{fig:tem_cell_model2}, the cutoff frequencies of its higher-order modes are 
+examined. Among these, the TE\textsubscript{10} and TE\textsubscript{01} modes are of primary interest as they exhibit the lowest cutoff frequencies. Their transverse electric field distributions are illustrated in \autoref{fig:transversal_e_fields_tem_cell}, while \autoref{fig:waveguide-modes} shows the electric and magnetic field distributions along the TEM cell for each mode. As visible there, the TEM mode exhibits the highest phase velocity, reflected in the large number of periods along the cell, and its magnetic field has no longitudinal component. In contrast, the TE\textsubscript{01} and TE\textsubscript{10} modes possess longitudinal magnetic field components. For the 
+TE\textsubscript{01} mode, these are concentrated near the side walls and are therefore not directly shown in \autoref{fig:waveguide-modes}.
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{content/img/tem_cell_mode.png}
+		\caption{TEM mode}
+		\label{fig:tem_mode}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{content/img/te01_mode.png}
+		\caption{TE\textsubscript{01} mode}
+		\label{fig:te01_mode}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{content/img/te10_mode.png}
+		\caption{TE\textsubscript{10} mode}
+		\label{fig:te10_mode}
+	\end{subfigure}
+	\caption{Transverse electric field distributions in the cross section of the TEM cell.}
+	\label{fig:transversal_e_fields_tem_cell}
+\end{figure}
+For a thin septum ($t/b \ll 0.1$), the cutoff frequencies of modes with even $n$ 
+subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes, can be 
+approximated by the cutoff frequency expression for rectangular waveguides 
+\cite{Weil_Gruner_1984}
 \begin{equation}
-	f_c = \frac{c}{2} \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}.
+	f_c = \frac{c}{2} \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2},
 	\label{eqn:cutoff_frequency_rect_waveguide}
 \end{equation}
-
-\begin{itemize}
-	\item \( f_c \): cutoff frequency of the mode \(\text{T}_{m,2n}\)
-	\item \( c \): speed of light in the medium
-	\item \( a \): width of the TEM cell
-	\item \( b \): height of the TEM cell
-	\item \( m \): mode index in the \(a\)-direction (integer, \(m \geq 0\))
-	\item \( n \): mode index in the \(b\)-direction (integer, \(n \geq 0\))
-\end{itemize}
-
-\autoref{eqn:cutoff_frequency_rect_waveguide} is also valid for cut-off frequencies $f_\mathrm{c}$ of higher-order modes in rectangular waveguides \cite{Weil_Gruner_1984}.
-
+where $c$ is the speed of light, and $m \geq 0$ and $n \geq 0$ are the integer mode 
+indices along the $a$- and $b$-directions, respectively. Applying 
+\eqref{eqn:cutoff_frequency_rect_waveguide} to a TEM cell with $a=40\,\mathrm{mm}$, 
+$b=24\,\mathrm{mm}$, $g=5\,\mathrm{mm}$, and $t=0.1\,\mathrm{mm}$ yields the cutoff 
+frequency of the TE\textsubscript{10} mode of $f_\mathrm{c,10}=3.75\,\mathrm{GHz}$. 
+For modes with odd $n$ subscripts, such as the TE\textsubscript{01} mode, analytical 
+approximations are given in \cite{Wilson_Ma_1986}. Although omitted here due to their complexity, these expressions yield $f_\mathrm{c,01}=3.12\,\mathrm{GHz}$ for the TE\textsubscript{01} mode.
+%	\item \( f_c \): cutoff frequency of the mode \(\text{T}_{m,2n}\)
+%	\item \( c \): speed of light in the medium
+%	\item \( a \): width of the TEM cell
+%	\item \( b \): height of the TEM cell
+%	\item \( m \): mode index in the \(a\)-direction (integer, \(m \geq 0\))
+%	\item \( n \): mode index in the \(b\)-direction (integer, \(n \geq 0\))
+%\end{itemize}
 
 \begin{figure}[htbp]
 	\centering
@@ -165,67 +196,71 @@ The TEM cell under investigation has a width of $a=40,\mathrm{mm}$, a height of 
 	\label{fig:tem_cell_model2}
 \end{figure}
 
-Using numerical analysis, the forward transmission coefficients between the output ports of the TEM cell $S_{12}$, is computed and shown in \autoref{fig:te01_te10_tem_propagation}. The cut-off frequency $f_\mathrm{c}$ is defined as the lowest frequency at which undisturbed mode propagation occurs, corresponding to $S_{12}=0\,\mathrm{dB}$. The numerically determined cutoff frequency of the TE\textsubscript{10} mode, $f_{\mathrm{c},10}=3.75,\mathrm{GHz}$, is in agreement with the analytically obtained value given by \autoref{eqn:cutoff_frequency_rect_waveguide}.
-
-Analytical approximations for the cut-off frequencies of modes with n-odd subscripts are presented in \cite{Wilson_Ma_1986}. For this thesis, the cut-off frequency of the next higher order mode TE\textsubscript{01} is determined analytically in \autoref{fig:te01_te10_tem_propagation} as $f_{c,01}=3.12\,\mathrm{GHz}$.
-
+To validate the analytically derived cutoff frequencies, the forward transmission 
+coefficients $S_{12}$ between the output ports of the TEM cell are computed numerically over frequency and shown in \autoref{fig:te01_te10_tem_propagation}. The cutoff frequency $f_\mathrm{c}$ is identified as the lowest frequency at which undisturbed mode propagation occurs, corresponding to $S_{12}=0\,\mathrm{dB}$. The numerically determined cutoff frequencies of the TE\textsubscript{10} and TE\textsubscript{01} modes, $f_{\mathrm{c},10}=3.75\,\mathrm{GHz}$ and $f_{\mathrm{c},01}=3.12\,\mathrm{GHz}$, agree well with the analytical values obtained from \eqref{eqn:cutoff_frequency_rect_waveguide} 
+and \cite{Wilson_Ma_1986}, respectively.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/tem_cell_modes.png}
-	\caption{Forward transmission coefficients $S_{12}$ of the TEM, TE\textsubscript{01} and TE\textsubscript{10} modes in the TEM cell over frequency.}
+	\caption{Forward transmission coefficients $S_{12}$ of the TEM, TE\textsubscript{01}, 
+		and TE\textsubscript{10} modes in the TEM cell over frequency.}
 	\label{fig:te01_te10_tem_propagation}
 \end{figure}
 
-A TEM cell incorporates tapered sections at its output ports, through which the TEM mode propagates with negligible reflection. In contrast, higher-order TE and TM modes reflect at the tapered transitions. Consequently, the TEM cell behaves as a high-Q cavity resonator for these modes, with resonance frequencies occurring at an electrical length of $\frac{\lambda}{4}$ and its multiples. Numerical investigations of TEM cell simulation models that include tapered sections are presented in \cite{990711}, while analytical approximations of the resonance frequencies for different modes in a TEM cell are given in \cite{Weil_Gruner_1984}.
+Once these higher-order modes are excited, their behavior is governed by the tapered 
+sections at the output ports of the TEM cell. While the TEM mode propagates through 
+these transitions with negligible reflection, higher-order TE and TM modes are reflected at the tapers. Consequently, the TEM cell acts as a high-$Q$ cavity resonator for these modes, with resonances occurring at electrical lengths of $\frac{\lambda}{4}$ and its multiples. Numerical investigations of TEM cell models including tapered sections are presented in \cite{990711}, while analytical approximations of the resulting resonance frequencies are given in \cite{Weil_Gruner_1984}. As the further investigations in this thesis focus on mode propagation independent of the tapered sections, the latter are omitted from the simulation models and \autoref{fig:tem_cell_model2}.
 
-Wave propagating in the TEM mode may excite higher order TE and TM modes due to material discontinuities or finite conductivity of the conducting plates \cite{10791592}. Such discontinuities require the electric and magnetic field to have a component in the direction of propagation, thereby exciting TE and TM modes. This leads to measurement uncertainties that are not present in numerical analysis.
+In a physical TEM cell, wave propagation in the TEM mode may excite higher-order TE 
+and TM modes due to material discontinuities or finite conductivity of the conducting plates \cite{10791592}. Such discontinuities force the electric and magnetic fields to develop a component in the direction of propagation, thereby exciting TE and TM modes and introducing measurement uncertainties. These uncertainties are absent in numerical analysis, which is one of the key reasons why simulation is preferred over measurements with a physical TEM cell in this thesis.
 
-Among the higher-order modes, the TE\textsubscript{10} and TE\textsubscript{01} modes are non-essential modes with the lowest cutoff frequencies. Their transverse electric field distributions are illustrated in \autoref{fig:transversal_e_fields_tem_cell}.
-
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{content/img/tem_cell_mode.png}
-		\caption{TEM Mode}
-		\label{fig:tem_mode}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{content/img/te01_mode.png}
-		\caption{TE\textsubscript{01}}
-		\label{fig:te01_mode}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{content/img/te10_mode.png}
-		\caption{TE\textsubscript{10}}
-		\label{fig:te10_mode}
-	\end{subfigure}
-	\caption{Transversal electric fields in cross section of TEM cell}
-	\label{fig:transversal_e_fields_tem_cell}
-\end{figure}
-
-\autoref{tab:modes_tem_cell} shows some cut-off frequencies of these modes for different TEM cell dimensions. The focus for the remainder of this thesis lays on a TEM cell with the dimensions $a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$, for which the characteristic impedance of the output ports equals $Z_w=50\,\Omega$.  
-
+\autoref{tab:modes_tem_cell} lists the cutoff frequencies of the TE\textsubscript{01} and TE\textsubscript{10} modes determined numerically for different TEM cell dimensions. The remainder of this thesis focuses on a TEM cell with $a=40\,\mathrm{mm}$ and $b=24\,\mathrm{mm}$, for which the cutoff frequencies are $f_\mathrm{c,01}=3.17\,\mathrm{GHz}$ and $f_\mathrm{c,10}=3.76\,\mathrm{GHz}$, respectively.
 \begin{table}[h]
 	\centering
-
 	\begin{tabular}{|c|c||c|c|}
 		\hline
-		$a$ (mm)& $b$ (mm)&TE\textsubscript{01} $f_\mathrm{c}$ (GHz) &TE\textsubscript{10} $f_\mathrm{c}$ (GHz)\\
+		$a$ (mm) & $b$ (mm) & TE\textsubscript{01} $f_\mathrm{c}$ (GHz) & TE\textsubscript{10} $f_\mathrm{c}$ (GHz)\\
 		\hline\hline
 		80 & 24 & 1.89 & 2.05 \\
 		\hline\hline
-		40 & 24 & 3.17 & 3.76 \\
+		40 & 24 & 3.12 & 3.75 \\
 		\hline\hline
-		40 & 48 & 2.10 & 3.76 \\
+		40 & 48 & 2.10 & 3.75 \\
 		\hline
 	\end{tabular}
-	\caption{Cut-off frequencies of higher order modes at different TEM cell dimensions. The TE\textsubscript{10}-mode is independent of the height $b$ of the TEM cell, as would be the case in a rectangular waveguide. Both the TE\textsubscript{10}-mode and the TE\textsubscript{01}-mode are dependent on the width $a$. }
-	
+	\caption{Cutoff frequencies of the TE\textsubscript{01} and TE\textsubscript{10} 
+		modes for different TEM cell dimensions. As expected from 
+		\eqref{eqn:cutoff_frequency_rect_waveguide}, the TE\textsubscript{10} cutoff 
+		frequency depends only on $a$ and is independent of $b$, consistent with rectangular waveguide theory. The TE\textsubscript{01} cutoff frequency varies with both $a$ and $b$.}
 	\label{tab:modes_tem_cell}
 \end{table}
+
+\begin{figure}[p]
+	\centering
+	\begin{subfigure}{0.9\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{content/img/tem-mode}
+		\caption{TEM mode}
+		\label{fig:tem-mode}
+	\end{subfigure}
+	\vfill
+	\begin{subfigure}{0.9\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{content/img/te01-mode}
+		\caption{TE\textsubscript{01} mode}
+		\label{fig:te01-mode}
+	\end{subfigure}
+	\vfill
+	\begin{subfigure}{0.9\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{content/img/te10-mode}
+		\caption{TE\textsubscript{10} mode}
+		\label{fig:te10-mode}
+	\end{subfigure}
+	\caption{Electric and magnetic field distributions of the TEM, TE\textsubscript{01}, and TE\textsubscript{10} modes in the TEM cell. The magnetic fields are shown along the full length of the cell, while the electric fields are shown at the ports only.}
+	\label{fig:waveguide-modes}
+\end{figure}
+
 
 \subsubsection{Field distributions}\label{sec:field_dist}
 
