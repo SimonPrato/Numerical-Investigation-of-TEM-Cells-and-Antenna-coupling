@@ -28,6 +28,40 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{Arfken_Weber_Harris_2013}{book}{}
+    \name{author}{3}{}{%
+      {{hash=AGB}{%
+         family={Arfken},
+         familyi={A\bibinitperiod},
+         given={George\bibnamedelima B.},
+         giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=WHJ}{%
+         family={Weber},
+         familyi={W\bibinitperiod},
+         given={Hans-Jurgen},
+         giveni={H\bibinithyphendelim J\bibinitperiod},
+      }}%
+      {{hash=HF}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic}%
+    }
+    \strng{namehash}{AGBWHJHF1}
+    \strng{fullhash}{AGBWHJHF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Mathematical methods for physicists}
+    \field{year}{2013}
+  \endentry
+
   \entry{Balanis_2012}{book}{}
     \name{author}{1}{}{%
       {{hash=BCA}{%
@@ -596,13 +630,14 @@
     \strng{namehash}{KGH1}
     \strng{fullhash}{KGH1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \verb{doi}
     \verb 10.6028/nist.tn.1326
     \endverb
-    \field{journaltitle}{Theory and measurements of radiated emissions using a
-  TEM cell}
+    \field{title}{Theory and measurements of radiated emissions using a TEM
+  cell}
     \field{year}{1989}
   \endentry
 
@@ -1199,13 +1234,14 @@
     \strng{namehash}{WPF1}
     \strng{fullhash}{WPF1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
     \field{sortinit}{W}
     \field{sortinithash}{W}
     \verb{doi}
     \verb 10.6028/nbs.tn.1037
     \endverb
-    \field{journaltitle}{Excitation of a tem cell by a vertical electric
-  Hertzian dipole}
+    \field{title}{Excitation of a tem cell by a vertical electric Hertzian
+  dipole}
     \field{year}{1981}
   \endentry
 

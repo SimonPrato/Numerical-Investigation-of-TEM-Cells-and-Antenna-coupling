@@ -5,7 +5,7 @@
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/kr_over_distance}
-	\caption{Behavior of Expression 1 and Expression 2 in \autoref{eqn:e_et_2} over distance $r$. The distance $r$ is normalized to the radian distance $\lambda / 2\pi$. The magnitude of both expressions is normed to 1 at radian distance to improve comparison.}
+	\caption{The behavior of Expression 1 and Expression 2 in (\ref{eqn:e_et_2}) is analyzed as a function of distance $r$. Here, $r$ is normalized to the radian distance $\lambda / 2\pi$, and the magnitudes of both expressions are scaled to unity at the radian distance to facilitate comparison \cite[p.~157]{Balanis_1997}.}
 	\label{fig:kroverdistance}
 \end{figure}
 
@@ -29,13 +29,13 @@ At larger distances $r \gg \lambda / 2\pi$ ($kr \gg 1$) the energy is predominan
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.4\linewidth]{content/img/field_regions_antenna}
-	\caption{Field regions of an antenna, here specifically a linear wire antenna, although they are applicable for any antenna with dimension $d$.}
+	\caption{Field regions of an antenna, here specifically a linear wire antenna, although they are applicable for any antenna with dimension $d$ \cite[p.~34]{Balanis_1997}.}
 	\label{fig:fieldregionsantenna}
 \end{figure}
 
-At $r = \lambda/2\pi$ $(kr = 1)$, Expression 1 and Expression 2 are of equal magnitude. This is marked as the radian distance \cite[pp. 156-160]{Balanis_1997}. The radian distance therefore represents an important transition point between field regions, where the behavior of the fields shifts. \autoref{fig:kroverdistance} visualizes Expression~1 and Expression~2 over $r$. The analysis of the field regions presented here can be conducted analogously for both the small and infinitesimal magnetic dipole.
+At $r = \lambda/2\pi$ $(kr = 1)$, Expression 1 and Expression 2 attain equal magnitudes, a point referred to as the radian distance\cite[pp.~156-160]{Balanis_1997}. The radian distance thus represents a critical transition between field regions, marking a shift in field behavior. \autoref{fig:kroverdistance} shows the variation of Expression~1 and Expression~2 with respect to $r$. The analysis presented above for the field regions can similarly be applied to both small and infinitesimal magnetic dipoles.
 
-Antennas, which cannot be modeled as infinitesimal dipoles, such as the linear wire antenna, are surrounded by different field regions. They are shown in \autoref{fig:fieldregionsantenna}. The far-field region contains mostly real energy, and the antenna may be most accurately approximated by an infinitesimal electric dipole. In the radiating near-field, the energy is largely real, but depends on the distance $r$. Lastly, in the reactive near-field the energy is mostly imaginary.
+For antennas that cannot be modeled as infinitesimal dipoles, the boundaries between reactive near-field, radiating near-field, and far-field regions shift compared to those of dipoles. The regions for such an antenna are shown in \autoref{fig:fieldregionsantenna}. Notably, in the far-field region, the antenna’s behavior closely approximates that of an infinitesimal electric dipole, while the radiating and reactive near-field regions exhibit different region sizes.
 
 The far-field region starts at approximately $r_2$ and the radiating near-field at $r_1$, which are defined as
 
@@ -54,16 +54,30 @@ Here, $d$ is the largest dimension of the antenna. In the case of the linear wir
 
 \FloatBarrier
 \subsubsection{Energy densities and reactances}\label{sec:energy-densities-reactances}
-The energy density is given by \cite[p. 330]{Griffiths_2024}
+
+The electric energy density $w_{\mathrm{e}}$ is defined as 
+\begin{equation}
+	w_{\mathrm{e}} = \frac{1}{2} \mathbf{E} \cdot \mathbf{D},
+	\label{eqn:elec_density}
+\end{equation}
+
+while the magnetic energy density $w_{\mathrm{m}}$ is given by 
+
+\begin{equation}
+	w_{\mathrm{m}} = \frac{1}{2} \mathbf{B} \cdot \mathbf{H}.
+	\label{eqn:mag_density}
+\end{equation}
+
+By applying the constitutive relations $\mathbf{D} = \epsilon \mathbf{E}$ and $\mathbf{B} = \mu \mathbf{H}$, and summing the contributions from (\ref{eqn:elec_density}) and (\ref{eqn:mag_density}), the total electromagnetic energy density $w_{\mathrm{em}}$ is obtained with \cite[p. 330]{Griffiths_2024} 
 
 \begin{equation}
 	w_\mathrm{em} = \frac{1}{2}\left(\underbrace{\vphantom{\frac{1}{\mu} B ^ 2}{\epsilon E^2}}_{{\text{Electric energy}\ w_e}} + \underbrace{\frac{1}{\mu} B ^ 2}_{{\text{Magnetic energy} \ w_m}}\right).
 	\label{eqn:em_energy}
-\end{equation}
+\end{equation}  
 
-Integrating $w_\mathrm{em}$ over a volume yields the total electromagnetic energy within that volume. Similarly, integrating $w_e$ gives the electric energy $W_e$, and $w_m$ the magnetic energy $W_m$.
+Integrating $w_\mathrm{em}$ over a given volume yields the total electromagnetic energy $W_\mathrm{em}$ contained within that region. Similarly, integrating $w_{\mathrm{e}}$ provides the total electric energy $W_{\mathrm{e}}$, and integrating $w_{\mathrm{m}}$ gives the total magnetic energy $W_{\mathrm{m}}$.
 
-The reactance of an electrically short antenna directly relates to the electric and magnetic energies $w_e$, $w_m$, that it produces. The antennas's equivalent inductance and capacitance can be derived through \cite[pp. 107, 328]{Griffiths_2024}
+The reactance of an electrically short antenna is directly related to the electric and magnetic energy densities, $w_{\mathrm{e}}$ and $w_{\mathrm{m}}$, resulting from the antenna. The antenna’s equivalent inductance and capacitance can be determined using the relationships \cite[pp. 107, 328]{Griffiths_2024}
 
 \begin{subequations}
 	\begin{equation}
@@ -75,42 +89,4 @@ The reactance of an electrically short antenna directly relates to the electric 
 		\label{eqn:c_e_energy}
 	\end{equation}
 \end{subequations}
-
-%The electrically short antennas located in the TEM cell interact with it mostly through the reactive near-field region. However, if the TEM cell is large and frequencies are high, the coupling occurs over the radiating near-field. There, the field distributions are different, hence the dipole moments couple differently over frequency to the cell. \todo[inline]{Is this even possible without reaching other modes behavior? And demonstrate the fields over frequency and distance, which changes differently in different regions}.
-
-%An infinitesimal dipole is taken as an antenna. The fields are calculated through the auxiliary fields, as described earlier by \autoref{eqn:elec_and_mag_field_dipole}, which leads to \autoref{eqn:inf_dipole_h_field} for the magnetic field strength and \autoref{eqn:inf_dipole_e_field} for the electric field strength. Those equations are valid everywhere, except for the source point \cite{Balanis_1997}.
-
-%\begin{subequations}\label{eqn:inf_dipole_h_field}
-%	\begin{equation}\label{eqn:hr_htheta}
-%		H_r = H_\theta = 0
-%	\end{equation}
-%	\begin{equation}\label{eqn:hphi}
-%		H_\phi = j \frac{k I_0 l \sin \theta}{4 \pi r}
-%		\left[ 1 + \frac{1}{j k r} \right] e^{-j k r}
-%	\end{equation}
-%\end{subequations}
-%
-%
-%\begin{subequations}\label{eqn:inf_dipole_e_field}
-%	\begin{equation}\label{eqn:er}
-%		E_r = \eta \frac{I_0 l \cos \theta}{2 \pi r^2} 
-%		\left[ 1 + \frac{1}{jkr} \right] e^{-jkr}
-%	\end{equation}
-%	
-%	\begin{equation}\label{eqn:etheta}
-%		E_\theta = j \eta \frac{k I_0 l \sin \theta}{4 \pi r} 
-%		\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] e^{-jkr}
-%	\end{equation}
-%
-%	\begin{equation}\label{eqn:ephi}
-%		E_\phi = 0
-%	\end{equation}
-%\end{subequations}
-
-%The distance of $\lambda / 2\pi$, leading to $kr = 1$, is called radian distance, where $r$ is the distance to the antenna and $k$ is the free-space wave number. There, the real and imaginary part for both $H_\phi$ and $E_r$ is equal. Furthermore in $E_\theta$, only the $1/(jkr)$ term contributes to the field, because the other terms cancel each other out. The radian distance essentially marks a point of equal imaginary and stored power \cite{Balanis_1997}.
-%
-%In distances smaller than the radian distance $kr<1$, the fields are largely reactive and located in a reactive near-field region. There, the field strength decreases with the cube of the distance ($\propto 1/r^3$).  
-%At distances beyond the radian distance (kr > 1), in the intermediate-field region, the field strength decreases with the square of the distance ($\propto 1/r^2$) \cite{Balanis_1997}. This behavior is visualized in \autoref{fig:energyfieldsregions}.
-%
-%The wave-number $k$ is dependent on the frequency. Therefore, when placing an infinitesimal dipole into a TEM cell, its coupling behavior depends on the distance and the field regions, that couple. For that reason, the $kr$ number shall be investigated over the whole frequency range for different distances.
 

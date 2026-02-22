@@ -12,14 +12,14 @@
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\linewidth]{content/img/se-barrium-ferrite}
-	\caption{Shielding effectiveness of a sheet of ferrite and barium titanate versus the material thickness determined with the ASTM ES7-83 method.}
+	\caption{Shielding effectiveness of a sheet of ferrite, barium titanate and silver over frequency determined with the ASTM ES7-83 method.}
 	\label{fig:se-barrium-ferrite}
 \end{figure}
 
 
-A model of a TEM cell containing a sheet of a shielding material according to the ASTM ES7-83 method described in \cref{sec:astm} is used to determine the shielding effectiveness of barium titanate and ferrite. The shielding material sheet has a thickness of 10\,µm, and is located in the center of the TEM cell at $z=0$. The sheet is modeled with impedance boundary conditions to significantly reduce computational effort, as discussed in \cref{sec:bc-shield}. 
+A model of a TEM cell containing a sheet of a shielding material according to the ASTM ES7-83 method described in \cref{sec:astm} is used to determine the shielding effectiveness of barium titanate and ferrite, shown in \autoref{fig:se-barrium-ferrite}. The shielding material sheet has a thickness of 10\,µm, and is located in the center of the TEM cell at $z=0$. The sheet is modeled with impedance boundary conditions to significantly reduce computational effort, as discussed in \cref{sec:bc-shield}. 
 
-A reference power of $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen and the load power $P_\mathrm{load}$ is numerically derived. \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material over frequency. The properties of the materials used are listed in \autoref{tab:materials}. Ferrite additionally is modeled to have a magnetic loss tangent of $\tan \delta_m = 0.05$.
+A reference power of $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen and the load power $P_\mathrm{load}$ is numerically derived. \autoref{eqn:SE_power} yields the shielding effectiveness $SE_\mathrm{dB}$ of the material over frequency. The properties of the materials used are listed in \autoref{tab:materials}. Ferrite additionally is modeled to have a magnetic loss tangent of $\tan \delta_m = 0.05$ and barium titanate an electric loss tangent of $\tan \delta = ?$.\todo{Loss tangent}
 
 %Metallic thin shields are normally removed from the computational domain and replaced by impedance network boundary conditions on the surfaces of the shielding material \cite{1430946}. Alternatively, the inside of the shielding material contains a fine mesh created with the adaptive meshing algorithm discussed in \cref{sec:simulations}, which is applied to these simulation models. 
 
@@ -36,10 +36,16 @@ A reference power of $P_\mathrm{ref}=1\,\mathrm{W}$ is chosen and the load power
 			\hline
 			Barium titanate & $\approx 2,000$ & $\approx 1$ & $3.64\cdot 10^{-11}$\,S/m \\
 			\hline
+			Silver & $\approx 1$ & $\approx 1$ & $6.10\cdot 10^{7}$\,S/m \\
+			\hline
 	\end{tabular}}
 	\caption{Electromagnetic Properties of barium titanate and ferrite}
 	\label{tab:materials}
 \end{table}
+
+At low frequencies, the non-conductive materials exhibit low shielding efficiency despite having a high reflection coefficient. This reduced efficiency is primarily due to their low absorption coefficients, which allow more electromagnetic energy to penetrate and transmit through the shielding material. As frequency increases, the shielding material becomes electrically thicker, leading to greater absorption losses and, consequently, improved shielding efficiency. 
+
+Silver, as a conductive material, exhibits a high reflection coefficient due to the significant impedance mismatch with air. This impedance mismatch decreases as frequency increases. Additionally, silver has a high absorption coefficient, which grows with increasing frequency. This trend is consistent with the reduction in skin depth at higher frequencies, as discussed in \cref{sec:skin_effect}. Within the frequency range considered, the decrease in the reflection coefficient is more pronounced than the increase in the absorption coefficient, resulting in a net decrease in shielding effectiveness with increasing frequency.
 
 \FloatBarrier
 \subsection{Dual TEM cell}
@@ -83,46 +89,87 @@ When investigating highly conductive materials, applying skin-depth based meshin
 
 Again, the sum $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the powers at port 3 and 4 are derived and shown in \cref{fig:bariumpowersumdiff,fig:ferritepowersumdiff}, once for the aperture filled with barium titanate, and once with ferrite.
 
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/barium_power_sum_diff}
+%		\caption{Barium titanate}
+%		\label{fig:bariumpowersumdiff}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/ferrite_power_sum_diff}
+%		\caption{Ferrite}
+%		\label{fig:ferritepowersumdiff}
+%	\end{subfigure}
+%	\caption{The sum $P_\mathrm{load,sum}$ and difference in output power $P_\mathrm{load,diff}$ measured at port 3 and 4 with the phase information considered.}
+%	\label{fig:example}
+%\end{figure}
+
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/barium_power_sum_diff}
-		\caption{Barium titanate}
-		\label{fig:bariumpowersumdiff}
+		\includegraphics[width=1\linewidth]{content/img/power_silver}
+		\caption{Silver}
+		\label{fig:powersilver}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/ferrite_power_sum_diff}
-		\caption{Ferrite}
-		\label{fig:ferritepowersumdiff}
+		\includegraphics[width=1\linewidth]{content/img/power_barium_ferrite}
+		\caption{Ferrite and barium titanate}
+		\label{fig:powerbariumferrite}
 	\end{subfigure}
 	\caption{The sum $P_\mathrm{load,sum}$ and difference in output power $P_\mathrm{load,diff}$ measured at port 3 and 4 with the phase information considered.}
 	\label{fig:example}
 \end{figure}
 
+
 Ferrite exhibits higher power transfer, indicating lower shielding effectiveness compared to barium titanate. Additionally, $P_\mathrm{load,sum}$ is low for barium titanate, suggesting high electric shielding effectiveness, as indicated by \cref{eqn:se_dual_cell_e}. The power transfer of both materials increases with frequency, which can be attributed to the low bulk conductivity and slightly decreasing permittivity at higher frequencies. The electric and magnetic shielding effectiveness for both materials are illustrated in \cref{fig:sebarium,fig:seferrite}.
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/se_barium}
+%		\caption{Barium titanate}
+%		\label{fig:sebarium}
+%	\end{subfigure}
+%	\hfill
+%	\begin{subfigure}[b]{0.48\textwidth}
+%		\centering
+%		\includegraphics[width=1\linewidth]{content/img/se_ferrite}
+%		\caption{Ferrite}
+%		\label{fig:seferrite}
+%	\end{subfigure}
+%
+%	\caption{The electric $SE_\mathrm{dB}^\mathrm{e}$ and magnetic $SE_\mathrm{dB}^\mathrm{m}$ shielding effectiveness derived with \cref{eqn:se_dual_cell_e,eqn:se_dual_cell_m}.}
+%	\label{fig:se_e_m}
+%\end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/se_barium}
-		\caption{Barium titanate}
-		\label{fig:sebarium}
+		\includegraphics[width=1\linewidth]{content/img/se_silver}
+		\caption{Silver}
+		\label{fig:sesilver}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-		\includegraphics[width=1\linewidth]{content/img/se_ferrite}
-		\caption{Ferrite}
-		\label{fig:seferrite}
+		\includegraphics[width=1\linewidth]{content/img/se_barium_ferrite}
+		\caption{Barium titanate and ferrite}
+		\label{fig:sebariumferrite}
 	\end{subfigure}
-
-	\caption{The electric $SE_\mathrm{dB}^\mathrm{e}$ and magnetic $SE_\mathrm{dB}^\mathrm{m}$ shielding effectiveness derived with \cref{eqn:se_dual_cell_e,eqn:se_dual_cell_m}.}
+	
+	\caption{The electric $SE_\mathrm{dB}^\mathrm{e}$ and magnetic $SE_\mathrm{dB}^\mathrm{m}$ shielding effectiveness derived with (\ref{eqn:se_dual_cell_e,eqn:se_dual_cell_m}).}
 	\label{fig:se_e_m}
 \end{figure}
+
 
 Barium titanate exhibits good electric shielding characteristics, but demonstrates a negative $SE_\mathrm{dB}^\mathrm{m}$ value, indicating poor magnetic shielding. Negative shield effectiveness values are possible, and occur due to interference patterns at the filled aperture, which cause $a$ and the output power at port 3 to increase \cites{4091811}[p. 63]{Jaroszewski_Thomas_Rane_2019}. Ferrite, on the other hand, demonstrates a higher magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$, but a low or negative electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$. 
 
@@ -175,10 +222,68 @@ Similarly, \autoref{fig:ferriteenclosurepower} shows the radiated power from the
 	\label{fig:enclosurepower}
 \end{figure}
 
-\subsection{Dipole moments in shield enclosure}
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[c]{0.41\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/loop-shield-power}
+		\caption{Loop antenna}
+		\label{fig:loop-shield-power}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[c]{0.41\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole-shield-power}
+		\caption{Monopole antenna}
+		\label{fig:monopole-shield-power}
+	\end{subfigure}
+		\hfill
+	\begin{subfigure}[c]{0.15\textwidth}
+		\vspace{-30px}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/legend-shield}
+	\end{subfigure}
+	
+	\caption{Output power over frequency produced by antennas with varying enclosure thickness.}
+	\label{fig:enclosurepowervarthick}
+\end{figure}
 
-\todo[inline]{TODO: Simulation von Dipolmomenten in denselben Schildmaterialien.}
-%Next, the antennas in the enclosures are replaced with their equivalent dipole moments determined in \cref{sec:monopole,sec:loop_sim}. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{content/img/loop-resonance}
+	\caption{Electric near-field distribution of the loop antenna at the resonance frequency of 2.5\,GHz, with a barium titanate shielding enclosure of 100\,µm thickness.}
+	\label{fig:loop-resonance}
+\end{figure}
+
+
+\FloatBarrier
+\subsection{Dipole moments in shield enclosure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[c]{0.39\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/dipole-shield}
+		\caption{Loop antenna}
+		\label{fig:loopdipoleshields}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[c]{0.39\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/monopole_dipole_shields}
+		\caption{Monopole antenna}
+		\label{fig:monopoledipoleshields}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[c]{0.2\textwidth}
+		\vspace{-30px}
+		\includegraphics[width=1\linewidth]{content/img/dipole-shield-legend}
+	\end{subfigure}
+	
+	\caption{Output power over frequency produced by antennas with varying enclosure thickness.}
+	\label{fig:enclosurepowervarthick}
+\end{figure}
 
 \FloatBarrier
 %\subsection{Shielding Antennas}

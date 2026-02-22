@@ -17,21 +17,28 @@
 \label{fig:rectwaveguidete}
 	\end{subfigure}
 	
-	\caption{The electric and magnetic fields of each the first dominant TE and TM mode in a hallow rectangular waveguide with perfectly conducting walls.}
+	\caption{The electric and magnetic fields corresponding to the first dominant TE and TM modes in a rectangular waveguide with perfectly conducting walls.}
 	\label{fig:rect_waveguide_modes}
 \end{figure}
 
 
-A hollow rectangular waveguide with perfectly conducting walls do not support the propagation of the TEM mode. This can be shown directly from Maxwell's equation, as done in \cite[pp. 425-427]{Griffiths_2024}. The first two dominant modes are demonstrated in \autoref{fig:rect_waveguide_modes}. The electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$ are defined as 
+Waveguides with perfectly conducting walls preclude the propagation of TEM modes. In rectangular waveguides, the allowable solutions to the wave equation are restricted to TE and TM modes. The field distributions for the two primary dominant modes are depicted in \autoref{fig:rect_waveguide_modes}. 
+
+The physical impossibility of TEM propagation within these structures is a direct 
+consequence of Maxwell’s equations. Following the analytical framework established 
+in \cite[pp.~425-427]{Griffiths_2024}, we demonstrate this by first decomposing 
+the electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$ 
+into their longitudinal and transverse components, assuming wave propagation 
+in the $z$-direction::
 
 \begin{subequations}
 	\begin{align}
-		\mathbf{E}&=(E_{0,x}\cdot\mathbf{\hat{a}}_x+E_{0,y}\cdot\mathbf{\hat{a}}_y+E_{0,z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{-jkz},\label{eqn:rect_e}\\
-		\mathbf{H}&=(H_{0,x}\cdot\mathbf{\hat{a}}_x+H_{0,y}\cdot\mathbf{\hat{a}}_y+H_{0,z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{-jkz}.\label{eqn:rect_h}
+		\mathbf{E}&=(E_{x}\cdot\mathbf{\hat{a}}_x+E_{y}\cdot\mathbf{\hat{a}}_y+E_{z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{-jkz},\label{eqn:rect_e}\\
+		\mathbf{H}&=(H_{x}\cdot\mathbf{\hat{a}}_x+H_{y}\cdot\mathbf{\hat{a}}_y+H_{z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{-jkz}.\label{eqn:rect_h}
 	\end{align}
 \end{subequations}
 
-Using Faraday's and Ampère-Maxwell law transforms \crefrange{eqn:rect_e}{eqn:rect_h} to
+Next, applying Faraday's and Ampère-Maxwell law to (\ref{eqn:rect_e}) and (\ref{eqn:rect_h}) yields \cite[p.~426]{Griffiths_2024}
 
 \begin{subequations}
 \begin{align}
@@ -40,93 +47,86 @@ Using Faraday's and Ampère-Maxwell law transforms \crefrange{eqn:rect_e}{eqn:re
 \end{align}
 \end{subequations}
 
-For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm{z}=0$. Under this assumption, \crefrange{eqn:faraday}{eqn:ampere_maxwell} together with Gauss' law and Faraday's law reduce to the following conditions for $\mathbf{E}$ components:
+For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm{z}=0$. Consequently, \ref{eqn:faraday}) and (\ref{eqn:ampere_maxwell}) reduce to the following conditions for the transverse electric field components:
 
 \begin{align}
-	\frac{\partial}{\partial x}E_x+\frac{\partial}{\partial y}E_y&=0\quad\text{Derived out of Gauss' law}\label{eqn:rect_waveguide_gauss},\\
-	\frac{\partial}{\partial y}E_x-\frac{\partial}{\partial x}E_y&=0\quad\text{Derived out of Faraday's law}\label{eqn:rect_waveguide_faraday}.
+	\frac{\partial}{\partial x}E_x+\frac{\partial}{\partial y}E_y&=0\quad\text{Derived from Gauss' law}\label{eqn:rect_waveguide_gauss},\\
+	\frac{\partial}{\partial y}E_x-\frac{\partial}{\partial x}E_y&=0\quad\text{Derived from Faraday's law}\label{eqn:rect_waveguide_faraday}.
 \end{align}
 
-The derived \crefrange{eqn:rect_waveguide_gauss}{eqn:rect_waveguide_faraday} cannot fulfill any boundary conditions imposed by the rectangular waveguide. Therefore, a TEM mode cannot propagate.
+Since the solutions in \crefrange{eqn:rect_waveguide_gauss}{eqn:rect_waveguide_faraday} cannot satisfy the rectangular waveguide's boundary conditions, a TEM mode cannot propagate.
 
-\subsubsection{TEM mode in the TEM cell}\label{sec:tem_mode_tem_cell}
+\subsection[TEM mode in the TEM cell]{TEM mode in the TEM cell\protect\footnote{This chapter is based on and contains significant excerpts from: P. F. Wilson et al., \textit{Excitation of a TEM cell by a Vertical Electric Hertzian Dipole}, National Bureau of Standards, 1981}}\label{sec:tem_mode_tem_cell}
 
-Opposed to the rectangular waveguide, a TEM cell conducts TEM waves. Further, the TEM mode is necessarily excited by the geometry of the TEM cell, hence this mode is called essential. The higher order TE and TM modes, which are only excited due to non-uniformity of the TEM cell, are called non-essential modes \cite{990711}.
+In contrast to the rectangular waveguide, a TEM cell supports the propagation of TEM waves. Moreover, the TEM mode is inherently excited by the geometry of the TEM cell, and is therefore referred to as the essential mode. Higher-order TE and TM modes, which arise only due to non-uniformities in the TEM cell, are termed non-essential modes \cite{990711}.
 
-%Additionally, it shields the waves from radiating to the sides, which is advantageous over a stripline \cite{809846,990711}. 
-
-The TEM mode in the TEM cell is derived by a procedure presented in \cites{Tippet_Chang_Crawford_1976,Wilson_1981}. It consists of finding the Green's function of both the TE and TM modes transverse field components $H_z, E_z$ in a rectangular waveguide. The Green's function fulfills the wave equations and boundary conditions of the waveguide, constructed as discussed in \cref{sec:scal_green}, with 
+The TEM mode in the TEM cell is derived using a procedure presented in \cites{Tippet_Chang_Crawford_1976,Wilson_1981}. This approach involves determining the Green's function for the longitudinal field components, $H_z$ and $E_z$, of both the TE and TM modes in a rectangular waveguide. The Green's function satisfies the wave equations and boundary conditions of the waveguide, and is constructed as described in \cref{sec:scal_green}, with
 
 \begin{subequations}
 	
 	\begin{equation}
-		(\nabla^2 + k_{0,t}^2) G (\mathbf{x}_t, \mathbf{x}_t') = -\delta(\mathbf{x}_t - \mathbf{x}_t'),
+		(\nabla^2 + k_{t}^2) G_j (\mathbf{x}_t, \mathbf{x}_t') = -\delta(\mathbf{x}_t - \mathbf{x}_t'),
 	\end{equation}
 	
 	\begin{equation}
-		\frac{\partial G(\mathbf{x}_t, \mathbf{x}_t')}{\partial\mathbf{n}}=0.
+		\frac{\partial G_j(\mathbf{x}_t, \mathbf{x}_t')}{\partial n}=0.
 		\label{eqn:bc_tem} 
 	\end{equation}
 
 \end{subequations}
 
-The wave number is separated in a transversal and a longitudinal component $k_0^2=k_{0,t}^2+k_{0,z}^2$. \autoref{eqn:bc_tem} express the boundary condition on the perfectly conducting walls and septum of the TEM cell, as well as for the gaps, as illustrated in \autoref{fig:greentemcell}. The source points are denoted with $\mathbf{x'}_t=(\mathbf{\hat{a}}_xx'+\mathbf{\hat{a}}_yy')$ and the observation points with $\mathbf{x}_t=(\mathbf{\hat{a}}_xx+\mathbf{\hat{a}}_yy)$. They are transformed, such that they have a dependence on the wave number $k$ instead of a $z$-dependence. This significantly facilitates the derivation of the Green's function, since only a two-dimensional surface has to be considered. 
+The wave number is separated into transverse and longitudinal components, $k^2 = k_{t}^2 + k_{z}^2$. Equation (\ref{eqn:bc_tem}) specifies the boundary conditions on the perfectly conducting walls and septum of the TEM cell, as well as on the gaps, as illustrated in \autoref{fig:greentemcell}. The index $j$ indicates the chamber to which the Green's function applies ($j=1$ for the upper chamber, $j=2$ for the lower chamber). The source points are denoted by $\mathbf{x'}_t = (\mathbf{\hat{a}}_x x' + \mathbf{\hat{a}}_y y')$, and the observation points by $\mathbf{x}_t = (\mathbf{\hat{a}}_x x + \mathbf{\hat{a}}_y y)$. These coordinates are transformed to depend on the wave number $k$ instead of the $z$-coordinate, which significantly simplifies the derivation of the Green's function, as only a two-dimensional surface must be considered.
 
 \begin{figure}[bt]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/green_tem_cell}
-	\caption{The Green's function in this analysis solves the fields in the cross section surface $S$ of the TEM cell1, which is colored in light gray and bounded by $l$. The source exciting these fields is a centered, electric dipole moment $\mathbf{m}_e$.}
+	\caption{In this analysis, the Green's function determines the fields within the cross-sectional surface $S$ of the TEM cell, which is shown in light gray and bounded by $l$. The source exciting these fields is a centrally located electric dipole moment, $\mathbf{m}_e$.}
 	\label{fig:greentemcell}
 \end{figure}
 
-
-The source exciting the waveguide is assumed to be an infinitesimal electric dipole moment centrally located and oriented along the $y$-axis. 
-Solving for $H_z$ and applying Green's second identity yields
+The waveguide is excited by an infinitesimal electric dipole moment, centrally located and oriented along the $y$-axis. Solving for $H_z$ and applying Green’s second identity yields \cite[p.~5]{Wilson_1981}
 
 \begin{align}
-	\int_l \left( G(\mathbf{x}_t, \mathbf{x}_t') \frac{\partial H_z(\mathbf{x}_t)}{\partial\mathbf{n}} - H_z(\mathbf{x}_t){\frac{\partial G(\mathbf{x}_t, \mathbf{x}_t')}{\partial\mathbf{n}}}\right)\,&d\mathbf{l'} =\\ = H_z(\mathbf{x}_t)-\int_S J_y(\mathbf{x'}_t)\frac{\partial G(\mathbf{x}_t, \mathbf{x}_t')}{\partial\mathbf{x'}_t}\,&d\mathbf{S}',
+	\int_l \left( G_j(\mathbf{x}_t, \mathbf{x}_t') \frac{\partial H_z(\mathbf{x}_t)}{\partial n} - H_z(\mathbf{x'}_t){\frac{\partial G_j(\mathbf{x}_t, \mathbf{x}_t')}{\partial n}}\right)\,&d\mathbf{l'} =\\ = H_z(\mathbf{x}_t)-\int_S G_j(\mathbf{x}_t, \mathbf{x}_t') \frac{\partial J_y(\mathbf{x'}_t)}{\partial x'}\,&d\mathbf{s}',
 	\label{eqn:second_green}
 \end{align}
 
-where $S$ is the surface of the waveguide cross section, and $l$ is its boundary. Applying the boundary condition on the perfectly conducting septum and walls, leaves the boundary integrals along the gaps. Further, inserting the electric dipole in \autoref{eqn:second_green} and forcing $H_z$ to be continuous across the gaps leads to 
+Here, $S$ denotes the waveguide cross-section and $l$ its boundary. Applying the boundary condition (\ref{eqn:bc_tem}) to the perfectly conducting septum and walls reduces the boundary integrals to those over the gaps. The electric dipole is then substituted into \eqref{eqn:second_green}, and continuity of $H_z$ and $\partial H_z / \partial y$ across these gaps is enforced. The normal vector in the gap region is oriented along the $y$-direction, $n = \pm y$. Accordingly, the line element in the integrand becomes $d\mathbf{l}' = dx'$. The right-hand side of \eqref{eqn:second_green} is integrated by parts. Finally, assuming that the electric dipole moment is located in the upper chamber, only $G_1$ needs to be considered. For the boundary, $G(x,x') = G_1(x,0,x',0) + G_2(x,0,x',0)$. Altogether, this yields \cite[pp.~5--6]{Wilson_1981}
 
  \begin{equation}
- 		\int_\mathrm{gaps} G(\mathbf{x}_t, \mathbf{x}_t') \frac{\partial H_z(x',0)}{\partial y'}\,dx' = -\mathbf{m}_e \frac{\partial G(\mathbf{x}_t, \mathbf{x}_t')}{\partial\mathbf{x'}_t}.
+ 		\int_\mathrm{gaps} G(x, x') \frac{\partial H_z(x',0)}{\partial y'}\,dx' = -\mathbf{m}_e \frac{\partial G_1(x,0, \mathbf{x}_t')}{\partial x'}.
  \end{equation}
 
-Solving for the Green's function $G$ yields a solution for the magnetic longitudinal field intensity $H_z$ of the TE mode. The same process can be applied to solve for the electric longitudinal field intensity $E_z$ of the TM mode. The total field distribution is a superposition of the TE and TM mode fields, which finally demonstrates the excitation of the TEM mode. The transversal fields $E_t$, $H_t$ relate to $H_z$ with 
-
+Solving for the Green's function $G$ provides a solution for the longitudinal 
+magnetic field intensity $H_z$ of the TE mode. An analogous procedure can be 
+used to determine the longitudinal electric field intensity $E_z$ of the TM mode. 
+As shown in \cite{Wilson_1981}, the total field distribution is then given by the 
+superposition of the TE and TM mode fields, thereby demonstrating the excitation 
+of the TEM mode. The transverse fields $\mathbf{E}_t$ and $\mathbf{H}_t$ can then 
+be derived from the longitudinal field components $H_z$ and $E_z$. They are 
+related to $H_z$ by \cite[p.~3]{Wilson_1981}
 \begin{subequations}
 	\begin{equation}
-		E_t(\mathbf{x}_t) = \frac{j\omega\mu_0}{k_{0,t}^2}\, \frac{\partial H_z(\mathbf{x}_t)}{\partial \mathbf{t}} \times \mathbf{\hat{a}}_z,
+		\mathbf{E}_t(\mathbf{x}_t) = \frac{j\omega\mu_0}{k_{t}^2}\, \nabla_t H_z(\mathbf{x}_t) \times \hat{\mathbf{a}}_z,
 	\end{equation}
 	\begin{equation}
-		H_t(\mathbf{x}_t) = \frac{j k_{0,z}}{k_{0,t}^2} \frac{\partial H_z(\mathbf{x}_t)}{\partial \mathbf{t}},
+		\mathbf{H}_t(\mathbf{x}_t) = -\frac{j k_{z}}{k_{t}^2}\, \nabla_t H_z(\mathbf{x}_t),
 	\end{equation}
 \end{subequations}
-
-and to $E_z$ with
-
+and to $E_z$ by
 \begin{subequations}
 	\begin{equation}
-		E_t(\mathbf{x}_t) = \frac{j k_{0,z}}{k_{0,t}^2}\frac{\partial{E}_z(\mathbf{x}_t)}{\partial \mathbf{t}},
+		\mathbf{E}_t(\mathbf{x}_t) = -\frac{j k_{z}}{k_{t}^2}\,\nabla_t E_z(\mathbf{x}_t),
 	\end{equation}
-	\begin{equation}	
-		H_t(\mathbf{x}_t) = \frac{-j\omega\epsilon_0}{k_{0,t}^2}  \frac{\partial E_z(\mathbf{x}_t)}{\partial \mathbf{t}} \times \mathbf{\hat{a}}_z,
+	\begin{equation}
+		\mathbf{H}_t(\mathbf{x}_t) = \frac{-j\omega\epsilon_0}{k_{t}^2}\, \nabla_t E_z(\mathbf{x}_t) \times \hat{\mathbf{a}}_z,
 	\end{equation}
 \end{subequations}
-
-where $\mathbf{t}$ denotes the transversal unit vector.
-
-%
-%A TEM cell solves this problem, by having a gap between the septum and the side walls. Essentially, it can be considered as two rectangular waveguides with apertures on the sides. Those apertures allow perturbations of the electromagnetic fields between them. The boundary conditions of the Laplace equation now changed due to the gaps. The Green's function may be calculated of the new construction, now considering the boundary conditions at the gaps, which must be the same for both waveguides (to prevent discontinuities). In the papers of Tippet, Chang and Wilson, this new Green's function lead to the excitation of TEM modes in both waveguides \cite{Tippet_Chang_Crawford_1976,Wilson_1981}.
-%
-%Constraints in their involve the gap is assumed to be small, electrically ($\xi g \ll 1$) and compared to the septum width ($g/a \ll 1$) \cite{4091747}. The variable $\xi=\sqrt{k_0^2 - \beta ^2}$ is the transverse (in y-direction) propagation constant, and consists of the free-space wave number $k_0$ and longitudinal (in z-direction) propagation constant $\beta$. The variables $g$ and $a$ are geometry variables of the TEM cell annotated in \autoref{fig:verticalantennatemcell}.
-
+where $\nabla_t=\partial/\partial x + \partial/\partial y$ denotes the transverse gradient operator.
 
 \subsubsection{Higher-order modes}\label{sec:higher-order-modes}
 
-The TEM cell under investigation has a width of $a=40\,\mathrm{mm}$ and a height of $b=24\,\mathrm{mm}$ with a gap length of $g=5\,\mathrm{mm}$, which is shown in \autoref{fig:tem_cell_crosssection}. For a thin septum ($t/b \ll 0.1$), the cut-off frequency $f_\mathrm{c}$ of modes with n-even subscripts, i.e. TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes, is approximated as \cite{Weil_Gruner_1984}
+The TEM cell under investigation has a width of $a=40,\mathrm{mm}$, a height of $b=24,\mathrm{mm}$, and a gap length of $g=5,\mathrm{mm}$, as shown in \autoref{fig:tem_cell_model2}. For a thin septum ($t/b \ll 0.1$), the cut-off frequency $f_\mathrm{c}$ of modes with even $n$ subscripts, i.e., TE\textsubscript{m,2n} and TM\textsubscript{m,2n} modes, can be approximated as \cite{Weil_Gruner_1984}:
 
 \begin{equation}
 	f_c = \frac{c}{2} \sqrt{\left(\frac{m}{a}\right)^2 + \left(\frac{n}{b}\right)^2}.

@@ -14,7 +14,7 @@ An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, 
 	\mathbf{I}(z) = \mathbf{\hat{a}}_z I_0.
 \end{equation}
 
-The capacitances modeled at the ends of the wire allow for a constant current flow, which would otherwise be physically impossible. The electric dipole moment can be expressed as 
+To permit a constant current across the wire, which is otherwise physically impossible, capacitor plates are modeled at its ends. The electric dipole moment can be expressed as 
 
 \begin{equation}
 	\mathbf{m}_e = I_0 d \cdot \mathbf{\hat{a}}_z.
@@ -42,7 +42,7 @@ Any other field quantities can be derived out of the vector potential $\mathbf{A
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/electric_dipole}
-	\caption{Geometrical arrangement of an infinitesimal electric dipole. It contains a capacitor-plate at each end of the wire to provide a constant current $\mathbf{I}(z)$.}
+	\caption{Geometrical arrangement of an infinitesimal electric dipole \cite{Balanis_1997}[p.~152].}
 	\label{fig:electric_dipole}
 \end{figure}
 
@@ -118,21 +118,21 @@ and,
 $\eta=\sqrt{\frac{\mu}{\epsilon}}$ is the wave impedance of the medium in which the waves travel.
 
 
-The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{W}$ over a closed surface surrounding the dipole \cite[p. 154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{W}$ is defined by 
+The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{S}$ over a closed surface surrounding the dipole \cite[p. 154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{S}$ is defined by 
 
 \begin{equation}
-	\mathbf{W}=\frac{1}{2}\left(\mathbf{E}\times\mathbf{H}^*\right) .
+	\mathbf{S}=\frac{1}{2}\left(\mathbf{E}\times\mathbf{H}^*\right) .
 	\label{eqn:com_pow_dens}
 \end{equation}
 
-The real power transfer is derived through the time-averaged Poynting vector $\mathbf{W}_\mathrm{av}$ \cite[p. 160]{Balanis_1997}, which is calculated by
+The real power transfer is derived through the time-averaged Poynting vector $\mathbf{S}_\mathrm{av}$ \cite[p. 160]{Balanis_1997}, which is calculated by
 
 \begin{equation}
-	\mathbf{W}_\mathrm{av} = \frac{1}{2} \, \Re \{ \mathbf{E} \times \mathbf{H}^* \}.
+	\mathbf{S}_\mathrm{av} = \frac{1}{2} \, \Re \{ \mathbf{E} \times \mathbf{H}^* \}.
 	\label{eqn:time_averaged_poynting}
 \end{equation}
 
-The complex power $P$ is derived by integrating $\mathbf{W}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
+The complex power $P$ is derived by integrating $\mathbf{S}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
 
 \begin{equation}
 	P_r = \eta \frac{\pi}{3} \frac{|I_0l|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
@@ -141,29 +141,18 @@ The complex power $P$ is derived by integrating $\mathbf{W}$ over a closed surfa
 
 The imaginary part of the power radiated by the infinitesimal electric dipole shows capacitive behavior, as demonstrated by \autoref{eqn:compl_power_inf_elec_dipole}.
 
-%By integrating the time-averaged real Poynting vector $ \mathbf{W}_\mathrm{av} $ over a closed surface, the radiated power $P_{\mathrm{rad}}$ is determined. The real part of the power is independent of the integrated surface, opposed to the imaginary part. $P_{\mathrm{rad}}$ is expressed as \cite[p. 155]{Balanis_1997}
-%
-%\begin{equation}
-%	P_{\mathrm{rad}} = \eta \left(\frac{\pi}{3}\right) \left|\frac{I_0l}{\lambda}\right|^2 
-%	\label{eqn:elec_rad_res}
-%\end{equation}
-%
-%The radiated power increases, at least in the near-field region, with the frequency squared \cite[p. 412]{Jackson}. This relation holds until the frequency is too large to consider the antenna as electrically small.
-
-
-
 \subsubsection{Small Electric Dipoles}\label{sec:small_electric_dipole}
 
-Wires that are too long to be modeled as an infinitesimal dipole, but short enough to be considered electrically small ($\lambda / 50 < l \leq \lambda/10$), are classified as small physical dipoles \cite[pp. 162-163]{Balanis_1997}. They are a more accurate and useful representation of a linear wire antenna, and now investigated further. 
+Wires that are too long to be modeled as infinitesimal dipoles, but short enough to be considered electrically small ($\lambda / 50 < l \leq \lambda/10$), are classified as small physical dipoles \cite[pp. 162-163]{Balanis_1997}. These dipoles provide a more accurate and practical representation of linear wire antennas, and are examined in greater detail below.
 
 A current $I_0$ is fed into the short, center-fed, linear antenna shown in \autoref{fig:electric_dipole}. The current along the antenna arms $I(z)$ linearly drops to zero \cite[p. 412]{Jackson}, as visualized in \autoref{fig:electricdipolecurrent}. Mathematically, it is described by, 
 
 \begin{equation}
-    \mathbf{I}(z)= \mathbf{\hat{a}}_z I_0\left( 1-\frac{2|z|}{d} \right).
+    \mathbf{I}(z)=  I_0\left( 1-\frac{2|z|}{d} \right)\cdot\mathbf{\hat{a}}_z.
     \label{eqn:current_dipole}
 \end{equation}
 
-This is different to the current distribution of the infinitesimal dipole. The capacitor-plates are therefore not needed in this model. Furthermore, charge accumulates along the antenna due to the linear drop of current $\mathbf{I}$. It is expressed as a charge per unit length $\rho'$, which is appropriate due to the thin wire. It is derived by the continuity equation $j\omega\rho = \nabla \cdot \mathbf{J}$, which leads to \cite[pp. 410-412]{Jackson}
+This current distribution differs from that of the infinitesimal dipole, and as a result, the capacitor plates are not required in this model. Additionally, charge accumulates along the antenna due to the linear decrease in current $\mathbf{I}$. This accumulation is characterized by the charge per unit length, $\rho’$, which is appropriate for a thin wire. The relationship is derived from the continuity equation, $\partial \rho/\partial t = -\nabla \cdot \mathbf{J}$. In the frequency domain, this becomes $j\omega \rho = -\nabla \cdot \mathbf{J}$. Substituting this into \autoref{eqn:current_dipole} yields \cite[pp. 410-412]{Jackson}.
 
 \begin{equation}
     \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}j\frac{ I(z)}{\omega} = \pm j\frac{2  I_0}{\omega d}.
@@ -172,17 +161,10 @@ This is different to the current distribution of the infinitesimal dipole. The c
 
 $\rho'$ is uniformly distributed along each antenna arm.
 
-%An important metric is the electric dipole moment $\mathbf{p}$. It is defined as the product of charge density $\rho$ along the antenna and their source point $\mathbf{x'}$ \cite[p.410]{Jackson}, and generally expressed as 
-%
-%\begin{equation}
-%	\mathbf{p} = \iiint_V\mathbf{x'} \rho (\mathbf{x'})\,dv'.
-%	\label{eqn:elec_dipole_mom}
-%\end{equation}
-
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/linear_wire_antenna.png}
-	\caption{Geometrical arrangement of a linear, center-fed wire antenna with a feedpoint indicated in the center. The feedpoint consists of a small gap providing current $I_0$ to the antenna.}
+	\caption{The geometry of a linear, center-fed wire antenna is depicted with the feedpoint located at its center. The feedpoint is represented by a small gap through which a current $I_0$ is supplied to the antenna \cite[p.~417]{Jackson}.}
 	\label{fig:linear_wire_antenna}
 \end{figure}
 
@@ -203,20 +185,16 @@ Next, the vector potential $\mathbf{A}$ is determined using \autoref{eqn:vector_
 
 The formulation of $\mathbf{A}$ now includes an additional factor of $1/2$ compared to the previously derived expression for infinitesimal dipoles in \autoref{eqn:a_e_inf}. This factor arises from the integration of $\mathbf{I}$: when integrated over the interval $\left[-d/2, d/2\right]$, a linearly decreasing $\mathbf{I}$ yields half the value obtained from a constant $\mathbf{I}$. For the same reason, the electric dipole moment $\mathbf{m}_e$ is also reduced to half of that in \autoref{eqn:m_e_def}.
 
-Furthermore, it makes sense to keep $\mathbf{x'}=\mathbf{0}$ for simplicity reasons. It has been shown, that this approximation is sufficient for large $r$, and the amplitude error remains negligible for small $r$ \cite[p. 409]{Jackson}, \cite[pp. 164-168]{Balanis_1997}.
+Furthermore, for the sake of simplicity, it is reasonable to set $\mathbf{x’} = \mathbf{0}$. This approximation has been shown to be sufficient for large $r$, with the resulting amplitude error remaining negligible even for small $r$ \cites[p. 409]{Jackson}[pp. 164-168]{Balanis_1997}.
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.3\linewidth]{content/img/electric_dipole_current}
-	\caption{Current distribution across linear wire antenna. It has a maximum at the feedpoint, and drops to zero at points $d/2$ and $-d/2$.}
+	\caption{The current distribution along a linear wire antenna reaches its maximum at the feedpoint and decreases to zero at the endpoints, located at $d/2$ and $-d/2$ \cite[p. 163]{Balanis_1997}.}
 	\label{fig:electricdipolecurrent}
 \end{figure}
 
-The short physical electric dipole described in this section approximate the behavior of electrically short antennas. Special care must be taken of the excitation method and shape, as it influences the behavior \cite[p. 413]{Jackson}. Additionally, any antenna investigated through this method must remain as small as possible compared to the wavelength $\lambda$, to reduce any analytical approximation errors. 
-
-%
-%\todo[inline]{Image theory may be added for TEM cell explanations \cite[p. 184]{Balanis}}
-
+The short physical electric dipole described in this section serves as an approximation for the behavior of electrically short antennas. Particular attention must be paid to the excitation method and physical shape, as these factors significantly influence antenna behavior\cite[p. 413]{Jackson}. Furthermore, any antenna analyzed using this approach should remain much smaller than the wavelength $\lambda$ to minimize analytical approximation errors.
 
 \subsection{Magnetic Dipoles}\label{sec:mag_dip}
 
@@ -242,7 +220,7 @@ Furthermore, the magnetic current $I_m$ and the electric current $I_0$ in the lo
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
-	\caption{Geometrical arrangement of a current loop with radius $b$ fed by a current $I_0$, producing a magnetic dipole moment $\mathbf{m}_m$. Alternatively, a magnetic current $I_\mathrm{m}$ flows perpendicular to the loop's area along the distance $L$, which produces an equivalent magnetic dipole moment.}
+	\caption{The geometry of a current loop with radius $b$ is shown, where the loop is fed with a current $I_0$ that generates a magnetic dipole moment $\mathbf{m}_m$. Alternatively, an equivalent magnetic dipole moment can be produced by a magnetic current $I\mathrm{m}$ flowing perpendicular to the plane of the loop over a distance $L$.}
 	\label{fig:magnetic_dipole_drawing}
 \end{figure}
 
@@ -277,7 +255,7 @@ and,
 	\end{equation}
 \end{subequations}
 
-The complex power density $\mathbf{W}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{W}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals to 
+The complex power density $\mathbf{S}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals to 
 
 \begin{equation}
 P_r = \eta \left(\frac{\pi}{12}\right) (ka)^4 |I_0|^2 \left[1 + j\frac{1}{(kr)^3}\right],
