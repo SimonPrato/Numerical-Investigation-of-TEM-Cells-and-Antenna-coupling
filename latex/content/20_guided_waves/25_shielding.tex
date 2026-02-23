@@ -1,15 +1,15 @@
 \subsection{Shielding}
 
-\subsubsection{Incident, reflected and transmitted waves in medium}
+\subsubsection{Incident, reflected and transmitted waves in medium}\label{sec:irt_waves}
 
-In the following, the fundamental theory of electromagnetic shielding is presented. A figure of merit for shielding capabilities of a material is the electromagnetic shielding effectiveness $SE$, given in \cites{10518640}[p. 63]{Jaroszewski_Thomas_Rane_2019}
+The following section outlines the fundamental theory of electromagnetic shielding. Throughout this thesis, all materials are assumed to be linear and isotropic.
 
+A standard figure of merit for quantifying the shielding capability of a material is the electromagnetic shielding effectiveness $SE$. It is defined as the ratio of the incident to the transmitted electric field amplitude, expressed on a logarithmic scale in decibels as in \cites{10518640}[p.~63]{Jaroszewski_Thomas_Rane_2019}
 \begin{equation}
-	SE_{\mathrm{dB}}=20\log{\left(\frac{E_\mathrm{i}}{E_\mathrm{t}}\right)}.
+	SE_{\mathrm{dB}} = 20\log_{10}{\left(\frac{E_\mathrm{i}}{E_\mathrm{t}}\right)},
 	\label{eqn:se_elec_fields}
 \end{equation}
-
-$E_\mathrm{i}$ denotes the incident electric field intensity, while $E_\mathrm{t}$ represents the transmitted electric field intensity, as illustrated in \autoref{fig:shielding_material_diagram}. These values depend on the material’s thickness, geometry, and its electric and magnetic properties.
+where $E_\mathrm{i}$ and $E_\mathrm{t}$ denote the magnitudes of the incident and transmitted electric field, respectively, as shown in \autoref{fig:shielding_material_diagram}. An analogous expression holds for the magnetic field components. Higher values of $SE_{\mathrm{dB}}$ indicate greater attenuation of the electromagnetic field.
 
 \begin{figure}[h]
     \centering
@@ -30,7 +30,7 @@ An electromagnetic wave can undergo reflection, absorption or multiple reflectio
 
 according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material’s surface, and $B_{\mathrm{dB}}$ is a correction factor that accounts for multiple reflections within the shield \cite{10518640}.
 
-Reflections contribute most significantly to a material’s shielding effectiveness \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. They are characterized by the reflection coefficient $R$. Highly conductive materials, such as metals, reflect the majority of incident electromagnetic waves. The same is true for materials with high permittivity or permeability. 
+Reflections contribute most significantly to a material’s shielding effectiveness \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. They are characterized by the reflection coefficient $R$. For a material to reflect incident fields, it must posses free charge carriers. For this reason, highly conductive materials, such as metals, reflect the majority of incident electromagnetic waves.
 
 Reflections are caused by wave impedance mismatch between two materials. It is common practice to use the normalized wave impedance $Z$ to free-space wave impedance $Z_0$ when determining the reflection coefficient $R$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
 
@@ -48,20 +48,13 @@ Z=\frac{1}{Z_0}\sqrt{\frac{j\omega\mu}{\sigma+j\omega\epsilon}}.
 
 Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p. 67]{Jaroszewski_Thomas_Rane_2019}.
 
-In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p. 112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magentic flux line due to high permeability of the shielding material \cite[pp. 112-113]{Jaroszewski_Thomas_Rane_2019}.
+In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p. 112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magnetic flux line due to high permeability of the shielding material \cite[pp. 112-113]{Jaroszewski_Thomas_Rane_2019}.
 
 The portion of the electromagnetic wave that is not reflected is subject to absorption within the shielding material. This phenomenon is described by $A_{\mathrm{dB}}$ and accounts for an exponentially decreasing amplitude of an electromagnetic wave in a lossy medium. In conductive materials, this phenomenon is closely related to the skin depth, as discussed in \cref{sec:skin_effect}. For non-conductive materials, absorption depends on the electric loss factor \cite[pp.~102-103]{Jaroszewski_Thomas_Rane_2019}, as further described in \cref{sec:shielding_parameters}.
 
-Upon reaching the other end of the shielding material, re-reflections can occur. However, when investigating shielding materials with thicknesses less than the skin depth, the correction factor for this effect $B_{\mathrm{dB}}$ can be neglected \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}.
-
-
-
-
-
+Upon reaching the far end of the shielding material, re-reflections can occur. When the material thickness is greater than the skin depth, the correction factor for this effect $B_{\mathrm{dB}}$ can be neglected. When the material thickness is smaller than the skin depth, however, the internal reflections reduce the shielding effectiveness by destructively interfering with the reflected waves, and the value of $B_{\mathrm{dB}}$ is negative \cite[p.~1]{Jaroszewski_Thomas_Rane_2019}.
 
 %Conductor losses $P_\mathrm{loss}$ are linearly proportional to the area of the conductor and therefore the Skin depth. They show the same dependency on the frequency $P_\mathrm{loss}\propto 1/\sqrt{\omega}$ \cite[p. 413]{Griffiths_2024}. 
-
-
 
 \subsubsection{Conductivity, permeability and permittivity in shields}\label{sec:shielding_parameters}
 
@@ -125,7 +118,7 @@ For highly conductive materials $\left(\sigma \ll \epsilon\omega\right)$ the ski
 
 \subsubsection{ASTM ES7-83 Method}\label{sec:astm}
 
-The ASTM ES7-83 method is used to determine the shielding effectiveness of shielding materials. The shielding material is inserted into a coaxial TEM cell around the septum. Ideally, they form a continuous connection \cite{MORARI_BĂLAN_2015}. 
+The ASTM ES7-83 method is used to determine the shielding effectiveness of shielding materials in far-field condition. The shielding material is inserted into a coaxial TEM cell around the septum. Ideally, they form a continuous connection \cite{MORARI_BĂLAN_2015}. 
 
 In this method, two measurements are performed with an oscilloscope attached to the output of the TEM cell. In the first, an empty TEM cell is excited and a reference output voltage $U_\mathrm{ref}$ is measured. In the second, the TEM cell is loaded with the shielding material, and the output voltage $U_\mathrm{load}$ is again noted. The measurement values are then used in 
 
