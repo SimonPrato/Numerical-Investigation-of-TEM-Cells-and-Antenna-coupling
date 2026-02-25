@@ -1,18 +1,18 @@
-\subsection[Green's Function]{Green's Function\protect\footnote{This chapter is based on and contains significant excerpts from: R. E. Collin, \textit{Field Theory of Guided Waves}, IEEE Press, 2015 and G. B. Arfken and H. J. Weber, \textit{Mathematical Methods for Physicists}, Academic Press, 2013}}\label{sec:green}
+\subsection[Green's Function]{Green's Function\protect\footnote{This section follows closely the treatment in: R. E. Collin, \textit{Field Theory of Guided Waves}, IEEE Press, 2015 and G. B. Arfken and H. J. Weber, \textit{Mathematical Methods for Physicists}, Academic Press, 2013}}\label{sec:green}
 
 
 \subsubsection{Scalar Green's Function}\label{sec:scal_green}
 
-The Green's function describes the response of a linear differential operator $L$ to a point source of unit strength. It is explained briefly in the following with an example of solving the Poisson's equation with boundary conditions, since this concept will be used in further analysis. The general form for a Green's function of a given problem is \cite[p.~512]{Arfken_Weber_Harris_2013}
+The Green's function describes the response of a linear differential operator $L$ to a point source of unit strength. It is briefly introduced here through an example of solving Poisson's equation with boundary conditions, as this concept will be applied in later analysis. The general form for a Green's function of a given problem is \cite[p.~512]{Arfken_Weber_Harris_2013}
 
 \begin{equation}
     LG(\mathbf{x},\mathbf{x'}) = -\delta(\mathbf{x}-\mathbf{x'}).
     \label{eqn:general_greens_funct}
 \end{equation}
 
-A point source of unit strength is generally modeled with a delta function $\delta$ at a certain point in one-dimensional space. In multi-dimensional space, a product of delta-functions are used.
+A point source of unit strength is generally modeled with a delta function $\delta$ at a certain point in one-dimensional space. In multi-dimensional space, a product of delta functions is used.
 
-Once (\ref{eqn:general_greens_funct}) is solved for a point source of unit strength and the corresponding Green’s function $G$ is determined for the specific problem, it can be applied to any combination of point sources $f$ to solve for the input function $u$\cite[p.~512]{Arfken_Weber_Harris_2013}.
+Once (\ref{eqn:general_greens_funct}) is solved for a point source of unit strength and the corresponding Green’s function $G$ is determined for the specific problem, $u$ can be solved for any given source distribution $f$ \cite[p.~512]{Arfken_Weber_Harris_2013}.
 
 \begin{equation}
     Lu(\mathbf{x}) = f(\mathbf{x}).
@@ -22,21 +22,21 @@ Once (\ref{eqn:general_greens_funct}) is solved for a point source of unit stren
 This is accomplished by superposing the responses to point sources of unit strength, as in \cite[p.~512]{Arfken_Weber_Harris_2013}
 
 \begin{equation}
-    u(\mathbf{x})=\iiint_V G(\mathbf{x},\mathbf{x'})f(\mathbf{x'})dv'.
+    u(\mathbf{x})=\iiint_V G(\mathbf{x},\mathbf{x'})f(\mathbf{x'})\,dv',
     \label{eqn:examplary_function_solved}
 \end{equation}
 
-The integrands are the source point variables $x', y', z'$. 
+where integration is performed over the source point variables $x', y', z'$. 
 
-One application of the Green's function is solving the Poisson's equation. The scalar potential $\phi$ can be calculated from a density of charge distribution $\rho$ by using the Green's function of this specific problem. If there are no boundaries present, it takes the form \cites[pp.~510-511]{Arfken_Weber_Harris_2013}[p.~56]{Collin_2015}
+One application of the Green's function is solving Poisson's equation. The scalar potential $\phi$ can be calculated from a density of charge distribution $\rho$ by using the Green's function of this specific problem. If there are no boundaries present, it takes the form \cites[pp.~510-511]{Arfken_Weber_Harris_2013}[p.~56]{Collin_2015}
 
 \begin{subequations}
 	\begin{equation}
-		\nabla ^ 2 \phi(\mathbf{x}) = -\frac{\rho(\mathbf{x'})}{\epsilon},
+		\nabla ^ 2 \phi(\mathbf{x}) = -\frac{\rho(\mathbf{x})}{\epsilon},
 		\label{eqn:greens_function_scalar_pot_1}
 	\end{equation}
 	\begin{equation}
-		\phi(\mathbf{x}) = \frac{1}{4\pi\epsilon}\iiint_V\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}dv'.
+		\phi(\mathbf{x}) = \frac{1}{4\pi\epsilon}\iiint_V\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\,dv'.
 		\label{eqn:greens_function_scalar_pot_2}
 	\end{equation}
 \end{subequations}
@@ -44,35 +44,29 @@ One application of the Green's function is solving the Poisson's equation. The s
 The Green’s function for this problem is given by
 
 \begin{equation}
-	G(\mathbf{x},\mathbf{x'}) = \frac{1}{4\pi |\mathbf{x}-\mathbf{x'|}},
+	G(\mathbf{x},\mathbf{x'}) = \frac{1}{4\pi |\mathbf{x}-\mathbf{x'}|},
 \end{equation}
 
 which represents the potential at position $\mathbf{x}$ due to a unit point charge located at $\mathbf{x’}$. In this context, the input function is $u = \phi$ and the source function is $f = -\rho / \epsilon$ \cite[pp.~510-511]{Arfken_Weber_Harris_2013}.
 
-Different volumes of interest $V_1$, $V_2$, $...$, $V_n$ can be connected by applying boundary conditions on their surrounding surfaces $S_1$, $S_2$, $...$, $S_n$. Applying Green's second identity on the Poisson's equation enables enforcing such a boundary condition upon the surrounding surface $S$ of a volume $V$ \cites[p.~511]{Arfken_Weber_Harris_2013}[p.~57]{Collin_2015}, 
+Solutions in different volumes of interest $V_1$, $V_2$, $...$, $V_n$ can be matched across their shared surfaces $S_1$, $S_2$, $...$, $S_n$ by imposing appropriate boundary conditions on the shared surfaces. This fact is useful when later investigating field propagation in the TEM cell, where a separation of regions significantly simplifies the analysis. Applying Green's second identity to Poisson's equation provides a means of enforcing such a boundary condition upon the surrounding surface $S$ of a volume $V$ \cites[p.~511]{Arfken_Weber_Harris_2013}[p.~57]{Collin_2015}, 
 
 \begin{equation}
-	\iiint_V \left(\phi \nabla_\mathbf{x'}^2 G - G \nabla_\mathbf{x'}^2 \phi \right) dv' = \oiint_S \left(\phi \frac{\partial G}{\partial n} - G\frac{\partial \phi}{\partial n}\right)d\mathbf{s'}.
+	\iiint_V \left(\phi \nabla_\mathbf{x'}^2 G - G \nabla_\mathbf{x'}^2 \phi \right)\, dv' = \oiint_S \left(\phi \frac{\partial G}{\partial n} - G\frac{\partial \phi}{\partial n}\right)d\mathbf{s'}.
 \end{equation}
 
 
-Let $\mathbf{n}$ denote the unit outward normal vector to the surface $S$, and $\frac{\partial }{\partial n}$ represents the corresponding normal derivative $\nabla G \cdot \mathbf{n} = \frac{\partial G}{\partial n}$. The operator $\nabla^2_\mathbf{x'}$ differentiates with respect to the source vector $\mathbf{x'}$ due to $x',y',z'$ being the integrands. Inserting $\nabla^2 \phi = -\rho / \epsilon$ from (\ref{eqn:greens_function_scalar_pot_1}) and $\nabla^2 G = -\delta$ from (\ref{eqn:general_greens_funct}) leads to \cite[p.~58]{Collin_2015}
+Let $\mathbf{n}$ denote the unit outward normal vector to the surface $S$, and let $\frac{\partial }{\partial n}$ denote the corresponding normal derivative $\nabla G \cdot \mathbf{n} = \frac{\partial G}{\partial n}$. The operator $\nabla^2_\mathbf{x'}$ differentiates with respect to the source vector $\mathbf{x'}$ due to $x',y',z'$ being the integrands. Inserting $\nabla^2 \phi = -\rho / \epsilon$ from (\ref{eqn:greens_function_scalar_pot_1}) and $\nabla^2 G = -\delta$ from (\ref{eqn:general_greens_funct}) leads to \cite[p.~58]{Collin_2015}
 
 \begin{equation}
-	\phi = \frac{1}{\epsilon}\iiint_V \rho (\mathbf{x'})G(\mathbf{x},\mathbf{x'})\cdot dv'+\oiint_S\left(G\frac{\partial \phi}{\partial n}-\phi \frac{\partial G }{\partial n}\right)d\mathbf{s}'.
+	\phi = \frac{1}{\epsilon}\iiint_V \rho (\mathbf{x'})G(\mathbf{x},\mathbf{x'})\, dv'+\oiint_S\left(G\frac{\partial \phi}{\partial n}-\phi \frac{\partial G }{\partial n}\right)d\mathbf{s}'.
 \end{equation}
 
 The scalar potential $\phi$ or its normal derivative to the surface, $\partial\phi/\partial n$, can be specified on the boundary. If only one of these quantities is known on the boundary surface, the Green’s function can be adapted so that the unknown quantity vanishes. When $\phi$ is defined over the entire boundary, Dirichlet boundary conditions are satisfied. Conversely, when $\partial\phi/\partial n$ is defined over the entire boundary, Neumann boundary conditions apply \cite[pp. 55-59]{Collin_2015}.
 
-
-
-%This enables an expansion of the fields in a waveguide excited by an internal source. The perfectly conducting surfaces of the waveguides mirror the source infinitely often. Therefore, the Green's function may be represented by a series of these mirror sources. In practice, these calculations are cumbersome, and only the most significant parts of the series are computed \cite{Collin_2015}. %Should I show mathematical calculations?
-
-
 \subsubsection{Dyadic Green's Function}\label{sec:dyad_green}
 
-
-While the scalar Green’s function is effective for solving one-dimensional differential equations, the dyadic Green’s function $\mathbf{\bar G}$ is more necessary for addressing three-dimensional problems. In general, the dyadic Green’s function relates a vector source to a vector response. This is demonstrated when solving the vector Helmholtz equation, as shown in \cite[p.~91]{Collin_2015}
+While the scalar Green’s function is effective for solving one-dimensional differential equations, the dyadic Green’s function $\mathbf{\bar G}$ is more appropriate for addressing three-dimensional problems. In general, the dyadic Green’s function relates a vector source to a vector response. This is demonstrated when solving the vector Helmholtz equation, as shown in \cite[p.~91]{Collin_2015}
 
 \begin{equation}
 	\nabla^2\mathbf{A}+k^2\mathbf{A}=-\mu \mathbf{J}.
@@ -91,10 +85,10 @@ Each component of the current distribution $\mathbf{J}$ generates fields through
 \begin{align}
 	\nonumber\mathbf{\bar{G}}=&G_{xx}\,\mathbf{\hat{a}}_x\mathbf{\hat{a}}_x+G_{xy}\,\mathbf{\hat{a}}_x\mathbf{\hat{a}}_y + G_{xz}\,\mathbf{\hat{a}}_x\mathbf{\hat{a}}_z+\\\nonumber
 	&G_{yx}\,\mathbf{\hat{a}}_y\mathbf{\hat{a}}_x+G_{yy}\,\mathbf{\hat{a}}_y\mathbf{\hat{a}}_y + G_{yz}\,\mathbf{\hat{a}}_y\mathbf{\hat{a}}_z+\\\nonumber
-	&G_{zx}\,\mathbf{\hat{a}}_z\mathbf{\hat{a}}_x+G_{zy}\,\mathbf{\hat{a}}_z\mathbf{\hat{a}}_y + G_{zz}\,\mathbf{\hat{a}}_z\mathbf{\hat{a}}_z
+	&G_{zx}\,\mathbf{\hat{a}}_z\mathbf{\hat{a}}_x+G_{zy}\,\mathbf{\hat{a}}_z\mathbf{\hat{a}}_y + G_{zz}\,\mathbf{\hat{a}}_z\mathbf{\hat{a}}_z.
 \end{align}
 
-Each component of the current vector $\mathbf{J}$ is associated with one unit vector of the Green's function, i.e. $J_x$ with $\mathbf{\hat{a}_x}$, $J_y$ with $\mathbf{\hat{a}_y}$ and $J_z$ with $\mathbf{\hat{a}_z}$ \cite[p. 92]{Collin_2015}. Consequently, the field generated by a current component in a given direction is determined by the corresponding column of the dyadic Green’s function. For example, if only a current component $J_x$ is present, the field components $A_x$, $A_y$, and $A_z$ are obtained from the Green's functions elements $G_{xx}$, $G_{yx}$ and $G_{zx}$.
+Each component of the current vector $\mathbf{J}$ is associated with one unit vector of the Green's function, i.e. $J_x$ with $\mathbf{\hat{a}}_x$, $J_y$ with $\mathbf{\hat{a}}_y$ and $J_z$ with $\mathbf{\hat{a}}_z$ \cite[p. 92]{Collin_2015}. Consequently, the field generated by a current component in a given direction is determined by the corresponding column of the dyadic Green’s function. For example, if only a current component $J_x$ is present, the field components $A_x$, $A_y$, and $A_z$ are obtained from the Green's function's elements $G_{xx}$, $G_{yx}$ and $G_{zx}$.
 
 The dyadic Green's function is defined as the solution of
 
@@ -102,13 +96,13 @@ The dyadic Green's function is defined as the solution of
 	\nabla^2 \mathbf{\bar G}(\mathbf{x}, \mathbf{x'}) + k^2 \mathbf{\bar G} = -\mathbf{\bar I} \delta(\mathbf{x} - \mathbf{x'}).
 \end{equation}
 
-In free space, a commonly used form of the dyadic Green’s function is given by \cite[p.92]{Collin_2015}
+In free space, a commonly used form of the dyadic Green’s function is given by \cite[p.~92]{Collin_2015}
 
 \begin{equation}\label{eqn:dyadic_final}
 	\mathbf{\bar G}(\mathbf{x}, \mathbf{x'}) = \mathbf{\bar I} \frac{e^{-jk|\mathbf{x} - \mathbf{x'}|}}{4\pi |\mathbf{x} - \mathbf{x'}|},
 \end{equation}
 
-where $\mathbf{\bar{I}}$ is an unit dyadic. The free-space case is presented here to provide an overview. Dyadic Green’s functions can also be derived for bounded geometries, such as waveguides, by implementing appropriate boundary conditions.
+where $\mathbf{\bar{I}}$ is a unit dyadic. The free-space case is presented here to provide an overview. Dyadic Green’s functions can also be derived for bounded geometries, such as waveguides, by implementing appropriate boundary conditions.
 
 The fields $\mathbf{A}$ generated by arbitrary $\mathbf{J}$ can be expressed with the dyadic Green's function as
 

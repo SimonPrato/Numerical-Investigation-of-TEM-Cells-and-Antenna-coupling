@@ -226,54 +226,41 @@ The coupling between the antenna and the two ports of the TEM cell are described
  
  All values are peak values, unless otherwise stated. 
  
- \subsubsection{Investigation of field regions}
-
-%This analysis examines how dipole moments behave inside TEM cells of different sizes. The main goal is to prove that the way these antennas respond to various frequencies depends on their own shape, rather than the specific size of the testing cell. By scaling the cell geometry while keeping the electrical properties constant, we aim to show that the resulting signal patterns remain identical once they are normalized. This study helps confirm that measurements taken in a small, controlled environment are representative of the antenna's true physical characteristics across the entire frequency spectrum.
-%
-%This section examines the correlation between TEM cell dimensions and electromagnetic coupling to ensure that the coupling mechanisms remain invariant to shifts in the dominant field regions. 
-
-This chapter investigates how changes in the dominant coupling field region over frequency between an antenna and a TEM cell influence the non-linear frequency behavior observed in output power measurements. To clarify this relationship, a numerical analysis was conducted by evaluating the dipole moments in both a large and a small TEM cell, as shown in \autoref{fig:krtemcell}. The resulting output powers were compared to assess the impact of varying coupling field regions on the frequency response. In particular, this analysis aims to determine whether the frequency-dependent coupling behavior arises primarily from the antenna geometry itself or from the associated coupling field regions.
-
-%This section answers the question, if the frequency-dependent behavior of the output power produced is intrinsic to the antenna's geometry. By systematically scaling the TEM cell dimensions while maintaining a constant impedance $Z_0 \approx 50\,\Omega$, the influence of specific field regions ($k \cdot r$) is isolated. The objective is to demonstrate that the normalized output power $P_\mathrm{norm}(f)$ remains congruent across different cell sizes, thereby proving that the non-linear coupling characteristic is independent of the surrounding environment and solely defined by the antenna's equivalent dipole moments $\mathbf{m}_\mathrm{e}$ and $\mathbf{m}_\mathrm{m}$.
-
-%An electric dipole moment $\mathbf{m}_e$ and a magnetic dipole moment $\mathbf{m}_m$ are located within the TEM cell numerical model, as shown in \autoref{fig:krtemcell}. 
-
+ \subsubsection{Investigation of Field Regions}\label{sec:field_regions}
+ 
+ This section investigates whether the frequency-dependent non-linear behavior observed in output power measurements is intrinsic to the antenna's geometry or influenced by the dominant coupling field region discussed in \cref{sec:rad_fields} within the TEM cell. 
+ 
+ To isolate these effects, a numerical analysis was conducted using two TEM cells of significantly different sizes, as shown in \autoref{fig:krtemcell}. By scaling the cell geometry while maintaining a constant characteristic impedance, the physical distance $r$ between the source and the septum changes, thereby shifting the $k \cdot r$ factor across the frequency spectrum. If the normalized output power remains consistent between the two configurations, it confirms that the coupling mechanism is invariant to the specific field region and is primarily defined by the source's dipole moments.
+ 
  \begin{figure}[h]
  	\centering
  	\includegraphics[width=0.7\linewidth]{content/img/kr_tem_cell}
- 	\caption{A TEM cell containing an electric $\mathbf{m}_\mathrm{e}$ and a magnetic dipole moment $\mathbf{m}_\mathrm{m}$ in the center $x=0, y=r=b/4, z=0$ to investigate the field regions in which the coupling occurs.}
+ 	\caption{Numerical model of a TEM cell containing an electric moment $\mathbf{m}_\mathrm{e}$ and a magnetic dipole moment $\mathbf{m}_\mathrm{m}$ positioned at the center ($x=0, y=r=b/4, z=0$). This setup is used to investigate the specific field regions in which coupling occurs.}
  	\label{fig:krtemcell}
- \end{figure} 
+ \end{figure}
  
-The large TEM cell has dimensions of $a=40,\mathrm{mm}$ and $b=24,\mathrm{mm}$, while the small TEM cell has $a=10,\mathrm{mm}$ and $b=6,\mathrm{mm}$. Both configurations maintain a characteristic impedance of $Z_0 \approx 50,\Omega$. The dipole moments exhibit the behavior shown in \autoref{fig:linearmomentws}. The output power, normalized to unity for both the large and the small TEM cell, is presented in \autoref{fig:small-large-tem-power1}. The agreement between the output powers indicates that changes in the coupling field regions over frequency between the TEM cell and the source are minimal.
+ The investigation compares a large TEM cell ($a=40\,\mathrm{mm}$, $b=24\,\mathrm{mm}$) against a small TEM cell ($a=10\,\mathrm{mm}$, $b=6\,\mathrm{mm}$). Both configurations are designed to maintain a characteristic impedance of $Z_0 \approx 50\,\Omega$. Identical electric and magnetic dipole moments were placed in both cells, exhibiting the behavior shown in \autoref{fig:linearmomentws}. 
  
-%To determine the influence of the field regions on the coupling effect, $\mathbf{m}_\mathrm{e}$ and  $\mathbf{m}_\mathrm{m}$ are placed in two different TEM cells of dimensions  $a=10\,\mathrm{mm}, b=6\,\mathrm{mm}$ and $a=40\,\mathrm{mm}, b=24\,\mathrm{mm}$. The $k\cdot r$-factor for both cases is shown in \autoref{fig:kranalysissmalltem}.
-
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=1\linewidth]{content/img/small-large-tem-power}
-%	\caption{Comparison of output powers between small and large TEM cell.}
-%	\label{fig:small-large-tem-power}
-%\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\begin{subfigure}[c]{0.45\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/small-large-tem-power1}
-		\caption{Output power}
-		\label{fig:small-large-tem-power1}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[c]{0.48\textwidth}
-		\centering
-		\includegraphics[width=1\linewidth]{content/img/linear_momentws}
-		\caption{Dipole moments}
-		\label{fig:linearmomentws}
-	\end{subfigure}
-	\caption{}
-	\label{fig:linear_moments_power}
-\end{figure}
+ The resulting output power, normalized to unity for comparison, is presented in \autoref{fig:small-large-tem-power1}. The close agreement between the power curves of the small and large cells indicates that the varying field regions have a negligible impact on the output power shape. Consequently, it can be concluded that the coupling occurs predominantly in the near-field region, and the influence of changes in field regions with frequency can be neglected in subsequent investigations.
+ 
+ \begin{figure}[htbp]
+ 	\centering
+ 	\begin{subfigure}[c]{0.45\textwidth}
+ 		\centering
+ 		\includegraphics[width=1\linewidth]{content/img/small-large-tem-power1}
+ 		\caption{Normalized Output Power}
+ 		\label{fig:small-large-tem-power1}
+ 	\end{subfigure}
+ 	\hfill
+ 	\begin{subfigure}[c]{0.48\textwidth}
+ 		\centering
+ 		\includegraphics[width=1\linewidth]{content/img/linear_momentws}
+ 		\caption{Dipole Moments}
+ 		\label{fig:linearmomentws}
+ 	\end{subfigure}
+ 	\caption{Comparison of coupling behavior: (a) The normalized output power produced by dipole moments in the large versus the small TEM cell, and (b) the dipole moments used as the source. The congruence of the power curves demonstrates that the coupling is independent of the cell dimensions.}
+ 	\label{fig:linear_moments_power}
+ \end{figure}
 
 
 % \begin{figure}[htbp]

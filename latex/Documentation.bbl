@@ -17,17 +17,6 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global}
-  \entry{Propagation_2022}{article}{}
-    \verb{doi}
-    \verb 10.31838/njap/04.02.07
-    \endverb
-    \field{number}{2}
-    \field{volume}{4}
-    \field{journaltitle}{National Journal of Antennas and Propagation}
-    \field{year}{2022}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
   \entry{Arfken_Weber_Harris_2013}{book}{}
     \name{author}{3}{}{%
       {{hash=AGB}{%
@@ -994,6 +983,42 @@
     \field{journaltitle}{Methods for determining shielding effectiveness of
   materials}
     \field{year}{2015}
+  \endentry
+
+  \entry{Propagation_2022}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NDKMHTDGHM}{%
+         family={N.\bibnamedelima Disages K.\bibnamedelima Mojail},
+         familyi={N\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  K\bibinitperiod\bibinitdelim M\bibinitperiod},
+         suffix={H.R.\bibnamedelima Mira},
+         suffixi={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={H.\bibnamedelima Taconi D.\bibnamedelima Gravino},
+         giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim
+  D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Nestaris},
+         familyi={N\bibinitperiod},
+         given={P.K.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NDKMHMHTDGNP1}
+    \strng{fullhash}{NDKMHMHTDGNP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{doi}
+    \verb 10.31838/njap/04.02.07
+    \endverb
+    \field{number}{2}
+    \field{title}{Understanding Capacitance and Inductance in Antennas}
+    \field{volume}{4}
+    \field{journaltitle}{National Journal of Antennas and Propagation}
+    \field{year}{2022}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Paul_Scully_Steffka_2023}{book}{}

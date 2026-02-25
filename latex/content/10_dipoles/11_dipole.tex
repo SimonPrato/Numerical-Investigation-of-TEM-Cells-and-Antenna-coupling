@@ -6,7 +6,7 @@
 \subsection{Electric Dipoles}\label{sec:ele_dip}
 \subsubsection{Infinitesimal Electric Dipoles}\label{sec:infinitesimal_electric_dipoles}
 
-An electric dipole can be modeled as two tiny charged metal spheres \cite[p. 467]{Griffiths_2024}, or alternatively two capacitor-plates \cite[p. 151]{Balanis_1997}, connected with a linear wire of length $d$ and diameter $a$. The charges accelerate along the wire and radiate. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cites[p. 151]{Balanis_1997}[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries, or as an excitation source in numerical investigations. 
+An electric dipole can be modeled as two tiny charged metal spheres \cite[p.~467]{Griffiths_2024}, or alternatively two capacitor-plates \cite[p.~151]{Balanis_1997}, connected with a linear wire of length $d$ and diameter $a$. The charges accelerate along the wire and radiate. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cites[p. 151]{Balanis_1997}[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries, or as an excitation source in numerical investigations. 
 
 An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, is analyzed in detail below. The dipole is aligned with the $z$-axis, which simplifies the following mathematical investigations. Time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted in this thesis. A current flows in the wire, which is spatially uniform throughout the wire. This is expressed as \cite[p. 151]{Balanis_1997}
 
@@ -21,31 +21,42 @@ To permit a constant current across the wire, which is otherwise physically impo
 	\label{eqn:m_e_def}
 \end{equation}
 
-Next, the vector potential $\mathbf{A}$ is determined through the general expression
+Next, the vector potential $\mathbf{A}$ is determined through
 
 \begin{equation}
-	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,dv'.
+	\mathbf{A}(\mathbf{x})=\frac{\mu}{4\pi}\frac{\mathrm{e}^{-jkr}}{r}\iiint_V \mathbf{J}(\mathbf{x'})\,dv',
 	\label{eqn:vector_pot}
 \end{equation}
 
-The vector $\mathbf{x}=\mathbf{\hat{a}}_x x + \mathbf{\hat{a}}_y y + \mathbf{\hat{a}}_z z$ represents the observation point coordinates, while $\mathbf{x'}=\mathbf{\hat{a}}_x x' + \mathbf{\hat{a}}_y y' + \mathbf{\hat{a}}_z z'$ represents the source point coordinates. The vectors $\mathbf{\hat{a}}_x$, $\mathbf{\hat{a}}_y$, and $\mathbf{\hat{a}}_z$ are unit vectors along the x-, y-, and z-directions, respectively. $\mathbf{J}$ is the current density in the source region. The variable $r$ is the distance from any source point to the observation point $\left| \mathbf{x}-\mathbf{x'} \right|$. In this case, the source point $\mathbf{x'}=\mathbf{0}$, due to the infinitesimal dipole \cite[p. 152]{Balanis_1997}. The permeability is described by $\mu$ and the propagation of the wave by $\mathrm{e}^{jkr}$, where $k=2\pi/\lambda$ is the propagation factor, or often called wavenumber. 
+where\\[0.5em]
+\begin{tabular}{p{3.5cm}l}
+	$\mathbf{x}$            & observation point coordinates $\mathbf{\hat{a}}_x x + \mathbf{\hat{a}}_y y + \mathbf{\hat{a}}_z z$, \\[0.3em]
+	$\mathbf{x'}$           & source point coordinates $\mathbf{\hat{a}}_x x' + \mathbf{\hat{a}}_y y' + \mathbf{\hat{a}}_z z'$, \\[0.3em]
+	$\mathbf{J}$            & current density in the source region, \\[0.3em]
+	$r$                     & distance from source to observation point $|\mathbf{x} - \mathbf{x'}|$, \\[0.3em]
+	$\mu$                   & permeability of the medium, \\[0.3em]
+	$k = 2\pi/\lambda$\hspace{2cm}      & wavenumber, \\[0.3em]
+	$\mathrm{e}^{-jkr}$      & phase factor describing the wave propagation with distance.
+\end{tabular}\\
 
-The integration is performed over the volume $V$ of the antenna. This leads to \cite[p. 153]{Balanis_1997}
-
-\begin{equation}
-	\mathbf{A}(\mathbf{x}) = \mathbf{\hat{a}}_z\frac{\mu I_0}{4\pi r}\mathrm{e}^{-jkr}\int_{-d/2}^{+d/2}\,dz'= \mathbf{\hat{a}}_z \frac{\mu I_0 d}{4\pi r}\mathrm{e}^{-jkr}.
+For the infinitesimal dipole, the source is located at the origin, so $\mathbf{x'}=\mathbf{0}$ \cite[p.~152]{Balanis_1997}. Since the wire is assumed very thin, the volume integral in \eqref{eqn:vector_pot} reduces to a line integral along the dipole axis. With the constant current distribution 
+given in \eqref{eqn:current_dipole}, $I_0$ can be pulled out of the integral. Evaluating the remaining integral over the dipole 
+length $d$ yields \cite[p.~153]{Balanis_1997}
+\begin{align}
+	\mathbf{A}(\mathbf{x}) &= \mathbf{\hat{a}}_z\frac{\mu I_0}{4\pi r}\mathrm{e}^{-jkr}
+	\int_{-d/2}^{+d/2}\,dz' \notag\\
+	&= \mathbf{\hat{a}}_z \frac{\mu I_0 d}{4\pi r}\mathrm{e}^{-jkr}.
 	\label{eqn:a_e_inf}
-\end{equation}
-
-Any other field quantities can be derived out of the vector potential $\mathbf{A}$, such as the electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$. To simplify this process, the Cartesian components of $\mathbf{A}$ are first transformed into spherical ones. This transform is given in matrix form as \cite[p. 153]{Balanis_1997}
+\end{align}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/electric_dipole}
-	\caption{Geometrical arrangement of an infinitesimal electric dipole \cite{Balanis_1997}[p.~152].}
+	\caption{Geometrical arrangement of an infinitesimal electric dipole \cite[p.~152]{Balanis_1997}.}
 	\label{fig:electric_dipole}
 \end{figure}
 
+All other field quantities can be derived from the vector potential $\mathbf{A}$, such as the electric field intensity $\mathbf{E}$ and magnetic field intensity $\mathbf{H}$. To simplify this process, the Cartesian components of $\mathbf{A}$ are first transformed into spherical ones. This transformation is given in matrix form as \cite[p. 153]{Balanis_1997}
 
 \begin{equation}
 	\begin{bmatrix}
@@ -81,27 +92,9 @@ where $\theta$ is the polar angle and $\phi$ is the azimuthal angle of the obser
 	
 \end{subequations}
 
-Substituting $\mathbf{A}$ into \cref{eqn:h_dipole,eqn:e_dipole} reduces them to 
+Substituting \eqref{eqn:a_e_inf} into \eqref{eqn:h_dipole} yields
 
-
-\begin{subequations}
-	\begin{equation}
-		E_r = \eta \frac{I_0 d \cos \theta}{2\pi r^2}\left[ 1 + \frac{1}{jkr} \right] \mathrm{e}^{-jkr},
-		\label{eqn:e_er}
-	\end{equation}
-	\begin{equation}
-		E_\theta = j\eta \frac{kI_0 d \sin \theta }{4\pi r}\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] \mathrm{e}^{-jkr},
-		\label{eqn:e_et}
-	\end{equation}
-	\begin{equation}
-		E_\phi = 0.
-		\label{eqn:e_ep}
-	\end{equation}
-\end{subequations}
-
-and,
-
-\begin{subequations}
+\begin{subequations}\label{eqn:e_h}
 	\begin{equation}
 		H_r=H_\theta=0,
 		\label{eqn:e_hr}
@@ -112,11 +105,24 @@ and,
 	\end{equation}
 \end{subequations}
 
+and substituting into \cref{eqn:e_dipole} yields
 
+\begin{subequations}\label{eqn:e_e}
+	\begin{equation}
+		E_r = \eta \frac{I_0 d \cos \theta}{2\pi r^2}\left[ 1 + \frac{1}{jkr} \right] \mathrm{e}^{-jkr},
+		\label{eqn:e_er}
+	\end{equation}
+	\begin{equation}
+		E_\theta = j\eta \frac{kI_0 d \sin \theta }{4\pi r}\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] \mathrm{e}^{-jkr},
+		\label{eqn:e_et}
+	\end{equation}
+	\begin{equation}
+		E_\phi = 0,
+		\label{eqn:e_ep}
+	\end{equation}
+\end{subequations}
 
-
-$\eta=\sqrt{\frac{\mu}{\epsilon}}$ is the wave impedance of the medium in which the waves travel.
-
+where $\eta=\sqrt{\frac{\mu}{\epsilon}}$ is the wave impedance of the medium in which the waves travel.
 
 The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{S}$ over a closed surface surrounding the dipole \cite[p. 154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{S}$ is defined by 
 
@@ -194,59 +200,55 @@ Furthermore, for the sake of simplicity, it is reasonable to set $\mathbf{x’} 
 	\label{fig:electricdipolecurrent}
 \end{figure}
 
-The short physical electric dipole described in this section serves as an approximation for the behavior of electrically short antennas. Particular attention must be paid to the excitation method and physical shape, as these factors significantly influence antenna behavior\cite[p. 413]{Jackson}. Furthermore, any antenna analyzed using this approach should remain much smaller than the wavelength $\lambda$ to minimize analytical approximation errors.
+The short physical electric dipole described in this section serves as an approximation for the behavior of electrically short antennas. Particular attention must be paid to the excitation method and physical shape, as these factors significantly influence antenna behavior \cite[p.~413]{Jackson}. Furthermore, any antenna analyzed using this approach should remain much smaller than the wavelength $\lambda$ to minimize analytical approximation errors.
 
 \subsection{Magnetic Dipoles}\label{sec:mag_dip}
 
-The magnetic dipole moment characterizes the strength of a magnetic source. A small current loop fed with a current $I_0$ can be used to model the magnetic dipole, as demonstrated in \autoref{fig:magnetic_dipole_drawing}. This relation holds as long as its overall length is smaller than a tenth of the wavelength ($2b\pi < \lambda/10$) and as long as the the wire is very thin \cite[p. 231]{Balanis_1997}. Furthermore, the radiation pattern of the magnetic dipole is equal to that of the electric dipole, with the role of the electric and magnetic fields interchanged \cite[p. 254]{Griffiths_2024}.
+The magnetic dipole moment characterizes the strength of a magnetic source. An electrically small current loop fed with a current $I_0$ can be used to model the magnetic dipole, as demonstrated in \autoref{fig:magnetic_dipole_drawing}. This approximation is valid provided the overall loop circumference satisfies $2\pi b < \lambda/10$ and the wire is assumed very thin \cite[p.~231]{Balanis_1997}. Furthermore, the radiation pattern of the magnetic dipole is equal to that of the electric dipole, with the role of the electric and magnetic fields interchanged \cite[p.~254]{Griffiths_2024}.
 
 The magnetic dipole moment $\mathbf{m}_m$ is given by
 
 \begin{equation}
-    \mathbf{m}=I_m L \cdot \mathbf{\hat{a}}_z.
+    \mathbf{m}_m=I_m L \cdot \mathbf{\hat{a}}_z.
     \label{eqn:mag_dipole_moment}
 \end{equation}
 
-Furthermore, the magnetic current $I_m$ and the electric current $I_0$ in the loop are related with \cite[p. 237]{Balanis_1997}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
+	\caption{The geometry of a current loop with radius $b$ is shown, where the loop is fed with a current $I_0$ that generates a magnetic dipole moment $\mathbf{m}_m$. Alternatively, an equivalent magnetic dipole moment can be produced by a magnetic current $I_\mathrm{m}$ flowing perpendicular to the plane of the loop over a distance $L$.}
+	\label{fig:magnetic_dipole_drawing}
+\end{figure}
 
+Furthermore, the magnetic current $I_m$ and the electric current $I_0$ in the loop are related with \cite[p. 237]{Balanis_1997}
 
 \begin{equation}
 	I_m L = jA\omega\mu_0 I_0
 	\label{eqn:magn_current_curr_loop}
 \end{equation}
 
+with $A=\pi b^2$ denoting the area of the current loop. Analogous to the separation distance $d$ in the electric dipole, $L$ is the length of the magnetic dipole. The electric and magnetic field intensities $\mathbf{E}$ and $\mathbf{H}$ produced by the dipole and current loop are the same. Thus, the infinitesimal magnetic dipole $I_m L$ and the electrically small current loop $jA\omega\mu_0 I_0$ are equivalent representations \cite[p.~237]{Balanis_1997}. The electric field intensity $\mathbf{E}$ of the magnetic dipole is given by
 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
-	\caption{The geometry of a current loop with radius $b$ is shown, where the loop is fed with a current $I_0$ that generates a magnetic dipole moment $\mathbf{m}_m$. Alternatively, an equivalent magnetic dipole moment can be produced by a magnetic current $I\mathrm{m}$ flowing perpendicular to the plane of the loop over a distance $L$.}
-	\label{fig:magnetic_dipole_drawing}
-\end{figure}
-
-with $A=b^2\pi$ denoting the area of the current loop. Analogous to the separation distance $d$ in the electric dipole, $L$ is the length of the magnetic dipole. $I_m$ and $L$ may be used to model the magnetic dipole moment instead of the current loop, since the electric and magnetic field intensities $\mathbf{E}$ and $\mathbf{H}$ produced by the dipole are the same in both cases. This means, that the infinitesimal magnetic dipole has an equivalent behavior to the electrically small loop \cite[p. 237]{Balanis_1997}. $\mathbf{E}$ and $\mathbf{H}$ of the magnetic dipole moment or electrically small current loop are then determined with \cite[p. 237]{Balanis_1997}
-
-
-\begin{subequations}
+\begin{subequations}\label{eqn:m_e}
 	\begin{equation}
 		E_r=E_\theta=0,
 		\label{eqn:m_ert}
 	\end{equation}
 	\begin{equation}
-		E_\phi = -j\frac{k I_m d \sin\theta}{4\pi r}\left[1 + \frac{1}{jkr}\right]\mathrm{e}^{-jkr},
+		E_\phi = -j\frac{k I_m L \sin\theta}{4\pi r}\left[1 + \frac{1}{jkr}\right]\mathrm{e}^{-jkr},
 		\label{eqn:m_ep}
 	\end{equation}
 \end{subequations}
 
-and,
+and the magnetic field intensity by \cite[p.~237]{Balanis_1997}
 
-\begin{subequations}
+\begin{subequations}\label{eqn:m_h}
 	\begin{equation}
-		H_r =  \frac{I_m d \cos \theta}{2\pi r^2\eta}\left[ 1 + \frac{1}{jkr} \right] \mathrm{e}^{-jkr},
+		H_r =  \frac{I_m L \cos \theta}{2\pi r^2\eta}\left[ 1 + \frac{1}{jkr} \right] \mathrm{e}^{-jkr},
 		\label{eqn:m_hr}
 	\end{equation}
 	\begin{equation}
-		H_\theta = j \frac{kI_m d \sin \theta }{4\pi r\eta}\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] \mathrm{e}^{-jkr},
+		H_\theta = j \frac{kI_m L \sin \theta }{4\pi r\eta}\left[ 1 + \frac{1}{jkr} - \frac{1}{(kr)^2} \right] \mathrm{e}^{-jkr},
 		\label{eqn:m_ht}
 	\end{equation}
 	\begin{equation}
@@ -255,14 +257,13 @@ and,
 	\end{equation}
 \end{subequations}
 
-The complex power density $\mathbf{S}$ can be derived analogous to the the electric dipole case in \autoref{eqn:com_pow_dens}. For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals to 
+The complex power density $\mathbf{S}$ can be derived following the same approach as for the electric dipole (see \autoref{eqn:com_pow_dens}). For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals \cite[p.~238]{Balanis_1997}
+
 
 \begin{equation}
-P_r = \eta \left(\frac{\pi}{12}\right) (ka)^4 |I_0|^2 \left[1 + j\frac{1}{(kr)^3}\right],
+P_r = \eta \left(\frac{\pi}{12}\right) (kb)^4 |I_0|^2 \left[1 + j\frac{1}{(kr)^3}\right].
 \label{eqn:pr_loop}
 \end{equation}
-
-and its imaginary part is inductive \cite[p. 238]{Balanis_1997}.
 
 
 

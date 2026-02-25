@@ -1,7 +1,7 @@
-\subsection[Lorentz Reciprocity Theorem]{Lorentz Reciprocity Theorem\protect\footnote{This chapter is based on and contains significant excerpts from: Robert E. Collin, \textit{Field Theory of Guided Waves}, IEEE Press, 2015.}}\label{sec:lorentz_theorem}
+\subsection[Lorentz Reciprocity Theorem]{Lorentz Reciprocity Theorem\protect\footnote{This section follows closely the treatment in: Robert E. Collin, \textit{Field Theory of Guided Waves}, IEEE Press, 2015 and Constantine A. Balanis, \textit{Antenna theory: Analysis and design}, Wiley, 1997.}}\label{sec:lorentz_theorem}
 
 
-Let two source pairs $\mathbf{J_1}$, $\mathbf{M_1}$ and $\mathbf{J_2}$, $\mathbf{M_2}$ exist in a volume $V$, bounded by the closed surface $S$. The medium in $V$ is linear and isotropic. The source pairs generate fields $\mathbf{E_1}$, $\mathbf{H_1}$ and $\mathbf{E_2}$, $\mathbf{H_2}$, respectively, with the same frequency. The fields and source pairs can then be related with \cites[p.~145]{Balanis_1997}[p. 49]{Collin_2015}
+Let two source pairs $\mathbf{J}_1$, $\mathbf{M}_1$ and $\mathbf{J}_2$, $\mathbf{M}_2$ exist in a volume $V$, bounded by the closed surface $S$. The medium in $V$ is linear and isotropic. The source pairs generate fields $\mathbf{E}_1$, $\mathbf{H}_1$ and $\mathbf{E}_2$, $\mathbf{H}_2$, respectively, with the same frequency. The fields and source pairs can then be related with \cites[p.~145]{Balanis_1997}[p. 49]{Collin_2015}
 
 \begin{equation}
 	-\nabla \cdot (\mathbf{E}_1\times \mathbf{H}_2-\mathbf{E}_2\times \mathbf{H}_1)=\mathbf{E}_1\cdot \mathbf{J}_2+\mathbf{H}_2\cdot \mathbf{M}_1-\mathbf{E}_2\cdot \mathbf{J}_1-\mathbf{H}_1\cdot \mathbf{M}_2.
@@ -16,31 +16,24 @@ Integrating \autoref{eqn:lorentz_rec_theorem} over $V$, and converting the volum
     \label{eqn:lorentz_rec_theorem_int}
 \end{align}
 
-This integral equation relates the coupling of different source points. Additionally, if one of these sources is set to zero, the respective source point can serve as an observation point. Setting all sources to zero can be done to investigate source fields of a mode and their coupling to other modes in a waveguide, as the following example shows. Suppose the volume $V$ does not contain sources $\mathbf{J}_1 = \mathbf{M}_1 = \mathbf{J}_2 = \mathbf{M}_2 = \mathbf{0}$. Then, the Lorentz Reciprocity theorem in differential and integral form results in \cite[pp. 145-146]{Balanis_1997}
+This integral equation relates the coupling of different source points. Additionally, if one of these sources is set to zero, the respective source point can serve as an observation point. Setting all sources to zero allows investigation of the coupling of modal fields in a waveguide to other modes, as the following example shows. Suppose the volume $V$ does not contain sources $\mathbf{J}_1 = \mathbf{M}_1 = \mathbf{J}_2 = \mathbf{M}_2 = \mathbf{0}$. Then, the source-free Lorentz Reciprocity theorem reduces to the condition that the modes in the waveguide must fulfill \cite[pp. 145-146]{Balanis_1997}: 
 
 \begin{subequations}
 	\begin{equation}
-		\nabla \cdot (\mathbf{E}_1\times \mathbf{H}_2-\mathbf{E}_2\times \mathbf{H}_1),
+		\nabla \cdot (\mathbf{E}_1\times \mathbf{H}_2-\mathbf{E}_2\times \mathbf{H}_1)=0,
 	\end{equation}
 	\begin{equation}
-		\oiint_S (\mathbf{E}_1\times \mathbf{H}_2-\mathbf{E}_2\times \mathbf{H}_1)\cdot d\mathbf{s}'=0,
+		\oiint_S (\mathbf{E}_1\times \mathbf{H}_2-\mathbf{E}_2\times \mathbf{H}_1)\cdot d\mathbf{s}'=0.
 		\label{eqn:modes_waveguide}
 	\end{equation}
 \end{subequations}
 
-
-which the modes in the waveguide must fulfill.
-
-Another application arises when investigating a volume $V$ confined by a perfectly conducting surface $S$, in which the linear current densities $\mathbf{J}_1$ and $\mathbf{J}_2$ flow. Because $\mathbf{n}\times\mathbf{E}_1=\mathbf{n}\times\mathbf{E}_2=0$ along the surface $S$, the surface integral in \autoref{eqn:lorentz_rec_theorem_int} vanishes, and 
+Another application arises when investigating a volume $V$ confined by a perfectly conducting surface $S$, in which the linear current densities $\mathbf{J}_1$ and $\mathbf{J}_2$ flow. Because $\mathbf{n}\times\mathbf{E}_1=\mathbf{n}\times\mathbf{E}_2=0$ along the surface $S$, the surface integral in \autoref{eqn:lorentz_rec_theorem_int} vanishes, leading to  
 
 \begin{equation}
-	\mathbf{E}_1\cdot\mathbf{J}_2=\mathbf{E}_2\cdot\mathbf{J}_1,
+	\mathbf{E}_1\cdot\mathbf{J}_2=\mathbf{E}_2\cdot\mathbf{J}_1.
 \end{equation}
 
-arise. This is the Rayleigh-Carson form of the Lorentz reciprocity theorem. It states that $\mathbf{J}_1$ generates $\mathbf{E}_1$, which has components along $\mathbf{J}_2$, that are equal to the same components of $\mathbf{E}_2$ along $\mathbf{J}_1$, and vice versa \cite[p. 50]{Collin_2015}. 
+This is the Rayleigh-Carson form of the Lorentz reciprocity theorem \cite[p. 50]{Collin_2015}. It states that the component of $\mathbf{E}_1$ along $\mathbf{J}_2$ is equal to the component of $\mathbf{E}_2$ along $\mathbf{J}_1$, and vice versa \cite[p. 50]{Collin_2015}. 
 
-Concluding, the Lorentz Reciprocity theorem is useful to derive reciprocal aspects of waveguides, finding orthogonal properties of modes, investigating fields generated by currents and dipole moments in waveguides \cite[p. 50]{Collin_2015}, among several other examples. This theorem will be employed often throughout the remainder of this thesis.
-%
-%\todo{It is used in this thesis in A. The formula with (a, b) in the TEM cell with the dipole moments and B. with the dipole moment in the TEM cell which gets shifted around. There, the question is only, how large the electric field at the position of the dipole moment is.}
-
-% This will be used to model dipoles with Green's Theorem in waveguides.
+In summary, the Lorentz Reciprocity theorem is useful for deriving reciprocal aspects of waveguides, finding orthogonal properties of modes, investigating fields generated by currents and dipole moments in waveguides \cite[p. 50]{Collin_2015}, among several other examples. This theorem will be employed often throughout the remainder of this thesis.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  23 FEB 2026 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.11.4)  25 FEB 2026 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1092,18 +1092,6 @@ LaTeX Warning: Label `fig:example' multiply defined.
 LaTeX Warning: Label `fig:example@cref' multiply defined.
 
 
-LaTeX Warning: Label `fig:full_circuit' multiply defined.
-
-
-LaTeX Warning: Label `fig:full_circuit@cref' multiply defined.
-
-
-LaTeX Warning: Label `fig:example' multiply defined.
-
-
-LaTeX Warning: Label `fig:example@cref' multiply defined.
-
-
 LaTeX Warning: Label `fig:example' multiply defined.
 
 
@@ -1142,24 +1130,24 @@ LaTeX Warning: Label `fig:example@cref' multiply defined.
 )
 \openout1 = `Documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count458
@@ -1194,7 +1182,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 66.
+Package hyperref Info: Link coloring ON on input line 63.
 
 (./Documentation.out) (./Documentation.out)
 \@outlinefile=\write5
@@ -1220,11 +1208,6 @@ Package biblatex Info: ... file 'Documentation.bbl' found.
 (./Documentation.bbl
 
 Package biblatex Warning: BibTeX reported the following issues
-(biblatex)                with 'Propagation_2022':
-(biblatex)                - Invalid format of field 'month'.
-
-
-Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'Cendes_1991':
 (biblatex)                - Invalid format of field 'month'.
 
@@ -1243,6 +1226,11 @@ _Hudec_Krump_2024':
 
 Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'Mohsen_1982':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Propagation_2022':
 (biblatex)                - Invalid format of field 'month'.
 
 
@@ -1271,19 +1259,19 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 66.
-Package biblatex Info: Reference segment=0 on input line 66.
+Package biblatex Info: Reference section=0 on input line 63.
+Package biblatex Info: Reference segment=0 on input line 63.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<content/img/TU_Graz_Logo.png, id=292, 113.223pt x 41.6757pt>
+<content/img/TU_Graz_Logo.png, id=288, 113.223pt x 41.6757pt>
 File: content/img/TU_Graz_Logo.png Graphic file (type png)
 <use content/img/TU_Graz_Logo.png>
-Package pdftex.def Info: content/img/TU_Graz_Logo.png  used on input line 74.
+Package pdftex.def Info: content/img/TU_Graz_Logo.png  used on input line 71.
 (pdftex.def)             Requested size: 85.35826pt x 31.4201pt.
-<content/img/igte_logo.png, id=294, 127.0123pt x 44.96236pt>
+<content/img/igte_logo.png, id=290, 127.0123pt x 44.96236pt>
 File: content/img/igte_logo.png Graphic file (type png)
 <use content/img/igte_logo.png>
-Package pdftex.def Info: content/img/igte_logo.png  used on input line 112.
+Package pdftex.def Info: content/img/igte_logo.png  used on input line 109.
 (pdftex.def)             Requested size: 85.35826pt x 30.21722pt.
  [1
 
@@ -1338,72 +1326,75 @@ Overfull \hbox (13.00389pt too wide) in paragraph at lines 32--32
 [1
 
 ]) (./content/10_dipoles/11_dipole.tex [2]
-<content/img/electric_dipole.png, id=775, 303.38344pt x 277.78781pt>
+Underfull \hbox (badness 10000) in paragraph at lines 31--41
+
+ []
+
+<content/img/electric_dipole.png, id=783, 303.38344pt x 277.78781pt>
 File: content/img/electric_dipole.png Graphic file (type png)
 <use content/img/electric_dipole.png>
-Package pdftex.def Info: content/img/electric_dipole.png  used on input line 44
+Package pdftex.def Info: content/img/electric_dipole.png  used on input line 54
 .
 (pdftex.def)             Requested size: 213.39566pt x 195.39536pt.
- [3 <./content/img/electric_dipole.png>] [4]
+[3 <./content/img/electric_dipole.png>] [4]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 155.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 161.
 
-<content/img/linear_wire_antenna.png, id=819, 303.38344pt x 277.78781pt>
+<content/img/linear_wire_antenna.png, id=829, 303.38344pt x 277.78781pt>
 File: content/img/linear_wire_antenna.png Graphic file (type png)
 <use content/img/linear_wire_antenna.png>
 Package pdftex.def Info: content/img/linear_wire_antenna.png  used on input lin
-e 166.
+e 172.
 (pdftex.def)             Requested size: 213.39566pt x 195.39536pt.
-[5 <./content/img/linear_wire_antenna.png>]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 188.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 194.
 
-<content/img/electric_dipole_current.png, id=835, 250.9375pt x 269.005pt>
+[5]
+<content/img/electric_dipole_current.png, id=845, 250.9375pt x 269.005pt>
 File: content/img/electric_dipole_current.png Graphic file (type png)
 <use content/img/electric_dipole_current.png>
 Package pdftex.def Info: content/img/electric_dipole_current.png  used on input
- line 192.
+ line 198.
 (pdftex.def)             Requested size: 128.0387pt x 137.2646pt.
-[6 <./content/img/electric_dipole_current.png>]
-<content/img/magnetic_dipole_drawing.png, id=849, 319.1925pt x 290.58563pt>
+<content/img/magnetic_dipole_drawing.png, id=852, 319.1925pt x 290.58563pt>
 File: content/img/magnetic_dipole_drawing.png Graphic file (type png)
 <use content/img/magnetic_dipole_drawing.png>
 Package pdftex.def Info: content/img/magnetic_dipole_drawing.png  used on input
- line 222.
+ line 218.
 (pdftex.def)             Requested size: 213.39566pt x 194.27013pt.
- [7 <./content/img/magnetic_dipole_drawing.png>]) (./content/10_dipoles/12_ante
-nnas_to_investigate.tex)
-(./content/10_dipoles/13_fields.tex
-<content/img/kr_over_distance.png, id=866, 1552.77257pt x 1031.74028pt>
+ [6 <./content/img/linear_wire_antenna.png>])
+(./content/10_dipoles/12_fields.tex [7 <./content/img/electric_dipole_current.p
+ng>] [8 <./content/img/magnetic_dipole_drawing.png>]
+<content/img/kr_over_distance.png, id=892, 1552.77257pt x 1031.74028pt>
 File: content/img/kr_over_distance.png Graphic file (type png)
 <use content/img/kr_over_distance.png>
-Package pdftex.def Info: content/img/kr_over_distance.png  used on input line 7
-.
+Package pdftex.def Info: content/img/kr_over_distance.png  used on input line 2
+5.
 (pdftex.def)             Requested size: 298.75262pt x 198.50435pt.
-<content/img/field_regions_antenna.png, id=885, 389.455pt x 406.51875pt>
+<content/img/field_regions_antenna.png, id=898, 389.455pt x 406.51875pt>
 File: content/img/field_regions_antenna.png Graphic file (type png)
 <use content/img/field_regions_antenna.png>
 Package pdftex.def Info: content/img/field_regions_antenna.png  used on input l
-ine 31.
+ine 34.
 (pdftex.def)             Requested size: 170.71393pt x 178.19267pt.
- [8] [9 <./content/img/kr_over_distance.png>] [10 <./content/img/field_regions_
-antenna.png>])
+ [9 <./content/img/kr_over_distance.png>] [10 <./content/img/field_regions_ante
+nna.png>])
 (./content/20_guided_waves/21_lorentz_reciprocity.tex [11])
 (./content/20_guided_waves/22_greens_function.tex [12]
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 50.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 82.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 76.
 
 [13]) (./content/20_guided_waves/23_tem_cells.tex
-<content/img/rect_waveguide_tm.png, id=989, 450.18187pt x 365.11406pt>
+<content/img/rect_waveguide_tm.png, id=992, 450.18187pt x 365.11406pt>
 File: content/img/rect_waveguide_tm.png Graphic file (type png)
 <use content/img/rect_waveguide_tm.png>
 Package pdftex.def Info: content/img/rect_waveguide_tm.png  used on input line 
 8.
 (pdftex.def)             Requested size: 192.0548pt x 155.76474pt.
-<content/img/rect_waveguide_te.png, id=990, 450.18187pt x 365.11406pt>
+<content/img/rect_waveguide_te.png, id=993, 450.18187pt x 365.11406pt>
 File: content/img/rect_waveguide_te.png Graphic file (type png)
 <use content/img/rect_waveguide_te.png>
 Package pdftex.def Info: content/img/rect_waveguide_te.png  used on input line 
@@ -1411,104 +1402,101 @@ Package pdftex.def Info: content/img/rect_waveguide_te.png  used on input line
 (pdftex.def)             Requested size: 192.0548pt x 155.76474pt.
  [14] [15 <./content/img/rect_waveguide_tm.png> <./content/img/rect_waveguide_t
 e.png>]
-<content/img/green_tem_cell.png, id=1030, 358.33875pt x 124.21407pt>
+<content/img/green_tem_cell.png, id=1034, 358.33875pt x 124.21407pt>
 File: content/img/green_tem_cell.png Graphic file (type png)
 <use content/img/green_tem_cell.png>
 Package pdftex.def Info: content/img/green_tem_cell.png  used on input line 82.
 
 (pdftex.def)             Requested size: 298.75262pt x 103.56578pt.
  [16] [17 <./content/img/green_tem_cell.png>]
-<content/img/tem_cell_mode.png, id=1067, 736.7525pt x 495.8525pt>
+<content/img/tem_cell_mode.png, id=1069, 736.7525pt x 495.8525pt>
 File: content/img/tem_cell_mode.png Graphic file (type png)
 <use content/img/tem_cell_mode.png>
 Package pdftex.def Info: content/img/tem_cell_mode.png  used on input line 137.
 
 (pdftex.def)             Requested size: 128.0387pt x 86.1702pt.
-<content/img/te01_mode.png, id=1068, 552.56438pt x 371.88937pt>
+<content/img/te01_mode.png, id=1070, 552.56438pt x 371.88937pt>
 File: content/img/te01_mode.png Graphic file (type png)
 <use content/img/te01_mode.png>
 Package pdftex.def Info: content/img/te01_mode.png  used on input line 143.
 (pdftex.def)             Requested size: 128.0387pt x 86.1683pt.
-<content/img/te10_mode.png, id=1069, 552.56438pt x 371.88937pt>
+<content/img/te10_mode.png, id=1071, 552.56438pt x 371.88937pt>
 File: content/img/te10_mode.png Graphic file (type png)
 <use content/img/te10_mode.png>
 Package pdftex.def Info: content/img/te10_mode.png  used on input line 149.
 (pdftex.def)             Requested size: 128.0387pt x 86.1683pt.
-<content/img/tem_cell_front.png, id=1073, 425.33907pt x 232.61906pt>
+<content/img/tem_cell_front.png, id=1075, 425.33907pt x 232.61906pt>
 File: content/img/tem_cell_front.png Graphic file (type png)
 <use content/img/tem_cell_front.png>
 Package pdftex.def Info: content/img/tem_cell_front.png  used on input line 183
 .
 (pdftex.def)             Requested size: 196.32687pt x 107.37166pt.
-<content/img/tem_cell_side.png, id=1074, 462.97969pt x 232.61906pt>
+<content/img/tem_cell_side.png, id=1076, 462.97969pt x 232.61906pt>
 File: content/img/tem_cell_side.png Graphic file (type png)
 <use content/img/tem_cell_side.png>
 Package pdftex.def Info: content/img/tem_cell_side.png  used on input line 190.
 
 (pdftex.def)             Requested size: 213.39566pt x 107.21902pt.
-<content/img/tem_cell_modes.png, id=1078, 2000.97563pt x 1291.82625pt>
+<content/img/tem_cell_modes.png, id=1080, 2000.97563pt x 1291.82625pt>
 File: content/img/tem_cell_modes.png Graphic file (type png)
 <use content/img/tem_cell_modes.png>
 Package pdftex.def Info: content/img/tem_cell_modes.png  used on input line 204
 .
 (pdftex.def)             Requested size: 213.39566pt x 137.76476pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18 <./content/img/tem_cell_mode.png> <./content/img/te01_mode.png> <./content/
-img/te10_mode.png>] [19 <./content/img/tem_cell_front.png> <./content/img/tem_c
-ell_side.png> <./content/img/tem_cell_modes.png>]
-<content/img/tem-mode.png, id=1104, 627.71657pt x 268.43143pt>
+ [18 <./content/img/tem_cell_mode.png> <./content/img/te01_mode.png> <./content
+/img/te10_mode.png>] [19 <./content/img/tem_cell_front.png> <./content/img/tem_
+cell_side.png> <./content/img/tem_cell_modes.png>]
+<content/img/tem-mode.png, id=1109, 627.71657pt x 268.43143pt>
 File: content/img/tem-mode.png Graphic file (type png)
 <use content/img/tem-mode.png>
 Package pdftex.def Info: content/img/tem-mode.png  used on input line 242.
 (pdftex.def)             Requested size: 384.10959pt x 164.2631pt.
-<content/img/te01-mode.png, id=1105, 640.10571pt x 277.37915pt>
+<content/img/te01-mode.png, id=1110, 640.10571pt x 277.37915pt>
 File: content/img/te01-mode.png Graphic file (type png)
 <use content/img/te01-mode.png>
 Package pdftex.def Info: content/img/te01-mode.png  used on input line 249.
 (pdftex.def)             Requested size: 384.10959pt x 166.44992pt.
-<content/img/te10-mode.png, id=1106, 645.612pt x 290.45657pt>
+<content/img/te10-mode.png, id=1111, 645.612pt x 290.45657pt>
 File: content/img/te10-mode.png Graphic file (type png)
 <use content/img/te10-mode.png>
 Package pdftex.def Info: content/img/te10-mode.png  used on input line 256.
 (pdftex.def)             Requested size: 384.10959pt x 172.81271pt.
- [20] [21 <./content/img/tem-mode.png (PNG copy)> <./content/img/te01-mode.png 
-(PNG copy)> <./content/img/te10-mode.png (PNG copy)>]
-<content/img/output_power_ey_over_offset.png, id=1134, 1594.06972pt x 1181.0982
+
+[20] [21 <./content/img/tem-mode.png (PNG copy)> <./content/img/te01-mode.png (
+PNG copy)> <./content/img/te10-mode.png (PNG copy)>] [22]
+<content/img/output_power_ey_over_offset.png, id=1152, 1594.06972pt x 1181.0982
 8pt>
 File: content/img/output_power_ey_over_offset.png Graphic file (type png)
 <use content/img/output_power_ey_over_offset.png>
 Package pdftex.def Info: content/img/output_power_ey_over_offset.png  used on i
-nput line 343.
+nput line 341.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/output_power_ey_over_height_w_offset.png, id=1135, 1594.06972pt x 
+<content/img/output_power_ey_over_height_w_offset.png, id=1153, 1594.06972pt x 
 1181.09828pt>
 File: content/img/output_power_ey_over_height_w_offset.png Graphic file (type p
 ng)
 <use content/img/output_power_ey_over_height_w_offset.png>
 Package pdftex.def Info: content/img/output_power_ey_over_height_w_offset.png  
-used on input line 350.
+used on input line 348.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
- [22]
-<content/img/ex_normalized.png, id=1149, 1060.64828pt x 539.616pt>
+<content/img/ex_normalized.png, id=1155, 1060.64828pt x 539.616pt>
 File: content/img/ex_normalized.png Graphic file (type png)
 <use content/img/ex_normalized.png>
-Package pdftex.def Info: content/img/ex_normalized.png  used on input line 364.
+Package pdftex.def Info: content/img/ex_normalized.png  used on input line 362.
 
 (pdftex.def)             Requested size: 204.85802pt x 104.21605pt.
-<content/img/ey_normalized.png, id=1150, 1059.96pt x 536.86285pt>
+<content/img/ey_normalized.png, id=1156, 1059.96pt x 536.86285pt>
 File: content/img/ey_normalized.png Graphic file (type png)
 <use content/img/ey_normalized.png>
-Package pdftex.def Info: content/img/ey_normalized.png  used on input line 371.
+Package pdftex.def Info: content/img/ey_normalized.png  used on input line 369.
 
 (pdftex.def)             Requested size: 204.85802pt x 103.75806pt.
-) (./content/20_guided_waves/24_dipole_tem.tex
-[23 <./content/img/output_power_ey_over_offset.png> <./content/img/output_power
-_ey_over_height_w_offset.png> <./content/img/ex_normalized.png (PNG copy)> <./c
-ontent/img/ey_normalized.png (PNG copy)>]
-<content/img/reciprocity_tem_cell.png, id=1162, 569.12625pt x 284.56313pt>
+)
+(./content/20_guided_waves/24_dipole_tem.tex [23 <./content/img/output_power_ey
+_over_offset.png> <./content/img/output_power_ey_over_height_w_offset.png> <./c
+ontent/img/ex_normalized.png (PNG copy)> <./content/img/ey_normalized.png (PNG 
+copy)>]
+<content/img/reciprocity_tem_cell.png, id=1168, 569.12625pt x 284.56313pt>
 File: content/img/reciprocity_tem_cell.png Graphic file (type png)
 <use content/img/reciprocity_tem_cell.png>
 Package pdftex.def Info: content/img/reciprocity_tem_cell.png  used on input li
@@ -1520,41 +1508,24 @@ ne 19.
 File: content/img/reciprocity_tem_cell_tem_mode.png Graphic file (type png)
 <use content/img/reciprocity_tem_cell_tem_mode.png>
 Package pdftex.def Info: content/img/reciprocity_tem_cell_tem_mode.png  used on
- input line 154.
+ input line 159.
 (pdftex.def)             Requested size: 298.75262pt x 149.38051pt.
- [27 <./content/img/reciprocity_tem_cell_tem_mode.png>]
-<content/img/displacement-current-tem-cell.png, id=1247, 511.9125pt x 262.73157
+ [27 <./content/img/reciprocity_tem_cell_tem_mode.png>] [28]
+<content/img/displacement-current-tem-cell.png, id=1260, 511.9125pt x 262.73157
 pt>
 File: content/img/displacement-current-tem-cell.png Graphic file (type png)
 <use content/img/displacement-current-tem-cell.png>
 Package pdftex.def Info: content/img/displacement-current-tem-cell.png  used on
- input line 240.
+ input line 245.
 (pdftex.def)             Requested size: 320.09349pt x 164.28299pt.
-
-[28] [29 <./content/img/displacement-current-tem-cell.png>]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 286.
-<content/img/vertical_antenna_tem_cell.png, id=1282, 382.42876pt x 216.81pt>
-File: content/img/vertical_antenna_tem_cell.png Graphic file (type png)
-<use content/img/vertical_antenna_tem_cell.png>
-Package pdftex.def Info: content/img/vertical_antenna_tem_cell.png  used on inp
-ut line 318.
-(pdftex.def)             Requested size: 298.75262pt x 169.37907pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30] [31 <./content/img/vertical_antenna_tem_cell.png>]
-
-LaTeX Warning: Reference `sec:dipoles' on page 1 undefined on input line 381.
-
-) (./content/20_guided_waves/25_shielding.tex
+ [29 <./content/img/displacement-current-tem-cell.png>]) (./content/20_guided_w
+aves/25_shielding.tex
 Overfull \hbox (10.46907pt too wide) in paragraph at lines 5--6
 \OT1/cmr/m/n/10.95 The fol-low-ing sec-tion out-lines the fun-da-men-tal the-or
 y of elec-tro-mag-netic shield-ing. Through-
  []
 
-<content/img/shielding_material_diagram.png, id=1311, 334.24875pt x 195.73125pt
+<content/img/shielding_material_diagram.png, id=1281, 334.24875pt x 195.73125pt
 >
 File: content/img/shielding_material_diagram.png Graphic file (type png)
 <use content/img/shielding_material_diagram.png>
@@ -1564,47 +1535,45 @@ put line 16.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32] [33 <./content/img/shielding_material_diagram.png>] [34] [35]
-<content/img/ASTM ES7-83.png, id=1373, 394.47375pt x 269.50688pt>
+[30] [31 <./content/img/shielding_material_diagram.png>] [32]
+<content/img/ASTM ES7-83.png, id=1336, 394.47375pt x 269.50688pt>
 File: content/img/ASTM ES7-83.png Graphic file (type png)
 <use content/img/ASTM ES7-83.png>
-Package pdftex.def Info: content/img/ASTM ES7-83.png  used on input line 145.
+Package pdftex.def Info: content/img/ASTM ES7-83.png  used on input line 142.
 (pdftex.def)             Requested size: 209.1301pt x 142.87907pt.
-<content/img/form_of_shielding_material.png, id=1374, 379.4175pt x 264.23718pt>
+<content/img/form_of_shielding_material.png, id=1337, 379.4175pt x 264.23718pt>
 
 File: content/img/form_of_shielding_material.png Graphic file (type png)
 <use content/img/form_of_shielding_material.png>
 Package pdftex.def Info: content/img/form_of_shielding_material.png  used on in
-put line 152.
+put line 149.
 (pdftex.def)             Requested size: 209.1301pt x 145.64539pt.
-<content/img/dual_tem_cell.png, id=1377, 571.13374pt x 243.91125pt>
+ [33]
+<content/img/dual_tem_cell.png, id=1352, 571.13374pt x 243.91125pt>
 File: content/img/dual_tem_cell.png Graphic file (type png)
 <use content/img/dual_tem_cell.png>
-Package pdftex.def Info: content/img/dual_tem_cell.png  used on input line 172.
+Package pdftex.def Info: content/img/dual_tem_cell.png  used on input line 170.
 
 (pdftex.def)             Requested size: 320.09349pt x 136.701pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36 <./content/img/ASTM ES7-83.png> <./content/img/form_of_shielding_material.p
-ng>]) (./content/30_numerical_investigations/31_hfss.tex [37 <./content/img/dua
-l_tem_cell.png>]
-<content/img/tetrahedral_mesh.png, id=1404, 223.83624pt x 222.8325pt>
+ [34 <./content/img/ASTM ES7-83.png> <./content/img/form_of_shielding_material.
+png> <./content/img/dual_tem_cell.png>]) (./content/30_numerical_investigations
+/31_hfss.tex
+[35]
+<content/img/tetrahedral_mesh.png, id=1377, 223.83624pt x 222.8325pt>
 File: content/img/tetrahedral_mesh.png Graphic file (type png)
 <use content/img/tetrahedral_mesh.png>
 Package pdftex.def Info: content/img/tetrahedral_mesh.png  used on input line 2
 7.
 (pdftex.def)             Requested size: 106.69783pt x 106.22055pt.
- [38 <./content/img/tetrahedral_mesh.png>]
-<content/img/tetrahedra_w_unknowns.png, id=1418, 241.90375pt x 239.89626pt>
+ [36 <./content/img/tetrahedral_mesh.png>]
+<content/img/tetrahedra_w_unknowns.png, id=1392, 241.90375pt x 239.89626pt>
 File: content/img/tetrahedra_w_unknowns.png Graphic file (type png)
 <use content/img/tetrahedra_w_unknowns.png>
 Package pdftex.def Info: content/img/tetrahedra_w_unknowns.png  used on input l
 ine 63.
 (pdftex.def)             Requested size: 106.69783pt x 105.8109pt.
- [39 <./content/img/tetrahedra_w_unknowns.png>] [40]
-<content/img/workflow_fem.png, id=1450, 603.25375pt x 161.60374pt>
+ [37 <./content/img/tetrahedra_w_unknowns.png>] [38]
+<content/img/workflow_fem.png, id=1422, 603.25375pt x 161.60374pt>
 File: content/img/workflow_fem.png Graphic file (type png)
 <use content/img/workflow_fem.png>
 Package pdftex.def Info: content/img/workflow_fem.png  used on input line 129.
@@ -1613,56 +1582,64 @@ Package pdftex.def Info: content/img/workflow_fem.png  used on input line 129.
 (./content/30_numerical_investigations/32_dipole_moments.tex)
 (./content/30_numerical_investigations/33_field_regions.tex)
 (./content/30_numerical_investigations/34_considerations.tex
-<content/img/antenna_port.png, id=1452, 426.84468pt x 103.13531pt>
+<content/img/antenna_port.png, id=1424, 426.84468pt x 103.13531pt>
 File: content/img/antenna_port.png Graphic file (type png)
 <use content/img/antenna_port.png>
 Package pdftex.def Info: content/img/antenna_port.png  used on input line 37.
 (pdftex.def)             Requested size: 298.75262pt x 72.18948pt.
- [41 <./content/img/workflow_fem.png>] [42 <./content/img/antenna_port.png>] [4
-3] [44] [45]
-<content/img/kr_tem_cell.png, id=1505, 374.14781pt x 191.9672pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[39 <./content/img/workflow_fem.png>] [40 <./content/img/antenna_port.png>]
+[41] [42]
+<content/img/kr_tem_cell.png, id=1473, 374.14781pt x 191.9672pt>
 File: content/img/kr_tem_cell.png Graphic file (type png)
 <use content/img/kr_tem_cell.png>
-Package pdftex.def Info: content/img/kr_tem_cell.png  used on input line 243.
+Package pdftex.def Info: content/img/kr_tem_cell.png  used on input line 237.
 (pdftex.def)             Requested size: 298.75262pt x 153.28983pt.
-<content/img/small-large-tem-power1.png, id=1508, 1594.06972pt x 1181.09828pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43]
+<content/img/small-large-tem-power1.png, id=1481, 1594.06972pt x 1181.09828pt>
 File: content/img/small-large-tem-power1.png Graphic file (type png)
 <use content/img/small-large-tem-power1.png>
 Package pdftex.def Info: content/img/small-large-tem-power1.png  used on input 
-line 263.
+line 250.
 (pdftex.def)             Requested size: 192.0548pt x 142.28436pt.
-<content/img/linear_momentws.png, id=1509, 1594.06972pt x 1181.09828pt>
+<content/img/linear_momentws.png, id=1482, 1594.06972pt x 1181.09828pt>
 File: content/img/linear_momentws.png Graphic file (type png)
 <use content/img/linear_momentws.png>
-Package pdftex.def Info: content/img/linear_momentws.png  used on input line 27
-0.
+Package pdftex.def Info: content/img/linear_momentws.png  used on input line 25
+7.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-)
-(./content/30_numerical_investigations/35_monopole.tex
-<content/img/monopole_near_field.png, id=1510, 609.77812pt x 746.79pt>
+) (./content/30_numerical_investigations/35_monopole.tex
+<content/img/monopole_near_field.png, id=1483, 609.77812pt x 746.79pt>
 File: content/img/monopole_near_field.png Graphic file (type png)
 <use content/img/monopole_near_field.png>
 Package pdftex.def Info: content/img/monopole_near_field.png  used on input lin
 e 10.
 (pdftex.def)             Requested size: 185.85645pt x 227.62204pt.
-<content/img/monopole_antenna.png, id=1511, 593.21625pt x 742.27313pt>
+<content/img/monopole_antenna.png, id=1484, 593.21625pt x 742.27313pt>
 File: content/img/monopole_antenna.png Graphic file (type png)
 <use content/img/monopole_antenna.png>
 Package pdftex.def Info: content/img/monopole_antenna.png  used on input line 1
 8.
 (pdftex.def)             Requested size: 181.9128pt x 227.62204pt.
- [46 <./content/img/kr_tem_cell.png> <./content/img/small-large-tem-power1.png>
+ [44 <./content/img/kr_tem_cell.png> <./content/img/small-large-tem-power1.png>
  <./content/img/linear_momentws.png>]
-<content/img/dipole_moments_monopole_wide.png, id=1526, 2832.984pt x 1387.584pt
+<content/img/dipole_moments_monopole_wide.png, id=1500, 2832.984pt x 1387.584pt
 >
 File: content/img/dipole_moments_monopole_wide.png Graphic file (type png)
 <use content/img/dipole_moments_monopole_wide.png>
 Package pdftex.def Info: content/img/dipole_moments_monopole_wide.png  used on 
 input line 43.
 (pdftex.def)             Requested size: 426.79134pt x 209.03905pt.
- [47 <./content/img/monopole_near_field.png> <./content/img/monopole_antenna.pn
+ [45 <./content/img/monopole_near_field.png> <./content/img/monopole_antenna.pn
 g>]
-<content/img/monopole_feedpoint_voltage_current.png, id=1547, 1594.06972pt x 11
+<content/img/monopole_feedpoint_voltage_current.png, id=1522, 1594.06972pt x 11
 80.41pt>
 File: content/img/monopole_feedpoint_voltage_current.png Graphic file (type png
 )
@@ -1670,27 +1647,28 @@ File: content/img/monopole_feedpoint_voltage_current.png Graphic file (type png
 Package pdftex.def Info: content/img/monopole_feedpoint_voltage_current.png  us
 ed on input line 83.
 (pdftex.def)             Requested size: 204.85802pt x 151.69354pt.
-<content/img/monopole_imp.png, id=1548, 1594.06972pt x 1180.41pt>
+<content/img/monopole_imp.png, id=1523, 1594.06972pt x 1180.41pt>
 File: content/img/monopole_imp.png Graphic file (type png)
 <use content/img/monopole_imp.png>
 Package pdftex.def Info: content/img/monopole_imp.png  used on input line 90.
 (pdftex.def)             Requested size: 204.85802pt x 151.69354pt.
- [48 <./content/img/dipole_moments_monopole_wide.png>]
-<content/img/monopole_output_power.png, id=1567, 1594.06972pt x 1181.09828pt>
+ [46 <./content/img/dipole_moments_monopole_wide.png>]
+<content/img/monopole_output_power.png, id=1542, 1594.06972pt x 1181.09828pt>
 File: content/img/monopole_output_power.png Graphic file (type png)
 <use content/img/monopole_output_power.png>
 Package pdftex.def Info: content/img/monopole_output_power.png  used on input l
 ine 138.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/monopole_moment_comp.png, id=1568, 1594.06972pt x 1181.09828pt>
+<content/img/monopole_moment_comp.png, id=1543, 1594.06972pt x 1181.09828pt>
 File: content/img/monopole_moment_comp.png Graphic file (type png)
 <use content/img/monopole_moment_comp.png>
 Package pdftex.def Info: content/img/monopole_moment_comp.png  used on input li
 ne 145.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
- [49 <./content/img/monopole_feedpoint_voltage_current.png> <./content/img/mono
-pole_imp.png>]
-<content/img/monopole_current_dist.png, id=1588, 1594.06972pt x 1180.41pt>
+
+[47 <./content/img/monopole_feedpoint_voltage_current.png> <./content/img/monop
+ole_imp.png>]
+<content/img/monopole_current_dist.png, id=1562, 1594.06972pt x 1180.41pt>
 File: content/img/monopole_current_dist.png Graphic file (type png)
 <use content/img/monopole_current_dist.png>
 Package pdftex.def Info: content/img/monopole_current_dist.png  used on input l
@@ -1702,7 +1680,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--175
 t
  []
 
-<content/img/current_loop_charge_distribution_1MHz.png, id=1589, 1594.06972pt x
+<content/img/current_loop_charge_distribution_1MHz.png, id=1563, 1594.06972pt x
  1181.09828pt>
 File: content/img/current_loop_charge_distribution_1MHz.png Graphic file (type 
 png)
@@ -1716,191 +1694,203 @@ Underfull \hbox (badness 3861) in paragraph at lines 183--183
 at
  []
 
-[50 <./content/img/monopole_output_power.png> <./content/img/monopole_moment_co
+[48 <./content/img/monopole_output_power.png> <./content/img/monopole_moment_co
 mp.png> <./content/img/monopole_current_dist.png> <./content/img/current_loop_c
 harge_distribution_1MHz.png>]
-<content/img/free-space-monopole.png, id=1600, 420.82219pt x 243.91125pt>
+<content/img/free-space-monopole.png, id=1577, 420.82219pt x 243.91125pt>
 File: content/img/free-space-monopole.png Graphic file (type png)
 <use content/img/free-space-monopole.png>
 Package pdftex.def Info: content/img/free-space-monopole.png  used on input lin
-e 220.
+e 273.
 (pdftex.def)             Requested size: 298.75262pt x 173.15958pt.
- [51 <./content/img/free-space-monopole.png>]
-<content/img/monopole_surface_currents.png, id=1608, 1541.00719pt x 557.83406pt
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[49]
+<content/img/eqc-dipoles-comp.png, id=1592, 2832.984pt x 1387.584pt>
+File: content/img/eqc-dipoles-comp.png Graphic file (type png)
+<use content/img/eqc-dipoles-comp.png>
+Package pdftex.def Info: content/img/eqc-dipoles-comp.png  used on input line 3
+80.
+(pdftex.def)             Requested size: 426.79134pt x 209.03905pt.
+ [50 <./content/img/free-space-monopole.png>]
+<content/img/monopole_surface_currents.png, id=1603, 1541.00719pt x 557.83406pt
 >
 File: content/img/monopole_surface_currents.png Graphic file (type png)
 <use content/img/monopole_surface_currents.png>
 Package pdftex.def Info: content/img/monopole_surface_currents.png  used on inp
-ut line 288.
+ut line 397.
 (pdftex.def)             Requested size: 426.79134pt x 154.4901pt.
-<content/img/monopole_surface_currents_te01.png, id=1609, 1541.00719pt x 574.39
+<content/img/monopole_surface_currents_te01.png, id=1604, 1541.00719pt x 574.39
 594pt>
 File: content/img/monopole_surface_currents_te01.png Graphic file (type png)
 <use content/img/monopole_surface_currents_te01.png>
 Package pdftex.def Info: content/img/monopole_surface_currents_te01.png  used o
-n input line 297.
+n input line 406.
 (pdftex.def)             Requested size: 426.79134pt x 159.07684pt.
-
-[52]
-<content/img/monopole_elec_energy.png, id=1622, 2832.29572pt x 1387.584pt>
+ [51 <./content/img/eqc-dipoles-comp.png>]
+<content/img/monopole_elec_energy.png, id=1619, 2832.29572pt x 1387.584pt>
 File: content/img/monopole_elec_energy.png Graphic file (type png)
 <use content/img/monopole_elec_energy.png>
 Package pdftex.def Info: content/img/monopole_elec_energy.png  used on input li
-ne 330.
+ne 439.
 (pdftex.def)             Requested size: 426.79134pt x 209.08139pt.
- [53 <./content/img/monopole_surface_currents.png> <./content/img/monopole_surf
-ace_currents_te01.png>]) (./content/30_numerical_investigations/36_loop.tex
-<content/img/loop_near_field.png, id=1631, 973.38657pt x 721.94719pt>
+ [52 <./content/img/monopole_surface_currents.png> <./content/img/monopole_surf
+ace_currents_te01.png>])
+(./content/30_numerical_investigations/36_loop.tex
+<content/img/loop_near_field.png, id=1628, 973.38657pt x 721.94719pt>
 File: content/img/loop_near_field.png Graphic file (type png)
 <use content/img/loop_near_field.png>
 Package pdftex.def Info: content/img/loop_near_field.png  used on input line 15
 .
 (pdftex.def)             Requested size: 209.1301pt x 155.10545pt.
-<content/img/loop_antenna.png, id=1632, 1132.98282pt x 792.71156pt>
+<content/img/loop_antenna.png, id=1629, 1132.98282pt x 792.71156pt>
 File: content/img/loop_antenna.png Graphic file (type png)
 <use content/img/loop_antenna.png>
 Package pdftex.def Info: content/img/loop_antenna.png  used on input line 19.
 (pdftex.def)             Requested size: 204.85802pt x 143.323pt.
-<content/img/dipole_moments_loop_antenna.png, id=1640, 1594.06972pt x 1181.0982
+<content/img/dipole_moments_loop_antenna.png, id=1637, 1594.06972pt x 1181.0982
 8pt>
 File: content/img/dipole_moments_loop_antenna.png Graphic file (type png)
 <use content/img/dipole_moments_loop_antenna.png>
 Package pdftex.def Info: content/img/dipole_moments_loop_antenna.png  used on i
 nput line 46.
 (pdftex.def)             Requested size: 213.39566pt x 158.10774pt.
-<content/img/loop_phase.png, id=1641, 1594.06972pt x 1181.09828pt>
+<content/img/loop_phase.png, id=1638, 1594.06972pt x 1181.09828pt>
 File: content/img/loop_phase.png Graphic file (type png)
 <use content/img/loop_phase.png>
 Package pdftex.def Info: content/img/loop_phase.png  used on input line 53.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-[54 <./content/img/monopole_elec_energy.png>] [55 <./content/img/loop_near_fiel
-d.png> <./content/img/loop_antenna.png> <./content/img/dipole_moments_loop_ante
-nna.png> <./content/img/loop_phase.png>]
-<content/img/loop_opower.png, id=1666, 1594.06972pt x 1180.41pt>
+ [53 <./content/img/monopole_elec_energy.png>] [54 <./content/img/loop_near_fie
+ld.png> <./content/img/loop_antenna.png> <./content/img/dipole_moments_loop_ant
+enna.png> <./content/img/loop_phase.png>]
+<content/img/loop_opower.png, id=1663, 1594.06972pt x 1180.41pt>
 File: content/img/loop_opower.png Graphic file (type png)
 <use content/img/loop_opower.png>
 Package pdftex.def Info: content/img/loop_opower.png  used on input line 76.
 (pdftex.def)             Requested size: 204.85802pt x 151.69354pt.
-<content/img/loop_opower_comp.png, id=1667, 1594.06972pt x 1181.09828pt>
+<content/img/loop_opower_comp.png, id=1664, 1594.06972pt x 1181.09828pt>
 File: content/img/loop_opower_comp.png Graphic file (type png)
 <use content/img/loop_opower_comp.png>
 Package pdftex.def Info: content/img/loop_opower_comp.png  used on input line 8
 3.
 (pdftex.def)             Requested size: 213.39566pt x 158.10774pt.
-<content/img/loop_electromagnetic_energy.png, id=1671, 2832.984pt x 1387.584pt>
+<content/img/loop_electromagnetic_energy.png, id=1668, 2832.984pt x 1387.584pt>
 
 File: content/img/loop_electromagnetic_energy.png Graphic file (type png)
 <use content/img/loop_electromagnetic_energy.png>
 Package pdftex.def Info: content/img/loop_electromagnetic_energy.png  used on i
 nput line 102.
 (pdftex.def)             Requested size: 426.79134pt x 209.03905pt.
-<content/img/loop_feed_return_current_voltage.png, id=1674, 1594.06972pt x 1180
+<content/img/loop_feed_return_current_voltage.png, id=1671, 1594.06972pt x 1180
 .41pt>
 File: content/img/loop_feed_return_current_voltage.png Graphic file (type png)
 <use content/img/loop_feed_return_current_voltage.png>
 Package pdftex.def Info: content/img/loop_feed_return_current_voltage.png  used
  on input line 117.
 (pdftex.def)             Requested size: 192.0548pt x 142.20145pt.
-<content/img/curr_imp.png, id=1675, 1594.06972pt x 1180.41pt>
+<content/img/curr_imp.png, id=1672, 1594.06972pt x 1180.41pt>
 File: content/img/curr_imp.png Graphic file (type png)
 <use content/img/curr_imp.png>
 Package pdftex.def Info: content/img/curr_imp.png  used on input line 124.
 (pdftex.def)             Requested size: 192.0548pt x 142.20145pt.
- [56 <./content/img/loop_opower.png> <./content/img/loop_opower_comp.png>] [57 
+ [55 <./content/img/loop_opower.png> <./content/img/loop_opower_comp.png>] [56 
 <./content/img/loop_electromagnetic_energy.png> <./content/img/loop_feed_return
-_current_voltage.png> <./content/img/curr_imp.png>] [58]
-<content/img/free-space-loop.png, id=1734, 420.82219pt x 243.91125pt>
+_current_voltage.png> <./content/img/curr_imp.png>]
+<content/img/free-space-loop.png, id=1718, 420.82219pt x 243.91125pt>
 File: content/img/free-space-loop.png Graphic file (type png)
 <use content/img/free-space-loop.png>
-Package pdftex.def Info: content/img/free-space-loop.png  used on input line 23
-3.
+Package pdftex.def Info: content/img/free-space-loop.png  used on input line 26
+9.
 (pdftex.def)             Requested size: 298.75262pt x 173.15958pt.
- [59 <./content/img/free-space-loop.png>]
-<content/img/loop_eqc_moments.png, id=1749, 2832.984pt x 1387.584pt>
+ [57]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 293.
+ [58 <./content/img/free-space-loop.png>]
+<content/img/loop_eqc_moments.png, id=1745, 2832.984pt x 1387.584pt>
 File: content/img/loop_eqc_moments.png Graphic file (type png)
 <use content/img/loop_eqc_moments.png>
 Package pdftex.def Info: content/img/loop_eqc_moments.png  used on input line 3
-23.
+73.
 (pdftex.def)             Requested size: 426.79134pt x 209.03905pt.
- [60 <./content/img/loop_eqc_moments.png>]
-<content/img/loop_surface_currents.png, id=1767, 1541.00719pt x 557.83406pt>
+<content/img/loop_surface_currents.png, id=1753, 1541.00719pt x 557.83406pt>
 File: content/img/loop_surface_currents.png Graphic file (type png)
 <use content/img/loop_surface_currents.png>
 Package pdftex.def Info: content/img/loop_surface_currents.png  used on input l
-ine 349.
+ine 392.
 (pdftex.def)             Requested size: 426.79134pt x 154.4901pt.
-<content/img/loop_surface_currents_offset_rotation_100MHz.png, id=1768, 1541.00
+<content/img/loop_surface_currents_offset_rotation_100MHz.png, id=1754, 1541.00
 719pt x 557.83406pt>
 File: content/img/loop_surface_currents_offset_rotation_100MHz.png Graphic file
  (type png)
 <use content/img/loop_surface_currents_offset_rotation_100MHz.png>
 Package pdftex.def Info: content/img/loop_surface_currents_offset_rotation_100M
-Hz.png  used on input line 358.
+Hz.png  used on input line 401.
 (pdftex.def)             Requested size: 426.79134pt x 154.4901pt.
-<content/img/loop_surface_currents_offset_rotation_3GHz3.png, id=1769, 1541.007
+<content/img/loop_surface_currents_offset_rotation_3GHz3.png, id=1755, 1541.007
 19pt x 557.83406pt>
 File: content/img/loop_surface_currents_offset_rotation_3GHz3.png Graphic file 
 (type png)
 <use content/img/loop_surface_currents_offset_rotation_3GHz3.png>
 Package pdftex.def Info: content/img/loop_surface_currents_offset_rotation_3GHz
-3.png  used on input line 367.
+3.png  used on input line 410.
 (pdftex.def)             Requested size: 426.79134pt x 154.4901pt.
 
 
-LaTeX Warning: Float too large for page by 0.60973pt on input line 374.
+LaTeX Warning: Float too large for page by 0.60973pt on input line 417.
 
-<content/img/loop_surface_currents_offset_rotation_3GHz3_plot.png, id=1772, 283
+<content/img/loop_surface_currents_offset_rotation_3GHz3_plot.png, id=1758, 283
 2.984pt x 1387.584pt>
 File: content/img/loop_surface_currents_offset_rotation_3GHz3_plot.png Graphic 
 file (type png)
 <use content/img/loop_surface_currents_offset_rotation_3GHz3_plot.png>
 Package pdftex.def Info: content/img/loop_surface_currents_offset_rotation_3GHz
-3_plot.png  used on input line 378.
+3_plot.png  used on input line 421.
 (pdftex.def)             Requested size: 426.79134pt x 209.03905pt.
-[61] [62 <./content/img/loop_surface_currents.png> <./content/img/loop_surface_
-currents_offset_rotation_100MHz.png> <./content/img/loop_surface_currents_offse
-t_rotation_3GHz3.png>]
-<content/img/loop-geomg-comp.png, id=1798, 2460.19125pt x 1614.03pt>
+[59 <./content/img/loop_eqc_moments.png>] [60 <./content/img/loop_surface_curre
+nts.png> <./content/img/loop_surface_currents_offset_rotation_100MHz.png> <./co
+ntent/img/loop_surface_currents_offset_rotation_3GHz3.png>]
+<content/img/loop-geomg-comp.png, id=1783, 2460.19125pt x 1614.03pt>
 File: content/img/loop-geomg-comp.png Graphic file (type png)
 <use content/img/loop-geomg-comp.png>
-Package pdftex.def Info: content/img/loop-geomg-comp.png  used on input line 47
-4.
+Package pdftex.def Info: content/img/loop-geomg-comp.png  used on input line 51
+7.
 (pdftex.def)             Requested size: 213.39566pt x 139.98602pt.
-<content/img/loop-geom-power.png, id=1799, 2324.685pt x 1615.03375pt>
+<content/img/loop-geom-power.png, id=1784, 2324.685pt x 1615.03375pt>
 File: content/img/loop-geom-power.png Graphic file (type png)
 <use content/img/loop-geom-power.png>
-Package pdftex.def Info: content/img/loop-geom-power.png  used on input line 48
-1.
+Package pdftex.def Info: content/img/loop-geom-power.png  used on input line 52
+4.
 (pdftex.def)             Requested size: 204.85802pt x 142.31563pt.
- [63 <./content/img/loop_surface_currents_offset_rotation_3GHz3_plot.png>]) (./
-content/30_numerical_investigations/37_gap_loop.tex
-<content/img/gap_loop_antenna_fields.png, id=1811, 430.60875pt x 302.63063pt>
+ [61 <./content/img/loop_surface_currents_offset_rotation_3GHz3_plot.png>])
+(./content/30_numerical_investigations/37_gap_loop.tex
+<content/img/gap_loop_antenna_fields.png, id=1795, 430.60875pt x 302.63063pt>
 File: content/img/gap_loop_antenna_fields.png Graphic file (type png)
 <use content/img/gap_loop_antenna_fields.png>
 Package pdftex.def Info: content/img/gap_loop_antenna_fields.png  used on input
  line 15.
 (pdftex.def)             Requested size: 204.85802pt x 143.97731pt.
-<content/img/gapped_loop_antenna.png, id=1812, 1132.98282pt x 792.71156pt>
+<content/img/gapped_loop_antenna.png, id=1796, 1132.98282pt x 792.71156pt>
 File: content/img/gapped_loop_antenna.png Graphic file (type png)
 <use content/img/gapped_loop_antenna.png>
 Package pdftex.def Info: content/img/gapped_loop_antenna.png  used on input lin
 e 22.
 (pdftex.def)             Requested size: 204.85802pt x 143.323pt.
-
-[64 <./content/img/loop-geomg-comp.png> <./content/img/loop-geom-power.png>]
-<content/img/gapped_loop_moments.png, id=1830, 1594.06972pt x 1181.09828pt>
+ [62 <./content/img/loop-geomg-comp.png> <./content/img/loop-geom-power.png>]
+<content/img/gapped_loop_moments.png, id=1814, 1594.06972pt x 1181.09828pt>
 File: content/img/gapped_loop_moments.png Graphic file (type png)
 <use content/img/gapped_loop_moments.png>
 Package pdftex.def Info: content/img/gapped_loop_moments.png  used on input lin
 e 56.
 (pdftex.def)             Requested size: 213.39566pt x 158.10774pt.
-<content/img/gapped_loop_phase.png, id=1831, 1593.38142pt x 1181.09828pt>
+<content/img/gapped_loop_phase.png, id=1815, 1593.38142pt x 1181.09828pt>
 File: content/img/gapped_loop_phase.png Graphic file (type png)
 <use content/img/gapped_loop_phase.png>
 Package pdftex.def Info: content/img/gapped_loop_phase.png  used on input line 
 63.
 (pdftex.def)             Requested size: 204.85802pt x 151.83606pt.
-<content/img/gapped_loop_comp_moments_gap_sweep.png, id=1839, 1594.06972pt x 11
+<content/img/gapped_loop_comp_moments_gap_sweep.png, id=1823, 1594.06972pt x 11
 81.09828pt>
 File: content/img/gapped_loop_comp_moments_gap_sweep.png Graphic file (type png
 )
@@ -1908,58 +1898,61 @@ File: content/img/gapped_loop_comp_moments_gap_sweep.png Graphic file (type png
 Package pdftex.def Info: content/img/gapped_loop_comp_moments_gap_sweep.png  us
 ed on input line 78.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/gapped_loop_comp_power_gap_sweep.png, id=1840, 1594.06972pt x 1181
+<content/img/gapped_loop_comp_power_gap_sweep.png, id=1824, 1594.06972pt x 1181
 .09828pt>
 File: content/img/gapped_loop_comp_power_gap_sweep.png Graphic file (type png)
 <use content/img/gapped_loop_comp_power_gap_sweep.png>
 Package pdftex.def Info: content/img/gapped_loop_comp_power_gap_sweep.png  used
  on input line 85.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-
-[65 <./content/img/gap_loop_antenna_fields.png> <./content/img/gapped_loop_ante
-nna.png>]
-<content/img/gap-loop-voltage-current.png, id=1857, 1594.06972pt x 1181.09828pt
+ [63 <./content/img/gap_loop_antenna_fields.png> <./content/img/gapped_loop_ant
+enna.png>]
+<content/img/gap-loop-voltage-current.png, id=1842, 1594.06972pt x 1181.09828pt
 >
 File: content/img/gap-loop-voltage-current.png Graphic file (type png)
 <use content/img/gap-loop-voltage-current.png>
 Package pdftex.def Info: content/img/gap-loop-voltage-current.png  used on inpu
 t line 148.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/gapped_loop_imp.png, id=1858, 1594.06972pt x 1180.41pt>
+<content/img/gapped_loop_imp.png, id=1843, 1594.06972pt x 1180.41pt>
 File: content/img/gapped_loop_imp.png Graphic file (type png)
 <use content/img/gapped_loop_imp.png>
 Package pdftex.def Info: content/img/gapped_loop_imp.png  used on input line 15
 5.
 (pdftex.def)             Requested size: 204.85802pt x 151.69354pt.
-) (./content/30_numerical_investigations/38_inv_f_cfm.tex [66 <./content/img/ga
-pped_loop_moments.png> <./content/img/gapped_loop_phase.png>] [67 <./content/im
-g/gapped_loop_comp_moments_gap_sweep.png> <./content/img/gapped_loop_comp_power
-_gap_sweep.png> <./content/img/gap-loop-voltage-current.png> <./content/img/gap
-ped_loop_imp.png>]
-<content/img/center_fed_monopole.png, id=1878, 1132.98282pt x 1738.24406pt>
+)
+(./content/30_numerical_investigations/38_inv_f_cfm.tex [64 <./content/img/gapp
+ed_loop_moments.png> <./content/img/gapped_loop_phase.png>] [65 <./content/img/
+gapped_loop_comp_moments_gap_sweep.png> <./content/img/gapped_loop_comp_power_g
+ap_sweep.png> <./content/img/gap-loop-voltage-current.png> <./content/img/gappe
+d_loop_imp.png>]
+<content/img/center_fed_monopole.png, id=1863, 1132.98282pt x 1738.24406pt>
 File: content/img/center_fed_monopole.png Graphic file (type png)
 <use content/img/center_fed_monopole.png>
 Package pdftex.def Info: content/img/center_fed_monopole.png  used on input lin
 e 11.
 (pdftex.def)             Requested size: 181.29822pt x 278.15126pt.
-<content/img/inverted_f_antenna.png, id=1879, 2076.25688pt x 840.89156pt>
+<content/img/inverted_f_antenna.png, id=1864, 2076.25688pt x 840.89156pt>
 File: content/img/inverted_f_antenna.png Graphic file (type png)
 <use content/img/inverted_f_antenna.png>
 Package pdftex.def Info: content/img/inverted_f_antenna.png  used on input line
  18.
 (pdftex.def)             Requested size: 213.39566pt x 86.41647pt.
-<content/img/cfm-ifa-moments.png, id=1880, 1594.06972pt x 1181.09828pt>
+<content/img/cfm-ifa-moments.png, id=1865, 1594.06972pt x 1181.09828pt>
 File: content/img/cfm-ifa-moments.png Graphic file (type png)
 <use content/img/cfm-ifa-moments.png>
 Package pdftex.def Info: content/img/cfm-ifa-moments.png  used on input line 23
 .
 (pdftex.def)             Requested size: 213.39566pt x 158.10774pt.
- [68
+ [66
 
  <./content/img/center_fed_monopole.png> <./content/img/inverted_f_antenna.png>
- <./content/img/cfm-ifa-moments.png>])
-(./content/30_numerical_investigations/39_shielding.tex
-<content/img/se-barrium-ferrite.png, id=1900, 2832.984pt x 1387.584pt>
+ <./content/img/cfm-ifa-moments.png>]
+
+LaTeX Warning: Reference `eqn:loop_w0' on page 67 undefined on input line 37.
+
+) (./content/30_numerical_investigations/39_shielding.tex
+<content/img/se-barrium-ferrite.png, id=1884, 2832.984pt x 1387.584pt>
 File: content/img/se-barrium-ferrite.png Graphic file (type png)
 <use content/img/se-barrium-ferrite.png>
 Package pdftex.def Info: content/img/se-barrium-ferrite.png  used on input line
@@ -1970,124 +1963,124 @@ Overfull \hbox (18.46594pt too wide) in paragraph at lines 37--51
  [][] 
  []
 
-[69] [70 <./content/img/se-barrium-ferrite.png>]
-<content/img/empty_power_sum_diff.png, id=1923, 2832.984pt x 1387.584pt>
+[67] [68 <./content/img/se-barrium-ferrite.png>]
+<content/img/empty_power_sum_diff.png, id=1906, 2832.984pt x 1387.584pt>
 File: content/img/empty_power_sum_diff.png Graphic file (type png)
 <use content/img/empty_power_sum_diff.png>
 Package pdftex.def Info: content/img/empty_power_sum_diff.png  used on input li
 ne 121.
 (pdftex.def)             Requested size: 426.79134pt x 209.03905pt.
-<content/img/power_silver.png, id=1928, 1594.06972pt x 1181.09828pt>
+<content/img/power_silver.png, id=1911, 1594.06972pt x 1181.09828pt>
 File: content/img/power_silver.png Graphic file (type png)
 <use content/img/power_silver.png>
 Package pdftex.def Info: content/img/power_silver.png  used on input line 140.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/power_barium_ferrite.png, id=1929, 1593.70406pt x 1181.16281pt>
+<content/img/power_barium_ferrite.png, id=1912, 1593.70406pt x 1181.16281pt>
 File: content/img/power_barium_ferrite.png Graphic file (type png)
 <use content/img/power_barium_ferrite.png>
 Package pdftex.def Info: content/img/power_barium_ferrite.png  used on input li
 ne 147.
 (pdftex.def)             Requested size: 204.85802pt x 151.82634pt.
- [71 <./content/img/empty_power_sum_diff.png>]
-<content/img/se_silver.png, id=1941, 1594.06972pt x 1181.09828pt>
+ [69 <./content/img/empty_power_sum_diff.png>]
+<content/img/se_silver.png, id=1925, 1594.06972pt x 1181.09828pt>
 File: content/img/se_silver.png Graphic file (type png)
 <use content/img/se_silver.png>
 Package pdftex.def Info: content/img/se_silver.png  used on input line 175.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/se_barium_ferrite.png, id=1942, 1594.06972pt x 1179.72171pt>
+<content/img/se_barium_ferrite.png, id=1926, 1594.06972pt x 1179.72171pt>
 File: content/img/se_barium_ferrite.png Graphic file (type png)
 <use content/img/se_barium_ferrite.png>
 Package pdftex.def Info: content/img/se_barium_ferrite.png  used on input line 
 182.
 (pdftex.def)             Requested size: 204.85802pt x 151.6051pt.
- [72 <./content/img/power_silver.png> <./content/img/power_barium_ferrite.png> 
+ [70 <./content/img/power_silver.png> <./content/img/power_barium_ferrite.png> 
 <./content/img/se_silver.png> <./content/img/se_barium_ferrite.png>]
-<content/img/loop_antenna_enclosure.png, id=1967, 1910.63812pt x 1418.29875pt>
+<content/img/loop_antenna_enclosure.png, id=1950, 1910.63812pt x 1418.29875pt>
 File: content/img/loop_antenna_enclosure.png Graphic file (type png)
 <use content/img/loop_antenna_enclosure.png>
 Package pdftex.def Info: content/img/loop_antenna_enclosure.png  used on input 
 line 235.
 (pdftex.def)             Requested size: 204.85802pt x 152.05295pt.
-<content/img/monopole_antenna_enclosure.png, id=1968, 1364.09625pt x 956.82469p
+<content/img/monopole_antenna_enclosure.png, id=1951, 1364.09625pt x 956.82469p
 t>
 File: content/img/monopole_antenna_enclosure.png Graphic file (type png)
 <use content/img/monopole_antenna_enclosure.png>
 Package pdftex.def Info: content/img/monopole_antenna_enclosure.png  used on in
 put line 242.
 (pdftex.def)             Requested size: 213.39566pt x 149.67868pt.
- [73 <./content/img/loop_antenna_enclosure.png> <./content/img/monopole_antenna
+ [71 <./content/img/loop_antenna_enclosure.png> <./content/img/monopole_antenna
 _enclosure.png>]
-<content/img/barium_enclosure_power.png, id=1981, 1594.06972pt x 1181.09828pt>
+<content/img/barium_enclosure_power.png, id=1965, 1594.06972pt x 1181.09828pt>
 File: content/img/barium_enclosure_power.png Graphic file (type png)
 <use content/img/barium_enclosure_power.png>
 Package pdftex.def Info: content/img/barium_enclosure_power.png  used on input 
 line 272.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/ferrite_enclosure_power.png, id=1982, 1594.06972pt x 1181.09828pt>
+<content/img/ferrite_enclosure_power.png, id=1966, 1594.06972pt x 1181.09828pt>
 
 File: content/img/ferrite_enclosure_power.png Graphic file (type png)
 <use content/img/ferrite_enclosure_power.png>
 Package pdftex.def Info: content/img/ferrite_enclosure_power.png  used on input
  line 279.
 (pdftex.def)             Requested size: 204.85802pt x 151.782pt.
-<content/img/loop-shield-power.png, id=1987, 1742.00812pt x 1291.82625pt>
+<content/img/loop-shield-power.png, id=1971, 1742.00812pt x 1291.82625pt>
 File: content/img/loop-shield-power.png Graphic file (type png)
 <use content/img/loop-shield-power.png>
 Package pdftex.def Info: content/img/loop-shield-power.png  used on input line 
 303.
 (pdftex.def)             Requested size: 174.98601pt x 129.76183pt.
-<content/img/monopole-shield-power.png, id=1988, 1742.00812pt x 1291.82625pt>
+<content/img/monopole-shield-power.png, id=1972, 1742.00812pt x 1291.82625pt>
 File: content/img/monopole-shield-power.png Graphic file (type png)
 <use content/img/monopole-shield-power.png>
 Package pdftex.def Info: content/img/monopole-shield-power.png  used on input l
 ine 310.
 (pdftex.def)             Requested size: 174.98601pt x 129.76183pt.
-<content/img/legend-shield.png, id=1989, 714.41907pt x 731.73375pt>
+<content/img/legend-shield.png, id=1973, 714.41907pt x 731.73375pt>
 File: content/img/legend-shield.png Graphic file (type png)
 <use content/img/legend-shield.png>
 Package pdftex.def Info: content/img/legend-shield.png  used on input line 318.
 
 (pdftex.def)             Requested size: 64.01608pt x 65.5629pt.
- [74 <./content/img/barium_enclosure_power.png> <./content/img/ferrite_enclosur
+ [72 <./content/img/barium_enclosure_power.png> <./content/img/ferrite_enclosur
 e_power.png>]
-<content/img/loop-resonance.png, id=1998, 499.8675pt x 417.81094pt>
+<content/img/loop-resonance.png, id=1982, 499.8675pt x 417.81094pt>
 File: content/img/loop-resonance.png Graphic file (type png)
 <use content/img/loop-resonance.png>
 Package pdftex.def Info: content/img/loop-resonance.png  used on input line 339
 .
 (pdftex.def)             Requested size: 213.39566pt x 178.36739pt.
-<content/img/dipole-shield.png, id=2003, 1592.69315pt x 1181.09828pt>
+<content/img/dipole-shield.png, id=1987, 1592.69315pt x 1181.09828pt>
 File: content/img/dipole-shield.png Graphic file (type png)
 <use content/img/dipole-shield.png>
 Package pdftex.def Info: content/img/dipole-shield.png  used on input line 363.
 
 (pdftex.def)             Requested size: 166.44835pt x 123.43326pt.
-<content/img/monopole_dipole_shields.png, id=2004, 1592.69315pt x 1181.09828pt>
+<content/img/monopole_dipole_shields.png, id=1988, 1592.69315pt x 1181.09828pt>
 
 File: content/img/monopole_dipole_shields.png Graphic file (type png)
 <use content/img/monopole_dipole_shields.png>
 Package pdftex.def Info: content/img/monopole_dipole_shields.png  used on input
  line 370.
 (pdftex.def)             Requested size: 166.44835pt x 123.43326pt.
-<content/img/dipole-shield-legend.png, id=2005, 473.51906pt x 242.40562pt>
+<content/img/dipole-shield-legend.png, id=1989, 473.51906pt x 242.40562pt>
 File: content/img/dipole-shield-legend.png Graphic file (type png)
 <use content/img/dipole-shield-legend.png>
 Package pdftex.def Info: content/img/dipole-shield-legend.png  used on input li
 ne 377.
 (pdftex.def)             Requested size: 85.35696pt x 43.694pt.
- [75 <./content/img/loop-shield-power.png> <./content/img/monopole-shield-power
+ [73 <./content/img/loop-shield-power.png> <./content/img/monopole-shield-power
 .png> <./content/img/legend-shield.png> <./content/img/loop-resonance.png>]) [7
-6 <./content/img/dipole-shield.png> <./content/img/monopole_dipole_shields.png>
+4 <./content/img/dipole-shield.png> <./content/img/monopole_dipole_shields.png>
  <./content/img/dipole-shield-legend.png>]
-(./content/40_conclusion/41_conclusion.tex) [77] [78
+(./content/40_conclusion/41_conclusion.tex) [75] [76
 
 ]
-Overfull \hbox (25.86183pt too wide) in paragraph at lines 204--204
+Overfull \hbox (25.86183pt too wide) in paragraph at lines 200--200
 []\OT1/cmr/m/n/10.95 GILBERT STRANG. \OT1/cmr/m/it/10.95 Anal-y-sis of the fi-n
 ite el-e-ment method\OT1/cmr/m/n/10.95 . WELLESLEY-CAMBRIDGE
  []
 
-[79] [80] (./Documentation.aux)
+[77] [78] (./Documentation.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2099,50 +2092,60 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 711AC8A46B1D83455881EDB65A23EFD3;13657.
+
+Package rerunfilecheck Warning: File `Documentation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Documentation.out':
+(rerunfilecheck)             Before: 409CE9B0CE232A3835D56569AD58A737;13399
+(rerunfilecheck)             After:  3029742049AF36476F7BEE8734677021;13273.
 Package logreq Info: Writing requests to 'Documentation.run.xml'.
 \openout1 = `Documentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54492 strings out of 474222
- 1280182 string characters out of 5748733
- 2197144 words of memory out of 5000000
- 75633 multiletter control sequences out of 15000+600000
+ 54435 strings out of 474222
+ 1278652 string characters out of 5748733
+ 2198179 words of memory out of 5000000
+ 75588 multiletter control sequences out of 15000+600000
  579404 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,131p,1881b,3184s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Documentation.pdf (90 pages, 16574932 bytes).
+
+pdfTeX warning (dest): name{subsubsection.3.6.5} has been referenced but does n
+ot exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on Documentation.pdf (88 pages, 16833212 bytes).
 PDF statistics:
- 2296 PDF objects out of 2487 (max. 8388607)
- 1909 compressed objects within 20 object streams
- 463 named destinations out of 1000 (max. 500000)
- 1066 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2278 PDF objects out of 2487 (max. 8388607)
+ 1892 compressed objects within 19 object streams
+ 454 named destinations out of 1000 (max. 500000)
+ 1058 words of extra memory for PDF output out of 10000 (max. 10000000)
 

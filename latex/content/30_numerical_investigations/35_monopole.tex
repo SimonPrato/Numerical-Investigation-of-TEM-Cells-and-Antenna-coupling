@@ -188,10 +188,16 @@ A fine mesh resolution, as discussed in \autoref{sec:mesh}, is important for acc
 \end{figure}
 
 \FloatBarrier
-\subsubsection{Equivalent circuit model}
+\subsubsection{Equivalent circuit model}\label{sec:monopole_eqc}
 \FloatBarrier
 
-An equivalent circuit is derived in \autoref{fig:eqc_simple_monopole}, which is known as Chu equivalent circuit for a short dipole \cite{Hansen_Collin_2013}. 
+Equivalent circuit models of the antenna and the TEM cell are valuable tools 
+for further analysis, as they enable analytical calculations and facilitate 
+investigation and understanding of the observed coupling behavior. For the 
+monopole antenna, the Chu equivalent circuit for a short electric 
+dipole \cite{Hansen_Collin_2013} is applied, as demonstrated in 
+\autoref{fig:eqc_simple_monopole}, where $R_A$, $L_A$ and $C_A$ represent 
+the impedance behavior of the antenna.
 
 \begin{figure}[h]
 	\centering
@@ -208,27 +214,104 @@ An equivalent circuit is derived in \autoref{fig:eqc_simple_monopole}, which is 
 			\node[circ] at (11, 7){};
 			\draw (8.5, 7) -- (7, 7);
 			\draw[-latex] (7, 7.5) -- (8.75, 7.5);
-			\node[shape=rectangle, minimum width=2.215cm, minimum height=0.965cm] at (8.534, 7.75){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (7.409, 8.25){$P_{in}$};
+			\node[shape=rectangle, minimum width=2.215cm, minimum height=0.965cm] 
+			at (8.534, 7.75){} node[anchor=north west, align=left, 
+			text width=1.827cm, inner sep=6pt] at (7.409, 8.25){$P_{in}$};
 		\end{tikzpicture}
 	}
-	\caption{The Chu equivalent circuit for a short electric dipole models the monopole antenna's behavior.}
+	\caption{The Chu equivalent circuit for a short electric dipole models 
+		the monopole antenna's behavior.}
 	\label{fig:eqc_simple_monopole}
 \end{figure}
+
+%The equivalent circuit of the monopole antenna can also be used to reason about 
+%the coupling behavior of the antenna. In particular when assuming that a significant displacement current $I_n$ is induced in the capacitance through electric near-field coupling. The displacement current $I_n$ is then related to the induced voltage $V_n$ across the inductance by
+%
+%\begin{equation}
+%	\frac{I_n}{V_n}=\frac{j\omega Q}{R_A\omega_0^2+j\omega L\omega_0^2
+%		-R_w\omega^2},
+%	\label{eqn:loop_w0}
+%\end{equation}
+%
+%where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, 
+%$Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the  characteristic impedance of the antenna feedpoint, assuming that it is purely resistive. Since $V_n$ and 
+%$I_n$ are directly associated with the magnetic and electric dipole moments 
+%$\mathbf{m}_m$ and $\mathbf{m}_e$ through \cref{eqn:m_v,eqn:me_i}, 
+%the electric and magnetic coupling behavior of the small loop antenna can 
+%be directly linked to its resonance frequency and Q-factor.
+%
+%A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance 
+%$C_A$ results in a more pronounced non-linear frequency-behavior of 
+%$\mathbf{m}_m$ and $\mathbf{m}_e$. Furthermore, increased capacitance lowers 
+%the resonance frequency $\omega_0$ toward the investigated frequency range 
+%and increases the antenna's electrical length \cite{Propagation_2022}, both 
+%attributing to increased radiated power.
+
+
+
+Although the resistance $R_A$ generally represents conduction and radiation losses, it is omitted in this analysis. Conduction losses are non-existent due to the use of Perfect Electric Conductors (PEC). Additionally, the radiation resistance is disregarded because the radiation of the monopole on the free-space PEC plane in absence of the near-field coupling TEM cell is negligible. The antenna is therefore modeled as a lossless reactive network.
+
+To determine $L_A$ and $C_A$, the antenna model is placed on a PEC 
+surface in an open space, as demonstrated in \autoref{fig:free-space-monopole}. 
+The inductance and capacitance are derived according to 
+\crefrange{eqn:l_m_energy}{eqn:c_e_energy}, which leads to 
+
+\begin{subequations}
+	\begin{equation}
+		L_A = 2\frac{W_m}{I_{in}^2},
+	\end{equation}
+	\begin{equation}
+		C_A = 2\frac{W_c}{V_{CA}^2}= \frac{I_{in}^2}{2\omega^2W_c},
+	\end{equation}
+\end{subequations}
+
+where $V_{CA}=I_{in}/(j\omega C_A)$ denotes the current through the capacitor 
+$C_A$. The resulting capacitance equals $C_A=98.36\,\mathrm{fF}$ the inductance amounts to $L_A=1.14\,\mathrm{nH}$. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/free-space-monopole}
-	\caption{Model of the loop antenna connected to a feedpoint mounted on a PEC surface with a side length of $\lambda/2$, where $\lambda$ corresponds to the free-space wavelength of the solution frequency. This configuration enables the investigation of the loop antenna reactance without influence of the TEM cell.}
+	\caption{Model of the monopole antenna connected to a feedpoint mounted 
+		on a PEC surface with a side length of $\lambda/2$, where $\lambda$ 
+		corresponds to the free-space wavelength of the solution frequency. This 
+		configuration enables the investigation of the monopole antenna reactance 
+		without influence of the TEM cell.}
 	\label{fig:free-space-monopole}
 \end{figure}
 
+The antenna equivalent circuit is extended in \autoref{fig:full_circuit_monopole} 
+to incorporate the TEM cell's electrical characteristics. This cell is 
+represented by a total inductance $L_T = L_{T1} + L_{T2}$ and capacitance 
+$C_T = C_{T1} + C_{T2}$, as derived in \cref{sec:tem_cell_model}. To maintain 
+structural symmetry, the model utilizes split components where 
+$L_{T1} = L_{T2}$ and $C_{T1} = C_{T2}$. It is important that this 
+model is applied within the valid frequency range of the TEM cell 
+equivalent circuit.
+
+The equivalent circuits of the antenna and the TEM cell are coupled via 
+$C_k$, which models the displacement current coupling, and the mutual 
+inductances $M_{A,T1}$ and $M_{A,T2}$, which account for coupling through 
+induced voltages. The mutual inductances are given by
+
+\begin{equation}
+	\mathbf{V} = j\omega \begin{bmatrix}
+		L_{A}     & M_{A,T1} & M_{A,T2} \\
+		M_{T1,A}  & L_{T1}   & 0 \\
+		M_{T2,A}  & 0        & L_{T2}
+	\end{bmatrix} \mathbf{I}.
+\end{equation}
+
+The near-field coupling between the antenna and the TEM cell is represented 
+by the reactances $C_k$, $M_{A,T1}$, and $M_{A,T2}$, which renders the 
+inclusion of a radiation resistance $R_A$ again unnecessary. The magnetic dipole moment $\mathbf{m}_m$ is derived from the induced voltages across $L_{T1}$ and $L_{T2}$ in accordance with \autoref{eqn:m_v}. Similarly, the electric dipole moment $\mathbf{m}_e$ is determined from the displacement current flowing through $C_k$, as defined in \autoref{eqn:me_i}.
 
 \begin{figure}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tikzpicture}
 			% Paths, nodes and wires:
-			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm](N1) at (2.5, 10){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
+			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm]
+			(N1) at (2.5, 10){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
 			\node[ground] at (2.5, 8){};
 			\draw (2.5, 8) -| (2.5, 9.5);
 			\draw (4, 12) to[european resistor, l={$R_s$}] (6, 12);
@@ -238,8 +321,12 @@ An equivalent circuit is derived in \autoref{fig:eqc_simple_monopole}, which is 
 			\draw (2.5, 10.5) -| (2.5, 12) -- (4, 12);
 			\draw (6, 12) -- (7.5, 12) -- (10, 12);
 			\node[circ] at (8.5, 12){};
-			\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=4.965cm, minimum height=5.715cm] at (8.5, 9.875){};
-			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (8.375, 11.5){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
+			\node[shape=rectangle, draw, line width=1pt, 
+			dash pattern={on 4pt off 4pt}, minimum width=4.965cm, 
+			minimum height=5.715cm] at (8.5, 9.875){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+			at (8.375, 11.5){} node[anchor=north west, align=left, 
+			text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
 			\draw (10, 12) to[capacitor, l={$C_k$}] (14.5, 12);
 			\node[circ] at (9, 9.5){};
 			\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
@@ -263,18 +350,40 @@ An equivalent circuit is derived in \autoref{fig:eqc_simple_monopole}, which is 
 			\draw (20.64, 10) -- (23, 10);
 			\draw (24.5, 12) -| (25.5, 10);
 			\node[circ] at (20.5, 12){};
-			\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=7.965cm, minimum height=5.715cm] at (18, 9.875){};
-			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (16.375, 12.75){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
-			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (23.375, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
-			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (26.875, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
+			\node[shape=rectangle, draw, line width=1pt, 
+			dash pattern={on 4pt off 4pt}, minimum width=7.965cm, 
+			minimum height=5.715cm] at (18, 9.875){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+			at (16.375, 12.75){} node[anchor=north west, align=left, 
+			text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+			at (23.375, 10){} node[anchor=north west, align=left, 
+			text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+			at (26.875, 10){} node[anchor=north west, align=left, 
+			text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
 			\node[circ] at (15.75, 12.5){};
 			\node[circ] at (16.75, 10.5){};
 		\end{tikzpicture}
 	}
-	\caption{Circuit representing the TEM cell and the monopole antenna, with the additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their near-field coupling behavior.}
+	\caption{Circuit representing the TEM cell and the monopole antenna, with 
+		the additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their 
+		near-field coupling behavior.}
 	\label{fig:full_circuit_monopole}
 \end{figure}
 
+The resulting $\mathbf{m}_e$ and $\mathbf{m}_m$ of the monopole antenna are depicted in \autoref{fig:eqc-dipoles-comp}, which qualitatively agree with the dipole moments 
+derived by the simulator over the investigated frequency range.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\linewidth]{content/img/eqc-dipoles-comp}
+	\caption{Equivalent dipole moments derived by the equivalent circuit 
+		depicted in \autoref{fig:full_circuit}, compared to the derived dipole moments of the monopole antenna, shown in \autoref{fig:dipolemomentsmonopolewide}. 
+		The electric dipole moment $\mathbf{m}_e$ is weighted with $\eta_0$ for 
+		comparison purposes.}
+	\label{fig:eqc-dipoles-comp}
+\end{figure}
 
 
 \FloatBarrier

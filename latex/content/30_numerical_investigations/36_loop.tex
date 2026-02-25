@@ -140,22 +140,27 @@ The feedpoint current is derived with \cref{eqn:ampere_law_fem}, through integra
 The increases in voltage and decrease in current agrees with the impedance, depicted in \autoref{fig:currimp}. The loop antenna shows strongly inductive behavior. 
 
 \subsubsection{Equivalent circuit model}
-Equivalent circuit models of the antenna and the TEM cell are valuable tools for further analysis, as they enable analytical calculations and facilitate investigation and understanding of the observed coupling behavior.
 
-\autoref{fig:eqc_balanis} demonstrates an equivalent circuit for the electrically small loop antenna in free space \cite[p. 244] {Balanis_1997}, where
+Following the same approach established in \cref{sec:monopole_eqc}, an 
+equivalent circuit is derived for the small loop antenna. 
+\autoref{fig:eqc_balanis} demonstrates the full equivalent circuit for the 
+electrically small loop antenna in free space \cite[p. 244]{Balanis_1997}, 
+where
 
 \hspace{1cm}\begin{minipage}{\dimexpr\textwidth-2cm}
-\begin{description}
-	\item[$C_s$] Stray capacitance of the  loop antenna
-	\item[$R_L$] Ohmic loss resistance of the antenna conductor
-	\item[$R_r$] Radiation resistance of the loop antenna
-	\item[$L_i$] Internal inductance of the loop antenna
-	\item[$L_e$] External inductance of the loop antenna
-\end{description}
+	\begin{description}
+		\item[$C_s$]   Stray capacitance of the loop antenna
+		\item[$R_L$]   Ohmic loss resistance of the antenna conductor
+		\item[$R_r$]   Radiation resistance of the loop antenna
+		\item[$L_i$]   Internal inductance of the loop antenna
+		\item[$L_e$]   External inductance of the loop antenna
+	\end{description}
 \end{minipage}
 
-As discussed in \cref{sec:antenna_model}, the antenna is modeled as a perfect electric conductor, therefore $R_L$ and $L_e$ are neglected. Instead, the simplified equivalent circuit in \autoref{fig:eqc_simple} is applied, where $R_A$, $L_A$ and $C_A$ represent the impedance behavior of the antenna.
-
+As discussed in \cref{sec:antenna_model}, the antenna is modeled as a perfect 
+electric conductor, therefore $R_L$ and $L_e$ are neglected. Instead, the 
+simplified equivalent circuit in \autoref{fig:eqc_simple} is applied, where 
+$R_A$, $L_A$ and $C_A$ represent the impedance behavior of the antenna.
 
 \begin{figure}[tbp]
 	\centering
@@ -178,12 +183,14 @@ As discussed in \cref{sec:antenna_model}, the antenna is modeled as a perfect el
 				\draw (11.75, 6) -- (12, 6);
 				\draw (12, 5.75) -| (12, 6);
 				\draw[-latex] (5, 6.5) -- (6.75, 6.5);
-				\node[shape=rectangle, minimum width=2.215cm, minimum height=0.965cm] at (6.534, 6.75){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (5.409, 7.25){$P_{in}$};
+				\node[shape=rectangle, minimum width=2.215cm, 
+				minimum height=0.965cm] at (6.534, 6.75){} 
+				node[anchor=north west, align=left, text width=1.827cm, 
+				inner sep=6pt] at (5.409, 7.25){$P_{in}$};
 			\end{tikzpicture}
 		}
-		\caption{Full equivalent circuit \cite[p. 244] {Balanis_1997}}
+		\caption{Full equivalent circuit \cite[p. 244]{Balanis_1997}}
 		\label{fig:eqc_balanis}
-		
 	\end{subfigure}
 	\hfill
 	\hspace*{-0.5cm}
@@ -200,7 +207,10 @@ As discussed in \cref{sec:antenna_model}, the antenna is modeled as a perfect el
 				\node[circ] at (7, 6){};
 				\draw (7, 6) -- (7.25, 6);
 				\draw[-latex] (5, 6.5) -- (6.75, 6.5);
-				\node[shape=rectangle, minimum width=2.215cm, minimum height=0.965cm] at (6.534, 6.75){} node[anchor=north west, align=left, text width=1.827cm, inner sep=6pt] at (5.409, 7.25){$P_{in}$};
+				\node[shape=rectangle, minimum width=2.215cm, 
+				minimum height=0.965cm] at (6.534, 6.75){} 
+				node[anchor=north west, align=left, text width=1.827cm, 
+				inner sep=6pt] at (5.409, 7.25){$P_{in}$};
 				\draw (11, 2) -| (11, 3);
 				\draw (7.25, 6) to[european resistor, l={$R_A$}] (11, 6);
 				\draw (11, 6) -- (11, 5);
@@ -209,65 +219,89 @@ As discussed in \cref{sec:antenna_model}, the antenna is modeled as a perfect el
 		\caption{Reduced equivalent circuit}
 		\label{fig:eqc_simple}
 	\end{subfigure}
-	
 	\caption{Equivalent circuits of the small loop antenna.}
 	\label{fig:eqc_loop}
 \end{figure}
 
+%The equivalent circuit of the loop antenna can be used to reason about 
+%the coupling behavior of the antenna. In particular when assuming that a significant induced voltage $V_n$ occurs across the inductor through magnetic near-field coupling. This voltage $V_n$ is then related to an induced displacement current $I_n$ through the capacitance by
+%
+%\begin{equation}
+%	\frac{I_n}{V_n}=\frac{j\omega Q}{R_A\omega_0^2+j\omega L\omega_0^2
+%		-R_w\omega^2},
+%	\label{eqn:loop_w0}
+%\end{equation}
+%
+%where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, 
+%$Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the  characteristic impedance of the antenna feedpoint, assuming that it is purely resistive. Since $V_n$ and 
+%$I_n$ are directly associated with the magnetic and electric dipole moments 
+%$\mathbf{m}_m$ and $\mathbf{m}_e$ through \cref{eqn:m_v,eqn:me_i}, 
+%the electric and magnetic coupling behavior of the small loop antenna can 
+%be directly linked to its resonance frequency and Q-factor.
+%
+%A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance 
+%$C_A$ results in a more pronounced non-linear frequency-behavior of 
+%$\mathbf{m}_m$ and $\mathbf{m}_e$. Furthermore, increased capacitance lowers 
+%the resonance frequency $\omega_0$ toward the investigated frequency range 
+%and increases the antenna's electrical length \cite{Propagation_2022}, both 
+%attributing to increased radiated power.
 
-To determine $R_A$, $L_A$ and $C_A$, the antenna model is placed on a PEC surface in an open space, as demonstrated in \autoref{fig:free-space-loop}. The inductance and capacitance are derived according to \crefrange{eqn:l_m_energy}{eqn:c_e_energy}, which leads to
+To determine $R_A$, $L_A$ and $C_A$, the antenna model is placed on a PEC 
+surface in an open space, as demonstrated in \autoref{fig:free-space-loop}. 
+The inductance and capacitance are derived according to 
+\crefrange{eqn:l_m_energy}{eqn:c_e_energy}, which leads to
 
 \begin{subequations}
 	\begin{equation}
 		L_A = 2\frac{W_m}{I_{LA}^2} = \frac{V_{in}^2}{2\omega^2W_m},
 	\end{equation}
 	\begin{equation}
-		C_A = \frac{2W_c}{V_{in}^2},
+		C_A = 2\frac{W_c}{V_{in}^2},
 	\end{equation}
 \end{subequations}
 
-where $I_{LA}=V_{in}/(j\omega L_A)$ denotes the current through the inductor $L_A$. The resulting capacitance and inductance equal $C_A=38.2\,\mathrm{fF}$ and $L_A=2.14\,\mathrm{nH}$. The capacitance $C_A$ is less pronounced than the inductance $L_A$ of the antenna, which supports the inductive impedance demonstrated in \autoref{fig:currimp}. 
+where $I_{LA}=V_{in}/(j\omega L_A)$ denotes the current through the inductor 
+$L_A$. The resulting capacitance and inductance equal $C_A=38.2\,\mathrm{fF}$ 
+and $L_A=2.14\,\mathrm{nH}$. 
 
 \begin{figure}[tbp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/free-space-loop}
-	\caption{Loop antenna in free space on PEC plane}
-	\label{fig:free-space-loop}	
-	\caption{Model of the loop antenna connected to a feedpoint mounted on a PEC surface with a side length of $\lambda/2$, where $\lambda$ corresponds to the free-space wavelength of the solution frequency. This configuration enables the investigation of the loop antenna reactance without influence of the TEM cell.}
-	\label{fig:example}
+	\caption{Model of the loop antenna connected to a feedpoint mounted on a 
+		PEC surface with a side length of $\lambda/2$, where $\lambda$ corresponds 
+		to the free-space wavelength of the solution frequency. This configuration 
+		enables the investigation of the loop antenna reactance without influence 
+		of the TEM cell.}
+	\label{fig:free-space-loop}
 \end{figure}
 
-The resulting $L_A$ is compared with 
+The resulting $L_A$ is compared with
 
 \begin{equation}
-	L_\mathrm{sq} = \frac{2\mu_0 l}{\pi} \left[ \ln\!\left(\frac{l}{w_r}\right) - 0.774 \right],
+	L_\mathrm{sq} = \frac{2\mu_0 l}{\pi} \left[ \ln\!\left(\frac{l}{w_r}
+	\right) - 0.774 \right],
 	\label{eqn:ind_approx}
 \end{equation}
 
-which provides an approximation for the inductance of a square loop antenna in free-space \cite[p.~245]{Balanis_1997}. In this expression, $l$ denotes the length of one side of the lop antenna and $w_r$ the wire radius. For the loop antenna in investigation, \autoref{eqn:ind_approx} yields $L_\mathrm{sq}=2.32\,\mathrm{nH}$, which is comparable to the previously obtained $L_A$.
+which provides an approximation for the inductance of a square loop antenna 
+in free space \cite[p.~245]{Balanis_1997}. In this expression, $l$ denotes 
+the length of one side of the loop antenna and $w_r$ the wire radius. For 
+the loop antenna under investigation, \autoref{eqn:ind_approx} yields 
+$L_\mathrm{sq}=2.32\,\mathrm{nH}$, which is comparable to the previously 
+obtained $L_A$.
 
 \todo[inline]{Check: Does this formula consider external inductances?}
 
-%\todo[inline]{TODO: Approximate magnetic dipole moment with loop area and norm. h-field.}
-
-The model is extended in \autoref{fig:full_circuit} with an equivalent circuit representing the TEM cell, which consists of a TEM cell inductance $L_T=L_{T1}+L_{T2}$ and capacitance $C_T = C_{T1}+C_{T2}$. The part inductances $L_{T1} = L_{T2}$ and capacitances $C_{T1}=C_{T2}$ are of equal values and are split for symmetry purposes. Special care must be taken to ensure that the model is applied within the valid frequency range of the TEM cell equivalent circuit model. The equivalent circuits of the antenna and the TEM cell are coupled via $C_k$, which models the displacement current coupling, and the mutual inductances $M_{A,T1}$ and $M_{A,T2}$, which account for coupling through induced voltages. The mutual inductances are given by
-
-\begin{equation}
-	\mathbf{V} = j\omega \begin{bmatrix}
-		L_{A} & M_{A,T1} & M_{A,T2} \\
-		M_{T1,A} & L_{T1} & 0 \\
-		M_{T2,A} & 0 & L_{T2}
-	\end{bmatrix} \mathbf{I}.
-\end{equation}
-
-Due to the modeling of the power transfer with $C_k$, $M_{A,T1}$ and $M_{A,T2}$, the radiation resistance of the antenna shown in \autoref{fig:eqc_simple} is neglected. 
+The antenna equivalent circuit is extended with the TEM cell coupling model 
+introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_loop}. The coupling components $C_k$, $M_{A,T1}$ and $M_{A,T2}$ are defined analogously to \cref{sec:monopole_eqc}.
 
 \begin{figure}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
 		\begin{tikzpicture}
 			% Paths, nodes and wires:
-			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm](N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
+			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm]
+			(N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
 			\node[ground] at (2.5, 8){};
 			\draw (2.5, 9) -| (2.5, 8);
 			\draw (4, 11) to[european resistor, l={$R_s$}] (6, 11);
@@ -279,8 +313,12 @@ Due to the modeling of the power transfer with $C_k$, $M_{A,T1}$ and $M_{A,T2}$,
 			\draw (6, 11) -- (7.5, 11) -- (10, 11);
 			\node[circ] at (7.5, 11){};
 			\node[circ] at (10.5, 10){};
-			\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=4.965cm, minimum height=4.465cm] at (8.5, 9.25){};
-			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (8.375, 11.5){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (5.75, 12.25){Antenna};
+			\node[shape=rectangle, draw, line width=1pt, 
+			dash pattern={on 4pt off 4pt}, minimum width=4.965cm, 
+			minimum height=4.465cm] at (8.5, 9.25){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+			at (8.375, 11.5){} node[anchor=north west, align=left, 
+			text width=4.827cm, inner sep=6pt] at (5.75, 12.25){Antenna};
 			\draw (10, 11) to[capacitor, l={$C_k$}] (14.5, 11);
 			\node[circ] at (10, 11){};
 			\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
@@ -304,43 +342,48 @@ Due to the modeling of the power transfer with $C_k$, $M_{A,T1}$ and $M_{A,T2}$,
 			\draw (20.64, 10) -- (23, 10);
 			\draw (24.5, 12) -| (25.5, 10);
 			\node[circ] at (20.5, 12){};
-			\node[shape=rectangle, draw, line width=1pt, dash pattern={on 4pt off 4pt}, minimum width=7.965cm, minimum height=5.715cm] at (18, 9.875){};
-			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] at (16.375, 12.75){} node[anchor=north west, align=left, text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
-			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (23.375, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
-			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] at (26.875, 10){} node[anchor=north west, align=left, text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
+			\node[shape=rectangle, draw, line width=1pt, 
+			dash pattern={on 4pt off 4pt}, minimum width=7.965cm, 
+			minimum height=5.715cm] at (18, 9.875){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+			at (16.375, 12.75){} node[anchor=north west, align=left, 
+			text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+			at (23.375, 10){} node[anchor=north west, align=left, 
+			text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+			at (26.875, 10){} node[anchor=north west, align=left, 
+			text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
 			\node[circ] at (15.75, 12.5){};
 			\node[circ] at (16.75, 10.5){};
 		\end{tikzpicture}
 	}
-	\caption{Circuit representing the TEM cell and the loop antenna, with the additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their near-field coupling behavior.}
-	\label{fig:full_circuit}
+	\caption{Circuit representing the TEM cell and the loop antenna, with the 
+		additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their 
+		near-field coupling behavior.}
+	\label{fig:full_circuit_loop}
 \end{figure}
 
-The magnetic dipole moment $\mathbf{m}_m$ is derived by the induced voltage in $L_{T1}$ and $L_{T2}$ according to \autoref{eqn:m_v}, and the electric dipole moment $\mathbf{m}_e$ by the displacement current in $C_k$ through \autoref{eqn:me_i}. This results in $\mathbf{m}_e$ and $\mathbf{m}_m$ depicted in \autoref{fig:loopeqcmoments}, which are similar to the dipole moments derived by the simulator in the high-frequency range, but accuracy recedes in the low-frequency range. 
+The resulting $\mathbf{m}_e$ and $\mathbf{m}_m$ are depicted in 
+\autoref{fig:loopeqcmoments}, which are similar to the dipole moments 
+derived by the simulator in the higher end of the frequency range. However, accuracy recedes in the low-frequency range.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\linewidth]{content/img/loop_eqc_moments}
-	\caption{Equivalent dipole moments derived by the equivalent circuit depicted in \autoref{fig:full_circuit}, compared to the dipole moments of the loop antenna, shown in \autoref{fig:dipole_moments_loop_antenna}. The electric dipole moment $\mathbf{m}_e$ is weighted with $Z_0$ for comparison purposes.}
+	\caption{Equivalent dipole moments derived by the equivalent circuit 
+		depicted in \autoref{fig:full_circuit_loop}, compared to the dipole moments 
+		of the loop antenna, shown in \autoref{fig:dipole_moments_loop_antenna}. 
+		The electric dipole moment $\mathbf{m}_e$ is weighted with $\eta_0$ for 
+		comparison purposes.}
 	\label{fig:loopeqcmoments}
 \end{figure}
 
-The equivalent circuit of the loop antenna shown in \autoref{fig:eqc_simple} can also be used to reason about the coupling behavior of the antenna. In particular, the voltage induced across the inductance $V_n$ is related to the displacement current $I_n$ by
 
-\begin{equation}
-	\frac{I_n}{V_n}=\frac{j\omega Q}{R_A\omega_0^2+j\omega L\omega_0^2-R_w\omega^2},
-	\label{eqn:loop_w0}
-\end{equation}
-
-where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, $Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the real characteristic impedance of the antenna feedpoint. Since $V_n$ and $I_n$ are directly associated with the magnetic and electric dipole moments $\mathbf{m}_m$ and $\mathbf{m}_e$ through \crefrange{eqn:m_v}{eqn:me_i}, the electric and magnetic coupling behavior of the small loop antenna can be directly linked to its resonance frequency and Q-factor. 
-
-A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance $C_A$ results in a more pronounced non-linear frequency-behavior of $\mathbf{m}_m$ and $\mathbf{m}_e$. Furthermore, increased capacitance lowers the resonance frequency $\omega_0$ toward the investigated frequency range and increases the antenna's electrical length \cite{Propagation_2022}, both attributing in increased radiated power.
-
-%\todo[inline]{TODO: I suspect that better modeling of the TEM cell reactance leads to more accurate results in \autoref{fig:loopeqcmoments}}
 
 \subsubsection{Current distribution on septum and higher order modes}
 
-The radiating loop antenna induces surface currents on the septum of the TEM cell, as shown in \autoref{fig:loop_surface_current}. At a frequency of 3,GHz, the currents reaching the output ports are out of phase, as illustrated in \autoref{fig:current_loop_surface_current}. This observation is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase shift of $\pm\pi$ between the output port powers in the presence of a magnetic dipole moment.
+The radiating loop antenna induces surface currents on the septum of the TEM cell, as shown in \autoref{fig:loop_surface_current}. At a frequency of 3\,GHz, the currents reaching the output ports are out of phase, as illustrated in \autoref{fig:current_loop_surface_current}. This observation is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase shift of $\pm\pi$ between the output port powers in the presence of a magnetic dipole moment.
 
 \begin{figure}[htbp]
 	\centering

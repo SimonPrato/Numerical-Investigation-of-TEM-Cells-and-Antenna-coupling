@@ -1,10 +1,10 @@
 \subsection{Shielding}
 
-\subsubsection{Incident, reflected and transmitted waves in medium}\label{sec:irt_waves}
+\subsubsection{Electromagnetic shielding mechanisms}\label{sec:irt_waves}
 
 The following section outlines the fundamental theory of electromagnetic shielding. Throughout this thesis, all materials are assumed to be linear and isotropic.
 
-A standard figure of merit for quantifying the shielding capability of a material is the electromagnetic shielding effectiveness $SE$. It is defined as the ratio of the incident to the transmitted electric field amplitude, expressed on a logarithmic scale in decibels as in \cites{10518640}[p.~63]{Jaroszewski_Thomas_Rane_2019}
+A commonly used figure of merit for quantifying the shielding capability of a material is the electromagnetic shielding effectiveness $SE$. It is defined as the ratio of the incident to the transmitted electric field amplitude, expressed on a logarithmic scale in decibels as in \cites{10518640}[p.~63]{Jaroszewski_Thomas_Rane_2019}
 \begin{equation}
 	SE_{\mathrm{dB}} = 20\log_{10}{\left(\frac{E_\mathrm{i}}{E_\mathrm{t}}\right)},
 	\label{eqn:se_elec_fields}
@@ -20,7 +20,7 @@ where $E_\mathrm{i}$ and $E_\mathrm{t}$ denote the magnitudes of the incident an
 
 % (Note: Higher order modes may be able to propagate in the TEM cell, as the refraction of the shielding material follows to excitation of these modes.)
 
-An electromagnetic wave can undergo reflection, absorption or multiple reflections within the shielding material, with each reflection contributing to the total reflected, absorbed, and transmitted wave. The total shielding effectiveness is determined by \cite[p. 63]{Jaroszewski_Thomas_Rane_2019}
+An electromagnetic wave incident on a shielding material may be partially reflected at the surface, partially absorbed within the material, and reflected multiple times internally before the remainder is transmitted. The total shielding effectiveness is determined by \cite[p.~63]{Jaroszewski_Thomas_Rane_2019}
 
 \begin{equation}
 	SE_{\mathrm{dB}}=R_{\mathrm{dB}}+A_{\mathrm{dB}}+B_{\mathrm{dB}},
@@ -30,9 +30,9 @@ An electromagnetic wave can undergo reflection, absorption or multiple reflectio
 
 according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorption losses $A_{\mathrm{dB}}$ arise from waves propagating through the shield, $R_{\mathrm{dB}}$ denotes reflections at the material’s surface, and $B_{\mathrm{dB}}$ is a correction factor that accounts for multiple reflections within the shield \cite{10518640}.
 
-Reflections contribute most significantly to a material’s shielding effectiveness \cite[p. 1]{Jaroszewski_Thomas_Rane_2019}. They are characterized by the reflection coefficient $R$. For a material to reflect incident fields, it must posses free charge carriers. For this reason, highly conductive materials, such as metals, reflect the majority of incident electromagnetic waves.
+Reflections contribute most significantly to a material’s shielding effectiveness \cite[p.~1]{Jaroszewski_Thomas_Rane_2019}. They are characterized by the reflection coefficient $R$. For a material to reflect incident fields, it must possess free charge carriers. For this reason, highly conductive materials, such as metals, reflect the majority of incident electromagnetic waves.
 
-Reflections are caused by wave impedance mismatch between two materials. It is common practice to use the normalized wave impedance $Z$ to free-space wave impedance $Z_0$ when determining the reflection coefficient $R$. At the interface between free space and a shielding material, this yields \cite{Collin_2015}
+Reflections are caused by wave impedance mismatch between two materials. It is common practice to use the normalized wave impedance $Z$ to free-space wave impedance $Z_0$ when determining the reflection coefficient $R$. At the interface between free space and a shielding material, this yields \cite[p.~183]{Collin_2015}
 
 \begin{equation}
 	R=\frac{Z-1}{Z+1}.
@@ -46,11 +46,29 @@ Z=\frac{1}{Z_0}\sqrt{\frac{j\omega\mu}{\sigma+j\omega\epsilon}}.
 \label{eqn:rel_wave_imp}
 \end{equation}
 
-Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p. 67]{Jaroszewski_Thomas_Rane_2019}.
+Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip} and demonstrated with \eqref{eqn:compl_power_inf_elec_dipole}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p.~67]{Jaroszewski_Thomas_Rane_2019}.
 
-In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p. 112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magnetic flux line due to high permeability of the shielding material \cite[pp. 112-113]{Jaroszewski_Thomas_Rane_2019}.
+In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}, specifically with \eqref{eqn:pr_loop}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p.~112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magnetic flux lines due to high permeability of the shielding material \cite[pp.~112-113]{Jaroszewski_Thomas_Rane_2019}.
 
-The portion of the electromagnetic wave that is not reflected is subject to absorption within the shielding material. This phenomenon is described by $A_{\mathrm{dB}}$ and accounts for an exponentially decreasing amplitude of an electromagnetic wave in a lossy medium. In conductive materials, this phenomenon is closely related to the skin depth, as discussed in \cref{sec:skin_effect}. For non-conductive materials, absorption depends on the electric loss factor \cite[pp.~102-103]{Jaroszewski_Thomas_Rane_2019}, as further described in \cref{sec:shielding_parameters}.
+The portion of the electromagnetic wave that is not reflected is subject to absorption within the shielding material. This phenomenon is described by $A_{\mathrm{dB}}$ and accounts for an exponentially decreasing amplitude of an electromagnetic wave in a lossy medium. In conductive materials, this phenomenon is closely related to the skin depth.
+
+The skin effect describes the interaction of electromagnetic waves with conductors, causing eddy currents to form on the surface. To investigate this phenomenon, the complex wavenumber is introduced $\tilde{k}=k + j\kappa$, which assists in mathematically describing waves propagating in lossy materials. The imaginary part $\kappa$ is expressed as
+
+\begin{equation}
+	\kappa = \omega \sqrt{\frac{\epsilon \mu}{2}}\left[\sqrt{ 1+\left(\frac{\sigma}{\epsilon\omega}\right) ^2 } -1\right]^{1/2}.
+	\label{eqn:kappa}
+\end{equation}
+
+The skin depth $d$ is described by 
+
+\begin{equation}
+	d = 1/\kappa.
+	\label{eqn:skin_depth}
+\end{equation}
+
+For highly conductive materials $\left(\sigma \gg \epsilon\omega\right)$ the skin depth is $d \propto 1/\sqrt{\omega}$. Therefore, high-frequency electromagnetic waves do not penetrate deeply into conductive materials, due to the free electrons associated with high conductivity absorbing the waves with eddy currents on the material's surface and transforming the energy into heat. A material's permeability further reduces the skin depth due to the increased susceptibility to eddy currents \cite[p. 104]{Jaroszewski_Thomas_Rane_2019}.
+
+For non-conductive materials, absorption depends on the electric loss factor \cite[pp.~102-103]{Jaroszewski_Thomas_Rane_2019}, as further described in \cref{sec:shielding_parameters}.
 
 Upon reaching the far end of the shielding material, re-reflections can occur. When the material thickness is greater than the skin depth, the correction factor for this effect $B_{\mathrm{dB}}$ can be neglected. When the material thickness is smaller than the skin depth, however, the internal reflections reduce the shielding effectiveness by destructively interfering with the reflected waves, and the value of $B_{\mathrm{dB}}$ is negative \cite[p.~1]{Jaroszewski_Thomas_Rane_2019}.
 
@@ -72,100 +90,80 @@ Upon reaching the far end of the shielding material, re-reflections can occur. W
 
 %The imaginary part of the wavenumber $k$, $\alpha$ denotes the attenuation or absorption coefficient. It describes the reduction of the intensity of the wave over distance.
 
-When molecules in a material are exposed to an electric field, they become polarized. This property is characterized by the material's permittivity $\epsilon$. Exposure to a magnetic field causes the spins of electrons within atoms to align with the field, described by the material’s permeability $\mu$. When these electric and magnetic fields vary with time, the molecules continuously move and realign, resulting in the movement of charges, which is quantified by the conductivity $\sigma$. The energy lost in this dynamic process is dissipated as heat \cite{Balanis_2012}.
+When molecules in a material are exposed to an electric field, they become polarized. This property is characterized by the material's permittivity $\epsilon$. Exposure to a magnetic field causes the spins of electrons within atoms to align with the field, described by the material’s permeability $\mu$. When these electric and magnetic fields vary with time, the molecules continuously move and realign, resulting in the movement of charges, which is quantified by the conductivity $\sigma$. The energy lost in this dynamic process is dissipated as heat \cite[p.~68]{Balanis_2012}.
 
-The electric field will push charges in polarizable molecules apart. This separation of charges may be described as a electric dipole, depending on the separation distance and the charge. Under alternating electric fields, the moving of charges will contribute to $\sigma$. This phenomenon is called dielectric hysteresis. It is quantified by the loss tangent $\tan\delta_e$, and defined as \cite{Balanis_2012}
+The electric field pushes charges in polarizable molecules apart. This separation of charges may be described as an electric dipole, depending on the separation distance and the charge. Under alternating electric fields, the movement of charges contributes to $\sigma$. This phenomenon is called dielectric hysteresis. It is quantified by the loss tangent $\tan\delta_e$, and defined as \cite[pp.~73-74]{Balanis_2012}
 
 \begin{equation}
 	\tan\delta_e = \frac{\sigma_s}{\omega\epsilon'}+\frac{\epsilon''}{\epsilon'}.
 	\label{eqn:loss_tangent_permittivity}
 \end{equation}
 
-There, $\sigma_s$ is the static conductivity, indicating the conductivity of the material for constant fields over time. The complex part of the permittivity $\epsilon''$ describes the lossy part of the dielectric material, specifically relevant for alternating fields over time. The real part of the permittivity is lossless and is noted by $\epsilon'$, and corresponds to the material's ability to store electric energy \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The overall complex permittivity is therefore $\epsilon=\epsilon'+\mathrm{i}\epsilon''$.
+There, $\sigma_s$ is the static conductivity, indicating the conductivity of the material for constant fields over time. The complex part of the permittivity $\epsilon''$ describes the lossy part of the dielectric material, specifically relevant for alternating fields over time. The real part of the permittivity is lossless and is noted by $\epsilon'$, and corresponds to the material's ability to store electric energy \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The overall complex permittivity is therefore $\epsilon=\epsilon'+j\epsilon''$.
 
-The loss tangent relates therefore the conductivity of a material to the real permittivity. A dielectric with low losses has a much larger displacement current than conduction current density ($\tan\delta_e \ll 1$). The opposite is true for a good conductor ($\tan\delta_e \gg 1$) \cite{Balanis_2012}.
+The loss tangent therefore relates the conductivity of a material to the real permittivity. A dielectric with low losses has a much larger displacement current than conduction current density ($\tan\delta_e \ll 1$). The opposite is true for a good conductor ($\tan\delta_e \gg 1$) \cite{Balanis_2012}.
 
 %The loss tangent $\tan\delta_e$ is a function of frequency, however, it is often not stated as such. Therefore, the loss tangent of FR4, for example, is given as $\tan\delta_e=0.02$ for frequencies up to 1\,GHz. For higher frequencies, the molecules may have resonance frequencies, where they influence more strongly the overall conductance and consequently increase the imaginary part of the permittivity $\epsilon''$.
 
-Analogous to polarizable material, there are also magnetizable lossy materials, which is characterized by a complex permeability $\mu=\mu'+\mathrm{i}\mu''$. The real part of the permeability $\mu'$ described the material's ability to store magnetic energy, while $\mu''$ described the magnetic losses  \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The complex permeability can also be described by a magnetic loss tangent $\tan{\delta_m}$, as shown in
+Analogous to polarizable materials, there are also magnetizable lossy materials, which are characterized by a complex permeability $\mu=\mu'+j\mu''$. The real part of the permeability $\mu'$ describes the material's ability to store magnetic energy, while $\mu''$ describes the magnetic losses  \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The complex permeability can also be described by a magnetic loss tangent $\tan{\delta_m}$, as shown in
 
 \begin{equation}
 	\tan{\delta_m}=\frac{\mu''}{\mu'}.
 	\label{eqn:magnetic_loss_tangent}
 \end{equation}
 
-The loss tangent is very low for the majority of materials. Ferrites are an exception, which are commonly used to dampen high frequency signals \cite{Balanis_2012}.
-
-
-
-\subsubsection{Skin Effect}\label{sec:skin_effect}
-
-The Skin effect describes the interaction of electromagnetic waves with conductors, causing eddy currents to form on the surface. To investigate this phenomenon, the complex wavenumber is introduced $\tilde{k}=k + i\kappa$, which is assists in mathematically describing waves propagating in lossy materials. The imaginary part $\kappa$ is expressed as
-
-\begin{equation}
-	\kappa = \omega \sqrt{\frac{\epsilon \mu}{2}}\left[\sqrt{ 1+\left(\frac{\sigma}{\epsilon\omega}\right) ^2 } -1\right]^{1/2}.
-	\label{eqn:kappa}
-\end{equation}
-
-The skin depth $d$ is described by 
-
-\begin{equation}
-	d = 1/\kappa.
-	\label{eqn:skin_depth}
-\end{equation}
-
-For highly conductive materials $\left(\sigma \ll \epsilon\omega\right)$ the skin depth is $d \propto 1/\sqrt{\omega}$. Therefore, high-frequency electromagnetic waves do not penetrate deeply into conductive materials, due to the free electrons associated with high conductivity absorbing the waves with eddy current on the material's surface and transforming the energy into heat. A material's permeability further reduces the skin depth due to the increased susceptibility to eddy currents \cite[p. 104]{Jaroszewski_Thomas_Rane_2019}.
+The loss tangent is very low for the majority of materials. Ferrites are a notable exception and are commonly used to attenuate high-frequency signals \cite[p.~80]{Balanis_2012}.
 
 \subsubsection{ASTM ES7-83 Method}\label{sec:astm}
 
-The ASTM ES7-83 method is used to determine the shielding effectiveness of shielding materials in far-field condition. The shielding material is inserted into a coaxial TEM cell around the septum. Ideally, they form a continuous connection \cite{MORARI_BĂLAN_2015}. 
+The ASTM ES7-83 method is used to determine the shielding effectiveness of shielding materials in far-field conditions. The shielding material is inserted into a coaxial TEM cell around the septum. Ideally, they form a continuous connection \cite{MORARI_BĂLAN_2015}. 
 
-In this method, two measurements are performed with an oscilloscope attached to the output of the TEM cell. In the first, an empty TEM cell is excited and a reference output voltage $U_\mathrm{ref}$ is measured. In the second, the TEM cell is loaded with the shielding material, and the output voltage $U_\mathrm{load}$ is again noted. The measurement values are then used in 
+In this method, two measurements are performed at the output ports of the TEM cell. In the first measurement, an empty TEM cell is excited and a reference output voltage $U_\mathrm{ref}$ is measured. In the second, the TEM cell is loaded with the shielding material, and the output voltage $U_\mathrm{load}$ is again noted. The shielding effectiveness $SE_\mathrm{dB}$ is then derived with the obtained measurement values by \cite{MORARI_BĂLAN_2015}
+
 
 \begin{equation}
 	SE_\mathrm{dB}=20\cdot\log{\left(\frac{U_\mathrm{ref}}{U_\mathrm{load}}\right)}.
 	\label{eqn:SE_voltages}
 \end{equation}
 
-to derive the shielding effectiveness $SE_\mathrm{dB}$ \cite{MORARI_BĂLAN_2015}.
-
-When applying numerical analysis in combination with this method, it is more convenient to defined a reference output power $P_\mathrm{ref}$ for an unloaded TEM cell, and an output power for the loaded case $P_\mathrm{load}$. This leads to the similar 
+When applying numerical analysis in combination with this method, it is more convenient to define a reference output power $P_\mathrm{ref}$ for an unloaded TEM cell, and an output power for the loaded case $P_\mathrm{load}$. This leads to similar expression, 
 
 \begin{equation}
 	SE_\mathrm{dB}=10\cdot\log{\left( \frac{P_\mathrm{ref}}{P_\mathrm{load}} \right)}.
 	\label{eqn:SE_power}
 \end{equation}
 
-Additionally, a rectangular TEM cell is used for this method, instead of the commonly used cylindrical version. \autoref{fig:form_of_shielding_material} shows the cross section of this shielding material, which is inserted into the TEM cell. In \autoref{fig:ASTM ES7-83} the shielding material can be seen wrapped around the septum. 
+\autoref{fig:form_of_shielding_material} shows the cross section of this shielding material, which is inserted into the TEM cell. In \autoref{fig:ASTM ES7-83} the shielding material can be seen wrapped around the septum. 
 
 \begin{figure}[h]
     \centering
     \begin{subfigure}[h]{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{content/img/ASTM ES7-83.png}
-        \caption{Shielding material in TEM cell}
+        \caption{$yz$-plane}
         \label{fig:ASTM ES7-83}
     \end{subfigure}%
     \hfill
     \begin{subfigure}[h]{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{content/img/form_of_shielding_material.png}
-        \caption{Shape of the shielding material}
+        \caption{$xy$-plane}
         \label{fig:form_of_shielding_material}
     \end{subfigure}
+    \caption{Cross section of shielding material in TEM cell}
     \label{fig:subfigures}
 \end{figure}
 
-Then, the S-parameters derived in the simulations are used to get to the output powers $P_\mathrm{ref}$ and $P_\mathrm{load}$. By exciting the TEM cell with a power of 1\,W, the reference power $P_\mathrm{ref}=1\,\mathrm{W}$. The measured power is then derived through
+Then, the S-parameters derived in the simulations are used to determine the output powers $P_\mathrm{ref}$ and $P_\mathrm{load}$. By exciting the TEM cell with a power of 1\,W, the reference power $P_\mathrm{ref}=1\,\mathrm{W}$. The measured power is then derived through
 
 \begin{equation}
-    P_\mathrm{load}=P_\mathrm{ref}\cdot10^{|S_\mathrm{12, dB}|/10}.
+    P_\mathrm{load}=P_\mathrm{ref}\cdot10^{S_\mathrm{12, dB}/10}.
     \label{eqn:load_power}
 \end{equation}
 
 \subsubsection{Dual TEM cell}\label{sec:dual_tem_cell}
 
-The shielding effectiveness of a material may also be determined using a dual TEM cell shown in \autoref{fig:dual_tem_cell}. They are connected through an aperture, which can be filled with the shielding material or left empty. The upper TEM cell is excited through port 1, and acts as a driving cell, transmitting power through the aperture. Port 2 is loaded with the reference impedance $Z_w\approx50\,\Omega$. The second TEM cell functions as a receiver, collecting power at its output ports \cite{MORARI_BĂLAN_2015}.
+The shielding effectiveness of a material may also be determined using a dual TEM cell shown in \autoref{fig:dual_tem_cell}. The two cells are connected through an aperture, which can be filled with the shielding material or left empty. The upper TEM cell is excited through port 1, and acts as a driving cell, transmitting power through the aperture. Port 2 is loaded with the reference impedance $Z_w\approx50\,\Omega$. The second TEM cell functions as a receiver, collecting power at its output ports \cite{MORARI_BĂLAN_2015}.
 
 \begin{figure}[h]
 	\centering
@@ -174,7 +172,7 @@ The shielding effectiveness of a material may also be determined using a dual TE
 	\label{fig:dual_tem_cell}
 \end{figure}
 
-If the aperture is electrically small, its coupling may be described by an electric and a magnetic dipole moment. Their magnitude is related to the electric and magnetic coupling between the TEM cells over the aperture. Therefore, the electric and magnetic coupling can be determined separately by adding or subtracting the output powers of the receiving TEM cell \cite{MORARI_BĂLAN_2015, 4091811}. Consequently, a electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$ and a magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$ can be calculated with
+If the aperture is electrically small, its coupling may be described by an electric and a magnetic dipole moment. Their magnitude is related to the electric and magnetic coupling between the TEM cells over the aperture. Therefore, the electric and magnetic coupling can be determined separately by adding or subtracting the output powers of the receiving TEM cell \cite{MORARI_BĂLAN_2015, 4091811}. Consequently, an electric shielding effectiveness $SE_\mathrm{dB}^\mathrm{e}$ and a magnetic shielding effectiveness $SE_\mathrm{dB}^\mathrm{m}$ can be calculated with
 
 \begin{subequations}
 	\begin{equation}
