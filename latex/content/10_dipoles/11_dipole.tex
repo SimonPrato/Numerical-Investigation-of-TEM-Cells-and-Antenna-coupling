@@ -145,7 +145,7 @@ The complex power $P$ is derived by integrating $\mathbf{S}$ over a closed surfa
 	\label{eqn:compl_power_inf_elec_dipole}
 \end{equation}
 
-The imaginary part of the power radiated by the infinitesimal electric dipole shows capacitive behavior, as demonstrated by \autoref{eqn:compl_power_inf_elec_dipole}.
+The imaginary part of the power radiated by the infinitesimal electric dipole shows capacitive behavior, as demonstrated by \eqref{eqn:compl_power_inf_elec_dipole}.
 
 \subsubsection{Small Electric Dipoles}\label{sec:small_electric_dipole}
 
@@ -158,7 +158,7 @@ A current $I_0$ is fed into the short, center-fed, linear antenna shown in \auto
     \label{eqn:current_dipole}
 \end{equation}
 
-This current distribution differs from that of the infinitesimal dipole, and as a result, the capacitor plates are not required in this model. Additionally, charge accumulates along the antenna due to the linear decrease in current $\mathbf{I}$. This accumulation is characterized by the charge per unit length, $\rho’$, which is appropriate for a thin wire. The relationship is derived from the continuity equation, $\partial \rho/\partial t = -\nabla \cdot \mathbf{J}$. In the frequency domain, this becomes $j\omega \rho = -\nabla \cdot \mathbf{J}$. Substituting this into \autoref{eqn:current_dipole} yields \cite[pp. 410-412]{Jackson}.
+This current distribution differs from that of the infinitesimal dipole, and as a result, the capacitor plates are not required in this model. Additionally, charge accumulates along the antenna due to the linear decrease in current $\mathbf{I}$. This accumulation is characterized by the charge per unit length, $\rho’$, which is appropriate for a thin wire. The relationship is derived from the continuity equation, $\partial \rho/\partial t = -\nabla \cdot \mathbf{J}$. In the frequency domain, this becomes $j\omega \rho = -\nabla \cdot \mathbf{J}$. Substituting this into \eqref{eqn:current_dipole} yields \cite[pp. 410-412]{Jackson}.
 
 \begin{equation}
     \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}j\frac{ I(z)}{\omega} = \pm j\frac{2  I_0}{\omega d}.
@@ -182,14 +182,14 @@ $\rho'$ is uniformly distributed along each antenna arm.
 %\end{equation}
 
 %The electric dipole moment $\mathbf{p}$ is parallel to the antenna's arms and points in the z-direction \cite[p. 412]{Jackson}, \cite[p. 155]{Griffiths_2024}. 
-Next, the vector potential $\mathbf{A}$ is determined using \autoref{eqn:vector_pot}. The calculations of $\mathbf{A}$ simplify to \cite[p. 410]{Jackson},
+Next, the vector potential $\mathbf{A}$ is determined using \eqref{eqn:vector_pot}. The calculations of $\mathbf{A}$ simplify to \cite[p. 410]{Jackson},
 
 \begin{equation}
     \mathbf{A} (\mathbf{x})=\mathbf{\hat{a}}_z \frac{\mu I_0 d}{8\pi r}\mathrm{e}^{-jkr}
     \label{eqn:vector_pot_elec_dipole}
 \end{equation}
 
-The formulation of $\mathbf{A}$ now includes an additional factor of $1/2$ compared to the previously derived expression for infinitesimal dipoles in \autoref{eqn:a_e_inf}. This factor arises from the integration of $\mathbf{I}$: when integrated over the interval $\left[-d/2, d/2\right]$, a linearly decreasing $\mathbf{I}$ yields half the value obtained from a constant $\mathbf{I}$. For the same reason, the electric dipole moment $\mathbf{m}_e$ is also reduced to half of that in \autoref{eqn:m_e_def}.
+The formulation of $\mathbf{A}$ now includes an additional factor of $1/2$ compared to the previously derived expression for infinitesimal dipoles in \eqref{eqn:a_e_inf}. This factor arises from the integration of $\mathbf{I}$: when integrated over the interval $\left[-d/2, d/2\right]$, a linearly decreasing $\mathbf{I}$ yields half the value obtained from a constant $\mathbf{I}$. For the same reason, the electric dipole moment $\mathbf{m}_e$ is also reduced to half of that in \eqref{eqn:m_e_def}.
 
 Furthermore, for the sake of simplicity, it is reasonable to set $\mathbf{x’} = \mathbf{0}$. This approximation has been shown to be sufficient for large $r$, with the resulting amplitude error remaining negligible even for small $r$ \cites[p. 409]{Jackson}[pp. 164-168]{Balanis_1997}.
 
@@ -257,7 +257,7 @@ and the magnetic field intensity by \cite[p.~237]{Balanis_1997}
 	\end{equation}
 \end{subequations}
 
-The complex power density $\mathbf{S}$ can be derived following the same approach as for the electric dipole (see \autoref{eqn:com_pow_dens}). For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals \cite[p.~238]{Balanis_1997}
+The complex power density $\mathbf{S}$ can be derived following the same approach as for the electric dipole (see \eqref{eqn:com_pow_dens}). For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals \cite[p.~238]{Balanis_1997}
 
 
 \begin{equation}
