@@ -32,23 +32,23 @@ according to Schelkunoff's approach to shielding \cite{Schelkunoff_1938}. Absorp
 
 Reflections contribute most significantly to a material’s shielding effectiveness \cite[p.~1]{Jaroszewski_Thomas_Rane_2019}. They are characterized by the reflection coefficient $R$. For a material to reflect incident fields, it must possess free charge carriers. For this reason, highly conductive materials, such as metals, reflect the majority of incident electromagnetic waves.
 
-Reflections are caused by wave impedance mismatch between two materials. It is common practice to use the normalized wave impedance $Z$ to free-space wave impedance $Z_0$ when determining the reflection coefficient $R$. At the interface between free space and a shielding material, this yields \cite[p.~183]{Collin_2015}
+Reflections are caused by wave impedance mismatch between two materials. It is common practice to normalize the wave impedance $\eta_n$ by the free-space wave impedance $\eta_0$ when determining the reflection coefficient $R$. At the interface between free space and a shielding material, this yields \cite[p.~183]{Collin_2015}
 
 \begin{equation}
-	R=\frac{Z-1}{Z+1}.
+	R=\frac{\eta_n-1}{\eta_n+1}.
 	\label{eqn:reflection_coefficient_plane_dielectric}
 \end{equation}
 
 The normalized wave impedance is given by
 
 \begin{equation}
-Z=\frac{1}{Z_0}\sqrt{\frac{j\omega\mu}{\sigma+j\omega\epsilon}}.
+\eta_n=\frac{1}{\eta_0}\sqrt{\frac{j\omega\mu}{\sigma+j\omega\epsilon}}.
 \label{eqn:rel_wave_imp}
 \end{equation}
 
 Electric fields dominate in the near-field region of electric dipoles, as discussed in \cref{sec:ele_dip} and demonstrated with \eqref{eqn:compl_power_inf_elec_dipole}. Consequently, the wave impedance in this region is very high. For effective shielding by reflection, the shielding material should possess high permittivity and high conductivity to achieve a low impedance (see \autoref{eqn:rel_wave_imp}), creating the necessary impedance mismatch for reflection \cite[p.~67]{Jaroszewski_Thomas_Rane_2019}.
 
-In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}, specifically with \eqref{eqn:pr_loop}. A high conductivity shields well against high-frequency magnetic fields due to creation of counter-acting eddy currents \cite[p.~112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magnetic flux lines due to high permeability of the shielding material \cite[pp.~112-113]{Jaroszewski_Thomas_Rane_2019}.
+In contrast, magnetic fields are predominant in the near-field region of magnetic dipoles, as demonstrated with \cref{sec:mag_dip}, specifically with \eqref{eqn:pr_loop}. A high conductivity shields well against high-frequency magnetic fields due to the creation of counter-acting eddy currents \cite[p.~112]{Jaroszewski_Thomas_Rane_2019}. Low-frequency magnetic fields are difficult to shield, and the most common approach is the redirection of magnetic flux lines due to high permeability of the shielding material \cite[pp.~112-113]{Jaroszewski_Thomas_Rane_2019}.
 
 The portion of the electromagnetic wave that is not reflected is subject to absorption within the shielding material. This phenomenon is described by $A_{\mathrm{dB}}$ and accounts for an exponentially decreasing amplitude of an electromagnetic wave in a lossy medium. In conductive materials, this phenomenon is closely related to the skin depth.
 
@@ -99,7 +99,7 @@ The electric field pushes charges in polarizable molecules apart. This separatio
 	\label{eqn:loss_tangent_permittivity}
 \end{equation}
 
-There, $\sigma_s$ is the static conductivity, indicating the conductivity of the material for constant fields over time. The complex part of the permittivity $\epsilon''$ describes the lossy part of the dielectric material, specifically relevant for alternating fields over time. The real part of the permittivity is lossless and is noted by $\epsilon'$, and corresponds to the material's ability to store electric energy \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The overall complex permittivity is therefore $\epsilon=\epsilon'+j\epsilon''$.
+There, $\sigma_s$ is the static conductivity, indicating the conductivity of the material for constant fields over time. The complex part of the permittivity $\epsilon''$ describes the lossy part of the dielectric material, specifically relevant for alternating fields over time. The real part of the permittivity is lossless and is denoted by $\epsilon'$, and corresponds to the material's ability to store electric energy \cite{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}. The overall complex permittivity is therefore $\epsilon=\epsilon'+j\epsilon''$.
 
 The loss tangent therefore relates the conductivity of a material to the real permittivity. A dielectric with low losses has a much larger displacement current than conduction current density ($\tan\delta_e \ll 1$). The opposite is true for a good conductor ($\tan\delta_e \gg 1$) \cite{Balanis_2012}.
 
@@ -116,7 +116,7 @@ The loss tangent is very low for the majority of materials. Ferrites are a notab
 
 \subsubsection{ASTM ES7-83 Method}\label{sec:astm}
 
-The ASTM ES7-83 method is used to determine the shielding effectiveness of shielding materials in far-field conditions. The shielding material is inserted into a coaxial TEM cell around the septum. Ideally, they form a continuous connection \cite{MORARI_BĂLAN_2015}. 
+The ASTM ES7-83 method is used to determine the shielding effectiveness of shielding materials in far-field conditions. The shielding material is inserted into a TEM cell around the septum. Ideally, the shielding material forms a continuous connection with the TEM cell \cite{MORARI_BĂLAN_2015}. 
 
 In this method, two measurements are performed at the output ports of the TEM cell. In the first measurement, an empty TEM cell is excited and a reference output voltage $U_\mathrm{ref}$ is measured. In the second, the TEM cell is loaded with the shielding material, and the output voltage $U_\mathrm{load}$ is again noted. The shielding effectiveness $SE_\mathrm{dB}$ is then derived with the obtained measurement values by \cite{MORARI_BĂLAN_2015}
 
@@ -126,7 +126,7 @@ In this method, two measurements are performed at the output ports of the TEM ce
 	\label{eqn:SE_voltages}
 \end{equation}
 
-When applying numerical analysis in combination with this method, it is more convenient to define a reference output power $P_\mathrm{ref}$ for an unloaded TEM cell, and an output power for the loaded case $P_\mathrm{load}$. This leads to similar expression, 
+When applying numerical analysis in combination with this method, it is more convenient to define a reference output power $P_\mathrm{ref}$ for an unloaded TEM cell, and an output power for the loaded case $P_\mathrm{load}$. This leads to a similar expression, 
 
 \begin{equation}
 	SE_\mathrm{dB}=10\cdot\log{\left( \frac{P_\mathrm{ref}}{P_\mathrm{load}} \right)}.
@@ -154,7 +154,7 @@ When applying numerical analysis in combination with this method, it is more con
     \label{fig:subfigures}
 \end{figure}
 
-Then, the S-parameters derived in the simulations are used to determine the output powers $P_\mathrm{ref}$ and $P_\mathrm{load}$. By exciting the TEM cell with a power of 1\,W, the reference power $P_\mathrm{ref}=1\,\mathrm{W}$. The measured power is then derived through
+Then, the S-parameters derived in the simulations are used to determine the output powers $P_\mathrm{ref}$ and $P_\mathrm{load}$. By exciting the TEM cell with a power of 1\,W, the reference power is $P_\mathrm{ref}=1\,\mathrm{W}$. The measured power is then derived through
 
 \begin{equation}
     P_\mathrm{load}=P_\mathrm{ref}\cdot10^{S_\mathrm{12, dB}/10}.

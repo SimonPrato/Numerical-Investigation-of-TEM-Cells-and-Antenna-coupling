@@ -275,22 +275,22 @@ and $L_A=2.14\,\mathrm{nH}$.
 	\label{fig:free-space-loop}
 \end{figure}
 
-The resulting $L_A$ is compared with
-
-\begin{equation}
-	L_\mathrm{sq} = \frac{2\mu_0 l}{\pi} \left[ \ln\!\left(\frac{l}{w_r}
-	\right) - 0.774 \right],
-	\label{eqn:ind_approx}
-\end{equation}
-
-which provides an approximation for the inductance of a square loop antenna 
-in free space \cite[p.~245]{Balanis_1997}. In this expression, $l$ denotes 
-the length of one side of the loop antenna and $w_r$ the wire radius. For 
-the loop antenna under investigation, \autoref{eqn:ind_approx} yields 
-$L_\mathrm{sq}=2.32\,\mathrm{nH}$, which is comparable to the previously 
-obtained $L_A$.
-
-\todo[inline]{Check: Does this formula consider external inductances?}
+%The resulting $L_A$ is compared with
+%
+%\begin{equation}
+%	L_\mathrm{sq} = \frac{2\mu_0 l}{\pi} \left[ \ln\!\left(\frac{l}{w_r}
+%	\right) - 0.774 \right],
+%	\label{eqn:ind_approx}
+%\end{equation}
+%
+%which provides an approximation for the inductance of a square loop antenna 
+%in free space \cite[p.~245]{Balanis_1997}. In this expression, $l$ denotes 
+%the length of one side of the loop antenna and $w_r$ the wire radius. For 
+%the loop antenna under investigation, \autoref{eqn:ind_approx} yields 
+%$L_\mathrm{sq}=2.32\,\mathrm{nH}$, which is comparable to the previously 
+%obtained $L_A$.
+%
+%\todo[inline]{Check: Does this formula consider external inductances?}
 
 The antenna equivalent circuit is extended with the TEM cell coupling model 
 introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_loop}. The coupling components $C_k$, $M_{A,T1}$ and $M_{A,T2}$ are defined analogously to \cref{sec:monopole_eqc}.
@@ -298,65 +298,63 @@ introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_l
 \begin{figure}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}
-			% Paths, nodes and wires:
-			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm]
-			(N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
-			\node[ground] at (2.5, 8){};
-			\draw (2.5, 9) -| (2.5, 8);
-			\draw (4, 11) to[european resistor, l={$R_s$}] (6, 11);
-			\draw (7.5, 11) to[capacitor, l={$C_A$}] (7.5, 8);
-			\draw (10, 11) to[european inductor, l={$L_A$}] (10, 8);
-			\node[ground] at (7.5, 8){};
-			\node[ground] at (10, 8){};
-			\draw (2.5, 10) -| (2.5, 11) -- (4, 11);
-			\draw (6, 11) -- (7.5, 11) -- (10, 11);
-			\node[circ] at (7.5, 11){};
-			\node[circ] at (10.5, 10){};
-			\node[shape=rectangle, draw, line width=1pt, 
-			dash pattern={on 4pt off 4pt}, minimum width=4.965cm, 
-			minimum height=4.465cm] at (8.5, 9.25){};
-			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
-			at (8.375, 11.5){} node[anchor=north west, align=left, 
-			text width=4.827cm, inner sep=6pt] at (5.75, 12.25){Antenna};
-			\draw (10, 11) to[capacitor, l={$C_k$}] (14.5, 11);
-			\node[circ] at (10, 11){};
-			\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
-			\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
-			\draw (14.5, 10) -| (14.5, 12);
-			\node[circ] at (14.5, 11){};
-			\draw (18, 10) to[capacitor, l={$C_{T2}$}] (18, 8);
-			\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
-			\node[ground] at (18, 8){};
-			\node[ground] at (20.5, 8){};
-			\node[circ] at (18, 10){};
-			\draw (18, 12) -- (22, 12);
-			\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
-			\node[ground] at (23, 8){};
-			\draw (25.5, 10) to[european resistor, l={$R_1$}] (25.5, 8);
-			\node[ground] at (25.5, 8){};
-			\draw (22, 12) -- (24.5, 12);
-			\draw (20.5, 10) -- (20.5, 12);
-			\node[jump crossing] at (20.5, 10){};
-			\draw (18, 10) -- (20.36, 10);
-			\draw (20.64, 10) -- (23, 10);
-			\draw (24.5, 12) -| (25.5, 10);
-			\node[circ] at (20.5, 12){};
-			\node[shape=rectangle, draw, line width=1pt, 
-			dash pattern={on 4pt off 4pt}, minimum width=7.965cm, 
-			minimum height=5.715cm] at (18, 9.875){};
-			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
-			at (16.375, 12.75){} node[anchor=north west, align=left, 
-			text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
-			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
-			at (23.375, 10){} node[anchor=north west, align=left, 
-			text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
-			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
-			at (26.875, 10){} node[anchor=north west, align=left, 
-			text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
-			\node[circ] at (15.75, 12.5){};
-			\node[circ] at (16.75, 10.5){};
-		\end{tikzpicture}
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\node[shape=circle, draw, line width=1pt, minimum width=0.965cm]
+	(N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
+	\node[ground] at (2.5, 8){};
+	\draw (2.5, 9) -| (2.5, 8);
+	\draw (4, 11) to[european resistor, l={$R_s$}] (6, 11);
+	\draw (7.5, 11) to[capacitor, l={$C_A$}] (7.5, 8);
+	\node[ground] at (7.5, 8){};
+	\draw (2.5, 10) -| (2.5, 11) -- (4, 11);
+	\draw (6, 11) -- (7.5, 11) -- (8.75, 11);
+	\node[circ] at (7.5, 11){};
+	\node[circ] at (9.4, 11.5){};
+	\node[shape=rectangle, draw, line width=1pt, 
+	dash pattern={on 4pt off 4pt}, minimum width=5.465cm, 
+	minimum height=6.465cm] at (8.75, 9.5){};
+	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+	at (8.375, 11.5){} node[anchor=north west, align=left, 
+	text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
+	\draw (8.75, 11) to[european inductor, l={$L_A$}] (11, 11)
+	to[capacitor, l={$C_k$}] (14.5, 11);
+	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
+	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
+	\draw (14.5, 10) -| (14.5, 12);
+	\node[circ] at (14.5, 11){};
+	\draw (18, 10) to[capacitor, l={$C_{T2}$}] (18, 8);
+	\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
+	\node[ground] at (18, 8){};
+	\node[ground] at (20.5, 8){};
+	\node[circ] at (18, 10){};
+	\draw (18, 12) -- (22, 12);
+	\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
+	\node[ground] at (23, 8){};
+	\draw (25.5, 10) to[european resistor, l={$R_1$}] (25.5, 8);
+	\node[ground] at (25.5, 8){};
+	\draw (22, 12) -- (24.5, 12);
+	\draw (20.5, 10) -- (20.5, 12);
+	\node[jump crossing] at (20.5, 10){};
+	\draw (18, 10) -- (20.36, 10);
+	\draw (20.64, 10) -- (23, 10);
+	\draw (24.5, 12) -| (25.5, 10);
+	\node[circ] at (20.5, 12){};
+	\node[shape=rectangle, draw, line width=1pt, 
+	dash pattern={on 4pt off 4pt}, minimum width=7.965cm, 
+	minimum height=5.715cm] at (18, 9.875){};
+	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+	at (16.375, 12.75){} node[anchor=north west, align=left, 
+	text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
+	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+	at (23.375, 10){} node[anchor=north west, align=left, 
+	text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
+	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+	at (26.875, 10){} node[anchor=north west, align=left, 
+	text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
+	\node[circ] at (15.75, 12.5){};
+	\node[circ] at (16.75, 10.5){};
+\end{tikzpicture}
 	}
 	\caption{Circuit representing the TEM cell and the loop antenna, with the 
 		additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their 
