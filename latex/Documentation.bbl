@@ -241,6 +241,33 @@
     \field{year}{1988}
   \endentry
 
+  \entry{Chu_1948}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CL}{%
+         family={Chu},
+         familyi={C\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CL1}
+    \strng{fullhash}{CL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1063/1.1715038
+    \endverb
+    \field{number}{12}
+    \field{pages}{1163–1175}
+    \field{title}{Physical limitations of Omni-directional antennas}
+    \field{volume}{19}
+    \field{journaltitle}{Journal of Applied Physics}
+    \field{year}{1948}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{Collin_2015}{book}{}
     \name{author}{1}{}{%
       {{hash=CRE}{%
@@ -395,34 +422,6 @@
     \field{volume}{41}
     \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
     \field{year}{1999}
-  \endentry
-
-  \entry{Hansen_Collin_2013}{book}{}
-    \name{author}{2}{}{%
-      {{hash=HRC}{%
-         family={Hansen},
-         familyi={H\bibinitperiod},
-         given={Robert\bibnamedelima C.},
-         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-      {{hash=CRE}{%
-         family={Collin},
-         familyi={C\bibinitperiod},
-         given={Robert\bibnamedelima E.},
-         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Wiley}%
-    }
-    \strng{namehash}{HRCCRE1}
-    \strng{fullhash}{HRCCRE1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{title}{Small antenna handbook}
-    \field{year}{2013}
   \endentry
 
   \entry{huebner2001finite}{book}{}
@@ -985,42 +984,6 @@
     \field{year}{2015}
   \endentry
 
-  \entry{Propagation_2022}{article}{}
-    \name{author}{2}{}{%
-      {{hash=NDKMHTDGHM}{%
-         family={N.\bibnamedelima Disages K.\bibnamedelima Mojail},
-         familyi={N\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
-  K\bibinitperiod\bibinitdelim M\bibinitperiod},
-         suffix={H.R.\bibnamedelima Mira},
-         suffixi={H\bibinitperiod\bibinitdelim M\bibinitperiod},
-         given={H.\bibnamedelima Taconi D.\bibnamedelima Gravino},
-         giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim
-  D\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=NP}{%
-         family={Nestaris},
-         familyi={N\bibinitperiod},
-         given={P.K.},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{NDKMHMHTDGNP1}
-    \strng{fullhash}{NDKMHMHTDGNP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
-    \verb{doi}
-    \verb 10.31838/njap/04.02.07
-    \endverb
-    \field{number}{2}
-    \field{title}{Understanding Capacitance and Inductance in Antennas}
-    \field{volume}{4}
-    \field{journaltitle}{National Journal of Antennas and Propagation}
-    \field{year}{2022}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
   \entry{Paul_Scully_Steffka_2023}{book}{}
     \name{author}{3}{}{%
       {{hash=PCR}{%
@@ -1268,47 +1231,6 @@
     \field{title}{Excitation of a tem cell by a vertical electric Hertzian
   dipole}
     \field{year}{1981}
-  \endentry
-
-  \entry{4091747}{article}{}
-    \name{author}{3}{}{%
-      {{hash=WPF}{%
-         family={Wilson},
-         familyi={W\bibinitperiod},
-         given={Perry\bibnamedelima F.},
-         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-      {{hash=CDC}{%
-         family={Chang},
-         familyi={C\bibinitperiod},
-         given={David\bibnamedelima C.},
-         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-      {{hash=MMT}{%
-         family={Ma},
-         familyi={M\bibinitperiod},
-         given={Mark\bibnamedelima T.},
-         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-    }
-    \keyw{Probes;Impedance;TEM cells;Perturbation methods;Rectangular
-  waveguides;Green's function methods;Apertures;Antennas;Electromagnetic
-  waveguides;Resistance;Probe antenna;input impedance;TEM cell}
-    \strng{namehash}{WPFCDCMMT1}
-    \strng{fullhash}{WPFCDCMMT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \verb{doi}
-    \verb 10.1109/TEMC.1984.304216
-    \endverb
-    \field{number}{4}
-    \field{pages}{154\bibrangedash 161}
-    \field{title}{Input Impedance of a Probe Antenna in a TEM Cell}
-    \field{volume}{EMC-26}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
-    \field{year}{1984}
   \endentry
 
   \entry{4091811}{article}{}

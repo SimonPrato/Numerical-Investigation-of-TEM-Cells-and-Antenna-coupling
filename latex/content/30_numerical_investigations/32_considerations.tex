@@ -176,24 +176,11 @@ The coupling between the antenna and the two ports of the TEM cell is described 
 If the normalized electric field distribution of the TEM mode $\mathbf{e^\pm}_\mathrm{TEM}$ is unknown, it may be directly derived from the electric field intensity at the output port by setting the excitation power to $P_{\mathrm{1}}=P_{\mathrm{2}}=1/2\,\mathrm{W}$, as demonstrated by \eqref{eqn:power_of_poynting1} and \eqref{eqn:power_of_poynting2}. For example, the uniformly distributed, normalized electric field of the TEM mode along the y-axis at the center of the TEM cell ($z=0$, $x=0$) is derived by
   
   \begin{equation}
-  	|a_\mathrm{TEM}|\cdot\mathbf{e}_\mathrm{TEM}^+(x=0,y,z=0)= \frac{\sqrt{P_\mathrm{1}Z_\mathrm{0}}}{b/2}.
+  	E^+_\mathrm{TEM,y}(x=0,y,z=0) = |a_\mathrm{TEM}|\cdot e_\mathrm{TEM,y}^+(x=0,y,z=0)= \frac{\sqrt{2P_\mathrm{1}Z_\mathrm{0}}}{b/2},
+  	\label{eqn:approx_e_field}
   \end{equation}
   
- 
-%  In this case, a phase shift of $\pi$ indicates the presence of a magnetic dipole moment and the absence of electric dipole moments. This is shown by
-%  
-%  \begin{subequations}
-%  	\begin{equation}
-%  		\mathbf{m}_\mathrm{e} = \frac{a+b}{\mathbf{E}^\pm} = \frac{a+a\cdot e^{j\pi}}{\mathbf{E}^\pm} = 0,
-%  	\end{equation}
-%  	\begin{equation}
-%  		\mathbf{m}_\mathrm{m} = j\frac{a-b}{\mathbf{E}^\pm\cdot k_0} = j\frac{a-a\cdot e^{j\pi}}{\mathbf{E}^\pm\cdot k_0} = j\frac{2a}{\mathbf{E}^\pm\cdot k_0}.
-%  		\label{eqn:me_phase}
-%  	\end{equation}
-%  \end{subequations}
-%  
-%  A phase shift of zero indicates the opposite case. The influence of the electric and magnetic dipole moment is equal, if the phase shift equals $\pi/2$. 
-The peak value of the current through the feedpoint is calculated with the S-parameters:
+  with $E^+_\mathrm{TEM,y}$ being the electric field intensity in $y$-direction of the TEM mode at the output weighted by the modal coefficient $a_\mathrm{TEM}$ according to \eqref{eqn:a_modal_superposition1}. The peak value of the current through the feedpoint is calculated with the S-parameters:
   
   \begin{equation}
   	I_{\mathrm{A}} = \sqrt{2P_{\mathrm{A}}}\frac{(1-S_{\mathrm{AA}})}{\sqrt{Z_0}},
