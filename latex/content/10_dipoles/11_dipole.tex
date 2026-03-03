@@ -202,32 +202,58 @@ Furthermore, for the sake of simplicity, it is reasonable to set $\mathbf{x’} 
 
 The short physical electric dipole described in this section serves as an approximation for the behavior of electrically short antennas. Particular attention must be paid to the excitation method and physical shape, as these factors significantly influence antenna behavior \cite[p.~413]{Jackson}. Furthermore, any antenna analyzed using this approach should remain much smaller than the wavelength $\lambda$ to minimize analytical approximation errors.
 
-\subsection{Magnetic Dipoles}\label{sec:mag_dip}
+\subsection{Magnetic Dipoles}\label{sec:mag_dip}. 
 
-The magnetic dipole moment characterizes the strength of a magnetic source. An electrically small current loop fed with a current $I_0$ can be used to model the magnetic dipole, as demonstrated in \autoref{fig:magnetic_dipole_drawing}. This approximation is valid provided the overall loop circumference satisfies $2\pi b < \lambda/10$ and the wire is assumed very thin \cite[p.~231]{Balanis_1997}. Furthermore, the radiation pattern of the magnetic dipole is equal to that of the electric dipole, with the role of the electric and magnetic fields interchanged \cite[p.~254]{Griffiths_2024}.
+The magnetic dipole moment characterizes the strength of a magnetic source. An 
+electrically small current loop carrying a current $I_0$ serves as the 
+model for a magnetic dipole, as shown in \autoref{fig:magnetic_dipole_drawing}. 
+This approximation is valid provided the loop circumference satisfies 
+$2\pi b \ll \lambda/10$~\cite[p.~231]{Balanis_1997}. The radiation pattern of the magnetic 
+dipole is equal to that of the electric dipole, with the roles of the electric and 
+magnetic fields interchanged~\cite[p.~254]{Griffiths_2024}.
 
-The magnetic dipole moment $\mathbf{m}_m$ is given by
+The magnetic dipole moment $\mathbf{M}_m$ has units of $\mathrm{A\,m^2}$ and is 
+defined for a current loop as~\cite[p.~361]{Collin_2015}
 
 \begin{equation}
-    \mathbf{m}_m=I_m L \cdot \mathbf{\hat{a}}_z.
-    \label{eqn:mag_dipole_moment}
+	\mathbf{M}_m = I_0\,\mathbf{A},
+	\label{eqn:M_m}
 \end{equation}
+
+where $\mathbf{A} = A\,\hat{\mathbf{a}}_z$ is the vector area of the loop, with 
+magnitude $A$ and unit normal aligned along the $z$-direction.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.5\linewidth]{content/img/magnetic_dipole_drawing.png}
-	\caption{The geometry of a current loop with radius $b$ is shown, where the loop is fed with a current $I_0$ that generates a magnetic dipole moment $\mathbf{m}_m$. Alternatively, an equivalent magnetic dipole moment can be produced by a magnetic current $I_\mathrm{m}$ flowing perpendicular to the plane of the loop over a distance $L$.}
+	\caption{Current loop of radius $b$ carrying a current $I_0$ that generates a 
+		magnetic dipole moment $\mathbf{M}_m$. Equivalently, the same dipole moment can 
+		be produced by a magnetic current $I_\mathrm{m}$ flowing perpendicular to the 
+		plane of the loop over a distance $L$.}
 	\label{fig:magnetic_dipole_drawing}
 \end{figure}
 
-Furthermore, the magnetic current $I_m$ and the electric current $I_0$ in the loop are related with \cite[p. 237]{Balanis_1997}
+An equivalent representation replaces the current loop with a magnetic current $I_m$ 
+flowing over a distance $\mathbf{L} = L\,\hat{\mathbf{a}}_z$, with
+magnitude $L$ and unit normal aligned along the $z$-direction. This yields an alternative definition of the magnetic dipole 
+moment with units of $\mathrm{V\,m}$~\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024},
 
 \begin{equation}
-	I_m L = jA\omega\mu_0 I_0
+	\mathbf{m}_m = I_m \mathbf{L}.
+	\label{eqn:mag_dipole_moment}
+\end{equation}
+
+This definition is widely adopted in the literature and in numerical simulation codes~\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}. 
+Since both definitions describe the same physical source, a relation exists, expressed as~\cites[p.~237]{Balanis_1997}{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}
+
+\begin{equation}
+	I_m L = j\omega\mu_0 A I_0,
 	\label{eqn:magn_current_curr_loop}
 \end{equation}
 
-with $A=\pi b^2$ denoting the area of the current loop. Analogous to the separation distance $d$ in the electric dipole, $L$ is the length of the magnetic dipole. The electric and magnetic field intensities $\mathbf{E}$ and $\mathbf{H}$ produced by the dipole and current loop are the same. Thus, the infinitesimal magnetic dipole $I_m L$ and the electrically small current loop $jA\omega\mu_0 I_0$ are equivalent representations \cite[p.~237]{Balanis_1997}. The electric field intensity $\mathbf{E}$ of the magnetic dipole is given by
+so that the infinitesimal magnetic current element $I_m L$ and the electrically small 
+current loop $I_0$ are equivalent representations producing identical electric and 
+magnetic field distributions. The electric field intensity $\mathbf{E}$ of the magnetic dipole is given by
 
 \begin{subequations}\label{eqn:m_e}
 	\begin{equation}

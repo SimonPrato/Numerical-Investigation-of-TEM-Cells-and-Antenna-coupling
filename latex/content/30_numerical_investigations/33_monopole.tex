@@ -47,28 +47,6 @@ The equivalent electric and magnetic dipole moments, $\mathbf{m}_e$ and $\mathbf
 	\label{fig:dipolemomentsmonopolewide}
 \end{figure}
 
-
-%\begin{figure}[htbp]
-%	\centering
-%	\begin{subfigure}[b]{0.48\textwidth}
-	%		\centering
-	%		\includegraphics[width=1\linewidth]{content/img/dipole_moments_monopole.png}
-	%		\caption{Equivalent dipole moments to model the monopole antenna.}
-	%		\label{fig:dipole_moments_monopole}
-	%	\end{subfigure}
-%	\hfill
-%	\begin{subfigure}[b]{0.48\textwidth}
-	%		\centering
-	%		\includegraphics[width=1\linewidth]{content/img/phase_shift_monopole}
-	%		\caption{Phase shift of the power between the output ports produced by the monopole antenna.}
-	%		\label{fig:phaseshiftmonopole}
-	%	\end{subfigure}
-%	
-%	\caption{The equivalent dipole moments and the corresponding induced phase shift of the power between the output ports delivers information about the electric and magnetic coupling behavior of the monopole antenna.}
-%	\label{fig:monopole_moments_phase}
-%\end{figure}
-
-
 \subsubsection{Feed voltage, current and impedance}\label{sec:v_c_z_mon}
 
 The feedpoint voltage $V$ of the antenna, shown in \autoref{fig:monopolefeedpointvoltagecurrent}, remains largely constant over the investigated frequency range. Consequently, the voltage induced between the antenna and the septum is negligible, which is an observation consistent with the absence of a magnetic dipole moment $\mathbf{m}_m$ according to \autoref{eqn:m_v}. 
@@ -96,8 +74,6 @@ The capacitive nature of the antenna impedance is confirmed by the impedance plo
 	\caption{Magnitude of the voltage and current applied at the feedpoint of the monopole antenna over frequency, derived through the S-parameters with \eqref{eqn:iin} and \eqref{eqn:vin}, with the respective magnitude and phase of the antenna impedance over frequency, derived through the S-parameters with \eqref{eqn:za}.}
 	\label{fig:monopoleimpvoltcurr}
 \end{figure}
-
-%The electric current present in the monopole antenna is aligned with the electric field $\mathbf{e}_\mathrm{TEM}^\pm$ of the dominant TEM mode present in the investigated frequency range. The electric dipole moment in y-direction suffices to model the antenna, because they align with the fields of the TEM mode.
 
 \subsubsection{Current along antenna}\label{sec:current_antenna_mon}
 
@@ -156,7 +132,7 @@ which corresponds to $\mathbf{m}_e\cdot \eta_0=3.23\cdot 10^{-2} \cdot\,\mathrm{
 		\label{fig:monopole_surface_currents}
 	\end{subfigure}
 	
-	\vspace{1em} % Add vertical space between subfigures
+	\vspace{1em} 
 	
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
@@ -255,7 +231,7 @@ $C_A$. The resulting capacitance equals $C_A=98.36\,\mathrm{fF}$, and the induct
 	R_A = \frac{2P_{rad}}{I_{in}^2}.
 \end{equation}
 
-The resulting radiation resistance ranges from the milli-ohm range up to $3\,\Omega$ and increases quadratically with frequency.
+The resulting radiation resistance ranges from the milli-ohm range up to $0.9\,\Omega$ and increases quadratically with frequency.
 
 \begin{figure}[h]
 	\centering
@@ -376,54 +352,5 @@ The resulting $\mathbf{m}_e$ and $\mathbf{m}_m$ of the monopole antenna are depi
 		comparison purposes.}
 	\label{fig:eqc-dipoles-comp}
 \end{figure}
-
-
-\FloatBarrier
-
-
-
-
-%\todo[inline]{idea: offset in z-direction, show surface current how it gets a pahse shift at waveports, and a magnetic dipole moment appears to be induced}
-%\todo[inline]{idea: offset in x-direction, showing surface current and explaining the decrease in power transfer (normal E-field distribution)}
-
-%If only the TEM mode propagates, only the y-component of an electric dipole moment and the x-component of a magnetic dipole moment generates output power, assuming they are centrally located ($x=0$, $y=b/4$, $z=0$). This is due to the magnetic field containing only an x-component $\mathbf{h}^\pm = h_x^\pm e^{\pm k_0 z}$, and the electric field only an y-component $\mathbf{e}^\pm = e_y^\pm e^{\pm k_0 z}$ at the center of the TEM cell. \todo{Sketch this situation. Also, $e^{\pm k_0 z}$ indicated that at z=0 the dipole moment is located. Consider this in all sketches}
-%An offset of dipole moments or propagation of higher order modes lead to different field components of $\mathbf{h}^\pm$ and $\mathbf{e}^\pm$, and therefore to a change in coupling. These effects are investigated numerically in \autoref{sec:dipole_moments}.
-
-
-\FloatBarrier
-%\subsubsection{Electromagnetic energy in the TEM cell}
-%\FloatBarrier
-%
-%The monopole antenna generates electromagnetic fields within the TEM cell, resulting in stored electromagnetic energy. The frequency-dependent electric energy is shown in \autoref{eqn:em_energy}. Its quadratic increase correlates with the output power in \autoref{fig:monopoleoutputpower}. The corresponding magnetic energy is several orders of magnitude smaller due to the capacitive behavior of the monopole antenna and is therefore neglected. From the stored electric energy, both the real and imaginary components of the power consumed by the antenna can be determined.
-%
-%Moreover, the effective inductance and capacitance of the monopole antenna inside the TEM cell can be derived from the magnetic and electric energy expressions given in \crefrange{eqn:l_m_energy}{eqn:c_e_energy}. Using the peak value of the electric energy shown in \autoref{fig:monopoleelecenergy}, the capacitance is estimated to be $C\approx108.55\,\mathrm{fF}$.
-%
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=1\linewidth]{content/img/monopole_elec_energy}
-%	\caption{Electric energy determined by integrating the electric field over the TEM cell volume, using \autoref{eqn:em_energy}. }
-%	\label{fig:monopoleelecenergy}
-%\end{figure}
-
-%\begin{figure}[htbp]
-%	\centering
-%	\begin{subfigure}[b]{0.48\textwidth}
-	%	\centering
-	%\includegraphics[width=1\linewidth]{content/img/monopole_magn_energy}
-	%\caption{Magnetic energy determined with \autoref{eqn:em_energy}}
-	%\label{fig:monopolemagenergy}
-	%	\end{subfigure}
-%	\hfill
-%	\begin{subfigure}[b]{0.48\textwidth}
-	%	\centering
-	%\includegraphics[width=1\linewidth]{content/img/monopole_elec_energy}
-	%\caption{Electric energy determined with \autoref{eqn:em_energy}}
-	%\label{fig:monopoleelecenergy}
-	%	\end{subfigure}
-%	
-%	\caption{Peak electromagnetic energy in the TEM cell generated by the monopole antenna}
-%	\label{fig:monopole_em_energy}
-%\end{figure}
-
 
 \FloatBarrier

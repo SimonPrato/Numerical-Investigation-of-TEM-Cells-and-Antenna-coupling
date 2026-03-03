@@ -61,12 +61,6 @@ The phase shift approaches $\pi$ at low frequencies, indicating that the magneti
 	\label{fig:moments-phase-loop}
 \end{figure}
 
-%The surface of the loop equals $S=1.68\,\mathrm{mm}^2$. The magnetic dipole moment $\mathbf{m}_m$ can be approximated by applying \crefrange{eqn:e_a_closed_int}{eqn:m_v}, using the normalized magnetic field intensity of the TEM mode $\mathbf{h}_\mathrm{TEM}^\pm$ and the feed voltage in \autoref{fig:loopfeedreturncurrent}. At 3\,GHz, for example, this yields
-%
-%\begin{equation}
-%	\mathbf{m}_m (f=3\,\mathrm{GHz})=I()\cdot j\omega \mu_0 \frac{S\cdot(\mathbf{h}^-_\mathrm{TEM} - \mathbf{h}^+_\mathrm{TEM})}{2\mathbf{e}^\pm_\mathrm{TEM}\cdot k_0}
-%\end{equation}
-
 \subsubsection{Output power}\label{sec:output_power_loop}
 
 The output power and the electric field intensity $E^\pm_y$ at $x=0$, $y=b/4$, $z=\pm l/2$ induced by the loop antenna at the output ports are shown in \autoref{fig:loopopower}. In comparison to the monopole antenna results presented in \autoref{fig:monopoleoutputpower}, both quantities increase more slowly with frequency. This is directly attributed to the concave frequency dependence of the magnetic dipole moment $\mathbf{m}_m$, given that the output power scales quadratically with the dipole moment amplitude. The increase in $\mathbf{m}_e$ does not compensate for this power reduction, as its influence on the output power is small, demonstrated by the analysis in \cref{sec:geom_dip_loop}. The investigation demonstrates that the increasing capacitive coupling at higher frequencies enhances the electric dipole moment contribution and partially opposes the magnetic dipole moment, thereby reducing the overall power transfer.
@@ -156,92 +150,90 @@ Finally, as shown in \autoref{fig:loop-geom-power}, the configuration producing 
 	\label{fig:curr_volt_imp}
 \end{figure}
 
-%The difference between the current near the feedpoint and that on the return path increases with frequency, indicating a growing occurrence of displacement currents.  The voltage across the feedpoint is obtained using \autoref{eqn:vin}. Magnitude and phase of the impedance of the loop antenna are determined with \autoref{eqn:za}. \autoref{eqn:vin}
-
 The current $I$ in the loop antenna is evaluated at a distance of $0.17\,$mm above the feedpoint and at the same height above the PEC plane along the return path, as indicated in \autoref{fig:loopantennageometry}. This offset from the feedpoint and the PEC plane reduces numerical artifacts arising from the large displacement currents in their vicinity, thereby improving the accuracy of the extracted current values. The current $I$ is obtained by integrating the magnetic field intensity $\mathbf{H}$ along a closed loop of radius $0.11\,$mm around the respective wire segments, according to \eqref{eqn:ampere_law_fem}. 
 
 The extracted current values differ between the two paths, which indicates that displacement currents couple from the antenna to the septum, giving rise to the electric dipole moment $\mathbf{m}_e$ according to \eqref{eqn:me_i}, and return to the feedpoint, constituting the reactive electric energy stored by the antenna. Furthermore, this difference increases with frequency, consistent with the growing displacement currents and the associated increase in $\mathbf{m}_e$. This observation is in good agreement with $\mathbf{m}_e$ presented in \autoref{fig:dipole_moments_loop_antenna}.
 
-\autoref{fig:loopfeedreturncurrent} demonstrates the voltage at the feedpoint of the antenna. This voltage partly couples with the septum, giving raise to $\mathbf{m}_m$ according to \eqref{eqn:m_v}, and partly constitutes the magnetic energy stored by the antenna. The feed voltage significantly rises with frequency and flattens at higher frequencies, which strongly correlates with the frequency-behavior of $\mathbf{m}_m$. This correlation validates the theoretical framework established describing the magnetic dipole moment creation of antennas in this thesis.
-
-On a side note, the increase in voltage also correlates with the displacement current. It raises the potential on the loop antenna, therefore increasing the charge distributions and displacement currents.
+\autoref{fig:loopfeedreturncurrent} demonstrates the voltage at the feedpoint of the antenna. A portion of this voltage couples to the septum, giving rise to $\mathbf{m}_m$ according to \eqref{eqn:m_v}, while the remainder constitutes the magnetic energy stored in the antenna. The feed voltage significantly rises with frequency and flattens at higher frequencies, which strongly correlates with the frequency-behavior of $\mathbf{m}_m$. This correlation validates the theoretical framework established describing the magnetic dipole moment creation of antennas in this thesis.
 
 Lastly, the increases in voltage and decrease in current agrees with the impedance, depicted in \autoref{fig:currimp}. The loop antenna also shows strongly inductive behavior, as expected by the pre-dominantly magnetic energy stored, magnetic dipole moment and inductive geometry. 
-
-The feed voltage of the loop antenna is presented in \autoref{fig:loopfeedreturncurrent}. A portion of this voltage couples to the septum, giving rise to the magnetic dipole moment $\mathbf{m}_m$ according to \eqref{eqn:m_v}, while the remainder constitutes the magnetic energy stored in the antenna. The feed voltage increases significantly with frequency before flattening at higher frequencies, a behavior that is reflected in the frequency-dependent behavior of $\mathbf{m}_m$. 
 
 It is further noted that the increasing voltage mirrors an increased potential and charge accumulation on the loop antenna, thereby increasing the displacement currents coupling to the septum. Therefore, the generation of a magnetic dipole moment $\mathbf{m}_m$ in the loop antenna is naturally accompanied by a electric dipole moment $\mathbf{m}_e$. Lastly, the increase in feed voltage and decrease in feed current are consistent with the antenna input impedance shown in \autoref{fig:currimp}. Furthermore, it exhibits strongly inductive behavior, as expected given the predominantly magnetic energy storage, the dominant magnetic dipole moment, and the inherently inductive geometry of the loop antenna.
 
 \subsubsection{Current distribution on septum}\label{sec:current_dist_septum_loop}
 
-The radiating loop antenna induces surface currents on the septum of the TEM cell, as shown in \autoref{fig:loop_surface_current}. At a frequency of 3\,GHz, the currents reaching the output ports are out of phase, as illustrated in \autoref{fig:current_loop_surface_current}. This observation is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase shift of $\pm\pi$ between the output port powers in the presence of a magnetic dipole moment.
+The loop antenna induces surface currents on the septum of the TEM cell, as shown in \autoref{fig:loop_surface_current}. The spatial distribution and magnitude of these currents depend on the antenna position and orientation, the excitation frequency, and the propagating modes supported by the cell. An analysis of the induced surface currents therefore provides direct insight into the coupling mechanisms governing the power transfer to the output ports.
+
+When the loop antenna is placed centrally without rotation, thereby placed in the $yz$-plane as shown in \autoref{fig:loopantennageometry}, and operating at $f=3\,\mathrm{GHz}$, its magnetic dipole moment predominantly excites the TEM mode of the cell. \autoref{fig:current_loop_surface_current} demonstrates that the surface currents reaching the two output ports are out of phase. This behavior is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase difference of $\pm\pi$ between the output port powers for magnetic dipole excitation.
+
+When the antenna is rotated by $\pm\pi/4$ around the $y$-axis and laterally offset by $x=7\,\mathrm{mm}$, the transmitted power at $f=3\,\mathrm{GHz}$ becomes negligible. According to \eqref{eqn:e_a_closed_int} and \eqref{eqn:e_b_closed_int}, efficient magnetic coupling requires alignment between the magnetic field of the propagating mode, $\mathbf{h}_\mathrm{TEM}^\pm$, and the surface normal vector of the loop antenna. In this configuration, the normal vector of the loop surface is oriented along the $z$-direction, whereas $\mathbf{h}_\mathrm{TEM}^\pm$ is primarily directed along the $x$-axis. As a result, the overlap integral governing magnetic coupling is strongly reduced. The current distribution shown in \autoref{fig:loopsurfacecurrentsoffsetrotation} confirms that no significant traveling waves are excited. Instead, the induced currents form predominantly closed circulation patterns and remain largely reactive, such that only a negligible amount of current reaches the output ports.
+
+At $f=3.3\,\mathrm{GHz}$, the TE\textsubscript{01} mode propagates in addition to the TEM mode. In this case, the magnetic field component $\mathbf{h}_\mathrm{TE01}^\pm$ exhibits a significant $z$-component near the cell walls, which aligns with the normal vector of the rotated loop surface. This alignment substantially enhances magnetic coupling. As shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}, a considerable portion of the induced surface current now propagates toward the output ports, resulting in measurable power transmission. In contrast to the purely TEM case, the output powers are in phase, as discussed in \cref{sec:equ-dip-mom}.
+
+The frequency-dependent power transfer for this configuration is shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}, where the contributions of the TEM and TE\textsubscript{01} modes are presented separately. At $f=3.21\,\mathrm{GHz}$, a resonance occurs within the TEM cell, resulting in a pronounced peak in the output power associated with the TE\textsubscript{01} mode. This resonance corresponds to a condition in which half the wavelength matches the effective electrical length of the TEM cell, as previously discussed in \cref{sec:higher-order-modes}.
+
+Notably, the power transmitted via the TE\textsubscript{01} mode exceeds that of the TEM mode and remains significant even below its theoretical cut-off frequency of $f_{\mathrm{c,01}}=3.12\,\mathrm{GHz}$. This behavior illustrates the theoretical framework established in \cref{sec:el_small_antennas}, which describes the magnetic coupling of electrically small antennas in terms of modal field alignment.
 
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents.png}
-		\caption{The centrally located loop antenna without offset or rotation at a frequency of 3\,GHz, where mainly the TEM mode propagates.}
+		\caption{Surface current density on the septum for a centrally positioned loop antenna without rotation at $f=3\,\mathrm{GHz}$. Predominantly the TEM mode propagates, and the currents reaching the output ports are out of phase.}
 		\label{fig:current_loop_surface_current}
 	\end{subfigure}
 	
-	\vspace{1em} % Add vertical space between subfigures
+	\vspace{1em}
 	
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation_100MHz}
-		\caption{Loop antenna with offset of $x=7\,\mathrm{mm}$ and a $\pi/4$ rotation angle at 100\,MHz, where only the TEM mode propagates. The currents passing to the output ports are negligible.}
+		\caption{Surface current density for a loop antenna with lateral offset $x=7\,\mathrm{mm}$ and rotation angle $\pi/4$ at a frequency where only the TEM mode propagates. The induced currents remain largely reactive and do not reach the output ports.}
 		\label{fig:loopsurfacecurrentsoffsetrotation}
 	\end{subfigure}
 	
-	\vspace{1em} % Add vertical space between subfigures
+	\vspace{1em}
 	
 	\begin{subfigure}[b]{1\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation_3GHz3}
-		\caption{Loop antenna with offset of $x=7\,\mathrm{mm}$ and a $\pi/4$ rotation angle at 3.3\,GHz, where the TEM and TE\textsubscript{01} modes both propagate. The currents passing to the output ports produce significant power, as shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.}
+		\caption{Surface current density for the same offset and rotation at $f=3.3\,\mathrm{GHz}$, where both TEM and TE\textsubscript{01} modes propagate. A significant portion of the current reaches the output ports, enabling efficient power transmission.}
 		\label{fig:loopsurfacecurrentsoffsetrotation3ghz3}
 	\end{subfigure}
 	
-	\caption{Surface current density on the septum induced by the loop antenna for different frequencies and positions of the antenna.}
+	\caption{Surface current density on the septum induced by the loop antenna for different antenna configurations and excitation frequencies.}
 	\label{fig:loop_surface_current}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\linewidth]{content/img/loop_surface_currents_offset_rotation_3GHz3_plot}
-	\caption{Output power transmitted by the antenna to the output port through the TEM and TE\textsubscript{01} modes, separately over frequency, determined through the S-parameters with \autoref{eqn:power_antenna}. At a frequency of $f=3.21\,\mathrm{GHz}$ a resonance in the TEM cell occurs, leading to the visible peak in the output power produced by the TE\textsubscript{01} mode. }
+	\caption{Frequency-dependent output power transmitted by the offset and rotated loop antenna ($x=7\,\mathrm{mm}$, $\pi/4$) to one output port. The contributions of the TEM and TE\textsubscript{01} modes are shown separately, highlighting the resonance near $3.21\,\mathrm{GHz}$ and the dominant coupling via the TE\textsubscript{01} mode.}
 	\label{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}
 \end{figure}
 
-When the antenna is rotated by $\pm\pi/4$ and offset by $x=7\,\mathrm{mm}$, power transmission at 3\,GHz is insignificant. According to \crefrange{eqn:e_a_closed_int}{eqn:e_b_closed_int} and \autoref{eqn:m_v}, efficient coupling requires the magnetic field intensity of the propagating TEM mode $\mathbf{h}_\mathrm{TEM}^\pm$ to be aligned with the vector normal to the antenna surface. The current distribution \autoref{fig:loopsurfacecurrentsoffsetrotation} demonstrates no excited waves in this configuration. Instead, the power produced by the surface current remains reactive, forming closed circulation patterns around the induced magnetic fields. 
-
-At a frequency of 3.3\,GHz, the TE\textsubscript{01} mode propagates in the TEM cell. In this case, $\mathbf{h}_\mathrm{TE01}^\pm$ aligns with the normal vector of the offset and rotated loop antenna surface. As shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}, a significant proportion of the current now reaches the output ports, resulting in transmission of power. In contrast to the previous case, the output powers are in-phase, as discussed in \cref{sec:equ-dip-mom}. The output power transmitted by the TE\textsubscript{01} mode increases sharply with frequency, as demonstrated in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}.
-
-
-
 \subsubsection{Equivalent circuit model}\label{sec:eqc_loop}
 
-Following the same approach established in \cref{sec:monopole_eqc}, an 
+Following the same approach established for the monopole antenna in \cref{sec:monopole_eqc}, an 
 equivalent circuit is derived for the small loop antenna. 
 \autoref{fig:eqc_balanis} demonstrates the full equivalent circuit for the 
-electrically small loop antenna in free space \cite[p. 244]{Balanis_1997}, 
+electrically small loop antenna in free space \cite[p.~244]{Balanis_1997}, 
 where
 
 \hspace{1cm}\begin{minipage}{\dimexpr\textwidth-2cm}
 	\begin{description}
-		\item[$C_s$]   Stray capacitance of the loop antenna
-		\item[$R_L$]   Ohmic loss resistance of the antenna conductor
-		\item[$R_r$]   Radiation resistance of the loop antenna
-		\item[$L_i$]   Internal inductance of the loop antenna
-		\item[$L_e$]   External inductance of the loop antenna
+		\item[$C_s$]   Stray capacitance,
+		\item[$R_L$]   Ohmic loss resistance,
+		\item[$R_r$]   Radiation resistance,
+		\item[$L_i$]   Internal inductance,
+		\item[$L_e$]   External inductance.
 	\end{description}
 \end{minipage}
 
 As discussed in \cref{sec:antenna_model}, the antenna is modeled as a perfect 
 electric conductor, therefore $R_L$ and $L_e$ are neglected. Instead, the 
 simplified equivalent circuit in \autoref{fig:eqc_simple} is applied, where 
-$R_A$, $L_A$ and $C_A$ represent the impedance behavior of the antenna.
+$R_A$, $L_A$ and $C_A$ represent the remaining antenna components determining the impedance behavior of the antenna.
 
 \begin{figure}[tbp]
 	\centering
@@ -304,29 +296,6 @@ $R_A$, $L_A$ and $C_A$ represent the impedance behavior of the antenna.
 	\label{fig:eqc_loop}
 \end{figure}
 
-%The equivalent circuit of the loop antenna can be used to reason about 
-%the coupling behavior of the antenna. In particular when assuming that a significant induced voltage $V_n$ occurs across the inductor through magnetic near-field coupling. This voltage $V_n$ is then related to an induced displacement current $I_n$ through the capacitance by
-%
-%\begin{equation}
-%	\frac{I_n}{V_n}=\frac{j\omega Q}{R_A\omega_0^2+j\omega L\omega_0^2
-%		-R_w\omega^2},
-%	\label{eqn:loop_w0}
-%\end{equation}
-%
-%where $\omega_0 = 1/\sqrt{L_AC_A}$ denotes the resonance frequency, 
-%$Q=\omega_0R_wC_A$ the Q-factor of the equivalent circuit and $R_w$ the  characteristic impedance of the antenna feedpoint, assuming that it is purely resistive. Since $V_n$ and 
-%$I_n$ are directly associated with the magnetic and electric dipole moments 
-%$\mathbf{m}_m$ and $\mathbf{m}_e$ through \cref{eqn:m_v,eqn:me_i}, 
-%the electric and magnetic coupling behavior of the small loop antenna can 
-%be directly linked to its resonance frequency and Q-factor.
-%
-%A lower resonance frequency $\omega_0$, higher Q-factor $Q$ or capacitance 
-%$C_A$ results in a more pronounced non-linear frequency-behavior of 
-%$\mathbf{m}_m$ and $\mathbf{m}_e$. Furthermore, increased capacitance lowers 
-%the resonance frequency $\omega_0$ toward the investigated frequency range 
-%and increases the antenna's electrical length \cite{Propagation_2022}, both 
-%attributing to increased radiated power.
-
 To determine $R_A$, $L_A$ and $C_A$, the antenna model is placed on a PEC 
 surface in an open space, as demonstrated in \autoref{fig:free-space-loop}. 
 The inductance and capacitance are derived according to 
@@ -356,25 +325,8 @@ and $L_A=2.14\,\mathrm{nH}$.
 	\label{fig:free-space-loop}
 \end{figure}
 
-%The resulting $L_A$ is compared with
-%
-%\begin{equation}
-%	L_\mathrm{sq} = \frac{2\mu_0 l}{\pi} \left[ \ln\!\left(\frac{l}{w_r}
-%	\right) - 0.774 \right],
-%	\label{eqn:ind_approx}
-%\end{equation}
-%
-%which provides an approximation for the inductance of a square loop antenna 
-%in free space \cite[p.~245]{Balanis_1997}. In this expression, $l$ denotes 
-%the length of one side of the loop antenna and $w_r$ the wire radius. For 
-%the loop antenna under investigation, \autoref{eqn:ind_approx} yields 
-%$L_\mathrm{sq}=2.32\,\mathrm{nH}$, which is comparable to the previously 
-%obtained $L_A$.
-%
-%\todo[inline]{Check: Does this formula consider external inductances?}
-
 The antenna equivalent circuit is extended with the TEM cell coupling model 
-introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_loop}. The coupling components $C_k$, $M_{A,T1}$ and $M_{A,T2}$ are defined analogously to \cref{sec:monopole_eqc}.
+introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_loop}. The coupling components $C_k$, $M_{A,T1}$ and $M_{A,T2}$ are defined analogously to the equivalent circuit of the monopole antenna in \cref{sec:monopole_eqc}.
 
 \begin{figure}[htbp]
 	\centering
@@ -445,7 +397,7 @@ introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_l
 
 The resulting $\mathbf{m}_e$ and $\mathbf{m}_m$ are depicted in 
 \autoref{fig:loopeqcmoments}, which are similar to the dipole moments 
-derived by the simulator in the higher end of the frequency range. However, accuracy recedes in the low-frequency range.
+derived by the simulator in the higher end of the frequency range. However, accuracy recedes in the low-frequency range. This deviation is likely attributable to numerical inaccuracies in the extracted lumped circuit parameters, whose influence is most pronounced at low frequencies where the dipole moment magnitudes are small.
 
 \begin{figure}[htbp]
 	\centering
@@ -457,86 +409,6 @@ derived by the simulator in the higher end of the frequency range. However, accu
 		comparison purposes.}
 	\label{fig:loopeqcmoments}
 \end{figure}
-
-
-
-
-%\autoref{fig:currentloopchargedistribution} shows the charge density distribution in the current loop antenna. Charges collect, among other locations, at the bottom wire. This leads to electric coupling with the septum. 
-%
-%\begin{figure}[htbp]
-%	\centering
-%	\begin{minipage}[b]{0.45\textwidth}
-	%		\centering
-	%		\includegraphics[width=0.5\linewidth]{content/img/current_loop_charge_distribution}
-	%		\caption{Charge density distribution in current loop antenna}
-	%		\label{fig:currentloopchargedistribution}
-	%	\end{minipage}
-%	\hfill
-%	\begin{minipage}[b]{0.45\textwidth}
-	%		\centering
-	%		\includegraphics[width=0.5\linewidth]{content/img/current_loop_current_distribution}
-	%		\caption{Current density distribution in current loop antenna}
-	%		\label{fig:currentloopcurrentdistribution}
-	%	\end{minipage}
-%\end{figure}
-
-
-%The current and voltage drops along the wire are not constant. From the feedpoint to the first corner, there is a much larger voltage drop and current, than from the second corner to the ground plane. Consequently, the power consumed by the first part is much higher than by the latter \todo{Insert power consumption plots of each antenna section}. Additionally, this difference in power consumption increases slightly over frequency. 
-
-%The electric current reduces over the wire because of the displacement current to the septum and the ground plane. As visible in the charge density plot in \autoref{fig:currentloopcurrentdistribution} and the electric field plot in \autoref{fig:currentloopnearefield}, much of the displacement current occurs near the feedpoint and at the wire parallel to the septum. Consequently, this is where the current drops by the most amount. \todo{Insert current distribution plots}
-
-
-
-%\begin{figure}[htbp]
-%	\centering
-%	\begin{minipage}[b]{0.45\textwidth}
-	%		\centering
-	%		\includegraphics[width=0.7\linewidth]{content/img/current_loop_near_e_field}
-	%		\caption{Electric near field in current loop antenna}
-	%		\label{fig:currentloopnearefield}
-	%	\end{minipage}
-%	\hfill
-%	\begin{minipage}[b]{0.45\textwidth}
-	%		\centering
-	%		\includegraphics[width=0.7\linewidth]{content/img/current_loop_near_h_field}
-	%		\caption{Magnetic near field in current loop antenna}
-	%		\label{fig:currentloopnearhfield}
-	%	\end{minipage}
-%\end{figure}
-
-
-
-
-%\autoref{fig:currentloopfeedcurrent} and \autoref{fig:currentloopvoltagedrop} show the current and voltage consumption of the antenna. The phase shift equals $\phi\approx89.80\circ$, which hints to a strong inductive behavior. The inductance is determined to be $L\approx2.15\,\mathrm{nH}$. The capacitance is very low, but does lead so some displacement current. The frequency behavior of the voltage and current interchange if the antenna is strongly capacitive, as it the case in a monopole antenna.
-
-
-
-
-%Next, the electric and magnetic near field is investigated. The wave impedance $Z=E/H$ shown in \autoref{fig:waveimpedanceloop} in the center of the loop rises linearly over frequency. At low frequencies, the wave impedance is very low, which confirms the inductive behavior of the antenna. However, as the frequency increases, so does the voltage drop. This may be analogous to a inductor in an electrical circuit, across which the voltage drop also increases with frequency $U = \mathrm{i}L\omega I$. 
-
-
-%\autoref{eqn:a_b_moments_simp} relates the dipole moments to the output power. The influence of the dipole moments is determined by the electric field at the electric dipole moment and the magnetic field at the magnetic dipole moment. In this formula, the electric and magnetic field are simply related through the free-space wave impedance. However, as visible in \autoref{fig:waveimpedanceloop}, the wave impedance at the location of the dipole moments (i.e. at the antenna) is much lower. Additionally, it rises linearly with the frequency. This influence of the antenna itself on the fields around the dipoles could explain the non-linear relation of the dipole moments to the frequency.
-
-
-
-%\autoref{fig:currentlooppowerconsumption} shows the power consumption of the antenna, which is influenced by two factors. The radiation resistance rises quadratically with the frequency. At the same time, the impedance increases, leading to higher matching and therefore to a higher power transfer. This is contrary to the monopole antenna, where the impedance is decreases over the frequency, again leading to better impedance matching, because the impedance was high to begin with. The source impedance is 50\,$\Omega$.
-
-
-
-%The current-loop antenna contains two electric dipoles, shifted in phase by 180°. They therefore oppose each other in the power transfer to the waveports. However, as visible in the electric near field plot in \autoref{fig:currentloopvoltagedrop}, the electric dipole moment from node A to the feedpoint is much larger than the one from node B to ground. The reason can be demonstrated by representing the antenna with its nodes in \autoref{fig:current_loop_ua_ub}. The partial inductances in this schematic are much larger than the capacitances. This leads to a large voltage drop between node A and B, and therefore a weaker electric dipole moment at node B.
-
-%Additionally, this voltage difference $V_\mathrm{A}-V_\mathrm{B}$ rises linearly over the frequency, due to the linearly increasing impedance of the inductance $\mathrm{i}\omega L$. This means, that the over electric dipole moment a quadratic relationship to the frequency has.
-
-%Further, \autoref{fig:loopwaveimp} shows the wave impedance of the near-fields at the loop antenna. The \autoref{eqn:a_b_moments_simp} shows, that the influence of the dipoles depends on the electric and magnetic fields at the dipoles position. The electric and magnetic fields are related through the wave impedance $Z = E/H$. If the wave impedance rises linearly over frequency, the electric field increases over the magnetic fields, giving more influence to the electric dipole moments. As previously discussed, there are two electric dipole moments in this antenna, benefiting from that. \todo{Monopole antenna: Also change in wave impedance, but there is not really a magnetic dipole moment} 
-
-%The wave impedance $Z_\mathrm{w}$ in the near field of the electrically small loop antenna is approximated by \autoref{eqn:wave_impedance_loop}. It confirms the linear relationship of the near-field wave impedance to the frequency. \todo{Source: \href{https://en.wikipedia.org/wiki/Near_and_far_field}{Wikipedia}. I couldn't find the source in the reference books. TODO}
-
-%
-%\begin{equation}
-%	\left|Z_\mathrm{w}\right|\approx 2 \pi^2 \cdot 240\,\Omega \cdot\frac{r\cdot f}{c}
-%	\label{eqn:wave_impedance_loop}
-%\end{equation}
-
 
 
 \FloatBarrier

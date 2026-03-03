@@ -11,16 +11,15 @@ performance can be investigated in isolation. Ferrite is additionally modeled wi
 magnetic loss tangent of $\tan \delta_m = 0.05$ and barium titanate with an electric 
 loss tangent of $\tan \delta = 0.0095$.
 
-The shielding material is modeled as a thin sheet of thickness $10\,\mu\text{m}$, 
+The shielding material is modeled as a thin sheet of thickness $10\,$µm, 
 positioned at the center of the TEM cell at $z = 0$. To reduce computational cost, 
-the sheet is represented using impedance boundary conditions, which are valid and an 
+the sheet is represented using impedance boundary conditions, which are an 
 accurate representation for this material thickness as discussed in \cref{sec:bc-shield}. 
-The ASTM ES7-83 method requires the definition of a reference power to evaluate the shielding efficiency according to \eqref{eqn:SE_power}, which is set to 
-$P_\mathrm{ref}=1\,\mathrm{W}$. The 
+The ASTM ES7-83 method requires the definition of a reference power $P_\mathrm{ref}=1\,\mathrm{W}$ to evaluate the shielding effectiveness according to \eqref{eqn:SE_power}. The 
 transferred power $P_\mathrm{load}$ between the TEM cell ports in the presence of the 
 shielding material is then determined numerically, from which the shielding 
 effectiveness as a function of frequency is computed for each material. The resulting 
-shielding effectiveness are presented against frequency in \autoref{fig:se-barrium-ferrite}.
+shielding effectiveness is presented against frequency in \autoref{fig:se-barrium-ferrite}.
 
 \begin{figure}[htbp]
 	\centering
@@ -70,7 +69,7 @@ Its high relative permeability $\mu_r$ raises the material wave impedance in acc
 with \eqref{eqn:rel_wave_imp}, increasing the impedance mismatch with air and thus the 
 reflection loss $R_\mathrm{dB}$. At low frequencies, the multiple-reflection correction 
 term $B_\mathrm{dB}$ almost completely compensates the reflection loss. The absorption 
-coefficient $A_\mathrm{dB}$ is limited by its low bulk conductivity $\sigma$ and magnetic 
+coefficient $A_\mathrm{dB}$ is limited by its low bulk conductivity $\sigma$ and low magnetic 
 losses parameterized by $\tan\delta_m$, so that the shielding performance is primarily 
 governed by reflection.
 
@@ -96,7 +95,7 @@ mesh resolution in the aperture region is critical, as highlighted in \cref{sec:
 Accordingly, 10 to 15 mesh elements across the aperture width are maintained throughout 
 all simulations. Following the procedure outlined in \cref{sec:dual_tem_cell}, the 
 electric and magnetic shielding effectiveness of ferrite, barium titanate, and silver 
-are derived.
+is derived.
 
 Port 1 excites the TEM cell with a constant input power of $1\,\mathrm{W}$. The sum 
 $P_\mathrm{sum}$ and difference $P_\mathrm{diff}$ of the powers received at ports 3 
@@ -120,8 +119,7 @@ magnetic shielding effectiveness according to \eqref{eqn:se_dual_cell_e} and
 	\centering
 	\includegraphics[width=1\linewidth]{content/img/empty_power_sum_diff}
 	\caption{The sum $P_\mathrm{ref,sum}$ and difference $P_\mathrm{ref,diff}$ of the 
-		reference power, measured with an empty aperture and calculated with phase 
-		information considered.}
+		reference power, computed with an empty aperture.}
 	\label{fig:emptypowersumdiff}
 \end{figure}
 
@@ -149,17 +147,11 @@ The derived powers for all investigated materials are shown against frequency in
 		\label{fig:powerbariumferrite}
 	\end{subfigure}
 	\caption{The sum $P_\mathrm{load,sum}$ and difference $P_\mathrm{load,diff}$ of 
-		the output power measured at ports 3 and 4 with phase information considered.}
-	\label{fig:example}
+		the output power measured at ports 3 and 4 with shielding material filling the aperture.}
+	\label{fig:powerdualtem}
 \end{figure}
 
-The distinction between electric and magnetic shielding effectiveness is particularly 
-significant in the near-field regime, where the wave impedance of the source field 
-deviates substantially from the free-space impedance $\eta_0$. Electric near-field 
-sources produce high-impedance fields, whereas magnetic near-field sources produce 
-low-impedance fields, as mentioned in \cref{sec:irt_waves}. The shielding performance of a material depends not 
-only on its electric properties but also on the degree of impedance mismatch between the 
-material and the incident near-field, as expressed by \eqref{eqn:reflection_coefficient_plane_dielectric}.
+
 
 Ferrite exhibits higher power transfer than barium titanate, indicating lower overall 
 shielding effectiveness. For both materials, the power transfer increases with 
@@ -211,17 +203,16 @@ high-impedance electric source fields, rendering ferrite a poor electric shield.
 
 Silver demonstrates the highest overall shielding effectiveness among the materials 
 investigated. Its high conductivity produces a very low material wave impedance, which 
-leads to a strong impedance mismatch with electric near-field sources, 
-as discussed in \cref{sec:astm-sim}. At low frequencies, the magnetic shielding 
+leads to a strong impedance mismatch with electric near-field sources. The magnetic shielding 
 effectiveness increases monotonically across the inspected frequency range, driven by 
-the growing absorption contribution as the skin depth decreases steeply (see 
+the growing absorption contribution as the skin depth decreases substantially as $d\propto 1/\sqrt{\omega}$ (see 
 \eqref{eqn:kappa}). The electric shielding effectiveness, by contrast, begins to 
-decline at higher frequencies, as the wave impedance of the material surface increases 
+decline at higher frequencies, as the wave impedance of the material increases 
 toward that of the high-impedance electric source field, reducing the impedance mismatch 
 and the associated reflection loss $R_\mathrm{dB}$ in accordance with 
 \eqref{eqn:reflection_coefficient_plane_dielectric}.
 \FloatBarrier
-\subsection{Antennas in shield enclosure}
+\subsection{Antennas in shielding enclosures}
 
 Following the near-field shielding investigations, the loop and monopole antennas from 
 \cref{sec:monopole,sec:loop_sim} placed inside a hollow cubic enclosure are examined, 
@@ -248,8 +239,7 @@ has a wall thickness of $10\,$µm and a side length of $6\,\text{mm}$.
 	\label{fig:antennaenclosure}
 \end{figure}
 
-\autoref{fig:bariumenclosurepower} shows the radiated power from the antennas with and 
-without a barium titanate enclosure. The output power of the loop antenna increases 
+The radiated power from the antennas with and without a barium titanate enclosure is shown in \autoref{fig:bariumenclosurepower}. The output power of the loop antenna increases 
 because the barium titanate enclosure capacitively loads the antenna, resulting in a 
 reduction of the resonance frequency. This effect shifts the antenna toward a more 
 efficient operating point within the investigated frequency range, as discussed in 
@@ -260,8 +250,7 @@ while that of the loop antenna is predominantly magnetic, as given in \eqref{eqn
 and are in agreement with the near-field shielding investigations presented in 
 \cref{sec:dual-tem-sim}.
 
-\autoref{fig:ferriteenclosurepower} shows the corresponding radiated power for the 
-ferrite enclosure. Here, the roles of the two antennas are reversed. The output power 
+The corresponding radiated power for the ferrite enclosure is shown in \autoref{fig:ferriteenclosurepower}. In this case, the output power 
 of the monopole antenna increases due to the ferrite enclosure inductively loading the 
 antenna, while the loop antenna's radiation is attenuated.
 
@@ -286,8 +275,7 @@ antenna, while the loop antenna's radiation is attenuated.
 \end{figure}
 
 The influence of enclosure wall thickness on the radiated power is examined in 
-\autoref{fig:enclosurepowervarthick}, where silver is now additionally included as a 
-shielding material. As expected, increasing the wall thickness reinforces the 
+\autoref{fig:enclosurepowervarthick}, where silver is additionally included as a shielding material. As expected, increasing the wall thickness reinforces the 
 shielding effects observed in \autoref{fig:enclosurepower}. Silver yields the lowest 
 power transfer among all investigated materials, consistent with the high shielding 
 effectiveness found and discussed in \cref{sec:dual-tem-sim,sec:astm-sim}. The output power 
@@ -324,14 +312,10 @@ consistent with the monotonically increasing magnetic shielding effectiveness of
 
 Additionally, resonances are observed for thick enclosures, manifesting as a 
 pronounced peak in the transmitted power at approximately $2.5\,\text{GHz}$ for the 
-barium titanate enclosure with a wall thickness of $100\,$µm. A similar 
-trend is observed for the thickest ferrite enclosure, where the resonance frequency 
-lies just outside the investigated frequency range. As shown in 
+barium titanate enclosure with a wall thickness of $100\,$µm. A corresponding effect is anticipated for the thickest ferrite enclosure. However, the associated resonance frequency lies just outside the investigated frequency range. As shown in 
 \autoref{fig:loop-resonance}, this effect corresponds to a half-wavelength resonance 
-established within the enclosure cavity. The excitation of such resonant waves requires, among other things, that 
-internal reflections are not fully suppressed. This proposition in turn demands that the 
-multiple-reflection correction term $B_\mathrm{dB}$ remains sufficiently small in 
-magnitude, as discussed in \cref{sec:irt_waves}. A larger wall thickness supports this condition by increasing the electrical 
+established within the enclosure cavity. The excitation of such resonant waves requires, among other things, that reflections on the material boundary are not fully suppressed by the
+multiple-reflection correction term $B_\mathrm{dB}$, as discussed in \cref{sec:irt_waves}. A larger wall thickness supports this condition by increasing the electrical 
 thickness of the enclosure walls.
 
 \begin{figure}[htbp]
@@ -348,7 +332,7 @@ thickness of the enclosure walls.
 \FloatBarrier
 
 Replacing electrically small antennas with equivalent dipole moments inside shielding 
-enclosures enables of investigation of shielding performance with reduced 
+enclosures enables investigation of shielding performance with reduced 
 computational effort. For this purpose, the equivalent dipole moments of the monopole and 
 loop antennas derived in \cref{sec:eq_dip_mon,sec:eq_dip_loop} are used in place of 
 the full antenna models within the enclosures depicted in \autoref{fig:antennaenclosure}. 
@@ -382,8 +366,7 @@ at a constant material thickness of $10\,$µm is shown in
 \end{figure}
 
 The dipole approximation agrees well with the full antenna model for the loop antenna 
-in barium titanate and for the monopole antenna in ferrite. As the shielding 
-effectiveness of the enclosure material increases relative to the respective antenna, however, the accuracy of the approximation decreases, indicating that the equivalent dipole 
+in barium titanate and for the monopole antenna in ferrite. As the enclosure material becomes a more effective shield against the dominant near-field of the respective antenna, however, the accuracy of the approximation decreases, indicating that the equivalent dipole 
 moments must be adjusted accordingly to account for the interaction between the source 
 and the enclosure.
 

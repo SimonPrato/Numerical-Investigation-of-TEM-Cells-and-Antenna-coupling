@@ -1,8 +1,7 @@
 \FloatBarrier
-\subsection{Inverted-F and center-fed monopole antenna}\label{sec:ifa_sim}
-\subsubsection{Setup and geometrical analysis}
+\subsubsection{Inverted-F and center-fed monopole antenna}\label{sec:ifa_sim}
 
-The inverted-F antenna (IFA) and center-fed monopole antenna (CFM), shown in \crefrange{fig:center_fed_monopole}{fig:ifa}, are presented here together, because of their related geometry and similar electromagnetic behavior. Both have a maximum dimension of 5\,mm, and are electrically small at frequencies up to 6\,GHz. They exhibit an inductive nature, hence a similar behavior as the loop antenna in \autoref{sec:loop_sim} is expected. Both antennas consist of a loop of identical area to the loop antenna discussed in \cref{sec:loop_sim}, to which a linear arm is connected. In the CFM, this arm is oriented toward the TEM cell septum, whereas in the IFA it is directed toward an output port.
+The inverted-F antenna (IFA) and center-fed monopole antenna (CFM), shown in \cref{fig:center_fed_monopole,fig:ifa}, are presented here together, because of their related geometry and similar electromagnetic behavior. Both antennas exhibit a predominantly inductive character due to their closed current path, and are therefore expected to produce dipole moments similar to those of the loop antenna discussed in \cref{sec:loop_sim}. Both antennas consist of a loop of identical area to the loop antenna discussed in \cref{sec:loop_sim}, to which a linear arm is connected. In the CFM, this arm is oriented toward the TEM cell septum, whereas in the IFA it is directed toward an output port.
 
 \begin{figure}[htbp]
 	\centering
@@ -24,37 +23,16 @@ The inverted-F antenna (IFA) and center-fed monopole antenna (CFM), shown in \cr
 		\caption{Equivalent dipole moments of IFA and CFM}
 		\label{fig:cfm-ifa-moments}
 	\end{subfigure}
-	\caption{Geometries of IFA and CFM antenna, together with their equivalent dipole moments. the electric dipole moment $\mathbf{m}_e$ is weighted with the free space impedance $Z_0$ to enable comparison with the magnetic dipole moment $\mathbf{m}_m$.}
-	\label{fig:main}
+	\caption{Geometries of IFA and CFM antenna, together with their equivalent dipole moments. The electric dipole moment $\mathbf{m}_e$ is weighted with the free space impedance $\eta_0$ to enable comparison with the magnetic dipole moment $\mathbf{m}_m$.}
+	\label{fig:ifacfmmoments}
 \end{figure}
 
-%\todo[inline]{A question on my mind since the beginning of this thesis: Can how is the magnetic dipole moment influenced by rotating this geometry by 90 degrees? Is the magnetic dipole moment higher or lower than in the rotated loop antenna? With my current knowledge, I suspect that the electric dipole moment leads to current coupling with the TEM cell over displacement current, therefore leading to a smaller magnetic dipole moment then in the case of the loop antenna}
+The magnetic dipole moments $\mathbf{m}_m$ of the CFM and IFA, presented in \autoref{fig:cfm-ifa-moments}, are comparable to each other but smaller in magnitude than that of the loop antenna, despite sharing an identical loop area. This reduction is attributed to the additional linear arms of the CFM and IFA, on which charges accumulate. Through the continuity equation, this charge accumulation is coupled to the current distribution, leading current away from the loop and thereby reducing the circulating current. According to \eqref{eqn:e_a_closed_int} and \eqref{eqn:e_b_closed_int}, this reduction in circulating current directly weakens the magnetic coupling, resulting in a smaller $\mathbf{m}_m$.
 
-\subsubsection{Equivalent dipole moments}
+Conversely, the electric dipole moment $\mathbf{m}_e$ of the CFM and IFA is significantly larger than that of the loop antenna. The additional linear arms introduce further charge accumulation, which enhances the displacement current coupling to the septum. According to \eqref{eqn:me_i}, this directly increases $\mathbf{m}_e$, as clearly reflected in the equivalent dipole moments shown in \autoref{fig:cfm-ifa-moments}.
 
-The magnetic dipole moments $\mathbf{m}_m$ of the CFM and IFA presented in \autoref{fig:cfm-ifa-moments} are comparable to each other, but are smaller in magnitude than that of the loop antenna shown in \autoref{fig:dipole_moments_loop_antenna}. This reduction can be attributed to the linear arms of the CFM and IFA, which introduce additional capacitance. The increased capacitance enhances the displacement current while reducing the induced voltage. According to \crefrange{eqn:m_v}{eqn:me_i}, this results in a decrease of magnetic dipole moment $\mathbf{m}_m$ and an increase of the electric dipole moment $\mathbf{m}_e$. 
-
-Furthermore, for small loop and inductive antennas in general, \autoref{eqn:loop_w0} predicts that an increase in capacitance leads to a stronger non-linear frequency dependence of both $\mathbf{m}_m$ and $\mathbf{m}_e$. This assumption is confirmed by comparing the dipole moments of the loop antenna with those of the CFM and IFA, shown in \crefrange{fig:dipole_moments_loop_antenna}{fig:cfm-ifa-moments}.
-
-\FloatBarrier
-
-
-
-%\subsubsection{Serial Loop Antenna}
-%
-%This section will discuss the antenna displayed in \autoref{fig:serialloopantenna}. The idea of that antenna is to create two magnetic dipole moments, which are in phase. As the frequency increases, the displacement current between the loops becomes larger, thus reducing the current through and weakening the second loop. The dipole moments in \autoref{fig:serialloopantennadipolemoments} demonstrate a non-linear behavior of the magnetic dipole moment (only very weakly recognizable, but with a geometry sweep this becomes clearer \todo{Find a geometry where this effect is much stronger}). Also, it would be interesting to measure the wave impedances in both loops over the frequency. Also, find the current distributions, add current plots and electric fields, charge distributions.  
-%
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=0.3\linewidth]{content/img/serial_loop_antenna}
-%	\caption{Serial loop antenna}
-%	\label{fig:serialloopantenna}
-%\end{figure}
-%\begin{figure}[h]
-%	\centering
-%	\includegraphics[width=1\linewidth]{content/img/serial_loop_antenna_dipole_moments}
-%	\caption{Dipole moments }
-%	\label{fig:serialloopantennadipolemoments}
-%\end{figure}
+In summary, the addition of a linear arm to the loop geometry reduces 
+$\mathbf{m}_m$ while simultaneously enhancing $\mathbf{m}_e$, demonstrating 
+that geometrical modifications of an inductive reference antenna modify electric and magnetic coupling without altering the fundamentally inductive character of the antenna.
 
 \FloatBarrier
