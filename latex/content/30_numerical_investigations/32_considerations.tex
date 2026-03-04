@@ -35,7 +35,7 @@ Every antenna is excited through a round waveport feedpoint, shown in \autoref{f
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/antenna_port}
-	\caption{Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a round waveport of diameter $0.46\,\mathrm{mm}$ and consists of a PEC wire with a diameter of $0.2\,\mathrm{mm}$. This geometry leads to a reference impedance of $Z_0\approx 50$\,$\Omega$.}
+	\caption{Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a round waveport of diameter $0.46\,\mathrm{mm}$ and consists of a PEC wire with a diameter of $0.2\,\mathrm{mm}$. This geometry leads to a reference impedance of $Z_w\approx 50$\,$\Omega$.}
 	\label{fig:antennaport}
 \end{figure}
 
@@ -50,7 +50,7 @@ The first two antennas investigated are the monopole (\cref{sec:monopole}) and t
 
 The TEM cell model used, shown in \autoref{fig:tem_cell_model2}, has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm. The cut-off frequencies of higher-order modes are demonstrated in \autoref{fig:te01_te10_tem_propagation}. In the following numerical investigations focusing on the TEM mode, the frequency range of interest spans from 1\,MHz to 3\,GHz. If the TE\textsubscript{01} mode is included in the investigations, the upper limit of the frequency range is extended to 3.3\,GHz.
 
-The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. As discussed in \cref{sec:higher-order-modes}, this simplification removes the physical cutoff imposed by the tapered transitions, permitting higher-order modes to propagate freely, thereby facilitating investigations of their coupling behavior with the antennas and dipole moments. The reference impedances of the output ports equal $Z_w \approx 50\,\Omega$.
+The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. As discussed in \cref{sec:higher-order-modes}, this simplification removes the physical cutoff imposed by the tapered transitions, permitting higher-order modes to propagate freely, thereby facilitating investigations of their coupling behavior with the antennas and dipole moments. The reference impedance of the TEM cell and its output ports is $Z_w \approx 50\,\Omega$.
 
 %\begin{figure}[htbp]
 %	\centering
@@ -72,7 +72,16 @@ The cell walls and septum are modeled as PECs. In the TEM cell simulation model,
 %	\label{fig:tem_cell_model}
 %\end{figure}
 
-Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell are derived by \eqref{eqn:em_energy}. The current and voltage are found by applying \eqref{eqn:iin} and \eqref{eqn:vin}, respectively, at the output ports. The capacitance and inductance of the TEM cell are then given by \eqref{eqn:l_m_energy} and \eqref{eqn:c_e_energy}. The extracted TEM cell reactances are found to be approximately constant over frequency, yielding values of $C_\mathrm{T} = 6.74\,\mathrm{pF}$ and $L_\mathrm{T} = 16.25\,\mathrm{nH}$. 
+Upon exciting the output ports, the electric and magnetic energies 
+$W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell are obtained 
+from \eqref{eqn:em_energy}. The port currents and voltages required for 
+this evaluation are derived from the simulated S-parameters, as will be 
+discussed in \cref{sec:s-param-data}. The capacitance and inductance of 
+the TEM cell are then extracted via \eqref{eqn:c_e_energy} and 
+\eqref{eqn:l_m_energy}, respectively. The resulting reactances are found to be nearly constant over frequency, 
+yielding $C_{T} = 6.74\,\mathrm{pF}$ and $L_{T} = 16.25\,\mathrm{nH}$. 
+It should be noted that the use of PEC for modeling the TEM cell 
+is a contributing factor to this frequency-independent behavior.
 
 \begin{figure}[htbp]
 	\centering
@@ -100,17 +109,44 @@ Upon exciting the output ports, the electric and magnetic energy $W_\mathrm{e}$ 
 			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (2.5, 7.375){} node[anchor=north west, align=left, text width=2.477cm, inner sep=6pt] at (1.25, 7.75){output port 1};
 		\end{tikzpicture}
 	}
-	\caption{Circuit representing the TEM cell, where the capacitance and inductance are split into two separate, equal components $C_T=C_{T1} + C_{T2}$, $L_T=L_{T1} + L_{T2}$ and $C_{T1} = C_{T2}$, $L_{T1} = L_{T2}$. The resistances $R_1, R_2$ at the output ports model the reference impedance $Z_w \approx 50\,\Omega$.}
+	\caption{Circuit representing the TEM cell, where the capacitance and inductance 
+		are each split into two equal components, $C_T = C_{T1} + C_{T2}$ with 
+		$C_{T1} = C_{T2}$, and $L_T = L_{T1} + L_{T2}$ with $L_{T1} = L_{T2}$. 
+		The termination resistances $R_1$ and $R_2$ at the two output ports 
+		represent the reference impedance $Z_w \approx 50\,\Omega$, with which 
+		the ports are terminated.}
 	\label{fig:full_circuit}
 \end{figure}
 
 \subsubsection{Dipole moment models}\label{sec:prep_dip}
 
-The dipole moments implemented in the numerical simulations are infinitesimally small and exhibit the behaviors discussed in \cref{sec:infinitesimal_electric_dipoles} and \cref{sec:mag_dip}. Consequently, all previous discussions and conclusions derived in this thesis regarding dipole moments are directly applicable to the dipole moment models employed in the following numerical investigations.
+The dipole moments used in the numerical simulations are infinitesimally small and exhibit the behaviors discussed in \cref{sec:infinitesimal_electric_dipoles} and \cref{sec:mag_dip}. Consequently, the previous discussions and conclusions derived in this thesis regarding dipole moments are directly applicable to the dipole moment models employed in the following numerical investigations.
 
 A magnetic dipole moment can be expressed equivalently as either an electric current $I_0$ flowing in a loop or a magnetic current $I_\mathrm{m}$ along a line, as described in \eqref{eqn:magn_current_curr_loop}. For the following numerical investigations, the magnetic dipole moment is taken in the form given in \eqref{eqn:mag_dipole_moment}, which represents an equivalent formulation in terms of a magnetic current $I_\mathrm{m}$ along an infinitesimal line. 
 
-The electric and magnetic dipole moments are placed at the center of the TEM cell at $x=0$, $y=b/2$, $z=0$. As discussed in \cref{sec:field_dist}, $\mathbf{e}^\pm_\mathrm{TEM}$ has only a $y$-component at this location, while $\mathbf{h}_\mathrm{TEM}^\pm$ has only an $x$-component. Consequently, the equivalent electric dipole moment $\mathbf{m}_{\mathrm{e}}$ is oriented exclusively along the $y$-direction, and the magnetic dipole moment $\mathbf{m}_{\mathrm{m}}$ along the $x$-direction. Placing $\mathbf{m}_{\mathrm{m}}$ and $\mathbf{m}_{\mathrm{e}}$ at the center of the TEM cell therefore significantly simplifies the modeling of electrically small antennas with equivalent dipole moments, as only one component of each dipole moment must be considered. This assumption holds as long as only the TEM mode occurs and must be revised once higher-order modes propagate. Unless otherwise stated, this configuration is adopted throughout all numerical investigations presented in this thesis.
+Unless otherwise stated, the electric and magnetic dipole moments are 
+positioned at the center of the TEM cell at $x=0$, $y=b/2$, $z=0$ 
+throughout the subsequent numerical investigations. At this location, the normalized electric field of the TEM mode 
+$\mathbf{E}^\pm_\mathrm{TEM}$ has only a $y$-component, with no $x$- or 
+$z$-component. When evaluating the coefficients $a_\mathrm{TEM}$ and 
+$b_\mathrm{TEM}$ according to \eqref{eqn:a_b_moments_tem}, the 
+calculations therefore simplify to
+
+\begin{align}
+	\begin{pmatrix}a_\mathrm{TEM} \\ b_\mathrm{TEM}\end{pmatrix} &= 
+	-\frac{1}{2}\,\mathbf{E}_\mathrm{TEM}^\pm\cdot
+	\left(\mathbf{m}_e 
+	\pm j\frac{\mathbf{m}_m\times\hat{\mathbf{a}}_z}{\eta_0}\right)\nonumber\\&=
+	-\frac{1}{2}\,{E}_\mathrm{TEM,y}^\pm\cdot
+	\left({m}_{e,y} 
+	\pm j\frac{{m}_{m,x}\times\hat{\mathbf{a}}_z}{\eta_0}\right),
+\end{align}
+
+where only one component of each dipole moment must be considered. This 
+assumption holds as long as only the TEM mode is present and must be 
+revised once higher-order modes begin to propagate. Unless otherwise 
+stated, this configuration is adopted throughout all numerical 
+investigations presented in this thesis.
 
 When normalizing to the free-space wave impedance $\eta_0$, $\mathbf{m}_\mathrm{e}$ can be interchanged with an equivalent $\mathbf{m}_\mathrm{m}$ and vice-versa \cite[p.~414]{Jackson}. Therefore, normalizing either $\mathbf{m}_{\mathrm{e}}$ or $\mathbf{m}_{\mathrm{m}}$ to the free-space wave impedance $\eta_0$ enables a meaningful comparison between them.
 

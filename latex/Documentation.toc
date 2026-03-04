@@ -8,20 +8,20 @@
 \contentsline {subsection}{\numberline {2.2}Magnetic Dipoles}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Radiated Field}{8}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Field regions}{8}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Energy densities and reactances}{10}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Energy densities and reactances}{11}{subsubsection.2.3.2}%
 \contentsline {section}{\numberline {3}Guided Waves}{11}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Lorentz Reciprocity Theorem}{11}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Green's Function}{12}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Scalar Green's Function}{12}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Dyadic Green's Function}{13}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2}Green's Function}{13}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Scalar Green's Function}{13}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Dyadic Green's Function}{14}{subsubsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.3}Modes in Waveguides}{15}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Rectangular Waveguides as non-TEM structures}{15}{subsubsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}TEM mode in the TEM cell}{16}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Higher-order modes}{18}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Field distributions}{22}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.3.1}Rectangular Waveguides as non-TEM structures}{16}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}TEM mode in the TEM cell}{17}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Higher-order modes}{19}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Field distributions}{21}{subsubsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.5}Radiating Sources in TEM Cells}{25}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Arbitrary source}{25}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Equivalent dipole moments}{27}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2}Equivalent dipole moments}{28}{subsubsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.3}Electrically small antennas}{30}{subsubsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.6}Shielding}{32}{subsection.3.6}%
 \contentsline {subsubsection}{\numberline {3.6.1}Electromagnetic shielding mechanisms}{32}{subsubsection.3.6.1}%
@@ -30,25 +30,25 @@
 \contentsline {subsubsection}{\numberline {3.6.4}Dual TEM cell}{36}{subsubsection.3.6.4}%
 \contentsline {section}{\numberline {4}Finite Element Method}{37}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Overview}{37}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Dividing a computational domain into finite elements}{38}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Solving the differential equation}{40}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.2}Dividing a computational domain into finite elements}{37}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Solving the differential equation}{39}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Adaptive solution process}{41}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Numerical Investigations of Antennas in TEM Cells}{42}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Simulation Setup and Modeling Assumptions}{42}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Antenna models}{42}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}TEM cell model}{43}{subsubsection.5.1.2}%
+\contentsline {section}{\numberline {5}Numerical Investigations of Antennas in TEM Cells}{41}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Simulation Setup and Modeling Assumptions}{41}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Antenna models}{41}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}TEM cell model}{42}{subsubsection.5.1.2}%
 \contentsline {subsubsection}{\numberline {5.1.3}Dipole moment models}{43}{subsubsection.5.1.3}%
 \contentsline {subsubsection}{\numberline {5.1.4}Mesh settings}{44}{subsubsection.5.1.4}%
 \contentsline {subsubsection}{\numberline {5.1.5}Shielding material models}{44}{subsubsection.5.1.5}%
-\contentsline {subsubsection}{\numberline {5.1.6}S-parameters and derived data}{45}{subsubsection.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.6}S-parameters and derived data}{44}{subsubsection.5.1.6}%
 \contentsline {subsubsection}{\numberline {5.1.7}Investigation of Field Regions}{46}{subsubsection.5.1.7}%
 \contentsline {subsection}{\numberline {5.2}Monopole Antenna}{47}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Setup}{47}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{49}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{48}{subsubsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.3}Feed voltage, current and impedance}{49}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}Current along antenna}{50}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4}Current along antenna}{49}{subsubsection.5.2.4}%
 \contentsline {subsubsection}{\numberline {5.2.5}Current distribution on septum}{51}{subsubsection.5.2.5}%
-\contentsline {subsubsection}{\numberline {5.2.6}Output power}{52}{subsubsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.6}Output power}{51}{subsubsection.5.2.6}%
 \contentsline {subsubsection}{\numberline {5.2.7}Equivalent circuit model}{53}{subsubsection.5.2.7}%
 \contentsline {subsection}{\numberline {5.3}Loop antenna}{56}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Setup}{56}{subsubsection.5.3.1}%

@@ -11,15 +11,20 @@ An electric dipole can be modeled as two tiny charged metal spheres \cite[p.~467
 An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, is analyzed in detail below. The dipole is aligned with the $z$-axis, which simplifies the following mathematical investigations. Time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted in this thesis. A current flows in the wire, which is spatially uniform throughout the wire. This is expressed as \cite[p. 151]{Balanis_1997}
 
 \begin{equation}
-	\mathbf{I}(z) = \mathbf{\hat{a}}_z I_0.
+	{I}(z) = I_0.
 \end{equation}
 
-To permit a constant current across the wire, which is otherwise physically impossible, capacitor plates are modeled at its ends. The electric dipole moment can be expressed as 
+The electric dipole moment is then given by
 
 \begin{equation}
-	\mathbf{m}_e = I_0 d \cdot \mathbf{\hat{a}}_z.
+	\mathbf{m}_e = I_0 \mathbf{d},
 	\label{eqn:m_e_def}
 \end{equation}
+
+where $\mathbf{d} = d \cdot \hat{\mathbf{a}}_z$ is the dipole length 
+vector of magnitude $d$ oriented along the $z$-axis. The electric dipole 
+moment $\mathbf{m}_e$ quantifies the source strength of the electric 
+dipole and carries the unit $\mathrm{A}\,\mathrm{m}$.
 
 Next, the vector potential $\mathbf{A}$ is determined through
 
@@ -154,11 +159,11 @@ Wires that are too long to be modeled as infinitesimal dipoles, but short enough
 A current $I_0$ is fed into the short, center-fed, linear antenna shown in \autoref{fig:electric_dipole}. The current along the antenna arms $I(z)$ linearly drops to zero \cite[p. 412]{Jackson}, as visualized in \autoref{fig:electricdipolecurrent}. Mathematically, it is described by, 
 
 \begin{equation}
-    \mathbf{I}(z)=  I_0\left( 1-\frac{2|z|}{d} \right)\cdot\mathbf{\hat{a}}_z.
+    {I}(z)=  I_0\left( 1-\frac{2|z|}{d} \right).
     \label{eqn:current_dipole}
 \end{equation}
 
-This current distribution differs from that of the infinitesimal dipole, and as a result, the capacitor plates are not required in this model. Additionally, charge accumulates along the antenna due to the linear decrease in current $\mathbf{I}$. This accumulation is characterized by the charge per unit length, $\rho’$, which is appropriate for a thin wire. The relationship is derived from the continuity equation, $\partial \rho/\partial t = -\nabla \cdot \mathbf{J}$. In the frequency domain, this becomes $j\omega \rho = -\nabla \cdot \mathbf{J}$. Substituting this into \eqref{eqn:current_dipole} yields \cite[pp. 410-412]{Jackson}.
+This current distribution differs from that of the infinitesimal dipole, and as a result, the capacitor plates are not required in this model. Additionally, charge accumulates along the antenna due to the linear decrease in current ${I}$. This accumulation is characterized by the charge per unit length, $\rho’$, which is appropriate for a thin wire. The relationship is derived from the continuity equation, $\partial \rho/\partial t = -\nabla \cdot \mathbf{J}$. In the frequency domain, this becomes $j\omega \rho = -\nabla \cdot \mathbf{J}$. Substituting this into \eqref{eqn:current_dipole} yields \cite[pp. 410-412]{Jackson}.
 
 \begin{equation}
     \rho' = \pm\frac{\mathrm{d}}{\mathrm{d}z}j\frac{ I(z)}{\omega} = \pm j\frac{2  I_0}{\omega d}.
@@ -189,7 +194,7 @@ Next, the vector potential $\mathbf{A}$ is determined using \eqref{eqn:vector_po
     \label{eqn:vector_pot_elec_dipole}
 \end{equation}
 
-The formulation of $\mathbf{A}$ now includes an additional factor of $1/2$ compared to the previously derived expression for infinitesimal dipoles in \eqref{eqn:a_e_inf}. This factor arises from the integration of $\mathbf{I}$: when integrated over the interval $\left[-d/2, d/2\right]$, a linearly decreasing $\mathbf{I}$ yields half the value obtained from a constant $\mathbf{I}$. For the same reason, the electric dipole moment $\mathbf{m}_e$ is also reduced to half of that in \eqref{eqn:m_e_def}.
+The formulation of $\mathbf{A}$ now includes an additional factor of $1/2$ compared to the previously derived expression for infinitesimal dipoles in \eqref{eqn:a_e_inf}. This factor arises from the integration of ${I}$: when integrated over the interval $\left[-d/2, d/2\right]$, a linearly decreasing ${I}$ yields half the value obtained from a constant ${I}$. For the same reason, the electric dipole moment $\mathbf{m}_e$ is also reduced to half of that in \eqref{eqn:m_e_def}.
 
 Furthermore, for the sake of simplicity, it is reasonable to set $\mathbf{x’} = \mathbf{0}$. This approximation has been shown to be sufficient for large $r$, with the resulting amplitude error remaining negligible even for small $r$ \cites[p. 409]{Jackson}[pp. 164-168]{Balanis_1997}.
 
@@ -202,7 +207,7 @@ Furthermore, for the sake of simplicity, it is reasonable to set $\mathbf{x’} 
 
 The short physical electric dipole described in this section serves as an approximation for the behavior of electrically short antennas. Particular attention must be paid to the excitation method and physical shape, as these factors significantly influence antenna behavior \cite[p.~413]{Jackson}. Furthermore, any antenna analyzed using this approach should remain much smaller than the wavelength $\lambda$ to minimize analytical approximation errors.
 
-\subsection{Magnetic Dipoles}\label{sec:mag_dip}. 
+\subsection{Magnetic Dipoles}\label{sec:mag_dip}
 
 The magnetic dipole moment characterizes the strength of a magnetic source. An 
 electrically small current loop carrying a current $I_0$ serves as the 
@@ -247,12 +252,12 @@ This definition is widely adopted in the literature and in numerical simulation 
 Since both definitions describe the same physical source, a relation exists, expressed as~\cites[p.~237]{Balanis_1997}{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}
 
 \begin{equation}
-	I_m L = j\omega\mu_0 A I_0,
+	I_m \mathbf{L} = j\omega\mu_0 \mathbf{A} I_0,
 	\label{eqn:magn_current_curr_loop}
 \end{equation}
 
-so that the infinitesimal magnetic current element $I_m L$ and the electrically small 
-current loop $I_0$ are equivalent representations producing identical electric and 
+so that the infinitesimal magnetic current element and the electrically small 
+current loop are equivalent representations producing identical electric and 
 magnetic field distributions. The electric field intensity $\mathbf{E}$ of the magnetic dipole is given by
 
 \begin{subequations}\label{eqn:m_e}
