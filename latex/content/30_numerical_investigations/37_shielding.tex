@@ -11,15 +11,24 @@ performance can be investigated in isolation. Ferrite is additionally modeled wi
 magnetic loss tangent of $\tan \delta_m = 0.05$ and barium titanate with an electric 
 loss tangent of $\tan \delta = 0.0095$.
 
-The shielding material is modeled as a thin sheet of thickness $10\,$µm, 
-positioned at the center of the TEM cell at $z = 0$. To reduce computational cost, 
-the sheet is represented using impedance boundary conditions, which are an 
-accurate representation for this material thickness as discussed in \cref{sec:bc-shield}. 
-The ASTM ES7-83 method requires the definition of a reference power $P_\mathrm{ref}=1\,\mathrm{W}$ to evaluate the shielding effectiveness according to \eqref{eqn:SE_power}. The 
-transferred power $P_\mathrm{load}$ between the TEM cell ports in the presence of the 
-shielding material is then determined numerically, from which the shielding 
-effectiveness as a function of frequency is computed for each material. The resulting 
-shielding effectiveness is presented against frequency in \autoref{fig:se-barrium-ferrite}.
+The shielding material is modeled as a thin sheet of thickness $10\,$µm, positioned 
+at the center of the TEM cell at $z = 0$. Since accurately resolving such a thin 
+sheet within a large computational domain would require a large number 
+of mesh elements, the sheet is represented using impedance boundary conditions 
+\cite{1430946}. In this approach, the shielding material is removed from the 
+computational domain and replaced by boundary conditions imposed on its surface, rather than being discretized as a solid body within 
+the computational domain.
+Plane wave propagation normal to the surface is assumed for this method, which is a 
+good approximation here since the sheet surfaces are oriented perpendicular to the 
+wave propagating within the TEM cell.
+
+The ASTM ES7-83 method requires the definition of a reference power 
+$P_\mathrm{ref}=1\,\mathrm{W}$ to evaluate the shielding effectiveness according 
+to \eqref{eqn:SE_power}. The transferred power $P_\mathrm{load}$ between the TEM 
+cell ports in the presence of the shielding material is then determined numerically, 
+from which the shielding effectiveness as a function of frequency is computed for 
+each material. The resulting shielding effectiveness is presented against frequency 
+in \autoref{fig:se-barrium-ferrite}.
 
 \begin{figure}[htbp]
 	\centering
@@ -51,15 +60,7 @@ shielding effectiveness is presented against frequency in \autoref{fig:se-barriu
 	\label{tab:materials}
 \end{table}
 
-Silver, as a highly conductive material, exhibits a large reflection loss $R_\mathrm{dB}$ 
-owing to the significant impedance mismatch between the material and the surrounding air. 
-This mismatch decreases with increasing frequency, as the wave impedance of silver rises 
-with frequency in accordance with \eqref{eqn:rel_wave_imp}. Simultaneously, the absorption 
-coefficient $A_\mathrm{dB}$ grows with frequency, consistent with the reduction in skin 
-depth at higher frequencies, as discussed in \cref{sec:skin_effect}. At low frequencies, 
-the multiple-reflection correction term $B_\mathrm{dB}$ is negative and partially offsets 
-the reflection loss, as discussed in \cref{sec:irt_waves}. As frequency increases, however, 
-the sheet becomes electrically thicker, rendering $B_\mathrm{dB}$ negligible while the 
+Silver, as a highly conductive material, exhibits a large reflection loss $R_\mathrm{dB}$ owing to the significant impedance mismatch between the material and the surrounding air. This mismatch decreases with increasing frequency, as the wave impedance of silver rises with frequency in accordance with\eqref{eqn:rel_wave_imp}. Simultaneously, the absorption coefficient $A_\mathrm{dB}$ grows with frequency, consistent with the reduction in skin depth at higher frequencies, as discussed in \cref{sec:skin_effect}. At low frequencies, the multiple-reflection correction term $B_\mathrm{dB}$ is negative and partially offsets the reflection loss, as discussed in \cref{sec:irt_waves}. As frequency increases, however, the sheet becomes electrically thicker, rendering $B_\mathrm{dB}$ negligible while the 
 absorption term $A_\mathrm{dB}$ increases. Nonetheless, within the frequency range 
 considered, the decrease in reflection loss is more pronounced than the increase in 
 absorption, resulting in an overall reduction in shielding effectiveness with frequency.

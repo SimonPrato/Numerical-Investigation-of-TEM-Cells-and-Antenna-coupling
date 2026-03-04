@@ -333,7 +333,7 @@ The magnetic field $\mathbf{H}_n^\pm$ of a given mode $n$ passing the closed loo
 
 Therefore, the normalized induced voltage measured at an antenna serves as a direct measure of its equivalent magnetic dipole moment.
 
-In the general case, a magnetic dipole moment $\mathbf{m}_m$ producing fields characterized with coefficients $a_n$ and $b_n$ models the magnetic coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent magnetic dipole moment $\mathbf{m}_m$ of an electrically small antenna is possible by measuring $a_n$ and $b_n$ at the output ports. 
+In the general case, a magnetic dipole moment $\mathbf{m}_m$ producing fields characterized with coefficients $a_n$ and $b_n$ for any mode $n$ models the magnetic coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent magnetic dipole moment $\mathbf{m}_m$ of an electrically small antenna is possible by measuring $a_n$ and $b_n$ at the output ports. 
 
 %In a similar manner to \eqref{eqn:e_int_a} and \eqref{eqn:e_int_b}, a constant magnetic field $\mathbf{h}_n^\pm$ along a magnetic current $I_m$ following a curve $C$ makes the following expression possible:
 %
@@ -398,20 +398,44 @@ In the general case, a magnetic dipole moment $\mathbf{m}_m$ producing fields ch
 %	\end{equation}
 %\end{subequations}
 
-By duality, a similar relation holds for the electric dipole moment $\mathbf{m}_e$, where the displacement current $I^\pm_n$ of a given mode $n$ between the antenna and the septum serves as its measure, and a constant voltage $V$ at the antenna feedpoint is assumed, giving
+By duality, a similar relation holds for the electric dipole moment $\mathbf{m}_e$, where the displacement current $I^\pm_n$ of a given mode $n$ between the antenna and the septum serves as its measure, and a constant voltage $V$ at the antenna feedpoint is assumed. For the TEM mode specifically, this duality is giving
 
 \begin{equation}
-	I_n^+ + I_n^- = 
+	I_\mathrm{TEM}^+ + I_\mathrm{TEM}^- = 
 	-2\frac{\mathbf{m}_{e}\cdot\mathbf{E}_\mathrm{TEM}^\pm}{V}.
 	\label{eqn:ifa_me}
 \end{equation}
 
 An equivalent $\mathbf{m}_e$ thus models the electric coupling behavior of any 
-electrically small antenna producing the same coefficients $a_n$ and $b_n$, and can 
+electrically small antenna producing the same coefficients, and can 
 be determined by measuring these coefficients at the output port, analogous to the 
 case of $\mathbf{m}_m$. 
 
 The physical meaning of $I_n$ is the electrical current passing between the septum and the dipole via capacitive coupling, representing the displacement current. In summary, the magnetic dipole moment arises from the induced voltage on the septum, whereas the electric dipole moment results from the coupling displacement current.
+
+These two coupling mechanisms are shown in \autoref{fig:electric_magnetic_coupling}, 
+where, for the TEM mode, electric coupling produces in-phase currents at the output 
+ports and magnetic coupling produces out-of-phase currents, thus allowing the equivalent electric and magnetic dipole moments of the antenna to be determined separately.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[h]{0.49\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/electric_coupling}
+		\caption{Electric coupling}
+		\label{fig:electriccoupling}
+	\end{subfigure}%
+	\hfill
+	\begin{subfigure}[h]{0.49\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{content/img/magnetic_coupling}
+		\caption{Magnetic coupling}
+		\label{fig:magneticcoupling}
+	\end{subfigure}
+	\caption{Different coupling methods of the antenna, creating an electric and a magnetic dipole moment.}
+	\label{fig:electric_magnetic_coupling}
+\end{figure}
+
 
 %%Numerical simulations enable the determination of the combined coefficients $a+b$ and $a-b$ directly. When applying this described method in a measurement with a real TEM cell, the values are found by adding and subtracting the output powers of both ports. The detailed procedure can be found in \cite{Sreenivasiah_Chang_Ma_1981}.
 %

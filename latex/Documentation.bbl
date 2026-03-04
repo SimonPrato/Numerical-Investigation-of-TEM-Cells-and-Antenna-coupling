@@ -1018,6 +1018,28 @@
     \field{year}{2023}
   \endentry
 
+  \entry{Pozar_2012}{book}{}
+    \name{author}{1}{}{%
+      {{hash=PDM}{%
+         family={Pozar},
+         familyi={P\bibinitperiod},
+         given={David\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley & Sons}%
+    }
+    \strng{namehash}{PDM1}
+    \strng{fullhash}{PDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Microwave engineering}
+    \field{year}{2012}
+  \endentry
+
   \entry{Schelkunoff_1938}{article}{}
     \name{author}{1}{}{%
       {{hash=SSA}{%

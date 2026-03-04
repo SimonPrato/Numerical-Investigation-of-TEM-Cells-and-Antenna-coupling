@@ -35,7 +35,7 @@ Every antenna is excited through a round waveport feedpoint, shown in \autoref{f
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{content/img/antenna_port}
-	\caption{Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a round waveport of diameter $0.46\,\mathrm{mm}$ and consists of a PEC wire with a diameter of $0.2\,\mathrm{mm}$. This geometry leads to a reference impedance of $Z_w\approx 50$\,$\Omega$.}
+	\caption{Geometry of an antenna's feedpoint used in simulation. The antenna is fed through a round waveport of diameter $0.46\,\mathrm{mm}$ and consists of a PEC wire with a diameter of $0.2\,\mathrm{mm}$. This geometry leads to a characteristic impedance of $Z_w\approx 50$\,$\Omega$.}
 	\label{fig:antennaport}
 \end{figure}
 
@@ -50,7 +50,7 @@ The first two antennas investigated are the monopole (\cref{sec:monopole}) and t
 
 The TEM cell model used, shown in \autoref{fig:tem_cell_model2}, has a width of $a=40$\,mm, a height of $b=24$\,mm and a length of $l=100$\,mm. The cut-off frequencies of higher-order modes are demonstrated in \autoref{fig:te01_te10_tem_propagation}. In the following numerical investigations focusing on the TEM mode, the frequency range of interest spans from 1\,MHz to 3\,GHz. If the TE\textsubscript{01} mode is included in the investigations, the upper limit of the frequency range is extended to 3.3\,GHz.
 
-The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. As discussed in \cref{sec:higher-order-modes}, this simplification removes the physical cutoff imposed by the tapered transitions, permitting higher-order modes to propagate freely, thereby facilitating investigations of their coupling behavior with the antennas and dipole moments. The reference impedance of the TEM cell and its output ports is $Z_w \approx 50\,\Omega$.
+The cell walls and septum are modeled as PECs. In the TEM cell simulation model, the tapered transition sections at the ports are omitted. As discussed in \cref{sec:higher-order-modes}, this simplification removes the physical cutoff imposed by the tapered transitions, permitting higher-order modes to propagate freely, thereby facilitating investigations of their coupling behavior with the antennas and dipole moments. The reference impedance of the TEM cell is $Z_w \approx 50\,\Omega$.
 
 %\begin{figure}[htbp]
 %	\centering
@@ -72,16 +72,19 @@ The cell walls and septum are modeled as PECs. In the TEM cell simulation model,
 %	\label{fig:tem_cell_model}
 %\end{figure}
 
-Upon exciting the output ports, the electric and magnetic energies 
-$W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the TEM cell are obtained 
-from \eqref{eqn:em_energy}. The port currents and voltages required for 
-this evaluation are derived from the simulated S-parameters, as will be 
-discussed in \cref{sec:s-param-data}. The capacitance and inductance of 
-the TEM cell are then extracted via \eqref{eqn:c_e_energy} and 
-\eqref{eqn:l_m_energy}, respectively. The resulting reactances are found to be nearly constant over frequency, 
-yielding $C_{T} = 6.74\,\mathrm{pF}$ and $L_{T} = 16.25\,\mathrm{nH}$. 
-It should be noted that the use of PEC for modeling the TEM cell 
-is a contributing factor to this frequency-independent behavior.
+Further, an equivalent circuit for the TEM cell is introduced and shown in 
+\autoref{fig:full_circuit}, which will become useful for interpreting the numerical 
+results obtained in subsequent investigations. Its symmetry about the vertical axis is reflected in the circuit 
+by splitting the total inductance and capacitance into two equal halves, 
+$L_{T1} = L_{T2}$ and $C_{T1} = C_{T2}$, which model the inductive and capacitive 
+behavior of each half of the cell, respectively. The total inductance 
+$L_T = L_{T1} + L_{T2}$ and total capacitance $C_T = C_{T1} + C_{T2}$ are used 
+throughout this thesis to express the overall reactances conveniently. The output 
+ports are terminated with loads $R_1 = R_2 = Z_w \approx 50\,\Omega$, matching the 
+characteristic impedance of the TEM cell. The symmetric splitting of the circuit 
+proves particularly useful in later investigations of the antenna and TEM cell coupling 
+mechanisms, where the two halves of the circuit respond differently to capacitive 
+and inductive sources.
 
 \begin{figure}[htbp]
 	\centering
@@ -109,18 +112,28 @@ is a contributing factor to this frequency-independent behavior.
 			\node[shape=rectangle, minimum width=2.465cm, minimum height=0.715cm] at (2.5, 7.375){} node[anchor=north west, align=left, text width=2.477cm, inner sep=6pt] at (1.25, 7.75){output port 1};
 		\end{tikzpicture}
 	}
-	\caption{Circuit representing the TEM cell, where the capacitance and inductance 
-		are each split into two equal components, $C_T = C_{T1} + C_{T2}$ with 
-		$C_{T1} = C_{T2}$, and $L_T = L_{T1} + L_{T2}$ with $L_{T1} = L_{T2}$. 
-		The termination resistances $R_1$ and $R_2$ at the two output ports 
-		represent the reference impedance $Z_w \approx 50\,\Omega$, with which 
-		the ports are terminated.}
+	\caption{Equivalent circuit of the TEM cell, with the output ports terminated 
+	by the reference impedance $Z_w \approx 50\,\Omega$.}
 	\label{fig:full_circuit}
 \end{figure}
 
+The electric and magnetic energies $W_\mathrm{e}$ and $W_\mathrm{m}$ stored in the 
+TEM cell are obtained from \eqref{eqn:em_energy} by exciting the output ports in the 
+numerical model. The port currents and voltages required for this evaluation are 
+discussed in detail in \cref{sec:s-param-data}. The capacitance and inductance of 
+the TEM cell are then extracted via \eqref{eqn:c_e_energy} and \eqref{eqn:l_m_energy}, 
+respectively, yielding $C_{T} = 6.74\,\mathrm{pF}$ and $L_{T} = 16.25\,\mathrm{nH}$. 
+Both values are nearly constant over frequency, a behavior attributable to the 
+use of PEC for modeling the TEM cell walls and septum, which eliminates 
+frequency-dependent conductor losses.
+
 \subsubsection{Dipole moment models}\label{sec:prep_dip}
 
-The dipole moments used in the numerical simulations are infinitesimally small and exhibit the behaviors discussed in \cref{sec:infinitesimal_electric_dipoles} and \cref{sec:mag_dip}. Consequently, the previous discussions and conclusions derived in this thesis regarding dipole moments are directly applicable to the dipole moment models employed in the following numerical investigations.
+The dipole moments used in the numerical simulations are treated as impressed 
+fields, exhibiting the behavior of infinitesimal electric and magnetic dipoles 
+as discussed in \cref{sec:infinitesimal_electric_dipoles} and \cref{sec:mag_dip}, 
+such that the theoretical framework developed in the preceding sections applies 
+directly to the following numerical investigations.
 
 A magnetic dipole moment can be expressed equivalently as either an electric current $I_0$ flowing in a loop or a magnetic current $I_\mathrm{m}$ along a line, as described in \eqref{eqn:magn_current_curr_loop}. For the following numerical investigations, the magnetic dipole moment is taken in the form given in \eqref{eqn:mag_dipole_moment}, which represents an equivalent formulation in terms of a magnetic current $I_\mathrm{m}$ along an infinitesimal line. 
 
@@ -177,24 +190,18 @@ When normalizing to the free-space wave impedance $\eta_0$, $\mathbf{m}_\mathrm{
 
 \subsubsection{Mesh settings}\label{sec:mesh}
 
-The mesh determines the resolution of the field quantities over the computational domain. Since electrically small conductors are involved, implementing small mesh elements in their proximity is necessary for accurate modeling of near-fields. Adaptive meshing algorithms may fail to refine these regions, due to the low impact of these near-fields on the solution of the overall computational domain. Consequently, adjusting mesh element sizes does not significantly influence the overall solution of the model, but greatly improves the accuracy of near-field investigations.
+The mesh determines the resolution of the field quantities over the computational domain. Since electrically small conductors are involved, implementing small mesh elements in their proximity is necessary for accurate modeling of near-fields. Adaptive meshing algorithms (see \cref{sec:adap_sol_pro}) may fail to refine these regions, due to the low impact of these near-fields on the solution of the overall computational domain. Consequently, adjusting mesh element sizes does not significantly influence the overall solution of the model, but greatly improves the accuracy of near-field investigations.
 
-The maximum mesh element length in error-prone volumes is adjusted until the obtained results show a reasonably low amount of numerical artifacts. Critical regions are commonly located near feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions. The simulation models created for this thesis use roughly 15 elements on the surfaces of such critical volumes to achieve a reasonable representation of these regions while avoiding excessively large meshes.
+The maximum mesh element length in error-prone volumes is manually adjusted, such that the obtained results show a reasonably low amount of numerical artifacts. Critical regions are commonly located near feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions.
 
 Lastly, it is best practice to select the upper limit of the investigated frequency range as the solution frequency. This choice produces the largest spatial field changes, forcing the adaptive mesh process to generate a high-resolution mesh. Results at frequencies below the solution frequency are computed on the same mesh, which is finer than strictly necessary at those frequencies, providing additional accuracy. This procedure is applied for every numerically derived frequency-dependent result presented in this thesis.
 
-\subsubsection{Shielding material models}\label{sec:bc-shield}
+\subsubsection{Three port network model}\label{sec:s-param-data}
 
-The numerical investigation of large computational domains containing thin shielding material requires a large number of mesh elements for accurate representation of fields around the shield. Especially in the analysis of the ASTM ES7-83 method in \cref{sec:astm-sim}, accurately resolving the thin shielding material requires a large number of mesh elements, resulting in high computational effort. A solution is to impose boundary conditions on the shielding material's surface, as described in \cite{1430946}.
-
-In this approach, the shielding material is removed from the computational domain and replaced by boundary conditions imposed on its surface. The simulator assumes plane wave propagation normal to the surface, which is a good approximation for the shielding material in the ASTM ES7-83 method, since its surfaces are oriented perpendicular to the wave propagating within the TEM cell.
-
-\subsubsection{S-parameters and derived data}\label{sec:s-param-data}
-
-The TEM cell containing an antenna is modeled as a three-port network. The two output ports of the TEM cell are denoted as ports 1 and 2, while the antenna feedpoint is marked as port A. The behavior of this system is fully characterized by its scattering matrix, given as
+The TEM cell containing an antenna is modeled as a three-port network. The two output ports of the TEM cell are denoted as ports 1 and 2, while the antenna feedpoint is marked as port A. The behavior of this system is fully characterized by its scattering matrix, given as \cite[p.~23]{Steer_2015}
 
 \begin{equation}
-	\left[S\right]=
+	\mathbf{S}=
 	\begin{bmatrix}
 		S_{11} & S_{12} & S_{1\mathrm{A}} \\
 		S_{21} & S_{22} & S_{2\mathrm{A}} \\
@@ -202,21 +209,23 @@ The TEM cell containing an antenna is modeled as a three-port network. The two o
 	\end{bmatrix}.
 \end{equation}
 
-The coupling between the antenna and the two ports of the TEM cell is described by S-parameters, specifically the forward transmission coefficients $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$. The phases of the forward transmission coefficients $\Phi_\mathrm{A1}$ and $\Phi_\mathrm{A2}$ provide information on the phase shift between the incident wave at port A, and the transmitted wave at output ports 1 and 2. This phase shift influences the magnitude of the magnetic and electric dipole moments, as discussed in \cref{sec:equ-dip-mom}. The magnitude of this coefficient is equal for both ports, $|S_{\mathrm{A1}}|=|S_{\mathrm{A2}}|$, provided that the antenna is positioned sufficiently far from the output ports. The power transferred from the antenna $P_{\mathrm{A}}$ to the output ports $P_{\mathrm{1}}$ and $P_{\mathrm{2}}$ is derived through
+The coupling between the antenna and the two ports of the TEM cell is described by these S-parameters, specifically the forward transmission coefficients $S_{\mathrm{A1}}$ and $S_{\mathrm{A2}}$. The phases of the forward transmission coefficients provide information on the phase shift between the incident wave at port A, and the transmitted wave at output ports 1 and 2. Determining this phase shift is essential, as it is required to calculate the magnitudes of the magnetic and electric dipole moments, as discussed in \cref{sec:equ-dip-mom}. The magnitude of this coefficient is equal for both ports, $|S_{\mathrm{A1}}|=|S_{\mathrm{A2}}|$. The power transferred from the antenna $P_{\mathrm{A}}$ to the output ports $P_{\mathrm{1}}$ and $P_{\mathrm{2}}$ is derived through \cite[pp.~17]{Steer_2015}
   
   \begin{equation}
-  	P_{\mathrm{A}}=\frac{P_{\mathrm{1}}}{10^{S_{\mathrm{A1, dB}}/10}}=\frac{P_{\mathrm{2}}}{10^{S_{\mathrm{A2, dB}}/10}}.
+  	P_{\mathrm{A}}=\frac{P_{\mathrm{1}}}{{|S_{\mathrm{A1}}|^2}}=\frac{P_{\mathrm{2}}}{|S_{\mathrm{A2}}|^2}.
   	\label{eqn:power_antenna}
   \end{equation}
   
-If the normalized electric field distribution of the TEM mode $\mathbf{e^\pm}_\mathrm{TEM}$ is unknown, it may be directly derived from the electric field intensity at the output port by setting the excitation power to $P_{\mathrm{1}}=P_{\mathrm{2}}=1/2\,\mathrm{W}$, as demonstrated by \eqref{eqn:power_of_poynting1} and \eqref{eqn:power_of_poynting2}. For example, the uniformly distributed, normalized electric field of the TEM mode along the y-axis at the center of the TEM cell ($z=0$, $x=0$) is derived by
+%If the normalized electric field distribution of the TEM mode $\mathbf{e^\pm}_\mathrm{TEM}$ is unknown, it may be directly derived from the electric field intensity at the output port by setting the excitation power to $P_{\mathrm{1}}=P_{\mathrm{2}}=1/2\,\mathrm{W}$, as demonstrated by \eqref{eqn:power_of_poynting1} and \eqref{eqn:power_of_poynting2}. For example, the uniformly distributed, normalized electric field of the TEM mode along the y-axis at the center of the TEM cell ($z=0$, $x=0$) is derived by
+%  
+%  \begin{equation}
+%  	E^+_\mathrm{TEM,y}(x=0,y,z=0) = |a_\mathrm{TEM}|\cdot e_\mathrm{TEM,y}^+(x=0,y,z=0)= \frac{\sqrt{2P_\mathrm{1}Z_\mathrm{0}}}{b/2},
+%  	\label{eqn:approx_e_field}
+%  \end{equation}
+%  
+%  with $E^+_\mathrm{TEM,y}$ being the electric field intensity in $y$-direction of the TEM mode at the output weighted by the modal coefficient $a_\mathrm{TEM}$ according to \eqref{eqn:a_modal_superposition1}.
   
-  \begin{equation}
-  	E^+_\mathrm{TEM,y}(x=0,y,z=0) = |a_\mathrm{TEM}|\cdot e_\mathrm{TEM,y}^+(x=0,y,z=0)= \frac{\sqrt{2P_\mathrm{1}Z_\mathrm{0}}}{b/2},
-  	\label{eqn:approx_e_field}
-  \end{equation}
-  
-  with $E^+_\mathrm{TEM,y}$ being the electric field intensity in $y$-direction of the TEM mode at the output weighted by the modal coefficient $a_\mathrm{TEM}$ according to \eqref{eqn:a_modal_superposition1}. The peak value of the current through the feedpoint is calculated with the S-parameters:
+  The peak value of the current through the feedpoint is calculated with the S-parameters:
   
   \begin{equation}
   	I_{\mathrm{A}} = \sqrt{2P_{\mathrm{A}}}\frac{(1-S_{\mathrm{AA}})}{\sqrt{Z_0}},

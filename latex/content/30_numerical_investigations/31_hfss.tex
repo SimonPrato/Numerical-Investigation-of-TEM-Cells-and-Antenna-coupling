@@ -95,7 +95,7 @@ where $x_m$ are the corresponding weighting coefficients. Determining these coef
 
 The boundary term is expressed in terms of the surface impedance $\eta_s$, where $\eta_s$ defines the ratio of the electric field intensity to the magnetic field intensity at the boundary. Since the basis functions are defined to vanish outside their associated elements, the resulting matrix $A$ is sparse, as entries corresponding to non-overlapping test and basis functions are identically zero. This sparsity significantly reduces the computational cost of solving the system. Once the electric field has been obtained, all other electromagnetic quantities of interest can be derived from it.
 
-\subsection{Adaptive solution process}
+\subsection{Adaptive solution process}\label{sec:adap_sol_pro}
 
 Each finite element is assigned a solved electric field that approximates the true solution within that element. The error associated with each element is assessed by evaluating \eqref{eqn:full_wave_equation} for the solved field, yielding a residual as expressed by
 
