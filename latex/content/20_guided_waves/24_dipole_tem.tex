@@ -1,5 +1,10 @@
 \subsection{Radiating Sources in TEM Cells}\label{sec:rad_source_tem}
 
+Applying the Lorentz reciprocity theorem and the modal field distributions 
+derived in the preceding sections, the coupling of an arbitrary current 
+source to each propagating mode of the TEM cell is determined. This result 
+is then specialized to electric and magnetic dipole moment sources, and subsequently to the electrically small antennas they represent.
+
 \subsubsection{Arbitrary source}
 
 Consider a current $\mathbf{J}_1$ exciting the TEM cell, as shown in 
@@ -86,7 +91,7 @@ Furthermore, the output power at each port can be directly expressed in terms of
 form, hence it is presented here as an example. Combining the normalization condition~\eqref{eqn:unit_power} with the modal fields 
 $\mathbf{E}_\mathrm{TEM}^\pm$ and $\mathbf{H}_\mathrm{TEM}^\pm$ and their respective 
 coefficients $a_\mathrm{TEM}$ and $b_\mathrm{TEM}$ yields
-\begin{subequations}
+\begin{subequations}\label{eqn:power_of_poynting}
 	\begin{align}
 		P_{\mathrm{out,1}} &= \iint_{S_1} \mathbf{S}_\mathrm{av}\,d\mathbf{s}'\nonumber\\ 
 		&= \iint_{S_1} \frac{1}{2}\,\Re\left\{ 
@@ -154,24 +159,44 @@ around an infinitesimally small loop along a curve $C$, which gives
 	\label{eqn:mag_dipole_moment_tem}
 \end{align}
 
-The surface integral is thus expressed in terms of the normalized magnetic field 
-distribution $\mathbf{H}_n^\pm$ of mode $n$. Since the loop is infinitesimally small, 
-$\mathbf{H}_n^\pm$ is assumed constant over the loop area, allowing the source to be 
-represented by $\mathbf{M}_m = I_0\,\mathbf{A}$ as defined in~\eqref{eqn:M_m}. 
-Substituting this definition into~\eqref{eqn:mag_dipole_moment_tem} yields
+The surface integral is thus expressed in terms of the normalized magnetic field
+distribution $\mathbf{H}_n^\pm$ of mode $n$. To simplify this integral, the magnetic
+dipole moment $\mathbf{M}_m$ with units of
+$\mathrm{A\,m^2}$ is introduced, defined as an electric current $I_0$
+flowing in a loop of vector area $\mathbf{A}$~\cite[p.~361]{Collin_2015}:
 
 \begin{equation}
-	\begin{pmatrix}a_n \\ b_n\end{pmatrix} 
+	\mathbf{M}_m = I_0\,\mathbf{A}.
+	\label{eqn:M_m}
+\end{equation}
+
+Since the loop is assumed to be
+infinitesimally small, $\mathbf{H}_n^\pm$ is treated as constant over the loop area,
+allowing the substitution of $\mathbf{M}_m = I_0\,\mathbf{A}$
+into~\eqref{eqn:mag_dipole_moment_tem}, which yields
+
+\begin{equation}
+	\begin{pmatrix}a_n \\ b_n\end{pmatrix}
 	= \frac{j\omega\mu_0}{2}\,\mathbf{M}_m\cdot\mathbf{H}_n^\pm.
 \end{equation}
 
-As discussed in \cref{sec:mag_dip}, the magnetic dipole moment is conventionally 
-expressed in numerical codes and in the 
-literature via a 
-magnetic current flowing along a given length~\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}, defined as $\mathbf{m}_m = I_m\mathbf{L}$ 
-in \eqref{eqn:mag_dipole_moment}. Inserting the equivalence 
-$\mathbf{m}_m = \mathbf{M}_m\mu_0\omega$~\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024} 
-yields
+As discussed in \cref{sec:mag_dip}, the magnetic dipole moment is conventionally
+expressed in numerical codes and in the literature via a magnetic current flowing
+along a given length, defined as $\mathbf{m}_m = I_m\mathbf{L}$
+in~\eqref{eqn:mag_dipole_moment}. To rewrite the above result in terms of
+$\mathbf{m}_m$, the equivalence between the magnetic dipole moment expressed as an
+electric current loop $\mathbf{M}_m$ and as a magnetic current element $I_m\mathbf{L}$
+is employed. These two representations produce identical electric and magnetic field
+distributions, and are related by~\cite[p.~237]{Balanis_1997}
+
+\begin{equation}
+	I_m \mathbf{L} = j\omega\mu_0 \mathbf{A} I_0.
+	\label{eqn:magn_current_curr_loop}
+\end{equation}
+
+Inserting the equivalence
+$\mathbf{m}_m = \mu_0\omega\,\mathbf{M}_m$~\cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}
+into the preceding expression then yields the compact result
 
 \begin{equation}
 	\begin{pmatrix}a_n \\ b_n\end{pmatrix} = \frac{j}{2}\,\mathbf{m}_m\cdot\mathbf{H}_n^\pm.
@@ -309,7 +334,7 @@ Consider a current $I$ flowing along the curve $C$ of an electrically small thin
 With the aim of establishing a relation between an inductive loop antenna and an 
 equivalent magnetic dipole moment $\mathbf{m}_m$, the electrically small antenna is now assumed to form a loop carrying a constant current $I$ over a closed curve $C$. Since $I$ is constant along $C$, it can be pulled out of the integral, and integrating over the closed loop gives~\cite[p.~361]{Collin_2015}
 
-\begin{subequations}
+\begin{subequations}\label{eqn:e_closed_int}
 	\begin{equation}
 		2a_n=-I\oint_C \mathbf{E}_n^+\,d\mathbf{l} = j\omega\mu_0I \iint_S 
 		\mathbf{H}_n^+\,d\mathbf{s}'=I\cdot V_n^+,
@@ -403,7 +428,7 @@ By duality, a similar relation holds for the electric dipole moment $\mathbf{m}_
 \begin{equation}
 	I_\mathrm{TEM}^+ + I_\mathrm{TEM}^- = 
 	-2\frac{\mathbf{m}_{e}\cdot\mathbf{E}_\mathrm{TEM}^\pm}{V}.
-	\label{eqn:ifa_me}
+	\label{eqn:me_i}
 \end{equation}
 
 An equivalent $\mathbf{m}_e$ thus models the electric coupling behavior of any 
@@ -432,7 +457,7 @@ ports and magnetic coupling produces out-of-phase currents, thus allowing the eq
 		\caption{Magnetic coupling}
 		\label{fig:magneticcoupling}
 	\end{subfigure}
-	\caption{Different coupling methods of the antenna, creating an electric and a magnetic dipole moment.}
+	\caption{The (a) electric and (b) magnetic coupling methods of the antenna, creating an electric and a magnetic dipole moment.}
 	\label{fig:electric_magnetic_coupling}
 \end{figure}
 

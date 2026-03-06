@@ -1,4 +1,11 @@
 \subsection{Radiated Field}\label{sec:rad_fields}
+
+The fields radiated by electric and magnetic dipoles exhibit a spatial variation,
+expressed as distinct field regions, each characterized by different field behavior and balance between real and reactive power. Following an analysis of these regions,
+the electric and magnetic energy densities stored in the near field are examined,
+from which equivalent lumped reactances of electrically small antennas can be
+derived.
+
 \FloatBarrier
 \subsubsection{Field regions}
 
@@ -81,14 +88,14 @@ The reactance of an electrically short antenna is directly related to the electr
 
 \begin{subequations}
 	\begin{equation}
-		L = 2\frac{W_{\mathrm{m}}}{I^2},
+		L = 2\frac{W_{\mathrm{m}}}{I_L^2},
 		\label{eqn:l_m_energy}
 	\end{equation}
 	\begin{equation}
-		C = 2 \frac{W_{\mathrm{e}}}{V^2},
+		C = 2 \frac{W_{\mathrm{e}}}{V_C^2},
 		\label{eqn:c_e_energy}
 	\end{equation}
 \end{subequations}
 
-where $V$ and $I$ denote the terminal voltage and current.
+where $V_C$ and $I_L$ denote the voltage across the capacitor $C$ and the current through the inductance $L$, respectively.
 

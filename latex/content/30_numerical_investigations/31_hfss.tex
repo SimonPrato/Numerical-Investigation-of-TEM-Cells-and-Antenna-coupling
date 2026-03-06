@@ -1,5 +1,5 @@
-\subsection{Overview}
-The calculation of electromagnetic fields poses significant challenges, as it requires solving differential equations over a computational domain that, for arbitrary geometries, generally cannot be solved analytically. Ansys HFSS (High-Frequency Simulation Software) addresses this challenge, and as it is used as the basis of the simulations presented in \cref{sec:simulations}, a dedicated description of its underlying methodology is given in the following section.
+
+The calculation of electromagnetic fields poses significant challenges, as it requires solving differential equations over a computational domain that, for arbitrary geometries, generally cannot be solved analytically. Ansys HFSS (High-Frequency Simulation Software) addresses this challenge, and as it is used as the basis of the simulations presented in this thesis, a dedicated description of its underlying methodology is given in the following section.
 
 HFSS employs the Finite Element Method (FEM) as its underlying numerical technique. Following the Rayleigh-Ritz-Galerkin approach, the general idea is to approximate the solution as a linear combination of basis functions, such that the governing differential equation is satisfied as closely as possible. This reformulates the problem of solving a differential equation into a system of algebraic equations that can be efficiently processed computationally. In principle, a suitable set of basis functions exists for which the solution converges to the exact result. In practice, however, the number of basis functions employed across the computational domain must be kept finite, due to limitations in computational resources \cite{STRANG_2018}.
 
@@ -108,15 +108,19 @@ Elements exhibiting the largest residuals represent the greatest local deviation
 
 Regions of the mesh exhibiting large errors are refined by splitting the tetrahedral finite elements into smaller ones, allowing the FEM solver to recalculate the fields in these regions with higher precision and thus reducing the residual. The smaller element size and higher spatial resolution consequently improve the accuracy with which the finite elements represent the fields \cite{1063929}. An alternative approach to improving accuracy is to increase the polynomial order of the basis functions within elements of large residual, without further subdividing them.
 
-To determine when the iterative refinement process has converged to a sufficiently accurate solution, a convergence threshold must be defined. The criterion used is the $\mathrm{Max}\ \Delta \mathrm{S}$ parameter, which is evaluated by comparing the S-parameters of the analyzed structure between two consecutive iterations. If the change in S-parameters falls below this threshold following a mesh refinement, the solution is considered to have converged and the iterative process is terminated. This process is shown in \autoref{fig:workflow_fem}.
- 
+To determine when the iterative refinement process has converged to a sufficiently accurate solution, a convergence threshold must be defined. The criterion used is the $\mathrm{Max}\ \Delta \mathrm{S}$ parameter, which is evaluated by comparing the S-parameters of the analyzed structure between two consecutive iterations. If the change in S-parameters falls below this threshold following a mesh refinement, the solution is considered to have converged and the iterative process is terminated. The resulting mesh is subsequently used to compute the field solution across the entire frequency range of interest.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.75\linewidth]{content/img/workflow_fem.png}
-    \caption{Adaptive solution process}
-    \label{fig:workflow_fem}
+Since electrically small conductors are involved in the investigated structures of this thesis, the adaptive meshing algorithm may fail to sufficiently refine the mesh in their proximity. The near-fields arising in these regions have a low impact on the overall solution of the computational domain, and therefore do not contribute significantly to the residual. As a result, these regions are not identified as high-error elements and are not targeted for refinement. Consequently, manual adjustment of the maximum mesh element length in error-prone volumes is required to ensure that the obtained results exhibit a reasonably low amount of numerical artifacts. Critical regions are commonly located near feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions.
+
+Lastly, it is best practice to select the upper limit of the investigated frequency range as the solution frequency. This choice produces the largest spatial field changes, forcing the adaptive mesh process to generate a high-resolution mesh. Results at frequencies below the solution frequency are computed on the same mesh, which is finer than strictly necessary at those frequencies, providing additional accuracy. This procedure is applied for every numerically derived frequency-dependent result presented in this thesis. This process is shown in \autoref{fig:workflow_fem}.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.75\linewidth]{content/img/workflow_fem.png}
+	\caption{Adaptive solution process}
+	\label{fig:workflow_fem}
 \end{figure}
+
 
 %\todo{Short HFSS introduction with boundary conditions, ports and modal and terminal solutions?}
  % Fehlende Ressourcen von Zoltan in Journal of Applied Physics. Schreibe über mathetmaische Grundlagen, Meshing, Dipole Excitation und Impedance Network Boundary Counditions (INBC)

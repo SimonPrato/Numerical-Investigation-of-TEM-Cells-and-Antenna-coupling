@@ -1,5 +1,12 @@
 \subsection{Shielding}\label{sec:shielding}
 
+The fundamental mechanisms of electromagnetic shielding are reviewed, 
+covering the contributions of reflection, absorption, and multiple internal 
+reflections to the total shielding effectiveness. The influence of a material's 
+conductivity, permittivity, and permeability on each mechanism is discussed, 
+followed by a description of the ASTM ES7-83 method and the dual TEM cell 
+methods used to evaluate electric and magnetic near- and far-field shielding effectiveness.
+
 \subsubsection{Electromagnetic shielding mechanisms}\label{sec:irt_waves}
 
 The following section outlines the fundamental theory of electromagnetic shielding. Throughout this thesis, all materials are assumed to be linear and isotropic.
@@ -70,7 +77,13 @@ For highly conductive materials $\left(\sigma \gg \epsilon\omega\right)$ the ski
 
 For non-conductive materials, absorption depends on the electric loss factor \cite[pp.~102-103]{Jaroszewski_Thomas_Rane_2019}, as further described in \cref{sec:shielding_parameters}.
 
-Upon reaching the far end of the shielding material, re-reflections can occur. When the material thickness is greater than the skin depth, the correction factor for this effect $B_{\mathrm{dB}}$ can be neglected. When the material thickness is smaller than the skin depth, however, the internal reflections reduce the shielding effectiveness by destructively interfering with the reflected waves, and the value of $B_{\mathrm{dB}}$ is negative \cite[p.~1]{Jaroszewski_Thomas_Rane_2019}.
+Multiple internal reflections may occur when electromagnetic waves reach the 
+opposite boundary of the shielding material. When the material thickness 
+exceeds the skin depth, the corresponding correction factor $B_{\mathrm{dB}}$ 
+is negligibly small and can be omitted. When the material thickness is smaller 
+than the skin depth, however, these internal reflections interfere with the 
+primary reflected wave, thereby reducing the overall shielding effectiveness, 
+and $B_{\mathrm{dB}}$ takes a negative value \cite[p.~1]{Jaroszewski_Thomas_Rane_2019}.
 
 %Conductor losses $P_\mathrm{loss}$ are linearly proportional to the area of the conductor and therefore the Skin depth. They show the same dependency on the frequency $P_\mathrm{loss}\propto 1/\sqrt{\omega}$ \cite[p. 413]{Griffiths_2024}. 
 
@@ -150,7 +163,7 @@ When applying numerical analysis in combination with this method, it is more con
         \caption{$xy$-plane}
         \label{fig:form_of_shielding_material}
     \end{subfigure}
-    \caption{Cross section of shielding material in TEM cell}
+    \caption{Cross section of shielding material in TEM cell in the (a) $yz$-plane and in the (b) $xy$-plane.}
     \label{fig:subfigures}
 \end{figure}
 

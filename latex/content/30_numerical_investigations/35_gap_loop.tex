@@ -1,6 +1,6 @@
 \subsection{Additional antenna structures}\label{sec:add_antenna}
 
-The monopole and loop antennas discussed in the previous sections represent the two fundamental reference cases for electric and magnetic dipole radiation, respectively. Their coupling behavior is governed by their dominant reactive character: the monopole antenna is capacitive, while the loop antenna is inductive. This distinction proves to be the primary factor determining the equivalent dipole moments and their frequency dependence, rather than the specific antenna geometry.
+The monopole and loop antennas discussed in the previous sections represent the two fundamental reference cases for electric and magnetic dipole radiation, respectively. Their coupling behavior is governed by their dominant reactive character: the monopole antenna is capacitive, while the loop antenna is primarily inductive. This distinction proves to be the primary factor determining the equivalent dipole moments and their frequency dependence, rather than the specific antenna geometry.
 
 The antennas investigated in the following sections can be understood as geometrical modifications of these reference cases, inheriting their respective reactive character. The loop antenna with a gap in the return path, discussed in \cref{sec:loop_gap_setup}, interrupts the current return path and thereby shifts the antenna toward capacitive behavior, yielding equivalent dipole moments analogous to those of the monopole antenna. The inverted-F and center-fed monopole antennas, investigated in \cref{sec:ifa_sim}, maintain a closed current path and exhibit predominantly inductive behavior, mirroring the results obtained for the loop antenna. The analysis in each case focuses on the deviations in the equivalent dipole moments and their frequency dependence relative to the respective reference structure, and identifies the geometrical modifications responsible for these differences.
 
@@ -23,7 +23,7 @@ The antennas investigated in the following sections can be understood as geometr
 		\label{fig:gappedloopantenna}
 	\end{subfigure}
 	
-	\caption{Geometry of the loop antenna with a gap in the return path inserted in the TEM cell. The gap height is exaggerated for demonstration purposes.}
+	\caption{Geometry of the loop antenna in (a) with a gap in the return path inserted in the TEM cell, and its near-fields demonstrated in (b). The figure is not to scale.}
 	\label{fig:gaploop}
 \end{figure}
 
@@ -39,7 +39,7 @@ A loop antenna with a gap of height $10\,$µm introduced in the return path, as 
 
 The conductors adjacent to the gap act as capacitor plates, accumulating charges on both sides. These charges generate a displacement current that flows back toward the feed point and constitutes a major contribution to the electric energy stored by the antenna. As a secondary effect, the accumulated charges modify the antenna potential, thereby increasing the displacement current toward the septum. According to \eqref{eqn:charges_a} and \eqref{eqn:charges_b}, this results in electric coupling to the septum and consequently induces an electric dipole moment $\mathbf{m}_e$.
 
-The gap in the return path reduces the electric current compared to a closed return path. Nevertheless, due to the non-negligible displacement current across the gap, a circulating current can still be sustained through magnetic coupling. This current gives rise to a magnetic dipole moment $\mathbf{m}_m$ according to \eqref{eqn:mag_dipole_moment_tem}. However, because the return path discontinuity suppresses the conduction current relative to the conventional loop antenna in \cref{sec:loop_sim}, a substantially smaller magnetic dipole moment $\mathbf{m}_m$ is expected. These assumptions regarding the equivalent dipole moments are supported by the results shown in \autoref{fig:gappedloopmoments}.
+The gap in the return path reduces the electric current compared to a closed return path. Nevertheless, due to the non-negligible displacement current across the gap, a conducting current can still be sustained. This current gives rise to a magnetic dipole moment $\mathbf{m}_m$ according to \eqref{eqn:mag_dipole_moment_tem}. However, because the return path discontinuity reduces the conduction current relative to the conventional loop antenna in \cref{sec:loop_sim}, a substantially smaller magnetic dipole moment $\mathbf{m}_m$ is expected. These assumptions regarding the equivalent dipole moments are supported by the results shown in \autoref{fig:gappedloopmoments}.
 
 %, where the electric dipole moment $\mathbf{m}_e$ is larger than the magnetic dipole moment $\mathbf{m}_m$. The dipole moments behave non-linearly over the frequency. 
 
@@ -49,7 +49,7 @@ The gap in the return path reduces the electric current compared to a closed ret
 	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/gapped_loop_moments}
-		\caption{Equivalent dipole moments over frequency}
+		\caption{Equivalent dipole moments}
 		\label{fig:gappedloopmoments}
 	\end{subfigure}
 	\hfill
@@ -60,11 +60,11 @@ The gap in the return path reduces the electric current compared to a closed ret
 		\label{fig:gappedloopphase}
 	\end{subfigure}
 	
-	\caption{The equivalent dipole moments of the loop antenna with a gap, where the electric dipole moment $\mathbf{m}_{e}$ is weighted with $\eta_0$ to enable comparison with $\mathbf{m}_{m}$, with the correlated phase information of the output port powers.}
+	\caption{The equivalent dipole moments of the loop antenna with a gap in (a), where the electric dipole moment $\mathbf{m}_{e}$ is weighted with $\eta_0$ to enable comparison with $\mathbf{m}_{m}$. The correlated phase information of the output port powers in (b).}
 	\label{fig:gapmoments}
 \end{figure}
 
-To quantify the influence of the gap on the generated dipole moments, \autoref{fig:gappedloopcompmomentsgapsweep} presents the equivalent dipole moments as a function of frequency for several gap heights. Reducing the gap height increases both $\mathbf{m}_e$ and $\mathbf{m}_m$. The growth of $\mathbf{m}_e$ is attributed to the enhanced charge accumulation at the gap boundaries, which increases the displacement current coupling to the septum according to \eqref{eqn:me_i}. The increase in $\mathbf{m}_m$ follows from the reduced gap impedance, which permits a larger circulating current through the antenna wire, thereby strengthening the magnetic coupling with the TEM cell according to \eqref{eqn:m_v}. The resulting output power, shown in \autoref{fig:gappedloopcomppowergapsweep}, increases accordingly with both dipole moment magnitudes.
+To quantify the influence of the gap on the generated dipole moments, \autoref{fig:gappedloopcompmomentsgapsweep} presents the equivalent dipole moments as a function of frequency for several gap heights. Reducing the gap height increases both $\mathbf{m}_e$ and $\mathbf{m}_m$. The growth of $\mathbf{m}_e$ is attributed to the enhanced charge accumulation at the gap boundaries, which increases the displacement current coupling to the septum according to \eqref{eqn:me_i}. The increase in $\mathbf{m}_m$ follows from the reduced gap impedance, which permits a larger conductive current through the antenna wire, thereby strengthening the magnetic coupling with the TEM cell according to \eqref{eqn:m_v}. The resulting output power, shown in \autoref{fig:gappedloopcomppowergapsweep}, increases accordingly with both dipole moment magnitudes.
 
 \begin{figure}[hbtp]
 	\centering
@@ -82,11 +82,11 @@ To quantify the influence of the gap on the generated dipole moments, \autoref{f
 		\label{fig:gappedloopcomppowergapsweep}
 	\end{subfigure}
 	
-	\caption{Output power for different gap heights in the loop antenna, and comparison of the equivalent dipole moments, where the electric dipole moment $\mathbf{m}_e$ is weighted with $\eta_0$ to enable comparison with $\mathbf{m}_m$.}
+	\caption{(a) Comparison of the equivalent dipole moments, where the electric dipole moment $\mathbf{m}_e$ is weighted by $\eta_0$ to allow direct comparison with $\mathbf{m}_m$. (b) Comparison of the output power for different gap heights of the loop antenna.}
 	\label{fig:gaplopsweep}
 \end{figure}
 
-It is further noted that the increased charge accumulation at the gap boundaries is naturally accompanied by a growing circulating current, as the two quantities are coupled through the continuity equation. Consequently, an increase in $\mathbf{m}_e$ inherently gives rise to a corresponding increase in $\mathbf{m}_m$.
+It is further noted that the increased charge accumulation at the gap boundaries is naturally accompanied by a growing conductive current, as the displacement current rises accordingly. Consequently, an increase in $\mathbf{m}_e$ inherently gives rise to a corresponding increase in $\mathbf{m}_m$.
 
 The input impedance of the loop antenna with gap is capacitive, as confirmed by \autoref{fig:gappedloopimp}. However, in contrast to the monopole antenna, the loop antenna with gap retains a non-negligible inductance due to its closed wire geometry. This is reflected in a more pronounced magnetic dipole moment $\mathbf{m}_m$ and a steeper decline of the impedance magnitude with frequency compared to that of the monopole antenna, shown in \autoref{fig:monopoleimp}.
 
@@ -109,7 +109,7 @@ The feed current, by contrast, increases more slowly with frequency than in the 
 		\caption{Magnitude and phase of impedance}
 		\label{fig:gappedloopimp}
 	\end{subfigure}
-	\caption{The voltage and current across the feedpoint, together with the related impedance of the loop antenna with gap.}
+	\caption{The voltage and current across the feedpoint in (a), together with the related impedance in (b) of the loop antenna with gap.}
 	\label{fig:gapelec}
 \end{figure}
 

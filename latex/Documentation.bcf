@@ -96,7 +96,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -104,7 +104,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -116,15 +116,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -172,7 +172,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>nty</bcf:value>
+      <bcf:value>none</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -331,7 +331,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -339,7 +339,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -351,15 +351,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -642,6 +642,8 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -724,6 +726,7 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -812,6 +815,7 @@
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
     <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">subentrycomp</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -2361,143 +2365,201 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references/references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Griffiths_2024</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="4" intorder="2">Jackson</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Griffiths_2024</bcf:citekey>
-    <bcf:citekey order="5" intorder="2">Jackson</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Jackson</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Griffiths_2024</bcf:citekey>
-    <bcf:citekey order="7" intorder="2">Jackson</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Griffiths_2024</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Jackson</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Jackson</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Jackson</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Paul_Scully_Steffka_2023</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">9153508</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">Koepke_1989</bcf:citekey>
+    <bcf:citekey order="8" intorder="3">809846</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">10274360</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">10742020</bcf:citekey>
+    <bcf:citekey order="10" intorder="3">Wilson_1981</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">10742020</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Griffiths_2024</bcf:citekey>
     <bcf:citekey order="14" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Jackson</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Griffiths_2024</bcf:citekey>
     <bcf:citekey order="17" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">7293591</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">STRANG_2018</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">Cendes_Lee_1988</bcf:citekey>
-    <bcf:citekey order="20" intorder="2">85399</bcf:citekey>
-    <bcf:citekey order="20" intorder="3">Cendes_1991</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Shenton_Cendes_1985</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">85399</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">104986</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">Mohsen_1982</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Cendes_Lee_1988</bcf:citekey>
-    <bcf:citekey order="25" intorder="2">Cendes_1991</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">huebner2001finite</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">Mohsen_1982</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">1063929</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="29" intorder="2">Collin_2015</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="30" intorder="2">Collin_2015</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">Balanis_1997</bcf:citekey>
-    <bcf:citekey order="31" intorder="2">Lorrain_Corson_1970</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">Koepke_1989</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="36" intorder="2">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">809846</bcf:citekey>
-    <bcf:citekey order="38" intorder="2">990711</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">Tippet_Chang_Crawford_1976</bcf:citekey>
-    <bcf:citekey order="39" intorder="2">Wilson_1981</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">4091747</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">4091747</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">Weil_Gruner_1984</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">990711</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">990711</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">990711</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">10791592</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">Wilson_Ma_1986</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">10791592</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">990711</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Yenumula_Narayanan_Kaltenbacher_2022</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">Wilson_Ma_1986</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">Wilson_1981</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">4091811</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">4091811</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">4091811</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">4091811</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">10518640</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">10518640</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Griffiths_2024</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">Griffiths_2024</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">Griffiths_2024</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">Arfken_Weber_Harris_2013</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">Arfken_Weber_Harris_2013</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">Arfken_Weber_Harris_2013</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">Arfken_Weber_Harris_2013</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">Arfken_Weber_Harris_2013</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">Arfken_Weber_Harris_2013</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">Collin_2015</bcf:citekey>
     <bcf:citekey order="73" intorder="1">Collin_2015</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">Jackson</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">Balanis_2012</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">Balanis_2012</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">Balanis_2012</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">Balanis_2012</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
-    <bcf:citekey order="82" intorder="2">4091811</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">4091811</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">4091811</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">Griffiths_2024</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">Griffiths_2024</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">990711</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">Tippet_Chang_Crawford_1976</bcf:citekey>
+    <bcf:citekey order="83" intorder="2">Wilson_1981</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">Wilson_1981</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">Wilson_1981</bcf:citekey>
     <bcf:citekey order="86" intorder="1">Wilson_1981</bcf:citekey>
     <bcf:citekey order="87" intorder="1">Wilson_1981</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">Wilson_1981</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">Weil_Gruner_1984</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">Wilson_Ma_1986</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">Wilson_Ma_1986</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">Weil_Gruner_1984</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">990711</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">Weil_Gruner_1984</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">10791592</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="96" intorder="2">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">Tippet_Chang_Crawford_1976</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024</bcf:citekey>
+    <bcf:citekey order="117" intorder="2">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">10518640</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">Schelkunoff_1938</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">10518640</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">Collin_2015</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="130" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="132" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="133" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
+    <bcf:citekey order="134" intorder="1">Balanis_2012</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">Balanis_2012</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024</bcf:citekey>
+    <bcf:citekey order="137" intorder="1">Balanis_2012</bcf:citekey>
+    <bcf:citekey order="138" intorder="1">Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024</bcf:citekey>
+    <bcf:citekey order="139" intorder="1">Balanis_2012</bcf:citekey>
+    <bcf:citekey order="140" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
+    <bcf:citekey order="141" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
+    <bcf:citekey order="142" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
+    <bcf:citekey order="143" intorder="1">MORARI_BĂLAN_2015</bcf:citekey>
+    <bcf:citekey order="143" intorder="2">4091811</bcf:citekey>
+    <bcf:citekey order="144" intorder="1">4091811</bcf:citekey>
+    <bcf:citekey order="145" intorder="1">STRANG_2018</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">Cendes_Lee_1988</bcf:citekey>
+    <bcf:citekey order="146" intorder="2">85399</bcf:citekey>
+    <bcf:citekey order="146" intorder="3">Cendes_1991</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">Shenton_Cendes_1985</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">Cendes_Lee_1988</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">85399</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">104986</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">Mohsen_1982</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">Cendes_Lee_1988</bcf:citekey>
+    <bcf:citekey order="152" intorder="2">huebner2001finite</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">Mohsen_1982</bcf:citekey>
+    <bcf:citekey order="154" intorder="1">1063929</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">Jackson</bcf:citekey>
+    <bcf:citekey order="157" intorder="1">Steer_2015</bcf:citekey>
+    <bcf:citekey order="158" intorder="1">Steer_2015</bcf:citekey>
+    <bcf:citekey order="159" intorder="1">Steer_2015</bcf:citekey>
+    <bcf:citekey order="160" intorder="1">Steer_2015</bcf:citekey>
+    <bcf:citekey order="161" intorder="1">Steer_2015</bcf:citekey>
+    <bcf:citekey order="162" intorder="1">horowitz2015art</bcf:citekey>
+    <bcf:citekey order="163" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="164" intorder="1">kopp_hfss</bcf:citekey>
+    <bcf:citekey order="165" intorder="1">Chu_1948</bcf:citekey>
+    <bcf:citekey order="166" intorder="1">Chu_1948</bcf:citekey>
+    <bcf:citekey order="167" intorder="1">Pozar_2012</bcf:citekey>
+    <bcf:citekey order="168" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="169" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="170" intorder="1">Balanis_1997</bcf:citekey>
+    <bcf:citekey order="171" intorder="1">1430946</bcf:citekey>
+    <bcf:citekey order="172" intorder="1">Sreenivasiah_Chang_Ma_1981</bcf:citekey>
+    <bcf:citekey order="173" intorder="1">4091811</bcf:citekey>
+    <bcf:citekey order="174" intorder="1">Jaroszewski_Thomas_Rane_2019</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="nty">
+  <bcf:sortingtemplate name="none">
     <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
     </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1">volume</bcf:sortitem>
-      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="nty/global//global/global"
+                name="none/global//global/global"
                 type="entry"
-                sortingtemplatename="nty"
+                sortingtemplatename="none"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"

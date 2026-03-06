@@ -22,32 +22,36 @@
       {{hash=AGB}{%
          family={Arfken},
          familyi={A\bibinitperiod},
-         given={George\bibnamedelima B.},
+         given={G.\bibnamedelima B.},
          giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
       }}%
       {{hash=WHJ}{%
          family={Weber},
          familyi={W\bibinitperiod},
-         given={Hans-Jurgen},
+         given={H.-J.},
          giveni={H\bibinithyphendelim J\bibinitperiod},
       }}%
-      {{hash=HF}{%
+      {{hash=HFE}{%
          family={Harris},
          familyi={H\bibinitperiod},
-         given={Frank},
-         giveni={F\bibinitperiod},
+         given={F.\bibnamedelima E.},
+         giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {Academic}%
+      {Academic Press}%
     }
-    \strng{namehash}{AGBWHJHF1}
-    \strng{fullhash}{AGBWHJHF1}
+    \strng{namehash}{AGBWHJHFE1}
+    \strng{fullhash}{AGBWHJHFE1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{A}
     \field{sortinithash}{A}
-    \field{title}{Mathematical methods for physicists}
+    \field{edition}{7th}
+    \field{title}{Mathematical Methods for Physicists}
+    \list{location}{1}{%
+      {Oxford, U.K.}%
+    }
     \field{year}{2013}
   \endentry
 
@@ -56,12 +60,12 @@
       {{hash=BCA}{%
          family={Balanis},
          familyi={B\bibinitperiod},
-         given={Constantine\bibnamedelima A.},
+         given={C.\bibnamedelima A.},
          giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {John Wiley Sons}%
+      {John Wiley \& Sons}%
     }
     \strng{namehash}{BCA1}
     \strng{fullhash}{BCA1}
@@ -69,7 +73,11 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{B}
     \field{sortinithash}{B}
+    \field{edition}{2nd}
     \field{title}{Advanced Engineering Electromagnetics}
+    \list{location}{1}{%
+      {Hoboken, NJ, USA}%
+    }
     \field{year}{2012}
   \endentry
 
@@ -78,7 +86,7 @@
       {{hash=BCA}{%
          family={Balanis},
          familyi={B\bibinitperiod},
-         given={Constantine\bibnamedelima A.},
+         given={C.\bibnamedelima A.},
          giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
     }
@@ -92,8 +100,10 @@
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{edition}{3rd}
-    \field{title}{Antenna theory: Analysis and design. Buch Constantine A.
-  Balanis}
+    \field{title}{Antenna Theory: Analysis and Design}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
     \field{year}{1997}
   \endentry
 
@@ -124,11 +134,6 @@
          giveni={G\bibinitperiod},
       }}%
     }
-    \keyw{Magnetic shielding;Physics computing;Boundary conditions;Eddy
-  currents;Magnetic analysis;Magnetic field measurement;Finite element
-  methods;Surface impedance;Integral equations;Frequency;Coupled boundary
-  conditions;edge elements;finite-element method (FEM);impedance network
-  boundary condition (INBC);physically large domain;shielding}
     \strng{namehash}{BC+1}
     \strng{fullhash}{BCFMMFMG1}
     \field{labelnamesource}{author}
@@ -140,33 +145,88 @@
     \endverb
     \field{number}{5}
     \field{pages}{1708\bibrangedash 1711}
-    \field{title}{Magnetic field computation in a physically large domain with
-  thin metallic shields}
+    \field{title}{Magnetic Field Computation in a Physically Large Domain with
+  Thin Metallic Shields}
     \field{volume}{41}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{journaltitle}{{IEEE} Trans. Magn.}
     \field{year}{2005}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Cendes_1991}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CZJ}{%
+         family={Cendes},
+         familyi={C\bibinitperiod},
+         given={Z.\bibnamedelima J.},
+         giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CZJ1}
+    \strng{fullhash}{CZJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1109/20.104970
+    \endverb
+    \field{number}{5}
+    \field{pages}{3958\bibrangedash 3966}
+    \field{title}{Vector Finite Elements for Electromagnetic Field Computation}
+    \field{volume}{27}
+    \field{journaltitle}{{IEEE} Trans. Magn.}
+    \field{year}{1991}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Cendes_Lee_1988}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=CZJ}{%
+         family={Cendes},
+         familyi={C\bibinitperiod},
+         given={Z.\bibnamedelima J.},
+         giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=LJF}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J.-F.},
+         giveni={J\bibinithyphendelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CZJLJF1}
+    \strng{fullhash}{CZJLJF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Proc. {IEEE} MTT-S Int. Microw. Symp.}
+    \verb{doi}
+    \verb 10.1109/MWSYM.1988.22111
+    \endverb
+    \field{pages}{623\bibrangedash 626}
+    \field{title}{The Transfinite Element Method for Modeling {MMIC} Devices}
+    \field{year}{1988}
   \endentry
 
   \entry{1063929}{article}{}
     \name{author}{2}{}{%
-      {{hash=CZ}{%
+      {{hash=CZJ}{%
          family={Cendes},
          familyi={C\bibinitperiod},
-         given={Z.},
-         giveni={Z\bibinitperiod},
+         given={Z.\bibnamedelima J.},
+         giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
-      {{hash=SD}{%
+      {{hash=SDN}{%
          family={Shenton},
          familyi={S\bibinitperiod},
-         given={D.},
-         giveni={D\bibinitperiod},
+         given={D.\bibnamedelima N.},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
       }}%
     }
-    \keyw{Adaptive mesh refinement;Finite element methods;Magnetic
-  fields;Computer errors;Magnetic analysis;Magnetic flux;Mesh generation;Design
-  engineering;Computer graphics;Magnetic devices}
-    \strng{namehash}{CZSD1}
-    \strng{fullhash}{CZSD1}
+    \strng{namehash}{CZJSDN1}
+    \strng{fullhash}{CZJSDN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{C}
@@ -176,82 +236,25 @@
     \endverb
     \field{number}{5}
     \field{pages}{1811\bibrangedash 1816}
-    \field{title}{Adaptive mesh refinement in the finite element computation of
-  magnetic fields}
+    \field{title}{Adaptive Mesh Refinement in the Finite Element Computation of
+  Magnetic Fields}
     \field{volume}{21}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{journaltitle}{{IEEE} Trans. Magn.}
     \field{year}{1985}
-  \endentry
-
-  \entry{Cendes_1991}{article}{}
-    \name{author}{1}{}{%
-      {{hash=CZ}{%
-         family={Cendes},
-         familyi={C\bibinitperiod},
-         given={Z.J.},
-         giveni={Z\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CZ1}
-    \strng{fullhash}{CZ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \verb{doi}
-    \verb 10.1109/20.104970
-    \endverb
-    \field{number}{5}
-    \field{pages}{3958–3966}
-    \field{title}{Vector finite elements for electromagnetic field computation}
-    \field{volume}{27}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
-    \field{year}{1991}
     \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{Cendes_Lee_1988}{article}{}
-    \name{author}{2}{}{%
-      {{hash=CZ}{%
-         family={Cendes},
-         familyi={C\bibinitperiod},
-         given={Z.J.},
-         giveni={Z\bibinitperiod},
-      }}%
-      {{hash=LJF}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={J.-F.},
-         giveni={J\bibinithyphendelim F\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CZLJF1}
-    \strng{fullhash}{CZLJF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \verb{doi}
-    \verb 10.1109/mwsym.1988.22111
-    \endverb
-    \field{pages}{623–626}
-    \field{title}{The transfinite element method for modeling MMIC devices}
-    \field{journaltitle}{1988., IEEE MTT-S International Microwave Symposium
-  Digest}
-    \field{year}{1988}
   \endentry
 
   \entry{Chu_1948}{article}{}
     \name{author}{1}{}{%
-      {{hash=CL}{%
+      {{hash=CLJ}{%
          family={Chu},
          familyi={C\bibinitperiod},
-         given={L.},
-         giveni={L\bibinitperiod},
+         given={L.\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
-    \strng{namehash}{CL1}
-    \strng{fullhash}{CL1}
+    \strng{namehash}{CLJ1}
+    \strng{fullhash}{CLJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{C}
@@ -260,10 +263,10 @@
     \verb 10.1063/1.1715038
     \endverb
     \field{number}{12}
-    \field{pages}{1163–1175}
-    \field{title}{Physical limitations of Omni-directional antennas}
+    \field{pages}{1163\bibrangedash 1175}
+    \field{title}{Physical Limitations of Omni-Directional Antennas}
     \field{volume}{19}
-    \field{journaltitle}{Journal of Applied Physics}
+    \field{journaltitle}{J. Appl. Phys.}
     \field{year}{1948}
     \warn{\item Invalid format of field 'month'}
   \endentry
@@ -273,12 +276,12 @@
       {{hash=CRE}{%
          family={Collin},
          familyi={C\bibinitperiod},
-         given={Robert\bibnamedelima E.},
+         given={R.\bibnamedelima E.},
          giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {IEEE Press}%
+      {{IEEE} Press}%
     }
     \strng{namehash}{CRE1}
     \strng{fullhash}{CRE1}
@@ -286,7 +289,11 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{C}
     \field{sortinithash}{C}
-    \field{title}{Field theory of guided waves}
+    \field{edition}{2nd}
+    \field{title}{Field Theory of Guided Waves}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
     \field{year}{2015}
   \endentry
 
@@ -295,18 +302,19 @@
       {{hash=DS}{%
          family={Daniel},
          familyi={D\bibinitperiod},
-         given={Saju},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
       {{hash=TS}{%
          family={Thomas},
          familyi={T\bibinitperiod},
-         given={Sabu},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
     }
-    \keyw{Reflection;Absorption;Electromagnetic
-  interference;Impedance;Skin;Permeability;Conductivity}
+    \list{publisher}{1}{%
+      {Wiley}%
+    }
     \strng{namehash}{DSTS1}
     \strng{fullhash}{DSTS1}
     \field{labelnamesource}{author}
@@ -320,6 +328,9 @@
     \endverb
     \field{pages}{61\bibrangedash 87}
     \field{title}{Shielding Efficiency Measuring Methods and Systems}
+    \list{location}{1}{%
+      {Hoboken, NJ, USA}%
+    }
     \field{year}{2019}
   \endentry
 
@@ -328,32 +339,30 @@
       {{hash=DAV}{%
          family={Demakov},
          familyi={D\bibinitperiod},
-         given={Alexander\bibnamedelima V.},
+         given={A.\bibnamedelima V.},
          giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
       }}%
       {{hash=KME}{%
          family={Komnatnov},
          familyi={K\bibinitperiod},
-         given={Maxim\bibnamedelima E.},
+         given={M.\bibnamedelima E.},
          giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
       }}%
     }
-    \keyw{TEM cells;Integrated circuits;Conductors;Solid
-  modeling;Prototypes;Connectors;Electrodynamics;TEM cells;integrated circuit
-  noise;electromagnetic modeling;electromagnetic compatibility}
     \strng{namehash}{DAVKME1}
     \strng{fullhash}{DAVKME1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{D}
     \field{sortinithash}{D}
-    \field{booktitle}{2020 21st International Conference of Young Specialists
-  on Micro/Nanotechnologies and Electron Devices (EDM)}
+    \field{booktitle}{Proc. 21st Int. Conf. Young Specialists
+  Micro/Nanotechnologies Electron Devices ({EDM})}
     \verb{doi}
     \verb 10.1109/EDM49804.2020.9153508
     \endverb
     \field{pages}{154\bibrangedash 158}
-    \field{title}{TEM cell for Testing Low-profile Integrated Circuits for EMC}
+    \field{title}{{TEM} Cell for Testing Low-Profile Integrated Circuits for
+  {EMC}}
     \field{year}{2020}
   \endentry
 
@@ -362,7 +371,7 @@
       {{hash=GDJ}{%
          family={Griffiths},
          familyi={G\bibinitperiod},
-         given={David\bibnamedelima J.},
+         given={D.\bibnamedelima J.},
          giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
@@ -375,7 +384,11 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{G}
     \field{sortinithash}{G}
-    \field{title}{Introduction to electrodynamics}
+    \field{edition}{5th}
+    \field{title}{Introduction to Electrodynamics}
+    \list{location}{1}{%
+      {Cambridge, U.K.}%
+    }
     \field{year}{2024}
   \endentry
 
@@ -387,11 +400,11 @@
          given={C.},
          giveni={C\bibinitperiod},
       }}%
-      {{hash=KJ}{%
-         family={Karst},
+      {{hash=KJP}{%
+         family={K{\"a}rst},
          familyi={K\bibinitperiod},
-         given={J.P.},
-         giveni={J\bibinitperiod},
+         given={J.\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
       }}%
       {{hash=KM}{%
          family={Koch},
@@ -406,9 +419,8 @@
          giveni={H\bibinitperiod},
       }}%
     }
-    \keyw{Electromagnetic compatibility}
     \strng{namehash}{GC+1}
-    \strng{fullhash}{GCKJKMGH1}
+    \strng{fullhash}{GCKJPKMGH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{G}
@@ -418,54 +430,88 @@
     \endverb
     \field{number}{4}
     \field{pages}{440\bibrangedash 445}
-    \field{title}{TEM waveguides for EMC measurements}
+    \field{title}{{TEM} Waveguides for {EMC} Measurements}
     \field{volume}{41}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
+    \field{journaltitle}{{IEEE} Trans. Electromagn. Compat.}
     \field{year}{1999}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{horowitz2015art}{book}{}
+    \name{author}{2}{}{%
+      {{hash=HP}{%
+         family={Horowitz},
+         familyi={H\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HW}{%
+         family={Hill},
+         familyi={H\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{HPHW1}
+    \strng{fullhash}{HPHW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{edition}{3rd}
+    \field{isbn}{978-0-521-80926-9}
+    \field{title}{The Art of Electronics}
+    \list{location}{1}{%
+      {Cambridge, U.K.}%
+    }
+    \field{year}{2015}
   \endentry
 
   \entry{huebner2001finite}{book}{}
     \name{author}{4}{}{%
-      {{hash=HK}{%
+      {{hash=HKH}{%
          family={Huebner},
          familyi={H\bibinitperiod},
-         given={K.H.},
-         giveni={K\bibinitperiod},
+         given={K.\bibnamedelima H.},
+         giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod},
       }}%
-      {{hash=DD}{%
+      {{hash=DDL}{%
          family={Dewhirst},
          familyi={D\bibinitperiod},
-         given={D.L.},
-         giveni={D\bibinitperiod},
+         given={D.\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
       }}%
-      {{hash=SD}{%
+      {{hash=SDE}{%
          family={Smith},
          familyi={S\bibinitperiod},
-         given={D.E.},
-         giveni={D\bibinitperiod},
+         given={D.\bibnamedelima E.},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
       }}%
-      {{hash=BT}{%
+      {{hash=BTG}{%
          family={Byrom},
          familyi={B\bibinitperiod},
-         given={T.G.},
-         giveni={T\bibinitperiod},
+         given={T.\bibnamedelima G.},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Wiley}%
     }
-    \strng{namehash}{HK+1}
-    \strng{fullhash}{HKDDSDBT1}
+    \strng{namehash}{HKH+1}
+    \strng{fullhash}{HKHDDLSDEBTG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{H}
     \field{sortinithash}{H}
-    \field{isbn}{9780471370789}
-    \field{series}{A Wiley-Interscience publication}
+    \field{edition}{4th}
+    \field{isbn}{978-0-471-37078-9}
     \field{title}{The Finite Element Method for Engineers}
-    \verb{url}
-    \verb https://books.google.at/books?id=f3MZE1BYq3AC
-    \endverb
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
     \field{year}{2001}
   \endentry
 
@@ -474,7 +520,7 @@
       {{hash=JJD}{%
          family={Jackson},
          familyi={J\bibinitperiod},
-         given={John\bibnamedelima David},
+         given={J.\bibnamedelima D.},
          giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
       }}%
     }
@@ -487,8 +533,12 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{J}
     \field{sortinithash}{J}
-    \field{edition}{2}
-    \field{title}{Classical Electromagnetics}
+    \field{edition}{3rd}
+    \field{title}{Classical Electrodynamics}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{1999}
   \endentry
 
   \entry{Jaroszewski_Thomas_Rane_2019}{book}{}
@@ -496,19 +546,19 @@
       {{hash=JMW}{%
          family={Jaroszewski},
          familyi={J\bibinitperiod},
-         given={Maciej\bibnamedelima Wladyslaw},
+         given={M.\bibnamedelima W.},
          giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
       }}%
       {{hash=TS}{%
          family={Thomas},
          familyi={T\bibinitperiod},
-         given={Sabu},
+         given={S.},
          giveni={S\bibinitperiod},
       }}%
       {{hash=RAV}{%
          family={Rane},
          familyi={R\bibinitperiod},
-         given={Ajay\bibnamedelima V.},
+         given={A.\bibnamedelima V.},
          giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
       }}%
     }
@@ -521,18 +571,21 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{J}
     \field{sortinithash}{J}
-    \field{title}{Advanced materials for electromagnetic shielding:
-  Fundamentals, properties, and applications}
+    \field{title}{Advanced Materials for Electromagnetic Shielding:
+  Fundamentals, Properties, and Applications}
+    \list{location}{1}{%
+      {Hoboken, NJ, USA}%
+    }
     \field{year}{2019}
   \endentry
 
   \entry{990711}{article}{}
     \name{author}{3}{}{%
-      {{hash=KJ}{%
-         family={Karst},
+      {{hash=KJP}{%
+         family={K{\"a}rst},
          familyi={K\bibinitperiod},
-         given={J.P.},
-         giveni={J\bibinitperiod},
+         given={J.\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
       }}%
       {{hash=GC}{%
          family={Groh},
@@ -547,9 +600,8 @@
          giveni={H\bibinitperiod},
       }}%
     }
-    \keyw{Test facilities}
-    \strng{namehash}{KJGCGH1}
-    \strng{fullhash}{KJGCGH1}
+    \strng{namehash}{KJPGCGH1}
+    \strng{fullhash}{KJPGCGH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{K}
@@ -559,11 +611,12 @@
     \endverb
     \field{number}{1}
     \field{pages}{59\bibrangedash 71}
-    \field{title}{Calculable field generation using TEM cells applied to the
-  calibration of a novel E-field probe}
+    \field{title}{Calculable Field Generation Using {TEM} Cells Applied to the
+  Calibration of a Novel {E}-Field Probe}
     \field{volume}{44}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
+    \field{journaltitle}{{IEEE} Trans. Electromagn. Compat.}
     \field{year}{2002}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{10791592}{inproceedings}{}
@@ -587,36 +640,45 @@
          giveni={H\bibinitperiod},
       }}%
     }
-    \keyw{Resonant frequency;TEM cells;Mathematical models;Frequency
-  measurement;Geometry;Feeds;Reflection;Propagation constant;Electric
-  fields;Power transmission lines}
     \strng{namehash}{KMGCGH1}
     \strng{fullhash}{KMGCGH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{K}
     \field{sortinithash}{K}
-    \field{booktitle}{13th International Zurich Symposium and Technical
-  Exhibition on Electromagnetic Compatibility}
+    \field{booktitle}{Proc. 13th Int. Zurich Symp. Tech. Exhib. Electromagn.
+  Compat.}
     \verb{doi}
     \verb 10.23919/EMC.1999.10791592
     \endverb
     \field{pages}{653\bibrangedash 658}
-    \field{title}{Exact Determination of Resonant Frequencies in TEM Cells}
+    \field{title}{Exact Determination of Resonant Frequencies in {TEM} Cells}
     \field{year}{1999}
   \endentry
 
-  \entry{Koepke_1989}{article}{}
-    \name{author}{1}{}{%
+  \entry{Koepke_1989}{report}{}
+    \name{author}{3}{}{%
       {{hash=KGH}{%
          family={Koepke},
          familyi={K\bibinitperiod},
-         given={Galen\bibnamedelima H},
+         given={G.\bibnamedelima H.},
          giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
       }}%
+      {{hash=MMT}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={M.\bibnamedelima T.},
+         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=BWD}{%
+         family={Bensema},
+         familyi={B\bibinitperiod},
+         given={W.\bibnamedelima D.},
+         giveni={W\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
     }
-    \strng{namehash}{KGH1}
-    \strng{fullhash}{KGH1}
+    \strng{namehash}{KGHMMTBWD1}
+    \strng{fullhash}{KGHMMTBWD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{K}
@@ -624,63 +686,41 @@
     \verb{doi}
     \verb 10.6028/nist.tn.1326
     \endverb
-    \field{title}{Theory and measurements of radiated emissions using a TEM
-  cell}
+    \field{number}{NIST TN 1326}
+    \field{title}{Theory and Measurements of Radiated Emissions Using a {TEM}
+  Cell}
+    \list{institution}{2}{%
+      {National Institute of Standards}%
+      {Technology}%
+    }
+    \field{type}{techreport}
     \field{year}{1989}
   \endentry
 
-  \entry{10742020}{inproceedings}{}
-    \name{author}{5}{}{%
-      {{hash=KD}{%
-         family={Kreindl},
-         familyi={K\bibinitperiod},
-         given={Dominik},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=WB}{%
-         family={Weiss},
-         familyi={W\bibinitperiod},
-         given={Bernhard},
-         giveni={B\bibinitperiod},
-      }}%
-      {{hash=SC}{%
-         family={Stockreiter},
-         familyi={S\bibinitperiod},
-         given={Christian},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=BT}{%
-         family={Bauernfeind},
-         familyi={B\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
+  \entry{kopp_hfss}{book}{}
+    \name{author}{1}{}{%
       {{hash=KM}{%
-         family={Kaltenbacher},
+         family={Kopp},
          familyi={K\bibinitperiod},
-         given={Manfred},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
     }
-    \keyw{Integrated circuits;Stripline;Optical switches;Electromagnetic
-  interference;Electromagnetic compatibility;Finite element analysis;Optical
-  sensors;IEC Standards;Standards;Light sources;finite element method;Hertzian
-  dipole moment;IC stripline;radiated emissions}
-    \strng{namehash}{KD+1}
-    \strng{fullhash}{KDWBSCBTKM1}
+    \list{publisher}{1}{%
+      {ANSYS, Inc.}%
+    }
+    \strng{namehash}{KM1}
+    \strng{fullhash}{KM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{K}
     \field{sortinithash}{K}
-    \field{booktitle}{2024 14th International Workshop on the Electromagnetic
-  Compatibility of Integrated Circuits (EMC Compo)}
-    \verb{doi}
-    \verb 10.1109/EMCCompo61192.2024.10742020
-    \endverb
-    \field{pages}{69\bibrangedash 73}
-    \field{title}{A Simulation Workflow for Predicting IC Stripline Radiated
-  Emissions of Bond Wire-Based Systems}
-    \field{year}{2024}
+    \field{title}{An Introduction to {HFSS}: Fundamental Principles, Concepts,
+  and Use}
+    \list{location}{1}{%
+      {Canonsburg, PA, USA}%
+    }
+    \field{year}{2010}
   \endentry
 
   \entry{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}{article}{}
@@ -688,31 +728,31 @@
       {{hash=KD}{%
          family={Kreindl},
          familyi={K\bibinitperiod},
-         given={Dominik},
+         given={D.},
          giveni={D\bibinitperiod},
       }}%
       {{hash=BT}{%
          family={Bauernfeind},
          familyi={B\bibinitperiod},
-         given={Thomas},
+         given={T.},
          giveni={T\bibinitperiod},
       }}%
       {{hash=WB}{%
          family={Weiss},
          familyi={W\bibinitperiod},
-         given={Bernhard},
+         given={B.},
          giveni={B\bibinitperiod},
       }}%
       {{hash=SC}{%
          family={Stockreiter},
          familyi={S\bibinitperiod},
-         given={Christian},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
       {{hash=KM}{%
          family={Kaltenbacher},
          familyi={K\bibinitperiod},
-         given={Manfred},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
     }
@@ -723,16 +763,66 @@
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \verb{doi}
-    \verb 10.1109/tmag.2023.3324698
+    \verb 10.1109/TMAG.2023.3324698
     \endverb
     \field{number}{3}
-    \field{pages}{1–4}
-    \field{title}{Evaluation of an analytical equivalent Hertzian dipole
-  representation in tem cells applying the finite element method}
+    \field{pages}{1\bibrangedash 4}
+    \field{title}{Evaluation of an Analytical Equivalent {Hertzian} Dipole
+  Representation in {TEM} Cells Applying the Finite Element Method}
     \field{volume}{60}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{journaltitle}{{IEEE} Trans. Magn.}
     \field{year}{2024}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{10742020}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=KD}{%
+         family={Kreindl},
+         familyi={K\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Weiss},
+         familyi={W\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Stockreiter},
+         familyi={S\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bauernfeind},
+         familyi={B\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kaltenbacher},
+         familyi={K\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KD+1}
+    \strng{fullhash}{KDWBSCBTKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Proc. 14th Int. Workshop Electromagn. Compat. Integr.
+  Circuits ({EMC} Compo)}
+    \verb{doi}
+    \verb 10.1109/EMCCompo61192.2024.10742020
+    \endverb
+    \field{pages}{69\bibrangedash 73}
+    \field{title}{A Simulation Workflow for Predicting {IC} Stripline Radiated
+  Emissions of Bond Wire-Based Systems}
+    \field{year}{2024}
   \endentry
 
   \entry{10274360}{inproceedings}{}
@@ -740,52 +830,47 @@
       {{hash=KD}{%
          family={Kreindl},
          familyi={K\bibinitperiod},
-         given={Dominik},
+         given={D.},
          giveni={D\bibinitperiod},
       }}%
       {{hash=WB}{%
          family={Weiss},
          familyi={W\bibinitperiod},
-         given={Bernhard},
+         given={B.},
          giveni={B\bibinitperiod},
       }}%
       {{hash=SC}{%
          family={Stockreiter},
          familyi={S\bibinitperiod},
-         given={Christian},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
       {{hash=BT}{%
          family={Bauernfeind},
          familyi={B\bibinitperiod},
-         given={Thomas},
+         given={T.},
          giveni={T\bibinitperiod},
       }}%
       {{hash=KM}{%
          family={Kaltenbacher},
          familyi={K\bibinitperiod},
-         given={Manfred},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
       {{hash=FM}{%
          family={Faccinelli},
          familyi={F\bibinitperiod},
-         given={Martin},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
     }
-    \keyw{Radio frequency;Grounding;Optical variables
-  measurement;Electromagnetic compatibility;Solids;Mobile handsets;Finite
-  element analysis;electromagnetic radiative interference;electromagnetic
-  shielding;finite element analysis}
     \strng{namehash}{KD+1}
     \strng{fullhash}{KDWBSCBTKMFM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{K}
     \field{sortinithash}{K}
-    \field{booktitle}{2023 International Symposium on Electromagnetic
-  Compatibility – EMC Europe}
+    \field{booktitle}{Proc. Int. Symp. Electromagn. Compat. ({EMC} Europe)}
     \verb{doi}
     \verb 10.1109/EMCEurope57790.2023.10274360
     \endverb
@@ -798,52 +883,57 @@
   \entry{Kruželák_Kvasničáková_Džuganová_Dosoudil_Hudec_Krump_2024}{article}{}
     \name{author}{6}{}{%
       {{hash=KJ}{%
-         family={Kruželák},
+         family={Kru{\v{z}}el{\'a}k},
          familyi={K\bibinitperiod},
-         given={Ján},
+         given={J.},
          giveni={J\bibinitperiod},
       }}%
       {{hash=KA}{%
-         family={Kvasničáková},
+         family={Kvasni{\v{c}}{\'a}kov{\'a}},
          familyi={K\bibinitperiod},
-         given={Andrea},
+         given={A.},
          giveni={A\bibinitperiod},
       }}%
       {{hash=DM}{%
-         family={Džuganová},
+         family={D{\v{z}}uganov{\'a}},
          familyi={D\bibinitperiod},
-         given={Michaela},
+         given={M.},
          giveni={M\bibinitperiod},
       }}%
       {{hash=DR}{%
          family={Dosoudil},
          familyi={D\bibinitperiod},
-         given={Rastislav},
+         given={R.},
          giveni={R\bibinitperiod},
       }}%
       {{hash=HI}{%
          family={Hudec},
          familyi={H\bibinitperiod},
-         given={Ivan},
+         given={I.},
          giveni={I\bibinitperiod},
       }}%
       {{hash=KH}{%
          family={Krump},
          familyi={K\bibinitperiod},
-         given={Henrich},
+         given={H.},
          giveni={H\bibinitperiod},
       }}%
     }
     \strng{namehash}{KJ+1}
     \strng{fullhash}{KJKADMDRHIKH1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \verb{doi}
-    \verb 10.20944/preprints202401.1547.v1
+    \verb 10.3390/polym16050566
     \endverb
-    \field{journaltitle}{Electrical conductivity, EMI absorption shielding
-  performance, curing process and mechanical properties of rubber composites}
+    \field{number}{5}
+    \field{pages}{566}
+    \field{title}{The Electrical Conductivity, {EMI} Absorption Shielding
+  Performance, Curing Process, and Mechanical Properties of Rubber Composites}
+    \field{volume}{16}
+    \field{journaltitle}{Polymers}
     \field{year}{2024}
     \warn{\item Invalid format of field 'month'}
   \endentry
@@ -862,18 +952,15 @@
          given={D.-K.},
          giveni={D\bibinithyphendelim K\bibinitperiod},
       }}%
-      {{hash=CZ}{%
+      {{hash=CZJ}{%
          family={Cendes},
          familyi={C\bibinitperiod},
-         given={Z.J.},
-         giveni={Z\bibinitperiod},
+         given={Z.\bibnamedelima J.},
+         giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
-    \keyw{Dielectrics;Electromagnetic waveguides;Propagation constant;Finite
-  element methods;Electromagnetic fields;Equations;Adaptive mesh
-  refinement;Nonuniform electric fields;Microstrip;Transmission lines}
-    \strng{namehash}{LJFSDKCZ1}
-    \strng{fullhash}{LJFSDKCZ1}
+    \strng{namehash}{LJFSDKCZJ1}
+    \strng{fullhash}{LJFSDKCZJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{L}
@@ -883,39 +970,37 @@
     \endverb
     \field{number}{8}
     \field{pages}{1262\bibrangedash 1271}
-    \field{title}{Full-wave analysis of dielectric waveguides using tangential
-  vector finite elements}
+    \field{title}{Full-Wave Analysis of Dielectric Waveguides Using Tangential
+  Vector Finite Elements}
     \field{volume}{39}
-    \field{journaltitle}{IEEE Transactions on Microwave Theory and Techniques}
+    \field{journaltitle}{{IEEE} Trans. Microw. Theory Tech.}
     \field{year}{1991}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{104986}{article}{}
     \name{author}{3}{}{%
-      {{hash=LJ}{%
+      {{hash=LJF}{%
          family={Lee},
          familyi={L\bibinitperiod},
-         given={J.F.},
-         giveni={J\bibinitperiod},
+         given={J.-F.},
+         giveni={J\bibinithyphendelim F\bibinitperiod},
       }}%
-      {{hash=SD}{%
+      {{hash=SDK}{%
          family={Sun},
          familyi={S\bibinitperiod},
-         given={D.K.},
-         giveni={D\bibinitperiod},
+         given={D.-K.},
+         giveni={D\bibinithyphendelim K\bibinitperiod},
       }}%
-      {{hash=CZ}{%
+      {{hash=CZJ}{%
          family={Cendes},
          familyi={C\bibinitperiod},
-         given={Z.J.},
-         giveni={Z\bibinitperiod},
+         given={Z.\bibnamedelima J.},
+         giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
-    \keyw{Finite element methods;Electromagnetic fields;Boundary
-  conditions;Electromagnetic scattering;Sun;Partial differential
-  equations;Magnetic fields;Magnetic domains}
-    \strng{namehash}{LJSDCZ1}
-    \strng{fullhash}{LJSDCZ1}
+    \strng{namehash}{LJFSDKCZJ1}
+    \strng{fullhash}{LJFSDKCZJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{L}
@@ -925,62 +1010,105 @@
     \endverb
     \field{number}{5}
     \field{pages}{4032\bibrangedash 4035}
-    \field{title}{Tangential vector finite elements for electromagnetic field
-  computation}
+    \field{title}{Tangential Vector Finite Elements for Electromagnetic Field
+  Computation}
     \field{volume}{27}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{journaltitle}{{IEEE} Trans. Magn.}
     \field{year}{1991}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{Mohsen_1982}{article}{}
-    \name{author}{1}{}{%
-      {{hash=MM}{%
-         family={Mohsen},
+  \entry{Wilson_1981}{report}{}
+    \name{author}{3}{}{%
+      {{hash=MMT}{%
+         family={Ma},
          familyi={M\bibinitperiod},
-         given={M.F.N.},
-         giveni={M\bibinitperiod},
+         given={M.\bibnamedelima T.},
+         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=WPF}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={P.\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=CDC}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={D.\bibnamedelima C.},
+         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
       }}%
     }
-    \strng{namehash}{MM1}
-    \strng{fullhash}{MM1}
+    \strng{namehash}{MMTWPFCDC1}
+    \strng{fullhash}{MMTWPFCDC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \verb{doi}
-    \verb 10.1016/0307-904x(82)90005-1
+    \verb 10.6028/nbs.tn.1037
+    \endverb
+    \field{number}{NBS TN 1037}
+    \field{title}{Excitation of a {TEM} Cell by a Vertical Electric {Hertzian}
+  Dipole}
+    \list{institution}{1}{%
+      {National Bureau of Standards}%
+    }
+    \field{type}{techreport}
+    \field{year}{1981}
+  \endentry
+
+  \entry{Mohsen_1982}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MMFN}{%
+         family={Mohsen},
+         familyi={M\bibinitperiod},
+         given={M.\bibnamedelima F.\bibnamedelima N.},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MMFN1}
+    \strng{fullhash}{MMFN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb 10.1016/0307-904X(82)90005-1
     \endverb
     \field{number}{3}
-    \field{pages}{165–170}
-    \field{title}{Some details of the Galerkin Finite Element Method}
+    \field{pages}{165\bibrangedash 170}
+    \field{title}{Some Details of the {Galerkin} Finite Element Method}
     \field{volume}{6}
-    \field{journaltitle}{Applied Mathematical Modelling}
+    \field{journaltitle}{Appl. Math. Model.}
     \field{year}{1982}
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{MORARI_BĂLAN_2015}{article}{}
+  \entry{MORARI_BĂLAN_2015}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=MC}{%
-         family={MORARI},
+         family={Morari},
          familyi={M\bibinitperiod},
-         given={Cristian},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
       {{hash=BC}{%
-         family={BĂLAN},
+         family={B{\u{a}}lan},
          familyi={B\bibinitperiod},
-         given={Cristian},
+         given={C.},
          giveni={C\bibinitperiod},
       }}%
     }
     \strng{namehash}{MCBC1}
     \strng{fullhash}{MCBC1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
     \field{sortinit}{M}
     \field{sortinithash}{M}
-    \field{journaltitle}{Methods for determining shielding effectiveness of
-  materials}
+    \field{booktitle}{Proc. Int. Conf. Expo. Electr. Power Eng. ({EPE})}
+    \field{title}{Methods for Determining Shielding Effectiveness of Materials}
     \field{year}{2015}
   \endentry
 
@@ -989,19 +1117,19 @@
       {{hash=PCR}{%
          family={Paul},
          familyi={P\bibinitperiod},
-         given={Clayton\bibnamedelima R.},
+         given={C.\bibnamedelima R.},
          giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
       {{hash=SRC}{%
          family={Scully},
          familyi={S\bibinitperiod},
-         given={Robert\bibnamedelima C.},
+         given={R.\bibnamedelima C.},
          giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
       }}%
       {{hash=SMA}{%
          family={Steffka},
          familyi={S\bibinitperiod},
-         given={Mark\bibnamedelima A.},
+         given={M.\bibnamedelima A.},
          giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
     }
@@ -1014,7 +1142,10 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
     \field{sortinithash}{P}
-    \field{title}{Introduction to electromagnetic compatibility}
+    \field{title}{Introduction to Electromagnetic Compatibility}
+    \list{location}{1}{%
+      {Hoboken, NJ, USA}%
+    }
     \field{year}{2023}
   \endentry
 
@@ -1023,12 +1154,12 @@
       {{hash=PDM}{%
          family={Pozar},
          familyi={P\bibinitperiod},
-         given={David\bibnamedelima M.},
+         given={D.\bibnamedelima M.},
          giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {John Wiley & Sons}%
+      {John Wiley \& Sons}%
     }
     \strng{namehash}{PDM1}
     \strng{fullhash}{PDM1}
@@ -1036,7 +1167,11 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{P}
     \field{sortinithash}{P}
-    \field{title}{Microwave engineering}
+    \field{edition}{4th}
+    \field{title}{Microwave Engineering}
+    \list{location}{1}{%
+      {Hoboken, NJ, USA}%
+    }
     \field{year}{2012}
   \endentry
 
@@ -1059,45 +1194,45 @@
     \verb 10.1002/j.1538-7305.1938.tb00774.x
     \endverb
     \field{number}{1}
-    \field{pages}{17–48}
-    \field{title}{The impedance concept and its application to problems of
-  reflection, refraction, shielding and power absorption}
+    \field{pages}{17\bibrangedash 48}
+    \field{title}{The Impedance Concept and Its Application to Problems of
+  Reflection, Refraction, Shielding and Power Absorption}
     \field{volume}{17}
-    \field{journaltitle}{Bell System Technical Journal}
+    \field{journaltitle}{Bell Syst. Tech. J.}
     \field{year}{1938}
     \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Shenton_Cendes_1985}{article}{}
     \name{author}{2}{}{%
-      {{hash=SD}{%
+      {{hash=SDN}{%
          family={Shenton},
          familyi={S\bibinitperiod},
-         given={D.},
-         giveni={D\bibinitperiod},
+         given={D.\bibnamedelima N.},
+         giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
       }}%
-      {{hash=CZ}{%
+      {{hash=CZJ}{%
          family={Cendes},
          familyi={C\bibinitperiod},
-         given={Z.},
-         giveni={Z\bibinitperiod},
+         given={Z.\bibnamedelima J.},
+         giveni={Z\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
-    \strng{namehash}{SDCZ1}
-    \strng{fullhash}{SDCZ1}
+    \strng{namehash}{SDNCZJ1}
+    \strng{fullhash}{SDNCZJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \verb{doi}
-    \verb 10.1109/tmag.1985.1064165
+    \verb 10.1109/TMAG.1985.1064165
     \endverb
     \field{number}{6}
-    \field{pages}{2535–2538}
-    \field{title}{Three-dimensional finite element mesh generation using
-  Delaunay tesselation}
+    \field{pages}{2535\bibrangedash 2538}
+    \field{title}{Three-Dimensional Finite Element Mesh Generation Using
+  {Delaunay} Tessellation}
     \field{volume}{21}
-    \field{journaltitle}{IEEE Transactions on Magnetics}
+    \field{journaltitle}{{IEEE} Trans. Magn.}
     \field{year}{1985}
     \warn{\item Invalid format of field 'month'}
   \endentry
@@ -1107,104 +1242,144 @@
       {{hash=SI}{%
          family={Sreenivasiah},
          familyi={S\bibinitperiod},
-         given={Ippalapalli},
+         given={I.},
          giveni={I\bibinitperiod},
       }}%
-      {{hash=CD}{%
+      {{hash=CDC}{%
          family={Chang},
          familyi={C\bibinitperiod},
-         given={David},
-         giveni={D\bibinitperiod},
+         given={D.\bibnamedelima C.},
+         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
       }}%
-      {{hash=MM}{%
+      {{hash=MMT}{%
          family={Ma},
          familyi={M\bibinitperiod},
-         given={Mark},
-         giveni={M\bibinitperiod},
+         given={M.\bibnamedelima T.},
+         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
       }}%
     }
-    \strng{namehash}{SICDMM1}
-    \strng{fullhash}{SICDMM1}
+    \strng{namehash}{SICDCMMT1}
+    \strng{fullhash}{SICDCMMT1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \verb{doi}
-    \verb 10.1109/temc.1981.303930
+    \verb 10.1109/TEMC.1981.303930
     \endverb
     \field{number}{3}
-    \field{pages}{113–121}
-    \field{title}{Emission characteristics of electrically small radiating
-  sources from tests inside a tem cell}
+    \field{pages}{113\bibrangedash 121}
+    \field{title}{Emission Characteristics of Electrically Small Radiating
+  Sources from Tests Inside a {TEM} Cell}
     \field{volume}{EMC-23}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
+    \field{journaltitle}{{IEEE} Trans. Electromagn. Compat.}
     \field{year}{1981}
     \warn{\item Invalid format of field 'month'}
   \endentry
 
-  \entry{STRANG_2018}{book}{}
+  \entry{Steer_2015}{book}{}
     \name{author}{1}{}{%
-      {{hash=SG}{%
-         family={STRANG},
+      {{hash=SMB}{%
+         family={Steer},
          familyi={S\bibinitperiod},
-         given={GILBERT},
-         giveni={G\bibinitperiod},
+         given={M.\bibnamedelima B.},
+         giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {WELLESLEY-CAMBRIDGE Press}%
+      {SciTech Publishing}%
     }
-    \strng{namehash}{SG1}
-    \strng{fullhash}{SG1}
+    \strng{namehash}{SMB1}
+    \strng{fullhash}{SMB1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{S}
     \field{sortinithash}{S}
-    \field{title}{Analysis of the finite element method}
+    \field{title}{Microwave and {RF} Design: A Systems Approach}
+    \list{location}{1}{%
+      {Edison, NJ, USA}%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{STRANG_2018}{book}{}
+    \name{author}{2}{}{%
+      {{hash=SG}{%
+         family={Strang},
+         familyi={S\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=FGJ}{%
+         family={Fix},
+         familyi={F\bibinitperiod},
+         given={G.\bibnamedelima J.},
+         giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wellesley-Cambridge Press}%
+    }
+    \strng{namehash}{SGFGJ1}
+    \strng{fullhash}{SGFGJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Analysis of the Finite Element Method}
+    \list{location}{1}{%
+      {Wellesley, MA, USA}%
+    }
     \field{year}{2018}
   \endentry
 
-  \entry{Tippet_Chang_Crawford_1976}{article}{}
+  \entry{Tippet_Chang_Crawford_1976}{report}{}
     \name{author}{3}{}{%
       {{hash=TJC}{%
          family={Tippet},
          familyi={T\bibinitperiod},
-         given={John\bibnamedelima C},
+         given={J.\bibnamedelima C.},
          giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
       }}%
       {{hash=CDC}{%
          family={Chang},
          familyi={C\bibinitperiod},
-         given={David\bibnamedelima C},
+         given={D.\bibnamedelima C.},
          giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
       }}%
       {{hash=CML}{%
          family={Crawford},
          familyi={C\bibinitperiod},
-         given={Myron\bibnamedelima L},
+         given={M.\bibnamedelima L.},
          giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
       }}%
     }
     \strng{namehash}{TJCCDCCML1}
     \strng{fullhash}{TJCCDCCML1}
     \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
     \field{sortinit}{T}
     \field{sortinithash}{T}
     \verb{doi}
     \verb 10.6028/nbs.ir.76-841
     \endverb
-    \field{journaltitle}{An analytical and experimental determination of the
-  cutoff frequencies of higher-order te modes in a Tem cell}
+    \field{number}{NBSIR 76-841}
+    \field{title}{An Analytical and Experimental Determination of the Cutoff
+  Frequencies of Higher-Order {TE} Modes in a {TEM} Cell}
+    \list{institution}{1}{%
+      {National Bureau of Standards}%
+    }
+    \field{type}{techreport}
     \field{year}{1976}
   \endentry
 
   \entry{Weil_Gruner_1984}{article}{}
     \name{author}{2}{}{%
-      {{hash=WC}{%
+      {{hash=WCM}{%
          family={Weil},
          familyi={W\bibinitperiod},
-         given={C.M.},
-         giveni={C\bibinitperiod},
+         given={C.\bibnamedelima M.},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
       {{hash=GL}{%
          family={Gruner},
@@ -1213,46 +1388,22 @@
          giveni={L\bibinitperiod},
       }}%
     }
-    \strng{namehash}{WCGL1}
-    \strng{fullhash}{WCGL1}
+    \strng{namehash}{WCMGL1}
+    \strng{fullhash}{WCMGL1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{W}
     \field{sortinithash}{W}
     \verb{doi}
-    \verb 10.1109/tmtt.1984.1132745
+    \verb 10.1109/TMTT.1984.1132745
     \endverb
     \field{number}{6}
-    \field{pages}{638–641}
-    \field{title}{High-order mode cutoff in rectangular striplines (short
-  papers)}
+    \field{pages}{638\bibrangedash 641}
+    \field{title}{High-Order Mode Cutoff in Rectangular Striplines}
     \field{volume}{32}
-    \field{journaltitle}{IEEE Transactions on Microwave Theory and Techniques}
+    \field{journaltitle}{{IEEE} Trans. Microw. Theory Tech.}
     \field{year}{1984}
     \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{Wilson_1981}{article}{}
-    \name{author}{1}{}{%
-      {{hash=WPF}{%
-         family={Wilson},
-         familyi={W\bibinitperiod},
-         given={Perry\bibnamedelima F},
-         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{WPF1}
-    \strng{fullhash}{WPF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \verb{doi}
-    \verb 10.6028/nbs.tn.1037
-    \endverb
-    \field{title}{Excitation of a tem cell by a vertical electric Hertzian
-  dipole}
-    \field{year}{1981}
   \endentry
 
   \entry{4091811}{article}{}
@@ -1260,20 +1411,16 @@
       {{hash=WPF}{%
          family={Wilson},
          familyi={W\bibinitperiod},
-         given={Perry\bibnamedelima F.},
+         given={P.\bibnamedelima F.},
          giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
       {{hash=MMT}{%
          family={Ma},
          familyi={M\bibinitperiod},
-         given={Mark\bibnamedelima T.},
+         given={M.\bibnamedelima T.},
          giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
       }}%
     }
-    \keyw{Apertures;TEM cells;Transmission line measurements;Electromagnetic
-  waveguides;Couplings;Impedance;Magnetic moments;Magnetic field
-  measurement;Load modeling;Conductors;Shielding measurement technique;dual TEM
-  cell;aperture model;coupling analysis}
     \strng{namehash}{WPFMMT1}
     \strng{fullhash}{WPFMMT1}
     \field{labelnamesource}{author}
@@ -1285,10 +1432,11 @@
     \endverb
     \field{number}{3}
     \field{pages}{137\bibrangedash 142}
-    \field{title}{Shielding-Effectiveness Measurements with a Dual TEM Cell}
+    \field{title}{Shielding-Effectiveness Measurements with a Dual {TEM} Cell}
     \field{volume}{EMC-27}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
+    \field{journaltitle}{{IEEE} Trans. Electromagn. Compat.}
     \field{year}{1985}
+    \warn{\item Invalid format of field 'month'}
   \endentry
 
   \entry{Wilson_Ma_1986}{article}{}
@@ -1296,13 +1444,13 @@
       {{hash=WPF}{%
          family={Wilson},
          familyi={W\bibinitperiod},
-         given={Perry\bibnamedelima F.},
+         given={P.\bibnamedelima F.},
          giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
       {{hash=MMT}{%
          family={Ma},
          familyi={M\bibinitperiod},
-         given={Mark\bibnamedelima T.},
+         given={M.\bibnamedelima T.},
          giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
       }}%
     }
@@ -1313,14 +1461,14 @@
     \field{sortinit}{W}
     \field{sortinithash}{W}
     \verb{doi}
-    \verb 10.1109/temc.1986.4307269
+    \verb 10.1109/TEMC.1986.4307269
     \endverb
     \field{number}{3}
-    \field{pages}{125–130}
-    \field{title}{Simple approximate expressions for higher order mode cutoff
-  and resonant frequencies in TEM cells}
+    \field{pages}{125\bibrangedash 130}
+    \field{title}{Simple Approximate Expressions for Higher Order Mode Cutoff
+  and Resonant Frequencies in {TEM} Cells}
     \field{volume}{28}
-    \field{journaltitle}{IEEE Transactions on Electromagnetic Compatibility}
+    \field{journaltitle}{{IEEE} Trans. Electromagn. Compat.}
     \field{year}{1986}
     \warn{\item Invalid format of field 'month'}
   \endentry
