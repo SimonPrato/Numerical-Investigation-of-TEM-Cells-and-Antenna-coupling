@@ -185,6 +185,26 @@ The values agree within $\pm10\,$µW, thereby confirming the validity of the dip
 	\label{fig:looppowercomparisons}
 \end{figure}
 
+Next, the output power produced by a loop antenna rotated by $0$ and $\pi$ around the 
+$y$-axis is investigated, along with the equivalent dipole moments derived for both 
+orientations. The results, shown in \autoref{fig:loopdipolespower}, demonstrate good 
+agreement between the two representations. It can further be observed that the power 
+transfer of the rotated antenna is predominantly sustained by the electric dipole moment, which continues to 
+couple with the TEM cell. As the modal fields of the TEM cell do not align with the loop 
+antenna in this frequency range, the magnetic dipole moment is negligible, as discussed in detail in \cref{sec:el_small_antennas}, resulting in 
+a significantly reduced output power.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\linewidth]{content/img/loop_dipoles_power}
+	\caption{Comparison of the output power produced by the loop antenna and the 
+		equivalent dipole moments, for a rotation of the loop antenna around the $y$-axis 
+		by $0$ and $\pi$.}
+	\label{fig:loopdipolespower}
+\end{figure}
+
+
+
 \subsubsection{Electric and magnetic energy}
 
 The electric and magnetic energy stored in the TEM cell and evoked by the loop antenna are shown in \autoref{fig:loopelectromagneticenergy}, derived by computing \eqref{eqn:em_energy} over the TEM cell volume. At low frequencies, the loop antenna predominantly generates magnetic energy, consistent with its dominant magnetic dipole moment. However, with increasing frequency, the electric energy stored in the TEM cell grows rapidly, associated with increasing electric field intensities. This behavior can be directly connected to the increasing electric dipole moment of the loop antenna, which is driven by the increasing displacement currents associated with the rising electric field intensity between the antenna and the septum.
@@ -220,7 +240,9 @@ The influence of the antenna geometry on the coupling behavior is investigated t
 	\label{fig:loop-geom-sweep}
 \end{figure}
 
-Both configurations share an identical loop area and comparable feed current magnitude across the investigated frequency range, and consequently exhibit the same magnetic dipole moment $\mathbf{m}_m$, in agreement with \eqref{eqn:e_closed_int}. The nonlinear frequency dependence of $\mathbf{m}_m$ persists across both configurations. In contrast, the electric dipole moment $\mathbf{m}_e$ exhibits a strong dependence on the antenna height $h$. As depicted in \autoref{fig:loop-geomg-comp}, the configuration with $h = 2.16\,\mathrm{mm}$ generates an electric dipole moment more than twice that of the configuration with $h = 1.2\,\mathrm{mm}$, which is a direct consequence of the increased displacement currents arising from the reduced distance between the antenna and the septum. This result is consistent with \eqref{eqn:me_i}, which relates the displacement current between the antenna conductor and the septum to $\mathbf{m}_e$.
+Both configurations share an identical loop area 
+%and comparable feed current magnitude across the investigated frequency range, 
+and consequently exhibit the same magnetic dipole moment $\mathbf{m}_m$, in agreement with \eqref{eqn:e_closed_int}. The nonlinear frequency dependence of $\mathbf{m}_m$ persists across both configurations. In contrast, the electric dipole moment $\mathbf{m}_e$ exhibits a strong dependence on the antenna height $h$. As depicted in \autoref{fig:loop-geomg-comp}, the configuration with $h = 2.16\,\mathrm{mm}$ generates an electric dipole moment more than twice that of the configuration with $h = 1.2\,\mathrm{mm}$, which is a direct consequence of the increased displacement currents arising from the reduced distance between the antenna and the septum. This result is consistent with \eqref{eqn:me_i}, which relates the displacement current between the antenna conductor and the septum to $\mathbf{m}_e$.
 
 Finally, as shown in \autoref{fig:loop-geom-power}, the configuration producing the larger electric dipole moment also yields a slightly higher output power, although the difference remains small. This demonstrates the comparatively limited influence of $\mathbf{m}_e$ on the output power relative to $\mathbf{m}_m$. 
 
