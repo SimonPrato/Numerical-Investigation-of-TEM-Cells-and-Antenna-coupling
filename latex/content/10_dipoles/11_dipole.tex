@@ -22,7 +22,7 @@ An electric dipole can be modeled as two tiny charged metal spheres \cite[p.~467
 
 An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, is analyzed in detail below. The dipole is aligned with the $z$-axis, which simplifies the following mathematical investigations. Time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted in this thesis. A current flows in the wire, which is spatially uniform throughout the wire. This is expressed as \cite[p. 151]{Balanis_1997}
 
-\begin{equation}
+\begin{equation}\label{eqn:const_current}
 	{I}(z) = I_0.
 \end{equation}
 
@@ -57,7 +57,7 @@ where\\[0.5em]
 \end{tabular}\\
 
 For the infinitesimal dipole, the source is located at the origin, so $\mathbf{x'}=\mathbf{0}$ \cite[p.~152]{Balanis_1997}. Since the wire is assumed very thin, the volume integral in \eqref{eqn:vector_pot} reduces to a line integral along the dipole axis. With the constant current distribution 
-given in \eqref{eqn:current_dipole}, $I_0$ can be pulled out of the integral. Evaluating the remaining integral over the dipole 
+given in \eqref{eqn:const_current}, $I_0$ can be pulled out of the integral. Evaluating the remaining integral over the dipole 
 length $d$ yields \cite[p.~153]{Balanis_1997}
 \begin{align}
 	\mathbf{A}(\mathbf{x}) &= \mathbf{\hat{a}}_z\frac{\mu I_0}{4\pi r}\mathrm{e}^{-jkr}
@@ -158,7 +158,7 @@ The real power transfer is derived through the time-averaged Poynting vector $\m
 The complex power $P$ is derived by integrating $\mathbf{S}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
 
 \begin{equation}
-	P_r = \eta \frac{\pi}{3} \frac{|I_0l|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
+	P_r = \eta \frac{\pi}{3} \frac{|I_0d|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
 	\label{eqn:compl_power_inf_elec_dipole}
 \end{equation}
 

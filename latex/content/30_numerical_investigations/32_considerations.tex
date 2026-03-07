@@ -160,7 +160,7 @@ throughout the subsequent numerical investigations. At this location, the normal
 $\mathbf{E}^\pm_\mathrm{TEM}$ has only a $y$-component, with no $x$- or 
 $z$-component. When evaluating the coefficients $a_\mathrm{TEM}$ and 
 $b_\mathrm{TEM}$ according to \eqref{eqn:a_b_moments_tem}, the 
-calculations therefore simplify to
+calculations therefore simplify to \cite{Kreindl_Bauernfeind_Weiss_Stockreiter_Kaltenbacher_2024}
 
 \begin{align}
 	\begin{pmatrix}a_\mathrm{TEM} \\ b_\mathrm{TEM}\end{pmatrix} &= 
@@ -169,7 +169,7 @@ calculations therefore simplify to
 	\pm j\frac{\mathbf{m}_m\times\hat{\mathbf{a}}_z}{\eta_0}\right)\nonumber\\&=
 	-\frac{1}{2}\,{E}_\mathrm{TEM,y}^\pm\cdot
 	\left({m}_{e,y} 
-	\pm j\frac{{m}_{m,x}}{\eta_0}\right),
+	\mp j\frac{{m}_{m,x}}{\eta_0}\right),
 \end{align}
 
 where only one component of each dipole moment must be considered. This 
@@ -249,14 +249,14 @@ The peak value of the current through the feedpoint $I_\mathrm{A}$ is derived fr
 where $P_{\mathrm{A}}$ is the incident power wave applied to the feedpoint, and is set to unit power (1\,W) as stated previously in \cref{sec:antenna_model}. The peak voltage at the feedpoint $V_\mathrm{A}$ is analogously derived by \cite[p.~24]{Steer_2015} and given by
  
  \begin{equation}
- 	V_{\mathrm{A}} = \sqrt{2P_{\mathrm{A}}}(1-S_{\mathrm{AA}})\sqrt{Z_0}.
+ 	V_{\mathrm{A}} = \sqrt{2P_{\mathrm{A}}}(1-S_{\mathrm{AA}})\sqrt{Z_w}.
  	\label{eqn:vin}
  \end{equation}
  
 Lastly, the input impedance seen from the antenna feedpoint is \cite[p.~78]{Steer_2015}:
  
  \begin{equation}
- 	Z_{\mathrm{A}}=Z_0\frac{1+S_{\mathrm{AA}}}{1-S_{\mathrm{AA}}}.
+ 	Z_{\mathrm{A}}=Z_w\frac{1+S_{\mathrm{AA}}}{1-S_{\mathrm{AA}}}.
  	\label{eqn:za}
  \end{equation}
  

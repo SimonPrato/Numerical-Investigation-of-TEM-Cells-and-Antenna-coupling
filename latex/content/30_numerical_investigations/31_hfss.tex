@@ -1,26 +1,25 @@
 
-The calculation of electromagnetic fields poses significant challenges, as it requires solving differential equations over a computational domain that, for arbitrary geometries, generally cannot be solved analytically. Ansys HFSS (High-Frequency Simulation Software) addresses this challenge, and as it is used as the basis of the simulations presented in this thesis, a dedicated description of its underlying methodology is given in the following section.
+The calculation of electromagnetic fields poses significant challenges, as it requires solving differential equations over a computational domain that, for arbitrary geometries, generally cannot be solved analytically. Ansys HFSS (High Frequency Structure Simulator) addresses this challenge, and as it is used as the basis of the simulations presented in this thesis, a dedicated description of its underlying methodology is given in the following section.
 
-HFSS employs the Finite Element Method (FEM) as its underlying numerical technique. Following the Rayleigh-Ritz-Galerkin approach, the general idea is to approximate the solution as a linear combination of basis functions, such that the governing differential equation is satisfied as closely as possible. This reformulates the problem of solving a differential equation into a system of algebraic equations that can be efficiently processed computationally. In principle, a suitable set of basis functions exists for which the solution converges to the exact result. In practice, however, the number of basis functions employed across the computational domain must be kept finite, due to limitations in computational resources \cite{STRANG_2018}.
+HFSS employs the Finite Element Method (FEM) as its underlying numerical technique. Following the Rayleigh-Ritz-Galerkin approach, the general idea is to approximate the solution as a linear combination of basis functions, such that the partial differential wave equation in the computational domain is satisfied as closely as possible. This reformulates the problem of solving a partial differential equation into a system of algebraic equations that can be efficiently processed computationally. In principle, as the mesh is refined and the number of basis functions increases, the FEM solution converges to the exact result. In practice, however, mesh refinement is limited by the computational resources available \cite[pp.~1--2]{STRANG_2018}.
 
-FEM achieves this by subdividing the computational domain into a finite number of smaller subregions, referred to as finite elements, within each of which a basis function is defined. A linear combination of these basis functions is then determined such that the governing differential equations are satisfied across the entire domain. In regions where the approximation error exceeds a threshold level, the accuracy can be improved by further subdividing the elements containing the largest error values. This process is repeated iteratively until the error falls below a prescribed threshold, yielding a sufficiently accurate solution.
+FEM discretizes the computational domain by subdividing it into a finite number of smaller subregions, referred to as finite elements, within each of which basis functions are defined. A linear combination of these basis functions is then determined such that the governing partial differential equations are satisfied across the entire domain. Where the approximation error exceeds a threshold, the accuracy is improved by iterative mesh refinement \cite{kopp_hfss}.
 
-\subsection{Dividing a computational domain into finite elements}
+\subsection{Mesh Generation and Basis Functions}
 
-The differential equation to be solved is expressed as 
+The equation to be discretized is the vector wave equation 
+for the electric field intensity $\mathbf{E}$, given by \cite{Cendes_Lee_1988,85399,Cendes_1991}
 
 \begin{equation}
-	\nabla\times\left(\frac{1}{\mu_r}\nabla\times\mathbf{E}\right)-k_0^2\epsilon_r\mathbf{E}=0 \quad\text{in $V$},
+	\nabla\times\left(\frac{1}{\mu_r}\nabla\times\mathbf{E}\right)-k_0^2\epsilon_r\mathbf{E}=0 \quad\text{in $V$}.
 	\label{eqn:full_wave_equation}
 \end{equation}
-where the variable $k_0$ is the wave number of free space and equals $k_0=\omega\sqrt{\epsilon_0\mu_0}$ \cite{Cendes_Lee_1988,85399,Cendes_1991}. 
 
-The wave equation is solved over a computational domain $V$, which is subdivided into a collection of finite elements referred to as a mesh. Each node in this mesh is assigned polynomial basis functions, which are weighted to approximate the real solution. Tetrahedral finite elements have been shown to be particularly well-suited for this purpose, as they are geometrically flexible and enable the construction of complete polynomial approximation functions \cite{Shenton_Cendes_1985}.
+The wave equation is solved over a computational domain $V$, which is subdivided into a collection of finite elements referred to as a mesh. Tetrahedral finite elements have been shown to be particularly well-suited for this purpose, as they are geometrically flexible and enable the construction of complete polynomial approximation functions \cite{Shenton_Cendes_1985}.
 
+Ansys HFSS employs an adaptive finite element mesh generator that automatically discretizes arbitrary three-dimensional geometries. The Delaunay tessellation algorithm \cite{Shenton_Cendes_1985} serves as the underlying meshing strategy. It efficiently generates the mesh to represent geometrically irregular structures by ensuring that no vertex of the mesh lies inside the circumsphere of any tetrahedron. It further permits boundary conditions to be applied recursively to the derived mesh. Iterative mesh refinement can additionally be carried out without introducing any distortion to the original geometry \cite{Cendes_Lee_1988}.
 
-Ansys HFSS employs an adaptive finite element mesh generator that automatically discretizes arbitrary three-dimensional geometries. The Delaunay tessellation algorithm serves as the underlying meshing strategy. It efficiently generates the mesh to represent geometrically irregular structures by ensuring that no vertex of the mesh lies inside the circumsphere of any tetrahedron. It further permits boundary conditions to be applied recursively to the derived mesh. Iterative mesh refinement can additionally be carried out without introducing any distortion to the original geometry \cite{Cendes_Lee_1988}.
-
-\autoref{fig:tetrahedral_mesh} shows one such tetrahedron. At the edge midpoints, the field components normal to the respective edge and lying on the face of the element are stored, while at the vertex points, the field components tangential to the edges are stored. The field value at any point within the tetrahedron is then obtained by interpolating from the nodal values using the associated basis functions.
+\autoref{fig:tetrahedral_mesh} shows one such tetrahedron. Each node is assigned polynomial basis functions, which are weighted to approximate the real solution. At the edge midpoints, the field components normal to the respective edge and lying on the face of the element are stored, while at the vertex points, the field components tangential to the edges are stored. The field value at any point within the tetrahedron is then obtained by interpolating from the nodal values using the associated basis functions.
 
 \begin{figure}[h]
     \centering
@@ -29,19 +28,26 @@ Ansys HFSS employs an adaptive finite element mesh generator that automatically 
     \label{fig:tetrahedral_mesh}
 \end{figure}
 
-The finite elements used in HFSS are known as tangential vector finite elements. Their advantage is that the tangential components of the field are enforced to be continuous across the boundaries between adjacent tetrahedra. Specifically, the electric field intensity assigned to an edge is constrained to be aligned with that edge, making it tangential to the element. Adjacent elements sharing this edge therefore contain the same electric field intensity, ensuring continuity of the tangential electric field intensity across element boundaries. The boundary conditions imposed by Maxwell's equations are thereby automatically satisfied. In addition, Dirichlet boundary conditions can be enforced along the edges of the mesh \cite{85399}.
+The finite elements used in HFSS are known as tangential vector finite elements. Their advantage is that the tangential components of the field are enforced to be continuous across the boundaries between adjacent tetrahedra. Specifically, the electric field intensity assigned to an edge is aligned with that edge, making it tangential to the element. Adjacent elements sharing this edge therefore contain the same electric field intensity, ensuring continuity of the tangential electric field intensity across element boundaries. The boundary conditions imposed by Maxwell's equations are thereby automatically satisfied. In addition, Dirichlet boundary conditions can be enforced along the edges of the mesh \cite{85399}.
 
-The finite element is described as 
+%The finite element is described as 
+%
+%\begin{equation}
+%	H^{(\dim=3)}_1(\mathrm{curl}) = \left\{ \mathbf{u} \mid \mathbf{u} \in \left[ L_2(V) \right]^3, \nabla \times \mathbf{u} \in \left[ P_1(V) \right]^3 \cap D(V) \right\},
+%	\label{eqn:finite_element_3d}
+%\end{equation}
+%
+%where $L_2(V)$ is a set of square integrable functions and $P_1$ a set of piecewise linear functions in the discretized domain $V$ \cite{104986}. The vector field within each element is denoted as $\mathbf{u}$. $D(V)$ is a set of divergence-free functions. The vectors $\mathbf{u}$ used in the finite element are therefore continuous in the normal direction, square integrable, and have a curl describable by piecewise linear functions.
 
-\begin{equation}
-	H^{(\dim=3)}_1(\mathrm{curl}) = \left\{ \mathbf{u} \mid \mathbf{u} \in \left[ L_2(V) \right]^3, \nabla \times \mathbf{u} \in \left[ P_1(V) \right]^3 \cap D(V) \right\},
-	\label{eqn:finite_element_3d}
-\end{equation}
+The vector field $\mathbf{u}$ within each element is represented by 
+square-integrable basis functions whose curl is approximable by 
+linear functions. This ensures that the tangential components of $\mathbf{u}$ 
+remain continuous across element boundaries, while the normal components may 
+be discontinuous, consistent with the boundary conditions imposed by 
+Maxwell's equations \cite{104986}.
 
-where $L_2(V)$ is a set of square integrable functions and $P_1$ a set of piecewise linear functions in the discretized domain $V$ \cite{104986}. The vector field within each element is denoted as $\mathbf{u}$. $D(V)$ is a set of divergence-free functions. The vectors $\mathbf{u}$ used in the finite element are therefore continuous in the normal direction, square integrable, and have a curl describable by piecewise linear functions.
-
-
-\autoref{fig:tetrahedra_w_unknowns} shows the finite element with the unknown vectors assigned at each node, where only one face is shown for clarity. The variables $u_i^j$ and $u_j^i$ are imposed across element boundaries, therefore guaranteeing tangential continuity at boundaries. Additionally, they inherently define a linear polynomial along the shared edge, meaning that they describe a gradient of the field in this direction. This relationship is expressed as
+The vector field $\mathbf{u}$ within each element is characterized 
+by a set of unknowns $u_i^j$ and $u_j^i$ distributed across its edges and faces. \autoref{fig:tetrahedra_w_unknowns} shows the finite element with the unknown vectors assigned at each node, where only one face is shown for clarity. The variables $u_i^j$ and $u_j^i$ are established across element boundaries. They force tangential continuity at the boundaries and inherently describe a gradient of the field in this direction. This relationship is expressed as \cite{104986}
 
 \begin{equation}
 	\mathbf{u}\cdot\mathbf{t}_{ij}=\frac{1}{l_{ij}}\left( u_i^j-u_j^i \right),
@@ -57,47 +63,54 @@ where $\mathbf{t}_{ij}$ is the unit vector tangent to the edge from node $i$ to 
     \label{fig:tetrahedra_w_unknowns}
 \end{figure}
 
-Two additional unknowns are introduced, $f_1$ and $f_2$, which are assigned to two of the three edge points on a given face. Contrary to the variables $u_i^j$, the facial unknowns $f_i$ are only assigned locally at each element and do not propagate across boundaries. Their purpose is to introduce a quadratic polynomial representation for the field component normal to the edges, which in turn yields a linear approximation for the curl of the unknown vector field $\nabla\times \mathbf{u}$, providing sufficient accuracy for the solution. The total vector field of the element is then obtained by superposition of all nodes' vector contributions.
+Two additional unknowns are introduced, $f_1$ and $f_2$, which are assigned to two of the three edge points on a given face. Contrary to the variables $u_i^j$, the facial unknowns $f_i$ are only assigned locally at each element and do not propagate across boundaries. Their purpose is to introduce a quadratic polynomial representation for the field component normal to the edges, which in turn yields a linear approximation for the curl of the unknown vector field $\nabla\times \mathbf{u}$, providing sufficient accuracy for the solution. The total vector field of the element is then obtained by superposition of all nodes' vector contributions \cite{104986}.
 
 \subsection{Solving the differential equation}
 
-A testing function $\mathbf{W}_n$ is defined, by which \eqref{eqn:full_wave_equation} is multiplied. Integrating over the whole test volume then leads to 
+To solve the vector wave equation \eqref{eqn:full_wave_equation} over 
+the discretized domain, a testing function $\mathbf{W}_n$ for each tetrahedron $n$ is introduced, 
+by which \eqref{eqn:full_wave_equation} is multiplied. Integrating over the whole test volume then leads to \cite{kopp_hfss}
 
 \begin{equation}
 	\int_V\left( \mathbf{W}_n\cdot\nabla \times\left( \frac{1}{\mu_r}\nabla\times\mathbf{E} \right)-k_0^2\epsilon_r\mathbf{W}_n\cdot\mathbf{E} \right)\,dv'=0.
 	\label{eqn:test_funct}
 \end{equation}
 
-This yields $N$ equations, indexed by $n=1,2,\ldots,N$, one for each finite element in the domain $V$. This is a standard procedure in FEM, and is achieved by orthogonalizing the residual of \eqref{eqn:full_wave_equation} with respect to the test functions $\mathbf{W}_n$ \cite{Mohsen_1982}.
+This yields $N$ equations, indexed by $n=1,2,\ldots,N$. This step is referred to as the method of weighted residuals \cite{Mohsen_1982}.
 
-Applying the vector identity $\nabla\cdot\left(\mathbf{a}\times\mathbf{b}\right)=\left(\nabla\times\mathbf{a}\right)\cdot\mathbf{b}-\mathbf{a}\cdot\left(\nabla\times\mathbf{b}\right)$ to the first term of \eqref{eqn:test_funct} yields a weak form of the equation, that is, a reformulation of the original partial differential equation in which the order of the derivatives is reduced \cite{Cendes_Lee_1988,huebner2001finite}. This procedure also introduces boundary terms, permitting the incorporation of Neumann boundary conditions \cite{Mohsen_1982}. The boundary terms appear on the right-hand side of the resulting expression,
+Applying the vector identity $\nabla\cdot\left(\mathbf{a}\times\mathbf{b}\right)=\left(\nabla\times\mathbf{a}\right)\cdot\mathbf{b}-\mathbf{a}\cdot\left(\nabla\times\mathbf{b}\right)$ to the first term of \eqref{eqn:test_funct} yields a weak form of the equation, that is, a reformulation of the original partial differential equation in which the order of the derivatives is reduced \cite{Cendes_Lee_1988,huebner2001finite}. This procedure also introduces boundary terms, permitting the incorporation of Neumann boundary conditions \cite{Mohsen_1982}. The boundary terms appear on the right-hand side of the resulting expression \cite{kopp_hfss},
 
 \begin{equation}
 	\int_V \left[ \left(\nabla \times \mathbf{W}_n \right)\cdot \frac{1}{\mu_r}\nabla\times \mathbf{E}-k_0^2\epsilon_r\mathbf{W}_n\cdot\mathbf{E}\right]\,dv'=\underbrace{\oint_{\partial V}\left( \mathbf{W}_n\times \frac{1}{\mu_r}\nabla\times\mathbf{E}\right)\cdot\mathrm{d}\mathbf{s'}}_{\text{Boundary term}}.
 	\label{eqn:greens_theorem_wave_eqn}
 \end{equation}
 
-The electric field $\mathbf{E}$ is represented as a superposition of basis functions. Applying Galerkin's method, in which the basis functions are chosen equal to the test functions $\mathbf{W}_n$, this superposition takes the form
+The electric field $\mathbf{E}$ is represented as a superposition of basis functions. Applying Galerkin's method, in which the basis functions are chosen equal to the test functions $\mathbf{W}_n$ \cite{Mohsen_1982}, this superposition takes the form \cite{kopp_hfss}
 
 \begin{equation}
 	\mathbf{E}=\sum^N_m x_m\mathbf{W}_n,
 	\label{eqn:representation_e_field_fem}
 \end{equation}
 
-where $x_m$ are the corresponding weighting coefficients. Determining these coefficients for all elements yields the electric field $\mathbf{E}$ across the entire computational domain. Through this procedure, FEM reduces the wave equation given in \eqref{eqn:full_wave_equation} to a linear matrix equation of the form $Ax=b$, where $A$ is a known $N\times N$ matrix, $b$ encodes the port excitations, and $x$ is the vector of unknown coefficients. The matrix $A$ is expressed as
+where $x_m$ are the corresponding weighting coefficients. Determining these coefficients for all elements yields the electric field $\mathbf{E}$ across the entire computational domain. Through this procedure, FEM reduces the wave equation given in \eqref{eqn:full_wave_equation} to a linear matrix equation of the form $\mathbf{A}\cdot\mathbf{x}=\mathbf{b}$, where $\mathbf{A}$ is a known $N\times N$ matrix, $\mathbf{b}$ encodes the port excitations, and $\mathbf{x}$ is the vector of unknown coefficients. 
+%The matrix $\mathbf{A}$ is expressed as 
+%
+%\begin{align}
+%	A_{ij} &= \int_{V} \nabla \times \mathbf{W}_i \, \frac{1}{\mu_r} \nabla \times \mathbf{W}_j \, dv'\nonumber\\ 
+%	&- k_0^2 \int_{V} \mathbf{W}_i \, \varepsilon_r \mathbf{W}_j \, dv'\nonumber\\
+%	&+ j k_0 \left(\frac{\eta_0}{\eta_s}\right) \oint_{\partial V} \mathbf{n} \times \mathbf{W}_i \cdot \mathbf{n} \times \mathbf{W}_j \, d\mathbf{s'}.
+%	\label{eqn:matrix_a}
+%\end{align}
 
-\begin{align}
-	A_{ij} &= \int_{V} \nabla \times \mathbf{W}_i \, \frac{1}{\mu_r} \nabla \times \mathbf{W}_j \, dv'\nonumber\\ 
-	&- k_0^2 \int_{V} \mathbf{W}_i \, \varepsilon_r \mathbf{W}_j \, dv'\nonumber\\
-	&+ j k_0 \left(\frac{\eta_0}{\eta_s}\right) \oint_{\partial V} \mathbf{n} \times \mathbf{W}_i \cdot \mathbf{n} \times \mathbf{W}_j \, d\mathbf{s'}.
-	\label{eqn:matrix_a}
-\end{align}
-
-The boundary term is expressed in terms of the surface impedance $\eta_s$, where $\eta_s$ defines the ratio of the electric field intensity to the magnetic field intensity at the boundary. Since the basis functions are defined to vanish outside their associated elements, the resulting matrix $A$ is sparse, as entries corresponding to non-overlapping test and basis functions are identically zero. This sparsity significantly reduces the computational cost of solving the system. Once the electric field has been obtained, all other electromagnetic quantities of interest can be derived from it.
+%The boundary term is expressed in terms of the surface impedance $\eta_s$, where $\eta_s$ defines the ratio of the electric field intensity to the magnetic field intensity at the boundary. 
+%Since the basis functions are defined to vanish outside their associated elements, the resulting matrix $A$ is sparse, as entries corresponding to non-overlapping test and basis functions are identically zero. This sparsity significantly reduces the computational cost of solving the system. Once the electric field has been obtained, all other electromagnetic quantities of interest can be derived from it.
 
 \subsection{Adaptive solution process}\label{sec:adap_sol_pro}
 
-Each finite element is assigned a solved electric field that approximates the true solution within that element. The error associated with each element is assessed by evaluating \eqref{eqn:full_wave_equation} for the solved field, yielding a residual as expressed by
+Once the system $\mathbf{A}\cdot\mathbf{x}=\mathbf{b}$ has been solved, 
+each finite element is assigned the computed electric field intensity 
+$\mathbf{E}_{\mathrm{solved}}$, which approximates the true solution 
+within that element. The error associated with each element is assessed by evaluating \eqref{eqn:full_wave_equation} for the solved field, yielding a residual as expressed by \cite{kopp_hfss}
 
 \begin{equation}
 	\nabla\times\left(\frac{1}{\mu_r}\nabla\times\mathbf{E}_{\mathrm{solved}}\right)-k_0^2\epsilon_r\mathbf{E}_{\mathrm{solved}}=\text{residual}.
@@ -108,23 +121,19 @@ Elements exhibiting the largest residuals represent the greatest local deviation
 
 Regions of the mesh exhibiting large errors are refined by splitting the tetrahedral finite elements into smaller ones, allowing the FEM solver to recalculate the fields in these regions with higher precision and thus reducing the residual. The smaller element size and higher spatial resolution consequently improve the accuracy with which the finite elements represent the fields \cite{1063929}. An alternative approach to improving accuracy is to increase the polynomial order of the basis functions within elements of large residual, without further subdividing them.
 
-To determine when the iterative refinement process has converged to a sufficiently accurate solution, a convergence threshold must be defined. The criterion used is the $\mathrm{Max}\ \Delta \mathrm{S}$ parameter, which is evaluated by comparing the S-parameters of the analyzed structure between two consecutive iterations. If the change in S-parameters falls below this threshold following a mesh refinement, the solution is considered to have converged and the iterative process is terminated. The resulting mesh is subsequently used to compute the field solution across the entire frequency range of interest.
+To determine when the iterative refinement process has converged to a sufficiently accurate solution, a convergence threshold must be defined. The criterion used in HFSS is the $\mathrm{Max}\ \Delta \mathrm{S}$ parameter, which is evaluated by comparing the S-parameters of the analyzed structure between two consecutive iterations. If the change in S-parameters falls below this threshold following a mesh refinement, the solution is considered to have converged and the iterative process is terminated. The resulting mesh is subsequently used to compute the field solution across the entire frequency range of interest \cite{kopp_hfss}.
 
-Since electrically small conductors are involved in the investigated structures of this thesis, the adaptive meshing algorithm may fail to sufficiently refine the mesh in their proximity. The near-fields arising in these regions have a low impact on the overall solution of the computational domain, and therefore do not contribute significantly to the residual. As a result, these regions are not identified as high-error elements and are not targeted for refinement. Consequently, manual adjustment of the maximum mesh element length in error-prone volumes is required to ensure that the obtained results exhibit a reasonably low amount of numerical artifacts. Critical regions are commonly located near feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions.
+Since electrically small conductors are involved in the investigated structures of this thesis, the adaptive meshing algorithm may fail to sufficiently refine the mesh in their proximity, as observed in the simulations conducted for this thesis. The near-fields arising in these regions have a low impact on the overall solution of the computational domain, and therefore do not contribute significantly to the residual. As a result, these regions are not identified as high-error elements and are not targeted for refinement. Consequently, manual adjustment of the maximum mesh element length in error-prone volumes is required to ensure that the obtained results exhibit a reasonably low amount of numerical artifacts. Critical regions are commonly located near feedpoints and along edges of small conductors, where large field intensities occur within small spatial regions.
 
 Lastly, it is best practice to select the upper limit of the investigated frequency range as the solution frequency. This choice produces the largest spatial field changes, forcing the adaptive mesh process to generate a high-resolution mesh. Results at frequencies below the solution frequency are computed on the same mesh, which is finer than strictly necessary at those frequencies, providing additional accuracy. This procedure is applied for every numerically derived frequency-dependent result presented in this thesis. This process is shown in \autoref{fig:workflow_fem}.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.75\linewidth]{content/img/workflow_fem.png}
-	\caption{Adaptive solution process}
+	\caption{Adaptive solution process, derived from \cite{kopp_hfss}.}
 	\label{fig:workflow_fem}
 \end{figure}
 
-
-%\todo{Short HFSS introduction with boundary conditions, ports and modal and terminal solutions?}
- % Fehlende Ressourcen von Zoltan in Journal of Applied Physics. Schreibe über mathetmaische Grundlagen, Meshing, Dipole Excitation und Impedance Network Boundary Counditions (INBC)
-
-% Additional missing ressource: Finite Elements, Electromagnetics, and Design
+The simulation methodology described in this section is applied throughout the following investigations of electrically small antennas and shielding materials.
 
 
