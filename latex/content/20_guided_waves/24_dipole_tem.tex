@@ -7,15 +7,15 @@ is then specialized to electric and magnetic dipole moment sources, and subseque
 
 \subsubsection{Arbitrary source}
 
-Consider a current $\mathbf{J}_1$ exciting the TEM cell, as shown in 
+Consider a current density $\mathbf{J}_1$ exciting the TEM cell, as shown in 
 \autoref{fig:reciprocitytemcell}. In general, such a current requires external fields to sustain it. However, since the purpose of this analysis is to determine the fields radiated by $\mathbf{J}_1$, these external fields are excluded, following the analytical setup of~\cite[p.~360]{Collin_2015}. Only the radiated fields $\mathbf{E}$ and $\mathbf{H}$ are considered, which satisfy Maxwell's equations~\cite[p.~360]{Collin_2015}:
 
 \begin{subequations}
 	\begin{equation}
-		\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H},
-	\end{equation}
+		\nabla\times\mathbf{H}=\mathbf{J}_1 + j\omega\epsilon_0\mathbf{E}.
+	\end{equation}	
 	\begin{equation}
-		\nabla\times\mathbf{H}=j\omega\epsilon_0\mathbf{E}+\mathbf{J}_1.
+		\nabla \times \mathbf{E}=-j\omega\mu_0\mathbf{H},
 	\end{equation}
 \end{subequations}
 
@@ -121,7 +121,7 @@ purely real, such that
 
 \subsubsection{Equivalent dipole moments}\label{sec:equ-dip-mom}
 
-Since this thesis focuses on dipole moment sources in the TEM cell, the general source formulation from the previous section is now applied to the dipole moment case. Substituting the electric dipole moment $\mathbf{m}_e = I_0 \,\mathbf{d}$, defined in \eqref{eqn:m_e_def}, as the source current $\mathbf{J}_1$ integrated over the volume $V$ into the Lorentz reciprocity theorem \eqref{eqn:J1_propagating_waves} gives~\cite{Sreenivasiah_Chang_Ma_1981}
+Since this thesis focuses on dipole moment sources in the TEM cell, the general source formulation from the previous section is now applied to the dipole moment case. Substituting the electric dipole moment $\mathbf{m}_e = I_0 \,\mathbf{d}$, defined in \eqref{eqn:m_e_def}, as the source current $\mathbf{J}_1$ integrated over the volume $V$ into the Lorentz reciprocity theorem \eqref{eqn:an_ej} and \eqref{eqn:bn_ej} gives~\cite{Sreenivasiah_Chang_Ma_1981}
 
 \begin{subequations}\label{eqn:an_bn_me}
 	\begin{equation}
@@ -146,7 +146,7 @@ of \eqref{eqn:an_bn_me}, respectively.
 
 The general source formulation is now specialized to the case of a magnetic dipole 
 moment $\mathbf{M}_m$, following the approach of Collin~\cite[p.~361]{Collin_2015}. 
-The source current $\mathbf{J}_1$ is modeled as a constant current $I_0$ flowing 
+The source current density $\mathbf{J}_1$ is modeled as a constant current $I_0$ flowing 
 around an infinitesimally small loop along a curve $C$, which gives
 
 \begin{align}
@@ -269,9 +269,7 @@ along the $z$-direction would introduce a phase shift between
 $\mathbf{E}^+_\mathrm{TEM}$ and $\mathbf{E}^-_\mathrm{TEM}$, which would invalidate 
 the separation in \eqref{eqn:abm}.
 
-The expressions in \eqref{eqn:abm} yield useful physical insight into how electric and magnetic dipole moments couple to the TEM cell. Consider first a pure electric dipole moment, $\mathbf{m}_m = 0$. The right-hand side of \eqref{eqn:ifa_mm} vanishes, giving $a_\mathrm{TEM} = b_\mathrm{TEM}$: the two output port signals are identical and therefore in phase. Conversely, for a pure magnetic dipole moment, $\mathbf{m}_e = 0$, the right-hand side of \eqref{eqn:ifa_me} vanishes, giving $a_\mathrm{TEM} = -b_\mathrm{TEM}$: the two output port signals are equal in magnitude but opposite in sign, corresponding to a phase shift of $\pi$. In general, the phase relationship between $a_\mathrm{TEM}$ and $b_\mathrm{TEM}$ therefore directly identifies the nature of the dominant source. In-phase outputs indicate a predominantly electric dipole character, while out-of-phase outputs indicate a predominantly magnetic dipole character.
-
-%For the TEM mode, an electric dipole placed in the TEM cell leads to output power with the same phase at both ports. This directly results from the symmetric field distribution of the TEM mode leading to the same $\mathbf{E}^\pm_\mathrm{TEM}$ component at the output ports. In contrast, a magnetic dipole results in a phase shift of $\pm\pi$. This difference arises from the phase shift of the magnetic fields at the output ports, $\mathbf{H}_\mathrm{TEM}^+$ and $\mathbf{H}_\mathrm{TEM}^-$, as illustrate in \autoref{fig:reciprocitytemcelltemmode}. 
+The expressions in \eqref{eqn:abm} yield useful physical insight into how electric and magnetic dipole moments couple to the TEM cell. Consider first a pure electric dipole moment, $\mathbf{m}_m = \mathbf{0}$. The right-hand side of \eqref{eqn:ifa_mm} vanishes, giving $a_\mathrm{TEM} = b_\mathrm{TEM}$: the two output port signals are identical and therefore in phase. Conversely, for a pure magnetic dipole moment, $\mathbf{m}_e = \mathbf{0}$, the right-hand side of \eqref{eqn:ifa_me} vanishes, giving $a_\mathrm{TEM} = -b_\mathrm{TEM}$: the two output port signals are equal in magnitude but opposite in sign, corresponding to a phase shift of $\pi$. In general, the phase relationship between $a_\mathrm{TEM}$ and $b_\mathrm{TEM}$ therefore directly identifies the nature of the dominant source. In-phase outputs indicate a predominantly electric dipole character, while out-of-phase outputs indicate a predominantly magnetic dipole character.
 
 It should be noted that these conclusions are specific to the TEM mode. For the 
 next higher-order modes, TE\textsubscript{01} and TE\textsubscript{10}, the 
@@ -279,12 +277,9 @@ relationship between $\mathbf{E}_n^\pm$ and $\mathbf{H}_n^\pm$ is more involved
 than \eqref{eqn:he_wave}, and the simple phase-based distinction between electric 
 and magnetic dipole character no longer holds.
 
-%An electric dipole moment leads to a phase shift of $\pi$, while a magnetic dipole moment produces no phase shift. This behavior is due to the asymmetric field distribution of the TE\textsubscript{01} mode, thus a phase shift occurs now between the magnetic field intensities at the output ports, $\mathbf{H}_\mathrm{TE01}^+$ and $\mathbf{H}_\mathrm{TE01}^-$, while there is again no phase shift between the electric field intensities, $\mathbf{E}_\mathrm{TE01}^+$ and $\mathbf{E}_\mathrm{TE01}^-$.
-
 The individual components of the electric dipole moment $\mathbf{m}_e$ can be 
 determined separately by evaluating the output power of the TEM cell. Aligning 
-the dipole moment with the $x$- and $y$-directions in turn and applying 
-\eqref{eqn:ifa_me} yields~\cite{Sreenivasiah_Chang_Ma_1981}
+the dipole moment with the $x$- and $y$-directions in turn and determining the output power yields~\cite{Sreenivasiah_Chang_Ma_1981}
 
 \begin{subequations}
 	\begin{equation}
@@ -299,8 +294,6 @@ the dipole moment with the $x$- and $y$-directions in turn and applying
 
 where $P_x$ and $P_y$ denote the output power at one port induced by the 
 $x$- and $y$-components of $\mathbf{m}_e$, respectively. Furthermore, $E^\pm_{n,x}$ and $E^\pm_{n,y}$ denote the $x$- and $y$-component of the normalized electric field intensity of mode $n$.
-
-
 
 \subsubsection{Electrically small antennas}\label{sec:el_small_antennas}
 
@@ -327,9 +320,6 @@ Consider a current $I$ flowing along the curve $C$ of an electrically small thin
 		\label{eqn:e_int_b}
 	\end{equation}
 \end{subequations}
-
-%The physical interpretation of these formulations is important, as the numerical 
-%investigations in this thesis rely on it. Strictly speaking, \eqref{eqn:e_int_ab} implies that the current $I$ represents only the part of the antenna current that transfers real power to the TEM cell. It should therefore be noted that the current measured at the antenna terminals does not necessarily equal $I$, since a large portion of the antenna current may contribute to the stored reactive energy and is thus not relevant here.
 
 With the aim of establishing a relation between an inductive loop antenna and an 
 equivalent magnetic dipole moment $\mathbf{m}_m$, the electrically small antenna is now assumed to form a loop carrying a constant current $I$ over a closed curve $C$. Since $I$ is constant along $C$, it can be pulled out of the integral, and integrating over the closed loop gives~\cite[p.~361]{Collin_2015}
@@ -360,70 +350,7 @@ Therefore, the normalized induced voltage measured at an antenna serves as a dir
 
 In the general case, a magnetic dipole moment $\mathbf{m}_m$ producing fields characterized with coefficients $a_n$ and $b_n$ for any mode $n$ models the magnetic coupling behavior of any electrically small antenna yielding the same coefficients. Consequently, deriving an equivalent magnetic dipole moment $\mathbf{m}_m$ of an electrically small antenna is possible by measuring $a_n$ and $b_n$ at the output ports. 
 
-%In a similar manner to \eqref{eqn:e_int_a} and \eqref{eqn:e_int_b}, a constant magnetic field $\mathbf{h}_n^\pm$ along a magnetic current $I_m$ following a curve $C$ makes the following expression possible:
-%
-%\begin{subequations}
-%	
-%	\begin{equation}
-%		2a_n=-\int_C \boldsymbol{\tau} I_m(l)\cdot \mathbf{h}_n^+\,dl,
-%		\label{eqn:h_int_a}
-%	\end{equation}
-%	\begin{equation}
-%		2b_n=-\int_C \boldsymbol{\tau} I_m(l)\cdot \mathbf{h}_n^-\,dl.
-%		\label{eqn:h_int_b}
-%	\end{equation}
-%	
-%\end{subequations}
-%
-%Analogous to \eqref{eqn:e_a_closed_int} and \eqref{eqn:e_b_closed_int}, $I_m$ is assumed to be constant and $C$ to form a closed loop, leading to 
-%
-%\begin{subequations}
-%	\begin{equation}
-%		2a_n=-\oint_C \mathbf{h}_n^- \cdot \boldsymbol{\tau}\,dl = -j\omega\epsilon_0 \iint_{S_0} \mathbf{e}_n^+\,d\mathbf{s}',
-%		\label{eqn:h_a_closed_int}
-%	\end{equation}
-%	\begin{equation}
-%		2b_n=-\oint_C \mathbf{h}_n^+ \cdot \boldsymbol{\tau}\,dl = -j\omega\epsilon_0 \iint_{S_0} \mathbf{e}_n^-\,d\mathbf{s}'.
-%		\label{eqn:h_b_closed_int}
-%	\end{equation}
-%\end{subequations}
-%
-%Now, the surfaces $S_1$ and $S_2$ are defined, which are depicted in \autoref{fig:displacement-current-tem-cell}. Surface $S_1$ starts from $S_0$ and runs parallel to the electric field $\mathbf{e}_n^\pm$, extending infinitely. A total surface is defined as $S=S_0+S_1+S_2$, where $S_2$ closes the total surface around $S_1$ at infinity. 
-%
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=0.75\linewidth]{content/img/displacement-current-tem-cell}
-%	\caption{Sketch of the surfaces $S_0, S_1$ and $S_2$ in the TEM cell with an example antenna, coupling through $S_0$ to the septum over the displacement current $\partial \mathbf{D}/\partial t$.}
-%	\label{fig:displacement-current-tem-cell}
-%\end{figure}
-%
-%Consequently, \eqref{eqn:h_a_closed_int} and \eqref{eqn:h_b_closed_int} can be written with the newly defined closed surface $S$ as 
-%
-%
-%\begin{equation}
-%	j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}=j \omega \epsilon_0 \iint_{S_0} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}+\underbrace{j \omega \epsilon_0 \iint_{S_1} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'}}_{=0}+\underbrace{j \omega \epsilon_0 \iint_{S_2} \mathbf{e}_n^{\pm} \cdot d\mathbf{S}}_{=0}.
-%\end{equation}
-%
-%Inserting Gauss' law $\nabla\cdot \mathbf{E}=\frac{\rho}{\epsilon_0}$ leads to
-%
-%\begin{equation}
-%	-j \omega \epsilon_0 \oiint_{S} \mathbf{e}_n^{\pm} \cdot d\mathbf{s'} = -j \omega \epsilon_0 \iiint_{V} \nabla \cdot\mathbf{e}_n^{\pm} \cdot dv' = -j \omega \iiint_{V} {\rho}_n^\pm \cdot dv'.
-%\end{equation}
-%
-%With the continuity equation $j\omega\rho = -\nabla\cdot \mathbf{J}$ this yields
-%
-%\begin{subequations}
-%	\begin{equation}
-%		2a_n = -j \omega \iiint_{V} {\rho}_n^+ \cdot dv' = \iiint_{V} \nabla \cdot \mathbf{J}_n^+ \cdot dv' = \oiint_{S} \mathbf{J}_n^+ \cdot d\mathbf{s'} =I_n^+,
-%		\label{eqn:charges_a}
-%	\end{equation}
-%	\begin{equation}
-%		2b_n = -j \omega \iiint_{V} {\rho}_n^- \cdot dv' = \iiint_{V} \nabla \cdot \mathbf{J}_n^- \cdot dv' = \oiint_{S} \mathbf{J}_n^- \cdot d\mathbf{s'} = I_n^-.
-%		\label{eqn:charges_b}
-%	\end{equation}
-%\end{subequations}
-
-By duality, a similar relation holds for the electric dipole moment $\mathbf{m}_e$, where the displacement current $I^\pm_n$ of a given mode $n$ between the antenna and the septum serves as its measure, and a constant voltage $V$ at the antenna feedpoint is assumed. For the TEM mode specifically, this duality is giving
+By duality, a similar relation holds for the electric dipole moment $\mathbf{m}_e$, where the displacement current $I^\pm_n$ of a given mode $n$ between the antenna and the septum serves as its measure, and a constant voltage $V$ at the antenna feedpoint is assumed. For the TEM mode specifically, this duality leads to
 
 \begin{equation}
 	I_\mathrm{TEM}^+ + I_\mathrm{TEM}^- = 
@@ -436,7 +363,7 @@ electrically small antenna producing the same coefficients, and can
 be determined by measuring these coefficients at the output port, analogous to the 
 case of $\mathbf{m}_m$. 
 
-The physical meaning of $I_n$ is the electrical current passing between the septum and the dipole via capacitive coupling, representing the displacement current. In summary, the magnetic dipole moment arises from the induced voltage on the septum, whereas the electric dipole moment results from the coupling displacement current.
+The physical meaning of $I_n$ is the electrical current passing between the septum and the dipole via capacitive coupling, representing the displacement current. In summary, the magnetic dipole moment arises from the induced voltage associated with magnetic coupling, whereas the electric dipole moment results from the coupling displacement current.
 
 These two coupling mechanisms are shown in \autoref{fig:electric_magnetic_coupling}, 
 where, for the TEM mode, electric coupling produces in-phase currents at the output 

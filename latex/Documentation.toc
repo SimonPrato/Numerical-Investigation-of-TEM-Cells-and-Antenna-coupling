@@ -1,0 +1,69 @@
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Dipole Theory}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Electric Dipoles}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Infinitesimal Electric Dipoles}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Small Electric Dipoles}{5}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Magnetic Dipoles}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Radiated Field}{8}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Field regions}{8}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Energy densities and reactances}{10}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Guided Waves}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Lorentz Reciprocity Theorem}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Green's Function}{12}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Scalar Green's Function}{13}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Dyadic Green's Function}{14}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Modes in Waveguides}{15}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Rectangular Waveguides as non-TEM structures}{16}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}TEM mode in the TEM cell}{17}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Higher-order modes}{19}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Field distributions}{21}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Radiating Sources in TEM Cells}{26}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Arbitrary source}{26}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Equivalent dipole moments}{28}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Electrically small antennas}{31}{subsubsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.6}Shielding}{33}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Electromagnetic shielding mechanisms}{33}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Conductivity, permeability and permittivity in shields}{35}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}ASTM ES7-83 Method}{36}{subsubsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.4}Dual TEM cell}{37}{subsubsection.3.6.4}%
+\contentsline {section}{\numberline {4}Finite Element Method}{38}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Mesh Generation and Basis Functions}{39}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Solving the differential equation}{41}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Adaptive solution process}{41}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Numerical Investigations of Antennas in TEM Cells}{43}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Simulation Setup and Modeling Assumptions}{43}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}TEM cell model}{43}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Antenna models}{44}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Dipole moment models}{45}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Three port network model}{45}{subsubsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.2}Monopole Antenna}{47}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Setup}{47}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Equivalent dipole moments}{48}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Feed voltage, current and impedance}{48}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Current along antenna}{49}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Current distribution on septum}{51}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Output power}{51}{subsubsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.7}Equivalent circuit model}{53}{subsubsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.3}Loop antenna}{56}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Setup}{57}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Equivalent dipole moments}{57}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Investigation of Field Regions}{58}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Output power}{60}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Electric and magnetic energy}{62}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}Influence of geometry on dipole moments}{62}{subsubsection.5.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.7}Feed voltage, current and impedance}{64}{subsubsection.5.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.8}Current distribution on septum}{65}{subsubsection.5.3.8}%
+\contentsline {subsubsection}{\numberline {5.3.9}Equivalent circuit model}{66}{subsubsection.5.3.9}%
+\contentsline {subsection}{\numberline {5.4}Additional antenna structures}{70}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Loop antenna with gap}{70}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Inverted-F and center-fed monopole antenna}{73}{subsubsection.5.4.2}%
+\contentsline {section}{\numberline {6}Numerical Shielding Investigations in TEM Cells}{75}{section.6}%
+\contentsline {subsection}{\numberline {6.1}ASTM ES7-83 method}{75}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Dual TEM cell}{77}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Antennas in shielding enclosures}{80}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Dipole moments in shield enclosure}{82}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Conclusion}{84}{section.7}%
