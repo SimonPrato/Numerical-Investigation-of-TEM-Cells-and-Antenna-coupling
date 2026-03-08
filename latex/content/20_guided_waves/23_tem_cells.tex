@@ -37,8 +37,8 @@ in the $z$-direction:
 
 \begin{subequations}
 	\begin{align}
-		\mathbf{E}&=(E_{x}\cdot\mathbf{\hat{a}}_x+E_{y}\cdot\mathbf{\hat{a}}_y+E_{z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{-jkz},\label{eqn:rect_e}\\
-		\mathbf{H}&=(H_{x}\cdot\mathbf{\hat{a}}_x+H_{y}\cdot\mathbf{\hat{a}}_y+H_{z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{-jkz}.\label{eqn:rect_h}
+		\mathbf{E}&=(E_{x}\cdot\mathbf{\hat{a}}_x+E_{y}\cdot\mathbf{\hat{a}}_y+E_{z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{j(\omega t-kz)},\label{eqn:rect_e}\\
+		\mathbf{H}&=(H_{x}\cdot\mathbf{\hat{a}}_x+H_{y}\cdot\mathbf{\hat{a}}_y+H_{z}\cdot\mathbf{\hat{a}}_z)\mathrm{e}^{j(\omega t-kz)}.\label{eqn:rect_h}
 	\end{align}
 \end{subequations}
 
@@ -46,19 +46,19 @@ Next, applying Faraday's and Ampère-Maxwell law to (\ref{eqn:rect_e}) and (\ref
 
 \begin{subequations}
 \begin{align}
-	\nabla \times \mathbf{E} &=\begin{pmatrix}\frac{\partial}{\partial y}E_z-jkE_y \\jkE_x-\frac{\partial}{\partial x}E_z \\\frac{\partial}{\partial x}E_y-\frac{\partial}{\partial y}E_x\end{pmatrix}=\begin{pmatrix} -j\omega B_x\\-j\omega B_y\\ -j\omega B_z \end{pmatrix},\label{eqn:faraday}\\
-	\nabla \times \mathbf{B} &=\begin{pmatrix}\frac{\partial}{\partial y}B_z-jkB_y \\jkB_x-\frac{\partial}{\partial x}B_z \\\frac{\partial}{\partial x}B_y-\frac{\partial}{\partial y}B_x\end{pmatrix}=\begin{pmatrix} \frac{j\omega}{\mu\epsilon} E_x\\\frac{j\omega}{\mu\epsilon} E_y\\ \frac{j\omega}{\mu\epsilon} E_z \end{pmatrix}.\label{eqn:ampere_maxwell}
+	\nabla \times \mathbf{E} &=\begin{pmatrix}\frac{\partial}{\partial y}E_z+jkE_y \\-jkE_x-\frac{\partial}{\partial x}E_z \\\frac{\partial}{\partial x}E_y-\frac{\partial}{\partial y}E_x\end{pmatrix}=\begin{pmatrix} -j\omega B_x\\-j\omega B_y\\ -j\omega B_z \end{pmatrix},\label{eqn:faraday}\\
+	\nabla \times \mathbf{B} &=\begin{pmatrix}\frac{\partial}{\partial y}B_z+jkB_y \\-jkB_x-\frac{\partial}{\partial x}B_z \\\frac{\partial}{\partial x}B_y-\frac{\partial}{\partial y}B_x\end{pmatrix}=\begin{pmatrix} \frac{j\omega}{c^2} E_x\\\frac{j\omega}{c^2} E_y\\ \frac{j\omega}{c^2} E_z \end{pmatrix}.\label{eqn:ampere_maxwell}
 \end{align}
 \end{subequations}
 
-For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm{z}=0$. Consequently, \eqref{eqn:faraday} and \eqref{eqn:ampere_maxwell} reduce to the following conditions for the transverse electric field components:
+For a TEM mode, the longitudinal field components vanish $E_\mathrm{z}=H_\mathrm{z}=0$. Consequently, \eqref{eqn:faraday} and \eqref{eqn:ampere_maxwell} reduce to the following conditions for the transverse electric field components \cite[p.~427]{Griffiths_2024}:
 
 \begin{align}
 	\frac{\partial}{\partial x}E_x+\frac{\partial}{\partial y}E_y&=0\quad\text{Derived from Gauss' law}\label{eqn:rect_waveguide_gauss},\\
 	\frac{\partial}{\partial y}E_x-\frac{\partial}{\partial x}E_y&=0\quad\text{Derived from Faraday's law}\label{eqn:rect_waveguide_faraday}.
 \end{align}
 
-Since the solutions in \eqref{eqn:rect_waveguide_gauss} and \eqref{eqn:rect_waveguide_faraday} cannot satisfy the rectangular waveguide's boundary conditions, a TEM mode cannot propagate.
+Since the solutions in \eqref{eqn:rect_waveguide_gauss} and \eqref{eqn:rect_waveguide_faraday} cannot satisfy the rectangular waveguide's boundary conditions, a TEM mode cannot propagate \cite[p.~427]{Griffiths_2024}.
 
 \subsection[TEM mode in the TEM cell]{TEM mode in the TEM cell\protect\footnote{This section follows closely the treatment in: P. F. Wilson et al., \textit{Excitation of a TEM cell by a Vertical Electric Hertzian Dipole}, National Bureau of Standards, 1981}}\label{sec:tem_mode_tem_cell}
 
@@ -456,7 +456,7 @@ $y$-oriented dipole moment as a function of its $x$-displacement is shown in \au
 width $a = 40\,\mathrm{mm}$ and height $b = 24\,\mathrm{mm}$.
 The dipole is positioned 
 at mid-height between the septum and the upper wall. As seen in the field plot of 
-\autoref{fig:tem-mode}, the normalized field component $e_\mathrm{TEM,y}^\pm$ reaches 
+\autoref{fig:tem-mode}, the normalized field component $E_\mathrm{TEM,y}^\pm$ reaches 
 its maximum at the center of the TEM cell along the $x$-axis, and the Lorentz reciprocity theorem 
 in \eqref{eqn:lorentz_rec_theorem_int} therefore predicts maximum output power at this 
 position. This prediction is confirmed by \autoref{fig:outputpowereyoveroffset}. 
@@ -483,7 +483,7 @@ position. This prediction is confirmed by \autoref{fig:outputpowereyoveroffset}.
 The same simulation is repeated with the electric dipole moment $\mathbf{m}_e$ of same magnitude oriented 
 along the $x$-axis. As shown in \autoref{fig:outputpowereyoverheightwoffset}, the output 
 power is now largest near the cell wall, consistent with the distribution of 
-$e_\mathrm{TEM,x}^\pm$. Together, these examples demonstrate that knowledge of the modal 
+$E_\mathrm{TEM,x}^\pm$. Together, these examples demonstrate that knowledge of the modal 
 field distribution directly explains the coupling behavior of electrically small sources 
 within the TEM cell. Analytical expressions for the propagating modes in the TEM cell are 
 given in~\cite{Tippet_Chang_Crawford_1976}, which are useful for analytically determining the coupling behavior, but are not considered further in this thesis.
@@ -493,17 +493,17 @@ given in~\cite{Tippet_Chang_Crawford_1976}, which are useful for analytically de
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_offset}
-		\caption{Normalized output power and $E_\mathrm{TEM,y}^\pm$ of $\mathbf{m}_e$ oriented along $y$- and displaced along $x$-axis}
+		\caption{$\mathbf{m}_e$ oriented along $y$-axis}
 		\label{fig:outputpowereyoveroffset}
 	\end{subfigure}%
 	\hfill
 	\begin{subfigure}[t]{0.48\textwidth}
 		\centering
 		\includegraphics[width=1\linewidth]{content/img/output_power_ey_over_height_w_offset}
-		\caption{Normalized output power and $E_\mathrm{TEM,y}^\pm$ of $\mathbf{m}_e$ oriented and displaced along $x$-axis}
+		\caption{$\mathbf{m}_e$ oriented along $x$-axis}
 		\label{fig:outputpowereyoverheightwoffset}
 	\end{subfigure}
-	\caption{Output power and $\mathbf{E}^\pm_\mathrm{TEM}$ for an electric dipole moment oriented along the $y$-axis (a) and along the $x$-axis (b).}
+	\caption{Output power and $y$-component of $\mathbf{E}^\pm_\mathrm{TEM}$ for an electric dipole moment oriented along the $y$-axis in (a) and along the $x$-axis in (b), displaced along the $x$-axis in both cases.}
 	\label{fig:dipole_moments_output_power}
 \end{figure}
 %The normalized electric field of the TEM mode at $x=0$ is constant along the $y$-axis, as confirmed by both the analytical result of \eqref{eqn:eoy_normalized} and numerical simulation. For a TEM cell width $a=40\,\mathrm{mm}$ and height $b=24\,\mathrm{mm}$, this field equals $\mathbf{e}_\mathrm{TEM}^\pm=589.25\,\mathrm{V/m} \, \mathbf{\hat{a}}_y$.

@@ -20,7 +20,7 @@ differences in the resulting field expressions and their applications are discus
 
 An electric dipole can be modeled as two tiny charged metal spheres \cite[p.~467]{Griffiths_2024}, or alternatively two capacitor-plates \cite[p.~151]{Balanis_1997}, connected with a linear wire of length $d$ and diameter $a$. The charges accelerate along the wire and radiate. In case of an ideal, infinitesimal dipole, the wire is very thin ($a\ll \lambda$) and very small ($d \ll \lambda$) compared to the wavelength $\lambda$ \cites[p. 151]{Balanis_1997}[p. 468]{Griffiths_2024}. For an antenna to be accurately modeled as an infinitesimal electric dipole, its length must be smaller than a fiftieth of the wavelength ($d < \lambda/50$) \cite[p. 156]{Balanis_1997}. They are not very practical, but serve as a basic building block for more complex geometries, or as an excitation source in numerical investigations. 
 
-An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, is analyzed in detail below. The dipole is aligned with the $z$-axis, which simplifies the following mathematical investigations. Time variation according to $\mathrm{e}^{-j\omega t}$ is assumed and therefore omitted in this thesis. A current flows in the wire, which is spatially uniform throughout the wire. This is expressed as \cite[p. 151]{Balanis_1997}
+An infinitesimal electric dipole, illustrated in \autoref{fig:electric_dipole}, is analyzed in detail below. The dipole is aligned with the $z$-axis, which simplifies the following mathematical investigations. Time variation according to $\mathrm{e}^{j\omega t}$ is assumed and therefore omitted in this thesis. A current flows in the wire, which is spatially uniform throughout the wire. This is expressed as \cite[p. 151]{Balanis_1997}
 
 \begin{equation}\label{eqn:const_current}
 	{I}(z) = I_0.
@@ -141,7 +141,7 @@ and substituting into \cref{eqn:e_dipole} yields
 
 where $\eta=\sqrt{\frac{\mu}{\epsilon}}$ is the wave impedance of the medium in which the waves travel.
 
-The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{S}$ over a closed surface surrounding the dipole \cite[p. 154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{S}$ is defined by 
+The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{S}$ over a closed surface surrounding the dipole \cite[p.~154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{S}$ is defined by 
 
 \begin{equation}
 	\mathbf{S}=\frac{1}{2}\left(\mathbf{E}\times\mathbf{H}^*\right) .
@@ -155,10 +155,10 @@ The real power transfer is derived through the time-averaged Poynting vector $\m
 	\label{eqn:time_averaged_poynting}
 \end{equation}
 
-The complex power $P$ is derived by integrating $\mathbf{S}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
+The complex power $P_r$ is derived by integrating $\mathbf{S}$ over a closed surface around the dipole, which leads to \cite[p. 154]{Balanis_1997}
 
 \begin{equation}
-	P_r = \eta \frac{\pi}{3} \frac{|I_0d|^2}{\lambda} \left[ 1 - j \frac{1}{(kr)^3} \right].
+	P_r = \eta \frac{\pi}{3}  \left|\frac{I_0d}{\lambda}\right|^2 \left[ 1 - j \frac{1}{(kr)^3} \right].
 	\label{eqn:compl_power_inf_elec_dipole}
 \end{equation}
 
@@ -166,7 +166,7 @@ The imaginary part of the power radiated by the infinitesimal electric dipole sh
 
 \subsubsection{Small Electric Dipoles}\label{sec:small_electric_dipole}
 
-Wires that are too long to be modeled as infinitesimal dipoles, but short enough to be considered electrically small ($\lambda / 50 < l \leq \lambda/10$), are classified as small physical dipoles \cite[pp. 162-163]{Balanis_1997}. These dipoles provide a more accurate and practical representation of linear wire antennas, and are examined in greater detail below.
+Wires that are too long to be modeled as infinitesimal dipoles, but short enough to be considered electrically small ($\lambda / 50 < d \leq \lambda/10$), are classified as small physical dipoles \cite[pp. 162-163]{Balanis_1997}. These dipoles provide a more accurate and practical representation of linear wire antennas, and are examined in greater detail below.
 
 A current $I_0$ is fed into the short, center-fed, linear antenna shown in \autoref{fig:electric_dipole}. The current along the antenna arms $I(z)$ linearly drops to zero \cite[p. 412]{Jackson}, as visualized in \autoref{fig:electricdipolecurrent}. Mathematically, it is described by, 
 
