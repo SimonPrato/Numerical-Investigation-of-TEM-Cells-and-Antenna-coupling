@@ -48,18 +48,18 @@
 \contentsline {subsubsection}{\numberline {5.2.5}Current distribution on septum}{51}{subsubsection.5.2.5}%
 \contentsline {subsubsection}{\numberline {5.2.6}Output power}{51}{subsubsection.5.2.6}%
 \contentsline {subsubsection}{\numberline {5.2.7}Equivalent circuit model}{53}{subsubsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.3}Loop antenna}{56}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.3}Loop antenna}{57}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Setup}{57}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Equivalent dipole moments}{57}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2}Equivalent dipole moments}{58}{subsubsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.3}Investigation of Field Regions}{58}{subsubsection.5.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.4}Output power}{60}{subsubsection.5.3.4}%
-\contentsline {subsubsection}{\numberline {5.3.5}Electric and magnetic energy}{62}{subsubsection.5.3.5}%
-\contentsline {subsubsection}{\numberline {5.3.6}Influence of geometry on dipole moments}{62}{subsubsection.5.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.4}Output power}{61}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Electric and magnetic energy}{63}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}Influence of geometry on dipole moments}{63}{subsubsection.5.3.6}%
 \contentsline {subsubsection}{\numberline {5.3.7}Feed voltage, current and impedance}{64}{subsubsection.5.3.7}%
 \contentsline {subsubsection}{\numberline {5.3.8}Current distribution on septum}{65}{subsubsection.5.3.8}%
 \contentsline {subsubsection}{\numberline {5.3.9}Equivalent circuit model}{66}{subsubsection.5.3.9}%
 \contentsline {subsection}{\numberline {5.4}Additional antenna structures}{70}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Loop antenna with gap}{70}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1}Loop antenna with gap}{71}{subsubsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Inverted-F and center-fed monopole antenna}{73}{subsubsection.5.4.2}%
 \contentsline {section}{\numberline {6}Numerical Shielding Investigations in TEM Cells}{75}{section.6}%
 \contentsline {subsection}{\numberline {6.1}ASTM ES7-83 method}{75}{subsection.6.1}%

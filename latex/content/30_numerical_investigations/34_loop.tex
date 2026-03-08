@@ -242,7 +242,7 @@ The influence of the antenna geometry on the coupling behavior is investigated t
 
 Both configurations share an identical loop area 
 %and comparable feed current magnitude across the investigated frequency range, 
-and consequently exhibit the same magnetic dipole moment $\mathbf{m}_m$, in agreement with \eqref{eqn:e_closed_int}. The nonlinear frequency dependence of $\mathbf{m}_m$ persists across both configurations. In contrast, the electric dipole moment $\mathbf{m}_e$ exhibits a strong dependence on the antenna height $h$. As depicted in \autoref{fig:loop-geomg-comp}, the configuration with $h = 2.16\,\mathrm{mm}$ generates an electric dipole moment more than twice that of the configuration with $h = 1.2\,\mathrm{mm}$, which is a direct consequence of the increased displacement currents arising from the reduced distance between the antenna and the septum. This result is consistent with \eqref{eqn:me_i}, which relates the displacement current between the antenna conductor and the septum to $\mathbf{m}_e$.
+and exhibit the same magnetic dipole moment $\mathbf{m}_m$. The nonlinear frequency dependence of $\mathbf{m}_m$ persists across both configurations. In contrast, the electric dipole moment $\mathbf{m}_e$ exhibits a strong dependence on the antenna height $h$. As depicted in \autoref{fig:loop-geomg-comp}, the configuration with $h = 2.16\,\mathrm{mm}$ generates an electric dipole moment more than twice that of the configuration with $h = 1.2\,\mathrm{mm}$, which is a direct consequence of the increased displacement currents arising from the reduced distance between the antenna and the septum. This result is consistent with \eqref{eqn:me_i}, which relates the displacement current between the antenna conductor and the septum to $\mathbf{m}_e$.
 
 Finally, as shown in \autoref{fig:loop-geom-power}, the configuration producing the larger electric dipole moment also yields a slightly higher output power, although the difference remains small. This demonstrates the comparatively limited influence of $\mathbf{m}_e$ on the output power relative to $\mathbf{m}_m$. 
 
@@ -440,7 +440,7 @@ and $L_A=2.14\,\mathrm{nH}$.
 		PEC surface with a side length of $\lambda/2$, where $\lambda$ corresponds 
 		to the free-space wavelength of the solution frequency. This configuration 
 		enables the investigation of the loop antenna reactance without influence 
-		of the TEM cell.}
+		of the TEM cell. Figure is not to scale.}
 	\label{fig:free-space-loop}
 \end{figure}
 
@@ -474,21 +474,25 @@ introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_l
 	\node[circ] at (9.4, 11.5){};
 	\node[shape=rectangle, draw, line width=1pt, 
 	dash pattern={on 4pt off 4pt}, minimum width=5.465cm, 
-	minimum height=6.465cm] at (8.75, 9.5){};
+	minimum height=5.715cm] at (8.75, 10){};
 	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
-	at (8.375, 11.5){} node[anchor=north west, align=left, 
+	at (8.575, 11.5){} node[anchor=north west, align=left, 
 	text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
 	\draw (8.75, 11) to[european inductor, l={$L_A$}] (11, 11)
-	to[capacitor, l={$C_k$}] (14.5, 11);
-	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
-	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
+	to[capacitor, l={$C_k$}, i={$I_\mathrm{TEM}$}] (14.5, 11);
+	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}, v={$j\omega L_{T2} I_{T2} - V_{\mathrm{TEM}}^-$}] (18, 10);
+	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}, v={$j\omega L_{T1} I_{T1} + V_{\mathrm{TEM}}^+$}] (18, 12);
+	\node[currarrow, rotate=0] at (18.25, 12){};
+	\node[above] at (18.25, 12){$I_{LT1}$};
+	\node[currarrow, rotate=0] at (18.25, 10){};
+	\node[above] at (18.25, 10){$I_{LT2}$};
 	\draw (14.5, 10) -| (14.5, 12);
 	\node[circ] at (14.5, 11){};
-	\draw (18, 10) to[capacitor, l={$C_{T2}$}] (18, 8);
+	\draw (18.75, 10) to[capacitor, l={$C_{T2}$}] (18.75, 8);
 	\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
-	\node[ground] at (18, 8){};
+	\node[ground] at (18.75, 8){};
 	\node[ground] at (20.5, 8){};
-	\node[circ] at (18, 10){};
+	\node[circ] at (18.75, 10){};
 	\draw (18, 12) -- (22, 12);
 	\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
 	\node[ground] at (23, 8){};
@@ -502,11 +506,11 @@ introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_l
 	\draw (24.5, 12) -| (25.5, 10);
 	\node[circ] at (20.5, 12){};
 	\node[shape=rectangle, draw, line width=1pt, 
-	dash pattern={on 4pt off 4pt}, minimum width=7.965cm, 
-	minimum height=5.715cm] at (18, 9.875){};
+	dash pattern={on 4pt off 4pt}, minimum width=7.665cm, 
+	minimum height=5.715cm] at (18.10, 9.875){};
 	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
-	at (16.375, 12.75){} node[anchor=north west, align=left, 
-	text width=4.827cm, inner sep=6pt] at (13.75, 13.5){TEM cell};
+	at (13.75, 12.75){} node[anchor=north west, align=left, 
+	text width=4.827cm, inner sep=6pt] at (13.85, 13.5){TEM cell};
 	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
 	at (23.375, 10){} node[anchor=north west, align=left, 
 	text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
@@ -519,7 +523,7 @@ introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_l
 	}
 	\caption{Circuit representing the TEM cell and the loop antenna, with the 
 		additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their 
-		near-field coupling behavior.}
+		near-field coupling behavior of the TEM mode.}
 	\label{fig:full_circuit_loop}
 \end{figure}
 

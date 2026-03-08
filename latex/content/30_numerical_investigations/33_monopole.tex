@@ -287,7 +287,7 @@ quadratically with frequency.
 		on a PEC surface with a side length of $\lambda/2$ and height of $\lambda/4$, where $\lambda$ 
 		corresponds to the free-space wavelength of the smallest investigated frequency. This 
 		configuration enables the investigation of the monopole antenna reactance 
-		without influence of the TEM cell.}
+		without influence of the TEM cell. Figure is not to scale.}
 	\label{fig:free-space-monopole}
 \end{figure}
 
@@ -310,7 +310,7 @@ induced voltage across the septum, according to the framework established in \cr
 
 where $\mathbf{I}=\left[ I_{LA}, I_{LT1}, I_{LT2} \right]^T$ denotes the current vector and $\mathbf{V}=\left[ V_{LA}, V_{LT1}, V_{LT2}  \right]^T$ the voltage vector, and the coupling is assumed to be reciprocal, because no active devices or nonreciprocal media is present \cite[p.~175]{Pozar_2012}. The coupling elements $C_k$, $M_{A,T1}$, and $M_{A,T2}$ fully represent the power transfer to the TEM cell, rendering a separate radiation resistance $R_A$ redundant.
 
-The key advantage of this approach is the direct derivation of the dipole moments from the circuit: $\mathbf{m}_m$ is obtained from the induced voltages across $L_{T1}$ and $L_{T2}$ in accordance with \eqref{eqn:m_v}, and $\mathbf{m}_e$ from the displacement current through $C_k$ according to \eqref{eqn:me_i}.
+The key advantage of this approach is the direct derivation of the dipole moments from the circuit, which is shown here for the TEM mode: $\mathbf{m}_m$ is obtained from the induced voltages $V_\mathrm{TEM}^+$ and $V_\mathrm{TEM}^-$ across $L_{T1}$ and $L_{T2}$, respectively, in accordance with \eqref{eqn:m_v}. Analogously, $\mathbf{m}_e$ is derived from the displacement current $I_\mathrm{TEM}$ through $C_k$ according to \eqref{eqn:me_i}.
 
 \begin{figure}[htbp]
 	\centering
@@ -338,7 +338,7 @@ The key advantage of this approach is the direct derivation of the dipole moment
 	\node[circ] at (8.45, 10.5){};
 	
 	% Horizontal wire continues from junction to C_k
-	\draw (8, 11) to[capacitor, l={$C_k$}] (14.5, 11);
+	\draw (8, 11) to[capacitor, l={$C_k$}, i={$I_\mathrm{TEM}$}] (14.5, 11);
 	
 	\node[shape=rectangle, draw, line width=1pt,
 	dash pattern={on 4pt off 4pt}, minimum width=4.5cm,
@@ -347,15 +347,19 @@ The key advantage of this approach is the direct derivation of the dipole moment
 	at (8.375, 13.5){} node[anchor=north west, align=left,
 	text width=4.827cm, inner sep=6pt] at (5.75, 13.75){Antenna};
 	
-	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
-	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
+	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}, v={$j\omega L_{T2} I_{T2} - V_{\mathrm{TEM}}^-$}] (18, 10);
+	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}, v={$j\omega L_{T1} I_{T1} + V_{\mathrm{TEM}}^+$}] (18, 12);
+	\node[currarrow, rotate=0] at (18.25, 12){};
+	\node[above] at (18.25, 12){$I_{LT1}$};
+	\node[currarrow, rotate=0] at (18.25, 10){};
+	\node[above] at (18.25, 10){$I_{LT2}$};
 	\draw (14.5, 10) -| (14.5, 12);
 	\node[circ] at (14.5, 11){};
-	\draw (18, 10) to[capacitor, l={$C_{T2}$}] (18, 8);
+	\draw (18.75, 10) to[capacitor, l={$C_{T2}$}] (18.75, 8);
 	\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
-	\node[ground] at (18, 8){};
+	\node[ground] at (18.75, 8){};
 	\node[ground] at (20.5, 8){};
-	\node[circ] at (18, 10){};
+	\node[circ] at (18.75, 10){};
 	\draw (18, 12) -- (22, 12);
 	\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
 	\node[ground] at (23, 8){};
@@ -386,7 +390,7 @@ The key advantage of this approach is the direct derivation of the dipole moment
 	}
 	\caption{Circuit representing the TEM cell and the monopole antenna, with 
 		the additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their 
-		near-field coupling behavior.}
+		near-field coupling behavior of the TEM mode.}
 	\label{fig:full_circuit_monopole}
 \end{figure}
 
