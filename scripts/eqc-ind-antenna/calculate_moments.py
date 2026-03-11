@@ -31,6 +31,8 @@ def calc(output_power, output_voltage_phase_1, output_voltage_phase_2,
     u_1 = np.sqrt(output_power * 50) * np.exp(1j * output_voltage_phase_1)
     u_2 = np.sqrt(output_power * 50) * np.exp(1j * output_voltage_phase_2)
 
+    # Hint: all voltages (including input voltage) must be effective values
+
     # Component values
     ct = tem_capacitance / 2 # tem cell capacitance
     lt = tem_inductance / 2# tem cell inductance
@@ -47,10 +49,15 @@ def calc(output_power, output_voltage_phase_1, output_voltage_phase_2,
     i_lt1 = i_r1 + i_ct1
     i_lt2 = i_r2 + i_ct2
     i_ck = i_lt1 + i_lt2
-    i_la = i - i_ca - i_ck
+    i_la = i - i_ca
+    u_la = i_la * 2 * np.pi * frequency * la
+    i_ma = i_la - i_ck
     r_c_parallel = 1/(1/50+1j*2*np.pi*frequency*ct)
-    induced_voltage = np.sqrt((((u_1 - u_2) - (-1j * 2 * np.pi * frequency * lt * i_lt1 + 1j * 2 * np.pi * frequency * lt * i_lt2)) * r_c_parallel/(1j * 2*np.pi*frequency*lt+r_c_parallel))**2/50)
-    m = (input_voltage - 1j * 2 * np.pi * frequency * la * i_la) / (1j * 2 * np.pi * frequency * (i_lt1 - i_lt2))
+    u_lt1 = 1j * 2 * np.pi * frequency * lt * i_lt1 # Note: Without induced voltage considered
+    u_lt2 = 1j * 2 * np.pi * frequency * lt * i_lt2 # Note: Without induced voltage considered
+    # induced voltage across septum inductors:
+    induced_voltage = np.sqrt((((u_1 - u_2) - (- u_lt1 + u_lt2)) * r_c_parallel/(1j * 2*np.pi*frequency*lt+r_c_parallel))**2/50)
+    m = (induced_voltage / 2 - 1j * 2 * np.pi * frequency * i_lt1 * lt ) / (1j * 2 * np.pi * frequency * i_la) # Probably to be corrected
     inductive_power = np.conj(i_la) * input_voltage * np.cos(np.angle(i_la))
     a_minus_b = induced_voltage
     # Note: Effective voltages are used here

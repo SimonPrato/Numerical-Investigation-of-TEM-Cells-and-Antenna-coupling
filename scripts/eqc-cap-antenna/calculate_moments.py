@@ -1,6 +1,11 @@
 import numpy as np
 import scienceplots
 
+"""
+Important note: This script has only been used for the monopole antenna,
+where the inductivity m was not needed. For antennas, where m shall be considered,
+reforumlate... TODO
+"""
 def calc(output_power, output_voltage_phase_1, output_voltage_phase_2, 
          input_voltage, input_impedance, tem_inductance,
          tem_capacitance, antenna_inductance, antenna_capacitance, frequency):
@@ -31,6 +36,8 @@ def calc(output_power, output_voltage_phase_1, output_voltage_phase_2,
     u_1 = np.sqrt(output_power * 50) * np.exp(1j * output_voltage_phase_1)
     u_2 = np.sqrt(output_power * 50) * np.exp(1j * output_voltage_phase_2)
 
+    # input voltage (use effective value)
+    input_voltage = input_voltage / np.sqrt(2)
     # Component values
     ct = tem_capacitance / 2 # tem cell capacitance
     lt = tem_inductance / 2# tem cell inductance

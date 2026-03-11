@@ -111,6 +111,7 @@ def main():
 
     s_param_mag = load_csv_column('data/loop-tem-cell/magnitude.csv', 1)
     output_power = np.power(10.0, s_param_mag / 10)  # Assuming 1W input power
+    print(output_power)
 
     wp1_voltage_phase = load_csv_column('data/loop-tem-cell/phase.csv', 2) 
     wp2_voltage_phase = load_csv_column('data/loop-tem-cell/phase.csv', 3) 
@@ -139,9 +140,8 @@ def main():
 
     # Save dipole moments to csv file
     output_csv = f"output/{antenna_name}_dipole_moments.csv"
-    save_dipole_moments_to_csv(frequencies, np.abs(m_e), np.abs(m_m), output_csv)
+    save_dipole_moments_to_csv(frequencies, np.abs(np.multiply(m_e, 377)), np.abs(m_m), output_csv)
 
 
 if __name__ == "__main__":
     main()
-
