@@ -141,7 +141,7 @@ and substituting into \cref{eqn:e_dipole} yields
 
 where $\eta=\sqrt{\frac{\mu}{\epsilon}}$ is the wave impedance of the medium in which the waves travel.
 
-The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{S}$ over a closed surface surrounding the dipole \cite[p.~154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part about the antenna's reactive behavior. $\mathbf{S}$ is defined by 
+The total radiated power of the dipole is obtained by integrating the complex Poynting vector $\mathbf{S}$ over a closed surface surrounding the dipole \cite[p.~154]{Balanis_1997}. The real part of the total radiated power provides information about energy transferred by radiation, while the imaginary part provides information about the antenna's reactive behavior. $\mathbf{S}$ is defined by 
 
 \begin{equation}
 	\mathbf{S}=\frac{1}{2}\left(\mathbf{E}\times\mathbf{H}^*\right) .
@@ -168,7 +168,7 @@ The imaginary part of the power radiated by the infinitesimal electric dipole sh
 
 Wires that are too long to be modeled as infinitesimal dipoles, but short enough to be considered electrically small ($\lambda / 50 < d \leq \lambda/10$), are classified as small physical dipoles \cite[pp. 162-163]{Balanis_1997}. These dipoles provide a more accurate and practical representation of linear wire antennas, and are examined in greater detail below.
 
-A current $I_0$ is fed into the short, center-fed, linear antenna shown in \autoref{fig:electric_dipole}. The current along the antenna arms $I(z)$ linearly drops to zero \cite[p. 412]{Jackson}, as visualized in \autoref{fig:electricdipolecurrent}. Mathematically, it is described by, 
+A current $I_0$ is fed into the short, center-fed, linear antenna shown in \autoref{fig:linear_wire_antenna}. The current along the antenna arms $I(z)$ linearly drops to zero \cite[p. 412]{Jackson}, as visualized in \autoref{fig:electricdipolecurrent}. Mathematically, it is described by, 
 
 \begin{equation}
     {I}(z)=  I_0\left( 1-\frac{2|z|}{d} \right).
@@ -226,7 +226,7 @@ shown in \autoref{fig:magnetic_dipole_drawing}, it can be represented either
 by an electrically small current loop of radius $b$ carrying a current $I_0$, or 
 equivalently by a magnetic current $I_m$ flowing over a distance $L$ perpendicular 
 to the loop plane. The current loop model is considered as electrically small if the loop circumference 
-satisfies $2\pi b \ll \lambda/10$~\cite[p.~231]{Balanis_1997}. The radiation 
+satisfies $2\pi b < \lambda/10$~\cite[p.~231]{Balanis_1997}. The radiation 
 pattern of the magnetic dipole is identical to that of the electric dipole, with 
 the roles of the electric and magnetic fields interchanged~\cite[p.~254]{Griffiths_2024}.
 
@@ -282,7 +282,7 @@ and the magnetic field intensity by \cite[p.~237]{Balanis_1997}
 	\end{equation}
 \end{subequations}
 
-The complex power density $\mathbf{S}$ can be derived following the same approach as for the electric dipole (see \eqref{eqn:com_pow_dens}). For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals \cite[p.~238]{Balanis_1997}
+The complex power density $\mathbf{S}$ can be derived following the same approach as for the electric dipole (see \eqref{eqn:com_pow_dens}). For the magnetic dipole, the imaginary part of $\mathbf{S}$ has the opposite sign compared to the electric dipole. This is the result of the near-field power being inductive in the case of the magnetic dipole, while it is capacitive for the electric dipole. The complex power equals \cite[p.~238]{Balanis_1997}
 
 
 \begin{equation}

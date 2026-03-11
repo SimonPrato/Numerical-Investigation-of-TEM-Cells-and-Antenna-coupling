@@ -36,7 +36,7 @@ Following the approach established for the monopole antenna, the theoretical fra
 
 The geometry of the loop antenna model, positioned inside the TEM cell and connected to a feedpoint on the top cell wall, is shown in \autoref{fig:loopantennageometry}. The antenna consists of three wire segments, each of length $h = w = 1.6\,$mm, and the PEC surface as return path, yielding a total circumference of $C = 6.4\,$mm. The antenna remains electrically short ($C < \lambda/10$) for frequencies up to $4.69\,$GHz. A square loop is preferred over a round geometry in the numerical model, as its straight sides allow for a more regular mesh and simplify the interpretation of the resulting equivalent dipole moments, with the mesh additionally refined on the antenna surface and near the feedpoint, following the discussion in \cref{sec:adap_sol_pro}.
 
-The loop antenna is oriented such that the normal vector of its enclosed surface is aligned with the $x$-direction, which maximizes the coupling with the magnetic field component of the TEM mode. Unlike the monopole antenna discussed in \cref{sec:monopole}, the loop antenna provides a current return path. The conducting current induces a rotational electric field, equivalent to a net magnetic field intensity through the loop area, thereby giving raise to a magnetic dipole moment as described by \eqref{eqn:mag_dipole_moment_tem}. Furthermore, displacement currents between the antenna and the septum contribute an electric dipole moment, as expressed in \eqref{eqn:me_i}, analogous to the behavior observed for the monopole antenna. The resulting equivalent electric and magnetic dipole moments are analyzed in detail in \cref{sec:eq_dip_loop}.
+The loop antenna is oriented such that the normal vector of its enclosed surface is aligned with the $x$-direction, which maximizes the coupling with the magnetic field component of the TEM mode. Unlike the monopole antenna discussed in \cref{sec:monopole}, the loop antenna provides a current return path. The conducting current induces a rotational electric field, equivalent to a net magnetic field intensity through the loop area, thereby giving rise to a magnetic dipole moment as described by \eqref{eqn:mag_dipole_moment_tem}. Furthermore, displacement currents between the antenna and the septum contribute an electric dipole moment, as expressed in \eqref{eqn:me_i}, analogous to the behavior observed for the monopole antenna. The resulting equivalent electric and magnetic dipole moments are analyzed in detail in \cref{sec:eq_dip_loop}.
 
 \subsubsection{Equivalent dipole moments}\label{sec:eq_dip_loop}
 
@@ -48,7 +48,7 @@ lies below the cut-off frequency of the first higher-order mode. The dipole
 moments are then computed by applying \eqref{eqn:ifa_me} and 
 \eqref{eqn:ifa_mm} with these coefficients. The obtained dipole moments are presented as a function of frequency in \autoref{fig:dipole_moments_loop_antenna}. The phases of the output port powers at ports 1 and 2 are shown in \autoref{fig:loopphase}. Unlike the monopole antenna case, where the phase shift remained zero across the entire investigated frequency range, this phase information is essential for the decomposition of the equivalent dipole moments. A phase shift of zero between the output port powers indicates the presence of an electric dipole moment, whereas a phase shift of $\pm\pi$ is characteristic of a magnetic dipole moment. A phase shift between $0$ and $\pi$ indicates a superposition of both dipole moment contributions, as discussed in detail in \cref{sec:equ-dip-mom}.
 
-The phase shift approaches $\pi$ at low frequencies, indicating that the magnetic dipole moment $\mathbf{m}_m$ dominates over the electric dipole moment $\mathbf{m}_e$. However, the phase shift decreases with frequency, giving raise to an electric dipole moment as a consequence. In contrast to the monopole antenna, $\mathbf{m}_e$ and $\mathbf{m}_m$ thereby demonstrate non-linear behavior over frequency.
+The phase shift approaches $\pi$ at low frequencies, indicating that the magnetic dipole moment $\mathbf{m}_m$ dominates over the electric dipole moment $\mathbf{m}_e$. However, the phase shift decreases with frequency, giving rise to an electric dipole moment as a consequence. In contrast to the monopole antenna, $\mathbf{m}_e$ and $\mathbf{m}_m$ thereby demonstrate non-linear behavior over frequency.
 
 \begin{figure}[tbp]
 	\centering
@@ -266,7 +266,7 @@ Finally, as shown in \autoref{fig:loop-geom-power}, the configuration producing 
 		\label{fig:currimp}
 	\end{subfigure}
 	
-	\caption{The voltage at the feedpoint, and the current in close proximity to the feedpoint and return path in (a). The and impedance characteristics of the loop antenna in (b).}
+	\caption{The voltage at the feedpoint, and the current in close proximity to the feedpoint and return path in (a). The impedance characteristics of the loop antenna in (b).}
 	\label{fig:curr_volt_imp}
 \end{figure}
 
@@ -276,7 +276,7 @@ The extracted current values differ between the two paths, which indicates that 
 
 \autoref{fig:loopfeedreturncurrent} shows the voltage at the feedpoint of the antenna. A fraction of the antenna voltage contributes to the magnetic coupling with the TEM cell, giving rise to $\mathbf{m}_m$ according to \eqref{eqn:m_v}, while the remainder constitutes the magnetic energy stored in the antenna. The feed voltage significantly rises with frequency and flattens at higher frequencies, which strongly correlates with the frequency-behavior of $\mathbf{m}_m$ shown in \autoref{fig:dipole_moments_loop_antenna}. This correlation validates the theoretical framework established describing the magnetic dipole moment creation of antennas in this thesis.
 
-It is further noted that the increasing voltage mirrors an increased potential and charge accumulation on the loop antenna, thereby increasing the displacement currents coupling to the septum. Therefore, the generation of a magnetic dipole moment $\mathbf{m}_m$ in the loop antenna is naturally accompanied by a electric dipole moment $\mathbf{m}_e$. Lastly, the increase in feed voltage and decrease in feed current are consistent with the antenna input impedance shown in \autoref{fig:currimp}. Furthermore, it exhibits strongly inductive behavior, as expected given the predominantly magnetic energy storage, the dominant magnetic dipole moment, and the inherently inductive geometry of the loop antenna.
+It is further noted that the increasing voltage mirrors an increased potential and charge accumulation on the loop antenna, thereby increasing the displacement currents coupling to the septum. Therefore, the generation of a magnetic dipole moment $\mathbf{m}_m$ in the loop antenna is naturally accompanied by an electric dipole moment $\mathbf{m}_e$. Lastly, the increase in feed voltage and decrease in feed current are consistent with the antenna input impedance shown in \autoref{fig:currimp}. Furthermore, it exhibits strongly inductive behavior, as expected given the predominantly magnetic energy storage, the dominant magnetic dipole moment, and the inherently inductive geometry of the loop antenna.
 
 \subsubsection{Current distribution on septum}\label{sec:current_dist_septum_loop}
 
@@ -284,9 +284,9 @@ The loop antenna induces surface currents on the septum of the TEM cell, as show
 
 When the loop antenna is placed centrally without rotation, thereby placed in the $yz$-plane as shown in \autoref{fig:loopantennageometry}, and operating at $f=3\,\mathrm{GHz}$, its magnetic dipole moment predominantly excites the TEM mode of the cell. \autoref{fig:current_loop_surface_current} shows that the surface currents reaching the two output ports are out of phase. This behavior is consistent with the analysis in \cref{sec:equ-dip-mom}, which predicts a phase difference of $\pm\pi$ between the output port powers for magnetic dipole excitation.
 
-When the antenna is rotated by $\pm\pi/4$ around the $y$-axis and laterally offset by $x=7\,\mathrm{mm}$, the transmitted power at $f=3\,\mathrm{GHz}$ becomes negligible. According to \eqref{eqn:e_a_closed_int} and \eqref{eqn:e_b_closed_int}, efficient magnetic coupling requires alignment between the magnetic field of the propagating mode, $\mathbf{h}_\mathrm{TEM}^\pm$, and the surface normal vector of the loop antenna. In this configuration, the normal vector of the loop surface is oriented along the $z$-direction, whereas $\mathbf{h}_\mathrm{TEM}^\pm$ is primarily directed along the $x$-axis. As a result, the overlap integral governing magnetic coupling is strongly reduced. The current distribution shown in \autoref{fig:loopsurfacecurrentsoffsetrotation} confirms that no significant traveling waves are excited. Instead, the induced currents form predominantly closed circulation patterns and remain largely reactive, such that only a negligible amount of current reaches the output ports.
+When the antenna is rotated by $\pm\pi/4$ around the $y$-axis and laterally offset by $x=7\,\mathrm{mm}$, the transmitted power at $f=3\,\mathrm{GHz}$ becomes negligible. According to \eqref{eqn:e_a_closed_int} and \eqref{eqn:e_b_closed_int}, efficient magnetic coupling requires alignment between the magnetic field of the propagating mode, $\mathbf{H}_\mathrm{TEM}^\pm$, and the surface normal vector of the loop antenna. In this configuration, the normal vector of the loop surface is oriented along the $z$-direction, whereas $\mathbf{H}_\mathrm{TEM}^\pm$ is primarily directed along the $x$-axis. As a result, the overlap integral governing magnetic coupling is strongly reduced. The current distribution shown in \autoref{fig:loopsurfacecurrentsoffsetrotation} confirms that no significant traveling waves are excited. Instead, the induced currents form predominantly closed circulation patterns and remain largely reactive, such that only a negligible amount of current reaches the output ports.
 
-At $f=3.3\,\mathrm{GHz}$, the TE\textsubscript{01} mode propagates in addition to the TEM mode. In this case, the magnetic field component $\mathbf{h}_\mathrm{TE01}^\pm$ exhibits a significant $z$-component near the cell walls, which aligns with the normal vector of the rotated loop surface. This alignment substantially enhances magnetic coupling. As shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}, a considerable portion of the induced surface current now propagates toward the output ports, resulting in measurable power transmission. In contrast to the purely TEM case, the output powers are in phase, as discussed in \cref{sec:equ-dip-mom}.
+At $f=3.3\,\mathrm{GHz}$, the TE\textsubscript{01} mode propagates in addition to the TEM mode. In this case, the magnetic field component $\mathbf{H}_\mathrm{TE01}^\pm$ exhibits a significant $z$-component near the cell walls, which aligns with the normal vector of the rotated loop surface. This alignment substantially enhances magnetic coupling. As shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3}, a considerable portion of the induced surface current now propagates toward the output ports, resulting in measurable power transmission. In contrast to the purely TEM case, the output powers are in phase, as discussed in \cref{sec:equ-dip-mom}.
 
 The frequency-dependent power transfer for this configuration is shown in \autoref{fig:loopsurfacecurrentsoffsetrotation3ghz3plot}, where the contributions of the TEM and TE\textsubscript{01} modes are presented separately. At $f=3.21\,\mathrm{GHz}$, a resonance occurs within the TEM cell, resulting in a pronounced peak in the output power associated with the TE\textsubscript{01} mode. This resonance corresponds to a condition in which half the wavelength matches the effective electrical length of the TEM cell, as previously discussed in \cref{sec:higher-order-modes}.
 
@@ -459,67 +459,63 @@ introduced in \cref{sec:tem_cell_model}, as shown in \autoref{fig:full_circuit_l
 \begin{figure}[htbp]
 	\centering
 	\resizebox{\textwidth}{!}{%
-\begin{tikzpicture}
-	% Paths, nodes and wires:
-	\node[shape=circle, draw, line width=1pt, minimum width=0.965cm]
-	(N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
-	\node[ground] at (2.5, 8){};
-	\draw (2.5, 9) -| (2.5, 8);
-	\draw (4, 11) to[european resistor, l={$R_s$}] (6, 11);
-	\draw (7.5, 11) to[capacitor, l={$C_A$}] (7.5, 8);
-	\node[ground] at (7.5, 8){};
-	\draw (2.5, 10) -| (2.5, 11) -- (4, 11);
-	\draw (6, 11) -- (7.5, 11) -- (8.75, 11);
-	\node[circ] at (7.5, 11){};
-	\node[circ] at (9.4, 11.5){};
-	\node[shape=rectangle, draw, line width=1pt, 
-	dash pattern={on 4pt off 4pt}, minimum width=5.465cm, 
-	minimum height=5.715cm] at (8.75, 10){};
-	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
-	at (8.575, 11.5){} node[anchor=north west, align=left, 
-	text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
-	\draw (8.75, 11) to[european inductor, l={$L_A$}] (11, 11)
-	to[capacitor, l={$C_k$}, i={$I_\mathrm{TEM}$}] (14.5, 11);
-	\draw (14.5, 10) to[european inductor, l={$L_{T2}$}, v={$j\omega L_{T2} I_{T2} - V_{\mathrm{TEM}}^-$}] (18, 10);
-	\draw (14.5, 12) to[european inductor, l={$L_{T1}$}, v={$j\omega L_{T1} I_{T1} + V_{\mathrm{TEM}}^+$}] (18, 12);
-	\node[currarrow, rotate=0] at (18.25, 12){};
-	\node[above] at (18.25, 12){$I_{LT1}$};
-	\node[currarrow, rotate=0] at (18.25, 10){};
-	\node[above] at (18.25, 10){$I_{LT2}$};
-	\draw (14.5, 10) -| (14.5, 12);
-	\node[circ] at (14.5, 11){};
-	\draw (18.75, 10) to[capacitor, l={$C_{T2}$}] (18.75, 8);
-	\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
-	\node[ground] at (18.75, 8){};
-	\node[ground] at (20.5, 8){};
-	\node[circ] at (18.75, 10){};
-	\draw (18, 12) -- (22, 12);
-	\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
-	\node[ground] at (23, 8){};
-	\draw (25.5, 10) to[european resistor, l={$R_1$}] (25.5, 8);
-	\node[ground] at (25.5, 8){};
-	\draw (22, 12) -- (24.5, 12);
-	\draw (20.5, 10) -- (20.5, 12);
-	\node[jump crossing] at (20.5, 10){};
-	\draw (18, 10) -- (20.36, 10);
-	\draw (20.64, 10) -- (23, 10);
-	\draw (24.5, 12) -| (25.5, 10);
-	\node[circ] at (20.5, 12){};
-	\node[shape=rectangle, draw, line width=1pt, 
-	dash pattern={on 4pt off 4pt}, minimum width=7.665cm, 
-	minimum height=5.715cm] at (18.10, 9.875){};
-	\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
-	at (13.75, 12.75){} node[anchor=north west, align=left, 
-	text width=4.827cm, inner sep=6pt] at (13.85, 13.5){TEM cell};
-	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
-	at (23.375, 10){} node[anchor=north west, align=left, 
-	text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
-	\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
-	at (26.875, 10){} node[anchor=north west, align=left, 
-	text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
-	\node[circ] at (15.75, 12.5){};
-	\node[circ] at (16.75, 10.5){};
-\end{tikzpicture}
+		\begin{tikzpicture}
+			% Paths, nodes and wires:
+			\node[shape=circle, draw, line width=1pt, minimum width=0.965cm]
+			(N1) at (2.5, 9.5){} node[anchor=east] at (N1.west){$P_\mathrm{in}$};
+			\node[ground] at (2.5, 8){};
+			\draw (2.5, 9) -| (2.5, 8);
+			\draw (4, 11) to[european resistor, l={$R_s$}] (6, 11);
+			\draw (7.5, 11) to[capacitor, l={$C_A$}] (7.5, 8);
+			\node[ground] at (7.5, 8){};
+			\draw (2.5, 10) -| (2.5, 11) -- (4, 11);
+			\draw (6, 11) -- (7.5, 11) -- (8.75, 11);
+			\node[circ] at (7.5, 11){};
+			\node[circ] at (9.4, 11.5){};
+			\node[shape=rectangle, draw, line width=1pt, 
+			dash pattern={on 4pt off 4pt}, minimum width=5.465cm, 
+			minimum height=5.715cm] at (8.75, 10){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+			at (8.575, 11.5){} node[anchor=north west, align=left, 
+			text width=4.827cm, inner sep=6pt] at (5.75, 13.5){Antenna};
+			\draw (8.75, 11) to[european inductor, l={$L_A$}] (11, 11)
+			to[capacitor, l={$C_k$}] (14.5, 11);
+			\draw (14.5, 10) to[european inductor, l={$L_{T2}$}] (18, 10);
+			\draw (14.5, 12) to[european inductor, l={$L_{T1}$}] (18, 12);
+			\draw (14.5, 10) -| (14.5, 12);
+			\node[circ] at (14.5, 11){};
+			\draw (18.75, 10) to[capacitor, l={$C_{T2}$}] (18.75, 8);
+			\draw (23, 10) to[european resistor, l={$R_2$}] (23, 8);
+			\node[ground] at (18.75, 8){};
+			\node[ground] at (20.5, 8){};
+			\node[circ] at (18.75, 10){};
+			\draw (18, 12) -- (22, 12);
+			\draw (20.5, 10) to[capacitor, l={$C_{T1}$}] (20.5, 8);
+			\node[ground] at (23, 8){};
+			\draw (25.5, 10) to[european resistor, l={$R_1$}] (25.5, 8);
+			\node[ground] at (25.5, 8){};
+			\draw (22, 12) -- (24.5, 12);
+			\draw (20.5, 10) -- (20.5, 12);
+			\node[jump crossing] at (20.5, 10){};
+			\draw (18, 10) -- (20.36, 10);
+			\draw (20.64, 10) -- (23, 10);
+			\draw (24.5, 12) -| (25.5, 10);
+			\node[circ] at (20.5, 12){};
+			\node[shape=rectangle, draw, line width=1pt, 
+			dash pattern={on 4pt off 4pt}, minimum width=7.665cm, 
+			minimum height=5.715cm] at (18.10, 9.875){};
+			\node[shape=rectangle, minimum width=5.215cm, minimum height=1.465cm] 
+			at (13.75, 12.75){} node[anchor=north west, align=left, 
+			text width=4.827cm, inner sep=6pt] at (13.85, 13.5){TEM cell};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+			at (23.375, 10){} node[anchor=north west, align=left, 
+			text width=2.327cm, inner sep=6pt] at (22, 10.5){output port 2};
+			\node[shape=rectangle, minimum width=2.715cm, minimum height=0.965cm] 
+			at (26.875, 10){} node[anchor=north west, align=left, 
+			text width=2.327cm, inner sep=6pt] at (25.5, 10.5){output port 1};
+			\node[circ] at (15.75, 12.5){};
+			\node[circ] at (16.75, 10.5){};
+		\end{tikzpicture}
 	}
 	\caption{Circuit representing the TEM cell and the loop antenna, with the 
 		additional components $C_k$ and $M_{A,T1}$, $M_{A,T2}$ modeling their 
