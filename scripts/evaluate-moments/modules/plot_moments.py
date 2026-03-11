@@ -22,14 +22,15 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna_type):
     
     antenna_name = antenna_type.replace('-', ' ')
     fig, ax = plt.subplots(figsize=(4, 3))
+    #fig, ax = plt.subplots(figsize=(7, 3.5))     # 2:1 aspect ratio (wide)
 
     # Extract phase data
     phase_waveport1 = columns_phase_shift[1]
     phase_waveport2 = columns_phase_shift[2]
 
     # Plot phase curves
-    ax.plot(frequencies / 1e9, phase_waveport1, label='Waveport 1')
-    ax.plot(frequencies / 1e9, phase_waveport2, label='Waveport 2')
+    ax.plot(frequencies / 1e9, phase_waveport1, label='Output port 1')
+    ax.plot(frequencies / 1e9, phase_waveport2, label='Output port 2')
 
     # First delta annotation (at 1/4 position)
     idx_first = phase_waveport1.size // 4
@@ -41,14 +42,14 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna_type):
             marker='.', markersize=5, color='C0')
     ax.plot(columns_phase_shift[0][idx_first], marker2_y_first, 
             marker='.', markersize=5, color='C1')
-    ax.text(columns_phase_shift[0][idx_first] + 0.01, 
+    ax.text(columns_phase_shift[0][idx_first] + 0.05, 
             (marker1_y_first + marker2_y_first) / 2, 
             rf'$\Delta$ = {delta_first:.2f} rad',
             fontsize=8, ha='left')
-    ax.annotate('', 
-                xy=(columns_phase_shift[0][idx_first], marker2_y_first),
-                xytext=(columns_phase_shift[0][idx_first], marker1_y_first),
-                arrowprops=dict(arrowstyle='<->', lw=0.8))
+    #ax.annotate('', 
+    #            xy=(columns_phase_shift[0][idx_first], marker2_y_first),
+    #            xytext=(columns_phase_shift[0][idx_first], marker1_y_first),
+    #            arrowprops=dict(arrowstyle='<->', lw=0.8))
 
     # Second delta annotation (at 3/4 position)
     idx_second = (phase_waveport1.size // 4) * 3
@@ -61,18 +62,17 @@ def plot_phase_shift(columns_phase_shift, frequencies, antenna_type):
     ax.plot(columns_phase_shift[0][idx_second], marker2_y_second, 
             marker='.', markersize=5, color='C1')
     ax.text(columns_phase_shift[0][idx_second] - 0.0, 
-            (marker1_y_second + marker2_y_second) / 2, 
+            (marker1_y_second + marker2_y_second) / 2 + 0.15, 
             rf'$\Delta$ = {delta_second:.2f} rad',
             fontsize=8, ha='left')
-    ax.annotate('', 
-                xy=(columns_phase_shift[0][idx_second], marker2_y_second),
-                xytext=(columns_phase_shift[0][idx_second], marker1_y_second),
-                arrowprops=dict(arrowstyle='<->', lw=0.8))
+    #ax.annotate('', 
+    #            xy=(columns_phase_shift[0][idx_second], marker2_y_second),
+    #            xytext=(columns_phase_shift[0][idx_second], marker1_y_second),
+    #            arrowprops=dict(arrowstyle='<->', lw=0.8))
 
     # Configure axes and labels
     ax.set_xlabel('Frequency (GHz)')
     ax.set_ylabel('Phase Shift (rad)')
-    ax.set_title(f'Phase Shifts of {antenna_name} antenna over frequency')
     ax.set_xlim(np.min(frequencies / 1e9), np.max(frequencies / 1e9))
 
     # Adjust y-axis limits to fit data
@@ -111,6 +111,7 @@ def plot_moments(m_e, m_m, frequencies, antenna_type):
     normalized_m_e = np.abs(m_e) * 377
     
     fig, ax1 = plt.subplots(figsize=(4, 3))
+    #fig, ax1 = plt.subplots(figsize=(7, 3.5))     # 2:1 aspect ratio (wide)
     
     # Plot electric dipole moment on primary y-axis
     ax1.set_xlabel('Frequency (GHz)')
@@ -127,20 +128,19 @@ def plot_moments(m_e, m_m, frequencies, antenna_type):
     
     # Plot magnetic dipole moment on secondary y-axis
     ax2 = ax1.twinx()
-    ax2.set_ylabel(r'Magnetic Dipole Moment $\left|m_m\right|$ (Vm)')
+    ax2.set_ylabel(r'Magnetic Dipole Moment $\left|m_m\right|$ (Vm)', color="red")
     ax2.plot(frequencies / 1e9, np.abs(m_m), 
              label=r'$\left|m_m\right|$', 
-             linestyle='--')
+             linestyle='--', color="red")
+    ax2.tick_params(axis='y', labelcolor="red")
     ax2.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
     
     # Set matching y-axis limits
     max_value = max(np.max(normalized_m_e), np.max(np.abs(m_m)))
-    ax1.set_ylim(0, max_value)
-    ax2.set_ylim(0, max_value)
+    min_value = min(np.min(normalized_m_e), np.min(np.abs(m_m)))
+    ax1.set_ylim(min_value-2e-4, max_value)
+    ax2.set_ylim(min_value-2e-4, max_value)
     ax2.set_xlim(np.min(frequencies / 1e9), np.max(frequencies / 1e9))
-    
-    # Configure title
-    ax1.set_title(f'Dipole moments of {antenna_name} antenna in TEM cell over frequency')
     
     # Configure legend - positioned in top left
     lines1, labels1 = ax1.get_legend_handles_labels()
@@ -167,6 +167,7 @@ def plot_output_power_e_field(frequencies, output_power, e_field, antenna_type):
     setup_plot_style()
     
     fig, ax1 = plt.subplots(figsize=(4, 3))
+    #fig, ax1 = plt.subplots(figsize=(7, 3.5))     # 2:1 aspect ratio (wide)
     
     # Plot electric field on primary y-axis
     ax1.set_xlabel('Frequency (GHz)')
@@ -174,7 +175,7 @@ def plot_output_power_e_field(frequencies, output_power, e_field, antenna_type):
     ax1.plot(frequencies / 1e9, e_field, label='$E_{y}$')
     ax1.set_xlim(np.min(frequencies / 1e9), np.max(frequencies / 1e9))
     ax1.set_ylim(0, np.max(e_field))
-    ax1.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
+    #ax1.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
     
     # Configure grid
     ax1.grid(which='major', linestyle='-')
@@ -183,13 +184,11 @@ def plot_output_power_e_field(frequencies, output_power, e_field, antenna_type):
     
     # Plot output power on secondary y-axis
     ax2 = ax1.twinx()
-    ax2.set_ylabel('Output power (W)')
-    ax2.plot(frequencies / 1e9, output_power, 
-             linestyle='--', label='Output power')
-    ax2.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
-    
-    # Configure title
-    ax1.set_title('Electric field and output power over frequency')
+    ax2.set_ylabel('Output power (µW)', color="red")
+    ax2.plot(frequencies / 1e9, output_power*1e6, 
+             linestyle='--', label='Output power', color="red")
+    #ax2.ticklabel_format(axis='y', style='scientific', scilimits=(0, 0))
+    ax2.tick_params(axis='y', labelcolor="red")
     
     # Configure legend
     lines1, labels1 = ax1.get_legend_handles_labels()

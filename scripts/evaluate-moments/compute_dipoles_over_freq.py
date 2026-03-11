@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # === Configuration ===
 antenna_power = 1.0  # in Watts
-antenna_type = "gapped-loop" # same name as data folder to be read
+antenna_type = "loop" # same name as data folder to be read
 
 # === Data Loading ===
 columns_phase_shift, columns_magnitude = read_antenna_data(antenna_type=antenna_type)
@@ -18,12 +18,12 @@ columns_phase_shift, columns_magnitude = read_antenna_data(antenna_type=antenna_
 frequencies = columns_phase_shift[0] * 1e9
 
 # Adjust positive phase values by subtracting 2π, if desired
-columns_phase_shift[1][columns_phase_shift[1] < 0] += 2 * np.pi
+#columns_phase_shift[1][columns_phase_shift[1] > 0] -= 2 * np.pi
 #columns_phase_shift[2][columns_phase_shift[2] < 0] += 2 * np.pi
 
 # === Phase, Magnitude, and E-Field Processing ===
-columns_phase_shift[1] -= np.pi # Subtract np.pi if necessary
-#columns_phase_shift[2] -= np.pi # Subtract np.pi if necessary
+#columns_phase_shift[1] -= np.pi # Subtract np.pi if necessary
+#columns_phase_shift[2] += np.pi # Subtract np.pi if necessary
 
 phase_shift = columns_phase_shift[1] - columns_phase_shift[2]
 
@@ -43,11 +43,13 @@ plot_moments(m_e, m_m, frequencies, antenna_type)
 
 # Optional: visualize power and E-field relationship
 plot_output_power_e_field(frequencies, output_power, efield, antenna_type)
+frequencies = frequencies / 1e9
 data = np.column_stack((frequencies, output_power))
 np.savetxt('output/csv/output-power.csv', data, delimiter=',',
 header='Frequency (GHz),Output Power (W)')
 
 
+frequencies = frequencies * 1e9
 def model_func(x, a, b, c, d):
     return a * x**3 + b * x**2 + c * x + d
 
