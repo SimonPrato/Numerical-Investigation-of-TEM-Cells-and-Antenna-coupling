@@ -37,5 +37,5 @@ def _read_csv_columns(csv_path: Path) -> List[np.ndarray]:
         List of numpy arrays, one per column (excluding first row)
     """
     df = pd.read_csv(csv_path, header=None, dtype=float, skiprows=1)
-    return [df[col].to_numpy()[1:] for col in df.columns]
+    return [df[col].to_numpy() for col in df.columns]
 
